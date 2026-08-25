@@ -9,9 +9,9 @@
   "product": "Loop",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     12,
@@ -28,32 +28,32 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "12": "assets/icons/product/loop/color-12.svg",
-      "16": "assets/icons/product/loop/color-16.svg",
-      "20": "assets/icons/product/loop/color-20.svg",
-      "24": "assets/icons/product/loop/color-24.svg",
-      "28": "assets/icons/product/loop/color-28.svg",
-      "32": "assets/icons/product/loop/color-32.svg",
-      "48": "assets/icons/product/loop/color-48.svg"
+    "standard": {
+      "12": "assets/icons/product/loop/standard-12.svg",
+      "16": "assets/icons/product/loop/standard-16.svg",
+      "20": "assets/icons/product/loop/standard-20.svg",
+      "24": "assets/icons/product/loop/standard-24.svg",
+      "28": "assets/icons/product/loop/standard-28.svg",
+      "32": "assets/icons/product/loop/standard-32.svg",
+      "48": "assets/icons/product/loop/standard-48.svg"
     },
-    "filled": {
-      "12": "assets/icons/product/loop/filled-12.svg",
-      "16": "assets/icons/product/loop/filled-16.svg",
-      "20": "assets/icons/product/loop/filled-20.svg",
-      "24": "assets/icons/product/loop/filled-24.svg",
-      "28": "assets/icons/product/loop/filled-28.svg",
-      "32": "assets/icons/product/loop/filled-32.svg",
-      "48": "assets/icons/product/loop/filled-48.svg"
+    "mono": {
+      "12": "assets/icons/product/loop/mono-12.svg",
+      "16": "assets/icons/product/loop/mono-16.svg",
+      "20": "assets/icons/product/loop/mono-20.svg",
+      "24": "assets/icons/product/loop/mono-24.svg",
+      "28": "assets/icons/product/loop/mono-28.svg",
+      "32": "assets/icons/product/loop/mono-32.svg",
+      "48": "assets/icons/product/loop/mono-48.svg"
     },
-    "regular": {
-      "12": "assets/icons/product/loop/regular-12.svg",
-      "16": "assets/icons/product/loop/regular-16.svg",
-      "20": "assets/icons/product/loop/regular-20.svg",
-      "24": "assets/icons/product/loop/regular-24.svg",
-      "28": "assets/icons/product/loop/regular-28.svg",
-      "32": "assets/icons/product/loop/regular-32.svg",
-      "48": "assets/icons/product/loop/regular-48.svg"
+    "outline": {
+      "12": "assets/icons/product/loop/outline-12.svg",
+      "16": "assets/icons/product/loop/outline-16.svg",
+      "20": "assets/icons/product/loop/outline-20.svg",
+      "24": "assets/icons/product/loop/outline-24.svg",
+      "28": "assets/icons/product/loop/outline-28.svg",
+      "32": "assets/icons/product/loop/outline-32.svg",
+      "48": "assets/icons/product/loop/outline-48.svg"
     }
   },
   "version": "1.0.0",

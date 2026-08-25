@@ -1,0 +1,51 @@
+{
+  "id": "system.line-horizontal-1-dash-dot-dash",
+  "name": "Line Horizontal 1 Dash Dot Dash",
+  "keywords": [
+    "style",
+    "create",
+    "edit",
+    "draw",
+    "dash",
+    "dot",
+    "line",
+    "horizontal"
+  ],
+  "description": "Used to represent line drawing styles.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/line-horizontal-1-dash-dot-dash/mono-20.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/line-horizontal-1-dash-dot-dash/outline-20.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/line-horizontal-1-dash-dot-dash/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Line%20Horizontal%201%20Dash%20Dot%20Dash",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

@@ -40,7 +40,7 @@ const STROKE = 'stroke-linecap:round;stroke-linejoin:round';
  * rules from forty inlined icons all apply to each other and the last one wins.
  */
 function themeCss(theme, container) {
-  if (theme === 'color' && container === 'tile') {
+  if (theme === 'standard' && container === 'tile') {
     return [
       '$ .f{fill:#fff}',
       `$ .s{fill:none;stroke:#fff;stroke-width:1.7;${STROKE}}`,
@@ -48,7 +48,7 @@ function themeCss(theme, container) {
       '$ .lbl{fill:url(#GRAD)}',
     ].join('');
   }
-  if (theme === 'color') {
+  if (theme === 'standard') {
     return [
       '$ .f{fill:url(#GRAD)}',
       `$ .s{fill:none;stroke:url(#GRAD);stroke-width:1.7;${STROKE}}`,
@@ -56,7 +56,7 @@ function themeCss(theme, container) {
       '$ .lbl{fill:var(--ea-knockout)}',
     ].join('');
   }
-  if (theme === 'regular') {
+  if (theme === 'outline') {
     return [
       `$ .f,$ .s,$ .k{fill:none;stroke:var(--ea-primary);stroke-width:1.6;${STROKE}}`,
       '$ .lbl{fill:var(--ea-primary)}',
@@ -90,14 +90,14 @@ function renderIcon(spec, theme) {
   const root = `$ {--ea-primary:${primary};--ea-secondary:${secondary};--ea-knockout:#FFFFFF}`;
 
   const defs =
-    theme === 'color'
+    theme === 'standard'
       ? '<defs><linearGradient id="ea-g" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">' +
         '<stop class="c1"/><stop offset="1" class="c2"/></linearGradient></defs>'
       : '';
-  const gradCss = theme === 'color' ? '$ .c1{stop-color:var(--ea-primary)}$ .c2{stop-color:var(--ea-secondary)}' : '';
+  const gradCss = theme === 'standard' ? '$ .c1{stop-color:var(--ea-primary)}$ .c2{stop-color:var(--ea-secondary)}' : '';
 
   let body;
-  if (theme === 'color' && container === 'tile') {
+  if (theme === 'standard' && container === 'tile') {
     // Glyph is inset inside the gradient tile at 62% so it keeps a 4.5px margin.
     body = `<rect width="24" height="24" rx="6" fill="url(#ea-g)"/><g transform="translate(4.56 4.56) scale(0.62)">${spec.glyph}</g>`;
   } else {
@@ -177,7 +177,7 @@ async function main() {
   for (const spec of ICONS) {
     const slug = spec.id.split('.')[1];
     const dir = `assets/icons/${spec.collection}`;
-    const themes = ['color', 'regular', 'filled'];
+    const themes = ['standard', 'outline', 'mono'];
     for (const theme of themes) {
       await write(join(ROOT, dir, slug, `${theme}.svg`), renderIcon(spec, theme));
     }
@@ -191,10 +191,10 @@ async function main() {
   for (const spec of ILLUSTRATIONS) {
     const slug = spec.id.split('.')[1];
     const dir = `assets/illustrations/${spec.collection}`;
-    await write(join(ROOT, dir, slug, 'color.svg'), renderIllustration(spec));
+    await write(join(ROOT, dir, slug, 'standard.svg'), renderIllustration(spec));
     await write(
       join(ROOT, dir, slug, 'meta.json'),
-      JSON.stringify(metaFor(spec, { type: 'illustration', themes: ['color'], sizes: ILLUSTRATION_SIZES, dir }), null, 2) + '\n'
+      JSON.stringify(metaFor(spec, { type: 'illustration', themes: ['standard'], sizes: ILLUSTRATION_SIZES, dir }), null, 2) + '\n'
     );
     count++;
   }

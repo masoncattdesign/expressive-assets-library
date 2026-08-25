@@ -75,10 +75,10 @@
     },
     "themes": {
       "type": "array",
-      "description": "Rendered theme variants that exist on disk. color = Expressive, regular = Outline, filled = Mono.",
+      "description": "Rendered theme variants that exist on disk. standard is the full-colour base; outline and mono are the monochrome reductions. The keys match what the UI shows, so nothing means two things in two places.",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "enum": ["color", "regular", "filled"] }
+      "items": { "enum": ["standard", "outline", "mono"] }
     },
     "sizes": {
       "type": "array",
@@ -89,7 +89,7 @@
     },
     "colors": {
       "type": "object",
-      "description": "Brand colors baked into the color (Expressive) variant.",
+      "description": "Brand colours baked into the standard variant.",
       "additionalProperties": false,
       "required": ["primary", "secondary"],
       "properties": {
@@ -120,6 +120,18 @@
       "properties": {
         "fileKey": { "type": "string", "minLength": 1 },
         "nodeId": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "description": "Upstream provenance for artwork the library did not draw. Required in practice for anything vendored from a third-party project — the licence obligation travels with the file, not with the README, and an asset that cannot name where it came from cannot be audited later.",
+      "additionalProperties": false,
+      "required": ["project", "license"],
+      "properties": {
+        "project": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 1 },
+        "copyright": { "type": "string", "minLength": 1 }
       }
     },
     "owner": {

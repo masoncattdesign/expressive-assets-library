@@ -65,120 +65,6 @@ const fileIcon = (id, name, tag, primary, secondary, keywords) => ({
 /* ------------------------------------------------------------------ */
 
 export const ICONS = [
-  /* --- System ---------------------------------------------------- */
-  {
-    id: 'system.settings',
-    name: 'Settings',
-    collection: 'system',
-    colors: { primary: '#0078D4', secondary: '#8764B8' },
-    keywords: ['gear', 'config', 'options', 'preferences'],
-    glyph: gearPath(12, 12, 9.4, 6.6) + '<circle class="k" cx="12" cy="12" r="2.9"/>',
-  },
-  {
-    id: 'system.search',
-    name: 'Search',
-    collection: 'system',
-    colors: { primary: '#0078D4', secondary: '#2AA0DA' },
-    keywords: ['find', 'magnifier', 'lookup', 'query'],
-    glyph:
-      '<circle class="s" cx="10.6" cy="10.6" r="6.6"/>' +
-      '<path class="s" d="M15.4 15.4 20 20"/>',
-  },
-  {
-    id: 'system.security',
-    name: 'Security',
-    collection: 'system',
-    colors: { primary: '#0F6CBD', secondary: '#3B82D6' },
-    keywords: ['shield', 'protection', 'defender', 'safety', 'privacy'],
-    glyph:
-      '<path class="f" d="M12 2.4 4.6 5.3v6.3c0 4.5 3 8.6 7.4 9.9 4.4-1.3 7.4-5.4 7.4-9.9V5.3Z"/>' +
-      '<path class="k" d="m8.7 11.9 2.4 2.4 4.4-4.7"/>',
-  },
-  {
-    id: 'system.files',
-    name: 'Files',
-    collection: 'system',
-    colors: { primary: '#F7A501', secondary: '#EB6B0C' },
-    keywords: ['folder', 'explorer', 'directory', 'documents'],
-    glyph:
-      '<path class="f" d="M5.3 4.4h3.5l2.1 2.5h7.8a2.2 2.2 0 0 1 2.2 2.2v9.2a2.2 2.2 0 0 1-2.2 2.2H5.3a2.2 2.2 0 0 1-2.2-2.2V6.6a2.2 2.2 0 0 1 2.2-2.2Z"/>' +
-      '<path class="k" d="M3.3 10.3h17.4"/>',
-  },
-  {
-    id: 'system.clock',
-    name: 'Clock',
-    collection: 'system',
-    colors: { primary: '#1B3A57', secondary: '#0F6CBD' },
-    keywords: ['time', 'alarm', 'timer', 'schedule'],
-    glyph:
-      '<circle class="s" cx="12" cy="12" r="8.6"/>' +
-      '<path class="s" d="M12 6.9V12l3.6 2.4"/>',
-  },
-  {
-    id: 'system.calendar',
-    name: 'Calendar',
-    collection: 'system',
-    colors: { primary: '#D83B01', secondary: '#F7A501' },
-    keywords: ['date', 'schedule', 'agenda', 'month', 'events'],
-    glyph:
-      '<rect class="s" x="3.6" y="4.8" width="16.8" height="16" rx="2.6"/>' +
-      '<path class="s" d="M3.6 9.4h16.8M8.4 3.2v3.4M15.6 3.2v3.4"/>' +
-      '<rect class="f" x="7" y="12" width="3.2" height="3.2" rx="1"/>' +
-      '<rect class="f" x="13.8" y="12" width="3.2" height="3.2" rx="1"/>',
-  },
-  {
-    id: 'system.notepad',
-    name: 'Notepad',
-    collection: 'system',
-    colors: { primary: '#F7A501', secondary: '#EB6B0C' },
-    keywords: ['notes', 'text', 'editor', 'write', 'document'],
-    glyph:
-      '<rect class="s" x="4.6" y="3" width="14.8" height="18" rx="2.4"/>' +
-      '<path class="s" d="M8 8h8M8 12h8M8 16h5"/>',
-  },
-  {
-    id: 'system.trash',
-    name: 'Trash',
-    collection: 'system',
-    colors: { primary: '#0078D4', secondary: '#2AA0DA' },
-    keywords: ['delete', 'recycle bin', 'remove', 'bin'],
-    glyph:
-      '<path class="s" d="M4.4 6.6h15.2M9.4 6.6V4.9a1.6 1.6 0 0 1 1.6-1.6h2a1.6 1.6 0 0 1 1.6 1.6v1.7"/>' +
-      '<path class="f" d="M6.4 8.4h11.2l-.8 11.1a2.1 2.1 0 0 1-2.1 2H9.3a2.1 2.1 0 0 1-2.1-2Z"/>' +
-      '<path class="k" d="M10.4 11.6v6M13.6 11.6v6"/>',
-  },
-  {
-    id: 'system.volume',
-    name: 'Volume',
-    collection: 'system',
-    colors: { primary: '#0078D4', secondary: '#2AA0DA' },
-    keywords: ['sound', 'audio', 'speaker', 'mute'],
-    glyph:
-      '<path class="f" d="M11.6 4.2 6.9 8H4.2a1.4 1.4 0 0 0-1.4 1.4v5.2A1.4 1.4 0 0 0 4.2 16h2.7l4.7 3.8a.9.9 0 0 0 1.4-.7V4.9a.9.9 0 0 0-1.4-.7Z"/>' +
-      '<path class="s" d="M16.4 9.2a4 4 0 0 1 0 5.6M19 6.6a7.6 7.6 0 0 1 0 10.8"/>',
-  },
-  {
-    id: 'system.network',
-    name: 'Network',
-    collection: 'system',
-    colors: { primary: '#0078D4', secondary: '#2AA0DA' },
-    keywords: ['wifi', 'connection', 'signal', 'internet', 'wireless'],
-    glyph:
-      '<path class="s" d="M2.6 8.6a14 14 0 0 1 18.8 0M6 12.4a9 9 0 0 1 12 0M9.4 16.1a4 4 0 0 1 5.2 0"/>' +
-      '<circle class="f" cx="12" cy="19.4" r="1.7"/>',
-  },
-  {
-    id: 'system.battery',
-    name: 'Battery',
-    collection: 'system',
-    colors: { primary: '#123B63', secondary: '#0F6CBD' },
-    keywords: ['power', 'charge', 'energy', 'level'],
-    glyph:
-      '<rect class="s" x="2.6" y="7.4" width="16.4" height="9.2" rx="2.4"/>' +
-      '<rect class="f" x="4.8" y="9.6" width="7.6" height="4.8" rx="1.2"/>' +
-      '<path class="f" d="M20.4 10.4h.3a1.4 1.4 0 0 1 1.4 1.4v.4a1.4 1.4 0 0 1-1.4 1.4h-.3Z"/>',
-  },
-
   /* --- File ------------------------------------------------------- */
   fileIcon('word-document', 'Word Document', 'DOC', '#2B579A', '#41A5EE', ['word', 'doc', 'docx', 'text', 'document']),
   fileIcon('spreadsheet', 'Spreadsheet', 'XLS', '#217346', '#33C481', ['excel', 'xls', 'xlsx', 'sheet', 'table', 'data']),
@@ -289,15 +175,12 @@ export const ILLUSTRATIONS = [
    without touching artwork. A `deprecated` entry must name its replacement —
    validation rejects a deprecation that strands consumers. */
 export const LIFECYCLE = {
-  'system.notepad': { status: 'draft' },
   'file.text-file': { status: 'deprecated', replacedBy: 'file.code-file' },
 };
 
 /* Aliases: names an asset used to have, or is commonly called. Search matches
    these, so renaming never strands the people who learned the old name. */
 export const ALIASES = {
-  'system.trash': ['Recycle Bin'],
-  'system.network': ['Wi-Fi'],
   'file.word-document': ['Word'],
   'file.spreadsheet': ['Excel'],
   'file.presentation': ['PowerPoint'],
@@ -308,11 +191,6 @@ export const ALIASES = {
    coverage rather than failing on it — so the placeholder set should show both
    states, not pretend the field is always filled. */
 export const DESCRIPTIONS = {
-  'system.settings': 'A gear. Application and system settings, preferences, and configuration surfaces.',
-  'system.search': 'A magnifier. Search entry points and find-in-page.',
-  'system.security': 'A shield with a check. Security posture, protection status, and Defender surfaces.',
-  'system.trash': 'A lidded bin. Delete actions and the Recycle Bin itself.',
-  'system.network': 'Signal arcs. Wireless connectivity and network status.',
   'file.pdf': 'A page marked PDF. Portable Document Format files.',
   'file.archive': 'A page marked ZIP. Compressed archives and bundles.',
   'windows.empty-state': 'A planet in a starfield. Zero-state surfaces where no content exists yet.',

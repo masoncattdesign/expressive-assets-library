@@ -20,12 +20,14 @@
 /** Point this at the repo — drives the "Add Assets" and "View source" links. */
 const REPO = 'https://github.com/masoncattdesign/expressive-assets-library';
 
-/** Display names for the three themes. Left = what designers call it,
- *  right = the theme key stored in metadata. */
+/** The three themes. Standard is the full-colour base; outline and mono are its
+ *  monochrome reductions. Keys and labels deliberately match — an earlier split
+ *  had "regular" meaning Outline here and the full-weight base in Fluent, which
+ *  is exactly the kind of collision that costs someone an afternoon. */
 const THEMES = [
-  { key: 'color', label: 'Expressive' },
-  { key: 'regular', label: 'Outline' },
-  { key: 'filled', label: 'Mono' },
+  { key: 'standard', label: 'Standard' },
+  { key: 'outline', label: 'Outline' },
+  { key: 'mono', label: 'Mono' },
 ];
 
 /** Windows accent pairs. `null` means "use the asset's own brand colors". */
@@ -60,7 +62,7 @@ const state = {
   filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
-  theme: 'color',
+  theme: 'standard',
   size: null,
   accent: 'default',
 };
@@ -317,14 +319,61 @@ function buildCard(asset) {
 
 let renderToken = 0;
 
+/**
+ * Cards are added a page at a time as you scroll, not all at once.
+ *
+ * Building every card up front is what a 2,900-icon collection costs: measured
+ * at 2.6s of pure DOM construction on every collection switch, before a single
+ * pixel was painted. content-visibility fixes layout and paint but not element
+ * creation, so the only real answer is to create fewer.
+ *
+ * A sentinel after the last card pulls in the next page when it scrolls close.
+ * The count in the toolbar always reflects the full filtered set, not what
+ * happens to be rendered — the paging is a rendering detail, not a filter.
+ */
+const PAGE_SIZE = 240;
+
+const paging = { assets: [], rendered: 0, token: 0 };
+
+/* A scroll check rather than an IntersectionObserver on a sentinel. The
+   observer version fired once and then stopped: appending cards moves the
+   sentinel, and the intersection state never cleanly re-entered. A scroll
+   handler is one line of logic with no such subtlety, and it runs on a frame
+   the browser was already going to render. */
+function maybeRenderMore() {
+  const grid = $('#grid');
+  if (paging.rendered >= paging.assets.length) return;
+  const remaining = grid.scrollHeight - grid.scrollTop - grid.clientHeight;
+  if (remaining < 800) renderNextPage();
+}
+
+function renderNextPage() {
+  const grid = $('#grid');
+  const token = paging.token;
+
+  const slice = paging.assets.slice(paging.rendered, paging.rendered + PAGE_SIZE);
+  if (!slice.length) return;
+
+  const frag = document.createDocumentFragment();
+  for (const asset of slice) frag.append(buildCard(asset));
+  if (token !== paging.token) return;
+
+  grid.append(frag);
+  paging.rendered += slice.length;
+}
+
 function renderGrid() {
   const grid = $('#grid');
   const assets = visibleAssets();
-  const token = ++renderToken;
+  renderToken++;
 
   grid.className = `grid${state.view === 'list' ? ' list' : ''}`;
   grid.replaceChildren();
-  $('#count').textContent = `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
+
+  const searching = state.filter.query.trim().length > 0;
+  $('#count').textContent = searching
+    ? `${assets.length} match${assets.length === 1 ? '' : 'es'}`
+    : `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
 
   if (!assets.length) {
     const empty = el('div', { className: 'empty' });
@@ -334,18 +383,13 @@ function renderGrid() {
     return;
   }
 
-  // Append in chunks so a 500-card render never becomes one long frame.
-  const CHUNK = 80;
-  let i = 0;
-  const step = () => {
-    if (token !== renderToken) return;
-    const frag = document.createDocumentFragment();
-    for (const asset of assets.slice(i, i + CHUNK)) frag.append(buildCard(asset));
-    grid.append(frag);
-    i += CHUNK;
-    if (i < assets.length) requestAnimationFrame(step);
-  };
-  step();
+  paging.assets = assets;
+  paging.rendered = 0;
+  paging.token++;
+  renderNextPage();
+
+  // The first page may not fill a tall window; keep going until it does.
+  requestAnimationFrame(maybeRenderMore);
 }
 
 /* ------------------------------------------------------------------ */
@@ -549,7 +593,7 @@ function renderPanel() {
   const entries = [
     ['ID', asset.id],
     ['Status', STATUS_LABEL[asset.status]],
-    ['Themes', asset.themes.join(', ')],
+    ['Themes', THEMES.filter((t) => asset.themes.includes(t.key)).map((t) => t.label).join(', ')],
     ['Sizes', asset.sizes.join(', ')],
     ['Accent', tintableThemes.length ? `${tintableThemes.length} of ${asset.themes.length} themes` : 'Not applicable'],
     ['Drawings', drawingSummary(asset)],
@@ -557,12 +601,27 @@ function renderPanel() {
   ];
   if (asset.aliases?.length) entries.splice(1, 0, ['Also known as', asset.aliases.join(', ')]);
   if (asset.owner) entries.push(['Owner', asset.owner]);
+  if (asset.source) entries.push(['Source', `${asset.source.project} · ${asset.source.license}`]);
   for (const [k, v] of entries) {
     const row = el('div', { className: 'row' });
     row.append(el('span', { className: 'k', textContent: k }), el('span', { className: 'v', textContent: v }));
     metaRows.append(row);
   }
   panel.append(metaRows);
+
+  /* Provenance. Shown where someone is about to copy the artwork, not buried
+     in a repo file they will never open. */
+  if (asset.source) {
+    const note = el('p', { className: 'callout' });
+    note.append(`${asset.source.copyright || asset.source.project}. Used under ${asset.source.license}. `);
+    if (asset.source.url) {
+      note.append(
+        el('a', { href: asset.source.url, target: '_blank', rel: 'noopener', className: 'linkish', textContent: 'View upstream' })
+      );
+    }
+    if (asset.notes) note.append(el('span', { className: 'fine', textContent: asset.notes }));
+    panel.append(note);
+  }
 
   /* Keywords */
   panel.append(el('h3', { textContent: 'Keywords' }));
@@ -677,6 +736,20 @@ function wireChrome() {
       renderGrid();
     });
   }
+
+  let scrollQueued = false;
+  $('#grid').addEventListener(
+    'scroll',
+    () => {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      requestAnimationFrame(() => {
+        scrollQueued = false;
+        maybeRenderMore();
+      });
+    },
+    { passive: true }
+  );
 
   $('#contribute').href = `${REPO}/blob/main/CONTRIBUTING.md`;
 

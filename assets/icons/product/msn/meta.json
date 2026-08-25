@@ -9,9 +9,9 @@
   "product": "MSN",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/msn/color-16.svg",
-      "20": "assets/icons/product/msn/color-20.svg",
-      "24": "assets/icons/product/msn/color-24.svg",
-      "28": "assets/icons/product/msn/color-28.svg",
-      "32": "assets/icons/product/msn/color-32.svg",
-      "48": "assets/icons/product/msn/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/msn/standard-16.svg",
+      "20": "assets/icons/product/msn/standard-20.svg",
+      "24": "assets/icons/product/msn/standard-24.svg",
+      "28": "assets/icons/product/msn/standard-28.svg",
+      "32": "assets/icons/product/msn/standard-32.svg",
+      "48": "assets/icons/product/msn/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/msn/filled-16.svg",
-      "20": "assets/icons/product/msn/filled-20.svg",
-      "24": "assets/icons/product/msn/filled-24.svg",
-      "28": "assets/icons/product/msn/filled-28.svg",
-      "32": "assets/icons/product/msn/filled-32.svg",
-      "48": "assets/icons/product/msn/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/msn/mono-16.svg",
+      "20": "assets/icons/product/msn/mono-20.svg",
+      "24": "assets/icons/product/msn/mono-24.svg",
+      "28": "assets/icons/product/msn/mono-28.svg",
+      "32": "assets/icons/product/msn/mono-32.svg",
+      "48": "assets/icons/product/msn/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/msn/regular-16.svg",
-      "20": "assets/icons/product/msn/regular-20.svg",
-      "24": "assets/icons/product/msn/regular-24.svg",
-      "28": "assets/icons/product/msn/regular-28.svg",
-      "32": "assets/icons/product/msn/regular-32.svg",
-      "48": "assets/icons/product/msn/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/msn/outline-16.svg",
+      "20": "assets/icons/product/msn/outline-20.svg",
+      "24": "assets/icons/product/msn/outline-24.svg",
+      "28": "assets/icons/product/msn/outline-28.svg",
+      "32": "assets/icons/product/msn/outline-32.svg",
+      "48": "assets/icons/product/msn/outline-48.svg"
     }
   },
   "version": "1.0.0",

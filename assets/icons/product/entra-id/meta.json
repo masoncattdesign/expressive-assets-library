@@ -10,8 +10,8 @@
   "product": "Entra ID",
   "status": "draft",
   "themes": [
-    "color",
-    "filled"
+    "standard",
+    "mono"
   ],
   "sizes": [
     16,
@@ -24,15 +24,15 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/entra-id/color-16.svg",
-      "24": "assets/icons/product/entra-id/color-24.svg",
-      "32": "assets/icons/product/entra-id/color-32.svg"
+    "standard": {
+      "16": "assets/icons/product/entra-id/standard-16.svg",
+      "24": "assets/icons/product/entra-id/standard-24.svg",
+      "32": "assets/icons/product/entra-id/standard-32.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/entra-id/filled-16.svg",
-      "24": "assets/icons/product/entra-id/filled-24.svg",
-      "32": "assets/icons/product/entra-id/filled-32.svg"
+    "mono": {
+      "16": "assets/icons/product/entra-id/mono-16.svg",
+      "24": "assets/icons/product/entra-id/mono-24.svg",
+      "32": "assets/icons/product/entra-id/mono-32.svg"
     }
   },
   "version": "1.0.0",

@@ -9,9 +9,9 @@
   "product": "Copilot",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/copilot/color-16.svg",
-      "20": "assets/icons/product/copilot/color-20.svg",
-      "24": "assets/icons/product/copilot/color-24.svg",
-      "28": "assets/icons/product/copilot/color-28.svg",
-      "32": "assets/icons/product/copilot/color-32.svg",
-      "48": "assets/icons/product/copilot/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/copilot/standard-16.svg",
+      "20": "assets/icons/product/copilot/standard-20.svg",
+      "24": "assets/icons/product/copilot/standard-24.svg",
+      "28": "assets/icons/product/copilot/standard-28.svg",
+      "32": "assets/icons/product/copilot/standard-32.svg",
+      "48": "assets/icons/product/copilot/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/copilot/filled-16.svg",
-      "20": "assets/icons/product/copilot/filled-20.svg",
-      "24": "assets/icons/product/copilot/filled-24.svg",
-      "28": "assets/icons/product/copilot/filled-28.svg",
-      "32": "assets/icons/product/copilot/filled-32.svg",
-      "48": "assets/icons/product/copilot/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/copilot/mono-16.svg",
+      "20": "assets/icons/product/copilot/mono-20.svg",
+      "24": "assets/icons/product/copilot/mono-24.svg",
+      "28": "assets/icons/product/copilot/mono-28.svg",
+      "32": "assets/icons/product/copilot/mono-32.svg",
+      "48": "assets/icons/product/copilot/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/copilot/regular-16.svg",
-      "20": "assets/icons/product/copilot/regular-20.svg",
-      "24": "assets/icons/product/copilot/regular-24.svg",
-      "28": "assets/icons/product/copilot/regular-28.svg",
-      "32": "assets/icons/product/copilot/regular-32.svg",
-      "48": "assets/icons/product/copilot/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/copilot/outline-16.svg",
+      "20": "assets/icons/product/copilot/outline-20.svg",
+      "24": "assets/icons/product/copilot/outline-24.svg",
+      "28": "assets/icons/product/copilot/outline-28.svg",
+      "32": "assets/icons/product/copilot/outline-32.svg",
+      "48": "assets/icons/product/copilot/outline-48.svg"
     }
   },
   "version": "1.0.0",

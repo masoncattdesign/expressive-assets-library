@@ -10,9 +10,9 @@
   "product": "Group Me",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -28,29 +28,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/group-me/color-16.svg",
-      "20": "assets/icons/product/group-me/color-20.svg",
-      "24": "assets/icons/product/group-me/color-24.svg",
-      "28": "assets/icons/product/group-me/color-28.svg",
-      "32": "assets/icons/product/group-me/color-32.svg",
-      "48": "assets/icons/product/group-me/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/group-me/standard-16.svg",
+      "20": "assets/icons/product/group-me/standard-20.svg",
+      "24": "assets/icons/product/group-me/standard-24.svg",
+      "28": "assets/icons/product/group-me/standard-28.svg",
+      "32": "assets/icons/product/group-me/standard-32.svg",
+      "48": "assets/icons/product/group-me/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/group-me/filled-16.svg",
-      "20": "assets/icons/product/group-me/filled-20.svg",
-      "24": "assets/icons/product/group-me/filled-24.svg",
-      "28": "assets/icons/product/group-me/filled-28.svg",
-      "32": "assets/icons/product/group-me/filled-32.svg",
-      "48": "assets/icons/product/group-me/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/group-me/mono-16.svg",
+      "20": "assets/icons/product/group-me/mono-20.svg",
+      "24": "assets/icons/product/group-me/mono-24.svg",
+      "28": "assets/icons/product/group-me/mono-28.svg",
+      "32": "assets/icons/product/group-me/mono-32.svg",
+      "48": "assets/icons/product/group-me/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/group-me/regular-16.svg",
-      "20": "assets/icons/product/group-me/regular-20.svg",
-      "24": "assets/icons/product/group-me/regular-24.svg",
-      "28": "assets/icons/product/group-me/regular-28.svg",
-      "32": "assets/icons/product/group-me/regular-32.svg",
-      "48": "assets/icons/product/group-me/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/group-me/outline-16.svg",
+      "20": "assets/icons/product/group-me/outline-20.svg",
+      "24": "assets/icons/product/group-me/outline-24.svg",
+      "28": "assets/icons/product/group-me/outline-28.svg",
+      "32": "assets/icons/product/group-me/outline-32.svg",
+      "48": "assets/icons/product/group-me/outline-48.svg"
     }
   },
   "version": "1.0.0",

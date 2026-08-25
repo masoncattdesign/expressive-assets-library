@@ -1,0 +1,47 @@
+{
+  "id": "system.spinner-ios",
+  "name": "Spinner iOS",
+  "keywords": [
+    "loader",
+    "animation",
+    "spinner",
+    "ios"
+  ],
+  "description": "Used in loading content on iOS.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/spinner-ios/mono-20.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/spinner-ios/outline-20.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/spinner-ios/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Spinner%20iOS",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

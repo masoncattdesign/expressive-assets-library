@@ -1,0 +1,19 @@
+<svg aria-label="Eventify standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 4C18 2.89543 17.1046 2 16 2H4C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6H16C17.1046 6 18 5.10457 18 4Z" fill="url(#product-eventify-standard-20-paint0_linear_164168_692)"/>
+<path d="M2 10C2 8.89543 2.89543 8 4 8H9C10.1046 8 11 8.89543 11 10C11 11.1046 10.1046 12 9 12H4C2.89543 12 2 11.1046 2 10Z" fill="url(#product-eventify-standard-20-paint1_linear_164168_692)"/>
+<path d="M2 16C2 14.8954 2.89543 14 4 14H16C17.1046 14 18 14.8954 18 16C18 17.1046 17.1046 18 16 18H4C2.89543 18 2 17.1046 2 16Z" fill="url(#product-eventify-standard-20-paint2_linear_164168_692)"/>
+<defs>
+<linearGradient id="product-eventify-standard-20-paint0_linear_164168_692" x1="10" y1="2" x2="10" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFD1"/>
+<stop offset="1" stop-color="#00A3FF"/>
+</linearGradient>
+<linearGradient id="product-eventify-standard-20-paint1_linear_164168_692" x1="10" y1="2" x2="10" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFD1"/>
+<stop offset="1" stop-color="#00A3FF"/>
+</linearGradient>
+<linearGradient id="product-eventify-standard-20-paint2_linear_164168_692" x1="10" y1="2" x2="10" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFD1"/>
+<stop offset="1" stop-color="#00A3FF"/>
+</linearGradient>
+</defs>
+</svg>

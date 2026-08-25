@@ -13,9 +13,9 @@
   "collection": "file",
   "status": "published",
   "themes": [
-    "color",
-    "regular",
-    "filled"
+    "standard",
+    "outline",
+    "mono"
   ],
   "sizes": [
     12,
@@ -32,14 +32,14 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "any": "assets/icons/file/archive/color.svg"
+    "standard": {
+      "any": "assets/icons/file/archive/standard.svg"
     },
-    "regular": {
-      "any": "assets/icons/file/archive/regular.svg"
+    "outline": {
+      "any": "assets/icons/file/archive/outline.svg"
     },
-    "filled": {
-      "any": "assets/icons/file/archive/filled.svg"
+    "mono": {
+      "any": "assets/icons/file/archive/mono.svg"
     }
   },
   "owner": "@windows-design-systems",

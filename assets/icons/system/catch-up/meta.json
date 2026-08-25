@@ -1,0 +1,54 @@
+{
+  "id": "system.catch-up",
+  "name": "Catch Up",
+  "keywords": [
+    "pulse",
+    "rate",
+    "monitor",
+    "document",
+    "mention",
+    "collaboration",
+    "catch",
+    "up"
+  ],
+  "description": "Used to summarize changes in a document that are specifically for you - replies, tasks, mentions, etc.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/catch-up/mono-20.svg",
+      "24": "assets/icons/system/catch-up/mono-24.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/catch-up/outline-20.svg",
+      "24": "assets/icons/system/catch-up/outline-24.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/catch-up/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Catch%20Up",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

@@ -12,7 +12,7 @@
   "collection": "windows",
   "status": "published",
   "themes": [
-    "color"
+    "standard"
   ],
   "sizes": [
     96,
@@ -26,8 +26,8 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "any": "assets/illustrations/windows/welcome/color.svg"
+    "standard": {
+      "any": "assets/illustrations/windows/welcome/standard.svg"
     }
   },
   "owner": "@windows-design-systems",

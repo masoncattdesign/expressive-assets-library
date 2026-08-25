@@ -9,8 +9,8 @@
   "product": "Bookings",
   "status": "draft",
   "themes": [
-    "color",
-    "regular"
+    "standard",
+    "outline"
   ],
   "sizes": [
     16,
@@ -26,21 +26,21 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/bookings/color-16.svg",
-      "20": "assets/icons/product/bookings/color-20.svg",
-      "24": "assets/icons/product/bookings/color-24.svg",
-      "28": "assets/icons/product/bookings/color-28.svg",
-      "32": "assets/icons/product/bookings/color-32.svg",
-      "48": "assets/icons/product/bookings/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/bookings/standard-16.svg",
+      "20": "assets/icons/product/bookings/standard-20.svg",
+      "24": "assets/icons/product/bookings/standard-24.svg",
+      "28": "assets/icons/product/bookings/standard-28.svg",
+      "32": "assets/icons/product/bookings/standard-32.svg",
+      "48": "assets/icons/product/bookings/standard-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/bookings/regular-16.svg",
-      "20": "assets/icons/product/bookings/regular-20.svg",
-      "24": "assets/icons/product/bookings/regular-24.svg",
-      "28": "assets/icons/product/bookings/regular-28.svg",
-      "32": "assets/icons/product/bookings/regular-32.svg",
-      "48": "assets/icons/product/bookings/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/bookings/outline-16.svg",
+      "20": "assets/icons/product/bookings/outline-20.svg",
+      "24": "assets/icons/product/bookings/outline-24.svg",
+      "28": "assets/icons/product/bookings/outline-28.svg",
+      "32": "assets/icons/product/bookings/outline-32.svg",
+      "48": "assets/icons/product/bookings/outline-48.svg"
     }
   },
   "version": "1.0.0",

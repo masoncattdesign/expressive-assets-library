@@ -9,9 +9,9 @@
   "product": "Edge",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/edge/color-16.svg",
-      "20": "assets/icons/product/edge/color-20.svg",
-      "24": "assets/icons/product/edge/color-24.svg",
-      "28": "assets/icons/product/edge/color-28.svg",
-      "32": "assets/icons/product/edge/color-32.svg",
-      "48": "assets/icons/product/edge/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/edge/standard-16.svg",
+      "20": "assets/icons/product/edge/standard-20.svg",
+      "24": "assets/icons/product/edge/standard-24.svg",
+      "28": "assets/icons/product/edge/standard-28.svg",
+      "32": "assets/icons/product/edge/standard-32.svg",
+      "48": "assets/icons/product/edge/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/edge/filled-16.svg",
-      "20": "assets/icons/product/edge/filled-20.svg",
-      "24": "assets/icons/product/edge/filled-24.svg",
-      "28": "assets/icons/product/edge/filled-28.svg",
-      "32": "assets/icons/product/edge/filled-32.svg",
-      "48": "assets/icons/product/edge/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/edge/mono-16.svg",
+      "20": "assets/icons/product/edge/mono-20.svg",
+      "24": "assets/icons/product/edge/mono-24.svg",
+      "28": "assets/icons/product/edge/mono-28.svg",
+      "32": "assets/icons/product/edge/mono-32.svg",
+      "48": "assets/icons/product/edge/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/edge/regular-16.svg",
-      "20": "assets/icons/product/edge/regular-20.svg",
-      "24": "assets/icons/product/edge/regular-24.svg",
-      "28": "assets/icons/product/edge/regular-28.svg",
-      "32": "assets/icons/product/edge/regular-32.svg",
-      "48": "assets/icons/product/edge/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/edge/outline-16.svg",
+      "20": "assets/icons/product/edge/outline-20.svg",
+      "24": "assets/icons/product/edge/outline-24.svg",
+      "28": "assets/icons/product/edge/outline-28.svg",
+      "32": "assets/icons/product/edge/outline-32.svg",
+      "48": "assets/icons/product/edge/outline-48.svg"
     }
   },
   "version": "1.0.0",

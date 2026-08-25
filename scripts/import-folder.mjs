@@ -46,7 +46,10 @@ const COLLECTION = arg('collection') || 'product';
 const TYPE = arg('type') || (['windows', 'fluent'].includes(COLLECTION) ? 'illustration' : 'icon');
 const DRY = has('--dry-run');
 
-const THEME_MAP = { Color: 'color', Regular: 'regular', Filled: 'filled' };
+/* Figma's theme names on the left, this library's on the right. Figma calls
+   the full-colour base "Color"; here it is "standard", because it is the base
+   the other two reduce from. */
+const THEME_MAP = { Color: 'standard', Regular: 'outline', Filled: 'mono' };
 
 const slug = (s) =>
   s
@@ -57,7 +60,7 @@ const slug = (s) =>
 const exists = (p) => stat(p).then(() => true, () => false);
 
 /**
- * "Size=24, Theme=Color-4.svg" -> { size: 24, theme: 'color' }
+ * "Size=24, Theme=Color-4.svg" -> { size: 24, theme: 'standard' }
  *
  * Real exports are messier than the convention suggests. Seen in the wild:
  * Figma's collision suffixes ("Color-4"), a stray leading space
@@ -92,7 +95,7 @@ function prepare(svg, { prefix, label, theme }) {
 
   // Monochrome themes come out of Figma as flat black. currentColor lets a host
   // page — or the accent picker — set it without touching the file.
-  if (theme !== 'color') {
+  if (theme !== 'standard') {
     out = out.replace(/(fill|stroke)="(black|#000|#000000)"/gi, '$1="currentColor"');
   }
 
@@ -237,7 +240,7 @@ async function main() {
         const rel = `${outDir}/${theme}-${size}.svg`;
         await writeFile(join(ROOT, rel), prepared, 'utf8');
         variants[theme][size] = rel;
-        if (theme === 'color' && !colorSample) colorSample = raw;
+        if (theme === 'standard' && !colorSample) colorSample = raw;
       }
     }
 
@@ -253,7 +256,7 @@ async function main() {
       sizes: asset.sizes,
       colors: extractColors(colorSample),
       // Monochrome themes were rewritten to currentColor and do take an accent.
-      // The Color theme keeps its brand gradients; the browser detects that per
+      // The standard theme keeps its brand gradients; the browser detects that per
       // theme at runtime, so the picker is only offered where it works.
       recolorable: true,
       variants,

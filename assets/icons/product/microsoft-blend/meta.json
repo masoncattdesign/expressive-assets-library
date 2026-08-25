@@ -10,9 +10,9 @@
   "product": "Microsoft Blend",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -28,29 +28,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/microsoft-blend/color-16.svg",
-      "20": "assets/icons/product/microsoft-blend/color-20.svg",
-      "24": "assets/icons/product/microsoft-blend/color-24.svg",
-      "28": "assets/icons/product/microsoft-blend/color-28.svg",
-      "32": "assets/icons/product/microsoft-blend/color-32.svg",
-      "48": "assets/icons/product/microsoft-blend/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/microsoft-blend/standard-16.svg",
+      "20": "assets/icons/product/microsoft-blend/standard-20.svg",
+      "24": "assets/icons/product/microsoft-blend/standard-24.svg",
+      "28": "assets/icons/product/microsoft-blend/standard-28.svg",
+      "32": "assets/icons/product/microsoft-blend/standard-32.svg",
+      "48": "assets/icons/product/microsoft-blend/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/microsoft-blend/filled-16.svg",
-      "20": "assets/icons/product/microsoft-blend/filled-20.svg",
-      "24": "assets/icons/product/microsoft-blend/filled-24.svg",
-      "28": "assets/icons/product/microsoft-blend/filled-28.svg",
-      "32": "assets/icons/product/microsoft-blend/filled-32.svg",
-      "48": "assets/icons/product/microsoft-blend/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/microsoft-blend/mono-16.svg",
+      "20": "assets/icons/product/microsoft-blend/mono-20.svg",
+      "24": "assets/icons/product/microsoft-blend/mono-24.svg",
+      "28": "assets/icons/product/microsoft-blend/mono-28.svg",
+      "32": "assets/icons/product/microsoft-blend/mono-32.svg",
+      "48": "assets/icons/product/microsoft-blend/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/microsoft-blend/regular-16.svg",
-      "20": "assets/icons/product/microsoft-blend/regular-20.svg",
-      "24": "assets/icons/product/microsoft-blend/regular-24.svg",
-      "28": "assets/icons/product/microsoft-blend/regular-28.svg",
-      "32": "assets/icons/product/microsoft-blend/regular-32.svg",
-      "48": "assets/icons/product/microsoft-blend/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/microsoft-blend/outline-16.svg",
+      "20": "assets/icons/product/microsoft-blend/outline-20.svg",
+      "24": "assets/icons/product/microsoft-blend/outline-24.svg",
+      "28": "assets/icons/product/microsoft-blend/outline-28.svg",
+      "32": "assets/icons/product/microsoft-blend/outline-32.svg",
+      "48": "assets/icons/product/microsoft-blend/outline-48.svg"
     }
   },
   "version": "1.0.0",

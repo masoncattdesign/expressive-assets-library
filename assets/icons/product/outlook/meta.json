@@ -9,9 +9,9 @@
   "product": "Outlook",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/outlook/color-16.svg",
-      "20": "assets/icons/product/outlook/color-20.svg",
-      "24": "assets/icons/product/outlook/color-24.svg",
-      "28": "assets/icons/product/outlook/color-28.svg",
-      "32": "assets/icons/product/outlook/color-32.svg",
-      "48": "assets/icons/product/outlook/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/outlook/standard-16.svg",
+      "20": "assets/icons/product/outlook/standard-20.svg",
+      "24": "assets/icons/product/outlook/standard-24.svg",
+      "28": "assets/icons/product/outlook/standard-28.svg",
+      "32": "assets/icons/product/outlook/standard-32.svg",
+      "48": "assets/icons/product/outlook/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/outlook/filled-16.svg",
-      "20": "assets/icons/product/outlook/filled-20.svg",
-      "24": "assets/icons/product/outlook/filled-24.svg",
-      "28": "assets/icons/product/outlook/filled-28.svg",
-      "32": "assets/icons/product/outlook/filled-32.svg",
-      "48": "assets/icons/product/outlook/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/outlook/mono-16.svg",
+      "20": "assets/icons/product/outlook/mono-20.svg",
+      "24": "assets/icons/product/outlook/mono-24.svg",
+      "28": "assets/icons/product/outlook/mono-28.svg",
+      "32": "assets/icons/product/outlook/mono-32.svg",
+      "48": "assets/icons/product/outlook/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/outlook/regular-16.svg",
-      "20": "assets/icons/product/outlook/regular-20.svg",
-      "24": "assets/icons/product/outlook/regular-24.svg",
-      "28": "assets/icons/product/outlook/regular-28.svg",
-      "32": "assets/icons/product/outlook/regular-32.svg",
-      "48": "assets/icons/product/outlook/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/outlook/outline-16.svg",
+      "20": "assets/icons/product/outlook/outline-20.svg",
+      "24": "assets/icons/product/outlook/outline-24.svg",
+      "28": "assets/icons/product/outlook/outline-28.svg",
+      "32": "assets/icons/product/outlook/outline-32.svg",
+      "48": "assets/icons/product/outlook/outline-48.svg"
     }
   },
   "version": "1.0.0",

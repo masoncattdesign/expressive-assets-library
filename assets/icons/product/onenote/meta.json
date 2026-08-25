@@ -9,9 +9,9 @@
   "product": "OneNote",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/onenote/color-16.svg",
-      "20": "assets/icons/product/onenote/color-20.svg",
-      "24": "assets/icons/product/onenote/color-24.svg",
-      "28": "assets/icons/product/onenote/color-28.svg",
-      "32": "assets/icons/product/onenote/color-32.svg",
-      "48": "assets/icons/product/onenote/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/onenote/standard-16.svg",
+      "20": "assets/icons/product/onenote/standard-20.svg",
+      "24": "assets/icons/product/onenote/standard-24.svg",
+      "28": "assets/icons/product/onenote/standard-28.svg",
+      "32": "assets/icons/product/onenote/standard-32.svg",
+      "48": "assets/icons/product/onenote/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/onenote/filled-16.svg",
-      "20": "assets/icons/product/onenote/filled-20.svg",
-      "24": "assets/icons/product/onenote/filled-24.svg",
-      "28": "assets/icons/product/onenote/filled-28.svg",
-      "32": "assets/icons/product/onenote/filled-32.svg",
-      "48": "assets/icons/product/onenote/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/onenote/mono-16.svg",
+      "20": "assets/icons/product/onenote/mono-20.svg",
+      "24": "assets/icons/product/onenote/mono-24.svg",
+      "28": "assets/icons/product/onenote/mono-28.svg",
+      "32": "assets/icons/product/onenote/mono-32.svg",
+      "48": "assets/icons/product/onenote/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/onenote/regular-16.svg",
-      "20": "assets/icons/product/onenote/regular-20.svg",
-      "24": "assets/icons/product/onenote/regular-24.svg",
-      "28": "assets/icons/product/onenote/regular-28.svg",
-      "32": "assets/icons/product/onenote/regular-32.svg",
-      "48": "assets/icons/product/onenote/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/onenote/outline-16.svg",
+      "20": "assets/icons/product/onenote/outline-20.svg",
+      "24": "assets/icons/product/onenote/outline-24.svg",
+      "28": "assets/icons/product/onenote/outline-28.svg",
+      "32": "assets/icons/product/onenote/outline-32.svg",
+      "48": "assets/icons/product/onenote/outline-48.svg"
     }
   },
   "version": "1.0.0",

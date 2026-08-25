@@ -169,7 +169,17 @@ body {
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   transition: border-color .12s, box-shadow .12s, transform .12s;
   font: inherit; color: var(--text);
+
+  /* The System Icons collection is ~2,900 cards. Without this the browser
+     styles, lays out and paints every one of them on every collection switch,
+     which measured at 2.6s. content-visibility lets it skip that work entirely
+     for anything off screen; contain-intrinsic-size supplies a placeholder box
+     so the scrollbar and scroll position stay honest. Every card stays in the
+     DOM, so find-in-page, tab order and screen readers still see the lot. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 116px;
 }
+.grid.list .card { contain-intrinsic-size: auto 52px; }
 .card:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
 .card.on { border-color: var(--selected-ring); box-shadow: 0 0 0 2px var(--selected-ring); }
 .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -313,3 +323,7 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
   .content { flex-direction: column; }
   .panel { width: auto; border-left: 0; border-top: 1px solid var(--line); }
 }
+
+
+/* Second line inside a callout — the caveat under an attribution notice. */
+.callout .fine { display: block; margin-top: 6px; color: var(--text-3); font-size: 11.5px; line-height: 1.45; }

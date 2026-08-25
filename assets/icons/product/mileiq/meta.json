@@ -9,8 +9,8 @@
   "product": "MileIQ",
   "status": "draft",
   "themes": [
-    "color",
-    "filled"
+    "standard",
+    "mono"
   ],
   "sizes": [
     24,
@@ -22,13 +22,13 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "24": "assets/icons/product/mileiq/color-24.svg",
-      "28": "assets/icons/product/mileiq/color-28.svg"
+    "standard": {
+      "24": "assets/icons/product/mileiq/standard-24.svg",
+      "28": "assets/icons/product/mileiq/standard-28.svg"
     },
-    "filled": {
-      "24": "assets/icons/product/mileiq/filled-24.svg",
-      "28": "assets/icons/product/mileiq/filled-28.svg"
+    "mono": {
+      "24": "assets/icons/product/mileiq/mono-24.svg",
+      "28": "assets/icons/product/mileiq/mono-28.svg"
     }
   },
   "version": "1.0.0",

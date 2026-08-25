@@ -2,47 +2,50 @@
   "id": "system.search",
   "name": "Search",
   "keywords": [
-    "find",
-    "magnifier",
-    "lookup",
-    "query"
+    "magnifying glass",
+    "zoom",
+    "inspect",
+    "review",
+    "search"
   ],
-  "description": "A magnifier. Search entry points and find-in-page.",
+  "description": "Used in general search scenarios.â ï¸ Please note, Fluent updates have pushed for unified direction. So no more right leaning magnifying glasses, mmmkay?",
   "type": "icon",
   "collection": "system",
-  "status": "published",
+  "status": "draft",
   "themes": [
-    "color",
-    "regular",
-    "filled"
+    "mono",
+    "outline",
+    "standard"
   ],
   "sizes": [
-    12,
-    16,
     20,
-    24,
-    28,
-    32,
-    48
+    24
   ],
   "colors": {
     "primary": "#0078D4",
-    "secondary": "#2AA0DA"
+    "secondary": "#8764B8"
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "any": "assets/icons/system/search/color.svg"
+    "mono": {
+      "20": "assets/icons/system/search/mono-20.svg",
+      "24": "assets/icons/system/search/mono-24.svg"
     },
-    "regular": {
-      "any": "assets/icons/system/search/regular.svg"
+    "outline": {
+      "20": "assets/icons/system/search/outline-20.svg",
+      "24": "assets/icons/system/search/outline-24.svg"
     },
-    "filled": {
-      "any": "assets/icons/system/search/filled.svg"
+    "standard": {
+      "any": "assets/icons/system/search/standard-any.svg"
     }
   },
-  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Search",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
 }

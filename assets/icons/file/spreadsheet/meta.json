@@ -16,9 +16,9 @@
   "collection": "file",
   "status": "published",
   "themes": [
-    "color",
-    "regular",
-    "filled"
+    "standard",
+    "outline",
+    "mono"
   ],
   "sizes": [
     12,
@@ -35,14 +35,14 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "any": "assets/icons/file/spreadsheet/color.svg"
+    "standard": {
+      "any": "assets/icons/file/spreadsheet/standard.svg"
     },
-    "regular": {
-      "any": "assets/icons/file/spreadsheet/regular.svg"
+    "outline": {
+      "any": "assets/icons/file/spreadsheet/outline.svg"
     },
-    "filled": {
-      "any": "assets/icons/file/spreadsheet/filled.svg"
+    "mono": {
+      "any": "assets/icons/file/spreadsheet/mono.svg"
     }
   },
   "owner": "@windows-design-systems",

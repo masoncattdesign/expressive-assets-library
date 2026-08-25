@@ -1,0 +1,29 @@
+<svg aria-label="Microsoft Privacy Moment standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 6.5V4C10 2.89543 9.10457 2 8 2C6.89543 2 6 2.89543 6 4V6.5C6 6.77614 5.77614 7 5.5 7C5.22386 7 5 6.77614 5 6.5V4C5 2.34315 6.34315 1 8 1C9.65685 1 11 2.34315 11 4V6.5C11 6.77614 10.7761 7 10.5 7C10.2239 7 10 6.77614 10 6.5Z" fill="url(#product-microsoft-privacy-moment-standard-16-paint0_linear_527478_882)"/>
+<rect x="3" y="6" width="10" height="9" rx="2" fill="url(#product-microsoft-privacy-moment-standard-16-paint1_radial_527478_882)"/>
+<path d="M9.5 12C10.3284 12 11 12.6716 11 13.5V15H5V13.5C5 12.6716 5.67157 12 6.5 12H9.5Z" fill="url(#product-microsoft-privacy-moment-standard-16-paint2_radial_527478_882)"/>
+<path d="M8 8C8.82843 8 9.5 8.67157 9.5 9.5C9.5 10.3284 8.82843 11 8 11C7.17157 11 6.5 10.3284 6.5 9.5C6.5 8.67157 7.17157 8 8 8Z" fill="url(#product-microsoft-privacy-moment-standard-16-paint3_radial_527478_882)"/>
+<defs>
+<linearGradient id="product-microsoft-privacy-moment-standard-16-paint0_linear_527478_882" x1="6.54286" y1="0.585426" x2="9.9807" y2="10.9027" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0FAFFF"/>
+<stop offset="0.314633" stop-color="#138AE4"/>
+<stop offset="0.61262" stop-color="#5932E4"/>
+</linearGradient>
+<radialGradient id="product-microsoft-privacy-moment-standard-16-paint1_radial_527478_882" cx="0" cy="0" r="1" gradientTransform="matrix(8.75 8.67857 -8.4375 9 3.46875 6.32143)" gradientUnits="userSpaceOnUse">
+<stop offset="0.0261071" stop-color="#3BD5FF"/>
+<stop offset="0.413462" stop-color="#00ACFF"/>
+<stop offset="0.644231" stop-color="#1599FF"/>
+<stop offset="1" stop-color="#8364F2"/>
+</radialGradient>
+<radialGradient id="product-microsoft-privacy-moment-standard-16-paint2_radial_527478_882" cx="0" cy="0" r="1" gradientTransform="matrix(10.6667 12.1852 -11.9044 8.67115 1.14286 6.22222)" gradientUnits="userSpaceOnUse">
+<stop offset="0.294994" stop-color="#2B6EFF"/>
+<stop offset="0.529425" stop-color="#245DE6"/>
+<stop offset="0.682436" stop-color="#5932E4"/>
+</radialGradient>
+<radialGradient id="product-microsoft-privacy-moment-standard-16-paint3_radial_527478_882" cx="0" cy="0" r="1" gradientTransform="matrix(10.6667 12.1852 -11.9044 8.67115 1.14286 6.22222)" gradientUnits="userSpaceOnUse">
+<stop offset="0.294994" stop-color="#2B6EFF"/>
+<stop offset="0.529425" stop-color="#245DE6"/>
+<stop offset="0.682436" stop-color="#5932E4"/>
+</radialGradient>
+</defs>
+</svg>

@@ -9,8 +9,8 @@
   "product": "Eventify",
   "status": "draft",
   "themes": [
-    "color",
-    "filled"
+    "standard",
+    "mono"
   ],
   "sizes": [
     16,
@@ -26,21 +26,21 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/eventify/color-16.svg",
-      "20": "assets/icons/product/eventify/color-20.svg",
-      "24": "assets/icons/product/eventify/color-24.svg",
-      "28": "assets/icons/product/eventify/color-28.svg",
-      "32": "assets/icons/product/eventify/color-32.svg",
-      "48": "assets/icons/product/eventify/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/eventify/standard-16.svg",
+      "20": "assets/icons/product/eventify/standard-20.svg",
+      "24": "assets/icons/product/eventify/standard-24.svg",
+      "28": "assets/icons/product/eventify/standard-28.svg",
+      "32": "assets/icons/product/eventify/standard-32.svg",
+      "48": "assets/icons/product/eventify/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/eventify/filled-16.svg",
-      "20": "assets/icons/product/eventify/filled-20.svg",
-      "24": "assets/icons/product/eventify/filled-24.svg",
-      "28": "assets/icons/product/eventify/filled-28.svg",
-      "32": "assets/icons/product/eventify/filled-32.svg",
-      "48": "assets/icons/product/eventify/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/eventify/mono-16.svg",
+      "20": "assets/icons/product/eventify/mono-20.svg",
+      "24": "assets/icons/product/eventify/mono-24.svg",
+      "28": "assets/icons/product/eventify/mono-28.svg",
+      "32": "assets/icons/product/eventify/mono-32.svg",
+      "48": "assets/icons/product/eventify/mono-48.svg"
     }
   },
   "version": "1.0.0",

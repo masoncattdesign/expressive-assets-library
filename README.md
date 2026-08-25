@@ -5,15 +5,15 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 73 (67 icons, 6 illustrations) — 46 real product icons, the rest placeholder |
+| **Assets** | 2,953 — 2,891 Fluent system icons, 46 Microsoft product icons, 16 placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
 
-> **Artwork status: placeholder.** Every SVG in this repo is generated from
-> `scripts/sources/specs.mjs` so the pipeline is testable end to end. Swapping in
-> the real Windows drawings changes nothing about the schema, the manifest, or
-> the site — see [Replacing the placeholders](#replacing-the-placeholders).
+> **Artwork provenance.** System icons are Fluent System Icons (MIT, Microsoft).
+> Product icons are a Figma export of the Microsoft product marks. File icons and
+> illustrations are still placeholders generated from `scripts/sources/specs.mjs`.
+> See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and each asset's `source`.
 
 ---
 
@@ -40,11 +40,18 @@ Each asset is a folder:
 
 ```
 assets/icons/system/settings/
-  color.svg      Expressive — gradient tile, white glyph
-  regular.svg    Outline    — stroked, single color
-  filled.svg     Mono       — solid, single color
-  meta.json      Metadata for this asset
+  standard-any.svg   Standard — full colour, one scalable drawing
+  outline-20.svg     Outline  — monochrome, drawn for 20px
+  outline-24.svg     Outline  — drawn for 24px, a different drawing
+  mono-20.svg        Mono
+  mono-24.svg
+  meta.json          Metadata for this asset
 ```
+
+The size in the filename is not decoration. Windows artwork is redrawn per size
+— the 16px Excel icon is a different drawing from the 48px one, not a scaled
+copy — so `variants` is keyed theme → size. Artwork that genuinely is one
+scalable drawing uses the single key `any`.
 
 ## Metadata
 
@@ -61,12 +68,13 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `collection` | `system` · `product` · `file` · `windows` · `fluent` |
 | `product` | Product artwork only — which product it represents |
 | `status` | `draft` · `published` · `deprecated`, plus `replacedBy` |
-| `themes` | Which of `color` / `regular` / `filled` exist on disk |
+| `themes` | Which of `standard` / `outline` / `mono` exist on disk |
 | `sizes` | Pixel sizes the geometry is *legible* at, not what it can scale to |
-| `colors` | `primary` / `secondary` baked into the Expressive variant |
+| `colors` | `primary` / `secondary` baked into the Standard variant |
 | `recolorable` | False for brand marks — the browser greys out the accent picker |
 | `variants` | Theme → size → SVG path. Windows artwork is redrawn per size, so each drawing is kept |
 | `figma` | `fileKey` + `nodeId` — traces an asset back to the component that made it |
+| `source` | Upstream project, licence and copyright for vendored artwork |
 | `version`, `updated`, `owner` | Provenance |
 
 Two earlier fields are gone on purpose. `status` and `build` were two lifecycle
@@ -74,9 +82,10 @@ axes doing one job, and nobody could say what `active` + `alpha` meant together.
 `family` overlapped `collection`, and where it carried real information that
 information was the product — so it became `product`.
 
-**Theme naming.** The library stores `color` / `regular` / `filled`; the UI labels
-them **Expressive** / **Outline** / **Mono**. Same three things, two audiences —
-the mapping lives in one constant at the top of `docs/app.js`.
+**Theme naming.** `standard` is the full-colour base; `outline` and `mono` are
+its monochrome reductions. Keys and labels match deliberately. An earlier split
+had `regular` meaning Outline in this library while Fluent uses "regular" for the
+full-weight base — the kind of collision that costs someone an afternoon.
 
 ## Using the library
 
@@ -87,10 +96,15 @@ detail and the manifest is the contract.
 const { assets } = await fetch('https://masoncattdesign.github.io/expressive-assets-library/manifest.json')
   .then((r) => r.json());
 
-const shippable = assets.filter((a) => a.status === 'active' && a.build === 'stable');
+const shippable = assets.filter((a) => a.status === 'published');
 const settings = assets.find((a) => a.id === 'system.settings');
-// settings.variants.color -> "assets/icons/system/settings/color.svg"
+// settings.variants.outline[24] -> "assets/icons/system/settings/outline-24.svg"
+// settings.variants.standard.any -> the one scalable full-colour drawing
 ```
+
+`manifest.json` is 4.6 MB uncompressed and ~185 KB gzipped, which is what
+GitHub Pages actually serves. If you only need part of it, filter on `collection`
+after fetching rather than walking the asset tree.
 
 Every SVG declares its colors as custom properties on the root, so a host page
 can retint one without touching the file:
@@ -129,16 +143,20 @@ aliases, ids, keywords and descriptions; sidebar filtering by collection; a
 status filter; grid and list views; live theme, size and Windows-accent
 switching; arrow-key navigation; and copy/download of the exact SVG on screen.
 
-Two things in it are sized for 500+ assets rather than a demo. Cards render as
-empty shells immediately and an `IntersectionObserver` fills in artwork as they
-scroll into view, so first paint never waits on SVG payload. And drawings are
-fetched individually and cached rather than bundled — measured on the current
-library, a cold load is 51 requests and 37 KB with first artwork at 275 ms,
-because the cost is bounded by the viewport rather than by the library size.
+Three things in it are sized for the real library rather than a demo, each one
+measured rather than assumed:
 
-Bundling was tried and abandoned. It worked at 38 scalable assets; the moment
-artwork is drawn per size it does not. The 46 product icons alone are 828
-separate drawings, which bundled to 2.3 MB for one collection.
+- **Cards paint lazily.** They render as empty shells and an
+  `IntersectionObserver` fills in artwork as they scroll into view. A cold load
+  is 51 SVG requests and 37 KB, first artwork at ~440 ms — bounded by the
+  viewport, not by the 2,953 assets behind it.
+- **Cards are added a page at a time.** Building all 2,891 System Icons cards up
+  front cost 2.6 s of DOM construction on every collection switch. Rendering 240
+  and growing on scroll took that to **9 ms**. `content-visibility` alone did not
+  fix it: it skips layout and paint, not element creation.
+- **Drawings are fetched individually, not bundled.** Bundling worked at 38
+  scalable assets and collapsed once artwork became per-size — the product icons
+  alone are 828 drawings, 2.3 MB for one collection.
 
 Because it is unbuilt static files, a designer can edit a color token in
 `styles.css` and open a PR without installing a toolchain.
@@ -150,6 +168,40 @@ a second copy of the artwork inside `docs/`, which would drift.
 **Deploy setup:** Pages must be enabled once under *Settings → Pages → Source:
 GitHub Actions*. If the repo is ever renamed or forked, update `REPO` at the top
 of `docs/app.js` — it drives the "Add Assets" and "View source" links.
+
+## Importing Fluent System Icons
+
+The system collection is [Fluent System Icons](https://github.com/microsoft/fluentui-system-icons),
+MIT licensed, Copyright (c) 2020 Microsoft Corporation.
+
+```bash
+git clone --depth 1 https://github.com/microsoft/fluentui-system-icons.git
+node scripts/import-fluent.mjs --from=./fluentui-system-icons --dry-run
+node scripts/import-fluent.mjs --from=./fluentui-system-icons
+npm run manifest && npm run validate
+```
+
+Defaults to 20px and 24px (`--sizes=16,20,24,32` to widen). Fluent ships up to
+seven sizes per icon — the full set is 21,645 files, which is a lot of git for a
+library that also has to hold your own work.
+
+Two things it does to the artwork:
+
+- **`#212121` becomes `currentColor`**, so every system icon takes a Windows
+  accent instead of being locked to near-black.
+- **Standard is synthesised.** Fluent has no full-colour system icon, so the
+  importer insets the filled glyph in the gradient tile. That artwork is drawn
+  here, not shipped by Microsoft — every affected asset says so in its `notes`,
+  and `THIRD-PARTY-NOTICES.md` says it again. Artwork that looks official and
+  isn't is worse than no artwork.
+
+Keywords come from Fluent's own `metaphor` metadata, which is a real synonym
+list rather than a restatement of the name — that plus their descriptions took
+the library from 12% to 84% description coverage.
+
+Attribution travels with the artwork: each asset carries a `source` block naming
+the project, licence, copyright and upstream URL, and the browser shows it in
+the detail panel where someone is about to copy the file.
 
 ## Importing a folder export
 
@@ -222,7 +274,7 @@ Each icon is authored once on a 24×24 grid and all three themes are derived fro
 it. Open `scripts/sources/specs.mjs` and replace an entry's `glyph` with the real
 path data, using the semantic classes:
 
-| Class | Expressive | Outline | Mono |
+| Class | Standard | Outline | Mono |
 |---|---|---|---|
 | `.f` | filled white | stroked | filled |
 | `.s` | stroked white | stroked | stroked, heavier |
@@ -234,7 +286,7 @@ Two rules that are load-bearing:
 1. **Keep every `.f` shape a single path.** A shape composed of overlapping
    circles fills correctly but falls apart in Outline, where each sub-shape gets
    its own visible contour.
-2. **Don't overlap `.f` and `.s` in the same region** — in Expressive both are
+2. **Don't overlap `.f` and `.s` in the same region** — in Standard both are
    white and the detail disappears. Use `.k` for anything that sits on top of a
    filled shape.
 

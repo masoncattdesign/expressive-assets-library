@@ -1,0 +1,52 @@
+{
+  "id": "system.rss",
+  "name": "RSS",
+  "keywords": [
+    "really simple syndication",
+    "feed",
+    "news",
+    "aggregator",
+    "square",
+    "rss"
+  ],
+  "description": "Used to represent web feed of aggregated news, content or information.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/rss/mono-20.svg",
+      "24": "assets/icons/system/rss/mono-24.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/rss/outline-20.svg",
+      "24": "assets/icons/system/rss/outline-24.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/rss/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/RSS",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

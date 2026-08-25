@@ -1,0 +1,48 @@
+{
+  "id": "system.bug",
+  "name": "Bug",
+  "keywords": [
+    "code",
+    "bug"
+  ],
+  "description": "Used to represent bugs in code or malicious bugs in the system.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/bug/mono-20.svg",
+      "24": "assets/icons/system/bug/mono-24.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/bug/outline-20.svg",
+      "24": "assets/icons/system/bug/outline-24.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/bug/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Bug",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

@@ -1,0 +1,57 @@
+{
+  "id": "system.space-3d",
+  "name": "Space 3D",
+  "keywords": [
+    "vr",
+    "ar",
+    "virtual reality",
+    "augmented reality",
+    "video game",
+    "3d",
+    "world",
+    "virtual space",
+    "modeling",
+    "landscape",
+    "space"
+  ],
+  "description": "Used to represent 3D spaces in games or other virtual spaces.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/space-3d/mono-20.svg",
+      "24": "assets/icons/system/space-3d/mono-24.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/space-3d/outline-20.svg",
+      "24": "assets/icons/system/space-3d/outline-24.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/space-3d/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Space%203D",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

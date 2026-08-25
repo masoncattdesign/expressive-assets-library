@@ -178,7 +178,7 @@ async function survey() {
     fileKey: FILE_KEY,
     sizeProperty: guessProp(['size']),
     themeProperty: guessProp(['theme', 'style']),
-    themeMap: { Color: 'color', Regular: 'regular', Filled: 'filled' },
+    themeMap: { Color: 'standard', Regular: 'outline', Filled: 'mono' },
     defaultType: 'icon',
     collections: Object.fromEntries(pages.map(([page]) => [page, null])),
     skipPages: [],
@@ -238,13 +238,13 @@ async function importAssets() {
     const byTheme = new Map();
     for (const variant of set.variants) {
       const rawTheme = config.themeProperty ? variant.props[config.themeProperty] : null;
-      const theme = config.themeMap?.[rawTheme] || (rawTheme ? slug(rawTheme) : 'color');
+      const theme = config.themeMap?.[rawTheme] || (rawTheme ? slug(rawTheme) : 'standard');
       const size = Number(config.sizeProperty ? variant.props[config.sizeProperty] : 0) || 0;
       const current = byTheme.get(theme);
       if (!current || size > current.size) byTheme.set(theme, { id: variant.id, size });
     }
 
-    const themes = [...byTheme.keys()].filter((t) => ['color', 'regular', 'filled'].includes(t));
+    const themes = [...byTheme.keys()].filter((t) => ['standard', 'outline', 'mono'].includes(t));
     if (!themes.length) {
       skipped.push({ name: set.name, page: set.page, why: 'no recognisable theme variants' });
       continue;

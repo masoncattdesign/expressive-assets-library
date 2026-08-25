@@ -1,0 +1,52 @@
+{
+  "id": "system.person-6",
+  "name": "Person 6",
+  "keywords": [
+    "human",
+    "patient",
+    "contact",
+    "guest",
+    "number",
+    "five",
+    "six",
+    "type",
+    "person"
+  ],
+  "description": "Used in a very specific moment to share amount of access keys for software.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/person-6/mono-20.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/person-6/outline-20.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/person-6/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Person%206",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

@@ -9,8 +9,8 @@
   "product": "Launcher",
   "status": "draft",
   "themes": [
-    "color",
-    "regular"
+    "standard",
+    "outline"
   ],
   "sizes": [
     24
@@ -21,11 +21,11 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "24": "assets/icons/product/launcher/color-24.svg"
+    "standard": {
+      "24": "assets/icons/product/launcher/standard-24.svg"
     },
-    "regular": {
-      "24": "assets/icons/product/launcher/regular-24.svg"
+    "outline": {
+      "24": "assets/icons/product/launcher/outline-24.svg"
     }
   },
   "version": "1.0.0",

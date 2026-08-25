@@ -1,0 +1,48 @@
+{
+  "id": "system.server-multiple",
+  "name": "Server Multiple",
+  "keywords": [
+    "device",
+    "data",
+    "connection",
+    "server",
+    "multiple"
+  ],
+  "description": "Used to represent physical & digital server machines.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/server-multiple/mono-20.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/server-multiple/outline-20.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/server-multiple/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Server%20Multiple",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

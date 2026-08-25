@@ -1,0 +1,54 @@
+{
+  "id": "system.lock-closed",
+  "name": "Lock Closed",
+  "keywords": [
+    "security",
+    "access",
+    "protected",
+    "safety",
+    "permission",
+    "protection",
+    "lock",
+    "closed"
+  ],
+  "description": "Used in generic access, security, or safety scenarios.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "mono",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "mono": {
+      "20": "assets/icons/system/lock-closed/mono-20.svg",
+      "24": "assets/icons/system/lock-closed/mono-24.svg"
+    },
+    "outline": {
+      "20": "assets/icons/system/lock-closed/outline-20.svg",
+      "24": "assets/icons/system/lock-closed/outline-24.svg"
+    },
+    "standard": {
+      "any": "assets/icons/system/lock-closed/standard-any.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Lock%20Closed",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  },
+  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+}

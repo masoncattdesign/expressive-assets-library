@@ -11,9 +11,9 @@
   "product": "M365 Taskbar Suite",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -29,29 +29,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/m365-taskbar-suite/color-16.svg",
-      "20": "assets/icons/product/m365-taskbar-suite/color-20.svg",
-      "24": "assets/icons/product/m365-taskbar-suite/color-24.svg",
-      "28": "assets/icons/product/m365-taskbar-suite/color-28.svg",
-      "32": "assets/icons/product/m365-taskbar-suite/color-32.svg",
-      "48": "assets/icons/product/m365-taskbar-suite/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/m365-taskbar-suite/standard-16.svg",
+      "20": "assets/icons/product/m365-taskbar-suite/standard-20.svg",
+      "24": "assets/icons/product/m365-taskbar-suite/standard-24.svg",
+      "28": "assets/icons/product/m365-taskbar-suite/standard-28.svg",
+      "32": "assets/icons/product/m365-taskbar-suite/standard-32.svg",
+      "48": "assets/icons/product/m365-taskbar-suite/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/m365-taskbar-suite/filled-16.svg",
-      "20": "assets/icons/product/m365-taskbar-suite/filled-20.svg",
-      "24": "assets/icons/product/m365-taskbar-suite/filled-24.svg",
-      "28": "assets/icons/product/m365-taskbar-suite/filled-28.svg",
-      "32": "assets/icons/product/m365-taskbar-suite/filled-32.svg",
-      "48": "assets/icons/product/m365-taskbar-suite/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/m365-taskbar-suite/mono-16.svg",
+      "20": "assets/icons/product/m365-taskbar-suite/mono-20.svg",
+      "24": "assets/icons/product/m365-taskbar-suite/mono-24.svg",
+      "28": "assets/icons/product/m365-taskbar-suite/mono-28.svg",
+      "32": "assets/icons/product/m365-taskbar-suite/mono-32.svg",
+      "48": "assets/icons/product/m365-taskbar-suite/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/m365-taskbar-suite/regular-16.svg",
-      "20": "assets/icons/product/m365-taskbar-suite/regular-20.svg",
-      "24": "assets/icons/product/m365-taskbar-suite/regular-24.svg",
-      "28": "assets/icons/product/m365-taskbar-suite/regular-28.svg",
-      "32": "assets/icons/product/m365-taskbar-suite/regular-32.svg",
-      "48": "assets/icons/product/m365-taskbar-suite/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/m365-taskbar-suite/outline-16.svg",
+      "20": "assets/icons/product/m365-taskbar-suite/outline-20.svg",
+      "24": "assets/icons/product/m365-taskbar-suite/outline-24.svg",
+      "28": "assets/icons/product/m365-taskbar-suite/outline-28.svg",
+      "32": "assets/icons/product/m365-taskbar-suite/outline-32.svg",
+      "48": "assets/icons/product/m365-taskbar-suite/outline-48.svg"
     }
   },
   "version": "1.0.0",

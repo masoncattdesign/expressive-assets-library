@@ -1,0 +1,48 @@
+{
+  "id": "system.presence-tentative",
+  "name": "Presence Tentative",
+  "keywords": [
+    "avatar",
+    "status",
+    "detail",
+    "available",
+    "away",
+    "blocked",
+    "busy",
+    "dnd",
+    "off",
+    "unknown",
+    "presence",
+    "tentative"
+  ],
+  "description": "â ï¸ These do not represent the guidelines and quality of the Fluent System iconography. They are included as a way to make it easier for products to pull in without needed a second process.",
+  "type": "icon",
+  "collection": "system",
+  "status": "draft",
+  "themes": [
+    "outline"
+  ],
+  "sizes": [
+    20,
+    24
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "outline": {
+      "20": "assets/icons/system/presence-tentative/outline-20.svg",
+      "24": "assets/icons/system/presence-tentative/outline-24.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "Fluent System Icons",
+    "url": "https://github.com/microsoft/fluentui-system-icons/tree/main/assets/Presence%20Tentative",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2020 Microsoft Corporation"
+  }
+}

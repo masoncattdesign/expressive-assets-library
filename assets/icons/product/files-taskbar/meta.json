@@ -10,9 +10,9 @@
   "product": "Files Taskbar",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -28,29 +28,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/files-taskbar/color-16.svg",
-      "20": "assets/icons/product/files-taskbar/color-20.svg",
-      "24": "assets/icons/product/files-taskbar/color-24.svg",
-      "28": "assets/icons/product/files-taskbar/color-28.svg",
-      "32": "assets/icons/product/files-taskbar/color-32.svg",
-      "48": "assets/icons/product/files-taskbar/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/files-taskbar/standard-16.svg",
+      "20": "assets/icons/product/files-taskbar/standard-20.svg",
+      "24": "assets/icons/product/files-taskbar/standard-24.svg",
+      "28": "assets/icons/product/files-taskbar/standard-28.svg",
+      "32": "assets/icons/product/files-taskbar/standard-32.svg",
+      "48": "assets/icons/product/files-taskbar/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/files-taskbar/filled-16.svg",
-      "20": "assets/icons/product/files-taskbar/filled-20.svg",
-      "24": "assets/icons/product/files-taskbar/filled-24.svg",
-      "28": "assets/icons/product/files-taskbar/filled-28.svg",
-      "32": "assets/icons/product/files-taskbar/filled-32.svg",
-      "48": "assets/icons/product/files-taskbar/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/files-taskbar/mono-16.svg",
+      "20": "assets/icons/product/files-taskbar/mono-20.svg",
+      "24": "assets/icons/product/files-taskbar/mono-24.svg",
+      "28": "assets/icons/product/files-taskbar/mono-28.svg",
+      "32": "assets/icons/product/files-taskbar/mono-32.svg",
+      "48": "assets/icons/product/files-taskbar/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/files-taskbar/regular-16.svg",
-      "20": "assets/icons/product/files-taskbar/regular-20.svg",
-      "24": "assets/icons/product/files-taskbar/regular-24.svg",
-      "28": "assets/icons/product/files-taskbar/regular-28.svg",
-      "32": "assets/icons/product/files-taskbar/regular-32.svg",
-      "48": "assets/icons/product/files-taskbar/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/files-taskbar/outline-16.svg",
+      "20": "assets/icons/product/files-taskbar/outline-20.svg",
+      "24": "assets/icons/product/files-taskbar/outline-24.svg",
+      "28": "assets/icons/product/files-taskbar/outline-28.svg",
+      "32": "assets/icons/product/files-taskbar/outline-32.svg",
+      "48": "assets/icons/product/files-taskbar/outline-48.svg"
     }
   },
   "version": "1.0.0",

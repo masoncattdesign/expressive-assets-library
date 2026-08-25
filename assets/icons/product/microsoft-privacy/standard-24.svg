@@ -1,0 +1,23 @@
+<svg aria-label="Microsoft Privacy standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 8.75V6C15.5 4.067 13.933 2.5 12 2.5C10.067 2.5 8.5 4.067 8.5 6V8.75C8.5 9.16421 8.16421 9.5 7.75 9.5C7.33579 9.5 7 9.16421 7 8.75V6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6V8.75C17 9.16421 16.6642 9.5 16.25 9.5C15.8358 9.5 15.5 9.16421 15.5 8.75Z" fill="url(#product-microsoft-privacy-standard-24-paint0_linear_527478_913)"/>
+<rect x="4" y="8" width="16" height="14" rx="3.25" fill="url(#product-microsoft-privacy-standard-24-paint1_radial_527478_913)"/>
+<circle cx="12" cy="15" r="2" fill="url(#product-microsoft-privacy-standard-24-paint2_radial_527478_913)"/>
+<defs>
+<linearGradient id="product-microsoft-privacy-standard-24-paint0_linear_527478_913" x1="9.57143" y1="0.412687" x2="13.8292" y2="15.4457" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0FAFFF"/>
+<stop offset="0.314633" stop-color="#138AE4"/>
+<stop offset="0.61262" stop-color="#5932E4"/>
+</linearGradient>
+<radialGradient id="product-microsoft-privacy-standard-24-paint1_radial_527478_913" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.75 8.5) rotate(43.9584) scale(19.4487)">
+<stop offset="0.0261071" stop-color="#3BD5FF"/>
+<stop offset="0.413462" stop-color="#00ACFF"/>
+<stop offset="0.644231" stop-color="#1599FF"/>
+<stop offset="1" stop-color="#8364F2"/>
+</radialGradient>
+<radialGradient id="product-microsoft-privacy-standard-24-paint2_radial_527478_913" cx="0" cy="0" r="1" gradientTransform="matrix(7.11111 6.96296 -7.93627 4.95494 7.42857 11.9841)" gradientUnits="userSpaceOnUse">
+<stop offset="0.294994" stop-color="#2B6EFF"/>
+<stop offset="0.529425" stop-color="#245DE6"/>
+<stop offset="0.682436" stop-color="#5932E4"/>
+</radialGradient>
+</defs>
+</svg>

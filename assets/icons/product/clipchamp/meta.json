@@ -9,9 +9,9 @@
   "product": "Clipchamp",
   "status": "draft",
   "themes": [
-    "color",
-    "filled",
-    "regular"
+    "standard",
+    "mono",
+    "outline"
   ],
   "sizes": [
     16,
@@ -27,29 +27,29 @@
   },
   "recolorable": true,
   "variants": {
-    "color": {
-      "16": "assets/icons/product/clipchamp/color-16.svg",
-      "20": "assets/icons/product/clipchamp/color-20.svg",
-      "24": "assets/icons/product/clipchamp/color-24.svg",
-      "28": "assets/icons/product/clipchamp/color-28.svg",
-      "32": "assets/icons/product/clipchamp/color-32.svg",
-      "48": "assets/icons/product/clipchamp/color-48.svg"
+    "standard": {
+      "16": "assets/icons/product/clipchamp/standard-16.svg",
+      "20": "assets/icons/product/clipchamp/standard-20.svg",
+      "24": "assets/icons/product/clipchamp/standard-24.svg",
+      "28": "assets/icons/product/clipchamp/standard-28.svg",
+      "32": "assets/icons/product/clipchamp/standard-32.svg",
+      "48": "assets/icons/product/clipchamp/standard-48.svg"
     },
-    "filled": {
-      "16": "assets/icons/product/clipchamp/filled-16.svg",
-      "20": "assets/icons/product/clipchamp/filled-20.svg",
-      "24": "assets/icons/product/clipchamp/filled-24.svg",
-      "28": "assets/icons/product/clipchamp/filled-28.svg",
-      "32": "assets/icons/product/clipchamp/filled-32.svg",
-      "48": "assets/icons/product/clipchamp/filled-48.svg"
+    "mono": {
+      "16": "assets/icons/product/clipchamp/mono-16.svg",
+      "20": "assets/icons/product/clipchamp/mono-20.svg",
+      "24": "assets/icons/product/clipchamp/mono-24.svg",
+      "28": "assets/icons/product/clipchamp/mono-28.svg",
+      "32": "assets/icons/product/clipchamp/mono-32.svg",
+      "48": "assets/icons/product/clipchamp/mono-48.svg"
     },
-    "regular": {
-      "16": "assets/icons/product/clipchamp/regular-16.svg",
-      "20": "assets/icons/product/clipchamp/regular-20.svg",
-      "24": "assets/icons/product/clipchamp/regular-24.svg",
-      "28": "assets/icons/product/clipchamp/regular-28.svg",
-      "32": "assets/icons/product/clipchamp/regular-32.svg",
-      "48": "assets/icons/product/clipchamp/regular-48.svg"
+    "outline": {
+      "16": "assets/icons/product/clipchamp/outline-16.svg",
+      "20": "assets/icons/product/clipchamp/outline-20.svg",
+      "24": "assets/icons/product/clipchamp/outline-24.svg",
+      "28": "assets/icons/product/clipchamp/outline-28.svg",
+      "32": "assets/icons/product/clipchamp/outline-32.svg",
+      "48": "assets/icons/product/clipchamp/outline-48.svg"
     }
   },
   "version": "1.0.0",
