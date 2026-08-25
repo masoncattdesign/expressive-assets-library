@@ -7,7 +7,7 @@ actually come here to do: add an asset, and change one that already exists.
 ## Before you start
 
 ```bash
-git clone https://github.com/YOUR-ORG/expressive-assets.git
+git clone https://github.com/masoncattdesign/expressive-assets-library.git
 cd expressive-assets
 npm run dev     # http://localhost:4173
 ```

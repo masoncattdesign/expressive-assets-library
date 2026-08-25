@@ -6,7 +6,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 | | |
 |---|---|
 | **Assets** | 38 (32 icons, 6 illustrations) |
-| **Browser** | `https://YOUR-ORG.github.io/expressive-assets/` |
+| **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
 
@@ -76,7 +76,7 @@ Read `manifest.json`, never the folder tree — the tree is an implementation
 detail and the manifest is the contract.
 
 ```js
-const { assets } = await fetch('https://YOUR-ORG.github.io/expressive-assets/manifest.json')
+const { assets } = await fetch('https://masoncattdesign.github.io/expressive-assets-library/manifest.json')
   .then((r) => r.json());
 
 const shippable = assets.filter((a) => a.status === 'active' && a.build === 'stable');

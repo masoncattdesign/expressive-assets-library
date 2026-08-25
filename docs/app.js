@@ -8,7 +8,7 @@
  */
 
 /** Point this at the repo once it exists — drives the "Add Assets" button. */
-const REPO = 'https://github.com/YOUR-ORG/expressive-assets';
+const REPO = 'https://github.com/masoncattdesign/expressive-assets-library';
 
 /** Display names for the three themes. Left = what designers call it in the
  *  Figma library, right = the theme key stored in metadata. */
