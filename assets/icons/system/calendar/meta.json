@@ -1,11 +1,16 @@
 {
   "id": "system.calendar",
   "name": "Calendar",
+  "keywords": [
+    "date",
+    "schedule",
+    "agenda",
+    "month",
+    "events"
+  ],
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +29,14 @@
     "primary": "#D83B01",
     "secondary": "#F7A501"
   },
-  "tags": [
-    "date",
-    "schedule",
-    "agenda",
-    "month",
-    "events"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/calendar/color.svg",
     "regular": "assets/icons/system/calendar/regular.svg",
     "filled": "assets/icons/system/calendar/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

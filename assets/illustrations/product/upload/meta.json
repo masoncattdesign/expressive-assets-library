@@ -1,11 +1,16 @@
 {
   "id": "product.upload",
   "name": "Upload",
+  "keywords": [
+    "add files",
+    "drop zone",
+    "import",
+    "attach",
+    "cloud"
+  ],
   "type": "illustration",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color"
   ],
@@ -19,18 +24,12 @@
     "primary": "#0078D4",
     "secondary": "#8764B8"
   },
-  "tags": [
-    "add files",
-    "drop zone",
-    "import",
-    "attach",
-    "cloud"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/illustrations/product/upload/color.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

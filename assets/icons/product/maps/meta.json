@@ -1,11 +1,17 @@
 {
   "id": "product.maps",
   "name": "Maps",
+  "keywords": [
+    "location",
+    "pin",
+    "navigation",
+    "place",
+    "directions"
+  ],
+  "description": "A map pin. Location, place, and navigation.",
   "type": "icon",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +30,14 @@
     "primary": "#D13438",
     "secondary": "#EB6B0C"
   },
-  "tags": [
-    "location",
-    "pin",
-    "navigation",
-    "place",
-    "directions"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/maps/color.svg",
     "regular": "assets/icons/product/maps/regular.svg",
     "filled": "assets/icons/product/maps/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

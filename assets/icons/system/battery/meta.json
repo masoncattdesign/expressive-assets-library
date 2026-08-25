@@ -1,11 +1,15 @@
 {
   "id": "system.battery",
   "name": "Battery",
+  "keywords": [
+    "power",
+    "charge",
+    "energy",
+    "level"
+  ],
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +28,14 @@
     "primary": "#123B63",
     "secondary": "#0F6CBD"
   },
-  "tags": [
-    "power",
-    "charge",
-    "energy",
-    "level"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/battery/color.svg",
     "regular": "assets/icons/system/battery/regular.svg",
     "filled": "assets/icons/system/battery/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

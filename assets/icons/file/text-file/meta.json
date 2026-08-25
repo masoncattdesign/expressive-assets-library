@@ -1,11 +1,16 @@
 {
   "id": "file.text-file",
   "name": "Text File",
+  "keywords": [
+    "txt",
+    "plain text",
+    "notes",
+    "log"
+  ],
   "type": "icon",
-  "category": "file",
-  "family": "windows",
-  "status": "inactive",
-  "build": "deprecated",
+  "collection": "file",
+  "status": "deprecated",
+  "replacedBy": "file.code-file",
   "themes": [
     "color",
     "regular",
@@ -24,20 +29,14 @@
     "primary": "#5D5A88",
     "secondary": "#8A8886"
   },
-  "tags": [
-    "txt",
-    "plain text",
-    "notes",
-    "log"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/file/text-file/color.svg",
     "regular": "assets/icons/file/text-file/regular.svg",
     "filled": "assets/icons/file/text-file/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
-  "deprecatedBy": "file.code-file",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

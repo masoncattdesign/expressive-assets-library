@@ -7,6 +7,10 @@
  * never walks the asset tree itself. It is committed so changes show up in code
  * review as a readable diff.
  *
+ * Vocabulary: a GROUP is icons vs illustrations. A COLLECTION is the sub-bucket
+ * within a group (system, product, file, …) and is what an asset's `collection`
+ * field names.
+ *
  * Run: npm run manifest
  */
 import { readdir, readFile, writeFile, stat } from 'node:fs/promises';
@@ -15,12 +19,12 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-export const COLLECTIONS = [
+export const GROUPS = [
   {
     type: 'icon',
     label: 'Icons',
     dir: 'assets/icons',
-    categories: [
+    collections: [
       { id: 'system', label: 'System Icons' },
       { id: 'product', label: 'Product Icons' },
       { id: 'file', label: 'File Icons' },
@@ -30,7 +34,7 @@ export const COLLECTIONS = [
     type: 'illustration',
     label: 'Illustrations',
     dir: 'assets/illustrations',
-    categories: [
+    collections: [
       { id: 'windows', label: 'Windows Illustrations' },
       { id: 'fluent', label: 'Fluent Illustrations' },
       { id: 'product', label: 'Product Illustrations' },
@@ -38,44 +42,49 @@ export const COLLECTIONS = [
   },
 ];
 
+/** Deterministic sprite filename for a group+collection pair. The site loads
+ *  these on demand rather than one giant sprite — at 500+ assets a single
+ *  inlined bundle is megabytes and blocks first paint. */
+export const spriteName = (type, collection) => `sprites/${type}-${collection}.json`;
+
 const exists = (p) => stat(p).then(() => true, () => false);
 
 export async function collectAssets() {
   const assets = [];
-  for (const collection of COLLECTIONS) {
-    for (const category of collection.categories) {
-      const catDir = join(ROOT, collection.dir, category.id);
-      if (!(await exists(catDir))) continue;
-      const entries = await readdir(catDir, { withFileTypes: true });
+  for (const group of GROUPS) {
+    for (const collection of group.collections) {
+      const dir = join(ROOT, group.dir, collection.id);
+      if (!(await exists(dir))) continue;
+      const entries = await readdir(dir, { withFileTypes: true });
       for (const entry of entries.filter((e) => e.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
-        const metaPath = join(catDir, entry.name, 'meta.json');
+        const metaPath = join(dir, entry.name, 'meta.json');
         if (!(await exists(metaPath))) {
-          throw new Error(`Missing meta.json for ${collection.dir}/${category.id}/${entry.name}`);
+          throw new Error(`Missing meta.json for ${group.dir}/${collection.id}/${entry.name}`);
         }
         const meta = JSON.parse(await readFile(metaPath, 'utf8'));
-        assets.push({ ...meta, _dir: `${collection.dir}/${category.id}/${entry.name}` });
+        assets.push({ ...meta, _dir: `${group.dir}/${collection.id}/${entry.name}` });
       }
     }
   }
   return assets;
 }
 
-/** Library order: icons before illustrations, categories in sidebar order,
- *  then alphabetical by display name. Consumers that want a different order
- *  can re-sort; this one exists so the browsing grid reads like the sidebar. */
+/** Library order: icons before illustrations, collections in sidebar order,
+ *  then alphabetical by display name. Consumers that want a different order can
+ *  re-sort; this one exists so the browsing grid reads like the sidebar. */
 function order(asset) {
-  const c = COLLECTIONS.findIndex((col) => col.type === asset.type);
-  const cat = COLLECTIONS[c]?.categories.findIndex((x) => x.id === asset.category) ?? 0;
-  return [c, cat];
+  const g = GROUPS.findIndex((x) => x.type === asset.type);
+  const c = GROUPS[g]?.collections.findIndex((x) => x.id === asset.collection) ?? 0;
+  return [g, c];
 }
 
 export function buildManifest(assets) {
   const clean = assets
     .map(({ _dir, ...rest }) => rest)
     .sort((a, b) => {
-      const [ac, acat] = order(a);
-      const [bc, bcat] = order(b);
-      return ac - bc || acat - bcat || a.name.localeCompare(b.name);
+      const [ag, ac] = order(a);
+      const [bg, bc] = order(b);
+      return ag - bg || ac - bc || a.name.localeCompare(b.name);
     });
 
   return {
@@ -84,13 +93,14 @@ export function buildManifest(assets) {
     description: 'Icon and illustration library for Windows Design Systems.',
     generator: 'scripts/build-manifest.mjs',
     total: clean.length,
-    collections: COLLECTIONS.map((c) => ({
-      type: c.type,
-      label: c.label,
-      categories: c.categories.map((cat) => ({
-        id: cat.id,
-        label: cat.label,
-        count: clean.filter((a) => a.type === c.type && a.category === cat.id).length,
+    groups: GROUPS.map((g) => ({
+      type: g.type,
+      label: g.label,
+      collections: g.collections.map((c) => ({
+        id: c.id,
+        label: c.label,
+        count: clean.filter((a) => a.type === g.type && a.collection === c.id).length,
+        sprite: spriteName(g.type, c.id),
       })),
     })),
     assets: clean,

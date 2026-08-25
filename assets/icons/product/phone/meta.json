@@ -1,11 +1,15 @@
 {
   "id": "product.phone",
   "name": "Phone",
+  "keywords": [
+    "call",
+    "dial",
+    "contact",
+    "telephone"
+  ],
   "type": "icon",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +28,14 @@
     "primary": "#107C10",
     "secondary": "#4CAF50"
   },
-  "tags": [
-    "call",
-    "dial",
-    "contact",
-    "telephone"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/phone/color.svg",
     "regular": "assets/icons/product/phone/regular.svg",
     "filled": "assets/icons/product/phone/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

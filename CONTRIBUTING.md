@@ -8,7 +8,7 @@ actually come here to do: add an asset, and change one that already exists.
 
 ```bash
 git clone https://github.com/masoncattdesign/expressive-assets-library.git
-cd expressive-assets
+cd expressive-assets-library
 npm run dev     # http://localhost:4173
 ```
 
@@ -54,22 +54,36 @@ manifest is out of sync, and the error message says which.
 - **Redraw, same silhouette** — bump the minor version in `meta.json`.
 - **Shape change that breaks visual continuity** — bump the major version and say
   so in the PR. Consumers may have screenshots and docs pinned to the old look.
-- **Retiring an asset** — set `status: "inactive"`, `build: "deprecated"`, and
-  `deprecatedBy` to the replacement's id. Validation rejects a deprecated asset
-  with no migration target. **Do not delete the folder.** Something is importing
-  it; deprecation gives them a route out, deletion gives them a broken build.
+- **Renaming** — change `name` and push the old name into `aliases`. Never change
+  `id`; every consumer references it, and search matches aliases so the people
+  who learned the old name still find it.
+- **Retiring an asset** — set `status: "deprecated"` and `replacedBy` to the
+  replacement's id. Validation rejects a deprecation with no migration target,
+  and rejects one pointing at an id that isn't in the library. **Do not delete
+  the folder.** Something is importing it; deprecation gives them a route out,
+  deletion gives them a broken build.
 
 ## Metadata conventions
 
-- **`id`** is forever. `<category>.<slug>`, lowercase, hyphenated.
-- **`tags`** should include the words someone would type when they don't know the
-  asset's name. "Trash" carries `recycle bin`, `delete`, `remove` — that is the
-  difference between a findable library and a folder of SVGs.
-- **`build`** is a release-channel promise. Nothing on `stable` should change
-  shape without a major version bump. Draw new work as `alpha`, promote it once
-  design review signs off.
+- **`id`** is forever. `<collection>.<slug>`, lowercase, hyphenated.
+- **`keywords`** should include the words someone would type when they don't know
+  the asset's name. "Trash" carries `recycle bin`, `delete`, `remove` — that is
+  the difference between a findable library and a folder of SVGs.
+- **`description`** is one line on what the artwork depicts. It is also how
+  duplicates get caught: validation warns when two assets describe themselves
+  identically, which usually means the same idea got drawn twice.
+- **`status`** is the only lifecycle axis. New work starts at `draft`; it becomes
+  `published` when design review signs off. Nothing `published` should change
+  shape without a major version bump.
 - **`sizes`** lists the sizes the geometry is *legible* at, not the sizes it can
   technically scale to. If it turns to mud at 12px, don't list 12.
+- **`recolorable`** is false only for trademarked brand marks that must ship in
+  their own colors. Everything systemic stays true.
+
+`npm run validate` splits errors from warnings. Errors — schema violations,
+missing artwork, broken references — fail CI. Missing keywords and descriptions
+are warnings with a coverage summary, so the gap stays visible without a red
+build that everyone learns to ignore.
 
 ## Working on the browsing interface
 
@@ -82,5 +96,5 @@ the detail panel without touching the asset pipeline.
 ## Review
 
 Design review covers silhouette, optical weight against neighbouring icons, and
-legibility at 16px. Engineering review covers the metadata: correct category,
-honest `build` channel, tags someone would actually search for.
+legibility at 16px. Engineering review covers the metadata: correct collection,
+honest `status`, and keywords someone would actually search for.

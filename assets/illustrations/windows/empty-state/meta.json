@@ -1,11 +1,17 @@
 {
   "id": "windows.empty-state",
   "name": "Empty State",
+  "keywords": [
+    "nothing here",
+    "zero state",
+    "space",
+    "blank",
+    "no results"
+  ],
+  "description": "A planet in a starfield. Zero-state surfaces where no content exists yet.",
   "type": "illustration",
-  "category": "windows",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "windows",
+  "status": "published",
   "themes": [
     "color"
   ],
@@ -19,18 +25,12 @@
     "primary": "#1B3A57",
     "secondary": "#8764B8"
   },
-  "tags": [
-    "nothing here",
-    "zero state",
-    "space",
-    "blank",
-    "no results"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/illustrations/windows/empty-state/color.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

@@ -1,11 +1,15 @@
 {
   "id": "system.clock",
   "name": "Clock",
+  "keywords": [
+    "time",
+    "alarm",
+    "timer",
+    "schedule"
+  ],
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +28,14 @@
     "primary": "#1B3A57",
     "secondary": "#0F6CBD"
   },
-  "tags": [
-    "time",
-    "alarm",
-    "timer",
-    "schedule"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/clock/color.svg",
     "regular": "assets/icons/system/clock/regular.svg",
     "filled": "assets/icons/system/clock/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

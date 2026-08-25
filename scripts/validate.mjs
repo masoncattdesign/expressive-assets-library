@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * Gate for every pull request. Checks that:
- *   1. every asset's meta.json satisfies schema/asset.schema.json
- *   2. every file named in `variants` actually exists and parses as SVG
- *   3. every theme listed in `themes` has a matching variant entry
- *   4. ids are unique
- *   5. manifest.json is current (nobody added artwork without rebuilding)
+ * Gate for every pull request.
+ *
+ * ERRORS fail the build — schema violations, missing artwork, broken references.
+ * WARNINGS do not. That split is deliberate: the real library lands with 500+
+ * assets and mostly empty descriptions, and a CI job that goes red over prose
+ * gets switched off within a week. Warnings plus a coverage summary keep the
+ * gap visible without making it a blocker.
  *
  * Deliberately dependency-free: a design-system repo that needs an npm install
  * before it can tell you whether an SVG is valid will not get run locally.
@@ -19,7 +20,9 @@ import { collectAssets, buildManifest } from './build-manifest.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const errors = [];
+const warnings = [];
 const fail = (where, msg) => errors.push(`${where}: ${msg}`);
+const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 
 /* -- Minimal JSON Schema (draft-07 subset) validator ----------------- */
 
@@ -57,9 +60,14 @@ function validate(value, schema, path, where) {
     if (schema.items) value.forEach((item, i) => validate(item, schema.items, `${path}[${i}]`, where));
     return;
   }
+  if (schema.type === 'boolean') {
+    if (typeof value !== 'boolean') fail(where, `${path} must be true or false`);
+    return;
+  }
   if (schema.type === 'string') {
     if (typeof value !== 'string') return fail(where, `${path} must be a string`);
     if (schema.minLength && value.length < schema.minLength) fail(where, `${path} must not be empty`);
+    if (schema.maxLength && value.length > schema.maxLength) fail(where, `${path} must be ${schema.maxLength} characters or fewer`);
     if (schema.pattern && !new RegExp(schema.pattern).test(value)) {
       fail(where, `${path} does not match ${schema.pattern} — got ${JSON.stringify(value)}`);
     }
@@ -82,15 +90,23 @@ async function main() {
 
   if (assets.length === 0) fail('assets/', 'no assets found — did you run `npm run generate`?');
 
-  const seen = new Map();
+  const ids = new Map();
+  const descriptions = new Map();
+
   for (const asset of assets) {
     const where = `${asset._dir}/meta.json`;
     const { _dir, ...meta } = asset;
 
     validate(meta, schema, 'asset', where);
 
-    if (seen.has(meta.id)) fail(where, `duplicate id "${meta.id}" — also used by ${seen.get(meta.id)}`);
-    seen.set(meta.id, where);
+    if (ids.has(meta.id)) fail(where, `duplicate id "${meta.id}" — also used by ${ids.get(meta.id)}`);
+    ids.set(meta.id, where);
+
+    // The id encodes the collection; a mismatch means the asset is filed wrong.
+    const [prefix] = String(meta.id).split('.');
+    if (meta.collection && prefix !== meta.collection) {
+      fail(where, `id "${meta.id}" is prefixed "${prefix}" but collection is "${meta.collection}"`);
+    }
 
     for (const theme of meta.themes || []) {
       const rel = meta.variants?.[theme];
@@ -115,8 +131,27 @@ async function main() {
       if (!(meta.themes || []).includes(theme)) fail(where, `variants has "${theme}" but themes does not list it`);
     }
 
-    if (meta.build === 'deprecated' && !meta.deprecatedBy) {
-      fail(where, 'build is "deprecated" but deprecatedBy is not set — consumers need a migration target');
+    if (meta.status === 'deprecated' && !meta.replacedBy) {
+      fail(where, 'status is "deprecated" but replacedBy is not set — consumers need a migration target');
+    }
+
+    // Metadata quality: reported, never fatal.
+    if (!meta.description) warn(where, 'has no description');
+    if (!meta.keywords?.length) warn(where, 'has no keywords — findable only by its exact name');
+    if (meta.description) {
+      const key = meta.description.trim().toLowerCase();
+      if (descriptions.has(key)) {
+        warn(where, `shares a description with ${descriptions.get(key)} — possible duplicate artwork`);
+      } else {
+        descriptions.set(key, meta.id);
+      }
+    }
+  }
+
+  // Deprecations must point at something that exists.
+  for (const asset of assets) {
+    if (asset.replacedBy && !ids.has(asset.replacedBy)) {
+      fail(`${asset._dir}/meta.json`, `replacedBy names "${asset.replacedBy}", which is not in the library`);
     }
   }
 
@@ -128,13 +163,34 @@ async function main() {
     fail('manifest.json', 'is missing — run `npm run manifest`');
   }
 
+  /* -- Report -------------------------------------------------------- */
+
+  if (warnings.length) {
+    const shown = warnings.slice(0, 15);
+    console.warn(`\n! ${warnings.length} warning${warnings.length === 1 ? '' : 's'} (not blocking):\n`);
+    for (const w of shown) console.warn(`  · ${w}`);
+    if (warnings.length > shown.length) console.warn(`  · …and ${warnings.length - shown.length} more`);
+  }
+
   if (errors.length) {
     console.error(`\n✗ ${errors.length} problem${errors.length === 1 ? '' : 's'} found:\n`);
     for (const e of errors) console.error(`  • ${e}`);
     console.error('');
     process.exit(1);
   }
-  console.log(`✓ ${assets.length} assets valid; manifest.json is current.`);
+
+  const n = assets.length;
+  const pct = (x) => `${String(Math.round((x / n) * 100)).padStart(3)}%`;
+  const withDesc = assets.filter((a) => a.description).length;
+  const withKeywords = assets.filter((a) => a.keywords?.length).length;
+  const withFigma = assets.filter((a) => a.figma).length;
+  const byStatus = assets.reduce((acc, a) => ({ ...acc, [a.status]: (acc[a.status] || 0) + 1 }), {});
+
+  console.log(`\n✓ ${n} assets valid; manifest.json is current.\n`);
+  console.log(`  Lifecycle    ${Object.entries(byStatus).map(([k, v]) => `${v} ${k}`).join(', ')}`);
+  console.log(`  Keywords     ${pct(withKeywords)}  (${withKeywords}/${n})`);
+  console.log(`  Description  ${pct(withDesc)}  (${withDesc}/${n})`);
+  console.log(`  Figma link   ${pct(withFigma)}  (${withFigma}/${n})\n`);
 }
 
 main().catch((err) => {

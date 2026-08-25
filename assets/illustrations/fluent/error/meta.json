@@ -1,11 +1,16 @@
 {
   "id": "fluent.error",
   "name": "Error",
+  "keywords": [
+    "problem",
+    "failure",
+    "warning",
+    "something went wrong",
+    "alert"
+  ],
   "type": "illustration",
-  "category": "fluent",
-  "family": "fluent",
-  "status": "active",
-  "build": "beta",
+  "collection": "fluent",
+  "status": "published",
   "themes": [
     "color"
   ],
@@ -19,18 +24,12 @@
     "primary": "#D13438",
     "secondary": "#EB6B0C"
   },
-  "tags": [
-    "problem",
-    "failure",
-    "warning",
-    "something went wrong",
-    "alert"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/illustrations/fluent/error/color.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

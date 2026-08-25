@@ -1,11 +1,16 @@
 {
   "id": "product.chat",
   "name": "Chat",
+  "keywords": [
+    "message",
+    "conversation",
+    "teams",
+    "bubble",
+    "talk"
+  ],
   "type": "icon",
-  "category": "product",
-  "family": "m365",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +29,14 @@
     "primary": "#0078D4",
     "secondary": "#2AA0DA"
   },
-  "tags": [
-    "message",
-    "conversation",
-    "teams",
-    "bubble",
-    "talk"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/chat/color.svg",
     "regular": "assets/icons/product/chat/regular.svg",
     "filled": "assets/icons/product/chat/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

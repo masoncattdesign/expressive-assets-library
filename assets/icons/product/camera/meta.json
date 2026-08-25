@@ -1,11 +1,15 @@
 {
   "id": "product.camera",
   "name": "Camera",
+  "keywords": [
+    "photo",
+    "capture",
+    "lens",
+    "shoot"
+  ],
   "type": "icon",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +28,14 @@
     "primary": "#3A3A45",
     "secondary": "#5D5A88"
   },
-  "tags": [
-    "photo",
-    "capture",
-    "lens",
-    "shoot"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/camera/color.svg",
     "regular": "assets/icons/product/camera/regular.svg",
     "filled": "assets/icons/product/camera/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

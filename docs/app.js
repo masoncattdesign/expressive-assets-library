@@ -1,17 +1,25 @@
 /**
  * Expressive Assets — browsing interface.
  *
- * Reads manifest.json (the library's public contract) and sprite.json (every
- * SVG inlined by the build step). No framework, no build tooling: the whole app
- * is three files that GitHub Pages can serve as-is, so a designer can open a PR
- * against it without setting up a toolchain.
+ * Reads manifest.json (the library's public contract) and per-collection sprite
+ * files written by the build. No framework, no build tooling: the whole app is
+ * three files GitHub Pages serves as-is, so a designer can open a PR against it
+ * without setting up a toolchain.
+ *
+ * Two things here are sized for a 500+ asset library rather than a demo:
+ *
+ *  1. Cards render as empty shells immediately and an IntersectionObserver
+ *     fills in the artwork as they scroll into view. First paint never waits on
+ *     SVG payload.
+ *  2. Sprites load per collection, on demand, triggered by what is actually
+ *     visible. Opening "System Icons" never downloads the illustration set.
  */
 
-/** Point this at the repo once it exists — drives the "Add Assets" button. */
+/** Point this at the repo — drives the "Add Assets" and "View source" links. */
 const REPO = 'https://github.com/masoncattdesign/expressive-assets-library';
 
-/** Display names for the three themes. Left = what designers call it in the
- *  Figma library, right = the theme key stored in metadata. */
+/** Display names for the three themes. Left = what designers call it,
+ *  right = the theme key stored in metadata. */
 const THEMES = [
   { key: 'color', label: 'Expressive' },
   { key: 'regular', label: 'Outline' },
@@ -31,13 +39,13 @@ const ACCENTS = [
   { id: 'magenta', label: 'Magenta', primary: '#E3008C', secondary: '#C239B3' },
 ];
 
+const STATUS_LABEL = { draft: 'Draft', published: 'Published', deprecated: 'Deprecated' };
+
 const NAV_ICONS = {
   all: '<rect x="4" y="4" width="6.4" height="6.4" rx="1.6"/><rect x="13.6" y="4" width="6.4" height="6.4" rx="1.6"/><rect x="4" y="13.6" width="6.4" height="6.4" rx="1.6"/><rect x="13.6" y="13.6" width="6.4" height="6.4" rx="1.6"/>',
   system: '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/>',
   product: '<circle cx="12" cy="12" r="7.5"/>',
   file: '<path d="M7 3.5h6l4.5 4.5V19a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5Z"/>',
-  windows: '<path d="M3.5 6.5h17v11h-17Zm3 14h11" />',
-  fluent: '<path d="M4 17.5 9 8l4 5.5L15.5 10l4.5 7.5Z"/>',
   illustration: '<path d="M4 17.5 9 8l4 5.5L15.5 10l4.5 7.5Z"/>',
 };
 
@@ -47,8 +55,11 @@ const NAV_ICONS = {
 
 const state = {
   manifest: null,
-  sprite: {},
-  filter: { collection: 'all', category: null, query: '', status: '', build: '' },
+  /** `${type}:${collection}` -> { [assetId]: { [theme]: svgSource } }. Lazy. */
+  sprites: {},
+  /** In-flight fetches, so ten cards scrolling in don't fire ten requests. */
+  pending: {},
+  filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
   theme: 'color',
@@ -64,30 +75,83 @@ const el = (tag, props = {}, kids = []) => {
 };
 
 /* ------------------------------------------------------------------ */
+/* Sprites                                                             */
+/* ------------------------------------------------------------------ */
+
+const spriteKey = (asset) => `${asset.type}:${asset.collection}`;
+
+function spriteUrl(asset) {
+  for (const group of state.manifest.groups) {
+    if (group.type !== asset.type) continue;
+    const found = group.collections.find((c) => c.id === asset.collection);
+    if (found) return found.sprite;
+  }
+  return null;
+}
+
+async function loadSprite(asset) {
+  const key = spriteKey(asset);
+  if (state.sprites[key]) return state.sprites[key];
+  if (state.pending[key]) return state.pending[key];
+
+  const url = spriteUrl(asset);
+  const fetchOne = async () => {
+    try {
+      const bank = await (await fetch(url)).json();
+      state.sprites[key] = bank;
+      return bank;
+    } catch {
+      // No prebuilt sprite (serving the repo root directly, say). Fall back to
+      // fetching this asset's own files.
+      const bank = (state.sprites[key] ||= {});
+      bank[asset.id] = {};
+      await Promise.all(
+        Object.entries(asset.variants).map(async ([theme, path]) => {
+          bank[asset.id][theme] = await (await fetch(path)).text();
+        })
+      );
+      return bank;
+    } finally {
+      delete state.pending[key];
+    }
+  };
+
+  state.pending[key] = fetchOne();
+  return state.pending[key];
+}
+
+function sourceFor(asset, theme = state.theme) {
+  const bank = state.sprites[spriteKey(asset)]?.[asset.id];
+  if (!bank) return null;
+  return bank[bank[theme] ? theme : asset.themes[0]] || null;
+}
+
+/* ------------------------------------------------------------------ */
 /* SVG rendering                                                       */
 /* ------------------------------------------------------------------ */
 
-const HEX = /#[0-9A-Fa-f]{6}/;
+const HEX = '#[0-9A-Fa-f]{6}';
 
 /** Bake the current color choices into an SVG source string. */
 function tint(source, { primary, secondary, size }) {
   let out = source;
-  if (primary) out = out.replace(new RegExp(`--ea-primary:${HEX.source}`), `--ea-primary:${primary}`);
-  if (secondary) out = out.replace(new RegExp(`--ea-secondary:${HEX.source}`), `--ea-secondary:${secondary}`);
+  if (primary) out = out.replace(new RegExp(`--ea-primary:${HEX}`), `--ea-primary:${primary}`);
+  if (secondary) out = out.replace(new RegExp(`--ea-secondary:${HEX}`), `--ea-secondary:${secondary}`);
   if (size) out = out.replace(/width="\d+" height="\d+"/, `width="${size}" height="${size}"`);
   return out;
 }
 
-/** Resolve the effective colors for an asset given the selected accent. */
+/** Effective colors for an asset. A non-recolorable asset ignores the accent —
+ *  brand marks ship in their own colors or not at all. */
 function colorsFor(asset, accentId = state.accent) {
   const accent = ACCENTS.find((a) => a.id === accentId) || ACCENTS[0];
+  const locked = asset.recolorable === false;
   return {
-    primary: accent.primary || asset.colors.primary,
-    secondary: accent.secondary || asset.colors.secondary,
+    primary: (!locked && accent.primary) || asset.colors.primary,
+    secondary: (!locked && accent.secondary) || asset.colors.secondary,
   };
 }
 
-/** Turn a source string into a live <svg> node sized for display. */
 function svgNode(source, size) {
   const wrap = document.createElement('div');
   wrap.innerHTML = source;
@@ -99,29 +163,24 @@ function svgNode(source, size) {
   return svg;
 }
 
-function sourceFor(asset, theme = state.theme) {
-  const bank = state.sprite[asset.id] || {};
-  const key = bank[theme] ? theme : asset.themes[0];
-  return bank[key] || '';
-}
-
 /* ------------------------------------------------------------------ */
 /* Filtering                                                           */
 /* ------------------------------------------------------------------ */
 
 function visibleAssets() {
-  const { collection, category, query, status, build } = state.filter;
+  const { group, collection, query, status } = state.filter;
   const q = query.trim().toLowerCase();
   return state.manifest.assets.filter((a) => {
-    if (collection !== 'all' && a.type !== collection) return false;
-    if (category && a.category !== category) return false;
+    if (group !== 'all' && a.type !== group) return false;
+    if (collection && a.collection !== collection) return false;
     if (status && a.status !== status) return false;
-    if (build && a.build !== build) return false;
     if (!q) return true;
     return (
       a.name.toLowerCase().includes(q) ||
       a.id.toLowerCase().includes(q) ||
-      a.tags.some((t) => t.includes(q))
+      (a.keywords || []).some((k) => k.includes(q)) ||
+      (a.aliases || []).some((x) => x.toLowerCase().includes(q)) ||
+      (a.description || '').toLowerCase().includes(q)
     );
   });
 }
@@ -130,13 +189,12 @@ function visibleAssets() {
 /* Sidebar                                                             */
 /* ------------------------------------------------------------------ */
 
-function navButton({ key, label, count, icon, active, onClick }) {
+function navButton({ label, count, icon, active, onClick }) {
   const btn = el('button', { className: `nav-item${active ? ' on' : ''}`, type: 'button' });
   btn.innerHTML =
     `<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${icon}</svg>` +
     `<span class="label"></span><span class="n">${count}</span>`;
   btn.querySelector('.label').textContent = label;
-  btn.dataset.key = key;
   btn.addEventListener('click', onClick);
   return btn;
 }
@@ -144,39 +202,37 @@ function navButton({ key, label, count, icon, active, onClick }) {
 function renderNav() {
   const nav = $('#nav');
   nav.replaceChildren();
-  const { collection, category } = state.filter;
+  const { group, collection } = state.filter;
 
   nav.append(
     navButton({
-      key: 'all',
       label: 'All Assets',
       count: state.manifest.total,
       icon: NAV_ICONS.all,
-      active: collection === 'all' && !category,
-      onClick: () => select({ collection: 'all', category: null }),
+      active: group === 'all' && !collection,
+      onClick: () => selectCollection('all', null),
     })
   );
 
-  for (const group of state.manifest.collections) {
-    nav.append(el('div', { className: 'nav-group', textContent: group.label.toUpperCase() }));
-    for (const cat of group.categories) {
+  for (const g of state.manifest.groups) {
+    nav.append(el('div', { className: 'nav-group', textContent: g.label.toUpperCase() }));
+    for (const c of g.collections) {
       nav.append(
         navButton({
-          key: `${group.type}:${cat.id}`,
-          label: cat.label,
-          count: cat.count,
-          icon: NAV_ICONS[group.type === 'illustration' ? 'illustration' : cat.id] || NAV_ICONS.all,
-          active: collection === group.type && category === cat.id,
-          onClick: () => select({ collection: group.type, category: cat.id }),
+          label: c.label,
+          count: c.count,
+          icon: NAV_ICONS[g.type === 'illustration' ? 'illustration' : c.id] || NAV_ICONS.all,
+          active: group === g.type && collection === c.id,
+          onClick: () => selectCollection(g.type, c.id),
         })
       );
     }
   }
 }
 
-function select({ collection, category }) {
+function selectCollection(group, collection) {
+  state.filter.group = group;
   state.filter.collection = collection;
-  state.filter.category = category;
   renderNav();
   renderGrid();
 }
@@ -185,58 +241,121 @@ function select({ collection, category }) {
 /* Grid                                                               */
 /* ------------------------------------------------------------------ */
 
+/** Fills a card's artwork once it is actually on screen. Everything below the
+ *  fold in a 500-asset library costs nothing until you scroll to it. */
+const painter = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      painter.unobserve(entry.target);
+      paintCard(entry.target);
+    }
+  },
+  { rootMargin: '400px' }
+);
+
+async function paintCard(card) {
+  const asset = state.manifest.assets.find((a) => a.id === card.dataset.id);
+  if (!asset) return;
+  if (!sourceFor(asset)) await loadSprite(asset);
+
+  const source = sourceFor(asset);
+  const thumb = card.querySelector('.thumb');
+  if (!source || !thumb || !card.isConnected) return;
+
+  const node = svgNode(tint(source, colorsFor(asset)), null);
+  if (node) thumb.replaceChildren(node);
+}
+
+/** Repaint cards already showing artwork — after a theme or accent change. */
+function repaintVisible() {
+  for (const card of document.querySelectorAll('.card')) {
+    if (card.querySelector('.thumb')?.childElementCount) paintCard(card);
+  }
+}
+
+function buildCard(asset) {
+  const card = el('button', { className: `card${asset.id === state.selectedId ? ' on' : ''}`, type: 'button' });
+  card.dataset.id = asset.id;
+
+  const thumb = el('div', { className: 'thumb' });
+  const meta = el('div', { className: 'meta' });
+  meta.append(el('span', { textContent: asset.id }));
+  if (asset.status !== 'published') {
+    meta.append(el('span', { className: `badge ${asset.status}`, textContent: STATUS_LABEL[asset.status] }));
+  }
+
+  card.append(thumb, el('div', { className: 'name', textContent: asset.name }), meta);
+  card.addEventListener('click', () => openPanel(asset.id));
+  painter.observe(card);
+  return card;
+}
+
+let renderToken = 0;
+
 function renderGrid() {
   const grid = $('#grid');
   const assets = visibleAssets();
+  const token = ++renderToken;
 
   grid.className = `grid${state.view === 'list' ? ' list' : ''}`;
   grid.replaceChildren();
-
   $('#count').textContent = `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
 
   if (!assets.length) {
     const empty = el('div', { className: 'empty' });
-    empty.innerHTML = '<strong>No assets match those filters</strong>Try a different search term, or clear the status and build filters.';
+    empty.innerHTML =
+      '<strong>No assets match those filters</strong>Try a different search term, or clear the status filter.';
     grid.append(empty);
     return;
   }
 
-  for (const asset of assets) {
-    const card = el('button', { className: `card${asset.id === state.selectedId ? ' on' : ''}`, type: 'button' });
-    card.dataset.id = asset.id;
-
-    const thumb = el('div', { className: 'thumb' });
-    const node = svgNode(tint(sourceFor(asset), colorsFor(asset)), null);
-    if (node) thumb.append(node);
-
-    const meta = el('div', { className: 'meta' });
-    meta.append(el('span', { textContent: asset.id }));
-    if (asset.build !== 'stable') meta.append(el('span', { className: `badge ${asset.build}`, textContent: asset.build }));
-
-    card.append(thumb, el('div', { className: 'name', textContent: asset.name }), meta);
-    card.addEventListener('click', () => openPanel(asset.id));
-    grid.append(card);
-  }
+  // Append in chunks so a 500-card render never becomes one long frame.
+  const CHUNK = 80;
+  let i = 0;
+  const step = () => {
+    if (token !== renderToken) return;
+    const frag = document.createDocumentFragment();
+    for (const asset of assets.slice(i, i + CHUNK)) frag.append(buildCard(asset));
+    grid.append(frag);
+    i += CHUNK;
+    if (i < assets.length) requestAnimationFrame(step);
+  };
+  step();
 }
 
 /* ------------------------------------------------------------------ */
 /* Detail panel                                                        */
 /* ------------------------------------------------------------------ */
 
-function openPanel(id) {
+async function openPanel(id) {
   const asset = state.manifest.assets.find((a) => a.id === id);
   if (!asset) return;
+
   state.selectedId = id;
   if (!asset.themes.includes(state.theme)) state.theme = asset.themes[0];
   state.size = asset.sizes.includes(state.size) ? state.size : asset.sizes[asset.sizes.length - 1];
-  renderGrid();
-  renderPanel();
+
+  for (const card of document.querySelectorAll('.card')) {
+    card.classList.toggle('on', card.dataset.id === id);
+  }
+
+  if (!sourceFor(asset)) await loadSprite(asset);
+  if (state.selectedId === id) renderPanel();
 }
 
 function closePanel() {
   state.selectedId = null;
   $('#panel').hidden = true;
-  renderGrid();
+  for (const card of document.querySelectorAll('.card.on')) card.classList.remove('on');
+}
+
+function collectionLabel(asset) {
+  for (const g of state.manifest.groups) {
+    const c = g.collections.find((x) => x.id === asset.collection);
+    if (g.type === asset.type && c) return c.label;
+  }
+  return asset.collection;
 }
 
 function renderPanel() {
@@ -248,23 +367,43 @@ function renderPanel() {
   panel.replaceChildren();
 
   const colors = colorsFor(asset);
-  const categoryLabel =
-    state.manifest.collections.flatMap((c) => c.categories).find((c) => c.id === asset.category)?.label || asset.category;
+  const locked = asset.recolorable === false;
 
   /* Head */
   const head = el('div', { className: 'panel-head' });
   head.append(el('h2', { textContent: asset.name }));
   const close = el('button', { className: 'close', type: 'button', title: 'Close', ariaLabel: 'Close details' });
-  close.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+  close.innerHTML =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>';
   close.addEventListener('click', closePanel);
   head.append(close);
   panel.append(head);
-  panel.append(el('p', { className: 'kicker', textContent: `${categoryLabel} · ${asset.type}s` }));
+
+  const kicker = el('p', { className: 'kicker' });
+  kicker.append(`${collectionLabel(asset)}${asset.product ? ` · ${asset.product}` : ''}`);
+  if (asset.status !== 'published') {
+    kicker.append(' ', el('span', { className: `badge ${asset.status}`, textContent: STATUS_LABEL[asset.status] }));
+  }
+  panel.append(kicker);
+
+  if (asset.status === 'deprecated' && asset.replacedBy) {
+    const note = el('p', { className: 'callout' });
+    note.append('Deprecated. Use ');
+    const link = el('button', { className: 'linkish', type: 'button', textContent: asset.replacedBy });
+    link.addEventListener('click', () => openPanel(asset.replacedBy));
+    note.append(link, ' instead.');
+    panel.append(note);
+  }
+
+  if (asset.description) panel.append(el('p', { className: 'blurb', textContent: asset.description }));
 
   /* Preview */
   const preview = el('div', { className: 'preview' });
-  const node = svgNode(tint(sourceFor(asset), colors), state.size);
-  if (node) preview.append(node);
+  const source = sourceFor(asset);
+  if (source) {
+    const node = svgNode(tint(source, colors), state.size);
+    if (node) preview.append(node);
+  }
   panel.append(preview);
   panel.append(el('p', { className: 'preview-note', textContent: `Shown at actual size — ${state.size}px` }));
 
@@ -283,7 +422,7 @@ function renderPanel() {
     btn.setAttribute('aria-pressed', String(state.theme === theme.key));
     btn.addEventListener('click', () => {
       state.theme = theme.key;
-      renderGrid();
+      repaintVisible();
       renderPanel();
     });
     seg.append(btn);
@@ -322,37 +461,46 @@ function renderPanel() {
 
   /* Accents */
   panel.append(el('h3', { textContent: 'Windows accents' }));
-  const accents = el('div', { className: 'accents' });
-  for (const accent of ACCENTS) {
-    const btn = el('button', {
-      type: 'button',
-      className: state.accent === accent.id ? 'on' : '',
-      title: accent.label,
-      ariaLabel: accent.label,
-      style: `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary}, ${accent.secondary || asset.colors.secondary})`,
-    });
-    btn.addEventListener('click', () => {
-      state.accent = accent.id;
-      renderGrid();
-      renderPanel();
-    });
-    accents.append(btn);
+  if (locked) {
+    panel.append(
+      el('p', {
+        className: 'callout',
+        textContent: 'Not recolorable — this asset ships in its own brand colors.',
+      })
+    );
+  } else {
+    const accents = el('div', { className: 'accents' });
+    for (const accent of ACCENTS) {
+      const btn = el('button', {
+        type: 'button',
+        className: state.accent === accent.id ? 'on' : '',
+        title: accent.label,
+        ariaLabel: accent.label,
+        style: `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary}, ${accent.secondary || asset.colors.secondary})`,
+      });
+      btn.addEventListener('click', () => {
+        state.accent = accent.id;
+        repaintVisible();
+        renderPanel();
+      });
+      accents.append(btn);
+    }
+    panel.append(accents);
   }
-  panel.append(accents);
 
   /* Metadata */
   panel.append(el('h3', { textContent: 'Metadata' }));
   const metaRows = el('div', { className: 'rows' });
   const entries = [
     ['ID', asset.id],
-    ['Family', asset.family],
-    ['Status', asset.status],
-    ['Build', asset.build],
+    ['Status', STATUS_LABEL[asset.status]],
     ['Themes', asset.themes.join(', ')],
     ['Sizes', asset.sizes.join(', ')],
+    ['Recolorable', locked ? 'No' : 'Yes'],
     ['Version', `${asset.version} · ${asset.updated}`],
   ];
-  if (asset.deprecatedBy) entries.push(['Replaced by', asset.deprecatedBy]);
+  if (asset.aliases?.length) entries.splice(1, 0, ['Also known as', asset.aliases.join(', ')]);
+  if (asset.owner) entries.push(['Owner', asset.owner]);
   for (const [k, v] of entries) {
     const row = el('div', { className: 'row' });
     row.append(el('span', { className: 'k', textContent: k }), el('span', { className: 'v', textContent: v }));
@@ -360,27 +508,31 @@ function renderPanel() {
   }
   panel.append(metaRows);
 
-  /* Tags */
-  panel.append(el('h3', { textContent: 'Tags' }));
-  const tags = el('div', { className: 'tags' });
-  for (const tag of asset.tags) {
-    const btn = el('button', { type: 'button', textContent: tag });
-    btn.addEventListener('click', () => {
-      $('#search').value = tag;
-      state.filter.query = tag;
-      renderGrid();
-    });
-    tags.append(btn);
+  /* Keywords */
+  panel.append(el('h3', { textContent: 'Keywords' }));
+  if (asset.keywords?.length) {
+    const tags = el('div', { className: 'tags' });
+    for (const keyword of asset.keywords) {
+      const btn = el('button', { type: 'button', textContent: keyword });
+      btn.addEventListener('click', () => {
+        $('#search').value = keyword;
+        state.filter.query = keyword;
+        renderGrid();
+      });
+      tags.append(btn);
+    }
+    panel.append(tags);
+  } else {
+    panel.append(el('p', { className: 'muted', textContent: 'None yet — findable only by name.' }));
   }
-  panel.append(tags);
 
   /* Actions */
-  const exportSource = () => tint(sourceFor(asset), { ...colors, size: state.size });
-
+  const exportSource = () => tint(sourceFor(asset) || '', { ...colors, size: state.size });
   const actions = el('div', { className: 'actions' });
 
   const copy = el('button', { className: 'btn', type: 'button' });
-  copy.innerHTML = '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="11" height="11" rx="2.4"/><path d="M5.5 15H5a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 5 3.5h8.5A1.5 1.5 0 0 1 15 5v.5" stroke-linecap="round"/></svg>';
+  copy.innerHTML =
+    '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="11" height="11" rx="2.4"/><path d="M5.5 15H5a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 5 3.5h8.5A1.5 1.5 0 0 1 15 5v.5" stroke-linecap="round"/></svg>';
   copy.append('Copy SVG code');
   copy.addEventListener('click', async () => {
     try {
@@ -392,7 +544,8 @@ function renderPanel() {
   });
 
   const download = el('button', { className: 'btn btn-primary', type: 'button' });
-  download.innerHTML = '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4-4m-4 4-4-4M4.5 19.5h15"/></svg>';
+  download.innerHTML =
+    '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4-4m-4 4-4-4M4.5 19.5h15"/></svg>';
   download.append('Download SVG');
   download.addEventListener('click', () => {
     const blob = new Blob([exportSource()], { type: 'image/svg+xml' });
@@ -404,15 +557,16 @@ function renderPanel() {
     URL.revokeObjectURL(url);
   });
 
-  const source = el('a', {
-    className: 'btn',
-    href: `${REPO}/tree/main/${asset.variants[state.theme] || asset.variants[asset.themes[0]]}`,
-    target: '_blank',
-    rel: 'noopener',
-    textContent: 'View source on GitHub',
-  });
-
-  actions.append(copy, download, source);
+  actions.append(copy, download);
+  actions.append(
+    el('a', {
+      className: 'btn',
+      href: `${REPO}/tree/main/${asset.variants[state.theme] || asset.variants[asset.themes[0]]}`,
+      target: '_blank',
+      rel: 'noopener',
+      textContent: 'View source on GitHub',
+    })
+  );
   panel.append(actions);
 }
 
@@ -429,18 +583,32 @@ function toast(message) {
   toastTimer = setTimeout(() => node.classList.remove('on'), 2200);
 }
 
+function columnCount() {
+  if (state.view === 'list') return 1;
+  const cols = getComputedStyle($('#grid')).gridTemplateColumns.split(' ').length;
+  return Math.max(1, cols);
+}
+
+function moveSelection(delta) {
+  const cards = [...document.querySelectorAll('.card')];
+  if (!cards.length) return;
+  const current = cards.findIndex((c) => c.dataset.id === state.selectedId);
+  const next = cards[Math.max(0, Math.min(cards.length - 1, current + delta))];
+  if (!next) return;
+  next.scrollIntoView({ block: 'nearest' });
+  openPanel(next.dataset.id);
+}
+
 function wireChrome() {
   $('#search').addEventListener('input', (e) => {
     state.filter.query = e.target.value;
     renderGrid();
   });
 
-  for (const id of ['#filter-status', '#filter-build']) {
-    $(id).addEventListener('change', (e) => {
-      state.filter[id === '#filter-status' ? 'status' : 'build'] = e.target.value;
-      renderGrid();
-    });
-  }
+  $('#filter-status').addEventListener('change', (e) => {
+    state.filter.status = e.target.value;
+    renderGrid();
+  });
 
   for (const btn of document.querySelectorAll('.view button')) {
     btn.addEventListener('click', () => {
@@ -457,10 +625,17 @@ function wireChrome() {
   $('#contribute').href = `${REPO}/blob/main/CONTRIBUTING.md`;
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && state.selectedId) closePanel();
-    if (e.key === '/' && document.activeElement !== $('#search')) {
+    const typing = document.activeElement === $('#search');
+    if (e.key === 'Escape' && state.selectedId) return closePanel();
+    if (e.key === '/' && !typing) {
       e.preventDefault();
-      $('#search').focus();
+      return $('#search').focus();
+    }
+    if (typing || !state.selectedId) return;
+    const moves = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: columnCount(), ArrowUp: -columnCount() };
+    if (moves[e.key]) {
+      e.preventDefault();
+      moveSelection(moves[e.key]);
     }
   });
 }
@@ -478,28 +653,12 @@ async function boot() {
     return;
   }
 
-  try {
-    state.sprite = await (await fetch('sprite.json')).json();
-  } catch {
-    // No prebuilt sprite (e.g. serving the repo root directly). Fall back to
-    // fetching each variant individually.
-    state.sprite = {};
-    await Promise.all(
-      state.manifest.assets.map(async (asset) => {
-        state.sprite[asset.id] = {};
-        await Promise.all(
-          Object.entries(asset.variants).map(async ([theme, path]) => {
-            state.sprite[asset.id][theme] = await (await fetch(path)).text();
-          })
-        );
-      })
-    );
-  }
-
   wireChrome();
   renderNav();
   renderGrid();
-  openPanel(state.manifest.assets.find((a) => a.id === 'system.settings')?.id || state.manifest.assets[0].id);
+
+  const first = state.manifest.assets.find((a) => a.id === 'system.settings') || state.manifest.assets[0];
+  if (first) openPanel(first.id);
 }
 
 boot();

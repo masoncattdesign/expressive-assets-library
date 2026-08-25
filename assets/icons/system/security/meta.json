@@ -1,11 +1,17 @@
 {
   "id": "system.security",
   "name": "Security",
+  "keywords": [
+    "shield",
+    "protection",
+    "defender",
+    "safety",
+    "privacy"
+  ],
+  "description": "A shield with a check. Security posture, protection status, and Defender surfaces.",
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +30,14 @@
     "primary": "#0F6CBD",
     "secondary": "#3B82D6"
   },
-  "tags": [
-    "shield",
-    "protection",
-    "defender",
-    "safety",
-    "privacy"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/security/color.svg",
     "regular": "assets/icons/system/security/regular.svg",
     "filled": "assets/icons/system/security/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

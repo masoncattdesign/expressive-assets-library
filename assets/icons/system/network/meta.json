@@ -1,11 +1,20 @@
 {
   "id": "system.network",
   "name": "Network",
+  "aliases": [
+    "Wi-Fi"
+  ],
+  "keywords": [
+    "wifi",
+    "connection",
+    "signal",
+    "internet",
+    "wireless"
+  ],
+  "description": "Signal arcs. Wireless connectivity and network status.",
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +33,14 @@
     "primary": "#0078D4",
     "secondary": "#2AA0DA"
   },
-  "tags": [
-    "wifi",
-    "connection",
-    "signal",
-    "internet",
-    "wireless"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/network/color.svg",
     "regular": "assets/icons/system/network/regular.svg",
     "filled": "assets/icons/system/network/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

@@ -16,7 +16,15 @@
 import { mkdir, writeFile, rm } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ICONS, ILLUSTRATIONS, LIFECYCLE, ICON_SIZES, ILLUSTRATION_SIZES } from './sources/specs.mjs';
+import {
+  ICONS,
+  ILLUSTRATIONS,
+  LIFECYCLE,
+  ALIASES,
+  DESCRIPTIONS,
+  ICON_SIZES,
+  ILLUSTRATION_SIZES,
+} from './sources/specs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const TODAY = process.env.ASSET_DATE || new Date().toISOString().slice(0, 10);
@@ -121,23 +129,27 @@ function metaFor(spec, { type, themes, sizes, dir }) {
   const slug = spec.id.split('.')[1];
   const life = LIFECYCLE[spec.id] || {};
   const variants = Object.fromEntries(themes.map((t) => [t, `${dir}/${slug}/${t}.svg`]));
+  const description = DESCRIPTIONS[spec.id];
+  const aliases = ALIASES[spec.id];
+
   return {
     id: spec.id,
     name: spec.name,
+    ...(aliases ? { aliases } : {}),
+    keywords: spec.keywords,
+    ...(description ? { description } : {}),
     type,
-    category: spec.category,
-    family: spec.family || 'windows',
-    status: life.status || 'active',
-    build: life.build || 'stable',
+    collection: spec.collection,
+    status: life.status || 'published',
+    ...(life.replacedBy ? { replacedBy: life.replacedBy } : {}),
     themes,
     sizes,
     colors: spec.colors,
-    tags: spec.tags,
+    recolorable: spec.recolorable !== false,
     variants,
+    owner: '@windows-design-systems',
     version: '1.0.0',
     updated: TODAY,
-    owner: '@windows-design-systems',
-    ...(life.deprecatedBy ? { deprecatedBy: life.deprecatedBy } : {}),
     notes: 'Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected.',
   };
 }
@@ -154,7 +166,7 @@ async function main() {
 
   for (const spec of ICONS) {
     const slug = spec.id.split('.')[1];
-    const dir = `assets/icons/${spec.category}`;
+    const dir = `assets/icons/${spec.collection}`;
     const themes = ['color', 'regular', 'filled'];
     for (const theme of themes) {
       await write(join(ROOT, dir, slug, `${theme}.svg`), renderIcon(spec, theme));
@@ -168,7 +180,7 @@ async function main() {
 
   for (const spec of ILLUSTRATIONS) {
     const slug = spec.id.split('.')[1];
-    const dir = `assets/illustrations/${spec.category}`;
+    const dir = `assets/illustrations/${spec.collection}`;
     await write(join(ROOT, dir, slug, 'color.svg'), renderIllustration(spec));
     await write(
       join(ROOT, dir, slug, 'meta.json'),

@@ -1,11 +1,19 @@
 {
   "id": "file.word-document",
   "name": "Word Document",
+  "aliases": [
+    "Word"
+  ],
+  "keywords": [
+    "word",
+    "doc",
+    "docx",
+    "text",
+    "document"
+  ],
   "type": "icon",
-  "category": "file",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "file",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +32,14 @@
     "primary": "#2B579A",
     "secondary": "#41A5EE"
   },
-  "tags": [
-    "word",
-    "doc",
-    "docx",
-    "text",
-    "document"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/file/word-document/color.svg",
     "regular": "assets/icons/file/word-document/regular.svg",
     "filled": "assets/icons/file/word-document/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

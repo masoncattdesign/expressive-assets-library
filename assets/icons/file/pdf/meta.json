@@ -1,11 +1,15 @@
 {
   "id": "file.pdf",
   "name": "PDF",
+  "keywords": [
+    "acrobat",
+    "portable document",
+    "print"
+  ],
+  "description": "A page marked PDF. Portable Document Format files.",
   "type": "icon",
-  "category": "file",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "file",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,18 +28,14 @@
     "primary": "#D13438",
     "secondary": "#EB6B0C"
   },
-  "tags": [
-    "acrobat",
-    "portable document",
-    "print"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/file/pdf/color.svg",
     "regular": "assets/icons/file/pdf/regular.svg",
     "filled": "assets/icons/file/pdf/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

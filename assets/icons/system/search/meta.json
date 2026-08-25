@@ -1,11 +1,16 @@
 {
   "id": "system.search",
   "name": "Search",
+  "keywords": [
+    "find",
+    "magnifier",
+    "lookup",
+    "query"
+  ],
+  "description": "A magnifier. Search entry points and find-in-page.",
   "type": "icon",
-  "category": "system",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "system",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +29,14 @@
     "primary": "#0078D4",
     "secondary": "#2AA0DA"
   },
-  "tags": [
-    "find",
-    "magnifier",
-    "lookup",
-    "query"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/system/search/color.svg",
     "regular": "assets/icons/system/search/regular.svg",
     "filled": "assets/icons/system/search/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

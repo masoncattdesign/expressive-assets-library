@@ -1,11 +1,15 @@
 {
   "id": "product.weather",
   "name": "Weather",
+  "keywords": [
+    "cloud",
+    "sun",
+    "forecast",
+    "climate"
+  ],
   "type": "icon",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,19 +28,14 @@
     "primary": "#2AA0DA",
     "secondary": "#F7A501"
   },
-  "tags": [
-    "cloud",
-    "sun",
-    "forecast",
-    "climate"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/weather/color.svg",
     "regular": "assets/icons/product/weather/regular.svg",
     "filled": "assets/icons/product/weather/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

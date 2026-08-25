@@ -1,11 +1,17 @@
 {
   "id": "product.store",
   "name": "Store",
+  "keywords": [
+    "shop",
+    "bag",
+    "apps",
+    "marketplace",
+    "purchase"
+  ],
+  "description": "A shopping bag with a handle. App marketplace and purchase flows.",
   "type": "icon",
-  "category": "product",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "product",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +30,14 @@
     "primary": "#E3008C",
     "secondary": "#8764B8"
   },
-  "tags": [
-    "shop",
-    "bag",
-    "apps",
-    "marketplace",
-    "purchase"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/product/store/color.svg",
     "regular": "assets/icons/product/store/regular.svg",
     "filled": "assets/icons/product/store/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

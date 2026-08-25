@@ -1,5 +1,12 @@
 node_modules/
 _site/
+
+# Figma import artifacts. figma.config.json IS committed — it is the mapping
+# from your Figma pages to collections and belongs in review. These two are
+# large machine output, regenerated on every run.
+figma-survey.json
+figma-import-report.json
+
 .DS_Store
 Thumbs.db
 *.log

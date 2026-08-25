@@ -2,21 +2,20 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://windows.design/schemas/expressive-asset.schema.json",
   "title": "Expressive Asset",
-  "description": "Metadata contract for a single asset in the Expressive Assets library. Mirrors the property set used by the Figma library (Type, Family, Status, Build, Size, Theme) so exports map 1:1.",
+  "description": "Metadata contract for a single asset in the Expressive Assets library. Every field here has to earn its place at 500+ assets: identity that never breaks, enough text to make the thing findable, one lifecycle axis, and a trail back to the Figma source.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
     "name",
     "type",
-    "category",
-    "family",
+    "collection",
     "status",
-    "build",
     "themes",
     "sizes",
     "colors",
-    "tags",
+    "recolorable",
+    "keywords",
     "variants",
     "version",
     "updated"
@@ -24,7 +23,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Stable, globally unique identifier. Format: <category>.<slug>. Never change this once published - downstream code references it.",
+      "description": "Stable, globally unique identifier. Format: <collection>.<slug>. Never change this once published — every consumer references it, and a rename is a breaking change. Change `name` instead and add the old one to `aliases`.",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "name": {
@@ -32,30 +31,47 @@
       "description": "Human-readable display name shown in the browser UI.",
       "minLength": 1
     },
+    "aliases": {
+      "type": "array",
+      "description": "Names this asset used to have, or is commonly called. Search matches against these, so a rename never makes an asset unfindable for the people who learned the old name.",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Search terms, especially synonyms someone would type who does not know the asset's name. At 500+ assets this is the difference between a library and a folder of SVGs.",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9 -]+$" }
+    },
+    "description": {
+      "type": "string",
+      "description": "One line: what the artwork depicts and when to reach for it. Doubles as the duplicate-detector — two assets with the same description are usually the same idea drawn twice.",
+      "maxLength": 280
+    },
     "type": {
       "type": "string",
       "description": "Top-level asset kind.",
       "enum": ["icon", "illustration"]
     },
-    "category": {
+    "collection": {
       "type": "string",
-      "description": "Sub-collection within the type. Icons: system | product | file. Illustrations: windows | fluent | product.",
+      "description": "Sub-collection within the type. Extend this list as new collections are added — it is deliberately open to growth.",
       "enum": ["system", "product", "file", "windows", "fluent"]
     },
-    "family": {
+    "product": {
       "type": "string",
-      "description": "Design family the asset belongs to. Drives which review board owns it.",
-      "enum": ["windows", "fluent", "m365", "surface", "gaming"]
+      "description": "For product artwork only: which product it represents (e.g. \"Outlook\", \"Xbox\"). Absent for systemic artwork.",
+      "minLength": 1
     },
     "status": {
       "type": "string",
-      "description": "Lifecycle state. 'active' is safe to ship; 'inactive' is retired but kept for back-compat; 'na' is unclassified.",
-      "enum": ["active", "inactive", "na"]
+      "description": "The single lifecycle axis. draft = in progress, do not ship. published = approved for use. deprecated = still present for back-compat, must not be used in new work.",
+      "enum": ["draft", "published", "deprecated"]
     },
-    "build": {
+    "replacedBy": {
       "type": "string",
-      "description": "Release channel the asset is approved for. Consumers on stable must not pick up alpha assets.",
-      "enum": ["alpha", "beta", "stable", "deprecated"]
+      "description": "Asset id that supersedes this one. Required when status is deprecated — a deprecation with no migration target just strands consumers.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "themes": {
       "type": "array",
@@ -66,7 +82,7 @@
     },
     "sizes": {
       "type": "array",
-      "description": "Pixel sizes the artwork is designed to read correctly at. The SVG is scalable, but below the smallest listed size the geometry is not legible.",
+      "description": "Pixel sizes the artwork is designed to read correctly at — not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12.",
       "minItems": 1,
       "uniqueItems": true,
       "items": { "type": "integer", "minimum": 8, "maximum": 512 }
@@ -81,12 +97,9 @@
         "secondary": { "type": "string", "pattern": "^#[0-9A-F]{6}$" }
       }
     },
-    "tags": {
-      "type": "array",
-      "description": "Search keywords. Include synonyms a designer might type instead of the asset name.",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9 -]+$" }
+    "recolorable": {
+      "type": "boolean",
+      "description": "Whether the artwork may be retinted to a Windows accent. Set false for trademarked brand marks that must ship in their own colors — the browser disables the accent picker for those, so nobody ships a magenta Excel icon."
     },
     "variants": {
       "type": "object",
@@ -94,9 +107,23 @@
       "additionalProperties": { "type": "string", "pattern": "^assets/.+\\.svg$" },
       "minProperties": 1
     },
+    "figma": {
+      "type": "object",
+      "description": "Where this artwork came from upstream. At 500+ assets, being able to jump from a file on disk back to the component that produced it is not optional.",
+      "additionalProperties": false,
+      "required": ["fileKey", "nodeId"],
+      "properties": {
+        "fileKey": { "type": "string", "minLength": 1 },
+        "nodeId": { "type": "string", "minLength": 1 }
+      }
+    },
+    "owner": {
+      "type": "string",
+      "description": "GitHub handle or team responsible for this asset."
+    },
     "version": {
       "type": "string",
-      "description": "Semver for the artwork itself. Bump minor for a redraw, major for a shape change that breaks visual continuity.",
+      "description": "Semver for the artwork itself. Minor for a redraw, major for a shape change that breaks visual continuity.",
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
     "updated": {
@@ -104,18 +131,6 @@
       "description": "ISO date of the last artwork change.",
       "format": "date",
       "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-    },
-    "owner": {
-      "type": "string",
-      "description": "GitHub handle or team responsible for this asset."
-    },
-    "figmaNodeId": {
-      "type": "string",
-      "description": "Node ID in the source Figma library, so the artwork can be traced back upstream."
-    },
-    "deprecatedBy": {
-      "type": "string",
-      "description": "Asset id that replaces this one. Required reading when build is 'deprecated'."
     },
     "notes": {
       "type": "string",

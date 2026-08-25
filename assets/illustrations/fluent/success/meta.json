@@ -1,11 +1,17 @@
 {
   "id": "fluent.success",
   "name": "Success",
+  "keywords": [
+    "done",
+    "complete",
+    "confirmation",
+    "checkmark",
+    "celebrate"
+  ],
+  "description": "A check in a green disc with confetti. Completion and confirmation moments.",
   "type": "illustration",
-  "category": "fluent",
-  "family": "fluent",
-  "status": "active",
-  "build": "stable",
+  "collection": "fluent",
+  "status": "published",
   "themes": [
     "color"
   ],
@@ -19,18 +25,12 @@
     "primary": "#107C10",
     "secondary": "#4CAF50"
   },
-  "tags": [
-    "done",
-    "complete",
-    "confirmation",
-    "checkmark",
-    "celebrate"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/illustrations/fluent/success/color.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }

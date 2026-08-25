@@ -9,6 +9,9 @@
   },
   "scripts": {
     "generate": "node scripts/generate-assets.mjs",
+    "figma:survey": "node scripts/import-figma.mjs --survey",
+    "figma:plan": "node scripts/import-figma.mjs --dry-run",
+    "figma:import": "node scripts/import-figma.mjs",
     "manifest": "node scripts/build-manifest.mjs",
     "validate": "node scripts/validate.mjs",
     "build": "npm run manifest && npm run validate && node scripts/build-site.mjs",

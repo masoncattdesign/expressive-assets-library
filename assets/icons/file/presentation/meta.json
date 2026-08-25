@@ -1,11 +1,19 @@
 {
   "id": "file.presentation",
   "name": "Presentation",
+  "aliases": [
+    "PowerPoint"
+  ],
+  "keywords": [
+    "powerpoint",
+    "ppt",
+    "pptx",
+    "slides",
+    "deck"
+  ],
   "type": "icon",
-  "category": "file",
-  "family": "windows",
-  "status": "active",
-  "build": "stable",
+  "collection": "file",
+  "status": "published",
   "themes": [
     "color",
     "regular",
@@ -24,20 +32,14 @@
     "primary": "#D24726",
     "secondary": "#ED6C47"
   },
-  "tags": [
-    "powerpoint",
-    "ppt",
-    "pptx",
-    "slides",
-    "deck"
-  ],
+  "recolorable": true,
   "variants": {
     "color": "assets/icons/file/presentation/color.svg",
     "regular": "assets/icons/file/presentation/regular.svg",
     "filled": "assets/icons/file/presentation/filled.svg"
   },
+  "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-25",
-  "owner": "@windows-design-systems",
   "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
 }
