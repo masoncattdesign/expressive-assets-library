@@ -1,0 +1,36 @@
+{
+  "id": "windows.welcome",
+  "name": "Welcome",
+  "type": "illustration",
+  "category": "windows",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color"
+  ],
+  "sizes": [
+    96,
+    128,
+    192,
+    256
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#F7A501"
+  },
+  "tags": [
+    "onboarding",
+    "hello",
+    "start",
+    "first run",
+    "setup"
+  ],
+  "variants": {
+    "color": "assets/illustrations/windows/welcome/color.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

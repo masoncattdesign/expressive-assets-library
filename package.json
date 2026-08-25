@@ -1,0 +1,17 @@
+{
+  "name": "expressive-assets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Expressive Assets — the icon and illustration library for Windows Design Systems.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-assets.mjs",
+    "manifest": "node scripts/build-manifest.mjs",
+    "validate": "node scripts/validate.mjs",
+    "build": "npm run manifest && npm run validate && node scripts/build-site.mjs",
+    "dev": "node scripts/build-site.mjs && node scripts/serve.mjs"
+  }
+}

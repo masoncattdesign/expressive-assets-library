@@ -1,0 +1,36 @@
+{
+  "id": "fluent.success",
+  "name": "Success",
+  "type": "illustration",
+  "category": "fluent",
+  "family": "fluent",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color"
+  ],
+  "sizes": [
+    96,
+    128,
+    192,
+    256
+  ],
+  "colors": {
+    "primary": "#107C10",
+    "secondary": "#4CAF50"
+  },
+  "tags": [
+    "done",
+    "complete",
+    "confirmation",
+    "checkmark",
+    "celebrate"
+  ],
+  "variants": {
+    "color": "assets/illustrations/fluent/success/color.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

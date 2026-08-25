@@ -1,0 +1,43 @@
+{
+  "id": "product.mail",
+  "name": "Mail",
+  "type": "icon",
+  "category": "product",
+  "family": "m365",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0F6CBD",
+    "secondary": "#2AA0DA"
+  },
+  "tags": [
+    "email",
+    "inbox",
+    "message",
+    "envelope",
+    "outlook"
+  ],
+  "variants": {
+    "color": "assets/icons/product/mail/color.svg",
+    "regular": "assets/icons/product/mail/regular.svg",
+    "filled": "assets/icons/product/mail/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

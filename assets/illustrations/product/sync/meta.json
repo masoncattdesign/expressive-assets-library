@@ -1,0 +1,36 @@
+{
+  "id": "product.sync",
+  "name": "Sync",
+  "type": "illustration",
+  "category": "product",
+  "family": "m365",
+  "status": "active",
+  "build": "beta",
+  "themes": [
+    "color"
+  ],
+  "sizes": [
+    96,
+    128,
+    192,
+    256
+  ],
+  "colors": {
+    "primary": "#0F6CBD",
+    "secondary": "#38C6C6"
+  },
+  "tags": [
+    "refresh",
+    "update",
+    "cloud sync",
+    "in progress",
+    "loading"
+  ],
+  "variants": {
+    "color": "assets/illustrations/product/sync/color.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

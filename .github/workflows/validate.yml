@@ -1,0 +1,22 @@
+name: Validate assets
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate metadata, artwork, and manifest
+        run: npm run validate
+
+      - name: Confirm the site assembles
+        run: node scripts/build-site.mjs

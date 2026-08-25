@@ -1,0 +1,42 @@
+{
+  "id": "product.photos",
+  "name": "Photos",
+  "type": "icon",
+  "category": "product",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#2AA0DA",
+    "secondary": "#38C6C6"
+  },
+  "tags": [
+    "image",
+    "gallery",
+    "picture",
+    "album"
+  ],
+  "variants": {
+    "color": "assets/icons/product/photos/color.svg",
+    "regular": "assets/icons/product/photos/regular.svg",
+    "filled": "assets/icons/product/photos/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

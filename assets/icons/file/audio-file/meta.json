@@ -1,0 +1,43 @@
+{
+  "id": "file.audio-file",
+  "name": "Audio File",
+  "type": "icon",
+  "category": "file",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#C239B3",
+    "secondary": "#E3008C"
+  },
+  "tags": [
+    "mp3",
+    "wav",
+    "sound",
+    "music",
+    "track"
+  ],
+  "variants": {
+    "color": "assets/icons/file/audio-file/color.svg",
+    "regular": "assets/icons/file/audio-file/regular.svg",
+    "filled": "assets/icons/file/audio-file/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

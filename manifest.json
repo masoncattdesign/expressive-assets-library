@@ -1,0 +1,1631 @@
+{
+  "$schema": "./schema/asset.schema.json",
+  "name": "Expressive Assets",
+  "description": "Icon and illustration library for Windows Design Systems.",
+  "generator": "scripts/build-manifest.mjs",
+  "total": 38,
+  "collections": [
+    {
+      "type": "icon",
+      "label": "Icons",
+      "categories": [
+        {
+          "id": "system",
+          "label": "System Icons",
+          "count": 11
+        },
+        {
+          "id": "product",
+          "label": "Product Icons",
+          "count": 11
+        },
+        {
+          "id": "file",
+          "label": "File Icons",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "type": "illustration",
+      "label": "Illustrations",
+      "categories": [
+        {
+          "id": "windows",
+          "label": "Windows Illustrations",
+          "count": 2
+        },
+        {
+          "id": "fluent",
+          "label": "Fluent Illustrations",
+          "count": 2
+        },
+        {
+          "id": "product",
+          "label": "Product Illustrations",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "system.battery",
+      "name": "Battery",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#123B63",
+        "secondary": "#0F6CBD"
+      },
+      "tags": [
+        "power",
+        "charge",
+        "energy",
+        "level"
+      ],
+      "variants": {
+        "color": "assets/icons/system/battery/color.svg",
+        "regular": "assets/icons/system/battery/regular.svg",
+        "filled": "assets/icons/system/battery/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.calendar",
+      "name": "Calendar",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D83B01",
+        "secondary": "#F7A501"
+      },
+      "tags": [
+        "date",
+        "schedule",
+        "agenda",
+        "month",
+        "events"
+      ],
+      "variants": {
+        "color": "assets/icons/system/calendar/color.svg",
+        "regular": "assets/icons/system/calendar/regular.svg",
+        "filled": "assets/icons/system/calendar/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.clock",
+      "name": "Clock",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#1B3A57",
+        "secondary": "#0F6CBD"
+      },
+      "tags": [
+        "time",
+        "alarm",
+        "timer",
+        "schedule"
+      ],
+      "variants": {
+        "color": "assets/icons/system/clock/color.svg",
+        "regular": "assets/icons/system/clock/regular.svg",
+        "filled": "assets/icons/system/clock/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.files",
+      "name": "Files",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#F7A501",
+        "secondary": "#EB6B0C"
+      },
+      "tags": [
+        "folder",
+        "explorer",
+        "directory",
+        "documents"
+      ],
+      "variants": {
+        "color": "assets/icons/system/files/color.svg",
+        "regular": "assets/icons/system/files/regular.svg",
+        "filled": "assets/icons/system/files/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.network",
+      "name": "Network",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "wifi",
+        "connection",
+        "signal",
+        "internet",
+        "wireless"
+      ],
+      "variants": {
+        "color": "assets/icons/system/network/color.svg",
+        "regular": "assets/icons/system/network/regular.svg",
+        "filled": "assets/icons/system/network/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.notepad",
+      "name": "Notepad",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "alpha",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#F7A501",
+        "secondary": "#EB6B0C"
+      },
+      "tags": [
+        "notes",
+        "text",
+        "editor",
+        "write",
+        "document"
+      ],
+      "variants": {
+        "color": "assets/icons/system/notepad/color.svg",
+        "regular": "assets/icons/system/notepad/regular.svg",
+        "filled": "assets/icons/system/notepad/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.search",
+      "name": "Search",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "find",
+        "magnifier",
+        "lookup",
+        "query"
+      ],
+      "variants": {
+        "color": "assets/icons/system/search/color.svg",
+        "regular": "assets/icons/system/search/regular.svg",
+        "filled": "assets/icons/system/search/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.security",
+      "name": "Security",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#3B82D6"
+      },
+      "tags": [
+        "shield",
+        "protection",
+        "defender",
+        "safety",
+        "privacy"
+      ],
+      "variants": {
+        "color": "assets/icons/system/security/color.svg",
+        "regular": "assets/icons/system/security/regular.svg",
+        "filled": "assets/icons/system/security/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.settings",
+      "name": "Settings",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "tags": [
+        "gear",
+        "config",
+        "options",
+        "preferences"
+      ],
+      "variants": {
+        "color": "assets/icons/system/settings/color.svg",
+        "regular": "assets/icons/system/settings/regular.svg",
+        "filled": "assets/icons/system/settings/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.trash",
+      "name": "Trash",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "delete",
+        "recycle bin",
+        "remove",
+        "bin"
+      ],
+      "variants": {
+        "color": "assets/icons/system/trash/color.svg",
+        "regular": "assets/icons/system/trash/regular.svg",
+        "filled": "assets/icons/system/trash/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "system.volume",
+      "name": "Volume",
+      "type": "icon",
+      "category": "system",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "sound",
+        "audio",
+        "speaker",
+        "mute"
+      ],
+      "variants": {
+        "color": "assets/icons/system/volume/color.svg",
+        "regular": "assets/icons/system/volume/regular.svg",
+        "filled": "assets/icons/system/volume/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.browser",
+      "name": "Browser",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "web",
+        "edge",
+        "internet",
+        "globe",
+        "world"
+      ],
+      "variants": {
+        "color": "assets/icons/product/browser/color.svg",
+        "regular": "assets/icons/product/browser/regular.svg",
+        "filled": "assets/icons/product/browser/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.camera",
+      "name": "Camera",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#3A3A45",
+        "secondary": "#5D5A88"
+      },
+      "tags": [
+        "photo",
+        "capture",
+        "lens",
+        "shoot"
+      ],
+      "variants": {
+        "color": "assets/icons/product/camera/color.svg",
+        "regular": "assets/icons/product/camera/regular.svg",
+        "filled": "assets/icons/product/camera/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.chat",
+      "name": "Chat",
+      "type": "icon",
+      "category": "product",
+      "family": "m365",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "message",
+        "conversation",
+        "teams",
+        "bubble",
+        "talk"
+      ],
+      "variants": {
+        "color": "assets/icons/product/chat/color.svg",
+        "regular": "assets/icons/product/chat/regular.svg",
+        "filled": "assets/icons/product/chat/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.gaming",
+      "name": "Gaming",
+      "type": "icon",
+      "category": "product",
+      "family": "gaming",
+      "status": "active",
+      "build": "beta",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#107C10",
+        "secondary": "#4CAF50"
+      },
+      "tags": [
+        "controller",
+        "xbox",
+        "play",
+        "games"
+      ],
+      "variants": {
+        "color": "assets/icons/product/gaming/color.svg",
+        "regular": "assets/icons/product/gaming/regular.svg",
+        "filled": "assets/icons/product/gaming/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.mail",
+      "name": "Mail",
+      "type": "icon",
+      "category": "product",
+      "family": "m365",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#2AA0DA"
+      },
+      "tags": [
+        "email",
+        "inbox",
+        "message",
+        "envelope",
+        "outlook"
+      ],
+      "variants": {
+        "color": "assets/icons/product/mail/color.svg",
+        "regular": "assets/icons/product/mail/regular.svg",
+        "filled": "assets/icons/product/mail/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.maps",
+      "name": "Maps",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D13438",
+        "secondary": "#EB6B0C"
+      },
+      "tags": [
+        "location",
+        "pin",
+        "navigation",
+        "place",
+        "directions"
+      ],
+      "variants": {
+        "color": "assets/icons/product/maps/color.svg",
+        "regular": "assets/icons/product/maps/regular.svg",
+        "filled": "assets/icons/product/maps/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.music",
+      "name": "Music",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#C239B3",
+        "secondary": "#E3008C"
+      },
+      "tags": [
+        "audio",
+        "song",
+        "note",
+        "player",
+        "media"
+      ],
+      "variants": {
+        "color": "assets/icons/product/music/color.svg",
+        "regular": "assets/icons/product/music/regular.svg",
+        "filled": "assets/icons/product/music/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.phone",
+      "name": "Phone",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#107C10",
+        "secondary": "#4CAF50"
+      },
+      "tags": [
+        "call",
+        "dial",
+        "contact",
+        "telephone"
+      ],
+      "variants": {
+        "color": "assets/icons/product/phone/color.svg",
+        "regular": "assets/icons/product/phone/regular.svg",
+        "filled": "assets/icons/product/phone/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.photos",
+      "name": "Photos",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#2AA0DA",
+        "secondary": "#38C6C6"
+      },
+      "tags": [
+        "image",
+        "gallery",
+        "picture",
+        "album"
+      ],
+      "variants": {
+        "color": "assets/icons/product/photos/color.svg",
+        "regular": "assets/icons/product/photos/regular.svg",
+        "filled": "assets/icons/product/photos/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.store",
+      "name": "Store",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#E3008C",
+        "secondary": "#8764B8"
+      },
+      "tags": [
+        "shop",
+        "bag",
+        "apps",
+        "marketplace",
+        "purchase"
+      ],
+      "variants": {
+        "color": "assets/icons/product/store/color.svg",
+        "regular": "assets/icons/product/store/regular.svg",
+        "filled": "assets/icons/product/store/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.weather",
+      "name": "Weather",
+      "type": "icon",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#2AA0DA",
+        "secondary": "#F7A501"
+      },
+      "tags": [
+        "cloud",
+        "sun",
+        "forecast",
+        "climate"
+      ],
+      "variants": {
+        "color": "assets/icons/product/weather/color.svg",
+        "regular": "assets/icons/product/weather/regular.svg",
+        "filled": "assets/icons/product/weather/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.archive",
+      "name": "Archive",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#8E562E",
+        "secondary": "#CA5010"
+      },
+      "tags": [
+        "zip",
+        "compressed",
+        "rar",
+        "package",
+        "bundle"
+      ],
+      "variants": {
+        "color": "assets/icons/file/archive/color.svg",
+        "regular": "assets/icons/file/archive/regular.svg",
+        "filled": "assets/icons/file/archive/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.audio-file",
+      "name": "Audio File",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#C239B3",
+        "secondary": "#E3008C"
+      },
+      "tags": [
+        "mp3",
+        "wav",
+        "sound",
+        "music",
+        "track"
+      ],
+      "variants": {
+        "color": "assets/icons/file/audio-file/color.svg",
+        "regular": "assets/icons/file/audio-file/regular.svg",
+        "filled": "assets/icons/file/audio-file/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.code-file",
+      "name": "Code File",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#5D5A88"
+      },
+      "tags": [
+        "source",
+        "script",
+        "developer",
+        "programming"
+      ],
+      "variants": {
+        "color": "assets/icons/file/code-file/color.svg",
+        "regular": "assets/icons/file/code-file/regular.svg",
+        "filled": "assets/icons/file/code-file/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.image-file",
+      "name": "Image File",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#8764B8",
+        "secondary": "#C239B3"
+      },
+      "tags": [
+        "png",
+        "jpg",
+        "picture",
+        "photo",
+        "raster"
+      ],
+      "variants": {
+        "color": "assets/icons/file/image-file/color.svg",
+        "regular": "assets/icons/file/image-file/regular.svg",
+        "filled": "assets/icons/file/image-file/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.pdf",
+      "name": "PDF",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D13438",
+        "secondary": "#EB6B0C"
+      },
+      "tags": [
+        "acrobat",
+        "portable document",
+        "print"
+      ],
+      "variants": {
+        "color": "assets/icons/file/pdf/color.svg",
+        "regular": "assets/icons/file/pdf/regular.svg",
+        "filled": "assets/icons/file/pdf/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.presentation",
+      "name": "Presentation",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D24726",
+        "secondary": "#ED6C47"
+      },
+      "tags": [
+        "powerpoint",
+        "ppt",
+        "pptx",
+        "slides",
+        "deck"
+      ],
+      "variants": {
+        "color": "assets/icons/file/presentation/color.svg",
+        "regular": "assets/icons/file/presentation/regular.svg",
+        "filled": "assets/icons/file/presentation/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.spreadsheet",
+      "name": "Spreadsheet",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#217346",
+        "secondary": "#33C481"
+      },
+      "tags": [
+        "excel",
+        "xls",
+        "xlsx",
+        "sheet",
+        "table",
+        "data"
+      ],
+      "variants": {
+        "color": "assets/icons/file/spreadsheet/color.svg",
+        "regular": "assets/icons/file/spreadsheet/regular.svg",
+        "filled": "assets/icons/file/spreadsheet/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.text-file",
+      "name": "Text File",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "inactive",
+      "build": "deprecated",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#5D5A88",
+        "secondary": "#8A8886"
+      },
+      "tags": [
+        "txt",
+        "plain text",
+        "notes",
+        "log"
+      ],
+      "variants": {
+        "color": "assets/icons/file/text-file/color.svg",
+        "regular": "assets/icons/file/text-file/regular.svg",
+        "filled": "assets/icons/file/text-file/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "deprecatedBy": "file.code-file",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.video-file",
+      "name": "Video File",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#CA5010",
+        "secondary": "#F7A501"
+      },
+      "tags": [
+        "mp4",
+        "movie",
+        "clip",
+        "media",
+        "film"
+      ],
+      "variants": {
+        "color": "assets/icons/file/video-file/color.svg",
+        "regular": "assets/icons/file/video-file/regular.svg",
+        "filled": "assets/icons/file/video-file/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "file.word-document",
+      "name": "Word Document",
+      "type": "icon",
+      "category": "file",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color",
+        "regular",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#2B579A",
+        "secondary": "#41A5EE"
+      },
+      "tags": [
+        "word",
+        "doc",
+        "docx",
+        "text",
+        "document"
+      ],
+      "variants": {
+        "color": "assets/icons/file/word-document/color.svg",
+        "regular": "assets/icons/file/word-document/regular.svg",
+        "filled": "assets/icons/file/word-document/filled.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "windows.empty-state",
+      "name": "Empty State",
+      "type": "illustration",
+      "category": "windows",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#1B3A57",
+        "secondary": "#8764B8"
+      },
+      "tags": [
+        "nothing here",
+        "zero state",
+        "space",
+        "blank",
+        "no results"
+      ],
+      "variants": {
+        "color": "assets/illustrations/windows/empty-state/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "windows.welcome",
+      "name": "Welcome",
+      "type": "illustration",
+      "category": "windows",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#F7A501"
+      },
+      "tags": [
+        "onboarding",
+        "hello",
+        "start",
+        "first run",
+        "setup"
+      ],
+      "variants": {
+        "color": "assets/illustrations/windows/welcome/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "fluent.error",
+      "name": "Error",
+      "type": "illustration",
+      "category": "fluent",
+      "family": "fluent",
+      "status": "active",
+      "build": "beta",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#D13438",
+        "secondary": "#EB6B0C"
+      },
+      "tags": [
+        "problem",
+        "failure",
+        "warning",
+        "something went wrong",
+        "alert"
+      ],
+      "variants": {
+        "color": "assets/illustrations/fluent/error/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "fluent.success",
+      "name": "Success",
+      "type": "illustration",
+      "category": "fluent",
+      "family": "fluent",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#107C10",
+        "secondary": "#4CAF50"
+      },
+      "tags": [
+        "done",
+        "complete",
+        "confirmation",
+        "checkmark",
+        "celebrate"
+      ],
+      "variants": {
+        "color": "assets/illustrations/fluent/success/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.sync",
+      "name": "Sync",
+      "type": "illustration",
+      "category": "product",
+      "family": "m365",
+      "status": "active",
+      "build": "beta",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#38C6C6"
+      },
+      "tags": [
+        "refresh",
+        "update",
+        "cloud sync",
+        "in progress",
+        "loading"
+      ],
+      "variants": {
+        "color": "assets/illustrations/product/sync/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.upload",
+      "name": "Upload",
+      "type": "illustration",
+      "category": "product",
+      "family": "windows",
+      "status": "active",
+      "build": "stable",
+      "themes": [
+        "color"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "tags": [
+        "add files",
+        "drop zone",
+        "import",
+        "attach",
+        "cloud"
+      ],
+      "variants": {
+        "color": "assets/illustrations/product/upload/color.svg"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "owner": "@windows-design-systems",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    }
+  ]
+}

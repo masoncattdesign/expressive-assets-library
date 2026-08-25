@@ -1,0 +1,36 @@
+{
+  "id": "windows.empty-state",
+  "name": "Empty State",
+  "type": "illustration",
+  "category": "windows",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color"
+  ],
+  "sizes": [
+    96,
+    128,
+    192,
+    256
+  ],
+  "colors": {
+    "primary": "#1B3A57",
+    "secondary": "#8764B8"
+  },
+  "tags": [
+    "nothing here",
+    "zero state",
+    "space",
+    "blank",
+    "no results"
+  ],
+  "variants": {
+    "color": "assets/illustrations/windows/empty-state/color.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

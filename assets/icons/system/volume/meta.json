@@ -1,0 +1,42 @@
+{
+  "id": "system.volume",
+  "name": "Volume",
+  "type": "icon",
+  "category": "system",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#2AA0DA"
+  },
+  "tags": [
+    "sound",
+    "audio",
+    "speaker",
+    "mute"
+  ],
+  "variants": {
+    "color": "assets/icons/system/volume/color.svg",
+    "regular": "assets/icons/system/volume/regular.svg",
+    "filled": "assets/icons/system/volume/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

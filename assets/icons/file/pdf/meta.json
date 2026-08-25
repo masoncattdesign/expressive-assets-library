@@ -1,0 +1,41 @@
+{
+  "id": "file.pdf",
+  "name": "PDF",
+  "type": "icon",
+  "category": "file",
+  "family": "windows",
+  "status": "active",
+  "build": "stable",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#D13438",
+    "secondary": "#EB6B0C"
+  },
+  "tags": [
+    "acrobat",
+    "portable document",
+    "print"
+  ],
+  "variants": {
+    "color": "assets/icons/file/pdf/color.svg",
+    "regular": "assets/icons/file/pdf/regular.svg",
+    "filled": "assets/icons/file/pdf/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "product.gaming",
+  "name": "Gaming",
+  "type": "icon",
+  "category": "product",
+  "family": "gaming",
+  "status": "active",
+  "build": "beta",
+  "themes": [
+    "color",
+    "regular",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#107C10",
+    "secondary": "#4CAF50"
+  },
+  "tags": [
+    "controller",
+    "xbox",
+    "play",
+    "games"
+  ],
+  "variants": {
+    "color": "assets/icons/product/gaming/color.svg",
+    "regular": "assets/icons/product/gaming/regular.svg",
+    "filled": "assets/icons/product/gaming/filled.svg"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "owner": "@windows-design-systems",
+  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+}
