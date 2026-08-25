@@ -32,38 +32,23 @@ async function main() {
 
   const manifest = JSON.parse(await readFile(join(ROOT, 'manifest.json'), 'utf8'));
 
-  /* One sprite PER COLLECTION rather than one for the whole library.
-     Inlining every SVG into a single file is great at 38 assets and terrible at
-     500+: a couple of megabytes that blocks first paint and pins the lot in
-     memory whether or not you ever open that collection. Chunked this way the
-     browser fetches only what the sidebar selection actually needs. */
-  await mkdir(join(OUT, 'sprites'), { recursive: true });
-
-  const report = [];
-  for (const group of manifest.groups) {
-    for (const collection of group.collections) {
-      const members = manifest.assets.filter((a) => a.type === group.type && a.collection === collection.id);
-      const sprite = {};
-      for (const asset of members) {
-        sprite[asset.id] = {};
-        for (const [theme, rel] of Object.entries(asset.variants)) {
-          sprite[asset.id][theme] = (await readFile(join(ROOT, rel), 'utf8')).trim();
-        }
-      }
-      const body = JSON.stringify(sprite);
-      await writeFile(join(OUT, collection.sprite), body, 'utf8');
-      report.push({ name: collection.sprite, count: members.length, kb: Buffer.byteLength(body) / 1024 });
-    }
-  }
+  /* No sprite bundles.
+     Bundling every SVG into per-collection JSON worked at 38 scalable assets.
+     It collapses the moment artwork is drawn per size: 46 product icons are
+     828 separate drawings, which bundled to 2.3 MB — and the library is headed
+     for 500+. The site fetches individual SVGs on demand instead, gated by the
+     same IntersectionObserver that already decides what to paint, so only the
+     ~50 drawings actually on screen are ever requested. They are small, they
+     cache, and HTTP/2 multiplexes them. It also deletes a build step. */
 
   // Stops GitHub Pages from running the content through Jekyll.
   await writeFile(join(OUT, '.nojekyll'), '', 'utf8');
 
-  const totalKb = report.reduce((sum, r) => sum + r.kb, 0);
-  console.log(`Built _site/ — ${manifest.total} assets in ${report.length} sprites, ${totalKb.toFixed(1)} KB total:`);
-  for (const r of report.filter((r) => r.count)) {
-    console.log(`  ${r.name.padEnd(34)} ${String(r.count).padStart(4)} assets  ${r.kb.toFixed(1).padStart(7)} KB`);
-  }
+  const drawings = manifest.assets.reduce(
+    (sum, a) => sum + Object.values(a.variants).reduce((n, d) => n + Object.keys(d).length, 0),
+    0
+  );
+  console.log(`Built _site/ — ${manifest.total} assets, ${drawings} drawings, fetched on demand.`);
 }
 
 main().catch((err) => {

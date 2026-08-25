@@ -1,0 +1,50 @@
+{
+  "id": "product.m365-admin-center",
+  "name": "M365 Admin Center",
+  "keywords": [
+    "m365",
+    "admin",
+    "center"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "M365 Admin Center",
+  "status": "draft",
+  "themes": [
+    "color",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#EBF4FC",
+    "secondary": "#1493DF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/m365-admin-center/color-16.svg",
+      "20": "assets/icons/product/m365-admin-center/color-20.svg",
+      "24": "assets/icons/product/m365-admin-center/color-24.svg",
+      "28": "assets/icons/product/m365-admin-center/color-28.svg",
+      "32": "assets/icons/product/m365-admin-center/color-32.svg",
+      "48": "assets/icons/product/m365-admin-center/color-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/m365-admin-center/regular-16.svg",
+      "20": "assets/icons/product/m365-admin-center/regular-20.svg",
+      "24": "assets/icons/product/m365-admin-center/regular-24.svg",
+      "28": "assets/icons/product/m365-admin-center/regular-28.svg",
+      "32": "assets/icons/product/m365-admin-center/regular-32.svg",
+      "48": "assets/icons/product/m365-admin-center/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

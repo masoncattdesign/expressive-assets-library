@@ -3,29 +3,26 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 38,
+  "total": 73,
   "groups": [
     {
       "type": "icon",
       "label": "Icons",
       "collections": [
         {
-          "id": "system",
-          "label": "System Icons",
-          "count": 11,
-          "sprite": "sprites/icon-system.json"
-        },
-        {
           "id": "product",
           "label": "Product Icons",
-          "count": 11,
-          "sprite": "sprites/icon-product.json"
+          "count": 46
+        },
+        {
+          "id": "system",
+          "label": "System Icons",
+          "count": 11
         },
         {
           "id": "file",
           "label": "File Icons",
-          "count": 10,
-          "sprite": "sprites/icon-file.json"
+          "count": 10
         }
       ]
     },
@@ -36,25 +33,2555 @@
         {
           "id": "windows",
           "label": "Windows Illustrations",
-          "count": 2,
-          "sprite": "sprites/illustration-windows.json"
+          "count": 2
         },
         {
           "id": "fluent",
           "label": "Fluent Illustrations",
-          "count": 2,
-          "sprite": "sprites/illustration-fluent.json"
+          "count": 2
         },
         {
           "id": "product",
           "label": "Product Illustrations",
-          "count": 2,
-          "sprite": "sprites/illustration-product.json"
+          "count": 2
         }
       ]
     }
   ],
   "assets": [
+    {
+      "id": "product.access",
+      "name": "Access",
+      "keywords": [
+        "access"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Access",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#9C0D55",
+        "secondary": "#FF5778"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/access/color-16.svg",
+          "20": "assets/icons/product/access/color-20.svg",
+          "24": "assets/icons/product/access/color-24.svg",
+          "28": "assets/icons/product/access/color-28.svg",
+          "32": "assets/icons/product/access/color-32.svg",
+          "48": "assets/icons/product/access/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/access/filled-16.svg",
+          "20": "assets/icons/product/access/filled-20.svg",
+          "24": "assets/icons/product/access/filled-24.svg",
+          "28": "assets/icons/product/access/filled-28.svg",
+          "32": "assets/icons/product/access/filled-32.svg",
+          "48": "assets/icons/product/access/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/access/regular-16.svg",
+          "20": "assets/icons/product/access/regular-20.svg",
+          "24": "assets/icons/product/access/regular-24.svg",
+          "28": "assets/icons/product/access/regular-28.svg",
+          "32": "assets/icons/product/access/regular-32.svg",
+          "48": "assets/icons/product/access/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.bing",
+      "name": "Bing",
+      "keywords": [
+        "bing"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Bing",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#1B48EF",
+        "secondary": "#62DCD4"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/bing/color-16.svg",
+          "20": "assets/icons/product/bing/color-20.svg",
+          "24": "assets/icons/product/bing/color-24.svg",
+          "32": "assets/icons/product/bing/color-32.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/bing/filled-16.svg",
+          "20": "assets/icons/product/bing/filled-20.svg",
+          "24": "assets/icons/product/bing/filled-24.svg",
+          "28": "assets/icons/product/bing/filled-28.svg",
+          "32": "assets/icons/product/bing/filled-32.svg",
+          "48": "assets/icons/product/bing/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/bing/regular-16.svg",
+          "20": "assets/icons/product/bing/regular-20.svg",
+          "24": "assets/icons/product/bing/regular-24.svg",
+          "28": "assets/icons/product/bing/regular-28.svg",
+          "32": "assets/icons/product/bing/regular-32.svg",
+          "48": "assets/icons/product/bing/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.bookings",
+      "name": "Bookings",
+      "keywords": [
+        "bookings"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Bookings",
+      "status": "draft",
+      "themes": [
+        "color",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#057093",
+        "secondary": "#70ECEE"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/bookings/color-16.svg",
+          "20": "assets/icons/product/bookings/color-20.svg",
+          "24": "assets/icons/product/bookings/color-24.svg",
+          "28": "assets/icons/product/bookings/color-28.svg",
+          "32": "assets/icons/product/bookings/color-32.svg",
+          "48": "assets/icons/product/bookings/color-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/bookings/regular-16.svg",
+          "20": "assets/icons/product/bookings/regular-20.svg",
+          "24": "assets/icons/product/bookings/regular-24.svg",
+          "28": "assets/icons/product/bookings/regular-28.svg",
+          "32": "assets/icons/product/bookings/regular-32.svg",
+          "48": "assets/icons/product/bookings/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.calendar",
+      "name": "Calendar",
+      "keywords": [
+        "calendar"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Calendar",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#B8F0FF",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/calendar/color-16.svg",
+          "20": "assets/icons/product/calendar/color-20.svg",
+          "24": "assets/icons/product/calendar/color-24.svg",
+          "28": "assets/icons/product/calendar/color-28.svg",
+          "32": "assets/icons/product/calendar/color-32.svg",
+          "48": "assets/icons/product/calendar/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/calendar/filled-16.svg",
+          "20": "assets/icons/product/calendar/filled-20.svg",
+          "24": "assets/icons/product/calendar/filled-24.svg",
+          "28": "assets/icons/product/calendar/filled-28.svg",
+          "32": "assets/icons/product/calendar/filled-32.svg",
+          "48": "assets/icons/product/calendar/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/calendar/regular-16.svg",
+          "20": "assets/icons/product/calendar/regular-20.svg",
+          "24": "assets/icons/product/calendar/regular-24.svg",
+          "28": "assets/icons/product/calendar/regular-28.svg",
+          "32": "assets/icons/product/calendar/regular-32.svg",
+          "48": "assets/icons/product/calendar/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.capture",
+      "name": "Capture",
+      "keywords": [
+        "capture"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Capture",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#BB4DFF",
+        "secondary": "#F5C4FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/capture/color-16.svg",
+          "20": "assets/icons/product/capture/color-20.svg",
+          "24": "assets/icons/product/capture/color-24.svg",
+          "28": "assets/icons/product/capture/color-28.svg",
+          "32": "assets/icons/product/capture/color-32.svg",
+          "48": "assets/icons/product/capture/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/capture/filled-16.svg",
+          "20": "assets/icons/product/capture/filled-20.svg",
+          "24": "assets/icons/product/capture/filled-24.svg",
+          "28": "assets/icons/product/capture/filled-28.svg",
+          "32": "assets/icons/product/capture/filled-32.svg",
+          "48": "assets/icons/product/capture/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/capture/regular-16.svg",
+          "20": "assets/icons/product/capture/regular-20.svg",
+          "24": "assets/icons/product/capture/regular-24.svg",
+          "28": "assets/icons/product/capture/regular-28.svg",
+          "32": "assets/icons/product/capture/regular-32.svg",
+          "48": "assets/icons/product/capture/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.clipchamp",
+      "name": "Clipchamp",
+      "keywords": [
+        "clipchamp"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Clipchamp",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#7611F0",
+        "secondary": "#944EF6"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/clipchamp/color-16.svg",
+          "20": "assets/icons/product/clipchamp/color-20.svg",
+          "24": "assets/icons/product/clipchamp/color-24.svg",
+          "28": "assets/icons/product/clipchamp/color-28.svg",
+          "32": "assets/icons/product/clipchamp/color-32.svg",
+          "48": "assets/icons/product/clipchamp/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/clipchamp/filled-16.svg",
+          "20": "assets/icons/product/clipchamp/filled-20.svg",
+          "24": "assets/icons/product/clipchamp/filled-24.svg",
+          "28": "assets/icons/product/clipchamp/filled-28.svg",
+          "32": "assets/icons/product/clipchamp/filled-32.svg",
+          "48": "assets/icons/product/clipchamp/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/clipchamp/regular-16.svg",
+          "20": "assets/icons/product/clipchamp/regular-20.svg",
+          "24": "assets/icons/product/clipchamp/regular-24.svg",
+          "28": "assets/icons/product/clipchamp/regular-28.svg",
+          "32": "assets/icons/product/clipchamp/regular-32.svg",
+          "48": "assets/icons/product/clipchamp/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.copilot",
+      "name": "Copilot",
+      "keywords": [
+        "copilot"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Copilot",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#109DF2",
+        "secondary": "#A86EDD"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/copilot/color-16.svg",
+          "20": "assets/icons/product/copilot/color-20.svg",
+          "24": "assets/icons/product/copilot/color-24.svg",
+          "28": "assets/icons/product/copilot/color-28.svg",
+          "32": "assets/icons/product/copilot/color-32.svg",
+          "48": "assets/icons/product/copilot/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/copilot/filled-16.svg",
+          "20": "assets/icons/product/copilot/filled-20.svg",
+          "24": "assets/icons/product/copilot/filled-24.svg",
+          "28": "assets/icons/product/copilot/filled-28.svg",
+          "32": "assets/icons/product/copilot/filled-32.svg",
+          "48": "assets/icons/product/copilot/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/copilot/regular-16.svg",
+          "20": "assets/icons/product/copilot/regular-20.svg",
+          "24": "assets/icons/product/copilot/regular-24.svg",
+          "28": "assets/icons/product/copilot/regular-28.svg",
+          "32": "assets/icons/product/copilot/regular-32.svg",
+          "48": "assets/icons/product/copilot/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.copilot-for-sales",
+      "name": "Copilot for Sales",
+      "keywords": [
+        "copilot",
+        "for",
+        "sales"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Copilot for Sales",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#122882",
+        "secondary": "#3EE5C9"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/copilot-for-sales/color-16.svg",
+          "20": "assets/icons/product/copilot-for-sales/color-20.svg",
+          "24": "assets/icons/product/copilot-for-sales/color-24.svg",
+          "28": "assets/icons/product/copilot-for-sales/color-28.svg",
+          "32": "assets/icons/product/copilot-for-sales/color-32.svg",
+          "48": "assets/icons/product/copilot-for-sales/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/copilot-for-sales/filled-16.svg",
+          "20": "assets/icons/product/copilot-for-sales/filled-20.svg",
+          "24": "assets/icons/product/copilot-for-sales/filled-24.svg",
+          "28": "assets/icons/product/copilot-for-sales/filled-28.svg",
+          "32": "assets/icons/product/copilot-for-sales/filled-32.svg",
+          "48": "assets/icons/product/copilot-for-sales/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/copilot-for-sales/regular-16.svg",
+          "20": "assets/icons/product/copilot-for-sales/regular-20.svg",
+          "24": "assets/icons/product/copilot-for-sales/regular-24.svg",
+          "28": "assets/icons/product/copilot-for-sales/regular-28.svg",
+          "32": "assets/icons/product/copilot-for-sales/regular-32.svg",
+          "48": "assets/icons/product/copilot-for-sales/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.defender",
+      "name": "Defender",
+      "keywords": [
+        "defender"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Defender",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#143DE0",
+        "secondary": "#92DEFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/defender/color-16.svg",
+          "20": "assets/icons/product/defender/color-20.svg",
+          "24": "assets/icons/product/defender/color-24.svg",
+          "28": "assets/icons/product/defender/color-28.svg",
+          "32": "assets/icons/product/defender/color-32.svg",
+          "48": "assets/icons/product/defender/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/defender/filled-16.svg",
+          "20": "assets/icons/product/defender/filled-20.svg",
+          "24": "assets/icons/product/defender/filled-24.svg",
+          "28": "assets/icons/product/defender/filled-28.svg",
+          "32": "assets/icons/product/defender/filled-32.svg",
+          "48": "assets/icons/product/defender/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/defender/regular-16.svg",
+          "20": "assets/icons/product/defender/regular-20.svg",
+          "24": "assets/icons/product/defender/regular-24.svg",
+          "28": "assets/icons/product/defender/regular-28.svg",
+          "32": "assets/icons/product/defender/regular-32.svg",
+          "48": "assets/icons/product/defender/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.designer",
+      "name": "Designer",
+      "keywords": [
+        "designer"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Designer",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#AD7DFF",
+        "secondary": "#FFB357"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/designer/color-16.svg",
+          "20": "assets/icons/product/designer/color-20.svg",
+          "24": "assets/icons/product/designer/color-24.svg",
+          "28": "assets/icons/product/designer/color-28.svg",
+          "32": "assets/icons/product/designer/color-32.svg",
+          "48": "assets/icons/product/designer/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/designer/filled-16.svg",
+          "20": "assets/icons/product/designer/filled-20.svg",
+          "24": "assets/icons/product/designer/filled-24.svg",
+          "28": "assets/icons/product/designer/filled-28.svg",
+          "32": "assets/icons/product/designer/filled-32.svg",
+          "48": "assets/icons/product/designer/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/designer/regular-16.svg",
+          "20": "assets/icons/product/designer/regular-20.svg",
+          "24": "assets/icons/product/designer/regular-24.svg",
+          "28": "assets/icons/product/designer/regular-28.svg",
+          "32": "assets/icons/product/designer/regular-32.svg",
+          "48": "assets/icons/product/designer/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.dragon-copilot",
+      "name": "Dragon Copilot",
+      "keywords": [
+        "dragon",
+        "copilot"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Dragon Copilot",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#FFD638",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/dragon-copilot/color-16.svg",
+          "20": "assets/icons/product/dragon-copilot/color-20.svg",
+          "24": "assets/icons/product/dragon-copilot/color-24.svg",
+          "28": "assets/icons/product/dragon-copilot/color-28.svg",
+          "32": "assets/icons/product/dragon-copilot/color-32.svg",
+          "48": "assets/icons/product/dragon-copilot/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/dragon-copilot/filled-16.svg",
+          "20": "assets/icons/product/dragon-copilot/filled-20.svg",
+          "24": "assets/icons/product/dragon-copilot/filled-24.svg",
+          "28": "assets/icons/product/dragon-copilot/filled-28.svg",
+          "32": "assets/icons/product/dragon-copilot/filled-32.svg",
+          "48": "assets/icons/product/dragon-copilot/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/dragon-copilot/regular-16.svg",
+          "20": "assets/icons/product/dragon-copilot/regular-20.svg",
+          "24": "assets/icons/product/dragon-copilot/regular-24.svg",
+          "28": "assets/icons/product/dragon-copilot/regular-28.svg",
+          "32": "assets/icons/product/dragon-copilot/regular-32.svg",
+          "48": "assets/icons/product/dragon-copilot/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.edge",
+      "name": "Edge",
+      "keywords": [
+        "edge"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Edge",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#094987",
+        "secondary": "#35C1F1"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/edge/color-16.svg",
+          "20": "assets/icons/product/edge/color-20.svg",
+          "24": "assets/icons/product/edge/color-24.svg",
+          "28": "assets/icons/product/edge/color-28.svg",
+          "32": "assets/icons/product/edge/color-32.svg",
+          "48": "assets/icons/product/edge/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/edge/filled-16.svg",
+          "20": "assets/icons/product/edge/filled-20.svg",
+          "24": "assets/icons/product/edge/filled-24.svg",
+          "28": "assets/icons/product/edge/filled-28.svg",
+          "32": "assets/icons/product/edge/filled-32.svg",
+          "48": "assets/icons/product/edge/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/edge/regular-16.svg",
+          "20": "assets/icons/product/edge/regular-20.svg",
+          "24": "assets/icons/product/edge/regular-24.svg",
+          "28": "assets/icons/product/edge/regular-28.svg",
+          "32": "assets/icons/product/edge/regular-32.svg",
+          "48": "assets/icons/product/edge/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.editor",
+      "name": "Editor",
+      "keywords": [
+        "editor"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Editor",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#103F91",
+        "secondary": "#2B7CD3"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/editor/color-16.svg",
+          "20": "assets/icons/product/editor/color-20.svg",
+          "24": "assets/icons/product/editor/color-24.svg",
+          "28": "assets/icons/product/editor/color-28.svg",
+          "32": "assets/icons/product/editor/color-32.svg",
+          "48": "assets/icons/product/editor/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/editor/filled-16.svg",
+          "20": "assets/icons/product/editor/filled-20.svg",
+          "24": "assets/icons/product/editor/filled-24.svg",
+          "28": "assets/icons/product/editor/filled-28.svg",
+          "32": "assets/icons/product/editor/filled-32.svg",
+          "48": "assets/icons/product/editor/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/editor/regular-16.svg",
+          "20": "assets/icons/product/editor/regular-20.svg",
+          "24": "assets/icons/product/editor/regular-24.svg",
+          "28": "assets/icons/product/editor/regular-28.svg",
+          "32": "assets/icons/product/editor/regular-32.svg",
+          "48": "assets/icons/product/editor/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.entra-id",
+      "name": "Entra ID",
+      "keywords": [
+        "entra",
+        "id"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Entra ID",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        24,
+        32
+      ],
+      "colors": {
+        "primary": "#225086",
+        "secondary": "#96BCC2"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/entra-id/color-16.svg",
+          "24": "assets/icons/product/entra-id/color-24.svg",
+          "32": "assets/icons/product/entra-id/color-32.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/entra-id/filled-16.svg",
+          "24": "assets/icons/product/entra-id/filled-24.svg",
+          "32": "assets/icons/product/entra-id/filled-32.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.eventify",
+      "name": "Eventify",
+      "keywords": [
+        "eventify"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Eventify",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#00FFD1",
+        "secondary": "#00A3FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/eventify/color-16.svg",
+          "20": "assets/icons/product/eventify/color-20.svg",
+          "24": "assets/icons/product/eventify/color-24.svg",
+          "28": "assets/icons/product/eventify/color-28.svg",
+          "32": "assets/icons/product/eventify/color-32.svg",
+          "48": "assets/icons/product/eventify/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/eventify/filled-16.svg",
+          "20": "assets/icons/product/eventify/filled-20.svg",
+          "24": "assets/icons/product/eventify/filled-24.svg",
+          "28": "assets/icons/product/eventify/filled-28.svg",
+          "32": "assets/icons/product/eventify/filled-32.svg",
+          "48": "assets/icons/product/eventify/filled-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.excel",
+      "name": "Excel",
+      "keywords": [
+        "excel"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Excel",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#379539",
+        "secondary": "#98F0B0"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/excel/color-16.svg",
+          "20": "assets/icons/product/excel/color-20.svg",
+          "24": "assets/icons/product/excel/color-24.svg",
+          "28": "assets/icons/product/excel/color-28.svg",
+          "32": "assets/icons/product/excel/color-32.svg",
+          "48": "assets/icons/product/excel/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/excel/filled-16.svg",
+          "20": "assets/icons/product/excel/filled-20.svg",
+          "24": "assets/icons/product/excel/filled-24.svg",
+          "28": "assets/icons/product/excel/filled-28.svg",
+          "32": "assets/icons/product/excel/filled-32.svg",
+          "48": "assets/icons/product/excel/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/excel/regular-16.svg",
+          "20": "assets/icons/product/excel/regular-20.svg",
+          "24": "assets/icons/product/excel/regular-24.svg",
+          "28": "assets/icons/product/excel/regular-28.svg",
+          "32": "assets/icons/product/excel/regular-32.svg",
+          "48": "assets/icons/product/excel/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.exchange",
+      "name": "Exchange",
+      "keywords": [
+        "exchange"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Exchange",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#28A8EA",
+        "secondary": "#50D9FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/exchange/color-16.svg",
+          "20": "assets/icons/product/exchange/color-20.svg",
+          "24": "assets/icons/product/exchange/color-24.svg",
+          "28": "assets/icons/product/exchange/color-28.svg",
+          "32": "assets/icons/product/exchange/color-32.svg",
+          "48": "assets/icons/product/exchange/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/exchange/filled-16.svg",
+          "20": "assets/icons/product/exchange/filled-20.svg",
+          "24": "assets/icons/product/exchange/filled-24.svg",
+          "28": "assets/icons/product/exchange/filled-28.svg",
+          "32": "assets/icons/product/exchange/filled-32.svg",
+          "48": "assets/icons/product/exchange/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/exchange/regular-16.svg",
+          "20": "assets/icons/product/exchange/regular-20.svg",
+          "24": "assets/icons/product/exchange/regular-24.svg",
+          "28": "assets/icons/product/exchange/regular-28.svg",
+          "32": "assets/icons/product/exchange/regular-32.svg",
+          "48": "assets/icons/product/exchange/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.facilitator",
+      "name": "Facilitator",
+      "keywords": [
+        "facilitator"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Facilitator",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#4A43CB",
+        "secondary": "#7D9EFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/facilitator/color-16.svg",
+          "20": "assets/icons/product/facilitator/color-20.svg",
+          "24": "assets/icons/product/facilitator/color-24.svg",
+          "28": "assets/icons/product/facilitator/color-28.svg",
+          "32": "assets/icons/product/facilitator/color-32.svg",
+          "48": "assets/icons/product/facilitator/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/facilitator/filled-16.svg",
+          "20": "assets/icons/product/facilitator/filled-20.svg",
+          "24": "assets/icons/product/facilitator/filled-24.svg",
+          "28": "assets/icons/product/facilitator/filled-28.svg",
+          "32": "assets/icons/product/facilitator/filled-32.svg",
+          "48": "assets/icons/product/facilitator/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/facilitator/regular-16.svg",
+          "20": "assets/icons/product/facilitator/regular-20.svg",
+          "24": "assets/icons/product/facilitator/regular-24.svg",
+          "28": "assets/icons/product/facilitator/regular-28.svg",
+          "32": "assets/icons/product/facilitator/regular-32.svg",
+          "48": "assets/icons/product/facilitator/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.family-safety",
+      "name": "Family Safety",
+      "keywords": [
+        "family",
+        "safety"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Family Safety",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0C9D8C",
+        "secondary": "#30E5D0"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/family-safety/color-16.svg",
+          "20": "assets/icons/product/family-safety/color-20.svg",
+          "24": "assets/icons/product/family-safety/color-24.svg",
+          "28": "assets/icons/product/family-safety/color-28.svg",
+          "32": "assets/icons/product/family-safety/color-32.svg",
+          "48": "assets/icons/product/family-safety/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/family-safety/filled-16.svg",
+          "20": "assets/icons/product/family-safety/filled-20.svg",
+          "24": "assets/icons/product/family-safety/filled-24.svg",
+          "28": "assets/icons/product/family-safety/filled-28.svg",
+          "32": "assets/icons/product/family-safety/filled-32.svg",
+          "48": "assets/icons/product/family-safety/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/family-safety/regular-16.svg",
+          "20": "assets/icons/product/family-safety/regular-20.svg",
+          "24": "assets/icons/product/family-safety/regular-24.svg",
+          "28": "assets/icons/product/family-safety/regular-28.svg",
+          "32": "assets/icons/product/family-safety/regular-32.svg",
+          "48": "assets/icons/product/family-safety/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.files-taskbar",
+      "name": "Files Taskbar",
+      "keywords": [
+        "files",
+        "taskbar"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Files Taskbar",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D7257D",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/files-taskbar/color-16.svg",
+          "20": "assets/icons/product/files-taskbar/color-20.svg",
+          "24": "assets/icons/product/files-taskbar/color-24.svg",
+          "28": "assets/icons/product/files-taskbar/color-28.svg",
+          "32": "assets/icons/product/files-taskbar/color-32.svg",
+          "48": "assets/icons/product/files-taskbar/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/files-taskbar/filled-16.svg",
+          "20": "assets/icons/product/files-taskbar/filled-20.svg",
+          "24": "assets/icons/product/files-taskbar/filled-24.svg",
+          "28": "assets/icons/product/files-taskbar/filled-28.svg",
+          "32": "assets/icons/product/files-taskbar/filled-32.svg",
+          "48": "assets/icons/product/files-taskbar/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/files-taskbar/regular-16.svg",
+          "20": "assets/icons/product/files-taskbar/regular-20.svg",
+          "24": "assets/icons/product/files-taskbar/regular-24.svg",
+          "28": "assets/icons/product/files-taskbar/regular-28.svg",
+          "32": "assets/icons/product/files-taskbar/regular-32.svg",
+          "48": "assets/icons/product/files-taskbar/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.fluid-framework",
+      "name": "Fluid Framework",
+      "keywords": [
+        "fluid",
+        "framework"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Fluid Framework",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#2F27A5",
+        "secondary": "#2052CB"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/fluid-framework/color-16.svg",
+          "20": "assets/icons/product/fluid-framework/color-20.svg",
+          "24": "assets/icons/product/fluid-framework/color-24.svg",
+          "28": "assets/icons/product/fluid-framework/color-28.svg",
+          "32": "assets/icons/product/fluid-framework/color-32.svg",
+          "48": "assets/icons/product/fluid-framework/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/fluid-framework/filled-16.svg",
+          "20": "assets/icons/product/fluid-framework/filled-20.svg",
+          "24": "assets/icons/product/fluid-framework/filled-24.svg",
+          "28": "assets/icons/product/fluid-framework/filled-28.svg",
+          "32": "assets/icons/product/fluid-framework/filled-32.svg",
+          "48": "assets/icons/product/fluid-framework/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/fluid-framework/regular-16.svg",
+          "20": "assets/icons/product/fluid-framework/regular-20.svg",
+          "24": "assets/icons/product/fluid-framework/regular-24.svg",
+          "28": "assets/icons/product/fluid-framework/regular-28.svg",
+          "32": "assets/icons/product/fluid-framework/regular-32.svg",
+          "48": "assets/icons/product/fluid-framework/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.forms",
+      "name": "Forms",
+      "keywords": [
+        "forms"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Forms",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#1A7F7C",
+        "secondary": "#1ECBE6"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/forms/color-16.svg",
+          "20": "assets/icons/product/forms/color-20.svg",
+          "24": "assets/icons/product/forms/color-24.svg",
+          "28": "assets/icons/product/forms/color-28.svg",
+          "32": "assets/icons/product/forms/color-32.svg",
+          "48": "assets/icons/product/forms/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/forms/filled-16.svg",
+          "20": "assets/icons/product/forms/filled-20.svg",
+          "24": "assets/icons/product/forms/filled-24.svg",
+          "28": "assets/icons/product/forms/filled-28.svg",
+          "32": "assets/icons/product/forms/filled-32.svg",
+          "48": "assets/icons/product/forms/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/forms/regular-16.svg",
+          "20": "assets/icons/product/forms/regular-20.svg",
+          "24": "assets/icons/product/forms/regular-24.svg",
+          "28": "assets/icons/product/forms/regular-28.svg",
+          "32": "assets/icons/product/forms/regular-32.svg",
+          "48": "assets/icons/product/forms/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.github",
+      "name": "GitHub",
+      "keywords": [
+        "github"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "GitHub",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/github/color-16.svg",
+          "20": "assets/icons/product/github/color-20.svg",
+          "24": "assets/icons/product/github/color-24.svg",
+          "28": "assets/icons/product/github/color-28.svg",
+          "32": "assets/icons/product/github/color-32.svg",
+          "48": "assets/icons/product/github/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/github/filled-16.svg",
+          "20": "assets/icons/product/github/filled-20.svg",
+          "24": "assets/icons/product/github/filled-24.svg",
+          "28": "assets/icons/product/github/filled-28.svg",
+          "32": "assets/icons/product/github/filled-32.svg",
+          "48": "assets/icons/product/github/filled-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.group-me",
+      "name": "Group Me",
+      "keywords": [
+        "group",
+        "me"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Group Me",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#3C16D3",
+        "secondary": "#2CF2FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/group-me/color-16.svg",
+          "20": "assets/icons/product/group-me/color-20.svg",
+          "24": "assets/icons/product/group-me/color-24.svg",
+          "28": "assets/icons/product/group-me/color-28.svg",
+          "32": "assets/icons/product/group-me/color-32.svg",
+          "48": "assets/icons/product/group-me/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/group-me/filled-16.svg",
+          "20": "assets/icons/product/group-me/filled-20.svg",
+          "24": "assets/icons/product/group-me/filled-24.svg",
+          "28": "assets/icons/product/group-me/filled-28.svg",
+          "32": "assets/icons/product/group-me/filled-32.svg",
+          "48": "assets/icons/product/group-me/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/group-me/regular-16.svg",
+          "20": "assets/icons/product/group-me/regular-20.svg",
+          "24": "assets/icons/product/group-me/regular-24.svg",
+          "28": "assets/icons/product/group-me/regular-28.svg",
+          "32": "assets/icons/product/group-me/regular-32.svg",
+          "48": "assets/icons/product/group-me/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.launcher",
+      "name": "Launcher",
+      "keywords": [
+        "launcher"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Launcher",
+      "status": "draft",
+      "themes": [
+        "color",
+        "regular"
+      ],
+      "sizes": [
+        24
+      ],
+      "colors": {
+        "primary": "#005DB1",
+        "secondary": "#3DB5F1"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "24": "assets/icons/product/launcher/color-24.svg"
+        },
+        "regular": {
+          "24": "assets/icons/product/launcher/regular-24.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.linkedin",
+      "name": "LinkedIn",
+      "keywords": [
+        "linkedin"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "LinkedIn",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0A66C2",
+        "secondary": "#0A66C2"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/linkedin/color-16.svg",
+          "20": "assets/icons/product/linkedin/color-20.svg",
+          "24": "assets/icons/product/linkedin/color-24.svg",
+          "28": "assets/icons/product/linkedin/color-28.svg",
+          "32": "assets/icons/product/linkedin/color-32.svg",
+          "48": "assets/icons/product/linkedin/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/linkedin/filled-16.svg",
+          "20": "assets/icons/product/linkedin/filled-20.svg",
+          "24": "assets/icons/product/linkedin/filled-24.svg",
+          "28": "assets/icons/product/linkedin/filled-28.svg",
+          "32": "assets/icons/product/linkedin/filled-32.svg",
+          "48": "assets/icons/product/linkedin/filled-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.lists",
+      "name": "Lists",
+      "keywords": [
+        "lists"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Lists",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#883E7B",
+        "secondary": "#FED912"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/lists/color-16.svg",
+          "20": "assets/icons/product/lists/color-20.svg",
+          "24": "assets/icons/product/lists/color-24.svg",
+          "28": "assets/icons/product/lists/color-28.svg",
+          "32": "assets/icons/product/lists/color-32.svg",
+          "48": "assets/icons/product/lists/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/lists/filled-16.svg",
+          "20": "assets/icons/product/lists/filled-20.svg",
+          "24": "assets/icons/product/lists/filled-24.svg",
+          "28": "assets/icons/product/lists/filled-28.svg",
+          "32": "assets/icons/product/lists/filled-32.svg",
+          "48": "assets/icons/product/lists/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/lists/regular-16.svg",
+          "20": "assets/icons/product/lists/regular-20.svg",
+          "24": "assets/icons/product/lists/regular-24.svg",
+          "28": "assets/icons/product/lists/regular-28.svg",
+          "32": "assets/icons/product/lists/regular-32.svg",
+          "48": "assets/icons/product/lists/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.loop",
+      "name": "Loop",
+      "keywords": [
+        "loop"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Loop",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#9237E3",
+        "secondary": "#AB5ADD"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "12": "assets/icons/product/loop/color-12.svg",
+          "16": "assets/icons/product/loop/color-16.svg",
+          "20": "assets/icons/product/loop/color-20.svg",
+          "24": "assets/icons/product/loop/color-24.svg",
+          "28": "assets/icons/product/loop/color-28.svg",
+          "32": "assets/icons/product/loop/color-32.svg",
+          "48": "assets/icons/product/loop/color-48.svg"
+        },
+        "filled": {
+          "12": "assets/icons/product/loop/filled-12.svg",
+          "16": "assets/icons/product/loop/filled-16.svg",
+          "20": "assets/icons/product/loop/filled-20.svg",
+          "24": "assets/icons/product/loop/filled-24.svg",
+          "28": "assets/icons/product/loop/filled-28.svg",
+          "32": "assets/icons/product/loop/filled-32.svg",
+          "48": "assets/icons/product/loop/filled-48.svg"
+        },
+        "regular": {
+          "12": "assets/icons/product/loop/regular-12.svg",
+          "16": "assets/icons/product/loop/regular-16.svg",
+          "20": "assets/icons/product/loop/regular-20.svg",
+          "24": "assets/icons/product/loop/regular-24.svg",
+          "28": "assets/icons/product/loop/regular-28.svg",
+          "32": "assets/icons/product/loop/regular-32.svg",
+          "48": "assets/icons/product/loop/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365",
+      "name": "M365",
+      "keywords": [
+        "m365"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365",
+      "status": "draft",
+      "themes": [
+        "filled",
+        "regular",
+        "color"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#00AEFF",
+        "secondary": "#A86EDD"
+      },
+      "recolorable": true,
+      "variants": {
+        "filled": {
+          "16": "assets/icons/product/m365/filled-16.svg",
+          "20": "assets/icons/product/m365/filled-20.svg",
+          "24": "assets/icons/product/m365/filled-24.svg",
+          "28": "assets/icons/product/m365/filled-28.svg",
+          "32": "assets/icons/product/m365/filled-32.svg",
+          "48": "assets/icons/product/m365/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365/regular-16.svg",
+          "20": "assets/icons/product/m365/regular-20.svg",
+          "24": "assets/icons/product/m365/regular-24.svg",
+          "28": "assets/icons/product/m365/regular-28.svg",
+          "32": "assets/icons/product/m365/regular-32.svg",
+          "48": "assets/icons/product/m365/regular-48.svg"
+        },
+        "color": {
+          "16": "assets/icons/product/m365/color-16.svg",
+          "20": "assets/icons/product/m365/color-20.svg",
+          "24": "assets/icons/product/m365/color-24.svg",
+          "28": "assets/icons/product/m365/color-28.svg",
+          "32": "assets/icons/product/m365/color-32.svg",
+          "48": "assets/icons/product/m365/color-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365-admin-center",
+      "name": "M365 Admin Center",
+      "keywords": [
+        "m365",
+        "admin",
+        "center"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365 Admin Center",
+      "status": "draft",
+      "themes": [
+        "color",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#EBF4FC",
+        "secondary": "#1493DF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/m365-admin-center/color-16.svg",
+          "20": "assets/icons/product/m365-admin-center/color-20.svg",
+          "24": "assets/icons/product/m365-admin-center/color-24.svg",
+          "28": "assets/icons/product/m365-admin-center/color-28.svg",
+          "32": "assets/icons/product/m365-admin-center/color-32.svg",
+          "48": "assets/icons/product/m365-admin-center/color-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365-admin-center/regular-16.svg",
+          "20": "assets/icons/product/m365-admin-center/regular-20.svg",
+          "24": "assets/icons/product/m365-admin-center/regular-24.svg",
+          "28": "assets/icons/product/m365-admin-center/regular-28.svg",
+          "32": "assets/icons/product/m365-admin-center/regular-32.svg",
+          "48": "assets/icons/product/m365-admin-center/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365-taskbar-calendar",
+      "name": "M365 Taskbar Calendar",
+      "keywords": [
+        "m365",
+        "taskbar",
+        "calendar"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365 Taskbar Calendar",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#B8F0FF",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/m365-taskbar-calendar/color-16.svg",
+          "20": "assets/icons/product/m365-taskbar-calendar/color-20.svg",
+          "24": "assets/icons/product/m365-taskbar-calendar/color-24.svg",
+          "28": "assets/icons/product/m365-taskbar-calendar/color-28.svg",
+          "32": "assets/icons/product/m365-taskbar-calendar/color-32.svg",
+          "48": "assets/icons/product/m365-taskbar-calendar/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/m365-taskbar-calendar/filled-16.svg",
+          "20": "assets/icons/product/m365-taskbar-calendar/filled-20.svg",
+          "24": "assets/icons/product/m365-taskbar-calendar/filled-24.svg",
+          "28": "assets/icons/product/m365-taskbar-calendar/filled-28.svg",
+          "32": "assets/icons/product/m365-taskbar-calendar/filled-32.svg",
+          "48": "assets/icons/product/m365-taskbar-calendar/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365-taskbar-calendar/regular-16.svg",
+          "20": "assets/icons/product/m365-taskbar-calendar/regular-20.svg",
+          "24": "assets/icons/product/m365-taskbar-calendar/regular-24.svg",
+          "28": "assets/icons/product/m365-taskbar-calendar/regular-28.svg",
+          "32": "assets/icons/product/m365-taskbar-calendar/regular-32.svg",
+          "48": "assets/icons/product/m365-taskbar-calendar/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365-taskbar-files",
+      "name": "M365 Taskbar Files",
+      "keywords": [
+        "m365",
+        "taskbar",
+        "files"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365 Taskbar Files",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#D7257D",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/m365-taskbar-files/color-16.svg",
+          "20": "assets/icons/product/m365-taskbar-files/color-20.svg",
+          "24": "assets/icons/product/m365-taskbar-files/color-24.svg",
+          "28": "assets/icons/product/m365-taskbar-files/color-28.svg",
+          "32": "assets/icons/product/m365-taskbar-files/color-32.svg",
+          "48": "assets/icons/product/m365-taskbar-files/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/m365-taskbar-files/filled-16.svg",
+          "20": "assets/icons/product/m365-taskbar-files/filled-20.svg",
+          "24": "assets/icons/product/m365-taskbar-files/filled-24.svg",
+          "28": "assets/icons/product/m365-taskbar-files/filled-28.svg",
+          "32": "assets/icons/product/m365-taskbar-files/filled-32.svg",
+          "48": "assets/icons/product/m365-taskbar-files/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365-taskbar-files/regular-16.svg",
+          "20": "assets/icons/product/m365-taskbar-files/regular-20.svg",
+          "24": "assets/icons/product/m365-taskbar-files/regular-24.svg",
+          "28": "assets/icons/product/m365-taskbar-files/regular-28.svg",
+          "32": "assets/icons/product/m365-taskbar-files/regular-32.svg",
+          "48": "assets/icons/product/m365-taskbar-files/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365-taskbar-people",
+      "name": "M365 Taskbar People",
+      "keywords": [
+        "m365",
+        "taskbar",
+        "people"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365 Taskbar People",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0057AA",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/m365-taskbar-people/color-16.svg",
+          "20": "assets/icons/product/m365-taskbar-people/color-20.svg",
+          "24": "assets/icons/product/m365-taskbar-people/color-24.svg",
+          "28": "assets/icons/product/m365-taskbar-people/color-28.svg",
+          "32": "assets/icons/product/m365-taskbar-people/color-32.svg",
+          "48": "assets/icons/product/m365-taskbar-people/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/m365-taskbar-people/filled-16.svg",
+          "20": "assets/icons/product/m365-taskbar-people/filled-20.svg",
+          "24": "assets/icons/product/m365-taskbar-people/filled-24.svg",
+          "28": "assets/icons/product/m365-taskbar-people/filled-28.svg",
+          "32": "assets/icons/product/m365-taskbar-people/filled-32.svg",
+          "48": "assets/icons/product/m365-taskbar-people/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365-taskbar-people/regular-16.svg",
+          "20": "assets/icons/product/m365-taskbar-people/regular-20.svg",
+          "24": "assets/icons/product/m365-taskbar-people/regular-24.svg",
+          "28": "assets/icons/product/m365-taskbar-people/regular-28.svg",
+          "32": "assets/icons/product/m365-taskbar-people/regular-32.svg",
+          "48": "assets/icons/product/m365-taskbar-people/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.m365-taskbar-suite",
+      "name": "M365 Taskbar Suite",
+      "keywords": [
+        "m365",
+        "taskbar",
+        "suite"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "M365 Taskbar Suite",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#2764E7",
+        "secondary": "#9DEAFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/m365-taskbar-suite/color-16.svg",
+          "20": "assets/icons/product/m365-taskbar-suite/color-20.svg",
+          "24": "assets/icons/product/m365-taskbar-suite/color-24.svg",
+          "28": "assets/icons/product/m365-taskbar-suite/color-28.svg",
+          "32": "assets/icons/product/m365-taskbar-suite/color-32.svg",
+          "48": "assets/icons/product/m365-taskbar-suite/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/m365-taskbar-suite/filled-16.svg",
+          "20": "assets/icons/product/m365-taskbar-suite/filled-20.svg",
+          "24": "assets/icons/product/m365-taskbar-suite/filled-24.svg",
+          "28": "assets/icons/product/m365-taskbar-suite/filled-28.svg",
+          "32": "assets/icons/product/m365-taskbar-suite/filled-32.svg",
+          "48": "assets/icons/product/m365-taskbar-suite/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/m365-taskbar-suite/regular-16.svg",
+          "20": "assets/icons/product/m365-taskbar-suite/regular-20.svg",
+          "24": "assets/icons/product/m365-taskbar-suite/regular-24.svg",
+          "28": "assets/icons/product/m365-taskbar-suite/regular-28.svg",
+          "32": "assets/icons/product/m365-taskbar-suite/regular-32.svg",
+          "48": "assets/icons/product/m365-taskbar-suite/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.microsoft",
+      "name": "Microsoft",
+      "keywords": [
+        "microsoft"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Microsoft",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#F25022",
+        "secondary": "#02A4EF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "12": "assets/icons/product/microsoft/color-12.svg",
+          "16": "assets/icons/product/microsoft/color-16.svg",
+          "20": "assets/icons/product/microsoft/color-20.svg",
+          "24": "assets/icons/product/microsoft/color-24.svg",
+          "28": "assets/icons/product/microsoft/color-28.svg",
+          "32": "assets/icons/product/microsoft/color-32.svg",
+          "48": "assets/icons/product/microsoft/color-48.svg"
+        },
+        "filled": {
+          "12": "assets/icons/product/microsoft/filled-12.svg",
+          "16": "assets/icons/product/microsoft/filled-16.svg",
+          "20": "assets/icons/product/microsoft/filled-20.svg",
+          "24": "assets/icons/product/microsoft/filled-24.svg",
+          "28": "assets/icons/product/microsoft/filled-28.svg",
+          "32": "assets/icons/product/microsoft/filled-32.svg",
+          "48": "assets/icons/product/microsoft/filled-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.microsoft-blend",
+      "name": "Microsoft Blend",
+      "keywords": [
+        "microsoft",
+        "blend"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Microsoft Blend",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#20AC9D",
+        "secondary": "#1384B1"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/microsoft-blend/color-16.svg",
+          "20": "assets/icons/product/microsoft-blend/color-20.svg",
+          "24": "assets/icons/product/microsoft-blend/color-24.svg",
+          "28": "assets/icons/product/microsoft-blend/color-28.svg",
+          "32": "assets/icons/product/microsoft-blend/color-32.svg",
+          "48": "assets/icons/product/microsoft-blend/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/microsoft-blend/filled-16.svg",
+          "20": "assets/icons/product/microsoft-blend/filled-20.svg",
+          "24": "assets/icons/product/microsoft-blend/filled-24.svg",
+          "28": "assets/icons/product/microsoft-blend/filled-28.svg",
+          "32": "assets/icons/product/microsoft-blend/filled-32.svg",
+          "48": "assets/icons/product/microsoft-blend/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/microsoft-blend/regular-16.svg",
+          "20": "assets/icons/product/microsoft-blend/regular-20.svg",
+          "24": "assets/icons/product/microsoft-blend/regular-24.svg",
+          "28": "assets/icons/product/microsoft-blend/regular-28.svg",
+          "32": "assets/icons/product/microsoft-blend/regular-32.svg",
+          "48": "assets/icons/product/microsoft-blend/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.microsoft-privacy",
+      "name": "Microsoft Privacy",
+      "keywords": [
+        "microsoft",
+        "privacy"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Microsoft Privacy",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0FAFFF",
+        "secondary": "#245DE6"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/microsoft-privacy/color-16.svg",
+          "20": "assets/icons/product/microsoft-privacy/color-20.svg",
+          "24": "assets/icons/product/microsoft-privacy/color-24.svg",
+          "28": "assets/icons/product/microsoft-privacy/color-28.svg",
+          "32": "assets/icons/product/microsoft-privacy/color-32.svg",
+          "48": "assets/icons/product/microsoft-privacy/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/microsoft-privacy/filled-16.svg",
+          "20": "assets/icons/product/microsoft-privacy/filled-20.svg",
+          "24": "assets/icons/product/microsoft-privacy/filled-24.svg",
+          "28": "assets/icons/product/microsoft-privacy/filled-28.svg",
+          "32": "assets/icons/product/microsoft-privacy/filled-32.svg",
+          "48": "assets/icons/product/microsoft-privacy/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/microsoft-privacy/regular-16.svg",
+          "20": "assets/icons/product/microsoft-privacy/regular-20.svg",
+          "24": "assets/icons/product/microsoft-privacy/regular-24.svg",
+          "28": "assets/icons/product/microsoft-privacy/regular-28.svg",
+          "32": "assets/icons/product/microsoft-privacy/regular-32.svg",
+          "48": "assets/icons/product/microsoft-privacy/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.microsoft-privacy-moment",
+      "name": "Microsoft Privacy Moment",
+      "keywords": [
+        "microsoft",
+        "privacy",
+        "moment"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Microsoft Privacy Moment",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0FAFFF",
+        "secondary": "#245DE6"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/microsoft-privacy-moment/color-16.svg",
+          "20": "assets/icons/product/microsoft-privacy-moment/color-20.svg",
+          "24": "assets/icons/product/microsoft-privacy-moment/color-24.svg",
+          "28": "assets/icons/product/microsoft-privacy-moment/color-28.svg",
+          "32": "assets/icons/product/microsoft-privacy-moment/color-32.svg",
+          "48": "assets/icons/product/microsoft-privacy-moment/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/microsoft-privacy-moment/filled-16.svg",
+          "20": "assets/icons/product/microsoft-privacy-moment/filled-20.svg",
+          "24": "assets/icons/product/microsoft-privacy-moment/filled-24.svg",
+          "28": "assets/icons/product/microsoft-privacy-moment/filled-28.svg",
+          "32": "assets/icons/product/microsoft-privacy-moment/filled-32.svg",
+          "48": "assets/icons/product/microsoft-privacy-moment/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/microsoft-privacy-moment/regular-16.svg",
+          "20": "assets/icons/product/microsoft-privacy-moment/regular-20.svg",
+          "24": "assets/icons/product/microsoft-privacy-moment/regular-24.svg",
+          "28": "assets/icons/product/microsoft-privacy-moment/regular-28.svg",
+          "32": "assets/icons/product/microsoft-privacy-moment/regular-32.svg",
+          "48": "assets/icons/product/microsoft-privacy-moment/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.mileiq",
+      "name": "MileIQ",
+      "keywords": [
+        "mileiq"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "MileIQ",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled"
+      ],
+      "sizes": [
+        24,
+        28
+      ],
+      "colors": {
+        "primary": "#FFB300",
+        "secondary": "#FF8E08"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "24": "assets/icons/product/mileiq/color-24.svg",
+          "28": "assets/icons/product/mileiq/color-28.svg"
+        },
+        "filled": {
+          "24": "assets/icons/product/mileiq/filled-24.svg",
+          "28": "assets/icons/product/mileiq/filled-28.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.msn",
+      "name": "MSN",
+      "keywords": [
+        "msn"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "MSN",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#FFC800",
+        "secondary": "#3DEEDF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/msn/color-16.svg",
+          "20": "assets/icons/product/msn/color-20.svg",
+          "24": "assets/icons/product/msn/color-24.svg",
+          "28": "assets/icons/product/msn/color-28.svg",
+          "32": "assets/icons/product/msn/color-32.svg",
+          "48": "assets/icons/product/msn/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/msn/filled-16.svg",
+          "20": "assets/icons/product/msn/filled-20.svg",
+          "24": "assets/icons/product/msn/filled-24.svg",
+          "28": "assets/icons/product/msn/filled-28.svg",
+          "32": "assets/icons/product/msn/filled-32.svg",
+          "48": "assets/icons/product/msn/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/msn/regular-16.svg",
+          "20": "assets/icons/product/msn/regular-20.svg",
+          "24": "assets/icons/product/msn/regular-24.svg",
+          "28": "assets/icons/product/msn/regular-28.svg",
+          "32": "assets/icons/product/msn/regular-32.svg",
+          "48": "assets/icons/product/msn/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.newsletter",
+      "name": "Newsletter",
+      "keywords": [
+        "newsletter"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Newsletter",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0084DF",
+        "secondary": "#ABEEFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/newsletter/color-16.svg",
+          "20": "assets/icons/product/newsletter/color-20.svg",
+          "24": "assets/icons/product/newsletter/color-24.svg",
+          "28": "assets/icons/product/newsletter/color-28.svg",
+          "32": "assets/icons/product/newsletter/color-32.svg",
+          "48": "assets/icons/product/newsletter/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/newsletter/filled-16.svg",
+          "20": "assets/icons/product/newsletter/filled-20.svg",
+          "24": "assets/icons/product/newsletter/filled-24.svg",
+          "28": "assets/icons/product/newsletter/filled-28.svg",
+          "32": "assets/icons/product/newsletter/filled-32.svg",
+          "48": "assets/icons/product/newsletter/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/newsletter/regular-16.svg",
+          "20": "assets/icons/product/newsletter/regular-20.svg",
+          "24": "assets/icons/product/newsletter/regular-24.svg",
+          "28": "assets/icons/product/newsletter/regular-28.svg",
+          "32": "assets/icons/product/newsletter/regular-32.svg",
+          "48": "assets/icons/product/newsletter/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.onedrive",
+      "name": "OneDrive",
+      "keywords": [
+        "onedrive"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "OneDrive",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#4894FE",
+        "secondary": "#00BBFF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/onedrive/color-16.svg",
+          "20": "assets/icons/product/onedrive/color-20.svg",
+          "24": "assets/icons/product/onedrive/color-24.svg",
+          "28": "assets/icons/product/onedrive/color-28.svg",
+          "32": "assets/icons/product/onedrive/color-32.svg",
+          "48": "assets/icons/product/onedrive/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/onedrive/filled-16.svg",
+          "20": "assets/icons/product/onedrive/filled-20.svg",
+          "24": "assets/icons/product/onedrive/filled-24.svg",
+          "28": "assets/icons/product/onedrive/filled-28.svg",
+          "32": "assets/icons/product/onedrive/filled-32.svg",
+          "48": "assets/icons/product/onedrive/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/onedrive/regular-16.svg",
+          "20": "assets/icons/product/onedrive/regular-20.svg",
+          "24": "assets/icons/product/onedrive/regular-24.svg",
+          "28": "assets/icons/product/onedrive/regular-28.svg",
+          "32": "assets/icons/product/onedrive/regular-32.svg",
+          "48": "assets/icons/product/onedrive/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.onedrive-photos",
+      "name": "OneDrive Photos",
+      "keywords": [
+        "onedrive",
+        "photos"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "OneDrive Photos",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#021E76",
+        "secondary": "#8CD0FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/onedrive-photos/color-16.svg",
+          "20": "assets/icons/product/onedrive-photos/color-20.svg",
+          "24": "assets/icons/product/onedrive-photos/color-24.svg",
+          "28": "assets/icons/product/onedrive-photos/color-28.svg",
+          "32": "assets/icons/product/onedrive-photos/color-32.svg",
+          "48": "assets/icons/product/onedrive-photos/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/onedrive-photos/filled-16.svg",
+          "20": "assets/icons/product/onedrive-photos/filled-20.svg",
+          "24": "assets/icons/product/onedrive-photos/filled-24.svg",
+          "28": "assets/icons/product/onedrive-photos/filled-28.svg",
+          "32": "assets/icons/product/onedrive-photos/filled-32.svg",
+          "48": "assets/icons/product/onedrive-photos/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/onedrive-photos/regular-16.svg",
+          "20": "assets/icons/product/onedrive-photos/regular-20.svg",
+          "24": "assets/icons/product/onedrive-photos/regular-24.svg",
+          "28": "assets/icons/product/onedrive-photos/regular-28.svg",
+          "32": "assets/icons/product/onedrive-photos/regular-32.svg",
+          "48": "assets/icons/product/onedrive-photos/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.onenote",
+      "name": "OneNote",
+      "keywords": [
+        "onenote"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "OneNote",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#A931D8",
+        "secondary": "#D373FC"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/onenote/color-16.svg",
+          "20": "assets/icons/product/onenote/color-20.svg",
+          "24": "assets/icons/product/onenote/color-24.svg",
+          "28": "assets/icons/product/onenote/color-28.svg",
+          "32": "assets/icons/product/onenote/color-32.svg",
+          "48": "assets/icons/product/onenote/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/onenote/filled-16.svg",
+          "20": "assets/icons/product/onenote/filled-20.svg",
+          "24": "assets/icons/product/onenote/filled-24.svg",
+          "28": "assets/icons/product/onenote/filled-28.svg",
+          "32": "assets/icons/product/onenote/filled-32.svg",
+          "48": "assets/icons/product/onenote/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/onenote/regular-16.svg",
+          "20": "assets/icons/product/onenote/regular-20.svg",
+          "24": "assets/icons/product/onenote/regular-24.svg",
+          "28": "assets/icons/product/onenote/regular-28.svg",
+          "32": "assets/icons/product/onenote/regular-32.svg",
+          "48": "assets/icons/product/onenote/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.opal",
+      "name": "Opal",
+      "keywords": [
+        "opal"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Opal",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#9263FF",
+        "secondary": "#F696FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/opal/color-16.svg",
+          "20": "assets/icons/product/opal/color-20.svg",
+          "24": "assets/icons/product/opal/color-24.svg",
+          "28": "assets/icons/product/opal/color-28.svg",
+          "32": "assets/icons/product/opal/color-32.svg",
+          "48": "assets/icons/product/opal/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/opal/filled-16.svg",
+          "20": "assets/icons/product/opal/filled-20.svg",
+          "24": "assets/icons/product/opal/filled-24.svg",
+          "28": "assets/icons/product/opal/filled-28.svg",
+          "32": "assets/icons/product/opal/filled-32.svg",
+          "48": "assets/icons/product/opal/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/opal/regular-16.svg",
+          "20": "assets/icons/product/opal/regular-20.svg",
+          "24": "assets/icons/product/opal/regular-24.svg",
+          "28": "assets/icons/product/opal/regular-28.svg",
+          "32": "assets/icons/product/opal/regular-32.svg",
+          "48": "assets/icons/product/opal/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
+    {
+      "id": "product.outlook",
+      "name": "Outlook",
+      "keywords": [
+        "outlook"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "product": "Outlook",
+      "status": "draft",
+      "themes": [
+        "color",
+        "filled",
+        "regular"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#20A7FA",
+        "secondary": "#74C6FF"
+      },
+      "recolorable": true,
+      "variants": {
+        "color": {
+          "16": "assets/icons/product/outlook/color-16.svg",
+          "20": "assets/icons/product/outlook/color-20.svg",
+          "24": "assets/icons/product/outlook/color-24.svg",
+          "28": "assets/icons/product/outlook/color-28.svg",
+          "32": "assets/icons/product/outlook/color-32.svg",
+          "48": "assets/icons/product/outlook/color-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/outlook/filled-16.svg",
+          "20": "assets/icons/product/outlook/filled-20.svg",
+          "24": "assets/icons/product/outlook/filled-24.svg",
+          "28": "assets/icons/product/outlook/filled-28.svg",
+          "32": "assets/icons/product/outlook/filled-32.svg",
+          "48": "assets/icons/product/outlook/filled-48.svg"
+        },
+        "regular": {
+          "16": "assets/icons/product/outlook/regular-16.svg",
+          "20": "assets/icons/product/outlook/regular-20.svg",
+          "24": "assets/icons/product/outlook/regular-24.svg",
+          "28": "assets/icons/product/outlook/regular-28.svg",
+          "32": "assets/icons/product/outlook/regular-32.svg",
+          "48": "assets/icons/product/outlook/regular-48.svg"
+        }
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-25"
+    },
     {
       "id": "system.battery",
       "name": "Battery",
@@ -87,9 +2614,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/battery/color.svg",
-        "regular": "assets/icons/system/battery/regular.svg",
-        "filled": "assets/icons/system/battery/filled.svg"
+        "color": {
+          "any": "assets/icons/system/battery/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/battery/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/battery/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -129,9 +2662,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/calendar/color.svg",
-        "regular": "assets/icons/system/calendar/regular.svg",
-        "filled": "assets/icons/system/calendar/filled.svg"
+        "color": {
+          "any": "assets/icons/system/calendar/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/calendar/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/calendar/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -170,9 +2709,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/clock/color.svg",
-        "regular": "assets/icons/system/clock/regular.svg",
-        "filled": "assets/icons/system/clock/filled.svg"
+        "color": {
+          "any": "assets/icons/system/clock/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/clock/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/clock/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -211,9 +2756,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/files/color.svg",
-        "regular": "assets/icons/system/files/regular.svg",
-        "filled": "assets/icons/system/files/filled.svg"
+        "color": {
+          "any": "assets/icons/system/files/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/files/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/files/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -257,9 +2808,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/network/color.svg",
-        "regular": "assets/icons/system/network/regular.svg",
-        "filled": "assets/icons/system/network/filled.svg"
+        "color": {
+          "any": "assets/icons/system/network/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/network/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/network/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -299,9 +2856,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/notepad/color.svg",
-        "regular": "assets/icons/system/notepad/regular.svg",
-        "filled": "assets/icons/system/notepad/filled.svg"
+        "color": {
+          "any": "assets/icons/system/notepad/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/notepad/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/notepad/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -341,9 +2904,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/search/color.svg",
-        "regular": "assets/icons/system/search/regular.svg",
-        "filled": "assets/icons/system/search/filled.svg"
+        "color": {
+          "any": "assets/icons/system/search/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/search/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/search/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -384,9 +2953,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/security/color.svg",
-        "regular": "assets/icons/system/security/regular.svg",
-        "filled": "assets/icons/system/security/filled.svg"
+        "color": {
+          "any": "assets/icons/system/security/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/security/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/security/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -426,9 +3001,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/settings/color.svg",
-        "regular": "assets/icons/system/settings/regular.svg",
-        "filled": "assets/icons/system/settings/filled.svg"
+        "color": {
+          "any": "assets/icons/system/settings/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/settings/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/settings/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -471,9 +3052,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/trash/color.svg",
-        "regular": "assets/icons/system/trash/regular.svg",
-        "filled": "assets/icons/system/trash/filled.svg"
+        "color": {
+          "any": "assets/icons/system/trash/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/trash/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/trash/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -512,472 +3099,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/system/volume/color.svg",
-        "regular": "assets/icons/system/volume/regular.svg",
-        "filled": "assets/icons/system/volume/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.browser",
-      "name": "Browser",
-      "aliases": [
-        "Edge"
-      ],
-      "keywords": [
-        "web",
-        "edge",
-        "internet",
-        "globe",
-        "world"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#0F6CBD",
-        "secondary": "#2AA0DA"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/browser/color.svg",
-        "regular": "assets/icons/product/browser/regular.svg",
-        "filled": "assets/icons/product/browser/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.camera",
-      "name": "Camera",
-      "keywords": [
-        "photo",
-        "capture",
-        "lens",
-        "shoot"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#3A3A45",
-        "secondary": "#5D5A88"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/camera/color.svg",
-        "regular": "assets/icons/product/camera/regular.svg",
-        "filled": "assets/icons/product/camera/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.chat",
-      "name": "Chat",
-      "keywords": [
-        "message",
-        "conversation",
-        "teams",
-        "bubble",
-        "talk"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#0078D4",
-        "secondary": "#2AA0DA"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/chat/color.svg",
-        "regular": "assets/icons/product/chat/regular.svg",
-        "filled": "assets/icons/product/chat/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.gaming",
-      "name": "Gaming",
-      "keywords": [
-        "controller",
-        "xbox",
-        "play",
-        "games"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "draft",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#107C10",
-        "secondary": "#4CAF50"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/gaming/color.svg",
-        "regular": "assets/icons/product/gaming/regular.svg",
-        "filled": "assets/icons/product/gaming/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.mail",
-      "name": "Mail",
-      "keywords": [
-        "email",
-        "inbox",
-        "message",
-        "envelope",
-        "outlook"
-      ],
-      "description": "A sealed envelope. Mail clients, inboxes, and send actions.",
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#0F6CBD",
-        "secondary": "#2AA0DA"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/mail/color.svg",
-        "regular": "assets/icons/product/mail/regular.svg",
-        "filled": "assets/icons/product/mail/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.maps",
-      "name": "Maps",
-      "keywords": [
-        "location",
-        "pin",
-        "navigation",
-        "place",
-        "directions"
-      ],
-      "description": "A map pin. Location, place, and navigation.",
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#D13438",
-        "secondary": "#EB6B0C"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/maps/color.svg",
-        "regular": "assets/icons/product/maps/regular.svg",
-        "filled": "assets/icons/product/maps/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.music",
-      "name": "Music",
-      "keywords": [
-        "audio",
-        "song",
-        "note",
-        "player",
-        "media"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#C239B3",
-        "secondary": "#E3008C"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/music/color.svg",
-        "regular": "assets/icons/product/music/regular.svg",
-        "filled": "assets/icons/product/music/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.phone",
-      "name": "Phone",
-      "keywords": [
-        "call",
-        "dial",
-        "contact",
-        "telephone"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#107C10",
-        "secondary": "#4CAF50"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/phone/color.svg",
-        "regular": "assets/icons/product/phone/regular.svg",
-        "filled": "assets/icons/product/phone/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.photos",
-      "name": "Photos",
-      "keywords": [
-        "image",
-        "gallery",
-        "picture",
-        "album"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#2AA0DA",
-        "secondary": "#38C6C6"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/photos/color.svg",
-        "regular": "assets/icons/product/photos/regular.svg",
-        "filled": "assets/icons/product/photos/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.store",
-      "name": "Store",
-      "keywords": [
-        "shop",
-        "bag",
-        "apps",
-        "marketplace",
-        "purchase"
-      ],
-      "description": "A shopping bag with a handle. App marketplace and purchase flows.",
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#E3008C",
-        "secondary": "#8764B8"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/store/color.svg",
-        "regular": "assets/icons/product/store/regular.svg",
-        "filled": "assets/icons/product/store/filled.svg"
-      },
-      "owner": "@windows-design-systems",
-      "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
-    },
-    {
-      "id": "product.weather",
-      "name": "Weather",
-      "keywords": [
-        "cloud",
-        "sun",
-        "forecast",
-        "climate"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "color",
-        "regular",
-        "filled"
-      ],
-      "sizes": [
-        12,
-        16,
-        20,
-        24,
-        28,
-        32,
-        48
-      ],
-      "colors": {
-        "primary": "#2AA0DA",
-        "secondary": "#F7A501"
-      },
-      "recolorable": true,
-      "variants": {
-        "color": "assets/icons/product/weather/color.svg",
-        "regular": "assets/icons/product/weather/regular.svg",
-        "filled": "assets/icons/product/weather/filled.svg"
+        "color": {
+          "any": "assets/icons/system/volume/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/system/volume/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/system/volume/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1018,9 +3148,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/archive/color.svg",
-        "regular": "assets/icons/file/archive/regular.svg",
-        "filled": "assets/icons/file/archive/filled.svg"
+        "color": {
+          "any": "assets/icons/file/archive/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/archive/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/archive/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1060,9 +3196,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/audio-file/color.svg",
-        "regular": "assets/icons/file/audio-file/regular.svg",
-        "filled": "assets/icons/file/audio-file/filled.svg"
+        "color": {
+          "any": "assets/icons/file/audio-file/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/audio-file/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/audio-file/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1101,9 +3243,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/code-file/color.svg",
-        "regular": "assets/icons/file/code-file/regular.svg",
-        "filled": "assets/icons/file/code-file/filled.svg"
+        "color": {
+          "any": "assets/icons/file/code-file/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/code-file/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/code-file/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1143,9 +3291,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/image-file/color.svg",
-        "regular": "assets/icons/file/image-file/regular.svg",
-        "filled": "assets/icons/file/image-file/filled.svg"
+        "color": {
+          "any": "assets/icons/file/image-file/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/image-file/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/image-file/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1184,9 +3338,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/pdf/color.svg",
-        "regular": "assets/icons/file/pdf/regular.svg",
-        "filled": "assets/icons/file/pdf/filled.svg"
+        "color": {
+          "any": "assets/icons/file/pdf/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/pdf/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/pdf/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1229,9 +3389,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/presentation/color.svg",
-        "regular": "assets/icons/file/presentation/regular.svg",
-        "filled": "assets/icons/file/presentation/filled.svg"
+        "color": {
+          "any": "assets/icons/file/presentation/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/presentation/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/presentation/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1275,9 +3441,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/spreadsheet/color.svg",
-        "regular": "assets/icons/file/spreadsheet/regular.svg",
-        "filled": "assets/icons/file/spreadsheet/filled.svg"
+        "color": {
+          "any": "assets/icons/file/spreadsheet/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/spreadsheet/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/spreadsheet/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1317,9 +3489,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/text-file/color.svg",
-        "regular": "assets/icons/file/text-file/regular.svg",
-        "filled": "assets/icons/file/text-file/filled.svg"
+        "color": {
+          "any": "assets/icons/file/text-file/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/text-file/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/text-file/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1359,9 +3537,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/video-file/color.svg",
-        "regular": "assets/icons/file/video-file/regular.svg",
-        "filled": "assets/icons/file/video-file/filled.svg"
+        "color": {
+          "any": "assets/icons/file/video-file/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/video-file/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/video-file/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1404,9 +3588,15 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/icons/file/word-document/color.svg",
-        "regular": "assets/icons/file/word-document/regular.svg",
-        "filled": "assets/icons/file/word-document/filled.svg"
+        "color": {
+          "any": "assets/icons/file/word-document/color.svg"
+        },
+        "regular": {
+          "any": "assets/icons/file/word-document/regular.svg"
+        },
+        "filled": {
+          "any": "assets/icons/file/word-document/filled.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1442,7 +3632,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/windows/empty-state/color.svg"
+        "color": {
+          "any": "assets/illustrations/windows/empty-state/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1477,7 +3669,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/windows/welcome/color.svg"
+        "color": {
+          "any": "assets/illustrations/windows/welcome/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1512,7 +3706,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/fluent/error/color.svg"
+        "color": {
+          "any": "assets/illustrations/fluent/error/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1548,7 +3744,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/fluent/success/color.svg"
+        "color": {
+          "any": "assets/illustrations/fluent/success/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1567,7 +3765,7 @@
       ],
       "type": "illustration",
       "collection": "product",
-      "status": "draft",
+      "status": "published",
       "themes": [
         "color"
       ],
@@ -1583,7 +3781,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/product/sync/color.svg"
+        "color": {
+          "any": "assets/illustrations/product/sync/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",
@@ -1618,7 +3818,9 @@
       },
       "recolorable": true,
       "variants": {
-        "color": "assets/illustrations/product/upload/color.svg"
+        "color": {
+          "any": "assets/illustrations/product/upload/color.svg"
+        }
       },
       "owner": "@windows-design-systems",
       "version": "1.0.0",

@@ -31,9 +31,15 @@
   },
   "recolorable": true,
   "variants": {
-    "color": "assets/icons/system/notepad/color.svg",
-    "regular": "assets/icons/system/notepad/regular.svg",
-    "filled": "assets/icons/system/notepad/filled.svg"
+    "color": {
+      "any": "assets/icons/system/notepad/color.svg"
+    },
+    "regular": {
+      "any": "assets/icons/system/notepad/regular.svg"
+    },
+    "filled": {
+      "any": "assets/icons/system/notepad/filled.svg"
+    }
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",

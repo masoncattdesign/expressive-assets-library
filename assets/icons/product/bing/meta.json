@@ -1,0 +1,55 @@
+{
+  "id": "product.bing",
+  "name": "Bing",
+  "keywords": [
+    "bing"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Bing",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#1B48EF",
+    "secondary": "#62DCD4"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/bing/color-16.svg",
+      "20": "assets/icons/product/bing/color-20.svg",
+      "24": "assets/icons/product/bing/color-24.svg",
+      "32": "assets/icons/product/bing/color-32.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/bing/filled-16.svg",
+      "20": "assets/icons/product/bing/filled-20.svg",
+      "24": "assets/icons/product/bing/filled-24.svg",
+      "28": "assets/icons/product/bing/filled-28.svg",
+      "32": "assets/icons/product/bing/filled-32.svg",
+      "48": "assets/icons/product/bing/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/bing/regular-16.svg",
+      "20": "assets/icons/product/bing/regular-20.svg",
+      "24": "assets/icons/product/bing/regular-24.svg",
+      "28": "assets/icons/product/bing/regular-28.svg",
+      "32": "assets/icons/product/bing/regular-32.svg",
+      "48": "assets/icons/product/bing/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

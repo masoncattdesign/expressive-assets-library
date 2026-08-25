@@ -179,120 +179,6 @@ export const ICONS = [
       '<path class="f" d="M20.4 10.4h.3a1.4 1.4 0 0 1 1.4 1.4v.4a1.4 1.4 0 0 1-1.4 1.4h-.3Z"/>',
   },
 
-  /* --- Product --------------------------------------------------- */
-  {
-    id: 'product.mail',
-    name: 'Mail',
-    collection: 'product',
-    colors: { primary: '#0F6CBD', secondary: '#2AA0DA' },
-    keywords: ['email', 'inbox', 'message', 'envelope', 'outlook'],
-    glyph:
-      '<rect class="s" x="2.8" y="5" width="18.4" height="14" rx="2.6"/>' +
-      '<path class="s" d="m3.6 7.6 7.2 5.1a2 2 0 0 0 2.4 0l7.2-5.1"/>',
-  },
-  {
-    id: 'product.chat',
-    name: 'Chat',
-    collection: 'product',
-    colors: { primary: '#0078D4', secondary: '#2AA0DA' },
-    keywords: ['message', 'conversation', 'teams', 'bubble', 'talk'],
-    glyph:
-      '<path class="f" d="M4.6 3.6h14.8A2.4 2.4 0 0 1 21.8 6v8.6a2.4 2.4 0 0 1-2.4 2.4h-8.8l-4.5 3.2a.8.8 0 0 1-1.3-.7V17A2.4 2.4 0 0 1 2.2 14.6V6a2.4 2.4 0 0 1 2.4-2.4Z"/>' +
-      '<path class="k" d="M7.2 8.2h9.6M7.2 12h6.2"/>',
-  },
-  {
-    id: 'product.phone',
-    name: 'Phone',
-    collection: 'product',
-    colors: { primary: '#107C10', secondary: '#4CAF50' },
-    keywords: ['call', 'dial', 'contact', 'telephone'],
-    glyph:
-      '<path class="f" d="M6.6 3.2a2 2 0 0 1 2.6.9l1.5 3a2 2 0 0 1-.5 2.4l-1.3 1a12.6 12.6 0 0 0 4.6 4.6l1-1.3a2 2 0 0 1 2.4-.5l3 1.5a2 2 0 0 1 .9 2.6l-.8 1.7a2.6 2.6 0 0 1-3 1.4C11 19.6 4.4 13 2.7 6a2.6 2.6 0 0 1 1.4-3Z"/>',
-  },
-  {
-    id: 'product.photos',
-    name: 'Photos',
-    collection: 'product',
-    colors: { primary: '#2AA0DA', secondary: '#38C6C6' },
-    keywords: ['image', 'gallery', 'picture', 'album'],
-    glyph:
-      '<rect class="s" x="3" y="4.4" width="18" height="15.2" rx="2.6"/>' +
-      '<circle class="f" cx="8.4" cy="9.6" r="1.9"/>' +
-      '<path class="f" d="M3.2 17.9 8.4 13a1.6 1.6 0 0 1 2.2 0l3 2.9 2-1.9a1.6 1.6 0 0 1 2.2 0l3 2.9v.7a2.6 2.6 0 0 1-2.6 2H5.6a2.6 2.6 0 0 1-2.4-1.7Z"/>',
-  },
-  {
-    id: 'product.music',
-    name: 'Music',
-    collection: 'product',
-    colors: { primary: '#C239B3', secondary: '#E3008C' },
-    keywords: ['audio', 'song', 'note', 'player', 'media'],
-    glyph:
-      '<path class="f" d="M9.4 18.2V7a1.5 1.5 0 0 1 1.2-1.5l7.8-1.7a1.4 1.4 0 0 1 1.7 1.4v10.6h-2V6.6l-6.7 1.5v10.1Z"/>' +
-      '<circle class="f" cx="7.2" cy="18" r="3.1"/>' +
-      '<circle class="f" cx="18.1" cy="15.8" r="2.9"/>',
-  },
-  {
-    id: 'product.camera',
-    name: 'Camera',
-    collection: 'product',
-    colors: { primary: '#3A3A45', secondary: '#5D5A88' },
-    keywords: ['photo', 'capture', 'lens', 'shoot'],
-    glyph:
-      '<path class="s" d="M4.4 7.6h2.9l1.5-2.4h6.4l1.5 2.4h2.9A2.4 2.4 0 0 1 22 10v7.4a2.4 2.4 0 0 1-2.4 2.4H4.4A2.4 2.4 0 0 1 2 17.4V10a2.4 2.4 0 0 1 2.4-2.4Z"/>' +
-      '<circle class="f" cx="12" cy="13.5" r="4"/>' +
-      '<circle class="k" cx="12" cy="13.5" r="1.6"/>',
-  },
-  {
-    id: 'product.store',
-    name: 'Store',
-    collection: 'product',
-    colors: { primary: '#E3008C', secondary: '#8764B8' },
-    keywords: ['shop', 'bag', 'apps', 'marketplace', 'purchase'],
-    glyph:
-      '<path class="f" d="M5.4 7.4h13.2a1.8 1.8 0 0 1 1.8 2l-1.1 9.2a2.6 2.6 0 0 1-2.6 2.3H7.3a2.6 2.6 0 0 1-2.6-2.3L3.6 9.4a1.8 1.8 0 0 1 1.8-2Z"/>' +
-      '<path class="k" d="M8.6 9.4V6.8a3.4 3.4 0 0 1 6.8 0v2.6"/>',
-  },
-  {
-    id: 'product.weather',
-    name: 'Weather',
-    collection: 'product',
-    colors: { primary: '#2AA0DA', secondary: '#F7A501' },
-    keywords: ['cloud', 'sun', 'forecast', 'climate'],
-    glyph:
-      '<circle class="f" cx="18" cy="5.9" r="3"/>' +
-      '<path class="f" d="M6.8 19.8a4.4 4.4 0 0 1 .5-8.7 5.8 5.8 0 0 1 11.1 1.1 3.9 3.9 0 0 1-.6 7.6Z"/>',
-  },
-  {
-    id: 'product.gaming',
-    name: 'Gaming',
-    collection: 'product',
-    colors: { primary: '#107C10', secondary: '#4CAF50' },
-    keywords: ['controller', 'xbox', 'play', 'games'],
-    glyph:
-      '<path class="f" d="M8.2 6.6h7.6a6.4 6.4 0 0 1 6.3 5.3l.7 4a3.4 3.4 0 0 1-6.2 2.4l-1.2-1.7H8.6l-1.2 1.7a3.4 3.4 0 0 1-6.2-2.4l.7-4a6.4 6.4 0 0 1 6.3-5.3Z"/>' +
-      '<path class="k" d="M6.4 11.6v3.2M4.8 13.2h3.2M16.4 12.4h.01M18.4 14.6h.01"/>',
-  },
-  {
-    id: 'product.browser',
-    name: 'Browser',
-    collection: 'product',
-    colors: { primary: '#0F6CBD', secondary: '#2AA0DA' },
-    keywords: ['web', 'edge', 'internet', 'globe', 'world'],
-    glyph:
-      '<circle class="s" cx="12" cy="12" r="8.8"/>' +
-      '<path class="s" d="M3.2 12h17.6M12 3.2a13.6 13.6 0 0 1 0 17.6 13.6 13.6 0 0 1 0-17.6"/>',
-  },
-  {
-    id: 'product.maps',
-    name: 'Maps',
-    collection: 'product',
-    colors: { primary: '#D13438', secondary: '#EB6B0C' },
-    keywords: ['location', 'pin', 'navigation', 'place', 'directions'],
-    glyph:
-      '<path class="f" d="M12 2.6a7.4 7.4 0 0 0-7.4 7.4c0 5.3 6.5 11 6.8 11.2a.9.9 0 0 0 1.2 0c.3-.2 6.8-5.9 6.8-11.2A7.4 7.4 0 0 0 12 2.6Z"/>' +
-      '<circle class="k" cx="12" cy="10" r="2.6"/>',
-  },
-
   /* --- File ------------------------------------------------------- */
   fileIcon('word-document', 'Word Document', 'DOC', '#2B579A', '#41A5EE', ['word', 'doc', 'docx', 'text', 'document']),
   fileIcon('spreadsheet', 'Spreadsheet', 'XLS', '#217346', '#33C481', ['excel', 'xls', 'xlsx', 'sheet', 'table', 'data']),
@@ -404,8 +290,6 @@ export const ILLUSTRATIONS = [
    validation rejects a deprecation that strands consumers. */
 export const LIFECYCLE = {
   'system.notepad': { status: 'draft' },
-  'product.gaming': { status: 'draft' },
-  'product.sync': { status: 'draft' },
   'file.text-file': { status: 'deprecated', replacedBy: 'file.code-file' },
 };
 
@@ -414,7 +298,6 @@ export const LIFECYCLE = {
 export const ALIASES = {
   'system.trash': ['Recycle Bin'],
   'system.network': ['Wi-Fi'],
-  'product.browser': ['Edge'],
   'file.word-document': ['Word'],
   'file.spreadsheet': ['Excel'],
   'file.presentation': ['PowerPoint'],
@@ -430,9 +313,6 @@ export const DESCRIPTIONS = {
   'system.security': 'A shield with a check. Security posture, protection status, and Defender surfaces.',
   'system.trash': 'A lidded bin. Delete actions and the Recycle Bin itself.',
   'system.network': 'Signal arcs. Wireless connectivity and network status.',
-  'product.mail': 'A sealed envelope. Mail clients, inboxes, and send actions.',
-  'product.maps': 'A map pin. Location, place, and navigation.',
-  'product.store': 'A shopping bag with a handle. App marketplace and purchase flows.',
   'file.pdf': 'A page marked PDF. Portable Document Format files.',
   'file.archive': 'A page marked ZIP. Compressed archives and bundles.',
   'windows.empty-state': 'A planet in a starfield. Zero-state surfaces where no content exists yet.',

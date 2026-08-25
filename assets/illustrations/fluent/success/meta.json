@@ -27,7 +27,9 @@
   },
   "recolorable": true,
   "variants": {
-    "color": "assets/illustrations/fluent/success/color.svg"
+    "color": {
+      "any": "assets/illustrations/fluent/success/color.svg"
+    }
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",

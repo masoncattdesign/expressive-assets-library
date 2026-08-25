@@ -1,0 +1,48 @@
+{
+  "id": "product.eventify",
+  "name": "Eventify",
+  "keywords": [
+    "eventify"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Eventify",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#00FFD1",
+    "secondary": "#00A3FF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/eventify/color-16.svg",
+      "20": "assets/icons/product/eventify/color-20.svg",
+      "24": "assets/icons/product/eventify/color-24.svg",
+      "28": "assets/icons/product/eventify/color-28.svg",
+      "32": "assets/icons/product/eventify/color-32.svg",
+      "48": "assets/icons/product/eventify/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/eventify/filled-16.svg",
+      "20": "assets/icons/product/eventify/filled-20.svg",
+      "24": "assets/icons/product/eventify/filled-24.svg",
+      "28": "assets/icons/product/eventify/filled-28.svg",
+      "32": "assets/icons/product/eventify/filled-32.svg",
+      "48": "assets/icons/product/eventify/filled-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

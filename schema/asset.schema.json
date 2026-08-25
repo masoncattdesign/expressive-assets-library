@@ -103,9 +103,14 @@
     },
     "variants": {
       "type": "object",
-      "description": "Site-root-relative path to each theme's SVG. Keys must match the themes array.",
-      "additionalProperties": { "type": "string", "pattern": "^assets/.+\\.svg$" },
-      "minProperties": 1
+      "description": "Artwork paths, keyed by theme and then by the pixel size the drawing was made for. Windows product icons are REDRAWN per size — the 16px Excel icon is a different drawing from the 48px one, not a scaled copy — so each is stored separately. Artwork that is genuinely size-agnostic (a single scalable drawing) uses the one key \"any\". Top-level keys must match the themes array.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "minProperties": 1,
+        "propertyNames": { "pattern": "^(any|[0-9]{1,3})$" },
+        "additionalProperties": { "type": "string", "pattern": "^assets/.+\\.svg$" }
+      }
     },
     "figma": {
       "type": "object",

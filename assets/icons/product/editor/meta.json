@@ -1,0 +1,57 @@
+{
+  "id": "product.editor",
+  "name": "Editor",
+  "keywords": [
+    "editor"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Editor",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#103F91",
+    "secondary": "#2B7CD3"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/editor/color-16.svg",
+      "20": "assets/icons/product/editor/color-20.svg",
+      "24": "assets/icons/product/editor/color-24.svg",
+      "28": "assets/icons/product/editor/color-28.svg",
+      "32": "assets/icons/product/editor/color-32.svg",
+      "48": "assets/icons/product/editor/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/editor/filled-16.svg",
+      "20": "assets/icons/product/editor/filled-20.svg",
+      "24": "assets/icons/product/editor/filled-24.svg",
+      "28": "assets/icons/product/editor/filled-28.svg",
+      "32": "assets/icons/product/editor/filled-32.svg",
+      "48": "assets/icons/product/editor/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/editor/regular-16.svg",
+      "20": "assets/icons/product/editor/regular-20.svg",
+      "24": "assets/icons/product/editor/regular-24.svg",
+      "28": "assets/icons/product/editor/regular-28.svg",
+      "32": "assets/icons/product/editor/regular-32.svg",
+      "48": "assets/icons/product/editor/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

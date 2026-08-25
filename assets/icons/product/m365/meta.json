@@ -1,0 +1,57 @@
+{
+  "id": "product.m365",
+  "name": "M365",
+  "keywords": [
+    "m365"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "M365",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "regular",
+    "color"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#00AEFF",
+    "secondary": "#A86EDD"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "16": "assets/icons/product/m365/filled-16.svg",
+      "20": "assets/icons/product/m365/filled-20.svg",
+      "24": "assets/icons/product/m365/filled-24.svg",
+      "28": "assets/icons/product/m365/filled-28.svg",
+      "32": "assets/icons/product/m365/filled-32.svg",
+      "48": "assets/icons/product/m365/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/m365/regular-16.svg",
+      "20": "assets/icons/product/m365/regular-20.svg",
+      "24": "assets/icons/product/m365/regular-24.svg",
+      "28": "assets/icons/product/m365/regular-28.svg",
+      "32": "assets/icons/product/m365/regular-32.svg",
+      "48": "assets/icons/product/m365/regular-48.svg"
+    },
+    "color": {
+      "16": "assets/icons/product/m365/color-16.svg",
+      "20": "assets/icons/product/m365/color-20.svg",
+      "24": "assets/icons/product/m365/color-24.svg",
+      "28": "assets/icons/product/m365/color-28.svg",
+      "32": "assets/icons/product/m365/color-32.svg",
+      "48": "assets/icons/product/m365/color-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "product.exchange",
+  "name": "Exchange",
+  "keywords": [
+    "exchange"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Exchange",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#28A8EA",
+    "secondary": "#50D9FF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/exchange/color-16.svg",
+      "20": "assets/icons/product/exchange/color-20.svg",
+      "24": "assets/icons/product/exchange/color-24.svg",
+      "28": "assets/icons/product/exchange/color-28.svg",
+      "32": "assets/icons/product/exchange/color-32.svg",
+      "48": "assets/icons/product/exchange/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/exchange/filled-16.svg",
+      "20": "assets/icons/product/exchange/filled-20.svg",
+      "24": "assets/icons/product/exchange/filled-24.svg",
+      "28": "assets/icons/product/exchange/filled-28.svg",
+      "32": "assets/icons/product/exchange/filled-32.svg",
+      "48": "assets/icons/product/exchange/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/exchange/regular-16.svg",
+      "20": "assets/icons/product/exchange/regular-20.svg",
+      "24": "assets/icons/product/exchange/regular-24.svg",
+      "28": "assets/icons/product/exchange/regular-28.svg",
+      "32": "assets/icons/product/exchange/regular-32.svg",
+      "48": "assets/icons/product/exchange/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

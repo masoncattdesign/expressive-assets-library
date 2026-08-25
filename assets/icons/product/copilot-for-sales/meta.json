@@ -1,0 +1,59 @@
+{
+  "id": "product.copilot-for-sales",
+  "name": "Copilot for Sales",
+  "keywords": [
+    "copilot",
+    "for",
+    "sales"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Copilot for Sales",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#122882",
+    "secondary": "#3EE5C9"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/copilot-for-sales/color-16.svg",
+      "20": "assets/icons/product/copilot-for-sales/color-20.svg",
+      "24": "assets/icons/product/copilot-for-sales/color-24.svg",
+      "28": "assets/icons/product/copilot-for-sales/color-28.svg",
+      "32": "assets/icons/product/copilot-for-sales/color-32.svg",
+      "48": "assets/icons/product/copilot-for-sales/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/copilot-for-sales/filled-16.svg",
+      "20": "assets/icons/product/copilot-for-sales/filled-20.svg",
+      "24": "assets/icons/product/copilot-for-sales/filled-24.svg",
+      "28": "assets/icons/product/copilot-for-sales/filled-28.svg",
+      "32": "assets/icons/product/copilot-for-sales/filled-32.svg",
+      "48": "assets/icons/product/copilot-for-sales/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/copilot-for-sales/regular-16.svg",
+      "20": "assets/icons/product/copilot-for-sales/regular-20.svg",
+      "24": "assets/icons/product/copilot-for-sales/regular-24.svg",
+      "28": "assets/icons/product/copilot-for-sales/regular-28.svg",
+      "32": "assets/icons/product/copilot-for-sales/regular-32.svg",
+      "48": "assets/icons/product/copilot-for-sales/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

@@ -25,8 +25,8 @@ export const GROUPS = [
     label: 'Icons',
     dir: 'assets/icons',
     collections: [
-      { id: 'system', label: 'System Icons' },
       { id: 'product', label: 'Product Icons' },
+      { id: 'system', label: 'System Icons' },
       { id: 'file', label: 'File Icons' },
     ],
   },
@@ -42,10 +42,6 @@ export const GROUPS = [
   },
 ];
 
-/** Deterministic sprite filename for a group+collection pair. The site loads
- *  these on demand rather than one giant sprite — at 500+ assets a single
- *  inlined bundle is megabytes and blocks first paint. */
-export const spriteName = (type, collection) => `sprites/${type}-${collection}.json`;
 
 const exists = (p) => stat(p).then(() => true, () => false);
 
@@ -100,7 +96,6 @@ export function buildManifest(assets) {
         id: c.id,
         label: c.label,
         count: clean.filter((a) => a.type === g.type && a.collection === c.id).length,
-        sprite: spriteName(g.type, c.id),
       })),
     })),
     assets: clean,

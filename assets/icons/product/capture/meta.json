@@ -1,0 +1,57 @@
+{
+  "id": "product.capture",
+  "name": "Capture",
+  "keywords": [
+    "capture"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Capture",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#BB4DFF",
+    "secondary": "#F5C4FF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/capture/color-16.svg",
+      "20": "assets/icons/product/capture/color-20.svg",
+      "24": "assets/icons/product/capture/color-24.svg",
+      "28": "assets/icons/product/capture/color-28.svg",
+      "32": "assets/icons/product/capture/color-32.svg",
+      "48": "assets/icons/product/capture/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/capture/filled-16.svg",
+      "20": "assets/icons/product/capture/filled-20.svg",
+      "24": "assets/icons/product/capture/filled-24.svg",
+      "28": "assets/icons/product/capture/filled-28.svg",
+      "32": "assets/icons/product/capture/filled-32.svg",
+      "48": "assets/icons/product/capture/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/capture/regular-16.svg",
+      "20": "assets/icons/product/capture/regular-20.svg",
+      "24": "assets/icons/product/capture/regular-24.svg",
+      "28": "assets/icons/product/capture/regular-28.svg",
+      "32": "assets/icons/product/capture/regular-32.svg",
+      "48": "assets/icons/product/capture/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

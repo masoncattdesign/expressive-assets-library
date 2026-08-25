@@ -1,0 +1,27 @@
+<svg aria-label="Exchange color 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 25.75V20.9462C30 20.0842 29.6576 19.2576 29.0481 18.6481L26.4 16L29.0481 13.3519C29.6576 12.7424 30 11.9158 30 11.0538V6.25C30 4.45507 28.5449 3 26.75 3H21.9462C21.0842 3 20.2576 3.34241 19.6481 3.9519L17 6.6L14.3519 3.9519C13.7424 3.34241 12.9158 3 12.0538 3H7.25C5.45507 3 4 4.45507 4 6.25V25.75C4 27.5449 5.45508 29 7.25 29H12.0538C12.9158 29 13.7424 28.6576 14.3519 28.0481L17 25.4L19.6481 28.0481C20.2576 28.6576 21.0842 29 21.9462 29H26.75C28.5449 29 30 27.5449 30 25.75Z" fill="#28A8EA"/>
+<path d="M12.0538 3H7.25C5.45507 3 4 4.45507 4 6.25V13.75C4 14.9926 5.00736 16 6.25 16H12C14.7614 16 17 13.7614 17 11V6.6L14.3519 3.9519C13.7424 3.34241 12.9158 3 12.0538 3Z" fill="#50D9FF"/>
+<path d="M30 25.75V20.9462C30 20.0842 29.6576 19.2576 29.0481 18.6481L26.4 16H22C19.2386 16 17 18.2386 17 21V25.4L19.6481 28.0481C20.2576 28.6576 21.0842 29 21.9462 29H26.75C28.5449 29 30 27.5449 30 25.75Z" fill="#0078D4"/>
+<mask id="product-exchange-color-32-mask0_274127_1699" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="3" width="26" height="26">
+<path d="M30 25.75V20.9462C30 20.0842 29.6576 19.2576 29.0481 18.6481L26.4 16L29.0481 13.3519C29.6576 12.7424 30 11.9158 30 11.0538V6.25C30 4.45507 28.5449 3 26.75 3H21.9462C21.0842 3 20.2576 3.34241 19.6481 3.9519L17 6.6L14.3519 3.9519C13.7424 3.34241 12.9158 3 12.0538 3H7.25C5.45507 3 4 4.45507 4 6.25V25.75C4 27.5449 5.45508 29 7.25 29H12.0538C12.9158 29 13.7424 28.6576 14.3519 28.0481L17 25.4L19.6481 28.0481C20.2576 28.6576 21.0842 29 21.9462 29H26.75C28.5449 29 30 27.5449 30 25.75Z" fill="#242424"/>
+</mask>
+<g mask="url(#product-exchange-color-32-mask0_274127_1699)">
+<g opacity="0.8" filter="url(#product-exchange-color-32-filter0_f_274127_1699)">
+<rect x="2" y="11" width="14" height="13" rx="1.5" fill="#242424"/>
+</g>
+</g>
+<rect x="2" y="9" width="14" height="14" rx="1.5" fill="url(#product-exchange-color-32-paint0_linear_274127_1699)"/>
+<path d="M11.5167 19.9999H7V12.0037H11.3327V13.1579H8.36616V15.3828H11.1208V16.5315H8.36616V18.8456H11.5167V19.9999Z" fill="white"/>
+<defs>
+<filter id="product-exchange-color-32-filter0_f_274127_1699" x="-1" y="8" width="20" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur_274127_1699"/>
+</filter>
+<linearGradient id="product-exchange-color-32-paint0_linear_274127_1699" x1="4.4325" y1="8.09" x2="13.5675" y2="23.91" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1784D9"/>
+<stop offset="0.5" stop-color="#107AD5"/>
+<stop offset="1" stop-color="#0A63C9"/>
+</linearGradient>
+</defs>
+</svg>

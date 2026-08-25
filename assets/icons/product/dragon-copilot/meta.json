@@ -1,0 +1,58 @@
+{
+  "id": "product.dragon-copilot",
+  "name": "Dragon Copilot",
+  "keywords": [
+    "dragon",
+    "copilot"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Dragon Copilot",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#FFD638",
+    "secondary": "#8B52F4"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/dragon-copilot/color-16.svg",
+      "20": "assets/icons/product/dragon-copilot/color-20.svg",
+      "24": "assets/icons/product/dragon-copilot/color-24.svg",
+      "28": "assets/icons/product/dragon-copilot/color-28.svg",
+      "32": "assets/icons/product/dragon-copilot/color-32.svg",
+      "48": "assets/icons/product/dragon-copilot/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/dragon-copilot/filled-16.svg",
+      "20": "assets/icons/product/dragon-copilot/filled-20.svg",
+      "24": "assets/icons/product/dragon-copilot/filled-24.svg",
+      "28": "assets/icons/product/dragon-copilot/filled-28.svg",
+      "32": "assets/icons/product/dragon-copilot/filled-32.svg",
+      "48": "assets/icons/product/dragon-copilot/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/dragon-copilot/regular-16.svg",
+      "20": "assets/icons/product/dragon-copilot/regular-20.svg",
+      "24": "assets/icons/product/dragon-copilot/regular-24.svg",
+      "28": "assets/icons/product/dragon-copilot/regular-28.svg",
+      "32": "assets/icons/product/dragon-copilot/regular-32.svg",
+      "48": "assets/icons/product/dragon-copilot/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

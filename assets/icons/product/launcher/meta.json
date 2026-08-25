@@ -1,0 +1,33 @@
+{
+  "id": "product.launcher",
+  "name": "Launcher",
+  "keywords": [
+    "launcher"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Launcher",
+  "status": "draft",
+  "themes": [
+    "color",
+    "regular"
+  ],
+  "sizes": [
+    24
+  ],
+  "colors": {
+    "primary": "#005DB1",
+    "secondary": "#3DB5F1"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "24": "assets/icons/product/launcher/color-24.svg"
+    },
+    "regular": {
+      "24": "assets/icons/product/launcher/regular-24.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

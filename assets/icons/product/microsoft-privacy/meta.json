@@ -1,0 +1,58 @@
+{
+  "id": "product.microsoft-privacy",
+  "name": "Microsoft Privacy",
+  "keywords": [
+    "microsoft",
+    "privacy"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Microsoft Privacy",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0FAFFF",
+    "secondary": "#245DE6"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/microsoft-privacy/color-16.svg",
+      "20": "assets/icons/product/microsoft-privacy/color-20.svg",
+      "24": "assets/icons/product/microsoft-privacy/color-24.svg",
+      "28": "assets/icons/product/microsoft-privacy/color-28.svg",
+      "32": "assets/icons/product/microsoft-privacy/color-32.svg",
+      "48": "assets/icons/product/microsoft-privacy/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/microsoft-privacy/filled-16.svg",
+      "20": "assets/icons/product/microsoft-privacy/filled-20.svg",
+      "24": "assets/icons/product/microsoft-privacy/filled-24.svg",
+      "28": "assets/icons/product/microsoft-privacy/filled-28.svg",
+      "32": "assets/icons/product/microsoft-privacy/filled-32.svg",
+      "48": "assets/icons/product/microsoft-privacy/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/microsoft-privacy/regular-16.svg",
+      "20": "assets/icons/product/microsoft-privacy/regular-20.svg",
+      "24": "assets/icons/product/microsoft-privacy/regular-24.svg",
+      "28": "assets/icons/product/microsoft-privacy/regular-28.svg",
+      "32": "assets/icons/product/microsoft-privacy/regular-32.svg",
+      "48": "assets/icons/product/microsoft-privacy/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

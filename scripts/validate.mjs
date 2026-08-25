@@ -38,6 +38,9 @@ function validate(value, schema, path, where) {
       if (!(key in value)) fail(where, `${path}.${key} is required`);
     }
     for (const [key, child] of Object.entries(value)) {
+      if (schema.propertyNames?.pattern && !new RegExp(schema.propertyNames.pattern).test(key)) {
+        fail(where, `${path} has key "${key}", which does not match ${schema.propertyNames.pattern}`);
+      }
       const childSchema = schema.properties?.[key];
       if (!childSchema) {
         if (schema.additionalProperties === false) fail(where, `${path}.${key} is not an allowed property`);
@@ -109,21 +112,26 @@ async function main() {
     }
 
     for (const theme of meta.themes || []) {
-      const rel = meta.variants?.[theme];
-      if (!rel) {
-        fail(where, `themes lists "${theme}" but variants has no "${theme}" path`);
+      const drawings = meta.variants?.[theme];
+      if (!drawings || !Object.keys(drawings).length) {
+        fail(where, `themes lists "${theme}" but variants has no drawings for it`);
         continue;
       }
-      if (!(await exists(join(ROOT, rel)))) {
-        fail(where, `variants.${theme} points at ${rel}, which does not exist`);
-        continue;
-      }
-      const svg = await readFile(join(ROOT, rel), 'utf8');
-      if (!svg.trimStart().startsWith('<svg') || !svg.includes('viewBox=')) {
-        fail(rel, 'is not a well-formed SVG with a viewBox');
-      }
-      if (!svg.includes('role="img"') || !svg.includes('aria-label=')) {
-        fail(rel, 'is missing role="img" / aria-label — assets must be announceable');
+      for (const [size, rel] of Object.entries(drawings)) {
+        if (size !== 'any' && !(meta.sizes || []).includes(Number(size))) {
+          fail(where, `variants.${theme} has a ${size}px drawing but sizes does not list ${size}`);
+        }
+        if (!(await exists(join(ROOT, rel)))) {
+          fail(where, `variants.${theme}.${size} points at ${rel}, which does not exist`);
+          continue;
+        }
+        const svg = await readFile(join(ROOT, rel), 'utf8');
+        if (!svg.trimStart().startsWith('<svg') || !svg.includes('viewBox=')) {
+          fail(rel, 'is not a well-formed SVG with a viewBox');
+        }
+        if (!svg.includes('role="img"') || !svg.includes('aria-label=')) {
+          fail(rel, 'is missing role="img" / aria-label — assets must be announceable');
+        }
       }
     }
 

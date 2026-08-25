@@ -1,0 +1,57 @@
+{
+  "id": "product.copilot",
+  "name": "Copilot",
+  "keywords": [
+    "copilot"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Copilot",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#109DF2",
+    "secondary": "#A86EDD"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/copilot/color-16.svg",
+      "20": "assets/icons/product/copilot/color-20.svg",
+      "24": "assets/icons/product/copilot/color-24.svg",
+      "28": "assets/icons/product/copilot/color-28.svg",
+      "32": "assets/icons/product/copilot/color-32.svg",
+      "48": "assets/icons/product/copilot/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/copilot/filled-16.svg",
+      "20": "assets/icons/product/copilot/filled-20.svg",
+      "24": "assets/icons/product/copilot/filled-24.svg",
+      "28": "assets/icons/product/copilot/filled-28.svg",
+      "32": "assets/icons/product/copilot/filled-32.svg",
+      "48": "assets/icons/product/copilot/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/copilot/regular-16.svg",
+      "20": "assets/icons/product/copilot/regular-20.svg",
+      "24": "assets/icons/product/copilot/regular-24.svg",
+      "28": "assets/icons/product/copilot/regular-28.svg",
+      "32": "assets/icons/product/copilot/regular-32.svg",
+      "48": "assets/icons/product/copilot/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

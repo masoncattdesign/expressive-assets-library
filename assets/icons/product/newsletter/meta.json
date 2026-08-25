@@ -1,0 +1,57 @@
+{
+  "id": "product.newsletter",
+  "name": "Newsletter",
+  "keywords": [
+    "newsletter"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Newsletter",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0084DF",
+    "secondary": "#ABEEFF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/newsletter/color-16.svg",
+      "20": "assets/icons/product/newsletter/color-20.svg",
+      "24": "assets/icons/product/newsletter/color-24.svg",
+      "28": "assets/icons/product/newsletter/color-28.svg",
+      "32": "assets/icons/product/newsletter/color-32.svg",
+      "48": "assets/icons/product/newsletter/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/newsletter/filled-16.svg",
+      "20": "assets/icons/product/newsletter/filled-20.svg",
+      "24": "assets/icons/product/newsletter/filled-24.svg",
+      "28": "assets/icons/product/newsletter/filled-28.svg",
+      "32": "assets/icons/product/newsletter/filled-32.svg",
+      "48": "assets/icons/product/newsletter/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/newsletter/regular-16.svg",
+      "20": "assets/icons/product/newsletter/regular-20.svg",
+      "24": "assets/icons/product/newsletter/regular-24.svg",
+      "28": "assets/icons/product/newsletter/regular-28.svg",
+      "32": "assets/icons/product/newsletter/regular-32.svg",
+      "48": "assets/icons/product/newsletter/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

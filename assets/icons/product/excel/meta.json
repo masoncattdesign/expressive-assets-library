@@ -1,0 +1,57 @@
+{
+  "id": "product.excel",
+  "name": "Excel",
+  "keywords": [
+    "excel"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Excel",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#379539",
+    "secondary": "#98F0B0"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/excel/color-16.svg",
+      "20": "assets/icons/product/excel/color-20.svg",
+      "24": "assets/icons/product/excel/color-24.svg",
+      "28": "assets/icons/product/excel/color-28.svg",
+      "32": "assets/icons/product/excel/color-32.svg",
+      "48": "assets/icons/product/excel/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/excel/filled-16.svg",
+      "20": "assets/icons/product/excel/filled-20.svg",
+      "24": "assets/icons/product/excel/filled-24.svg",
+      "28": "assets/icons/product/excel/filled-28.svg",
+      "32": "assets/icons/product/excel/filled-32.svg",
+      "48": "assets/icons/product/excel/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/excel/regular-16.svg",
+      "20": "assets/icons/product/excel/regular-20.svg",
+      "24": "assets/icons/product/excel/regular-24.svg",
+      "28": "assets/icons/product/excel/regular-28.svg",
+      "32": "assets/icons/product/excel/regular-32.svg",
+      "48": "assets/icons/product/excel/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

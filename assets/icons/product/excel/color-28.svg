@@ -1,0 +1,56 @@
+<svg aria-label="Excel color 28" role="img" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.00012 9.75C5.00012 8.23122 6.23134 7 7.75012 7H23.0001V23C23.0001 24.1046 22.1047 25 21.0001 25H8.75012C6.67905 25 5.00012 23.3211 5.00012 21.25V9.75Z" fill="url(#product-excel-color-28-paint0_radial_5634_462)"/>
+<path d="M5.00012 9.75C5.00012 8.23122 6.23134 7 7.75012 7H23.0001V23C23.0001 24.1046 22.1047 25 21.0001 25H8.75012C6.67905 25 5.00012 23.3211 5.00012 21.25V9.75Z" fill="url(#product-excel-color-28-paint1_radial_5634_462)" fill-opacity="0.7"/>
+<path d="M5 13.2499C5 11.7311 6.23122 10.4999 7.75001 10.4999L16 10.4999C14.8965 10.4962 14 11.3898 14 12.4933V15.6665C14 16.6791 13.1792 17.4999 12.1667 17.4999H8.75C6.67893 17.4999 5 19.1788 5 21.2499V13.2499Z" fill="url(#product-excel-color-28-paint2_linear_5634_462)"/>
+<path d="M5 13.2499C5 11.7311 6.23122 10.4999 7.75001 10.4999L16 10.4999C14.8965 10.4962 14 11.3898 14 12.4933V15.6665C14 16.6791 13.1792 17.4999 12.1667 17.4999H8.75C6.67893 17.4999 5 19.1788 5 21.2499V13.2499Z" fill="url(#product-excel-color-28-paint3_linear_5634_462)" fill-opacity="0.3"/>
+<path d="M5.00012 6.75C5.00012 4.67893 6.67905 3 8.75012 3H16.0001V10.5H8.50012C6.56713 10.5 5.00012 12.067 5.00012 14V6.75Z" fill="url(#product-excel-color-28-paint4_linear_5634_462)"/>
+<path d="M5.00012 6.75C5.00012 4.67893 6.67905 3 8.75012 3H16.0001V10.5H8.50012C6.56713 10.5 5.00012 12.067 5.00012 14V6.75Z" fill="url(#product-excel-color-28-paint5_radial_5634_462)"/>
+<path d="M5.00012 6.75C5.00012 4.67893 6.67905 3 8.75012 3H16.0001V10.5H8.50012C6.56713 10.5 5.00012 12.067 5.00012 14V6.75Z" fill="url(#product-excel-color-28-paint6_linear_5634_462)"/>
+<rect width="9" height="7.5" rx="2" transform="matrix(-1 0 0 1 23.0001 3)" fill="url(#product-excel-color-28-paint7_radial_5634_462)"/>
+<rect x="2" y="13" width="10" height="10" rx="2.25" fill="url(#product-excel-color-28-paint8_radial_5634_462)"/>
+<rect x="2" y="13" width="10" height="10" rx="2.25" fill="url(#product-excel-color-28-paint9_radial_5634_462)" fill-opacity="0.3"/>
+<path d="M9.75537 21H8.13972L7.12524 19.0879C7.08906 19.0209 7.06123 18.9679 7.04175 18.9289C7.02505 18.887 7.00696 18.8396 6.98748 18.7866H6.97078C6.94573 18.8536 6.92207 18.9079 6.8998 18.9498C6.87754 18.9916 6.8511 19.0432 6.82049 19.1046L5.76843 21H4.24463L6.0732 17.9958L4.36987 15H5.96465L6.86641 16.7071C6.90259 16.7768 6.9332 16.8382 6.95825 16.8912C6.98608 16.9414 7.01392 17.0014 7.04175 17.0711H7.05845C7.09741 16.9902 7.12803 16.9261 7.15029 16.8787C7.17534 16.8312 7.20874 16.7685 7.25049 16.6904L8.18565 15H9.70528L7.97691 17.9498L9.75537 21Z" fill="white"/>
+<defs>
+<radialGradient id="product-excel-color-28-paint0_radial_5634_462" cx="0" cy="0" r="1" gradientTransform="matrix(-17 -18.5 14.3242 -13.1574 23.0001 26.5)" gradientUnits="userSpaceOnUse">
+<stop offset="0.0647233" stop-color="#379539"/>
+<stop offset="0.422149" stop-color="#297C2D"/>
+<stop offset="0.703448" stop-color="#15561C"/>
+</radialGradient>
+<radialGradient id="product-excel-color-28-paint1_radial_5634_462" cx="0" cy="0" r="1" gradientTransform="matrix(-7.1875 -7.1875 5.56524 -5.56296 10.5001 13.5)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#073B10"/>
+<stop offset="0.992234" stop-color="#084A13" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-excel-color-28-paint2_linear_5634_462" x1="5" y1="15.8716" x2="13.4241" y2="15.8716" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52D17C"/>
+<stop offset="0.328512" stop-color="#4AA647"/>
+</linearGradient>
+<linearGradient id="product-excel-color-28-paint3_linear_5634_462" x1="13.25" y1="10.4933" x2="13.25" y2="17.9648" gradientUnits="userSpaceOnUse">
+<stop stop-color="#29852F"/>
+<stop offset="0.499968" stop-color="#4AA647" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-excel-color-28-paint4_linear_5634_462" x1="5.4053" y1="11.9158" x2="15.5689" y2="3.10073" gradientUnits="userSpaceOnUse">
+<stop stop-color="#66D052"/>
+<stop offset="1" stop-color="#85E972"/>
+</linearGradient>
+<radialGradient id="product-excel-color-28-paint5_radial_5634_462" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.6041 7.68317) rotate(-180) scale(5.5115 11.6686)">
+<stop offset="0.292495" stop-color="#4EB43B"/>
+<stop offset="1" stop-color="#72CC61" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-excel-color-28-paint6_linear_5634_462" x1="9.95908" y1="8.1286" x2="5.00012" y2="8.1286" gradientUnits="userSpaceOnUse">
+<stop offset="0.183694" stop-color="#C0E075" stop-opacity="0"/>
+<stop offset="1" stop-color="#D1EB95"/>
+</linearGradient>
+<radialGradient id="product-excel-color-28-paint7_radial_5634_462" cx="0" cy="0" r="1" gradientTransform="matrix(10.1466 -8.54962 -8.32163 -10.4246 -1.14657 8.54962)" gradientUnits="userSpaceOnUse">
+<stop offset="0.439983" stop-color="#79E96D"/>
+<stop offset="1" stop-color="#D0EB76"/>
+</radialGradient>
+<radialGradient id="product-excel-color-28-paint8_radial_5634_462" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2 13) rotate(45) scale(14.1421 40.2588)">
+<stop stop-color="#20A85E"/>
+<stop offset="0.94375" stop-color="#09442A"/>
+</radialGradient>
+<radialGradient id="product-excel-color-28-paint9_radial_5634_462" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7 19) rotate(90) scale(7 8.0625)">
+<stop offset="0.580357" stop-color="#33A662" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#98F0B0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,18 +1,20 @@
 /**
  * Expressive Assets — browsing interface.
  *
- * Reads manifest.json (the library's public contract) and per-collection sprite
- * files written by the build. No framework, no build tooling: the whole app is
- * three files GitHub Pages serves as-is, so a designer can open a PR against it
- * without setting up a toolchain.
+ * Reads manifest.json — the library's public contract — and the SVG files it
+ * points at. No framework, no build tooling: the whole app is three files
+ * GitHub Pages serves as-is, so a designer can open a PR against it without
+ * setting up a toolchain.
  *
- * Two things here are sized for a 500+ asset library rather than a demo:
+ * Three things here are sized for a 500+ asset library rather than a demo:
  *
  *  1. Cards render as empty shells immediately and an IntersectionObserver
- *     fills in the artwork as they scroll into view. First paint never waits on
- *     SVG payload.
- *  2. Sprites load per collection, on demand, triggered by what is actually
- *     visible. Opening "System Icons" never downloads the illustration set.
+ *     fills in the artwork as they scroll into view. First paint never waits
+ *     on SVG payload, and only what you actually scroll to is ever fetched.
+ *  2. Drawings are fetched individually and cached, rather than bundled. The
+ *     product icons alone are 828 separate files because Windows artwork is
+ *     redrawn per size; bundling them was 2.3 MB for one collection.
+ *  3. The grid appends in chunks, so 500 cards never become one long frame.
  */
 
 /** Point this at the repo — drives the "Add Assets" and "View source" links. */
@@ -55,10 +57,6 @@ const NAV_ICONS = {
 
 const state = {
   manifest: null,
-  /** `${type}:${collection}` -> { [assetId]: { [theme]: svgSource } }. Lazy. */
-  sprites: {},
-  /** In-flight fetches, so ten cards scrolling in don't fire ten requests. */
-  pending: {},
   filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
@@ -75,55 +73,71 @@ const el = (tag, props = {}, kids = []) => {
 };
 
 /* ------------------------------------------------------------------ */
-/* Sprites                                                             */
+/* Drawings                                                            */
 /* ------------------------------------------------------------------ */
 
-const spriteKey = (asset) => `${asset.type}:${asset.collection}`;
+/**
+ * Resolve which drawing file to use for an asset at a given theme and size.
+ *
+ * Windows product icons are REDRAWN per size — the 16px Excel icon is a
+ * different drawing from the 48px one, not a scaled copy — so asking for 16px
+ * should get the 16px file. Order: exact size, then a size-agnostic "any", then
+ * the nearest size below (scaling a bigger drawing down beats blowing a smaller
+ * one up), then whatever is left.
+ */
+function drawingPath(asset, theme = state.theme, size = state.size) {
+  const drawings = asset.variants?.[theme] || asset.variants?.[asset.themes[0]];
+  if (!drawings) return null;
 
-function spriteUrl(asset) {
-  for (const group of state.manifest.groups) {
-    if (group.type !== asset.type) continue;
-    const found = group.collections.find((c) => c.id === asset.collection);
-    if (found) return found.sprite;
-  }
-  return null;
+  if (size && drawings[size]) return drawings[size];
+  if (drawings.any) return drawings.any;
+
+  const numeric = Object.keys(drawings)
+    .map(Number)
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b);
+  if (!numeric.length) return Object.values(drawings)[0] || null;
+
+  const below = numeric.filter((n) => n <= (size || Infinity)).pop();
+  return drawings[below ?? numeric[numeric.length - 1]];
 }
 
-async function loadSprite(asset) {
-  const key = spriteKey(asset);
-  if (state.sprites[key]) return state.sprites[key];
-  if (state.pending[key]) return state.pending[key];
+/** path -> svg source. Fetched once, kept for the session. */
+const drawings = new Map();
+/** path -> in-flight promise, so ten cards scrolling in fire one request each. */
+const inflight = new Map();
 
-  const url = spriteUrl(asset);
-  const fetchOne = async () => {
-    try {
-      const bank = await (await fetch(url)).json();
-      state.sprites[key] = bank;
-      return bank;
-    } catch {
-      // No prebuilt sprite (serving the repo root directly, say). Fall back to
-      // fetching this asset's own files.
-      const bank = (state.sprites[key] ||= {});
-      bank[asset.id] = {};
-      await Promise.all(
-        Object.entries(asset.variants).map(async ([theme, path]) => {
-          bank[asset.id][theme] = await (await fetch(path)).text();
-        })
-      );
-      return bank;
-    } finally {
-      delete state.pending[key];
-    }
-  };
+function loadDrawing(path) {
+  if (!path) return Promise.resolve(null);
+  if (drawings.has(path)) return Promise.resolve(drawings.get(path));
+  if (inflight.has(path)) return inflight.get(path);
 
-  state.pending[key] = fetchOne();
-  return state.pending[key];
+  const req = fetch(path)
+    .then((r) => (r.ok ? r.text() : null))
+    .then((text) => {
+      if (text) drawings.set(path, text);
+      return text;
+    })
+    .catch(() => null)
+    .finally(() => inflight.delete(path));
+
+  inflight.set(path, req);
+  return req;
 }
 
-function sourceFor(asset, theme = state.theme) {
-  const bank = state.sprites[spriteKey(asset)]?.[asset.id];
-  if (!bank) return null;
-  return bank[bank[theme] ? theme : asset.themes[0]] || null;
+/** Synchronous read of an already-loaded drawing. */
+function sourceFor(asset, theme = state.theme, size = state.size) {
+  const path = drawingPath(asset, theme, size);
+  return path ? drawings.get(path) || null : null;
+}
+
+/** Whether the accent picker can actually do anything to this drawing.
+ *  Brand artwork ships with its colors baked in and has no tint hooks —
+ *  better to say so than to offer a control that silently does nothing. */
+function isTintable(asset, theme = state.theme) {
+  if (asset.recolorable === false) return false;
+  const source = sourceFor(asset, theme);
+  return Boolean(source) && (source.includes('--ea-primary') || source.includes('currentColor'));
 }
 
 /* ------------------------------------------------------------------ */
@@ -132,23 +146,33 @@ function sourceFor(asset, theme = state.theme) {
 
 const HEX = '#[0-9A-Fa-f]{6}';
 
-/** Bake the current color choices into an SVG source string. */
+/**
+ * Bake the current color choices into an SVG source string.
+ *
+ * Two tinting conventions live side by side. Generated artwork declares
+ * --ea-primary / --ea-secondary custom properties. Imported monochrome artwork
+ * (the Outline and Mono themes of the real product icons) is drawn in
+ * currentColor, which tints by setting `color` on the root.
+ */
 function tint(source, { primary, secondary, size }) {
   let out = source;
   if (primary) out = out.replace(new RegExp(`--ea-primary:${HEX}`), `--ea-primary:${primary}`);
   if (secondary) out = out.replace(new RegExp(`--ea-secondary:${HEX}`), `--ea-secondary:${secondary}`);
-  if (size) out = out.replace(/width="\d+" height="\d+"/, `width="${size}" height="${size}"`);
+  if (primary && out.includes('currentColor') && !out.includes('style="color:')) {
+    out = out.replace('<svg ', `<svg style="color:${primary}" `);
+  }
+  if (size) out = out.replace(/width="\d+"\s+height="\d+"/, `width="${size}" height="${size}"`);
   return out;
 }
 
-/** Effective colors for an asset. A non-recolorable asset ignores the accent —
- *  brand marks ship in their own colors or not at all. */
-function colorsFor(asset, accentId = state.accent) {
+/** Effective colors for an asset. Artwork with no tint hooks keeps its own
+ *  colors — brand marks ship as authored or not at all. */
+function colorsFor(asset, accentId = state.accent, theme = state.theme) {
   const accent = ACCENTS.find((a) => a.id === accentId) || ACCENTS[0];
-  const locked = asset.recolorable === false;
+  const canTint = isTintable(asset, theme);
   return {
-    primary: (!locked && accent.primary) || asset.colors.primary,
-    secondary: (!locked && accent.secondary) || asset.colors.secondary,
+    primary: (canTint && accent.primary) || asset.colors.primary,
+    secondary: (canTint && accent.secondary) || asset.colors.secondary,
   };
 }
 
@@ -257,7 +281,7 @@ const painter = new IntersectionObserver(
 async function paintCard(card) {
   const asset = state.manifest.assets.find((a) => a.id === card.dataset.id);
   if (!asset) return;
-  if (!sourceFor(asset)) await loadSprite(asset);
+  await loadDrawing(drawingPath(asset));
 
   const source = sourceFor(asset);
   const thumb = card.querySelector('.thumb');
@@ -340,7 +364,9 @@ async function openPanel(id) {
     card.classList.toggle('on', card.dataset.id === id);
   }
 
-  if (!sourceFor(asset)) await loadSprite(asset);
+  // Load every theme's drawing at this size so the Style toggle and the
+  // accent-availability note are correct the moment the panel opens.
+  await Promise.all(asset.themes.map((t) => loadDrawing(drawingPath(asset, t))));
   if (state.selectedId === id) renderPanel();
 }
 
@@ -348,6 +374,25 @@ function closePanel() {
   state.selectedId = null;
   $('#panel').hidden = true;
   for (const card of document.querySelectorAll('.card.on')) card.classList.remove('on');
+}
+
+/** "One scalable drawing" vs "6 sizes: 16, 20, 24…" — tells you at a glance
+ *  whether you are looking at per-size artwork or one scalable file. */
+function drawingSummary(asset) {
+  const drawings = asset.variants?.[state.theme] || {};
+  const sizes = Object.keys(drawings).filter((k) => k !== 'any');
+  if (!sizes.length) return 'One scalable drawing';
+  return `${sizes.length} per-size (${sizes.map(Number).sort((a, b) => a - b).join(', ')})`;
+}
+
+/** Repo path of the drawing currently on screen. */
+function sourcePath(asset) {
+  const drawings = asset.variants?.[state.theme] || asset.variants?.[asset.themes[0]] || {};
+  if (drawings[state.size]) return drawings[state.size];
+  if (drawings.any) return drawings.any;
+  const numeric = Object.keys(drawings).map(Number).filter(Number.isFinite).sort((a, b) => a - b);
+  const below = numeric.filter((n) => n <= state.size).pop();
+  return drawings[below ?? numeric[numeric.length - 1]] || '';
 }
 
 function collectionLabel(asset) {
@@ -367,7 +412,9 @@ function renderPanel() {
   panel.replaceChildren();
 
   const colors = colorsFor(asset);
-  const locked = asset.recolorable === false;
+  const canTint = isTintable(asset);
+  // Which themes CAN take an accent — used to explain why the picker is off.
+  const tintableThemes = asset.themes.filter((t) => isTintable(asset, t));
 
   /* Head */
   const head = el('div', { className: 'panel-head' });
@@ -420,8 +467,9 @@ function renderPanel() {
       title: available ? `${theme.label} (${theme.key})` : `Not authored for ${asset.name}`,
     });
     btn.setAttribute('aria-pressed', String(state.theme === theme.key));
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       state.theme = theme.key;
+      await loadDrawing(drawingPath(asset));
       repaintVisible();
       renderPanel();
     });
@@ -441,9 +489,13 @@ function renderPanel() {
     value: asset.sizes.indexOf(state.size),
   });
   slider.setAttribute('aria-label', 'Preview size');
-  slider.addEventListener('input', () => {
+  slider.addEventListener('input', async () => {
     state.size = asset.sizes[Number(slider.value)];
+    // Per-size artwork means a new size is a different FILE, which may not be
+    // fetched yet. Render immediately so the slider feels live, then re-render
+    // once the drawing lands.
     renderPanel();
+    if (await loadDrawing(drawingPath(asset))) renderPanel();
   });
   panel.append(slider);
 
@@ -461,11 +513,14 @@ function renderPanel() {
 
   /* Accents */
   panel.append(el('h3', { textContent: 'Windows accents' }));
-  if (locked) {
+  if (!canTint) {
+    const others = tintableThemes.map((t) => THEMES.find((x) => x.key === t)?.label).filter(Boolean);
     panel.append(
       el('p', {
         className: 'callout',
-        textContent: 'Not recolorable — this asset ships in its own brand colors.',
+        textContent: others.length
+          ? `${THEMES.find((t) => t.key === state.theme)?.label} ships in brand colors and can't be retinted. Switch to ${others.join(' or ')} to apply an accent.`
+          : 'Not recolorable — this asset ships in its own brand colors.',
       })
     );
   } else {
@@ -496,7 +551,8 @@ function renderPanel() {
     ['Status', STATUS_LABEL[asset.status]],
     ['Themes', asset.themes.join(', ')],
     ['Sizes', asset.sizes.join(', ')],
-    ['Recolorable', locked ? 'No' : 'Yes'],
+    ['Accent', tintableThemes.length ? `${tintableThemes.length} of ${asset.themes.length} themes` : 'Not applicable'],
+    ['Drawings', drawingSummary(asset)],
     ['Version', `${asset.version} · ${asset.updated}`],
   ];
   if (asset.aliases?.length) entries.splice(1, 0, ['Also known as', asset.aliases.join(', ')]);
@@ -561,7 +617,7 @@ function renderPanel() {
   actions.append(
     el('a', {
       className: 'btn',
-      href: `${REPO}/tree/main/${asset.variants[state.theme] || asset.variants[asset.themes[0]]}`,
+      href: `${REPO}/tree/main/${sourcePath(asset)}`,
       target: '_blank',
       rel: 'noopener',
       textContent: 'View source on GitHub',
@@ -657,7 +713,9 @@ async function boot() {
   renderNav();
   renderGrid();
 
-  const first = state.manifest.assets.find((a) => a.id === 'system.settings') || state.manifest.assets[0];
+  // Open the first asset in library order, so the panel matches whatever the
+  // sidebar puts first rather than a hard-coded favourite.
+  const [first] = state.manifest.assets;
   if (first) openPanel(first.id);
 }
 

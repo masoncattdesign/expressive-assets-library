@@ -1,0 +1,51 @@
+{
+  "id": "product.microsoft",
+  "name": "Microsoft",
+  "keywords": [
+    "microsoft"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Microsoft",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#F25022",
+    "secondary": "#02A4EF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "12": "assets/icons/product/microsoft/color-12.svg",
+      "16": "assets/icons/product/microsoft/color-16.svg",
+      "20": "assets/icons/product/microsoft/color-20.svg",
+      "24": "assets/icons/product/microsoft/color-24.svg",
+      "28": "assets/icons/product/microsoft/color-28.svg",
+      "32": "assets/icons/product/microsoft/color-32.svg",
+      "48": "assets/icons/product/microsoft/color-48.svg"
+    },
+    "filled": {
+      "12": "assets/icons/product/microsoft/filled-12.svg",
+      "16": "assets/icons/product/microsoft/filled-16.svg",
+      "20": "assets/icons/product/microsoft/filled-20.svg",
+      "24": "assets/icons/product/microsoft/filled-24.svg",
+      "28": "assets/icons/product/microsoft/filled-28.svg",
+      "32": "assets/icons/product/microsoft/filled-32.svg",
+      "48": "assets/icons/product/microsoft/filled-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "product.onedrive-photos",
+  "name": "OneDrive Photos",
+  "keywords": [
+    "onedrive",
+    "photos"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "OneDrive Photos",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#021E76",
+    "secondary": "#8CD0FF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/onedrive-photos/color-16.svg",
+      "20": "assets/icons/product/onedrive-photos/color-20.svg",
+      "24": "assets/icons/product/onedrive-photos/color-24.svg",
+      "28": "assets/icons/product/onedrive-photos/color-28.svg",
+      "32": "assets/icons/product/onedrive-photos/color-32.svg",
+      "48": "assets/icons/product/onedrive-photos/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/onedrive-photos/filled-16.svg",
+      "20": "assets/icons/product/onedrive-photos/filled-20.svg",
+      "24": "assets/icons/product/onedrive-photos/filled-24.svg",
+      "28": "assets/icons/product/onedrive-photos/filled-28.svg",
+      "32": "assets/icons/product/onedrive-photos/filled-32.svg",
+      "48": "assets/icons/product/onedrive-photos/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/onedrive-photos/regular-16.svg",
+      "20": "assets/icons/product/onedrive-photos/regular-20.svg",
+      "24": "assets/icons/product/onedrive-photos/regular-24.svg",
+      "28": "assets/icons/product/onedrive-photos/regular-28.svg",
+      "32": "assets/icons/product/onedrive-photos/regular-32.svg",
+      "48": "assets/icons/product/onedrive-photos/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

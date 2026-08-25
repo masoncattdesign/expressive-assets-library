@@ -128,7 +128,9 @@ function renderIllustration(spec) {
 function metaFor(spec, { type, themes, sizes, dir }) {
   const slug = spec.id.split('.')[1];
   const life = LIFECYCLE[spec.id] || {};
-  const variants = Object.fromEntries(themes.map((t) => [t, `${dir}/${slug}/${t}.svg`]));
+  // Placeholder artwork is one scalable drawing per theme, so it uses the
+  // "any" key. Real per-size artwork keys each drawing by its pixel size.
+  const variants = Object.fromEntries(themes.map((t) => [t, { any: `${dir}/${slug}/${t}.svg` }]));
   const description = DESCRIPTIONS[spec.id];
   const aliases = ALIASES[spec.id];
 
@@ -160,7 +162,15 @@ async function write(path, contents) {
 }
 
 async function main() {
-  await rm(join(ROOT, 'assets'), { recursive: true, force: true });
+  /* Remove only what THIS script produces.
+     It used to wipe assets/ wholesale, which was fine when every asset was
+     generated and catastrophic the moment real imported artwork moved in —
+     one `npm run generate` would have deleted the whole product icon set. */
+  for (const spec of [...ICONS, ...ILLUSTRATIONS]) {
+    const kind = ICONS.includes(spec) ? 'icons' : 'illustrations';
+    const slug = spec.id.split('.')[1];
+    await rm(join(ROOT, 'assets', kind, spec.collection, slug), { recursive: true, force: true });
+  }
 
   let count = 0;
 

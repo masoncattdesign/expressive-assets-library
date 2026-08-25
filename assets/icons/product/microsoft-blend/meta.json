@@ -1,0 +1,58 @@
+{
+  "id": "product.microsoft-blend",
+  "name": "Microsoft Blend",
+  "keywords": [
+    "microsoft",
+    "blend"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Microsoft Blend",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#20AC9D",
+    "secondary": "#1384B1"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/microsoft-blend/color-16.svg",
+      "20": "assets/icons/product/microsoft-blend/color-20.svg",
+      "24": "assets/icons/product/microsoft-blend/color-24.svg",
+      "28": "assets/icons/product/microsoft-blend/color-28.svg",
+      "32": "assets/icons/product/microsoft-blend/color-32.svg",
+      "48": "assets/icons/product/microsoft-blend/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/microsoft-blend/filled-16.svg",
+      "20": "assets/icons/product/microsoft-blend/filled-20.svg",
+      "24": "assets/icons/product/microsoft-blend/filled-24.svg",
+      "28": "assets/icons/product/microsoft-blend/filled-28.svg",
+      "32": "assets/icons/product/microsoft-blend/filled-32.svg",
+      "48": "assets/icons/product/microsoft-blend/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/microsoft-blend/regular-16.svg",
+      "20": "assets/icons/product/microsoft-blend/regular-20.svg",
+      "24": "assets/icons/product/microsoft-blend/regular-24.svg",
+      "28": "assets/icons/product/microsoft-blend/regular-28.svg",
+      "32": "assets/icons/product/microsoft-blend/regular-32.svg",
+      "48": "assets/icons/product/microsoft-blend/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

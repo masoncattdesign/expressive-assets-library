@@ -1,0 +1,58 @@
+{
+  "id": "product.fluid-framework",
+  "name": "Fluid Framework",
+  "keywords": [
+    "fluid",
+    "framework"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Fluid Framework",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#2F27A5",
+    "secondary": "#2052CB"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/fluid-framework/color-16.svg",
+      "20": "assets/icons/product/fluid-framework/color-20.svg",
+      "24": "assets/icons/product/fluid-framework/color-24.svg",
+      "28": "assets/icons/product/fluid-framework/color-28.svg",
+      "32": "assets/icons/product/fluid-framework/color-32.svg",
+      "48": "assets/icons/product/fluid-framework/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/fluid-framework/filled-16.svg",
+      "20": "assets/icons/product/fluid-framework/filled-20.svg",
+      "24": "assets/icons/product/fluid-framework/filled-24.svg",
+      "28": "assets/icons/product/fluid-framework/filled-28.svg",
+      "32": "assets/icons/product/fluid-framework/filled-32.svg",
+      "48": "assets/icons/product/fluid-framework/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/fluid-framework/regular-16.svg",
+      "20": "assets/icons/product/fluid-framework/regular-20.svg",
+      "24": "assets/icons/product/fluid-framework/regular-24.svg",
+      "28": "assets/icons/product/fluid-framework/regular-28.svg",
+      "32": "assets/icons/product/fluid-framework/regular-32.svg",
+      "48": "assets/icons/product/fluid-framework/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

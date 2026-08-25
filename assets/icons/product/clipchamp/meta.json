@@ -1,0 +1,57 @@
+{
+  "id": "product.clipchamp",
+  "name": "Clipchamp",
+  "keywords": [
+    "clipchamp"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Clipchamp",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#7611F0",
+    "secondary": "#944EF6"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/clipchamp/color-16.svg",
+      "20": "assets/icons/product/clipchamp/color-20.svg",
+      "24": "assets/icons/product/clipchamp/color-24.svg",
+      "28": "assets/icons/product/clipchamp/color-28.svg",
+      "32": "assets/icons/product/clipchamp/color-32.svg",
+      "48": "assets/icons/product/clipchamp/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/clipchamp/filled-16.svg",
+      "20": "assets/icons/product/clipchamp/filled-20.svg",
+      "24": "assets/icons/product/clipchamp/filled-24.svg",
+      "28": "assets/icons/product/clipchamp/filled-28.svg",
+      "32": "assets/icons/product/clipchamp/filled-32.svg",
+      "48": "assets/icons/product/clipchamp/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/clipchamp/regular-16.svg",
+      "20": "assets/icons/product/clipchamp/regular-20.svg",
+      "24": "assets/icons/product/clipchamp/regular-24.svg",
+      "28": "assets/icons/product/clipchamp/regular-28.svg",
+      "32": "assets/icons/product/clipchamp/regular-32.svg",
+      "48": "assets/icons/product/clipchamp/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

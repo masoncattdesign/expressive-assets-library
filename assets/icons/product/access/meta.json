@@ -1,0 +1,57 @@
+{
+  "id": "product.access",
+  "name": "Access",
+  "keywords": [
+    "access"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Access",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#9C0D55",
+    "secondary": "#FF5778"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/access/color-16.svg",
+      "20": "assets/icons/product/access/color-20.svg",
+      "24": "assets/icons/product/access/color-24.svg",
+      "28": "assets/icons/product/access/color-28.svg",
+      "32": "assets/icons/product/access/color-32.svg",
+      "48": "assets/icons/product/access/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/access/filled-16.svg",
+      "20": "assets/icons/product/access/filled-20.svg",
+      "24": "assets/icons/product/access/filled-24.svg",
+      "28": "assets/icons/product/access/filled-28.svg",
+      "32": "assets/icons/product/access/filled-32.svg",
+      "48": "assets/icons/product/access/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/access/regular-16.svg",
+      "20": "assets/icons/product/access/regular-20.svg",
+      "24": "assets/icons/product/access/regular-24.svg",
+      "28": "assets/icons/product/access/regular-28.svg",
+      "32": "assets/icons/product/access/regular-32.svg",
+      "48": "assets/icons/product/access/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

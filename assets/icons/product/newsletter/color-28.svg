@@ -1,0 +1,37 @@
+<svg aria-label="Newsletter color 28" role="img" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 22.5C20 23.8807 21.1193 25 22.5 25C23.8807 25 24.9999 23.8807 24.9999 22.5V6.5C24.9999 5.67157 24.3284 5 23.4999 5H20V22.5Z" fill="url(#product-newsletter-color-28-paint0_linear_330826_1544)"/>
+<path d="M20 22.5C20 23.8807 21.1193 25 22.5 25C23.8807 25 24.9999 23.8807 24.9999 22.5V6.5C24.9999 5.67157 24.3284 5 23.4999 5H20V22.5Z" fill="url(#product-newsletter-color-28-paint1_linear_330826_1544)" fill-opacity="0.3"/>
+<path d="M20 22.5C20 23.8807 21.1193 25 22.5 25C23.8807 25 24.9999 23.8807 24.9999 22.5V6.5C24.9999 5.67157 24.3284 5 23.4999 5H20V22.5Z" fill="url(#product-newsletter-color-28-paint2_linear_330826_1544)" fill-opacity="0.2"/>
+<path d="M5.25 25C4.00736 25 3 23.9926 3 22.75V4.57143C3 3.70355 3.70355 3 4.57143 3H18.4286C19.2964 3 20 3.70355 20 4.57143V22.5C20 23.8807 21.1193 25 22.5 25H5.25Z" fill="url(#product-newsletter-color-28-paint3_linear_330826_1544)"/>
+<path d="M8.35714 25C7.05533 25 6 23.9447 6 22.6429V17.75C6 17.3358 6.33579 17 6.75 17H16.25C16.6642 17 17 17.3358 17 17.75V22.5C17 23.8807 18.1193 25 19.5 25H8.35714Z" fill="url(#product-newsletter-color-28-paint4_linear_330826_1544)"/>
+<rect width="11" height="4" rx="0.75" transform="matrix(1 0 0 -1 6 16)" fill="#0084DF"/>
+<rect x="6" y="6" width="11" height="5" rx="0.75" fill="url(#product-newsletter-color-28-paint5_linear_330826_1544)"/>
+<defs>
+<linearGradient id="product-newsletter-color-28-paint0_linear_330826_1544" x1="22.4983" y1="25" x2="22.4983" y2="10.7143" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00479E"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="product-newsletter-color-28-paint1_linear_330826_1544" x1="18.3333" y1="14.2308" x2="21.6667" y2="14.2308" gradientUnits="userSpaceOnUse">
+<stop offset="0.4375"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-newsletter-color-28-paint2_linear_330826_1544" x1="18.3333" y1="14.2308" x2="21.6667" y2="14.2308" gradientUnits="userSpaceOnUse">
+<stop offset="0.484375"/>
+<stop offset="0.710938" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-newsletter-color-28-paint3_linear_330826_1544" x1="10.4644" y1="26.5714" x2="10.4644" y2="1.42857" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="0.140413" stop-color="#14B1FF"/>
+<stop offset="0.8268" stop-color="#3DCBFF"/>
+</linearGradient>
+<linearGradient id="product-newsletter-color-28-paint4_linear_330826_1544" x1="8.89301" y1="25" x2="8.89301" y2="11.0317" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0057AD"/>
+<stop offset="0.140413" stop-color="#0078D4"/>
+<stop offset="0.824416" stop-color="#0091EB"/>
+</linearGradient>
+<linearGradient id="product-newsletter-color-28-paint5_linear_330826_1544" x1="11.5" y1="6" x2="11.5" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7F7FF"/>
+<stop offset="1" stop-color="#ABEEFF"/>
+</linearGradient>
+</defs>
+</svg>

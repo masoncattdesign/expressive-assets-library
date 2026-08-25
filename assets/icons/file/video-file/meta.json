@@ -31,9 +31,15 @@
   },
   "recolorable": true,
   "variants": {
-    "color": "assets/icons/file/video-file/color.svg",
-    "regular": "assets/icons/file/video-file/regular.svg",
-    "filled": "assets/icons/file/video-file/filled.svg"
+    "color": {
+      "any": "assets/icons/file/video-file/color.svg"
+    },
+    "regular": {
+      "any": "assets/icons/file/video-file/regular.svg"
+    },
+    "filled": {
+      "any": "assets/icons/file/video-file/filled.svg"
+    }
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",

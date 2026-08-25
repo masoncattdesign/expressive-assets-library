@@ -1,0 +1,36 @@
+{
+  "id": "product.mileiq",
+  "name": "MileIQ",
+  "keywords": [
+    "mileiq"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "MileIQ",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled"
+  ],
+  "sizes": [
+    24,
+    28
+  ],
+  "colors": {
+    "primary": "#FFB300",
+    "secondary": "#FF8E08"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "24": "assets/icons/product/mileiq/color-24.svg",
+      "28": "assets/icons/product/mileiq/color-28.svg"
+    },
+    "filled": {
+      "24": "assets/icons/product/mileiq/filled-24.svg",
+      "28": "assets/icons/product/mileiq/filled-28.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "product.onedrive",
+  "name": "OneDrive",
+  "keywords": [
+    "onedrive"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "OneDrive",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled",
+    "regular"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#4894FE",
+    "secondary": "#00BBFF"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/onedrive/color-16.svg",
+      "20": "assets/icons/product/onedrive/color-20.svg",
+      "24": "assets/icons/product/onedrive/color-24.svg",
+      "28": "assets/icons/product/onedrive/color-28.svg",
+      "32": "assets/icons/product/onedrive/color-32.svg",
+      "48": "assets/icons/product/onedrive/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/onedrive/filled-16.svg",
+      "20": "assets/icons/product/onedrive/filled-20.svg",
+      "24": "assets/icons/product/onedrive/filled-24.svg",
+      "28": "assets/icons/product/onedrive/filled-28.svg",
+      "32": "assets/icons/product/onedrive/filled-32.svg",
+      "48": "assets/icons/product/onedrive/filled-48.svg"
+    },
+    "regular": {
+      "16": "assets/icons/product/onedrive/regular-16.svg",
+      "20": "assets/icons/product/onedrive/regular-20.svg",
+      "24": "assets/icons/product/onedrive/regular-24.svg",
+      "28": "assets/icons/product/onedrive/regular-28.svg",
+      "32": "assets/icons/product/onedrive/regular-32.svg",
+      "48": "assets/icons/product/onedrive/regular-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

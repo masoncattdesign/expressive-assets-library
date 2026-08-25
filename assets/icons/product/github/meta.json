@@ -1,0 +1,48 @@
+{
+  "id": "product.github",
+  "name": "GitHub",
+  "keywords": [
+    "github"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "GitHub",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/github/color-16.svg",
+      "20": "assets/icons/product/github/color-20.svg",
+      "24": "assets/icons/product/github/color-24.svg",
+      "28": "assets/icons/product/github/color-28.svg",
+      "32": "assets/icons/product/github/color-32.svg",
+      "48": "assets/icons/product/github/color-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/github/filled-16.svg",
+      "20": "assets/icons/product/github/filled-20.svg",
+      "24": "assets/icons/product/github/filled-24.svg",
+      "28": "assets/icons/product/github/filled-28.svg",
+      "32": "assets/icons/product/github/filled-32.svg",
+      "48": "assets/icons/product/github/filled-48.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}

@@ -5,7 +5,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 38 (32 icons, 6 illustrations) |
+| **Assets** | 73 (67 icons, 6 illustrations) — 46 real product icons, the rest placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
@@ -65,7 +65,7 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `sizes` | Pixel sizes the geometry is *legible* at, not what it can scale to |
 | `colors` | `primary` / `secondary` baked into the Expressive variant |
 | `recolorable` | False for brand marks — the browser greys out the accent picker |
-| `variants` | Path to each theme's SVG |
+| `variants` | Theme → size → SVG path. Windows artwork is redrawn per size, so each drawing is kept |
 | `figma` | `fileKey` + `nodeId` — traces an asset back to the component that made it |
 | `version`, `updated`, `owner` | Provenance |
 
@@ -124,17 +124,21 @@ locally.
 ## The browsing interface
 
 `docs/` is three files: `index.html`, `styles.css`, `app.js`. It reads
-`manifest.json` plus build-time sprite files, and gives you search across names,
+`manifest.json` and the SVGs it points at, and gives you search across names,
 aliases, ids, keywords and descriptions; sidebar filtering by collection; a
 status filter; grid and list views; live theme, size and Windows-accent
 switching; arrow-key navigation; and copy/download of the exact SVG on screen.
 
 Two things in it are sized for 500+ assets rather than a demo. Cards render as
 empty shells immediately and an `IntersectionObserver` fills in artwork as they
-scroll into view, so first paint never waits on SVG payload. And sprites are
-chunked **per collection** and fetched on demand — opening System Icons never
-downloads the illustration set. A single whole-library sprite is fine at 38
-assets and a multi-megabyte stall at 500.
+scroll into view, so first paint never waits on SVG payload. And drawings are
+fetched individually and cached rather than bundled — measured on the current
+library, a cold load is 51 requests and 37 KB with first artwork at 275 ms,
+because the cost is bounded by the viewport rather than by the library size.
+
+Bundling was tried and abandoned. It worked at 38 scalable assets; the moment
+artwork is drawn per size it does not. The 46 product icons alone are 828
+separate drawings, which bundled to 2.3 MB for one collection.
 
 Because it is unbuilt static files, a designer can edit a color token in
 `styles.css` and open a PR without installing a toolchain.
@@ -147,7 +151,32 @@ a second copy of the artwork inside `docs/`, which would drift.
 GitHub Actions*. If the repo is ever renamed or forked, update `REPO` at the top
 of `docs/app.js` — it drives the "Add Assets" and "View source" links.
 
-## Importing from Figma
+## Importing a folder export
+
+If you already have artwork exported out of Figma as folders — the shape Figma
+produces, `<Asset Name>/Size=24, Theme=Color.svg` — import it directly:
+
+```bash
+node scripts/import-folder.mjs --from="~/Downloads/Product Icons" \
+                               --collection=product --dry-run
+```
+
+Drop `--dry-run` to write. It reports partial coverage, unmapped theme names
+and unparseable filenames before touching anything.
+
+Three things it handles that a copy would not. It keeps **every size** rather
+than collapsing to one drawing. It strips Figma's dedupe suffixes (`Color-4`)
+and tolerates the stray spaces real exports contain (`Theme= Filled`). And it
+**namespaces every id** — Figma names gradients things like
+`paint0_radial_5634_483`, and inlining forty of those into one page makes
+duplicates resolve to whichever came first.
+
+Monochrome themes are rewritten to `currentColor` so they take a Windows
+accent. The Color theme keeps its brand gradients untouched, and the browser
+detects that per theme at runtime — so the accent picker is offered exactly
+where it can do something, and explains itself where it cannot.
+
+## Importing from the Figma API
 
 `scripts/import-figma.mjs` runs in two passes on purpose. At 500+ components you
 do not want a script guessing at your file's structure and writing a thousand

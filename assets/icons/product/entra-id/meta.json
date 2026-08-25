@@ -1,0 +1,40 @@
+{
+  "id": "product.entra-id",
+  "name": "Entra ID",
+  "keywords": [
+    "entra",
+    "id"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "product": "Entra ID",
+  "status": "draft",
+  "themes": [
+    "color",
+    "filled"
+  ],
+  "sizes": [
+    16,
+    24,
+    32
+  ],
+  "colors": {
+    "primary": "#225086",
+    "secondary": "#96BCC2"
+  },
+  "recolorable": true,
+  "variants": {
+    "color": {
+      "16": "assets/icons/product/entra-id/color-16.svg",
+      "24": "assets/icons/product/entra-id/color-24.svg",
+      "32": "assets/icons/product/entra-id/color-32.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/entra-id/filled-16.svg",
+      "24": "assets/icons/product/entra-id/filled-24.svg",
+      "32": "assets/icons/product/entra-id/filled-32.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25"
+}
