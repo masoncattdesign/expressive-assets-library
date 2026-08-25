@@ -57,7 +57,7 @@ const NAV_ICONS = {
 
 const state = {
   manifest: null,
-  filter: { group: null, collection: null, query: '', status: '' },
+  filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
   theme: 'color',
@@ -194,19 +194,11 @@ function svgNode(source, size) {
 function visibleAssets() {
   const { group, collection, query, status } = state.filter;
   const q = query.trim().toLowerCase();
-  const searching = q.length > 0;
-
   return state.manifest.assets.filter((a) => {
-    // A query searches the whole library. With no "All Assets" entry in the
-    // sidebar there is no other way to look across collections, and scoping
-    // search to the current one would mean having to know where an icon lived
-    // before you could find it.
-    if (!searching) {
-      if (group && a.type !== group) return false;
-      if (collection && a.collection !== collection) return false;
-    }
+    if (group !== 'all' && a.type !== group) return false;
+    if (collection && a.collection !== collection) return false;
     if (status && a.status !== status) return false;
-    if (!searching) return true;
+    if (!q) return true;
     return (
       a.name.toLowerCase().includes(q) ||
       a.id.toLowerCase().includes(q) ||
@@ -236,6 +228,16 @@ function renderNav() {
   nav.replaceChildren();
   const { group, collection } = state.filter;
 
+  nav.append(
+    navButton({
+      label: 'All Assets',
+      count: state.manifest.total,
+      icon: NAV_ICONS.all,
+      active: group === 'all' && !collection,
+      onClick: () => selectCollection('all', null),
+    })
+  );
+
   for (const g of state.manifest.groups) {
     nav.append(el('div', { className: 'nav-group', textContent: g.label.toUpperCase() }));
     for (const c of g.collections) {
@@ -244,7 +246,7 @@ function renderNav() {
           label: c.label,
           count: c.count,
           icon: NAV_ICONS[g.type === 'illustration' ? 'illustration' : c.id] || NAV_ICONS.all,
-          active: !state.filter.query.trim() && group === g.type && collection === c.id,
+          active: group === g.type && collection === c.id,
           onClick: () => selectCollection(g.type, c.id),
         })
       );
@@ -322,15 +324,12 @@ function renderGrid() {
 
   grid.className = `grid${state.view === 'list' ? ' list' : ''}`;
   grid.replaceChildren();
-  const searching = state.filter.query.trim().length > 0;
-  $('#count').textContent = searching
-    ? `${assets.length} match${assets.length === 1 ? '' : 'es'} · all collections`
-    : `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
+  $('#count').textContent = `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
 
   if (!assets.length) {
     const empty = el('div', { className: 'empty' });
     empty.innerHTML =
-      '<strong>Nothing matches</strong>That search covered every collection. Try a different term, or clear the status filter.';
+      '<strong>No assets match those filters</strong>Try a different search term, or clear the status filter.';
     grid.append(empty);
     return;
   }
@@ -574,7 +573,6 @@ function renderPanel() {
       btn.addEventListener('click', () => {
         $('#search').value = keyword;
         state.filter.query = keyword;
-        renderNav();
         renderGrid();
       });
       tags.append(btn);
@@ -660,7 +658,6 @@ function moveSelection(delta) {
 function wireChrome() {
   $('#search').addEventListener('input', (e) => {
     state.filter.query = e.target.value;
-    renderNav();
     renderGrid();
   });
 
@@ -710,13 +707,6 @@ async function boot() {
     $('#grid').innerHTML =
       '<div class="empty"><strong>Could not load manifest.json</strong>Run <code>npm run build</code> and serve the <code>_site</code> folder — opening index.html straight from disk blocks the fetch.</div>';
     return;
-  }
-
-  const [firstGroup] = state.manifest.groups;
-  const [firstCollection] = firstGroup?.collections || [];
-  if (firstGroup && firstCollection) {
-    state.filter.group = firstGroup.type;
-    state.filter.collection = firstCollection.id;
   }
 
   wireChrome();
