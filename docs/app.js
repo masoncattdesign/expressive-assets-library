@@ -50,6 +50,7 @@ const NAV_ICONS = {
   system: '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/>',
   product: '<circle cx="12" cy="12" r="7.5"/>',
   file: '<path d="M7 3.5h6l4.5 4.5V19a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5Z"/>',
+  vscode: '<path d="M4 6.5 8.5 3v18L4 17.5Zm5.8 5.5 8.2-7.6v15.2Z"/>',
   illustration: '<path d="M4 17.5 9 8l4 5.5L15.5 10l4.5 7.5Z"/>',
 };
 

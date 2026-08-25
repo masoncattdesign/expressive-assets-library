@@ -1,0 +1,8 @@
+<svg id="ea-vscode-menu-standard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" role="img" aria-label="Menu standard"><style>#ea-vscode-menu-standard{--ea-primary:#0F6CBD;--ea-secondary:#38C6C6}#ea-vscode-menu-standard .c1{stop-color:var(--ea-primary)}#ea-vscode-menu-standard .c2{stop-color:var(--ea-secondary)}</style><defs><linearGradient id="ea-vscode-menu-standard-g" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop class="c1"/><stop offset="1" class="c2"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ea-vscode-menu-standard-g)"/><g transform="translate(4.56 4.56) scale(0.9300)"><g clip-path="url(#vscode-menu-standard-clip0)">
+<path d="M16.0002 5H0.000244141V4H16.0002V5ZM16.0002 13H0.000244141V12H16.0002V13ZM16.0002 8.99218H0.000244141V8H16.0002V8.99218Z" fill="#fff"/>
+</g>
+<defs>
+<clipPath id="vscode-menu-standard-clip0">
+<rect width="16" height="16" fill="white" transform="translate(0.000244141)"/>
+</clipPath>
+</defs></g></svg>

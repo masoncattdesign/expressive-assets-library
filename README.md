@@ -5,7 +5,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 2,953 — 2,891 Fluent system icons, 46 Microsoft product icons, 16 placeholder |
+| **Assets** | 3,291 — 2,891 Fluent system, 338 VS Code, 46 Microsoft product, 16 placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
@@ -25,6 +25,7 @@ assets/
     system/      System Icons     — OS surfaces: settings, search, battery…
     product/     Product Icons    — first-party apps: mail, photos, store…
     file/        File Icons       — document types: doc, xls, pdf, zip…
+    vscode/      VS Code Icons    — VS Code UI glyphs: debug, git, terminal…
   illustrations/
     windows/     Windows Illustrations
     fluent/      Fluent Illustrations
@@ -65,7 +66,7 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `keywords` | Synonyms someone would type who doesn't know the name |
 | `description` | One line on what it depicts. Also the duplicate-detector |
 | `type` | `icon` or `illustration` |
-| `collection` | `system` · `product` · `file` · `windows` · `fluent` |
+| `collection` | `system` · `product` · `file` · `vscode` · `windows` · `fluent` |
 | `product` | Product artwork only — which product it represents |
 | `status` | `draft` · `published` · `deprecated`, plus `replacedBy` |
 | `themes` | Which of `standard` / `outline` / `mono` exist on disk |
@@ -121,6 +122,7 @@ Mono assets on a dark surface.
 
 ```bash
 npm run generate      # rebuild every placeholder SVG from scripts/sources/specs.mjs
+npm run notices       # regenerate THIRD-PARTY-NOTICES.md from asset `source` fields
 npm run manifest      # rescan assets/ and rewrite manifest.json
 npm run validate      # schema + artwork + manifest check, plus a coverage report
 npm run build         # validate, then assemble _site/
@@ -202,6 +204,31 @@ the library from 12% to 84% description coverage.
 Attribution travels with the artwork: each asset carries a `source` block naming
 the project, licence, copyright and upstream URL, and the browser shows it in
 the detail panel where someone is about to copy the file.
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) is generated from those blocks
+by `npm run notices`, so it cannot drift from what the repo actually contains —
+a notices file maintained by hand is a licence problem waiting to happen.
+
+## Importing VS Code icons
+
+```bash
+git clone --depth 1 https://github.com/microsoft/vscode-icons.git
+node scripts/import-vscode.mjs --from=./vscode-icons --dry-run
+node scripts/import-vscode.mjs --from=./vscode-icons
+npm run notices && npm run manifest && npm run validate
+```
+
+CC BY 4.0, Copyright (c) Microsoft Corporation — attribution is a licence
+condition here, not a courtesy.
+
+**One drawing per icon, not two.** Upstream ships `icons/light` and `icons/dark`,
+but they are the same geometry at two colours (`#424242` and `#C5C5C5`).
+Importing both would be 338 duplicate files each pinned to a surface the library
+cannot know about. The light drawing is rewritten to `currentColor` instead, so
+one file adapts to whatever it sits on. The 43 icons carrying semantic colour —
+debug states, info badges — keep it.
+
+Standard is synthesised the same way as the Fluent set, and flagged the same
+way. VS Code has no full-colour icon.
 
 ## Importing a folder export
 

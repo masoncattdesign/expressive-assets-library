@@ -1,0 +1,40 @@
+{
+  "id": "vscode.close-all",
+  "name": "Close All",
+  "keywords": [
+    "close",
+    "all"
+  ],
+  "type": "icon",
+  "collection": "vscode",
+  "status": "draft",
+  "themes": [
+    "standard",
+    "mono"
+  ],
+  "sizes": [
+    16
+  ],
+  "colors": {
+    "primary": "#0F6CBD",
+    "secondary": "#38C6C6"
+  },
+  "recolorable": true,
+  "variants": {
+    "standard": {
+      "any": "assets/icons/vscode/close-all/standard-any.svg"
+    },
+    "mono": {
+      "16": "assets/icons/vscode/close-all/mono-16.svg"
+    }
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-25",
+  "source": {
+    "project": "VS Code Icons",
+    "url": "https://github.com/microsoft/vscode-icons/blob/main/icons/light/close-all.svg",
+    "license": "CC BY 4.0",
+    "copyright": "Copyright (c) Microsoft Corporation"
+  },
+  "notes": "Mono is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile."
+}

@@ -28,6 +28,7 @@ export const GROUPS = [
       { id: 'product', label: 'Product Icons' },
       { id: 'system', label: 'System Icons' },
       { id: 'file', label: 'File Icons' },
+      { id: 'vscode', label: 'VS Code Icons' },
     ],
   },
   {
