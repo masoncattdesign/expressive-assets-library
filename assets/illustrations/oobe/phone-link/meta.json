@@ -1,0 +1,33 @@
+{
+  "id": "oobe.phone-link",
+  "name": "Phone Link",
+  "keywords": [
+    "phone",
+    "link"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#F1F1F1",
+    "secondary": "#5B41D3"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/phone-link/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

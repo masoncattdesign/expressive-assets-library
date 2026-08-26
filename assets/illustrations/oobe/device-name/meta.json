@@ -1,0 +1,33 @@
+{
+  "id": "oobe.device-name",
+  "name": "Device Name",
+  "keywords": [
+    "device",
+    "name"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#99A5B0",
+    "secondary": "#74EBDB"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/device-name/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "oobe.m365-free",
+  "name": "M365 Free",
+  "keywords": [
+    "m365",
+    "free"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#BABABA",
+    "secondary": "#A86EDD"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/m365-free/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

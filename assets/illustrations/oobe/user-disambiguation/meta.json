@@ -1,0 +1,33 @@
+{
+  "id": "oobe.user-disambiguation",
+  "name": "User Disambiguation",
+  "keywords": [
+    "user",
+    "disambiguation"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#E0DEDC",
+    "secondary": "#5B41D3"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/user-disambiguation/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

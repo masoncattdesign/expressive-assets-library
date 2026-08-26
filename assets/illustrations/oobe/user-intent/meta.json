@@ -1,0 +1,33 @@
+{
+  "id": "oobe.user-intent",
+  "name": "User Intent",
+  "keywords": [
+    "user",
+    "intent"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#F2F2F2",
+    "secondary": "#797673"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/user-intent/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

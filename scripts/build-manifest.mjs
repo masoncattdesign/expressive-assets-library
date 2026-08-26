@@ -36,6 +36,7 @@ export const GROUPS = [
     label: 'Illustrations',
     dir: 'assets/illustrations',
     collections: [
+      { id: 'oobe', label: 'OOBE Illustrations' },
       { id: 'windows', label: 'Windows Illustrations' },
       { id: 'fluent', label: 'Fluent Illustrations' },
       { id: 'product', label: 'Product Illustrations' },

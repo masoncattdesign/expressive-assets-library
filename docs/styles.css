@@ -327,3 +327,12 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 
 /* Second line inside a callout — the caveat under an attribution notice. */
 .callout .fine { display: block; margin-top: 6px; color: var(--text-3); font-size: 11.5px; line-height: 1.45; }
+
+/* Illustrations are scenes, not glyphs. At icon size they are unreadable, so
+   their cards get a taller thumbnail and the grid gives them wider columns. */
+.card[data-type="illustration"] { contain-intrinsic-size: auto 152px; }
+.card[data-type="illustration"] .thumb { height: 88px; }
+.card[data-type="illustration"] .thumb svg { width: 84px; height: 84px; }
+.grid.list .card[data-type="illustration"] { contain-intrinsic-size: auto 52px; }
+.grid.list .card[data-type="illustration"] .thumb { height: 32px; }
+.grid.list .card[data-type="illustration"] .thumb svg { width: 30px; height: 30px; }

@@ -1,0 +1,35 @@
+{
+  "id": "oobe.msa-sign-up",
+  "name": "MSA Sign Up",
+  "keywords": [
+    "msa",
+    "sign",
+    "up"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#107C10",
+    "secondary": "#0A63C9"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/msa-sign-up/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26",
+  "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it."
+}

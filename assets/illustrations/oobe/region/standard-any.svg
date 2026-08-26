@@ -1,0 +1,39 @@
+<svg aria-label="Region" role="img" width="360" height="362" viewBox="0 0 360 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#oobe-region-filter0_ddii_582171_9022)">
+<path d="M98 170.279C98 162.655 98.9557 155.319 100.867 148.271C102.779 141.224 105.518 134.561 109.086 128.282C112.654 122.004 116.891 116.333 121.797 111.272C126.703 106.211 132.214 101.822 138.331 98.1061C144.448 94.3902 151.01 91.5392 158.019 89.553C165.027 87.5669 172.354 86.5419 180 86.4778C187.582 86.4778 194.877 87.4708 201.886 89.4569C208.894 91.4431 215.457 94.2941 221.573 98.01C227.69 101.726 233.201 106.147 238.107 111.272C243.013 116.398 247.25 122.068 250.818 128.282C254.386 134.497 257.126 141.16 259.037 148.271C260.949 155.383 261.936 162.719 262 170.279C262 175.084 261.427 179.825 260.28 184.502C259.133 189.179 257.476 193.76 255.31 198.244C253.144 202.729 250.691 206.926 247.951 210.834C245.211 214.742 242.121 218.394 238.681 221.789L187.359 273.492C186.403 274.453 185.288 275.126 184.014 275.511C182.74 275.895 181.402 276.119 180 276.183C178.662 276.183 177.356 275.991 176.082 275.607C174.807 275.222 173.66 274.517 172.641 273.492L121.319 221.789C117.943 218.394 114.916 214.934 112.24 211.41C109.564 207.887 107.175 203.947 105.072 199.59C103.033 195.169 101.345 190.396 100.007 185.271C98.669 180.145 98 175.148 98 170.279ZM214.214 172.585V171.913C214.214 167.428 213.322 163.135 211.538 159.035C209.754 154.934 207.301 151.347 204.179 148.271C201.057 145.196 197.49 142.762 193.476 140.968C189.462 139.174 185.193 138.245 180.669 138.181C176.018 138.181 171.59 139.078 167.385 140.872C163.179 142.665 159.484 145.132 156.298 148.271C153.113 151.411 150.564 155.063 148.653 159.227C146.741 163.391 145.786 167.844 145.786 172.585C145.786 177.198 146.709 181.555 148.557 185.655C150.405 189.755 152.89 193.407 156.012 196.611C159.134 199.814 162.765 202.345 166.907 204.203C171.048 206.061 175.413 206.99 180 206.99C184.715 206.99 189.143 206.093 193.284 204.299C197.426 202.505 201.057 200.07 204.179 196.995C207.301 193.92 209.754 190.268 211.538 186.04C213.322 181.811 214.214 177.326 214.214 172.585Z" fill="url(#oobe-region-paint0_linear_582171_9022)"/>
+</g>
+<defs>
+<filter id="oobe-region-filter0_ddii_582171_9022" x="95.4905" y="79.4712" width="175.247" height="206.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.949354"/>
+<feGaussianBlur stdDeviation="0.604684"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582171_9022"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="3.11405" dy="4.15418"/>
+<feGaussianBlur stdDeviation="2.81178"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582171_9022" result="effect2_dropShadow_582171_9022"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582171_9022" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-7.00661"/>
+<feGaussianBlur stdDeviation="3.89256"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_582171_9022"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.67107"/>
+<feGaussianBlur stdDeviation="3.11405"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect3_innerShadow_582171_9022" result="effect4_innerShadow_582171_9022"/>
+</filter>
+<linearGradient id="oobe-region-paint0_linear_582171_9022" x1="241.308" y1="86.4778" x2="65.4286" y2="131.625" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#5B41D3"/>
+</linearGradient>
+</defs>
+</svg>

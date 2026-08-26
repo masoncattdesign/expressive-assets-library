@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3291,
+  "total": 3318,
   "groups": [
     {
       "type": "icon",
@@ -35,6 +35,11 @@
       "type": "illustration",
       "label": "Illustrations",
       "collections": [
+        {
+          "id": "oobe",
+          "label": "OOBE Illustrations",
+          "count": 27
+        },
         {
           "id": "windows",
           "label": "Windows Illustrations",
@@ -166134,6 +166139,888 @@
         "copyright": "Copyright (c) Microsoft Corporation"
       },
       "notes": "Mono is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile."
+    },
+    {
+      "id": "oobe.2nd-key",
+      "name": "2nd Key",
+      "keywords": [
+        "2nd",
+        "key"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#1F1F1F",
+        "secondary": "#EAEAEA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/2nd-key/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.camera-roll-backup",
+      "name": "Camera Roll Backup",
+      "keywords": [
+        "camera",
+        "roll",
+        "backup"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F0F0F0",
+        "secondary": "#00BBFF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/camera-roll-backup/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.checking-ndup",
+      "name": "Checking NDUP",
+      "keywords": [
+        "checking",
+        "ndup"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F4F3F3",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/checking-ndup/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.desktop",
+      "name": "Desktop",
+      "keywords": [
+        "desktop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F2F2F2",
+        "secondary": "#658CEB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/desktop/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.device-name",
+      "name": "Device Name",
+      "keywords": [
+        "device",
+        "name"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#99A5B0",
+        "secondary": "#74EBDB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/device-name/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.edge-consents",
+      "name": "Edge Consents",
+      "keywords": [
+        "edge",
+        "consents"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#E1DFDD",
+        "secondary": "#6CE8D7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/edge-consents/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26",
+      "notes": "Contains 1 embedded raster image. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it."
+    },
+    {
+      "id": "oobe.error",
+      "name": "Error",
+      "keywords": [
+        "error"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F9F9F8",
+        "secondary": "#F2779A"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/error/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.eye",
+      "name": "Eye",
+      "keywords": [
+        "eye"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#377FEB",
+        "secondary": "#3B31C4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/eye/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.fingerprint",
+      "name": "Fingerprint",
+      "keywords": [
+        "fingerprint"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/fingerprint/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.keyboard",
+      "name": "Keyboard",
+      "keywords": [
+        "keyboard"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#1F1F1F",
+        "secondary": "#EAEAEA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/keyboard/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.language",
+      "name": "Language",
+      "keywords": [
+        "language"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F3F3F3",
+        "secondary": "#3F469C"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/language/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.language-1",
+      "name": "Language-1",
+      "keywords": [
+        "language"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#C4C4C4",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/language-1/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.m365-basic",
+      "name": "M365 Basic",
+      "keywords": [
+        "m365",
+        "basic"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F4F3F3",
+        "secondary": "#114A8B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/m365-basic/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.m365-free",
+      "name": "M365 Free",
+      "keywords": [
+        "m365",
+        "free"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#BABABA",
+        "secondary": "#A86EDD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/m365-free/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.msa-sign-up",
+      "name": "MSA Sign Up",
+      "keywords": [
+        "msa",
+        "sign",
+        "up"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#107C10",
+        "secondary": "#0A63C9"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/msa-sign-up/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26",
+      "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it."
+    },
+    {
+      "id": "oobe.oem-registration",
+      "name": "OEM Registration",
+      "keywords": [
+        "oem",
+        "registration"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#99A5B0",
+        "secondary": "#F0F0F0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/oem-registration/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.phone-link",
+      "name": "Phone Link",
+      "keywords": [
+        "phone",
+        "link"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F1F1F1",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/phone-link/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.pin",
+      "name": "PIN",
+      "keywords": [
+        "pin"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F4F3F3",
+        "secondary": "#427EF2"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/pin/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.privacy",
+      "name": "Privacy",
+      "keywords": [
+        "privacy"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#626262",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/privacy/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.privacy-1",
+      "name": "Privacy-1",
+      "keywords": [
+        "privacy"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F4F3F3",
+        "secondary": "#0773C7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/privacy-1/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.region",
+      "name": "Region",
+      "keywords": [
+        "region"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/region/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.smile",
+      "name": "Smile",
+      "keywords": [
+        "smile"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#15A6E4",
+        "secondary": "#4438E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/smile/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.user-disambiguation",
+      "name": "User Disambiguation",
+      "keywords": [
+        "user",
+        "disambiguation"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#E0DEDC",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/user-disambiguation/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.user-intent",
+      "name": "User Intent",
+      "keywords": [
+        "user",
+        "intent"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F2F2F2",
+        "secondary": "#797673"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/user-intent/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.welcome-back",
+      "name": "Welcome Back",
+      "keywords": [
+        "welcome",
+        "back"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#EEEEEE",
+        "secondary": "#A1AAB3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/welcome-back/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26",
+      "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it."
+    },
+    {
+      "id": "oobe.wifi",
+      "name": "Wifi",
+      "keywords": [
+        "wifi"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#5B41D3",
+        "secondary": "#4568D6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/wifi/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
+    },
+    {
+      "id": "oobe.zdp",
+      "name": "ZDP",
+      "keywords": [
+        "zdp"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        128,
+        192,
+        256,
+        362
+      ],
+      "colors": {
+        "primary": "#F4F3F3",
+        "secondary": "#6CE8D7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/oobe/zdp/standard-any.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-26"
     },
     {
       "id": "windows.empty-state",

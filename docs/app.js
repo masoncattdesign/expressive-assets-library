@@ -304,6 +304,9 @@ function repaintVisible() {
 function buildCard(asset) {
   const card = el('button', { className: `card${asset.id === state.selectedId ? ' on' : ''}`, type: 'button' });
   card.dataset.id = asset.id;
+  // Illustrations get a bigger thumbnail than icons. A 360px scene shown in a
+  // 40px box is a smudge — you cannot tell two onboarding illustrations apart.
+  card.dataset.type = asset.type;
 
   const thumb = el('div', { className: 'thumb' });
   const meta = el('div', { className: 'meta' });

@@ -1,0 +1,34 @@
+{
+  "id": "oobe.camera-roll-backup",
+  "name": "Camera Roll Backup",
+  "keywords": [
+    "camera",
+    "roll",
+    "backup"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#F0F0F0",
+    "secondary": "#00BBFF"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/camera-roll-backup/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

@@ -5,7 +5,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 3,291 — 2,891 Fluent system, 338 VS Code, 46 Microsoft product, 16 placeholder |
+| **Assets** | 3,318 — 2,891 Fluent system, 338 VS Code, 46 product, 27 OOBE illustrations, 16 placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
@@ -27,6 +27,7 @@ assets/
     file/        File Icons       — document types: doc, xls, pdf, zip…
     vscode/      VS Code Icons    — VS Code UI glyphs: debug, git, terminal…
   illustrations/
+    oobe/        OOBE Illustrations — out-of-box setup: wifi, PIN, privacy…
     windows/     Windows Illustrations
     fluent/      Fluent Illustrations
     product/     Product Illustrations
@@ -66,7 +67,7 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `keywords` | Synonyms someone would type who doesn't know the name |
 | `description` | One line on what it depicts. Also the duplicate-detector |
 | `type` | `icon` or `illustration` |
-| `collection` | `system` · `product` · `file` · `vscode` · `windows` · `fluent` |
+| `collection` | `system` · `product` · `file` · `vscode` · `oobe` · `windows` · `fluent` |
 | `product` | Product artwork only — which product it represents |
 | `status` | `draft` · `published` · `deprecated`, plus `replacedBy` |
 | `themes` | Which of `standard` / `outline` / `mono` exist on disk |
@@ -207,6 +208,28 @@ the detail panel where someone is about to copy the file.
 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) is generated from those blocks
 by `npm run notices`, so it cannot drift from what the repo actually contains —
 a notices file maintained by hand is a licence problem waiting to happen.
+
+## Importing a folder of illustrations
+
+```bash
+node scripts/import-illustrations.mjs --from="~/Downloads/OOBE" \
+                                      --collection=oobe --dry-run
+```
+
+Deliberately general rather than tied to one set — illustration drops arrive as
+a folder of exports more often than not, and the next one should not need a new
+script. Add the collection to the schema enum and to `GROUPS` first.
+
+Illustrations are not icons, and the importer treats them differently. They get
+one theme (`standard`) because they are scenes, not glyphs with monochrome
+reductions. They are marked non-recolorable, because the colour *is* the
+artwork. Their palette is read out of their own gradients rather than invented.
+And the browser gives them a larger thumbnail — a 360px scene in a 40px box is
+a smudge you cannot tell from the next one.
+
+It also reports **embedded rasters**. Three of the OOBE files carry bitmaps
+inside the SVG, which will not scale like vector artwork; those assets say so in
+their `notes` rather than looking identical to the ones that will.
 
 ## Importing VS Code icons
 

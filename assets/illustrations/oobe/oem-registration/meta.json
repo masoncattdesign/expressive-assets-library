@@ -1,0 +1,33 @@
+{
+  "id": "oobe.oem-registration",
+  "name": "OEM Registration",
+  "keywords": [
+    "oem",
+    "registration"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    256,
+    362
+  ],
+  "colors": {
+    "primary": "#99A5B0",
+    "secondary": "#F0F0F0"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/oobe/oem-registration/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-08-26"
+}

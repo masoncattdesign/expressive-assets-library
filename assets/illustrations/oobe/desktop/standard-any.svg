@@ -1,0 +1,93 @@
+<svg aria-label="Desktop" role="img" width="360" height="362" viewBox="0 0 360 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M89 125C89 120.582 92.5817 117 97 117H281C285.418 117 289 120.582 289 125V254H89V125Z" fill="url(#oobe-desktop-paint0_linear_582171_8917)"/>
+<g filter="url(#oobe-desktop-filter0_f_582171_8917)">
+<path d="M69 262L70.1085 261H307.891L309 262H69Z" fill="black" fill-opacity="0.6"/>
+</g>
+<g filter="url(#oobe-desktop-filter1_f_582171_8917)">
+<path d="M69 262L70.1085 261H307.891L309 262H69Z" fill="black" fill-opacity="0.5"/>
+</g>
+<g filter="url(#oobe-desktop-filter2_ii_582171_8917)">
+<rect x="69" y="254" width="240" height="7" rx="1.10855" fill="url(#oobe-desktop-paint1_linear_582171_8917)"/>
+</g>
+<rect x="94.3579" y="122.18" width="189.284" height="126.374" rx="4" fill="url(#oobe-desktop-paint2_radial_582171_8917)"/>
+<g filter="url(#oobe-desktop-filter3_dd_582171_8917)">
+<path d="M250.75 225.25H127.25C123.675 225.25 120.75 222.325 120.75 218.75V95.25C120.75 91.675 123.675 88.75 127.25 88.75H250.75C254.325 88.75 257.25 91.675 257.25 95.25V218.75C257.25 222.325 254.325 225.25 250.75 225.25Z" fill="url(#oobe-desktop-paint3_linear_582171_8917)"/>
+<path d="M211.75 134.25C218.93 134.25 224.75 128.43 224.75 121.25C224.75 114.07 218.93 108.25 211.75 108.25C204.57 108.25 198.75 114.07 198.75 121.25C198.75 128.43 204.57 134.25 211.75 134.25Z" fill="#F2F2F2"/>
+<path opacity="0.5" d="M257.25 192.751V218.751C257.25 220.376 256.6 222.001 255.3 223.301C254 224.601 252.375 225.251 250.75 225.251H169.5V189.501L195.5 163.501L202.65 156.351C207.85 151.151 215.975 151.151 221.175 156.351L257.25 192.751Z" fill="url(#oobe-desktop-paint4_linear_582171_8917)"/>
+<path d="M255.3 223.301C254 224.601 252.375 225.251 250.75 225.251H127.25C123.675 225.251 120.75 222.326 120.75 218.751V173.251L153.9 140.101C159.1 134.901 167.225 134.901 172.425 140.101L195.825 163.501L255.3 223.301Z" fill="url(#oobe-desktop-paint5_linear_582171_8917)"/>
+</g>
+<defs>
+<filter id="oobe-desktop-filter0_f_582171_8917" x="67" y="259" width="244" height="5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_582171_8917"/>
+</filter>
+<filter id="oobe-desktop-filter1_f_582171_8917" x="67" y="259" width="244" height="5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_582171_8917"/>
+</filter>
+<filter id="oobe-desktop-filter2_ii_582171_8917" x="69" y="253.584" width="240" height="7.69284" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.415704"/>
+<feGaussianBlur stdDeviation="0.207852"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_582171_8917"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.415704"/>
+<feGaussianBlur stdDeviation="0.138568"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_582171_8917" result="effect2_innerShadow_582171_8917"/>
+</filter>
+<filter id="oobe-desktop-filter3_dd_582171_8917" x="109.023" y="77.9014" width="159.955" height="159.955" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.164789"/>
+<feGaussianBlur stdDeviation="0.247183"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.11 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582171_8917"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.878873"/>
+<feGaussianBlur stdDeviation="0.988732"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582171_8917" result="effect2_dropShadow_582171_8917"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582171_8917" result="shape"/>
+</filter>
+<linearGradient id="oobe-desktop-paint0_linear_582171_8917" x1="189" y1="117" x2="189" y2="254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#99A5B0"/>
+<stop offset="1" stop-color="#8897A4"/>
+</linearGradient>
+<linearGradient id="oobe-desktop-paint1_linear_582171_8917" x1="309" y1="254" x2="69" y2="254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A8B5BF"/>
+<stop offset="0.0357143" stop-color="#BFCDD9"/>
+<stop offset="0.0714286" stop-color="#B4C1CC"/>
+<stop offset="0.500018" stop-color="#B4C1CC"/>
+<stop offset="0.928571" stop-color="#B4C1CC"/>
+<stop offset="0.964286" stop-color="#BFCDD9"/>
+<stop offset="1" stop-color="#A8B5BF"/>
+</linearGradient>
+<radialGradient id="oobe-desktop-paint2_radial_582171_8917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(189 248.554) rotate(-90) scale(126.374 124.441)">
+<stop stop-color="#E7E7E7"/>
+<stop offset="1" stop-color="#F0F0F0"/>
+</radialGradient>
+<linearGradient id="oobe-desktop-paint3_linear_582171_8917" x1="234.427" y1="235.811" x2="148" y2="89" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.2054" stop-color="#8B8CE4"/>
+<stop offset="0.6592" stop-color="#9ABBFF"/>
+<stop offset="1" stop-color="#C4D3FC"/>
+</linearGradient>
+<linearGradient id="oobe-desktop-paint4_linear_582171_8917" x1="230.19" y1="238.255" x2="187.691" y2="164.645" gradientUnits="userSpaceOnUse">
+<stop offset="0.2956" stop-color="#173A73"/>
+<stop offset="0.4822" stop-color="#144381"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="oobe-desktop-paint5_linear_582171_8917" x1="205.6" y1="252.451" x2="88" y2="53" gradientUnits="userSpaceOnUse">
+<stop offset="0.0520833" stop-color="#114A8B"/>
+<stop offset="1" stop-color="#658CEB"/>
+</linearGradient>
+</defs>
+</svg>
