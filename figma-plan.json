@@ -1,0 +1,3143 @@
+{
+  "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+  "page": "File icons",
+  "generated": "2026-08-27",
+  "note": "Precomputed by surveying the Figma file directly. Retired/hidden sets, folder sets with Item Count/Preview axes, and section labels are excluded by decision, not by accident.",
+  "duplicateIds": [],
+  "skipped": [
+    {
+      "name": "*Retired* video360 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vaultopen 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vaultclosed 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* spreadsheet 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* presentation 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* link 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* photo360 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* exe 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* email 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* contact 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* whiteboard 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* classifier",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* topic",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* album 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* loop 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* xlsx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vstx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vssx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vsdx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* vector 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* txt 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* sysfile 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* sway 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* sposite 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* sponews 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* spo 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* splist 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* pub 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* pptx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* ppsx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* potx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* photowatermark 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* photo 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* pdf 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* onetoc 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* one 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* multiple 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* mpt 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* mpp 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* model 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* html 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* genericfile 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* dotx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* docx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* docset 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* csv 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* code 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* calendar 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* accdb 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* form 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* xml 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* xsn 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* xltx 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* font 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* rtf 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* officescript 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* ipynb 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* powerbi 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* pbiapp 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* loopworkspace 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* designer 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* recycled 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* todoitem 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* playlist 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* video 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* audio 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* audiowatermark 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* videowatermark 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* listitem 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* listform 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* clipchamp 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* aipage 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* onepage 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* mctemplate 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* mcworld 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* cliptemplate 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* copilot 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* planner 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* portfolio 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "Retired",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "Shared folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "Folder shortcut",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "Folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "Channel folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "*Retired* Desktop folder 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* Documents folder 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "Favorites folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "Read-only folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "*Retired* Pictures folder 2018",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "Samsung Gallery folder",
+      "why": "folder: extra Item Count / Preview axes"
+    },
+    {
+      "name": "Generic",
+      "why": "section label / no variants"
+    },
+    {
+      "name": "Product",
+      "why": "section label / no variants"
+    },
+    {
+      "name": "Folders",
+      "why": "section label / no variants"
+    },
+    {
+      "name": "*Retired* Power BI",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* Power BI project",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* SharePoint",
+      "why": "retired or hidden upstream"
+    },
+    {
+      "name": "*Retired* Sway 2018",
+      "why": "retired or hidden upstream"
+    }
+  ],
+  "assets": [
+    {
+      "id": "file.compressed-archive",
+      "name": "Compressed Archive",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "254652:2084",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "254652:2162",
+          "20": "254652:2151",
+          "24": "254652:2140",
+          "32": "254652:2129",
+          "36": "254652:2173",
+          "40": "254652:2118",
+          "48": "254652:2107",
+          "96": "254652:2096",
+          "256": "254652:2085"
+        }
+      }
+    },
+    {
+      "id": "file.zip-archive",
+      "name": "ZIP Archive",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "254652:2184",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "254652:2311",
+          "20": "254652:2296",
+          "24": "254652:2280",
+          "32": "254652:2262",
+          "36": "254652:2325",
+          "40": "254652:2245",
+          "48": "254652:2227",
+          "96": "254652:2207",
+          "256": "254652:2185"
+        }
+      }
+    },
+    {
+      "id": "file.access",
+      "name": "Access",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17873",
+          "20": "1802:16967",
+          "24": "1802:16013",
+          "32": "1802:14989",
+          "36": "1802:14103",
+          "40": "1802:19113",
+          "48": "1802:13130",
+          "96": "1802:10105",
+          "256": "1802:8066"
+        }
+      }
+    },
+    {
+      "id": "file.csv",
+      "name": "CSV",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17947",
+          "20": "1802:17041",
+          "24": "1802:16090",
+          "32": "1802:15070",
+          "36": "1802:14185",
+          "40": "1802:19187",
+          "48": "1802:13212",
+          "96": "1802:10190",
+          "256": "1802:8146"
+        }
+      }
+    },
+    {
+      "id": "file.clipchamp",
+      "name": "Clipchamp",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "399678:1941",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "399678:2094",
+          "20": "399678:2068",
+          "24": "399678:2050",
+          "32": "399678:2032",
+          "36": "399678:2014",
+          "40": "399678:1996",
+          "48": "399678:1978",
+          "96": "399678:1960",
+          "256": "399678:1942"
+        }
+      }
+    },
+    {
+      "id": "file.clipchamp-template",
+      "name": "Clipchamp Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "399678:2120",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "399678:2217",
+          "20": "399678:2198",
+          "24": "399678:2179",
+          "32": "399678:2255",
+          "36": "399678:2236",
+          "40": "399678:2159",
+          "48": "399678:2140",
+          "96": "399678:2121",
+          "256": "399678:2274"
+        }
+      }
+    },
+    {
+      "id": "file.copilot",
+      "name": "Copilot",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "376868:1788",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "376868:1839",
+          "20": "376868:1829",
+          "24": "376868:1819",
+          "32": "376868:1813",
+          "36": "376868:1849",
+          "40": "376868:1807",
+          "48": "376868:1801",
+          "96": "376868:1795",
+          "256": "376868:1789"
+        }
+      }
+    },
+    {
+      "id": "file.designer",
+      "name": "Designer",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "252949:1717",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "252949:1774",
+          "20": "252949:1761",
+          "24": "252949:1748",
+          "32": "252949:1742",
+          "36": "252949:1787",
+          "40": "252949:1736",
+          "48": "252949:1730",
+          "96": "252949:1724",
+          "256": "252949:1718"
+        }
+      }
+    },
+    {
+      "id": "file.excel",
+      "name": "Excel",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:120",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18510",
+          "20": "1802:17619",
+          "24": "1802:16705",
+          "32": "1802:15743",
+          "36": "1802:14834",
+          "40": "1802:19770",
+          "48": "1802:13899",
+          "96": "1802:10865",
+          "256": "1802:8828"
+        }
+      }
+    },
+    {
+      "id": "file.excel-template",
+      "name": "Excel Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133835:12",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18537",
+          "20": "1802:17654",
+          "24": "1802:16735",
+          "32": "1802:15773",
+          "36": "1802:14852",
+          "40": "1802:19786",
+          "48": "1802:14065",
+          "96": "1802:10883",
+          "256": "1802:8846"
+        }
+      }
+    },
+    {
+      "id": "file.form",
+      "name": "Form",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133835:8",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18870",
+          "20": "1802:17149",
+          "24": "1802:16202",
+          "32": "1802:15189",
+          "36": "1802:19983",
+          "40": "1802:20092",
+          "48": "1802:18846",
+          "96": "1802:11092",
+          "256": "1802:18808"
+        }
+      }
+    },
+    {
+      "id": "file.lists",
+      "name": "Lists",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:0",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18331",
+          "20": "1802:17440",
+          "24": "1802:16501",
+          "32": "1802:15495",
+          "36": "1802:14598",
+          "40": "1802:19552",
+          "48": "1802:13636",
+          "96": "1802:10611",
+          "256": "1802:8573"
+        }
+      }
+    },
+    {
+      "id": "file.lists-form",
+      "name": "Lists Form",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "399678:1803",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "399678:1915",
+          "20": "399678:1896",
+          "24": "399678:1876",
+          "32": "399678:1934",
+          "36": "399678:1857",
+          "40": "399678:1837",
+          "48": "399678:1830",
+          "96": "399678:1811",
+          "256": "399678:1804"
+        }
+      }
+    },
+    {
+      "id": "file.lists-item",
+      "name": "Lists Item",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "399678:1737",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "399678:1789",
+          "20": "399678:1782",
+          "24": "399678:1775",
+          "32": "399678:1768",
+          "36": "399678:1796",
+          "40": "399678:1761",
+          "48": "399678:1754",
+          "96": "399678:1746",
+          "256": "399678:1738"
+        }
+      }
+    },
+    {
+      "id": "file.loop",
+      "name": "Loop",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132852:6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18688",
+          "20": "1802:17794",
+          "24": "1802:16897",
+          "32": "1802:15938",
+          "36": "179154:519",
+          "40": "1802:19972",
+          "48": "1802:20217",
+          "96": "1802:11081",
+          "256": "1802:9086"
+        }
+      }
+    },
+    {
+      "id": "file.loop-workspace",
+      "name": "Loop Workspace",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "243560:2004",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "243560:2005",
+          "20": "243560:2011",
+          "24": "243560:2017",
+          "32": "243560:2023",
+          "36": "243560:2029",
+          "40": "243560:2035",
+          "48": "243560:2041",
+          "96": "243560:2047",
+          "256": "243560:2053"
+        }
+      }
+    },
+    {
+      "id": "file.minecraft",
+      "name": "Minecraft",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "314040:707",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "314040:787",
+          "20": "314040:775",
+          "24": "314040:763",
+          "32": "314040:750",
+          "36": "314040:799",
+          "40": "314040:740",
+          "48": "314040:729",
+          "96": "314040:718",
+          "256": "314040:708"
+        }
+      }
+    },
+    {
+      "id": "file.minecraft-world",
+      "name": "Minecraft World",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "314040:810",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "314040:942",
+          "20": "314040:930",
+          "24": "314040:917",
+          "32": "314040:900",
+          "36": "314040:883",
+          "40": "314040:866",
+          "48": "314040:849",
+          "96": "314040:830",
+          "256": "314040:811"
+        }
+      }
+    },
+    {
+      "id": "file.office-script",
+      "name": "Office Script",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "140013:1321",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "140013:1313",
+          "20": "140013:1314",
+          "24": "140013:1315",
+          "32": "140013:1318",
+          "36": "179154:530",
+          "40": "140013:1319",
+          "48": "140013:1316",
+          "96": "140013:1317",
+          "256": "140013:1320"
+        }
+      }
+    },
+    {
+      "id": "file.onenote-section",
+      "name": "OneNote Section",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:30",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18161",
+          "20": "1802:17271",
+          "24": "1802:16334",
+          "32": "1802:15317",
+          "36": "1802:14421",
+          "40": "1802:19394",
+          "48": "1802:13457",
+          "96": "1802:10432",
+          "256": "1802:8379"
+        }
+      }
+    },
+    {
+      "id": "file.onenote",
+      "name": "OneNote",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "481196:1826",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "481196:1825",
+          "20": "481196:1824",
+          "24": "481196:1820",
+          "32": "481196:1823",
+          "36": "481196:1821",
+          "40": "481196:1819",
+          "48": "481196:1818",
+          "96": "481196:1817",
+          "256": "481196:1822"
+        }
+      }
+    },
+    {
+      "id": "file.onenote-notebook",
+      "name": "OneNote Notebook",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:54",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18169",
+          "20": "1802:17279",
+          "24": "1802:16342",
+          "32": "1802:15325",
+          "36": "1802:14430",
+          "40": "1802:19402",
+          "48": "1802:13465",
+          "96": "1802:10440",
+          "256": "1802:8387"
+        }
+      }
+    },
+    {
+      "id": "file.pdf",
+      "name": "PDF",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:55",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18180",
+          "20": "1802:17290",
+          "24": "1802:16353",
+          "32": "1802:15336",
+          "36": "1802:14441",
+          "40": "1802:19413",
+          "48": "1802:13476",
+          "96": "1802:10452",
+          "256": "1802:8399"
+        }
+      }
+    },
+    {
+      "id": "file.copilot-page",
+      "name": "Copilot Page",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "448633:1680",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "448633:1729",
+          "20": "448633:1723",
+          "24": "448633:1717",
+          "32": "448633:1711",
+          "36": "448633:1705",
+          "40": "448633:1699",
+          "48": "448633:1693",
+          "96": "448633:1687",
+          "256": "448633:1681"
+        }
+      }
+    },
+    {
+      "id": "file.planner",
+      "name": "Planner",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "335631:2114",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "376868:2171",
+          "20": "376868:2185",
+          "24": "376868:2199",
+          "32": "376868:2205",
+          "36": "376868:2211",
+          "40": "376868:2217",
+          "48": "376868:2223",
+          "96": "376868:2229",
+          "256": "376868:2236"
+        }
+      }
+    },
+    {
+      "id": "file.planner-portfolio",
+      "name": "Planner Portfolio",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "376868:2251",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "376868:2252",
+          "20": "376868:2259",
+          "24": "376868:2266",
+          "32": "376868:2273",
+          "36": "376868:2280",
+          "40": "376868:2287",
+          "48": "376868:2294",
+          "96": "376868:2301",
+          "256": "376868:2309"
+        }
+      }
+    },
+    {
+      "id": "file.video-playlist",
+      "name": "Video Playlist",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "362552:1642",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "362552:1699",
+          "20": "362552:1692",
+          "24": "362552:1685",
+          "32": "362552:1678",
+          "36": "362552:1671",
+          "40": "362552:1664",
+          "48": "362552:1657",
+          "96": "362552:1650",
+          "256": "362552:1643"
+        }
+      }
+    },
+    {
+      "id": "file.powerpoint-slideshow",
+      "name": "Powerpoint Slideshow",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:57",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18233",
+          "20": "1802:17341",
+          "24": "1802:16405",
+          "32": "1802:15391",
+          "36": "1802:14494",
+          "40": "1802:19458",
+          "48": "1802:13529",
+          "96": "1802:10504",
+          "256": "1802:8464"
+        }
+      }
+    },
+    {
+      "id": "file.powerpoint-template",
+      "name": "PowerPoint Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:56",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18212",
+          "20": "1802:17322",
+          "24": "1802:16386",
+          "32": "1802:15371",
+          "36": "1802:14476",
+          "40": "1802:19443",
+          "48": "1802:13511",
+          "96": "1802:10486",
+          "256": "1802:8444"
+        }
+      }
+    },
+    {
+      "id": "file.project",
+      "name": "Project",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18111",
+          "20": "1802:17227",
+          "24": "1802:16286",
+          "32": "1802:15270",
+          "36": "1802:14377",
+          "40": "1802:19354",
+          "48": "1802:13410",
+          "96": "1802:10388",
+          "256": "1802:8335"
+        }
+      }
+    },
+    {
+      "id": "file.project-template",
+      "name": "Project Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:27",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18131",
+          "20": "1802:17244",
+          "24": "1802:16305",
+          "32": "1802:15288",
+          "36": "1802:14395",
+          "40": "1802:19370",
+          "48": "1802:13429",
+          "96": "1802:10406",
+          "256": "1802:8355"
+        }
+      }
+    },
+    {
+      "id": "file.publisher",
+      "name": "Publisher",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:59",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18287",
+          "20": "1802:17392",
+          "24": "1802:16457",
+          "32": "1802:15448",
+          "36": "1802:14550",
+          "40": "1802:19507",
+          "48": "1802:13587",
+          "96": "1802:10562",
+          "256": "1802:8524"
+        }
+      }
+    },
+    {
+      "id": "file.sharepoint-news",
+      "name": "SharePoint News",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18359",
+          "20": "1802:17468",
+          "24": "1802:16537",
+          "32": "1802:15533",
+          "36": "1802:14634",
+          "40": "1802:19586",
+          "48": "1802:13678",
+          "96": "1802:10651",
+          "256": "1802:8613"
+        }
+      }
+    },
+    {
+      "id": "file.sharepoint-site",
+      "name": "SharePoint Site",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133835:7",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18699",
+          "20": "1802:17811",
+          "24": "1802:16934",
+          "32": "1802:15958",
+          "36": "1802:14960",
+          "40": "1802:19908",
+          "48": "1802:13974",
+          "96": "1802:11125",
+          "256": "1802:8932"
+        }
+      }
+    },
+    {
+      "id": "file.to-do",
+      "name": "To Do",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "335631:2277",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "335631:2398",
+          "20": "335631:2381",
+          "24": "335631:2363",
+          "32": "335631:2347",
+          "36": "335631:2331",
+          "40": "335631:2314",
+          "48": "335631:2298",
+          "96": "335631:2282",
+          "256": "335631:2278"
+        }
+      }
+    },
+    {
+      "id": "file.video",
+      "name": "Video",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "362552:1777",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "362552:1834",
+          "20": "362552:1820",
+          "24": "362552:1814",
+          "32": "362552:1808",
+          "36": "362552:1802",
+          "40": "362552:1796",
+          "48": "362552:1790",
+          "96": "362552:1784",
+          "256": "362552:1778"
+        }
+      }
+    },
+    {
+      "id": "file.visio-drawing",
+      "name": "Visio Drawing",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18468",
+          "20": "1802:17577",
+          "24": "1802:16663",
+          "32": "1802:15699",
+          "36": "1802:14792",
+          "40": "1802:19726",
+          "48": "1802:13855",
+          "96": "1802:10821",
+          "256": "1802:8783"
+        }
+      }
+    },
+    {
+      "id": "file.visio-drawing-template",
+      "name": "Visio Drawing Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:119",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18496",
+          "20": "1802:17605",
+          "24": "1802:16691",
+          "32": "1802:15728",
+          "36": "1802:14821",
+          "40": "1802:19756",
+          "48": "1802:13885",
+          "96": "1802:10851",
+          "256": "1802:8814"
+        }
+      }
+    },
+    {
+      "id": "file.visio-shape-stencil",
+      "name": "Visio Shape Stencil",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:118",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18482",
+          "20": "1802:17590",
+          "24": "1802:16676",
+          "32": "1802:15712",
+          "36": "1802:14805",
+          "40": "1802:19740",
+          "48": "1802:13869",
+          "96": "1802:10835",
+          "256": "1802:8797"
+        }
+      }
+    },
+    {
+      "id": "file.word",
+      "name": "Word",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:7",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17973",
+          "20": "1802:17067",
+          "24": "1802:16117",
+          "32": "1802:15099",
+          "36": "1802:14214",
+          "40": "1802:19212",
+          "48": "1802:13241",
+          "96": "1802:10219",
+          "256": "1802:8171"
+        }
+      }
+    },
+    {
+      "id": "file.word-template",
+      "name": "Word Template",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:8",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17988",
+          "20": "1802:17082",
+          "24": "1802:16132",
+          "32": "1802:15115",
+          "36": "1802:14230",
+          "40": "1802:19226",
+          "48": "1802:13257",
+          "96": "1802:10235",
+          "256": "1802:8185"
+        }
+      }
+    },
+    {
+      "id": "file.form-generic",
+      "name": "Form Generic",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133835:10",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18598",
+          "20": "1802:17708",
+          "24": "1802:16796",
+          "32": "1802:15839",
+          "36": "1802:14891",
+          "40": "1802:19831",
+          "48": "1802:13937",
+          "96": "1802:10955",
+          "256": "1802:8902"
+        }
+      }
+    },
+    {
+      "id": "file.album",
+      "name": "Album",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "388237:1714",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "388237:1769",
+          "20": "388237:1759",
+          "24": "388237:1749",
+          "32": "388237:1739",
+          "36": "388237:1774",
+          "40": "388237:1729",
+          "48": "388237:1719",
+          "96": "388237:1717",
+          "256": "388237:1715"
+        }
+      }
+    },
+    {
+      "id": "file.music",
+      "name": "Music",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "362552:1848",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "362552:1944",
+          "20": "362552:1925",
+          "24": "362552:1914",
+          "32": "362552:1904",
+          "36": "362552:1893",
+          "40": "362552:1882",
+          "48": "362552:1871",
+          "96": "362552:1860",
+          "256": "362552:1849"
+        }
+      }
+    },
+    {
+      "id": "file.audio-watermark",
+      "name": "Audio Watermark",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "365523:1650",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "365523:1746",
+          "20": "365523:1727",
+          "24": "365523:1716",
+          "32": "365523:1706",
+          "36": "365523:1695",
+          "40": "365523:1684",
+          "48": "365523:1673",
+          "96": "365523:1662",
+          "256": "365523:1651"
+        }
+      }
+    },
+    {
+      "id": "file.calendar",
+      "name": "Calendar",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132852:5",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18667",
+          "20": "1802:17765",
+          "24": "1802:16860",
+          "32": "1802:15903",
+          "36": "1802:20048",
+          "40": "1802:19937",
+          "48": "1802:20177",
+          "96": "1802:11043",
+          "256": "1802:9047"
+        }
+      }
+    },
+    {
+      "id": "file.code",
+      "name": "Code",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:4",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17933",
+          "20": "1802:17027",
+          "24": "1802:16074",
+          "32": "1802:15054",
+          "36": "1802:14169",
+          "40": "1802:19174",
+          "48": "1802:13197",
+          "96": "1802:10174",
+          "256": "1802:8132"
+        }
+      }
+    },
+    {
+      "id": "file.contact",
+      "name": "Contact",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:8",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18677",
+          "20": "1802:17783",
+          "24": "1802:16886",
+          "32": "1802:15926",
+          "36": "1802:20069",
+          "40": "1802:19960",
+          "48": "1802:20205",
+          "96": "1802:11069",
+          "256": "1802:9073"
+        }
+      }
+    },
+    {
+      "id": "file.sharepoint-document-set",
+      "name": "SharePoint Document Set",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133777:5",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:17963",
+          "20": "1802:17057",
+          "24": "1802:16104",
+          "32": "1802:15086",
+          "36": "1802:14201",
+          "40": "1802:19201",
+          "48": "1802:13228",
+          "96": "1802:10206",
+          "256": "1802:8160"
+        }
+      }
+    },
+    {
+      "id": "file.app-file",
+      "name": "App File",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132689:8",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18013",
+          "20": "1802:17107",
+          "24": "1802:16157",
+          "32": "1802:15143",
+          "36": "1802:14256",
+          "40": "1802:19248",
+          "48": "1802:13283",
+          "96": "1802:10261",
+          "256": "1802:8208"
+        }
+      }
+    },
+    {
+      "id": "file.file",
+      "name": "File",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18050",
+          "20": "1802:17161",
+          "24": "1802:16214",
+          "32": "1802:15201",
+          "36": "1802:14309",
+          "40": "1802:19295",
+          "48": "1802:13339",
+          "96": "1802:10317",
+          "256": "1802:8258"
+        }
+      }
+    },
+    {
+      "id": "file.file-multiple",
+      "name": "File Multiple",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:29",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18151",
+          "20": "1802:17261",
+          "24": "1802:16323",
+          "32": "1802:15306",
+          "36": "1802:14411",
+          "40": "1802:19384",
+          "48": "1802:13446",
+          "96": "1802:10422",
+          "256": "1802:8369"
+        }
+      }
+    },
+    {
+      "id": "file.file-recycled",
+      "name": "File Recycled",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "319233:1301",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "319233:1302",
+          "20": "319233:1305",
+          "24": "319233:1308",
+          "32": "319233:1311",
+          "36": "319233:1314",
+          "40": "319233:1317",
+          "48": "319233:1320",
+          "96": "319233:1323",
+          "256": "319233:1326"
+        }
+      }
+    },
+    {
+      "id": "file.font",
+      "name": "Font",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133885:0",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18038",
+          "20": "1802:17137",
+          "24": "1802:16190",
+          "32": "1802:15177",
+          "36": "1802:14289",
+          "40": "1802:19276",
+          "48": "1802:13318",
+          "96": "1802:10296",
+          "256": "1802:8238"
+        }
+      }
+    },
+    {
+      "id": "file.web-page",
+      "name": "Web Page",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:4",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18059",
+          "20": "1802:17170",
+          "24": "1802:16223",
+          "32": "1802:15210",
+          "36": "1802:14318",
+          "40": "1802:19303",
+          "48": "1802:13348",
+          "96": "1802:10326",
+          "256": "1802:8267"
+        }
+      }
+    },
+    {
+      "id": "file.code-notebook",
+      "name": "Code Notebook",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "178834:459",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "178834:509",
+          "20": "178834:503",
+          "24": "178834:497",
+          "32": "178834:489",
+          "36": "179154:1352",
+          "40": "178834:480",
+          "48": "178834:474",
+          "96": "178834:468",
+          "256": "178834:460"
+        }
+      }
+    },
+    {
+      "id": "file.link",
+      "name": "Link",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132689:10",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18073",
+          "20": "1802:17184",
+          "24": "1802:16240",
+          "32": "1802:15228",
+          "36": "1802:14335",
+          "40": "1802:19317",
+          "48": "1802:13365",
+          "96": "1802:10343",
+          "256": "1802:8290"
+        }
+      }
+    },
+    {
+      "id": "file.mail",
+      "name": "Mail",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132689:7",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18004",
+          "20": "1802:17098",
+          "24": "1802:16148",
+          "32": "1802:15134",
+          "36": "1802:14247",
+          "40": "1802:19240",
+          "48": "1802:13274",
+          "96": "1802:10252",
+          "256": "1802:8199"
+        }
+      }
+    },
+    {
+      "id": "file.model",
+      "name": "Model",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:5",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18098",
+          "20": "1802:17214",
+          "24": "1802:16273",
+          "32": "1802:15257",
+          "36": "1802:14365",
+          "40": "1802:19343",
+          "48": "1802:13396",
+          "96": "1802:10374",
+          "256": "1802:8321"
+        }
+      }
+    },
+    {
+      "id": "file.photo",
+      "name": "Photo",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132852:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18194",
+          "20": "1802:17304",
+          "24": "1802:16368",
+          "32": "1802:15353",
+          "36": "1802:14458",
+          "40": "1802:19427",
+          "48": "1802:13493",
+          "64": "564102:411",
+          "96": "1802:10469",
+          "256": "1802:8420"
+        }
+      }
+    },
+    {
+      "id": "file.photo-watermark",
+      "name": "Photo Watermark",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132852:2",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18203",
+          "20": "1802:17313",
+          "24": "1802:16377",
+          "32": "1802:15362",
+          "36": "1802:14467",
+          "40": "1802:19435",
+          "48": "1802:13502",
+          "64": "564102:478",
+          "96": "1802:10477",
+          "256": "1802:8432"
+        }
+      }
+    },
+    {
+      "id": "file.photo360",
+      "name": "Photo360",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:7",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18712",
+          "20": "1802:17805",
+          "24": "1802:16908",
+          "32": "1802:15950",
+          "36": "1802:14941",
+          "40": "1802:19888",
+          "48": "1802:14043",
+          "96": "1802:11021",
+          "256": "1802:9024"
+        }
+      }
+    },
+    {
+      "id": "file.presentation",
+      "name": "Presentation",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:0",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18271",
+          "20": "1802:17376",
+          "24": "1802:16440",
+          "32": "1802:15429",
+          "36": "1802:14532",
+          "40": "1802:19491",
+          "48": "1802:13568",
+          "96": "1802:10543",
+          "256": "1802:8505"
+        }
+      }
+    },
+    {
+      "id": "file.rtf",
+      "name": "RTF",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133885:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18303",
+          "20": "1802:17406",
+          "24": "1802:16471",
+          "32": "1802:15463",
+          "36": "1802:14565",
+          "40": "1802:19522",
+          "48": "1802:13602",
+          "96": "1802:10577",
+          "256": "1802:8539"
+        }
+      }
+    },
+    {
+      "id": "file.spreadsheet",
+      "name": "Spreadsheet",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:2",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18369",
+          "20": "1802:17478",
+          "24": "1802:16549",
+          "32": "1802:15545",
+          "36": "1802:14646",
+          "40": "1802:19597",
+          "48": "1802:13691",
+          "96": "1802:10664",
+          "256": "1802:8626"
+        }
+      }
+    },
+    {
+      "id": "file.system",
+      "name": "System",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18406",
+          "20": "1802:17516",
+          "24": "1802:16593",
+          "32": "1802:15605",
+          "36": "1802:14698",
+          "40": "1802:19643",
+          "48": "1802:13756",
+          "96": "1802:10722",
+          "256": "1802:8683"
+        }
+      }
+    },
+    {
+      "id": "file.text",
+      "name": "Text",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:3",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18417",
+          "20": "1802:17527",
+          "24": "1802:16604",
+          "32": "1802:15616",
+          "36": "1802:14709",
+          "40": "1802:19653",
+          "48": "1802:13767",
+          "96": "1802:10733",
+          "256": "1802:8694"
+        }
+      }
+    },
+    {
+      "id": "file.vault-closed",
+      "name": "Vault Closed",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:4",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "517092:878",
+          "20": "517092:866",
+          "24": "517092:855",
+          "32": "517092:844",
+          "36": "517092:890",
+          "40": "517092:834",
+          "48": "517092:824",
+          "64": "517092:901",
+          "96": "517092:813",
+          "256": "517092:802"
+        }
+      }
+    },
+    {
+      "id": "file.vault-open",
+      "name": "Vault Open",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18733",
+          "20": "1802:17859",
+          "24": "1802:16950",
+          "32": "1802:15992",
+          "36": "1802:9111",
+          "40": "1802:19094",
+          "48": "1802:19060",
+          "64": "517092:1666",
+          "96": "1802:9145",
+          "256": "1802:18993"
+        }
+      }
+    },
+    {
+      "id": "file.vector",
+      "name": "Vector",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133798:5",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18431",
+          "20": "1802:17541",
+          "24": "1802:16619",
+          "32": "1802:15654",
+          "36": "1802:14747",
+          "40": "1802:19685",
+          "48": "1802:13806",
+          "96": "1802:10772",
+          "256": "1802:8736"
+        }
+      }
+    },
+    {
+      "id": "file.video-watermark",
+      "name": "Video Watermark",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "365523:1766",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "365523:1823",
+          "20": "365523:1809",
+          "24": "365523:1803",
+          "32": "365523:1797",
+          "36": "365523:1791",
+          "40": "365523:1785",
+          "48": "365523:1779",
+          "96": "365523:1773",
+          "256": "365523:1767"
+        }
+      }
+    },
+    {
+      "id": "file.video360",
+      "name": "Video360",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "132695:3",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18454",
+          "20": "1802:17565",
+          "24": "1802:16643",
+          "32": "1802:15679",
+          "36": "1802:14772",
+          "40": "1802:19708",
+          "48": "1802:13831",
+          "96": "1802:10797",
+          "256": "1802:8759"
+        }
+      }
+    },
+    {
+      "id": "file.whiteboard",
+      "name": "Whiteboard",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133916:196",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "132695:84",
+          "20": "132695:85",
+          "24": "132695:88",
+          "32": "132695:86",
+          "36": "140634:569",
+          "40": "132695:90",
+          "48": "132695:93",
+          "96": "132695:91",
+          "256": "132695:87"
+        }
+      }
+    },
+    {
+      "id": "file.xml",
+      "name": "XML",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133835:9",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18567",
+          "20": "1802:17684",
+          "24": "1802:16766",
+          "32": "1802:15808",
+          "36": "1802:14871",
+          "40": "1802:19802",
+          "48": "1802:13917",
+          "96": "1802:10902",
+          "256": "1802:8862"
+        }
+      }
+    },
+    {
+      "id": "file.audio",
+      "name": "Audio",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "517092:1688",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "517092:1721",
+          "20": "517092:1717",
+          "24": "517092:1713",
+          "32": "517092:1709",
+          "36": "517092:1705",
+          "40": "517092:1701",
+          "48": "517092:1697",
+          "64": "517092:1725",
+          "96": "517092:1693",
+          "256": "517092:1689"
+        }
+      }
+    },
+    {
+      "id": "file.powerpoint",
+      "name": "PowerPoint",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "133783:58",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "1802:18251",
+          "20": "1802:17359",
+          "24": "1802:16423",
+          "32": "1802:15412",
+          "36": "1802:14515",
+          "40": "1802:19476",
+          "48": "1802:13551",
+          "96": "1802:10526",
+          "256": "1802:8488"
+        }
+      }
+    },
+    {
+      "id": "file.copilot-work-object",
+      "name": "Copilot Work Object",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "555396:548",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "559229:879",
+          "20": "559229:889",
+          "24": "559229:904",
+          "32": "559229:919",
+          "36": "559229:930",
+          "40": "559229:945",
+          "48": "559229:955",
+          "64": "559229:965",
+          "96": "559229:970",
+          "256": "559229:980"
+        }
+      }
+    },
+    {
+      "id": "file.ink-canvas",
+      "name": "Ink Canvas",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "555396:599",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "555396:600",
+          "20": "555396:606",
+          "24": "555396:612",
+          "32": "555396:618",
+          "36": "555396:624",
+          "40": "555396:630",
+          "48": "555396:636",
+          "64": "555396:642",
+          "96": "555396:648",
+          "256": "555396:654"
+        }
+      }
+    },
+    {
+      "id": "file.markdown-file",
+      "name": "Markdown file",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "555396:848",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "555396:849",
+          "20": "555396:858",
+          "24": "555396:869",
+          "32": "555396:878",
+          "36": "555396:898",
+          "40": "555396:906",
+          "48": "555396:911",
+          "64": "555396:917",
+          "96": "555396:934",
+          "256": "555396:940"
+        }
+      }
+    },
+    {
+      "id": "file.sharepoint-campaign",
+      "name": "SharePoint Campaign",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "556293:537",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "556293:538",
+          "20": "556293:547",
+          "24": "556293:557",
+          "32": "556293:567",
+          "36": "556293:581",
+          "40": "556293:593",
+          "48": "556293:603",
+          "96": "556293:613",
+          "256": "556293:623"
+        }
+      }
+    },
+    {
+      "id": "file.sharepoint",
+      "name": "SharePoint",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "556293:634",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "556293:635",
+          "20": "556293:645",
+          "24": "556293:656",
+          "32": "556293:665",
+          "36": "556293:676",
+          "40": "556293:685",
+          "48": "556293:694",
+          "96": "556293:703",
+          "256": "556293:712"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-paginated-report",
+      "name": "Power BI paginated report",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:653",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:796",
+          "20": "567113:777",
+          "24": "567113:757",
+          "32": "567113:737",
+          "36": "567113:815",
+          "40": "567113:717",
+          "48": "567113:696",
+          "96": "567113:675",
+          "256": "567113:654"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-report",
+      "name": "Power BI report",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:835",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:836",
+          "20": "567113:855",
+          "24": "567113:874",
+          "32": "567113:893",
+          "36": "567113:912",
+          "40": "567113:931",
+          "48": "567113:950",
+          "96": "567113:974",
+          "256": "567113:993"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-semantic-model",
+      "name": "Power BI semantic model",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:1012",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:1013",
+          "20": "567113:1034",
+          "24": "567113:1055",
+          "32": "567113:1076",
+          "36": "567113:1097",
+          "40": "567113:1118",
+          "48": "567113:1139",
+          "96": "567113:1165",
+          "256": "567113:1186"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-scorecard",
+      "name": "Power BI scorecard",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:1207",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:1208",
+          "20": "567113:1223",
+          "24": "567113:1238",
+          "32": "567113:1258",
+          "36": "567113:1273",
+          "40": "567113:1288",
+          "48": "567113:1303",
+          "96": "567113:1323",
+          "256": "567113:1338"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-dashboard",
+      "name": "Power BI dashboard",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:1353",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:1354",
+          "20": "567113:1373",
+          "24": "567113:1392",
+          "32": "567113:1411",
+          "36": "567113:1430",
+          "40": "567113:1449",
+          "48": "567113:1468",
+          "96": "567113:1492",
+          "256": "567113:1511"
+        }
+      }
+    },
+    {
+      "id": "file.power-bi-app",
+      "name": "Power BI App",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:1530",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:1531",
+          "20": "567113:1546",
+          "24": "567113:1561",
+          "32": "567113:1576",
+          "36": "567113:1591",
+          "40": "567113:1606",
+          "48": "567113:1621",
+          "96": "567113:1641",
+          "256": "567113:1656"
+        }
+      }
+    },
+    {
+      "id": "file.fabric-data-agent",
+      "name": "Fabric data agent",
+      "collection": "file",
+      "type": "icon",
+      "nodeId": "567113:1671",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "renders": {
+        "standard": {
+          "16": "567113:1672",
+          "20": "567113:1679",
+          "24": "567113:1686",
+          "32": "567113:1693",
+          "36": "567113:1700",
+          "40": "567113:1707",
+          "48": "567113:1726",
+          "96": "567113:1756",
+          "256": "567113:1768"
+        }
+      }
+    }
+  ]
+}

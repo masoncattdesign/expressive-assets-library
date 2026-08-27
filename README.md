@@ -132,6 +132,7 @@ npm run dev           # assemble _site/ and serve it at http://localhost:4173
 npm run figma:survey  # read the Figma file and report what is in it
 npm run figma:plan    # show what an import would do, write nothing
 npm run figma:import  # export SVGs and write assets/
+npm run figma:run     # run the reviewed figma-plan.json instead of surveying
 ```
 
 No dependencies. Node 18+ and nothing else — a design-system repo that needs an
@@ -317,6 +318,42 @@ Three things the importer deliberately does not do:
 
 Your token never enters the repo — the script reads it from the environment and
 `figma-survey.json` / `figma-import-report.json` are gitignored.
+
+### Running a reviewed plan
+
+Survey → config → import is the right path the first time nobody has read the
+file. Once the structure *is* known — which component sets are live, which are
+retired, how the size property is spelled in each corner — that knowledge belongs
+in a committed plan rather than being re-derived, differently, on every run.
+
+`figma-plan.json` is that file for the **File icons** page of the Expressive
+Assets Library. It names 88 assets and the exact Figma node behind each of their
+800 drawings, and it records every set it excludes and why. Reviewing it is
+reading a diff, not trusting a run.
+
+```bash
+npm run figma:run -- --dry-run   # what it will do — needs no token
+export FIGMA_TOKEN="figd_..."
+npm run figma:run                # render and write
+npm run notices && npm run manifest && npm run validate
+```
+
+What the plan leaves out, on purpose:
+
+- **87 retired or hidden sets.** Anything upstream named `*Retired*`,
+  `Deprecated` or `Do not use`. Importing those and then hiding them in the
+  browser is a slower way to arrive at the same place.
+- **7 folder sets.** Folders carry extra variant axes (Item Count, Preview) that
+  the `theme × size` schema has no room for. They need a modelling decision
+  first, so they get their own pass.
+- **3 section labels** that are text, not artwork.
+
+A full run also **retires generated placeholders** in any collection it
+populates — the ten invented file icons come out once the real drawings land.
+It identifies them only by the `Placeholder artwork.` marker the generator
+stamps into `notes`, so it cannot touch imported work, and it skips this
+entirely on a partial run (`--limit`, `--only`), where pulling placeholders
+would open holes rather than close them.
 
 ## Replacing the placeholders
 
