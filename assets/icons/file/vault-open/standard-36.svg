@@ -1,0 +1,40 @@
+<svg aria-label="Vault Open standard 36" role="img" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="6" width="32" height="24" rx="6" fill="url(#file-vault-open-standard-36-paint0_linear_1802_9111)"/>
+<rect x="4" y="8" width="28" height="20" rx="4" fill="url(#file-vault-open-standard-36-paint1_linear_1802_9111)"/>
+<rect x="4" y="8" width="28" height="20" rx="4" fill="url(#file-vault-open-standard-36-paint2_linear_1802_9111)" fill-opacity="0.28"/>
+<path d="M11 12C11 10.8954 11.8954 10 13 10H19C21.2091 10 23 11.7909 23 14V24C23 25.1046 22.1046 26 21 26H15C12.7909 26 11 24.2091 11 22V12Z" fill="url(#file-vault-open-standard-36-paint3_linear_1802_9111)"/>
+<path d="M11 12C11 10.8954 11.8954 10 13 10H19C21.2091 10 23 11.7909 23 14V24C23 25.1046 22.1046 26 21 26H15C12.7909 26 11 24.2091 11 22V12Z" fill="url(#file-vault-open-standard-36-paint4_radial_1802_9111)"/>
+<rect x="30" y="8" width="2" height="20" rx="1" fill="url(#file-vault-open-standard-36-paint5_linear_1802_9111)"/>
+<path d="M28 12C28 10.8954 28.8954 10 30 10V26C28.8954 26 28 25.1046 28 24V12Z" fill="url(#file-vault-open-standard-36-paint6_linear_1802_9111)"/>
+<defs>
+<linearGradient id="file-vault-open-standard-36-paint0_linear_1802_9111" x1="12.3333" y1="6" x2="14.7756" y2="30.4224" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD3D8"/>
+<stop offset="1" stop-color="#9AA6AD"/>
+</linearGradient>
+<linearGradient id="file-vault-open-standard-36-paint1_linear_1802_9111" x1="13.0417" y1="8" x2="14.9817" y2="28.3708" gradientUnits="userSpaceOnUse">
+<stop stop-color="#626C72"/>
+<stop offset="1" stop-color="#4D565C"/>
+</linearGradient>
+<linearGradient id="file-vault-open-standard-36-paint2_linear_1802_9111" x1="18" y1="8" x2="18" y2="28" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.6" stop-color="#5C666C" stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="file-vault-open-standard-36-paint3_linear_1802_9111" x1="14.3333" y1="10" x2="17" y2="26" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-vault-open-standard-36-paint4_radial_1802_9111" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.8333 14.1667) rotate(63.4349) scale(14.1618 10.6213)">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-vault-open-standard-36-paint5_linear_1802_9111" x1="30.75" y1="8" x2="39.2757" y2="12.0923" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEF0F2"/>
+<stop offset="1" stop-color="#C9CED0"/>
+</linearGradient>
+<linearGradient id="file-vault-open-standard-36-paint6_linear_1802_9111" x1="29" y1="10" x2="29" y2="26" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD1D6"/>
+<stop offset="1" stop-color="#929CA2"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,24 @@
+<svg aria-label="Spreadsheet standard 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="url(#file-spreadsheet-standard-40-paint0_linear_1802_19597)"/>
+<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="url(#file-spreadsheet-standard-40-paint1_linear_1802_19597)"/>
+<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="url(#file-spreadsheet-standard-40-paint2_radial_1802_19597)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0059 15.5059C10.0059 14.1251 11.1251 13.0059 12.5059 13.0059H27.4932C28.8739 13.0059 29.9932 14.1251 29.9932 15.5059V24.4938C29.9932 25.8745 28.8739 26.9938 27.4932 26.9938H16.5039L16.499 26.9938L16.4942 26.9938H12.5059C11.1251 26.9938 10.0059 25.8745 10.0059 24.4938V15.5059ZM16.999 25.9938H22.999V22.4998H16.999V25.9938ZM15.999 22.4998V25.9938H12.5059C11.6774 25.9938 11.0059 25.3222 11.0059 24.4938V22.4998H15.999ZM16.999 21.4998H22.999V18.4998H16.999V21.4998ZM15.999 18.4998V21.4998H11.0059V18.4998H15.999ZM16.999 17.4998H22.999V14.0059H16.999V17.4998ZM15.999 14.0059V17.4998H11.0059V15.5059C11.0059 14.6774 11.6774 14.0059 12.5059 14.0059H15.999ZM23.999 14.0059V17.4998H28.9932V15.5059C28.9932 14.6774 28.3216 14.0059 27.4932 14.0059H23.999ZM23.999 18.4998V21.4998H28.9932V18.4998H23.999ZM23.999 22.4998V25.9938H27.4932C28.3216 25.9938 28.9932 25.3222 28.9932 24.4938V22.4998H23.999Z" fill="url(#file-spreadsheet-standard-40-paint3_linear_1802_19597)"/>
+<defs>
+<linearGradient id="file-spreadsheet-standard-40-paint0_linear_1802_19597" x1="13.625" y1="6" x2="16.5776" y2="34.4716" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-spreadsheet-standard-40-paint1_linear_1802_19597" x1="12.4444" y1="7" x2="14.9756" y2="33.4803" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-spreadsheet-standard-40-paint2_radial_1802_19597" cx="0" cy="0" r="1" gradientTransform="matrix(17.9444 20.5833 -26.9167 7.71875 13.8611 13.7708)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-spreadsheet-standard-40-paint3_linear_1802_19597" x1="14.3781" y1="11.2574" x2="20.4054" y2="27.2834" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

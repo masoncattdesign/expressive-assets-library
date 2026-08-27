@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3318,
+  "total": 3396,
   "groups": [
     {
       "type": "icon",
@@ -22,7 +22,7 @@
         {
           "id": "file",
           "label": "File Icons",
-          "count": 10
+          "count": 88
         },
         {
           "id": "vscode",
@@ -152233,493 +152233,4392 @@
       "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
     },
     {
-      "id": "file.archive",
-      "name": "Archive",
+      "id": "file.access",
+      "name": "Access",
       "keywords": [
-        "zip",
+        "access"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#FF5778"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/access/standard-16.svg",
+          "20": "assets/icons/file/access/standard-20.svg",
+          "24": "assets/icons/file/access/standard-24.svg",
+          "32": "assets/icons/file/access/standard-32.svg",
+          "36": "assets/icons/file/access/standard-36.svg",
+          "40": "assets/icons/file/access/standard-40.svg",
+          "48": "assets/icons/file/access/standard-48.svg",
+          "96": "assets/icons/file/access/standard-96.svg",
+          "256": "assets/icons/file/access/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:1"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.album",
+      "name": "Album",
+      "keywords": [
+        "album"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/album/standard-16.svg",
+          "20": "assets/icons/file/album/standard-20.svg",
+          "24": "assets/icons/file/album/standard-24.svg",
+          "32": "assets/icons/file/album/standard-32.svg",
+          "36": "assets/icons/file/album/standard-36.svg",
+          "40": "assets/icons/file/album/standard-40.svg",
+          "48": "assets/icons/file/album/standard-48.svg",
+          "96": "assets/icons/file/album/standard-96.svg",
+          "256": "assets/icons/file/album/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "388237:1714"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.app-file",
+      "name": "App File",
+      "keywords": [
+        "app",
+        "file"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/app-file/standard-16.svg",
+          "20": "assets/icons/file/app-file/standard-20.svg",
+          "24": "assets/icons/file/app-file/standard-24.svg",
+          "32": "assets/icons/file/app-file/standard-32.svg",
+          "36": "assets/icons/file/app-file/standard-36.svg",
+          "40": "assets/icons/file/app-file/standard-40.svg",
+          "48": "assets/icons/file/app-file/standard-48.svg",
+          "96": "assets/icons/file/app-file/standard-96.svg",
+          "256": "assets/icons/file/app-file/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132689:8"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.audio",
+      "name": "Audio",
+      "keywords": [
+        "audio"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#A966FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/audio/standard-16.svg",
+          "20": "assets/icons/file/audio/standard-20.svg",
+          "24": "assets/icons/file/audio/standard-24.svg",
+          "32": "assets/icons/file/audio/standard-32.svg",
+          "36": "assets/icons/file/audio/standard-36.svg",
+          "40": "assets/icons/file/audio/standard-40.svg",
+          "48": "assets/icons/file/audio/standard-48.svg",
+          "64": "assets/icons/file/audio/standard-64.svg",
+          "96": "assets/icons/file/audio/standard-96.svg",
+          "256": "assets/icons/file/audio/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "517092:1688"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.audio-watermark",
+      "name": "Audio Watermark",
+      "keywords": [
+        "audio",
+        "watermark"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#B2B2B2"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/audio-watermark/standard-16.svg",
+          "20": "assets/icons/file/audio-watermark/standard-20.svg",
+          "24": "assets/icons/file/audio-watermark/standard-24.svg",
+          "32": "assets/icons/file/audio-watermark/standard-32.svg",
+          "36": "assets/icons/file/audio-watermark/standard-36.svg",
+          "40": "assets/icons/file/audio-watermark/standard-40.svg",
+          "48": "assets/icons/file/audio-watermark/standard-48.svg",
+          "96": "assets/icons/file/audio-watermark/standard-96.svg",
+          "256": "assets/icons/file/audio-watermark/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "365523:1650"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.calendar",
+      "name": "Calendar",
+      "keywords": [
+        "calendar"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/calendar/standard-16.svg",
+          "20": "assets/icons/file/calendar/standard-20.svg",
+          "24": "assets/icons/file/calendar/standard-24.svg",
+          "32": "assets/icons/file/calendar/standard-32.svg",
+          "36": "assets/icons/file/calendar/standard-36.svg",
+          "40": "assets/icons/file/calendar/standard-40.svg",
+          "48": "assets/icons/file/calendar/standard-48.svg",
+          "96": "assets/icons/file/calendar/standard-96.svg",
+          "256": "assets/icons/file/calendar/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132852:5"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.clipchamp",
+      "name": "Clipchamp",
+      "keywords": [
+        "clipchamp"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#7611F0",
+        "secondary": "#944EF6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/clipchamp/standard-16.svg",
+          "20": "assets/icons/file/clipchamp/standard-20.svg",
+          "24": "assets/icons/file/clipchamp/standard-24.svg",
+          "32": "assets/icons/file/clipchamp/standard-32.svg",
+          "36": "assets/icons/file/clipchamp/standard-36.svg",
+          "40": "assets/icons/file/clipchamp/standard-40.svg",
+          "48": "assets/icons/file/clipchamp/standard-48.svg",
+          "96": "assets/icons/file/clipchamp/standard-96.svg",
+          "256": "assets/icons/file/clipchamp/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "399678:1941"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.clipchamp-template",
+      "name": "Clipchamp Template",
+      "keywords": [
+        "clipchamp",
+        "template"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#7611F0",
+        "secondary": "#944EF6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/clipchamp-template/standard-16.svg",
+          "20": "assets/icons/file/clipchamp-template/standard-20.svg",
+          "24": "assets/icons/file/clipchamp-template/standard-24.svg",
+          "32": "assets/icons/file/clipchamp-template/standard-32.svg",
+          "36": "assets/icons/file/clipchamp-template/standard-36.svg",
+          "40": "assets/icons/file/clipchamp-template/standard-40.svg",
+          "48": "assets/icons/file/clipchamp-template/standard-48.svg",
+          "96": "assets/icons/file/clipchamp-template/standard-96.svg",
+          "256": "assets/icons/file/clipchamp-template/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "399678:2120"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.code",
+      "name": "Code",
+      "keywords": [
+        "code"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/code/standard-16.svg",
+          "20": "assets/icons/file/code/standard-20.svg",
+          "24": "assets/icons/file/code/standard-24.svg",
+          "32": "assets/icons/file/code/standard-32.svg",
+          "36": "assets/icons/file/code/standard-36.svg",
+          "40": "assets/icons/file/code/standard-40.svg",
+          "48": "assets/icons/file/code/standard-48.svg",
+          "96": "assets/icons/file/code/standard-96.svg",
+          "256": "assets/icons/file/code/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:4"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.code-notebook",
+      "name": "Code Notebook",
+      "keywords": [
+        "code",
+        "notebook"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/code-notebook/standard-16.svg",
+          "20": "assets/icons/file/code-notebook/standard-20.svg",
+          "24": "assets/icons/file/code-notebook/standard-24.svg",
+          "32": "assets/icons/file/code-notebook/standard-32.svg",
+          "36": "assets/icons/file/code-notebook/standard-36.svg",
+          "40": "assets/icons/file/code-notebook/standard-40.svg",
+          "48": "assets/icons/file/code-notebook/standard-48.svg",
+          "96": "assets/icons/file/code-notebook/standard-96.svg",
+          "256": "assets/icons/file/code-notebook/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "178834:459"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.compressed-archive",
+      "name": "Compressed Archive",
+      "keywords": [
         "compressed",
-        "rar",
-        "package",
-        "bundle"
+        "archive"
       ],
-      "description": "A page marked ZIP. Compressed archives and bundles.",
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#8E562E",
-        "secondary": "#CA5010"
+        "primary": "#FFB900",
+        "secondary": "#BF5712"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/archive/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/archive/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/archive/mono.svg"
+          "16": "assets/icons/file/compressed-archive/standard-16.svg",
+          "20": "assets/icons/file/compressed-archive/standard-20.svg",
+          "24": "assets/icons/file/compressed-archive/standard-24.svg",
+          "32": "assets/icons/file/compressed-archive/standard-32.svg",
+          "36": "assets/icons/file/compressed-archive/standard-36.svg",
+          "40": "assets/icons/file/compressed-archive/standard-40.svg",
+          "48": "assets/icons/file/compressed-archive/standard-48.svg",
+          "96": "assets/icons/file/compressed-archive/standard-96.svg",
+          "256": "assets/icons/file/compressed-archive/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "254652:2084"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.audio-file",
-      "name": "Audio File",
+      "id": "file.contact",
+      "name": "Contact",
       "keywords": [
-        "mp3",
-        "wav",
-        "sound",
-        "music",
-        "track"
+        "contact"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#C239B3",
-        "secondary": "#E3008C"
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/audio-file/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/audio-file/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/audio-file/mono.svg"
+          "16": "assets/icons/file/contact/standard-16.svg",
+          "20": "assets/icons/file/contact/standard-20.svg",
+          "24": "assets/icons/file/contact/standard-24.svg",
+          "32": "assets/icons/file/contact/standard-32.svg",
+          "36": "assets/icons/file/contact/standard-36.svg",
+          "40": "assets/icons/file/contact/standard-40.svg",
+          "48": "assets/icons/file/contact/standard-48.svg",
+          "96": "assets/icons/file/contact/standard-96.svg",
+          "256": "assets/icons/file/contact/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:8"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.code-file",
-      "name": "Code File",
+      "id": "file.copilot",
+      "name": "Copilot",
       "keywords": [
-        "source",
-        "script",
-        "developer",
-        "programming"
+        "copilot"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#0F6CBD",
-        "secondary": "#5D5A88"
+        "primary": "#BBBBBB",
+        "secondary": "#A86EDD"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/code-file/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/code-file/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/code-file/mono.svg"
+          "16": "assets/icons/file/copilot/standard-16.svg",
+          "20": "assets/icons/file/copilot/standard-20.svg",
+          "24": "assets/icons/file/copilot/standard-24.svg",
+          "32": "assets/icons/file/copilot/standard-32.svg",
+          "36": "assets/icons/file/copilot/standard-36.svg",
+          "40": "assets/icons/file/copilot/standard-40.svg",
+          "48": "assets/icons/file/copilot/standard-48.svg",
+          "96": "assets/icons/file/copilot/standard-96.svg",
+          "256": "assets/icons/file/copilot/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "376868:1788"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.image-file",
-      "name": "Image File",
+      "id": "file.copilot-page",
+      "name": "Copilot Page",
       "keywords": [
-        "png",
-        "jpg",
-        "picture",
-        "photo",
-        "raster"
+        "copilot",
+        "page"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#8764B8",
-        "secondary": "#C239B3"
+        "primary": "#BBBBBB",
+        "secondary": "#FFB152"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/image-file/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/image-file/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/image-file/mono.svg"
+          "16": "assets/icons/file/copilot-page/standard-16.svg",
+          "20": "assets/icons/file/copilot-page/standard-20.svg",
+          "24": "assets/icons/file/copilot-page/standard-24.svg",
+          "32": "assets/icons/file/copilot-page/standard-32.svg",
+          "36": "assets/icons/file/copilot-page/standard-36.svg",
+          "40": "assets/icons/file/copilot-page/standard-40.svg",
+          "48": "assets/icons/file/copilot-page/standard-48.svg",
+          "96": "assets/icons/file/copilot-page/standard-96.svg",
+          "256": "assets/icons/file/copilot-page/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "448633:1680"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.copilot-work-object",
+      "name": "Copilot Work Object",
+      "keywords": [
+        "copilot",
+        "work",
+        "object"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#A86EDD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/copilot-work-object/standard-16.svg",
+          "20": "assets/icons/file/copilot-work-object/standard-20.svg",
+          "24": "assets/icons/file/copilot-work-object/standard-24.svg",
+          "32": "assets/icons/file/copilot-work-object/standard-32.svg",
+          "36": "assets/icons/file/copilot-work-object/standard-36.svg",
+          "40": "assets/icons/file/copilot-work-object/standard-40.svg",
+          "48": "assets/icons/file/copilot-work-object/standard-48.svg",
+          "64": "assets/icons/file/copilot-work-object/standard-64.svg",
+          "96": "assets/icons/file/copilot-work-object/standard-96.svg",
+          "256": "assets/icons/file/copilot-work-object/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555396:548"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.csv",
+      "name": "CSV",
+      "keywords": [
+        "csv"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#98F0B0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/csv/standard-16.svg",
+          "20": "assets/icons/file/csv/standard-20.svg",
+          "24": "assets/icons/file/csv/standard-24.svg",
+          "32": "assets/icons/file/csv/standard-32.svg",
+          "36": "assets/icons/file/csv/standard-36.svg",
+          "40": "assets/icons/file/csv/standard-40.svg",
+          "48": "assets/icons/file/csv/standard-48.svg",
+          "96": "assets/icons/file/csv/standard-96.svg",
+          "256": "assets/icons/file/csv/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:6"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.designer",
+      "name": "Designer",
+      "keywords": [
+        "designer"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#FFB357"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/designer/standard-16.svg",
+          "20": "assets/icons/file/designer/standard-20.svg",
+          "24": "assets/icons/file/designer/standard-24.svg",
+          "32": "assets/icons/file/designer/standard-32.svg",
+          "36": "assets/icons/file/designer/standard-36.svg",
+          "40": "assets/icons/file/designer/standard-40.svg",
+          "48": "assets/icons/file/designer/standard-48.svg",
+          "96": "assets/icons/file/designer/standard-96.svg",
+          "256": "assets/icons/file/designer/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "252949:1717"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.excel",
+      "name": "Excel",
+      "keywords": [
+        "excel"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#D0EB76"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/excel/standard-16.svg",
+          "20": "assets/icons/file/excel/standard-20.svg",
+          "24": "assets/icons/file/excel/standard-24.svg",
+          "32": "assets/icons/file/excel/standard-32.svg",
+          "36": "assets/icons/file/excel/standard-36.svg",
+          "40": "assets/icons/file/excel/standard-40.svg",
+          "48": "assets/icons/file/excel/standard-48.svg",
+          "96": "assets/icons/file/excel/standard-96.svg",
+          "256": "assets/icons/file/excel/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:120"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.excel-template",
+      "name": "Excel Template",
+      "keywords": [
+        "excel",
+        "template"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#EBEBEB",
+        "secondary": "#98F0B0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/excel-template/standard-16.svg",
+          "20": "assets/icons/file/excel-template/standard-20.svg",
+          "24": "assets/icons/file/excel-template/standard-24.svg",
+          "32": "assets/icons/file/excel-template/standard-32.svg",
+          "36": "assets/icons/file/excel-template/standard-36.svg",
+          "40": "assets/icons/file/excel-template/standard-40.svg",
+          "48": "assets/icons/file/excel-template/standard-48.svg",
+          "96": "assets/icons/file/excel-template/standard-96.svg",
+          "256": "assets/icons/file/excel-template/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133835:12"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.fabric-data-agent",
+      "name": "Fabric data agent",
+      "keywords": [
+        "fabric",
+        "data",
+        "agent"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#F4F4F4",
+        "secondary": "#063D3B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/fabric-data-agent/standard-16.svg",
+          "20": "assets/icons/file/fabric-data-agent/standard-20.svg",
+          "24": "assets/icons/file/fabric-data-agent/standard-24.svg",
+          "32": "assets/icons/file/fabric-data-agent/standard-32.svg",
+          "36": "assets/icons/file/fabric-data-agent/standard-36.svg",
+          "40": "assets/icons/file/fabric-data-agent/standard-40.svg",
+          "48": "assets/icons/file/fabric-data-agent/standard-48.svg",
+          "96": "assets/icons/file/fabric-data-agent/standard-96.svg",
+          "256": "assets/icons/file/fabric-data-agent/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:1671"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.file",
+      "name": "File",
+      "keywords": [
+        "file"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/file/standard-16.svg",
+          "20": "assets/icons/file/file/standard-20.svg",
+          "24": "assets/icons/file/file/standard-24.svg",
+          "32": "assets/icons/file/file/standard-32.svg",
+          "36": "assets/icons/file/file/standard-36.svg",
+          "40": "assets/icons/file/file/standard-40.svg",
+          "48": "assets/icons/file/file/standard-48.svg",
+          "96": "assets/icons/file/file/standard-96.svg",
+          "256": "assets/icons/file/file/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:1"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.file-multiple",
+      "name": "File Multiple",
+      "keywords": [
+        "file",
+        "multiple"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/file-multiple/standard-16.svg",
+          "20": "assets/icons/file/file-multiple/standard-20.svg",
+          "24": "assets/icons/file/file-multiple/standard-24.svg",
+          "32": "assets/icons/file/file-multiple/standard-32.svg",
+          "36": "assets/icons/file/file-multiple/standard-36.svg",
+          "40": "assets/icons/file/file-multiple/standard-40.svg",
+          "48": "assets/icons/file/file-multiple/standard-48.svg",
+          "96": "assets/icons/file/file-multiple/standard-96.svg",
+          "256": "assets/icons/file/file-multiple/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:29"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.file-recycled",
+      "name": "File Recycled",
+      "keywords": [
+        "file",
+        "recycled"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#605E5C",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/file-recycled/standard-16.svg",
+          "20": "assets/icons/file/file-recycled/standard-20.svg",
+          "24": "assets/icons/file/file-recycled/standard-24.svg",
+          "32": "assets/icons/file/file-recycled/standard-32.svg",
+          "36": "assets/icons/file/file-recycled/standard-36.svg",
+          "40": "assets/icons/file/file-recycled/standard-40.svg",
+          "48": "assets/icons/file/file-recycled/standard-48.svg",
+          "96": "assets/icons/file/file-recycled/standard-96.svg",
+          "256": "assets/icons/file/file-recycled/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "319233:1301"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.font",
+      "name": "Font",
+      "keywords": [
+        "font"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/font/standard-16.svg",
+          "20": "assets/icons/file/font/standard-20.svg",
+          "24": "assets/icons/file/font/standard-24.svg",
+          "32": "assets/icons/file/font/standard-32.svg",
+          "36": "assets/icons/file/font/standard-36.svg",
+          "40": "assets/icons/file/font/standard-40.svg",
+          "48": "assets/icons/file/font/standard-48.svg",
+          "96": "assets/icons/file/font/standard-96.svg",
+          "256": "assets/icons/file/font/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133885:0"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.form",
+      "name": "Form",
+      "keywords": [
+        "form"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#20AC9D"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/form/standard-16.svg",
+          "20": "assets/icons/file/form/standard-20.svg",
+          "24": "assets/icons/file/form/standard-24.svg",
+          "32": "assets/icons/file/form/standard-32.svg",
+          "36": "assets/icons/file/form/standard-36.svg",
+          "40": "assets/icons/file/form/standard-40.svg",
+          "48": "assets/icons/file/form/standard-48.svg",
+          "96": "assets/icons/file/form/standard-96.svg",
+          "256": "assets/icons/file/form/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133835:8"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.form-generic",
+      "name": "Form Generic",
+      "keywords": [
+        "form",
+        "generic"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/form-generic/standard-16.svg",
+          "20": "assets/icons/file/form-generic/standard-20.svg",
+          "24": "assets/icons/file/form-generic/standard-24.svg",
+          "32": "assets/icons/file/form-generic/standard-32.svg",
+          "36": "assets/icons/file/form-generic/standard-36.svg",
+          "40": "assets/icons/file/form-generic/standard-40.svg",
+          "48": "assets/icons/file/form-generic/standard-48.svg",
+          "96": "assets/icons/file/form-generic/standard-96.svg",
+          "256": "assets/icons/file/form-generic/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133835:10"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.ink-canvas",
+      "name": "Ink Canvas",
+      "keywords": [
+        "ink",
+        "canvas"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#FFC8D7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/ink-canvas/standard-16.svg",
+          "20": "assets/icons/file/ink-canvas/standard-20.svg",
+          "24": "assets/icons/file/ink-canvas/standard-24.svg",
+          "32": "assets/icons/file/ink-canvas/standard-32.svg",
+          "36": "assets/icons/file/ink-canvas/standard-36.svg",
+          "40": "assets/icons/file/ink-canvas/standard-40.svg",
+          "48": "assets/icons/file/ink-canvas/standard-48.svg",
+          "64": "assets/icons/file/ink-canvas/standard-64.svg",
+          "96": "assets/icons/file/ink-canvas/standard-96.svg",
+          "256": "assets/icons/file/ink-canvas/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555396:599"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.link",
+      "name": "Link",
+      "keywords": [
+        "link"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/link/standard-16.svg",
+          "20": "assets/icons/file/link/standard-20.svg",
+          "24": "assets/icons/file/link/standard-24.svg",
+          "32": "assets/icons/file/link/standard-32.svg",
+          "36": "assets/icons/file/link/standard-36.svg",
+          "40": "assets/icons/file/link/standard-40.svg",
+          "48": "assets/icons/file/link/standard-48.svg",
+          "96": "assets/icons/file/link/standard-96.svg",
+          "256": "assets/icons/file/link/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132689:10"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.lists",
+      "name": "Lists",
+      "keywords": [
+        "lists"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#FEE200",
+        "secondary": "#703F6C"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/lists/standard-16.svg",
+          "20": "assets/icons/file/lists/standard-20.svg",
+          "24": "assets/icons/file/lists/standard-24.svg",
+          "32": "assets/icons/file/lists/standard-32.svg",
+          "36": "assets/icons/file/lists/standard-36.svg",
+          "40": "assets/icons/file/lists/standard-40.svg",
+          "48": "assets/icons/file/lists/standard-48.svg",
+          "96": "assets/icons/file/lists/standard-96.svg",
+          "256": "assets/icons/file/lists/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:0"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.lists-form",
+      "name": "Lists Form",
+      "keywords": [
+        "lists",
+        "form"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#87447D",
+        "secondary": "#663764"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/lists-form/standard-16.svg",
+          "20": "assets/icons/file/lists-form/standard-20.svg",
+          "24": "assets/icons/file/lists-form/standard-24.svg",
+          "32": "assets/icons/file/lists-form/standard-32.svg",
+          "36": "assets/icons/file/lists-form/standard-36.svg",
+          "40": "assets/icons/file/lists-form/standard-40.svg",
+          "48": "assets/icons/file/lists-form/standard-48.svg",
+          "96": "assets/icons/file/lists-form/standard-96.svg",
+          "256": "assets/icons/file/lists-form/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "399678:1803"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.lists-item",
+      "name": "Lists Item",
+      "keywords": [
+        "lists",
+        "item"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#FEE200",
+        "secondary": "#663764"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/lists-item/standard-16.svg",
+          "20": "assets/icons/file/lists-item/standard-20.svg",
+          "24": "assets/icons/file/lists-item/standard-24.svg",
+          "32": "assets/icons/file/lists-item/standard-32.svg",
+          "36": "assets/icons/file/lists-item/standard-36.svg",
+          "40": "assets/icons/file/lists-item/standard-40.svg",
+          "48": "assets/icons/file/lists-item/standard-48.svg",
+          "96": "assets/icons/file/lists-item/standard-96.svg",
+          "256": "assets/icons/file/lists-item/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "399678:1737"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.loop",
+      "name": "Loop",
+      "keywords": [
+        "loop"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#AB5ADD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/loop/standard-16.svg",
+          "20": "assets/icons/file/loop/standard-20.svg",
+          "24": "assets/icons/file/loop/standard-24.svg",
+          "32": "assets/icons/file/loop/standard-32.svg",
+          "36": "assets/icons/file/loop/standard-36.svg",
+          "40": "assets/icons/file/loop/standard-40.svg",
+          "48": "assets/icons/file/loop/standard-48.svg",
+          "96": "assets/icons/file/loop/standard-96.svg",
+          "256": "assets/icons/file/loop/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132852:6"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.loop-workspace",
+      "name": "Loop Workspace",
+      "keywords": [
+        "loop",
+        "workspace"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#F3F3F3",
+        "secondary": "#AB5ADD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/loop-workspace/standard-16.svg",
+          "20": "assets/icons/file/loop-workspace/standard-20.svg",
+          "24": "assets/icons/file/loop-workspace/standard-24.svg",
+          "32": "assets/icons/file/loop-workspace/standard-32.svg",
+          "36": "assets/icons/file/loop-workspace/standard-36.svg",
+          "40": "assets/icons/file/loop-workspace/standard-40.svg",
+          "48": "assets/icons/file/loop-workspace/standard-48.svg",
+          "96": "assets/icons/file/loop-workspace/standard-96.svg",
+          "256": "assets/icons/file/loop-workspace/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "243560:2004"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.mail",
+      "name": "Mail",
+      "keywords": [
+        "mail"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/mail/standard-16.svg",
+          "20": "assets/icons/file/mail/standard-20.svg",
+          "24": "assets/icons/file/mail/standard-24.svg",
+          "32": "assets/icons/file/mail/standard-32.svg",
+          "36": "assets/icons/file/mail/standard-36.svg",
+          "40": "assets/icons/file/mail/standard-40.svg",
+          "48": "assets/icons/file/mail/standard-48.svg",
+          "96": "assets/icons/file/mail/standard-96.svg",
+          "256": "assets/icons/file/mail/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132689:7"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.markdown-file",
+      "name": "Markdown file",
+      "keywords": [
+        "markdown",
+        "file"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/markdown-file/standard-16.svg",
+          "20": "assets/icons/file/markdown-file/standard-20.svg",
+          "24": "assets/icons/file/markdown-file/standard-24.svg",
+          "32": "assets/icons/file/markdown-file/standard-32.svg",
+          "36": "assets/icons/file/markdown-file/standard-36.svg",
+          "40": "assets/icons/file/markdown-file/standard-40.svg",
+          "48": "assets/icons/file/markdown-file/standard-48.svg",
+          "64": "assets/icons/file/markdown-file/standard-64.svg",
+          "96": "assets/icons/file/markdown-file/standard-96.svg",
+          "256": "assets/icons/file/markdown-file/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555396:848"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.minecraft",
+      "name": "Minecraft",
+      "keywords": [
+        "minecraft"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#86D562",
+        "secondary": "#888888"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/minecraft/standard-16.svg",
+          "20": "assets/icons/file/minecraft/standard-20.svg",
+          "24": "assets/icons/file/minecraft/standard-24.svg",
+          "32": "assets/icons/file/minecraft/standard-32.svg",
+          "36": "assets/icons/file/minecraft/standard-36.svg",
+          "40": "assets/icons/file/minecraft/standard-40.svg",
+          "48": "assets/icons/file/minecraft/standard-48.svg",
+          "96": "assets/icons/file/minecraft/standard-96.svg",
+          "256": "assets/icons/file/minecraft/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "314040:707"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.minecraft-world",
+      "name": "Minecraft World",
+      "keywords": [
+        "minecraft",
+        "world"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#86D562",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/minecraft-world/standard-16.svg",
+          "20": "assets/icons/file/minecraft-world/standard-20.svg",
+          "24": "assets/icons/file/minecraft-world/standard-24.svg",
+          "32": "assets/icons/file/minecraft-world/standard-32.svg",
+          "36": "assets/icons/file/minecraft-world/standard-36.svg",
+          "40": "assets/icons/file/minecraft-world/standard-40.svg",
+          "48": "assets/icons/file/minecraft-world/standard-48.svg",
+          "96": "assets/icons/file/minecraft-world/standard-96.svg",
+          "256": "assets/icons/file/minecraft-world/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "314040:810"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.model",
+      "name": "Model",
+      "keywords": [
+        "model"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/model/standard-16.svg",
+          "20": "assets/icons/file/model/standard-20.svg",
+          "24": "assets/icons/file/model/standard-24.svg",
+          "32": "assets/icons/file/model/standard-32.svg",
+          "36": "assets/icons/file/model/standard-36.svg",
+          "40": "assets/icons/file/model/standard-40.svg",
+          "48": "assets/icons/file/model/standard-48.svg",
+          "96": "assets/icons/file/model/standard-96.svg",
+          "256": "assets/icons/file/model/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:5"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.music",
+      "name": "Music",
+      "keywords": [
+        "music"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/music/standard-16.svg",
+          "20": "assets/icons/file/music/standard-20.svg",
+          "24": "assets/icons/file/music/standard-24.svg",
+          "32": "assets/icons/file/music/standard-32.svg",
+          "36": "assets/icons/file/music/standard-36.svg",
+          "40": "assets/icons/file/music/standard-40.svg",
+          "48": "assets/icons/file/music/standard-48.svg",
+          "96": "assets/icons/file/music/standard-96.svg",
+          "256": "assets/icons/file/music/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "362552:1848"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.office-script",
+      "name": "Office Script",
+      "keywords": [
+        "office",
+        "script"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#D83B01"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/office-script/standard-16.svg",
+          "20": "assets/icons/file/office-script/standard-20.svg",
+          "24": "assets/icons/file/office-script/standard-24.svg",
+          "32": "assets/icons/file/office-script/standard-32.svg",
+          "36": "assets/icons/file/office-script/standard-36.svg",
+          "40": "assets/icons/file/office-script/standard-40.svg",
+          "48": "assets/icons/file/office-script/standard-48.svg",
+          "96": "assets/icons/file/office-script/standard-96.svg",
+          "256": "assets/icons/file/office-script/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "140013:1321"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.onenote",
+      "name": "OneNote",
+      "keywords": [
+        "onenote"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#D373FC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/onenote/standard-16.svg",
+          "20": "assets/icons/file/onenote/standard-20.svg",
+          "24": "assets/icons/file/onenote/standard-24.svg",
+          "32": "assets/icons/file/onenote/standard-32.svg",
+          "36": "assets/icons/file/onenote/standard-36.svg",
+          "40": "assets/icons/file/onenote/standard-40.svg",
+          "48": "assets/icons/file/onenote/standard-48.svg",
+          "96": "assets/icons/file/onenote/standard-96.svg",
+          "256": "assets/icons/file/onenote/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "481196:1826"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.onenote-notebook",
+      "name": "OneNote Notebook",
+      "keywords": [
+        "onenote",
+        "notebook"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#DE67FD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/onenote-notebook/standard-16.svg",
+          "20": "assets/icons/file/onenote-notebook/standard-20.svg",
+          "24": "assets/icons/file/onenote-notebook/standard-24.svg",
+          "32": "assets/icons/file/onenote-notebook/standard-32.svg",
+          "36": "assets/icons/file/onenote-notebook/standard-36.svg",
+          "40": "assets/icons/file/onenote-notebook/standard-40.svg",
+          "48": "assets/icons/file/onenote-notebook/standard-48.svg",
+          "96": "assets/icons/file/onenote-notebook/standard-96.svg",
+          "256": "assets/icons/file/onenote-notebook/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:54"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.onenote-section",
+      "name": "OneNote Section",
+      "keywords": [
+        "onenote",
+        "section"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#D373FC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/onenote-section/standard-16.svg",
+          "20": "assets/icons/file/onenote-section/standard-20.svg",
+          "24": "assets/icons/file/onenote-section/standard-24.svg",
+          "32": "assets/icons/file/onenote-section/standard-32.svg",
+          "36": "assets/icons/file/onenote-section/standard-36.svg",
+          "40": "assets/icons/file/onenote-section/standard-40.svg",
+          "48": "assets/icons/file/onenote-section/standard-48.svg",
+          "96": "assets/icons/file/onenote-section/standard-96.svg",
+          "256": "assets/icons/file/onenote-section/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:30"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "file.pdf",
       "name": "PDF",
       "keywords": [
-        "acrobat",
-        "portable document",
-        "print"
+        "pdf"
       ],
-      "description": "A page marked PDF. Portable Document Format files.",
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#D13438",
-        "secondary": "#EB6B0C"
+        "primary": "#D20112",
+        "secondary": "#636262"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/pdf/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/pdf/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/pdf/mono.svg"
+          "16": "assets/icons/file/pdf/standard-16.svg",
+          "20": "assets/icons/file/pdf/standard-20.svg",
+          "24": "assets/icons/file/pdf/standard-24.svg",
+          "32": "assets/icons/file/pdf/standard-32.svg",
+          "36": "assets/icons/file/pdf/standard-36.svg",
+          "40": "assets/icons/file/pdf/standard-40.svg",
+          "48": "assets/icons/file/pdf/standard-48.svg",
+          "96": "assets/icons/file/pdf/standard-96.svg",
+          "256": "assets/icons/file/pdf/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:55"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.photo",
+      "name": "Photo",
+      "keywords": [
+        "photo"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/photo/standard-16.svg",
+          "20": "assets/icons/file/photo/standard-20.svg",
+          "24": "assets/icons/file/photo/standard-24.svg",
+          "32": "assets/icons/file/photo/standard-32.svg",
+          "36": "assets/icons/file/photo/standard-36.svg",
+          "40": "assets/icons/file/photo/standard-40.svg",
+          "48": "assets/icons/file/photo/standard-48.svg",
+          "64": "assets/icons/file/photo/standard-64.svg",
+          "96": "assets/icons/file/photo/standard-96.svg",
+          "256": "assets/icons/file/photo/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132852:1"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.photo-watermark",
+      "name": "Photo Watermark",
+      "keywords": [
+        "photo",
+        "watermark"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/photo-watermark/standard-16.svg",
+          "20": "assets/icons/file/photo-watermark/standard-20.svg",
+          "24": "assets/icons/file/photo-watermark/standard-24.svg",
+          "32": "assets/icons/file/photo-watermark/standard-32.svg",
+          "36": "assets/icons/file/photo-watermark/standard-36.svg",
+          "40": "assets/icons/file/photo-watermark/standard-40.svg",
+          "48": "assets/icons/file/photo-watermark/standard-48.svg",
+          "64": "assets/icons/file/photo-watermark/standard-64.svg",
+          "96": "assets/icons/file/photo-watermark/standard-96.svg",
+          "256": "assets/icons/file/photo-watermark/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132852:2"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.photo360",
+      "name": "Photo360",
+      "keywords": [
+        "photo360"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/photo360/standard-16.svg",
+          "20": "assets/icons/file/photo360/standard-20.svg",
+          "24": "assets/icons/file/photo360/standard-24.svg",
+          "32": "assets/icons/file/photo360/standard-32.svg",
+          "36": "assets/icons/file/photo360/standard-36.svg",
+          "40": "assets/icons/file/photo360/standard-40.svg",
+          "48": "assets/icons/file/photo360/standard-48.svg",
+          "96": "assets/icons/file/photo360/standard-96.svg",
+          "256": "assets/icons/file/photo360/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:7"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.planner",
+      "name": "Planner",
+      "keywords": [
+        "planner"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#4A40D4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/planner/standard-16.svg",
+          "20": "assets/icons/file/planner/standard-20.svg",
+          "24": "assets/icons/file/planner/standard-24.svg",
+          "32": "assets/icons/file/planner/standard-32.svg",
+          "36": "assets/icons/file/planner/standard-36.svg",
+          "40": "assets/icons/file/planner/standard-40.svg",
+          "48": "assets/icons/file/planner/standard-48.svg",
+          "96": "assets/icons/file/planner/standard-96.svg",
+          "256": "assets/icons/file/planner/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "335631:2114"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.planner-portfolio",
+      "name": "Planner Portfolio",
+      "keywords": [
+        "planner",
+        "portfolio"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#4A40D4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/planner-portfolio/standard-16.svg",
+          "20": "assets/icons/file/planner-portfolio/standard-20.svg",
+          "24": "assets/icons/file/planner-portfolio/standard-24.svg",
+          "32": "assets/icons/file/planner-portfolio/standard-32.svg",
+          "36": "assets/icons/file/planner-portfolio/standard-36.svg",
+          "40": "assets/icons/file/planner-portfolio/standard-40.svg",
+          "48": "assets/icons/file/planner-portfolio/standard-48.svg",
+          "96": "assets/icons/file/planner-portfolio/standard-96.svg",
+          "256": "assets/icons/file/planner-portfolio/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "376868:2251"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-app",
+      "name": "Power BI App",
+      "keywords": [
+        "power",
+        "bi",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#F9E589"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-app/standard-16.svg",
+          "20": "assets/icons/file/power-bi-app/standard-20.svg",
+          "24": "assets/icons/file/power-bi-app/standard-24.svg",
+          "32": "assets/icons/file/power-bi-app/standard-32.svg",
+          "36": "assets/icons/file/power-bi-app/standard-36.svg",
+          "40": "assets/icons/file/power-bi-app/standard-40.svg",
+          "48": "assets/icons/file/power-bi-app/standard-48.svg",
+          "96": "assets/icons/file/power-bi-app/standard-96.svg",
+          "256": "assets/icons/file/power-bi-app/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:1530"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-dashboard",
+      "name": "Power BI dashboard",
+      "keywords": [
+        "power",
+        "bi",
+        "dashboard"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#F4D58A",
+        "secondary": "#F9E589"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-dashboard/standard-16.svg",
+          "20": "assets/icons/file/power-bi-dashboard/standard-20.svg",
+          "24": "assets/icons/file/power-bi-dashboard/standard-24.svg",
+          "32": "assets/icons/file/power-bi-dashboard/standard-32.svg",
+          "36": "assets/icons/file/power-bi-dashboard/standard-36.svg",
+          "40": "assets/icons/file/power-bi-dashboard/standard-40.svg",
+          "48": "assets/icons/file/power-bi-dashboard/standard-48.svg",
+          "96": "assets/icons/file/power-bi-dashboard/standard-96.svg",
+          "256": "assets/icons/file/power-bi-dashboard/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:1353"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-paginated-report",
+      "name": "Power BI paginated report",
+      "keywords": [
+        "power",
+        "bi",
+        "paginated",
+        "report"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#A86500"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-paginated-report/standard-16.svg",
+          "20": "assets/icons/file/power-bi-paginated-report/standard-20.svg",
+          "24": "assets/icons/file/power-bi-paginated-report/standard-24.svg",
+          "32": "assets/icons/file/power-bi-paginated-report/standard-32.svg",
+          "36": "assets/icons/file/power-bi-paginated-report/standard-36.svg",
+          "40": "assets/icons/file/power-bi-paginated-report/standard-40.svg",
+          "48": "assets/icons/file/power-bi-paginated-report/standard-48.svg",
+          "96": "assets/icons/file/power-bi-paginated-report/standard-96.svg",
+          "256": "assets/icons/file/power-bi-paginated-report/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:653"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-report",
+      "name": "Power BI report",
+      "keywords": [
+        "power",
+        "bi",
+        "report"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#F9E589"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-report/standard-16.svg",
+          "20": "assets/icons/file/power-bi-report/standard-20.svg",
+          "24": "assets/icons/file/power-bi-report/standard-24.svg",
+          "32": "assets/icons/file/power-bi-report/standard-32.svg",
+          "36": "assets/icons/file/power-bi-report/standard-36.svg",
+          "40": "assets/icons/file/power-bi-report/standard-40.svg",
+          "48": "assets/icons/file/power-bi-report/standard-48.svg",
+          "96": "assets/icons/file/power-bi-report/standard-96.svg",
+          "256": "assets/icons/file/power-bi-report/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:835"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-scorecard",
+      "name": "Power BI scorecard",
+      "keywords": [
+        "power",
+        "bi",
+        "scorecard"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#F9E589"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-scorecard/standard-16.svg",
+          "20": "assets/icons/file/power-bi-scorecard/standard-20.svg",
+          "24": "assets/icons/file/power-bi-scorecard/standard-24.svg",
+          "32": "assets/icons/file/power-bi-scorecard/standard-32.svg",
+          "36": "assets/icons/file/power-bi-scorecard/standard-36.svg",
+          "40": "assets/icons/file/power-bi-scorecard/standard-40.svg",
+          "48": "assets/icons/file/power-bi-scorecard/standard-48.svg",
+          "96": "assets/icons/file/power-bi-scorecard/standard-96.svg",
+          "256": "assets/icons/file/power-bi-scorecard/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:1207"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.power-bi-semantic-model",
+      "name": "Power BI semantic model",
+      "keywords": [
+        "power",
+        "bi",
+        "semantic",
+        "model"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#F9E589"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/power-bi-semantic-model/standard-16.svg",
+          "20": "assets/icons/file/power-bi-semantic-model/standard-20.svg",
+          "24": "assets/icons/file/power-bi-semantic-model/standard-24.svg",
+          "32": "assets/icons/file/power-bi-semantic-model/standard-32.svg",
+          "36": "assets/icons/file/power-bi-semantic-model/standard-36.svg",
+          "40": "assets/icons/file/power-bi-semantic-model/standard-40.svg",
+          "48": "assets/icons/file/power-bi-semantic-model/standard-48.svg",
+          "96": "assets/icons/file/power-bi-semantic-model/standard-96.svg",
+          "256": "assets/icons/file/power-bi-semantic-model/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "567113:1012"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.powerpoint",
+      "name": "PowerPoint",
+      "keywords": [
+        "powerpoint"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#FFF2BE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/powerpoint/standard-16.svg",
+          "20": "assets/icons/file/powerpoint/standard-20.svg",
+          "24": "assets/icons/file/powerpoint/standard-24.svg",
+          "32": "assets/icons/file/powerpoint/standard-32.svg",
+          "36": "assets/icons/file/powerpoint/standard-36.svg",
+          "40": "assets/icons/file/powerpoint/standard-40.svg",
+          "48": "assets/icons/file/powerpoint/standard-48.svg",
+          "96": "assets/icons/file/powerpoint/standard-96.svg",
+          "256": "assets/icons/file/powerpoint/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:58"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.powerpoint-slideshow",
+      "name": "Powerpoint Slideshow",
+      "keywords": [
+        "powerpoint",
+        "slideshow"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#FFF2BE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/powerpoint-slideshow/standard-16.svg",
+          "20": "assets/icons/file/powerpoint-slideshow/standard-20.svg",
+          "24": "assets/icons/file/powerpoint-slideshow/standard-24.svg",
+          "32": "assets/icons/file/powerpoint-slideshow/standard-32.svg",
+          "36": "assets/icons/file/powerpoint-slideshow/standard-36.svg",
+          "40": "assets/icons/file/powerpoint-slideshow/standard-40.svg",
+          "48": "assets/icons/file/powerpoint-slideshow/standard-48.svg",
+          "96": "assets/icons/file/powerpoint-slideshow/standard-96.svg",
+          "256": "assets/icons/file/powerpoint-slideshow/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:57"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.powerpoint-template",
+      "name": "PowerPoint Template",
+      "keywords": [
+        "powerpoint",
+        "template"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#EBEBEB",
+        "secondary": "#FFF2BE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/powerpoint-template/standard-16.svg",
+          "20": "assets/icons/file/powerpoint-template/standard-20.svg",
+          "24": "assets/icons/file/powerpoint-template/standard-24.svg",
+          "32": "assets/icons/file/powerpoint-template/standard-32.svg",
+          "36": "assets/icons/file/powerpoint-template/standard-36.svg",
+          "40": "assets/icons/file/powerpoint-template/standard-40.svg",
+          "48": "assets/icons/file/powerpoint-template/standard-48.svg",
+          "96": "assets/icons/file/powerpoint-template/standard-96.svg",
+          "256": "assets/icons/file/powerpoint-template/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:56"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "file.presentation",
       "name": "Presentation",
-      "aliases": [
-        "PowerPoint"
-      ],
       "keywords": [
-        "powerpoint",
-        "ppt",
-        "pptx",
-        "slides",
-        "deck"
+        "presentation"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#D24726",
-        "secondary": "#ED6C47"
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/presentation/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/presentation/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/presentation/mono.svg"
+          "16": "assets/icons/file/presentation/standard-16.svg",
+          "20": "assets/icons/file/presentation/standard-20.svg",
+          "24": "assets/icons/file/presentation/standard-24.svg",
+          "32": "assets/icons/file/presentation/standard-32.svg",
+          "36": "assets/icons/file/presentation/standard-36.svg",
+          "40": "assets/icons/file/presentation/standard-40.svg",
+          "48": "assets/icons/file/presentation/standard-48.svg",
+          "96": "assets/icons/file/presentation/standard-96.svg",
+          "256": "assets/icons/file/presentation/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:0"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.project",
+      "name": "Project",
+      "keywords": [
+        "project"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#33C481",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/project/standard-16.svg",
+          "20": "assets/icons/file/project/standard-20.svg",
+          "24": "assets/icons/file/project/standard-24.svg",
+          "32": "assets/icons/file/project/standard-32.svg",
+          "36": "assets/icons/file/project/standard-36.svg",
+          "40": "assets/icons/file/project/standard-40.svg",
+          "48": "assets/icons/file/project/standard-48.svg",
+          "96": "assets/icons/file/project/standard-96.svg",
+          "256": "assets/icons/file/project/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:6"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.project-template",
+      "name": "Project Template",
+      "keywords": [
+        "project",
+        "template"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#33C481",
+        "secondary": "#888888"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/project-template/standard-16.svg",
+          "20": "assets/icons/file/project-template/standard-20.svg",
+          "24": "assets/icons/file/project-template/standard-24.svg",
+          "32": "assets/icons/file/project-template/standard-32.svg",
+          "36": "assets/icons/file/project-template/standard-36.svg",
+          "40": "assets/icons/file/project-template/standard-40.svg",
+          "48": "assets/icons/file/project-template/standard-48.svg",
+          "96": "assets/icons/file/project-template/standard-96.svg",
+          "256": "assets/icons/file/project-template/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:27"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.publisher",
+      "name": "Publisher",
+      "keywords": [
+        "publisher"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#038387",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/publisher/standard-16.svg",
+          "20": "assets/icons/file/publisher/standard-20.svg",
+          "24": "assets/icons/file/publisher/standard-24.svg",
+          "32": "assets/icons/file/publisher/standard-32.svg",
+          "36": "assets/icons/file/publisher/standard-36.svg",
+          "40": "assets/icons/file/publisher/standard-40.svg",
+          "48": "assets/icons/file/publisher/standard-48.svg",
+          "96": "assets/icons/file/publisher/standard-96.svg",
+          "256": "assets/icons/file/publisher/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:59"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.rtf",
+      "name": "RTF",
+      "keywords": [
+        "rtf"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/rtf/standard-16.svg",
+          "20": "assets/icons/file/rtf/standard-20.svg",
+          "24": "assets/icons/file/rtf/standard-24.svg",
+          "32": "assets/icons/file/rtf/standard-32.svg",
+          "36": "assets/icons/file/rtf/standard-36.svg",
+          "40": "assets/icons/file/rtf/standard-40.svg",
+          "48": "assets/icons/file/rtf/standard-48.svg",
+          "96": "assets/icons/file/rtf/standard-96.svg",
+          "256": "assets/icons/file/rtf/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133885:1"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.sharepoint",
+      "name": "SharePoint",
+      "keywords": [
+        "sharepoint"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#0097A8",
+        "secondary": "#37C6D0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/sharepoint/standard-16.svg",
+          "20": "assets/icons/file/sharepoint/standard-20.svg",
+          "24": "assets/icons/file/sharepoint/standard-24.svg",
+          "32": "assets/icons/file/sharepoint/standard-32.svg",
+          "36": "assets/icons/file/sharepoint/standard-36.svg",
+          "40": "assets/icons/file/sharepoint/standard-40.svg",
+          "48": "assets/icons/file/sharepoint/standard-48.svg",
+          "96": "assets/icons/file/sharepoint/standard-96.svg",
+          "256": "assets/icons/file/sharepoint/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "556293:634"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.sharepoint-campaign",
+      "name": "SharePoint Campaign",
+      "keywords": [
+        "sharepoint",
+        "campaign"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#007791"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/sharepoint-campaign/standard-16.svg",
+          "20": "assets/icons/file/sharepoint-campaign/standard-20.svg",
+          "24": "assets/icons/file/sharepoint-campaign/standard-24.svg",
+          "32": "assets/icons/file/sharepoint-campaign/standard-32.svg",
+          "36": "assets/icons/file/sharepoint-campaign/standard-36.svg",
+          "40": "assets/icons/file/sharepoint-campaign/standard-40.svg",
+          "48": "assets/icons/file/sharepoint-campaign/standard-48.svg",
+          "96": "assets/icons/file/sharepoint-campaign/standard-96.svg",
+          "256": "assets/icons/file/sharepoint-campaign/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "556293:537"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.sharepoint-document-set",
+      "name": "SharePoint Document Set",
+      "keywords": [
+        "sharepoint",
+        "document",
+        "set"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/sharepoint-document-set/standard-16.svg",
+          "20": "assets/icons/file/sharepoint-document-set/standard-20.svg",
+          "24": "assets/icons/file/sharepoint-document-set/standard-24.svg",
+          "32": "assets/icons/file/sharepoint-document-set/standard-32.svg",
+          "36": "assets/icons/file/sharepoint-document-set/standard-36.svg",
+          "40": "assets/icons/file/sharepoint-document-set/standard-40.svg",
+          "48": "assets/icons/file/sharepoint-document-set/standard-48.svg",
+          "96": "assets/icons/file/sharepoint-document-set/standard-96.svg",
+          "256": "assets/icons/file/sharepoint-document-set/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:5"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.sharepoint-news",
+      "name": "SharePoint News",
+      "keywords": [
+        "sharepoint",
+        "news"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#028298",
+        "secondary": "#1ECBE6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/sharepoint-news/standard-16.svg",
+          "20": "assets/icons/file/sharepoint-news/standard-20.svg",
+          "24": "assets/icons/file/sharepoint-news/standard-24.svg",
+          "32": "assets/icons/file/sharepoint-news/standard-32.svg",
+          "36": "assets/icons/file/sharepoint-news/standard-36.svg",
+          "40": "assets/icons/file/sharepoint-news/standard-40.svg",
+          "48": "assets/icons/file/sharepoint-news/standard-48.svg",
+          "96": "assets/icons/file/sharepoint-news/standard-96.svg",
+          "256": "assets/icons/file/sharepoint-news/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:1"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.sharepoint-site",
+      "name": "SharePoint Site",
+      "keywords": [
+        "sharepoint",
+        "site"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BCFCFF",
+        "secondary": "#1ECBE6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/sharepoint-site/standard-16.svg",
+          "20": "assets/icons/file/sharepoint-site/standard-20.svg",
+          "24": "assets/icons/file/sharepoint-site/standard-24.svg",
+          "32": "assets/icons/file/sharepoint-site/standard-32.svg",
+          "36": "assets/icons/file/sharepoint-site/standard-36.svg",
+          "40": "assets/icons/file/sharepoint-site/standard-40.svg",
+          "48": "assets/icons/file/sharepoint-site/standard-48.svg",
+          "96": "assets/icons/file/sharepoint-site/standard-96.svg",
+          "256": "assets/icons/file/sharepoint-site/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133835:7"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "file.spreadsheet",
       "name": "Spreadsheet",
-      "aliases": [
-        "Excel"
-      ],
       "keywords": [
-        "excel",
-        "xls",
-        "xlsx",
-        "sheet",
-        "table",
-        "data"
+        "spreadsheet"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#217346",
-        "secondary": "#33C481"
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/spreadsheet/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/spreadsheet/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/spreadsheet/mono.svg"
+          "16": "assets/icons/file/spreadsheet/standard-16.svg",
+          "20": "assets/icons/file/spreadsheet/standard-20.svg",
+          "24": "assets/icons/file/spreadsheet/standard-24.svg",
+          "32": "assets/icons/file/spreadsheet/standard-32.svg",
+          "36": "assets/icons/file/spreadsheet/standard-36.svg",
+          "40": "assets/icons/file/spreadsheet/standard-40.svg",
+          "48": "assets/icons/file/spreadsheet/standard-48.svg",
+          "96": "assets/icons/file/spreadsheet/standard-96.svg",
+          "256": "assets/icons/file/spreadsheet/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:2"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.text-file",
-      "name": "Text File",
+      "id": "file.system",
+      "name": "System",
       "keywords": [
-        "txt",
-        "plain text",
-        "notes",
-        "log"
+        "system"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "deprecated",
-      "replacedBy": "file.code-file",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#5D5A88",
-        "secondary": "#8A8886"
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/text-file/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/text-file/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/text-file/mono.svg"
+          "16": "assets/icons/file/system/standard-16.svg",
+          "20": "assets/icons/file/system/standard-20.svg",
+          "24": "assets/icons/file/system/standard-24.svg",
+          "32": "assets/icons/file/system/standard-32.svg",
+          "36": "assets/icons/file/system/standard-36.svg",
+          "40": "assets/icons/file/system/standard-40.svg",
+          "48": "assets/icons/file/system/standard-48.svg",
+          "96": "assets/icons/file/system/standard-96.svg",
+          "256": "assets/icons/file/system/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:1"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.video-file",
-      "name": "Video File",
+      "id": "file.text",
+      "name": "Text",
       "keywords": [
-        "mp4",
-        "movie",
-        "clip",
-        "media",
-        "film"
+        "text"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#CA5010",
-        "secondary": "#F7A501"
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/video-file/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/video-file/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/video-file/mono.svg"
+          "16": "assets/icons/file/text/standard-16.svg",
+          "20": "assets/icons/file/text/standard-20.svg",
+          "24": "assets/icons/file/text/standard-24.svg",
+          "32": "assets/icons/file/text/standard-32.svg",
+          "36": "assets/icons/file/text/standard-36.svg",
+          "40": "assets/icons/file/text/standard-40.svg",
+          "48": "assets/icons/file/text/standard-48.svg",
+          "96": "assets/icons/file/text/standard-96.svg",
+          "256": "assets/icons/file/text/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:3"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
-      "id": "file.word-document",
-      "name": "Word Document",
-      "aliases": [
-        "Word"
+      "id": "file.to-do",
+      "name": "To Do",
+      "keywords": [
+        "to",
+        "do"
       ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#185ABD",
+        "secondary": "#2A88E5"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/to-do/standard-16.svg",
+          "20": "assets/icons/file/to-do/standard-20.svg",
+          "24": "assets/icons/file/to-do/standard-24.svg",
+          "32": "assets/icons/file/to-do/standard-32.svg",
+          "36": "assets/icons/file/to-do/standard-36.svg",
+          "40": "assets/icons/file/to-do/standard-40.svg",
+          "48": "assets/icons/file/to-do/standard-48.svg",
+          "96": "assets/icons/file/to-do/standard-96.svg",
+          "256": "assets/icons/file/to-do/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "335631:2277"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.vault-closed",
+      "name": "Vault Closed",
+      "keywords": [
+        "vault",
+        "closed"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#CAD3D8",
+        "secondary": "#394146"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/vault-closed/standard-16.svg",
+          "20": "assets/icons/file/vault-closed/standard-20.svg",
+          "24": "assets/icons/file/vault-closed/standard-24.svg",
+          "32": "assets/icons/file/vault-closed/standard-32.svg",
+          "36": "assets/icons/file/vault-closed/standard-36.svg",
+          "40": "assets/icons/file/vault-closed/standard-40.svg",
+          "48": "assets/icons/file/vault-closed/standard-48.svg",
+          "64": "assets/icons/file/vault-closed/standard-64.svg",
+          "96": "assets/icons/file/vault-closed/standard-96.svg",
+          "256": "assets/icons/file/vault-closed/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:4"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.vault-open",
+      "name": "Vault Open",
+      "keywords": [
+        "vault",
+        "open"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        64,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#CAD3D8",
+        "secondary": "#929CA2"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/vault-open/standard-16.svg",
+          "20": "assets/icons/file/vault-open/standard-20.svg",
+          "24": "assets/icons/file/vault-open/standard-24.svg",
+          "32": "assets/icons/file/vault-open/standard-32.svg",
+          "36": "assets/icons/file/vault-open/standard-36.svg",
+          "40": "assets/icons/file/vault-open/standard-40.svg",
+          "48": "assets/icons/file/vault-open/standard-48.svg",
+          "64": "assets/icons/file/vault-open/standard-64.svg",
+          "96": "assets/icons/file/vault-open/standard-96.svg",
+          "256": "assets/icons/file/vault-open/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:6"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.vector",
+      "name": "Vector",
+      "keywords": [
+        "vector"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/vector/standard-16.svg",
+          "20": "assets/icons/file/vector/standard-20.svg",
+          "24": "assets/icons/file/vector/standard-24.svg",
+          "32": "assets/icons/file/vector/standard-32.svg",
+          "36": "assets/icons/file/vector/standard-36.svg",
+          "40": "assets/icons/file/vector/standard-40.svg",
+          "48": "assets/icons/file/vector/standard-48.svg",
+          "96": "assets/icons/file/vector/standard-96.svg",
+          "256": "assets/icons/file/vector/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:5"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.video",
+      "name": "Video",
+      "keywords": [
+        "video"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#A966FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/video/standard-16.svg",
+          "20": "assets/icons/file/video/standard-20.svg",
+          "24": "assets/icons/file/video/standard-24.svg",
+          "32": "assets/icons/file/video/standard-32.svg",
+          "36": "assets/icons/file/video/standard-36.svg",
+          "40": "assets/icons/file/video/standard-40.svg",
+          "48": "assets/icons/file/video/standard-48.svg",
+          "96": "assets/icons/file/video/standard-96.svg",
+          "256": "assets/icons/file/video/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "362552:1777"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.video-playlist",
+      "name": "Video Playlist",
+      "keywords": [
+        "video",
+        "playlist"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#A966FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/video-playlist/standard-16.svg",
+          "20": "assets/icons/file/video-playlist/standard-20.svg",
+          "24": "assets/icons/file/video-playlist/standard-24.svg",
+          "32": "assets/icons/file/video-playlist/standard-32.svg",
+          "36": "assets/icons/file/video-playlist/standard-36.svg",
+          "40": "assets/icons/file/video-playlist/standard-40.svg",
+          "48": "assets/icons/file/video-playlist/standard-48.svg",
+          "96": "assets/icons/file/video-playlist/standard-96.svg",
+          "256": "assets/icons/file/video-playlist/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "362552:1642"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.video-watermark",
+      "name": "Video Watermark",
+      "keywords": [
+        "video",
+        "watermark"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#969696"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/video-watermark/standard-16.svg",
+          "20": "assets/icons/file/video-watermark/standard-20.svg",
+          "24": "assets/icons/file/video-watermark/standard-24.svg",
+          "32": "assets/icons/file/video-watermark/standard-32.svg",
+          "36": "assets/icons/file/video-watermark/standard-36.svg",
+          "40": "assets/icons/file/video-watermark/standard-40.svg",
+          "48": "assets/icons/file/video-watermark/standard-48.svg",
+          "96": "assets/icons/file/video-watermark/standard-96.svg",
+          "256": "assets/icons/file/video-watermark/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "365523:1766"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.video360",
+      "name": "Video360",
+      "keywords": [
+        "video360"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/video360/standard-16.svg",
+          "20": "assets/icons/file/video360/standard-20.svg",
+          "24": "assets/icons/file/video360/standard-24.svg",
+          "32": "assets/icons/file/video360/standard-32.svg",
+          "36": "assets/icons/file/video360/standard-36.svg",
+          "40": "assets/icons/file/video360/standard-40.svg",
+          "48": "assets/icons/file/video360/standard-48.svg",
+          "96": "assets/icons/file/video360/standard-96.svg",
+          "256": "assets/icons/file/video360/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "132695:3"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.visio-drawing",
+      "name": "Visio Drawing",
+      "keywords": [
+        "visio",
+        "drawing"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#2B7CD3",
+        "secondary": "#EFEFEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/visio-drawing/standard-16.svg",
+          "20": "assets/icons/file/visio-drawing/standard-20.svg",
+          "24": "assets/icons/file/visio-drawing/standard-24.svg",
+          "32": "assets/icons/file/visio-drawing/standard-32.svg",
+          "36": "assets/icons/file/visio-drawing/standard-36.svg",
+          "40": "assets/icons/file/visio-drawing/standard-40.svg",
+          "48": "assets/icons/file/visio-drawing/standard-48.svg",
+          "96": "assets/icons/file/visio-drawing/standard-96.svg",
+          "256": "assets/icons/file/visio-drawing/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:6"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.visio-drawing-template",
+      "name": "Visio Drawing Template",
+      "keywords": [
+        "visio",
+        "drawing",
+        "template"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#41A5EE",
+        "secondary": "#888888"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/visio-drawing-template/standard-16.svg",
+          "20": "assets/icons/file/visio-drawing-template/standard-20.svg",
+          "24": "assets/icons/file/visio-drawing-template/standard-24.svg",
+          "32": "assets/icons/file/visio-drawing-template/standard-32.svg",
+          "36": "assets/icons/file/visio-drawing-template/standard-36.svg",
+          "40": "assets/icons/file/visio-drawing-template/standard-40.svg",
+          "48": "assets/icons/file/visio-drawing-template/standard-48.svg",
+          "96": "assets/icons/file/visio-drawing-template/standard-96.svg",
+          "256": "assets/icons/file/visio-drawing-template/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:119"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.visio-shape-stencil",
+      "name": "Visio Shape Stencil",
+      "keywords": [
+        "visio",
+        "shape",
+        "stencil"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#185ABD",
+        "secondary": "#1D59C1"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/visio-shape-stencil/standard-16.svg",
+          "20": "assets/icons/file/visio-shape-stencil/standard-20.svg",
+          "24": "assets/icons/file/visio-shape-stencil/standard-24.svg",
+          "32": "assets/icons/file/visio-shape-stencil/standard-32.svg",
+          "36": "assets/icons/file/visio-shape-stencil/standard-36.svg",
+          "40": "assets/icons/file/visio-shape-stencil/standard-40.svg",
+          "48": "assets/icons/file/visio-shape-stencil/standard-48.svg",
+          "96": "assets/icons/file/visio-shape-stencil/standard-96.svg",
+          "256": "assets/icons/file/visio-shape-stencil/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133798:118"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.web-page",
+      "name": "Web Page",
+      "keywords": [
+        "web",
+        "page"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/web-page/standard-16.svg",
+          "20": "assets/icons/file/web-page/standard-20.svg",
+          "24": "assets/icons/file/web-page/standard-24.svg",
+          "32": "assets/icons/file/web-page/standard-32.svg",
+          "36": "assets/icons/file/web-page/standard-36.svg",
+          "40": "assets/icons/file/web-page/standard-40.svg",
+          "48": "assets/icons/file/web-page/standard-48.svg",
+          "96": "assets/icons/file/web-page/standard-96.svg",
+          "256": "assets/icons/file/web-page/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133783:4"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.whiteboard",
+      "name": "Whiteboard",
+      "keywords": [
+        "whiteboard"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#1E2021",
+        "secondary": "#0C34FB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/whiteboard/standard-16.svg",
+          "20": "assets/icons/file/whiteboard/standard-20.svg",
+          "24": "assets/icons/file/whiteboard/standard-24.svg",
+          "32": "assets/icons/file/whiteboard/standard-32.svg",
+          "36": "assets/icons/file/whiteboard/standard-36.svg",
+          "40": "assets/icons/file/whiteboard/standard-40.svg",
+          "48": "assets/icons/file/whiteboard/standard-48.svg",
+          "96": "assets/icons/file/whiteboard/standard-96.svg",
+          "256": "assets/icons/file/whiteboard/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133916:196"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.word",
+      "name": "Word",
+      "keywords": [
+        "word"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#58AAFE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/word/standard-16.svg",
+          "20": "assets/icons/file/word/standard-20.svg",
+          "24": "assets/icons/file/word/standard-24.svg",
+          "32": "assets/icons/file/word/standard-32.svg",
+          "36": "assets/icons/file/word/standard-36.svg",
+          "40": "assets/icons/file/word/standard-40.svg",
+          "48": "assets/icons/file/word/standard-48.svg",
+          "96": "assets/icons/file/word/standard-96.svg",
+          "256": "assets/icons/file/word/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:7"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.word-template",
+      "name": "Word Template",
       "keywords": [
         "word",
-        "doc",
-        "docx",
-        "text",
-        "document"
+        "template"
       ],
       "type": "icon",
       "collection": "file",
-      "status": "published",
+      "status": "draft",
       "themes": [
-        "standard",
-        "outline",
-        "mono"
+        "standard"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28,
         32,
-        48
+        36,
+        40,
+        48,
+        96,
+        256
       ],
       "colors": {
-        "primary": "#2B579A",
-        "secondary": "#41A5EE"
+        "primary": "#EBEBEB",
+        "secondary": "#E4A7FE"
       },
-      "recolorable": true,
+      "recolorable": false,
       "variants": {
         "standard": {
-          "any": "assets/icons/file/word-document/standard.svg"
-        },
-        "outline": {
-          "any": "assets/icons/file/word-document/outline.svg"
-        },
-        "mono": {
-          "any": "assets/icons/file/word-document/mono.svg"
+          "16": "assets/icons/file/word-template/standard-16.svg",
+          "20": "assets/icons/file/word-template/standard-20.svg",
+          "24": "assets/icons/file/word-template/standard-24.svg",
+          "32": "assets/icons/file/word-template/standard-32.svg",
+          "36": "assets/icons/file/word-template/standard-36.svg",
+          "40": "assets/icons/file/word-template/standard-40.svg",
+          "48": "assets/icons/file/word-template/standard-48.svg",
+          "96": "assets/icons/file/word-template/standard-96.svg",
+          "256": "assets/icons/file/word-template/standard-256.svg"
         }
       },
-      "owner": "@windows-design-systems",
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133777:8"
+      },
       "version": "1.0.0",
-      "updated": "2026-08-25",
-      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.xml",
+      "name": "XML",
+      "keywords": [
+        "xml"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#BBBBBB",
+        "secondary": "#0F2F56"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/xml/standard-16.svg",
+          "20": "assets/icons/file/xml/standard-20.svg",
+          "24": "assets/icons/file/xml/standard-24.svg",
+          "32": "assets/icons/file/xml/standard-32.svg",
+          "36": "assets/icons/file/xml/standard-36.svg",
+          "40": "assets/icons/file/xml/standard-40.svg",
+          "48": "assets/icons/file/xml/standard-48.svg",
+          "96": "assets/icons/file/xml/standard-96.svg",
+          "256": "assets/icons/file/xml/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "133835:9"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "file.zip-archive",
+      "name": "ZIP Archive",
+      "keywords": [
+        "zip",
+        "archive"
+      ],
+      "type": "icon",
+      "collection": "file",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        96,
+        256
+      ],
+      "colors": {
+        "primary": "#FFB900",
+        "secondary": "#BF5712"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "16": "assets/icons/file/zip-archive/standard-16.svg",
+          "20": "assets/icons/file/zip-archive/standard-20.svg",
+          "24": "assets/icons/file/zip-archive/standard-24.svg",
+          "32": "assets/icons/file/zip-archive/standard-32.svg",
+          "36": "assets/icons/file/zip-archive/standard-36.svg",
+          "40": "assets/icons/file/zip-archive/standard-40.svg",
+          "48": "assets/icons/file/zip-archive/standard-48.svg",
+          "96": "assets/icons/file/zip-archive/standard-96.svg",
+          "256": "assets/icons/file/zip-archive/standard-256.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "254652:2184"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "vscode.account",

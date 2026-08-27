@@ -1,0 +1,24 @@
+<svg aria-label="Font standard 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="url(#file-font-standard-40-paint0_linear_1802_19276)"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="url(#file-font-standard-40-paint1_linear_1802_19276)"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="url(#file-font-standard-40-paint2_radial_1802_19276)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1763 22.9999L14.5021 27H15.5C15.7761 27 16 27.2238 16 27.5C16 27.7761 15.7761 28 15.5 28H13.7625C13.7545 28.0002 13.7466 28.0002 13.7386 28H12.5C12.2239 28 12 27.7761 12 27.5C12 27.2238 12.2239 27 12.5 27H13.418L19.5381 12.3784C19.6121 12.2016 19.78 12.0835 19.9696 12.0723L19.9985 12L20.0288 12.0723C20.2184 12.0834 20.3865 12.2015 20.4605 12.3783L26.5834 27H27.5C27.7761 27 28 27.2238 28 27.5C28 27.7761 27.7761 28 27.5 28H26.2629C26.2549 28.0002 26.2469 28.0002 26.239 28H23C22.7239 28 22.5 27.7761 22.5 27.5C22.5 27.2238 22.7239 27 23 27H24.0141L22.4091 22.9999H16.1763ZM16.5949 21.9999L19.3585 15.3973L22.0078 21.9999H16.5949Z" fill="url(#file-font-standard-40-paint3_linear_1802_19276)"/>
+<defs>
+<linearGradient id="file-font-standard-40-paint0_linear_1802_19276" x1="15.0417" y1="2" x2="21.2034" y2="37.9437" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-font-standard-40-paint1_linear_1802_19276" x1="14.2222" y1="3" x2="19.7856" y2="37.035" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-font-standard-40-paint2_radial_1802_19276" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 26.9167 -20.5833 10.0937 15.3056 11.8542)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-font-standard-40-paint3_linear_1802_19276" x1="16.9091" y1="14" x2="21.5146" y2="27.8089" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

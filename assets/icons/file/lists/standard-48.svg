@@ -1,0 +1,61 @@
+<svg aria-label="Lists standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 13.5C4 11.0147 6.01472 9 8.5 9H35C39.9706 9 44 13.0294 44 18V34.5C44 36.9853 41.9853 39 39.5 39H13C8.02944 39 4 34.9706 4 30V13.5Z" fill="url(#file-lists-standard-48-paint0_linear_1802_13636)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-lists-standard-48-paint1_linear_1802_13636)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-lists-standard-48-paint2_radial_1802_13636)"/>
+<path d="M15 19.5L19.5 15H32.2848C32.6812 15 33 15.3187 33 15.7152V19.5L24 21.5625L15 19.5Z" fill="#FEE200"/>
+<path d="M20.5714 23.8661L15 26.1696V19.5H19.5L20.5714 23.8661Z" fill="url(#file-lists-standard-48-paint3_linear_1802_13636)"/>
+<path d="M33 24.0536V19.5H19.5V24.1071L25.6339 25.2054L33 24.0536Z" fill="url(#file-lists-standard-48-paint4_linear_1802_13636)"/>
+<path d="M19.5 28.5L15 30V24H19.5V28.5Z" fill="url(#file-lists-standard-48-paint5_linear_1802_13636)"/>
+<path d="M32.9989 28.5V24H18.5078V28.5268L27.4275 29.3571L32.9989 28.5Z" fill="url(#file-lists-standard-48-paint6_linear_1802_13636)"/>
+<path d="M19.5 33H15.8464C15.3777 33 15 32.6223 15 32.1536V28.5H19.5V33Z" fill="url(#file-lists-standard-48-paint7_linear_1802_13636)"/>
+<path d="M19.5011 28.5L18.8047 30.6429L19.5011 33H28.5011L33.0011 28.5H19.5011Z" fill="url(#file-lists-standard-48-paint8_linear_1802_13636)"/>
+<defs>
+<linearGradient id="file-lists-standard-48-paint0_linear_1802_13636" x1="16.9167" y1="9" x2="19.9695" y2="39.5281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint1_linear_1802_13636" x1="15.5556" y1="10" x2="18.1838" y2="38.5357" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-lists-standard-48-paint2_radial_1802_13636" cx="0" cy="0" r="1" gradientTransform="matrix(20.0556 22.1667 -30.0833 8.3125 17.1389 17.2917)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-lists-standard-48-paint3_linear_1802_13636" x1="17.7857" y1="26.1696" x2="17.7857" y2="19.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E25A01"/>
+<stop offset="0.6095" stop-color="#E15801"/>
+<stop offset="0.8778" stop-color="#E05101"/>
+<stop offset="1" stop-color="#DE4A01"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint4_linear_1802_13636" x1="26.25" y1="25.2054" x2="26.25" y2="19.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F18C0A"/>
+<stop offset="0.4373" stop-color="#F0880A"/>
+<stop offset="0.8679" stop-color="#EC7C0A"/>
+<stop offset="1" stop-color="#EB770A"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint5_linear_1802_13636" x1="17.25" y1="30" x2="17.25" y2="24" gradientUnits="userSpaceOnUse">
+<stop offset="2.66389e-07" stop-color="#BF3207"/>
+<stop offset="0.4718" stop-color="#BB3207"/>
+<stop offset="0.9366" stop-color="#AF3007"/>
+<stop offset="1" stop-color="#AD3007"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint6_linear_1802_13636" x1="25.7533" y1="29.3571" x2="25.7533" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="0.4718" stop-color="#D63701"/>
+<stop offset="0.9366" stop-color="#CE2B01"/>
+<stop offset="1" stop-color="#CD2901"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint7_linear_1802_13636" x1="17.25" y1="33" x2="17.25" y2="28.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#703D6E"/>
+<stop offset="0.6307" stop-color="#6C3B6A"/>
+<stop offset="1" stop-color="#663764"/>
+</linearGradient>
+<linearGradient id="file-lists-standard-48-paint8_linear_1802_13636" x1="25.9029" y1="33" x2="25.9029" y2="28.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#854A81"/>
+<stop offset="0.4817" stop-color="#82497E"/>
+<stop offset="0.8116" stop-color="#794475"/>
+<stop offset="1" stop-color="#703F6C"/>
+</linearGradient>
+</defs>
+</svg>

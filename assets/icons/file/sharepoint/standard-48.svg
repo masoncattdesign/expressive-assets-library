@@ -1,0 +1,38 @@
+<svg aria-label="SharePoint standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 8.5C9 6.01472 11.0147 4 13.5 4H30C34.9706 4 39 8.02944 39 13V39.5C39 41.9853 36.9853 44 34.5 44H18C13.0294 44 9 39.9706 9 35V8.5Z" fill="url(#file-sharepoint-standard-48-paint0_linear_556293_694)"/>
+<path d="M10 8.5C10 6.567 11.567 5 13.5 5H30C34.4183 5 38 8.58172 38 13V39.5C38 41.433 36.433 43 34.5 43H18C13.5817 43 10 39.4183 10 35V8.5Z" fill="url(#file-sharepoint-standard-48-paint1_linear_556293_694)"/>
+<path d="M10 8.5C10 6.567 11.567 5 13.5 5H30C34.4183 5 38 8.58172 38 13V39.5C38 41.433 36.433 43 34.5 43H18C13.5817 43 10 39.4183 10 35V8.5Z" fill="url(#file-sharepoint-standard-48-paint2_radial_556293_694)"/>
+<rect x="3" y="25" width="20" height="20" rx="4.5" fill="url(#file-sharepoint-standard-48-paint3_radial_556293_694)"/>
+<rect x="3" y="25" width="20" height="20" rx="4.5" fill="url(#file-sharepoint-standard-48-paint4_radial_556293_694)" fill-opacity="0.6"/>
+<path d="M8.48633 38.5223L10.7574 37.3725C11.0135 37.8745 11.3475 38.2443 11.7594 38.4818C12.1769 38.7193 12.6333 38.8381 13.1287 38.8381C13.6798 38.8381 14.1001 38.7301 14.3895 38.5142C14.679 38.2928 14.8237 37.9609 14.8237 37.5182C14.8237 37.1727 14.6845 36.8812 14.4062 36.6437C14.1279 36.4008 13.6353 36.2173 12.9283 36.0931C11.5813 35.8556 10.6016 35.4399 9.98926 34.8462C9.38252 34.2524 9.07915 33.5128 9.07915 32.6275C9.07915 31.5263 9.47993 30.6464 10.2815 29.9879C11.0831 29.3293 12.1407 29 13.4543 29C14.3394 29 15.1187 29.1754 15.7922 29.5263C16.4658 29.8772 17.0001 30.3792 17.3954 31.0324L15.1744 32.1417C14.9294 31.7746 14.665 31.5101 14.3811 31.3482C14.0973 31.1808 13.741 31.0972 13.3124 31.0972C12.8003 31.0972 12.4106 31.2051 12.1435 31.4211C11.8818 31.637 11.751 31.9177 11.751 32.2632C11.751 32.5601 11.8763 32.8219 12.1268 33.0486C12.3828 33.2699 12.8949 33.4507 13.6631 33.5911C14.9545 33.8286 15.9175 34.2605 16.552 34.8866C17.1922 35.5074 17.5123 36.2928 17.5123 37.2429C17.5123 38.3981 17.131 39.3131 16.3684 39.9879C15.6058 40.6626 14.5175 41 13.1037 41C12.0794 41 11.1554 40.7841 10.3316 40.3522C9.51333 39.915 8.89824 39.305 8.48633 38.5223Z" fill="white"/>
+<rect x="16" y="12" width="16" height="9" rx="2" fill="url(#file-sharepoint-standard-48-paint5_linear_556293_694)"/>
+<path d="M32.06 25C32.06 25.55 31.61 26 31.06 26H24.03C23.51 25.19 22.82 24.5 22 24H31.06C31.61 24 32.06 24.45 32.06 25Z" fill="#37C6D0"/>
+<path d="M32.0591 30C32.0591 30.55 31.6091 31 31.0591 31H25.0591V29.5C25.0591 29.33 25.0591 29.16 25.0391 29H31.0591C31.6091 29 32.0591 29.45 32.0591 30Z" fill="#0097A8"/>
+<path d="M32.0605 35C32.0605 35.55 31.6105 36 31.0605 36H25.0605V34H31.0605C31.6105 34 32.0605 34.45 32.0605 35Z" fill="#007791"/>
+<defs>
+<linearGradient id="file-sharepoint-standard-48-paint0_linear_556293_694" x1="18.6875" y1="4" x2="25.7722" y2="43.8516" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-standard-48-paint1_linear_556293_694" x1="17.7778" y1="5" x2="24.2179" y2="42.963" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-sharepoint-standard-48-paint2_radial_556293_694" cx="0" cy="0" r="1" gradientTransform="matrix(14.7778 30.0833 -22.1667 11.2812 18.9444 14.8958)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<radialGradient id="file-sharepoint-standard-48-paint3_radial_556293_694" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(3 25) rotate(45) scale(28.2843)">
+<stop offset="0.0625" stop-color="#00B6BD"/>
+<stop offset="0.890131" stop-color="#00495C"/>
+</radialGradient>
+<radialGradient id="file-sharepoint-standard-48-paint4_radial_556293_694" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13 37) rotate(90) scale(14 15.9375)">
+<stop offset="0.566964" stop-color="#1E8581" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#1ECBE6"/>
+</radialGradient>
+<linearGradient id="file-sharepoint-standard-48-paint5_linear_556293_694" x1="20.4444" y1="12" x2="21.0916" y2="21.2045" gradientUnits="userSpaceOnUse">
+<stop stop-color="#86F2F2"/>
+<stop offset="1" stop-color="#37C6D0"/>
+</linearGradient>
+</defs>
+</svg>

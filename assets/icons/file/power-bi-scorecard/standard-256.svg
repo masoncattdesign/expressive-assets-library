@@ -1,0 +1,40 @@
+<svg aria-label="Power BI scorecard standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-power-bi-scorecard-standard-256-paint0_linear_567113_1338)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-power-bi-scorecard-standard-256-paint1_linear_567113_1338)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-power-bi-scorecard-standard-256-paint2_radial_567113_1338)"/>
+<path d="M146.604 73C153.565 73.0002 159.208 78.6435 159.208 85.6045V86.75H169.521C173.95 86.75 177.542 90.3409 177.542 94.7705V108.521C177.542 119.247 168.872 127.948 158.158 128C154.912 140.126 144.482 149.315 131.708 150.728V160.083H144.312C152.539 160.083 159.208 166.753 159.208 174.979V177.271C159.208 180.435 156.643 183 153.479 183H104V162.561C106.358 160.995 109.187 160.083 112.229 160.083H124.833V150.728C112.059 149.315 101.629 140.126 98.3828 128C87.6691 127.948 79 119.246 79 108.521V94.7705C79.0002 90.341 82.591 86.7502 87.0205 86.75H97.333V85.6045C97.333 78.6434 102.976 73 109.938 73H146.604ZM87.0205 93.625C86.3879 93.6252 85.8752 94.1379 85.875 94.7705V108.521C85.875 115.102 90.9193 120.505 97.3525 121.075C97.3399 120.712 97.333 120.346 97.333 119.979V93.625H87.0205ZM159.208 119.979C159.208 120.346 159.202 120.712 159.189 121.075C165.623 120.505 170.667 115.102 170.667 108.521V94.7705C170.667 94.1378 170.153 93.625 169.521 93.625H159.208V119.979Z" fill="url(#file-power-bi-scorecard-standard-256-paint3_linear_567113_1338)"/>
+<path d="M96 144L96 240C96 242.209 94.2091 244 92 244H61L61 144C61 141.791 62.7909 140 65 140H92C94.2091 140 96 141.791 96 144Z" fill="url(#file-power-bi-scorecard-standard-256-paint4_linear_567113_1338)"/>
+<path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M73 175.078C73 171.169 70.366 168 66.5 168L42 171.033V241.233L70 244H73V175.078Z" fill="black" fill-opacity="0.5"/>
+<path d="M71 172V244H36V172C36 169.791 37.7909 168 40 168H67C69.2091 168 71 169.791 71 172Z" fill="url(#file-power-bi-scorecard-standard-256-paint5_linear_567113_1338)"/>
+<path d="M12 199V240C12 242.209 13.7909 244 16 244H47V199C47 196.791 45.2091 195 43 195H16C13.7909 195 12 196.791 12 199Z" fill="url(#file-power-bi-scorecard-standard-256-paint6_linear_567113_1338)"/>
+<defs>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint0_linear_567113_1338" x1="89.3958" y1="43" x2="107.368" y2="215.854" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint1_linear_567113_1338" x1="81.7778" y1="48" x2="97.4449" y2="210.938" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-power-bi-scorecard-standard-256-paint2_radial_567113_1338" cx="0" cy="0" r="1" gradientTransform="matrix(109.778 126.667 -164.667 47.5 90.4444 89.6667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint3_linear_567113_1338" x1="79" y1="73" x2="188.338" y2="170.949" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C28400"/>
+<stop offset="1" stop-color="#A86500"/>
+</linearGradient>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint4_linear_567113_1338" x1="55.1667" y1="140" x2="95.6829" y2="232.9" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint5_linear_567113_1338" x1="35.9972" y1="168" x2="72.6778" y2="241.712" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="file-power-bi-scorecard-standard-256-paint6_linear_567113_1338" x1="11.9971" y1="195" x2="30.661" y2="243.747" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+</defs>
+</svg>

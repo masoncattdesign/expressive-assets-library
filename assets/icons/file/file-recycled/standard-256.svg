@@ -1,0 +1,20 @@
+<svg aria-label="File Recycled standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M64 19H168C192.853 19 213 39.1472 213 64V216C213 227.598 203.598 237 192 237H88C63.1472 237 43 216.853 43 192V40C43 28.402 52.402 19 64 19Z" fill="url(#file-file-recycled-standard-256-paint0_linear_319233_1326)"/>
+<path d="M48 40C48 31.1634 55.1634 24 64 24H168C190.091 24 208 41.9086 208 64V216C208 224.837 200.837 232 192 232H88C65.9086 232 48 214.091 48 192V40Z" fill="url(#file-file-recycled-standard-256-paint1_linear_319233_1326)"/>
+<path d="M48 40C48 31.1634 55.1634 24 64 24H168C190.091 24 208 41.9086 208 64V216C208 224.837 200.837 232 192 232H88C65.9086 232 48 214.091 48 192V40Z" fill="url(#file-file-recycled-standard-256-paint2_radial_319233_1326)"/>
+<path opacity="0.67" d="M128 110.5C115.574 110.5 105.5 120.574 105.5 133C105.5 135.071 103.821 136.75 101.75 136.75H99.875C90.5552 136.75 83 144.305 83 153.625C83 162.945 90.5552 170.5 99.875 170.5H156.125C165.445 170.5 173 162.945 173 153.625C173 144.305 165.445 136.75 156.125 136.75H154.25C152.179 136.75 150.5 135.071 150.5 133C150.5 120.574 140.426 110.5 128 110.5ZM98.2253 129.305C100.046 114.48 112.683 103 128 103C143.317 103 155.954 114.48 157.775 129.305C170.467 130.153 180.5 140.717 180.5 153.625C180.5 167.087 169.587 178 156.125 178H99.875C86.4131 178 75.5 167.087 75.5 153.625C75.5 140.717 85.5327 130.153 98.2253 129.305Z" fill="#605E5C"/>
+<defs>
+<linearGradient id="file-file-recycled-standard-256-paint0_linear_319233_1326" x1="97.8958" y1="19" x2="135.117" y2="236.691" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-file-recycled-standard-256-paint1_linear_319233_1326" x1="92.4444" y1="24" x2="126.29" y2="232.278" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-file-recycled-standard-256-paint2_radial_319233_1326" cx="0" cy="0" r="1" gradientTransform="matrix(84.4444 164.667 -126.667 61.75 99.1111 78.1667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

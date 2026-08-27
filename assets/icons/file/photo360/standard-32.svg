@@ -1,0 +1,39 @@
+<svg aria-label="Photo360 standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8C2 6.34315 3.34315 5 5 5H24C27.3137 5 30 7.68629 30 11V24C30 25.6569 28.6569 27 27 27H8C4.68629 27 2 24.3137 2 21V8Z" fill="url(#file-photo360-standard-32-paint0_linear_1802_15950)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-photo360-standard-32-paint1_linear_1802_15950)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-photo360-standard-32-paint2_radial_1802_15950)"/>
+<circle cx="19.5" cy="10.5" r="1.5" fill="url(#file-photo360-standard-32-paint3_linear_1802_15950)"/>
+<path d="M11.4147 17.3488L15.2418 12.8852C15.6409 12.4197 16.3612 12.4198 16.7602 12.8853L20.5861 17.3489C21.1421 17.9976 20.6812 18.9997 19.8269 18.9997L12.1738 18.9997C11.3194 18.9997 10.8585 17.9974 11.4147 17.3488Z" fill="url(#file-photo360-standard-32-paint4_linear_1802_15950)"/>
+<path d="M12.9932 13.6976C13.0386 13.97 12.8547 14.2276 12.5823 14.2731C10.8647 14.5598 9.43117 15.0517 8.44196 15.6537C7.43284 16.2678 7 16.9197 7 17.4997C7 18.0797 7.43284 18.7316 8.44196 19.3457C9.43117 19.9477 10.8647 20.4395 12.5823 20.7263C12.8547 20.7718 13.0386 21.0294 12.9932 21.3018C12.9477 21.5742 12.69 21.7581 12.4177 21.7127C10.6207 21.4126 9.05421 20.8889 7.92208 20.1999C6.80985 19.5231 6 18.6084 6 17.4997C6 16.391 6.80985 15.4763 7.92208 14.7995C9.05421 14.1105 10.6207 13.5868 12.4177 13.2867C12.69 13.2413 12.9477 13.4252 12.9932 13.6976Z" fill="url(#file-photo360-standard-32-paint5_linear_1802_15950)"/>
+<path d="M19.0068 13.6976C19.0523 13.4252 19.31 13.2413 19.5823 13.2867C21.3793 13.5868 22.9458 14.1105 24.0779 14.7995C25.1902 15.4763 26 16.391 26 17.4997C26 18.2243 25.6491 18.8706 25.1062 19.411C24.5652 19.9496 23.8076 20.4116 22.9115 20.7889C21.1511 21.5302 18.7652 21.9825 16.1507 21.9992L16.2774 22.0837C16.5071 22.2369 16.5692 22.5473 16.416 22.7771C16.2628 23.0068 15.9524 23.0689 15.7226 22.9157L14.3475 21.9989C13.9912 21.7614 13.9912 21.238 14.3475 21.0005L15.7226 20.0837C15.9524 19.9305 16.2628 19.9926 16.416 20.2224C16.5692 20.4521 16.5071 20.7626 16.2774 20.9157L16.1522 20.9992C18.6641 20.9822 20.9118 20.5459 22.5235 19.8673C23.3466 19.5207 23.9803 19.1209 24.4007 18.7023C24.8192 18.2857 25 17.8797 25 17.4997C25 16.9197 24.5672 16.2678 23.558 15.6537C22.5688 15.0517 21.1353 14.5598 19.4177 14.2731C19.1453 14.2276 18.9614 13.97 19.0068 13.6976Z" fill="url(#file-photo360-standard-32-paint6_linear_1802_15950)"/>
+<defs>
+<linearGradient id="file-photo360-standard-32-paint0_linear_1802_15950" x1="11.0417" y1="5" x2="13.3847" y2="27.3656" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-photo360-standard-32-paint1_linear_1802_15950" x1="10.2222" y1="6" x2="12.1806" y2="26.3672" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-photo360-standard-32-paint2_radial_1802_15950" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 15.8333 -20.5833 5.9375 11.3056 11.2083)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-photo360-standard-32-paint3_linear_1802_15950" x1="18" y1="7.125" x2="21.2591" y2="13.3647" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-photo360-standard-32-paint4_linear_1802_15950" x1="11" y1="10.5239" x2="12.8694" y2="23.6148" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-photo360-standard-32-paint5_linear_1802_15950" x1="11" y1="10.5239" x2="12.8694" y2="23.6148" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-photo360-standard-32-paint6_linear_1802_15950" x1="11" y1="10.5239" x2="12.8694" y2="23.6148" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

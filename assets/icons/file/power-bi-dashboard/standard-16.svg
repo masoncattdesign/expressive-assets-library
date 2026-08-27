@@ -1,0 +1,41 @@
+<svg aria-label="Power BI dashboard standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4C1 2.89543 1.89543 2 3 2H11.5C13.433 2 15 3.567 15 5.5V12C15 13.1046 14.1046 14 13 14H4.5C2.567 14 1 12.433 1 10.5V4Z" fill="url(#file-power-bi-dashboard-standard-16-paint0_linear_567113_1354)"/>
+<path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="url(#file-power-bi-dashboard-standard-16-paint1_linear_567113_1354)"/>
+<path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="url(#file-power-bi-dashboard-standard-16-paint2_radial_567113_1354)"/>
+<path d="M7.99902 4C10.2082 4 11.999 5.79086 11.999 8C11.999 10.2091 10.2082 12 7.99902 12V8.5C7.99902 7.67157 7.32745 7 6.49902 7H4.125C4.56904 5.27477 6.13518 4 7.99902 4Z" fill="url(#file-power-bi-dashboard-standard-16-paint3_linear_567113_1354)"/>
+<path d="M10.0693 5.48438C10.1817 5.39545 10.3412 5.3991 10.4502 5.49219C10.5592 5.58535 10.587 5.74225 10.5166 5.86719L10.4502 5.98535C10.4078 6.0603 10.3469 6.16757 10.2734 6.29688C10.1262 6.556 9.92806 6.9045 9.72266 7.26074C9.51735 7.61681 9.30414 7.98195 9.12891 8.27441C9.04147 8.42034 8.9629 8.54982 8.89844 8.65137C8.83845 8.74586 8.77953 8.83516 8.73633 8.88574C8.54613 9.10842 8.27046 9.21394 7.99902 9.19824V8.5C7.99902 8.11065 7.84969 7.75685 7.60645 7.49023C7.69106 7.41632 7.79427 7.32862 7.90918 7.23242C8.17052 7.01363 8.49796 6.74672 8.81738 6.48828C9.13711 6.2296 9.44973 5.97798 9.68262 5.79199C9.79909 5.69898 9.89646 5.62296 9.96387 5.56934L10.0693 5.48438ZM7.99902 5.2002C8.21994 5.2002 8.39941 5.37967 8.39941 5.60059C8.3992 5.82132 8.21981 6 7.99902 6C7.2592 6.00007 6.61446 6.40276 6.26855 7H5.38672C5.78963 5.94824 6.80555 5.20028 7.99902 5.2002Z" fill="#F4D58A"/>
+<path d="M7 8.67V15.33C7 15.7 6.70003 16 6.33 16H4L4 8.67C4 8.29997 4.29997 8 4.67 8H6.33C6.70003 8 7 8.29997 7 8.67Z" fill="url(#file-power-bi-dashboard-standard-16-paint4_linear_567113_1354)"/>
+<path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.5568C5.5 10.2493 5.21509 10 4.86363 10L2.54544 10.2386V15.7613L5.22727 16H5.5V10.5568Z" fill="black" fill-opacity="0.5"/>
+<path d="M5 10.6667V16H2V10.67C2 10.3 2.29997 10 2.67 10H4.33333C4.70152 10 5 10.2985 5 10.6667Z" fill="url(#file-power-bi-dashboard-standard-16-paint5_linear_567113_1354)"/>
+<path d="M0 12.67V15.33C0 15.7 0.299969 16 0.67 16H3V12.67C3 12.3 2.70003 12 2.33 12H0.67C0.299969 12 0 12.3 0 12.67Z" fill="url(#file-power-bi-dashboard-standard-16-paint6_linear_567113_1354)"/>
+<defs>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint0_linear_567113_1354" x1="5.52083" y1="2" x2="6.91218" y2="14.1743" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint1_linear_567113_1354" x1="5.33333" y1="3" x2="6.39244" y2="13.1675" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-power-bi-dashboard-standard-16-paint2_radial_567113_1354" cx="0" cy="0" r="1" gradientTransform="matrix(6.33333 7.91667 -9.5 2.96875 5.83333 5.60417)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint3_linear_567113_1354" x1="4.125" y1="4" x2="12.124" y2="11.873" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C28400"/>
+<stop offset="1" stop-color="#A86500"/>
+</linearGradient>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint4_linear_567113_1354" x1="3.5" y1="8" x2="6.38676" y2="15.3755" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint5_linear_567113_1354" x1="1.99976" y1="10" x2="4.74976" y2="16" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="file-power-bi-dashboard-standard-16-paint6_linear_567113_1354" x1="-0.000251124" y1="12" x2="1.46824" y2="16.0272" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+</defs>
+</svg>

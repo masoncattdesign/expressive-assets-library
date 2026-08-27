@@ -1,51 +1,49 @@
 {
   "id": "file.presentation",
   "name": "Presentation",
-  "aliases": [
-    "PowerPoint"
-  ],
   "keywords": [
-    "powerpoint",
-    "ppt",
-    "pptx",
-    "slides",
-    "deck"
+    "presentation"
   ],
   "type": "icon",
   "collection": "file",
-  "status": "published",
+  "status": "draft",
   "themes": [
-    "standard",
-    "outline",
-    "mono"
+    "standard"
   ],
   "sizes": [
-    12,
     16,
     20,
     24,
-    28,
     32,
-    48
+    36,
+    40,
+    48,
+    96,
+    256
   ],
   "colors": {
-    "primary": "#D24726",
-    "secondary": "#ED6C47"
+    "primary": "#BBBBBB",
+    "secondary": "#0F2F56"
   },
-  "recolorable": true,
+  "recolorable": false,
   "variants": {
     "standard": {
-      "any": "assets/icons/file/presentation/standard.svg"
-    },
-    "outline": {
-      "any": "assets/icons/file/presentation/outline.svg"
-    },
-    "mono": {
-      "any": "assets/icons/file/presentation/mono.svg"
+      "16": "assets/icons/file/presentation/standard-16.svg",
+      "20": "assets/icons/file/presentation/standard-20.svg",
+      "24": "assets/icons/file/presentation/standard-24.svg",
+      "32": "assets/icons/file/presentation/standard-32.svg",
+      "36": "assets/icons/file/presentation/standard-36.svg",
+      "40": "assets/icons/file/presentation/standard-40.svg",
+      "48": "assets/icons/file/presentation/standard-48.svg",
+      "96": "assets/icons/file/presentation/standard-96.svg",
+      "256": "assets/icons/file/presentation/standard-256.svg"
     }
   },
-  "owner": "@windows-design-systems",
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "132695:0"
+  },
   "version": "1.0.0",
-  "updated": "2026-08-25",
-  "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+  "updated": "2026-08-27",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
 }

@@ -1,0 +1,35 @@
+<svg aria-label="Copilot Page standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 8.5C9 6.01472 11.0147 4 13.5 4H30C34.9706 4 39 8.02944 39 13V39.5C39 41.9853 36.9853 44 34.5 44H18C13.0294 44 9 39.9706 9 35V8.5Z" fill="url(#file-copilot-page-standard-48-paint0_linear_448633_1693)"/>
+<path d="M10 8.5C10 6.567 11.567 5 13.5 5H30C34.4183 5 38 8.58172 38 13V39.5C38 41.433 36.433 43 34.5 43H18C13.5817 43 10 39.4183 10 35V8.5Z" fill="url(#file-copilot-page-standard-48-paint1_linear_448633_1693)"/>
+<path d="M10 8.5C10 6.567 11.567 5 13.5 5H30C34.4183 5 38 8.58172 38 13V39.5C38 41.433 36.433 43 34.5 43H18C13.5817 43 10 39.4183 10 35V8.5Z" fill="url(#file-copilot-page-standard-48-paint2_radial_448633_1693)"/>
+<path d="M30 20.0098C31.678 20.1375 32.9999 21.5393 33 23.25V30.75C33 32.5449 31.5449 34 29.75 34H17.25C16.6544 34 16.1137 33.7675 15.7109 33.3896L18.5 31L27.5 29L29 28.5L29.3408 19H30V20.0098Z" fill="url(#file-copilot-page-standard-48-paint3_linear_448633_1693)"/>
+<path d="M27.75 16C28.4491 16 29.0737 16.3191 29.4863 16.8193C29.532 16.8747 29.5749 16.9325 29.6152 16.9922C29.6961 17.1119 29.7663 17.2394 29.8232 17.374C29.8802 17.5087 29.9241 17.6503 29.9541 17.7969C29.969 17.8699 29.9806 17.9441 29.9883 18.0195C29.996 18.0953 30 18.1722 30 18.25V27.751C30 29.0488 28.9483 30.0622 27.6514 30.1123C26.0996 30.1722 22.922 30.1975 20.3428 31C17.8657 31.7708 16.7425 32.5964 15.7334 33.4102C15.4567 33.1575 15.2443 32.8374 15.1211 32.4746L16.5 26.5L26 16H27.75Z" fill="url(#file-copilot-page-standard-48-paint4_radial_448633_1693)"/>
+<path d="M25.4619 13.0127C25.4839 13.0141 25.5056 13.0172 25.5273 13.0195C25.7536 13.0436 25.9646 13.1161 26.1533 13.2256C26.6183 13.5012 26.9424 14.0023 26.9922 14.5781C26.9943 14.6063 26.9963 14.6346 26.9971 14.6631C26.998 14.6861 27 14.7092 27 14.7324V24.6172C27 25.6144 26.0011 26.7055 24.8789 26.8096C23.7567 26.9136 21.8774 27.064 20 28.0566C18.3209 28.9444 16.4939 29.9102 15.2275 32.7334C15.195 32.6666 15.1667 32.5976 15.1406 32.5273C15.0515 32.2853 15 32.0243 15 31.751V24.499C15 24.3083 15.005 24.1205 15.0137 23.9355C15.0284 23.621 15.0553 23.3148 15.0938 23.0166C15.098 22.9833 15.1028 22.9501 15.1074 22.917C15.1479 22.6237 15.199 22.3382 15.2607 22.0605C15.3347 21.7279 15.4236 21.4065 15.5254 21.0957C15.8408 20.1333 16.2829 19.2748 16.8076 18.5107C16.9842 18.2535 17.1695 18.0066 17.3633 17.7705C17.8107 17.2305 18.3001 16.7439 18.8105 16.3066C20.1624 15.1488 21.6702 14.3311 22.9707 13.7705C23.6963 13.4634 24.3512 13.2394 24.8682 13.083C25.072 13.0214 25.2716 13.0005 25.4619 13.0127Z" fill="url(#file-copilot-page-standard-48-paint5_radial_448633_1693)"/>
+<defs>
+<linearGradient id="file-copilot-page-standard-48-paint0_linear_448633_1693" x1="18.6875" y1="4" x2="25.7722" y2="43.8516" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-copilot-page-standard-48-paint1_linear_448633_1693" x1="17.7778" y1="5" x2="24.2179" y2="42.963" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-copilot-page-standard-48-paint2_radial_448633_1693" cx="0" cy="0" r="1" gradientTransform="matrix(14.7778 30.0833 -22.1667 11.2812 18.9444 14.8958)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-copilot-page-standard-48-paint3_linear_448633_1693" x1="28.2656" y1="23.5049" x2="72.7947" y2="91.2924" gradientUnits="userSpaceOnUse">
+<stop offset="0.0347811" stop-color="#5029CE"/>
+<stop offset="0.169224" stop-color="#C570FB"/>
+</linearGradient>
+<radialGradient id="file-copilot-page-standard-48-paint4_radial_448633_1693" cx="0" cy="0" r="1" gradientTransform="matrix(-13.9332 -16.3052 22.5512 -30.9741 28.9568 32.3052)" gradientUnits="userSpaceOnUse">
+<stop offset="0.224919" stop-color="#E331D8"/>
+<stop offset="0.688249" stop-color="#DB374F"/>
+</radialGradient>
+<radialGradient id="file-copilot-page-standard-48-paint5_radial_448633_1693" cx="0" cy="0" r="1" gradientTransform="matrix(9.93642 20.0434 -14.7129 15.1466 17.2682 9.06399)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8C48FF"/>
+<stop offset="0.384017" stop-color="#F2598A"/>
+<stop offset="0.853186" stop-color="#FFB152"/>
+</radialGradient>
+</defs>
+</svg>

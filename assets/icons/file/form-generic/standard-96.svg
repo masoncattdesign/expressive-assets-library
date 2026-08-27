@@ -1,0 +1,44 @@
+<svg aria-label="Form Generic standard 96" role="img" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 17C18 12.0294 22.0294 8 27 8H60C69.9411 8 78 16.0589 78 26V79C78 83.9706 73.9706 88 69 88H36C26.0589 88 18 79.9411 18 70V17Z" fill="url(#file-form-generic-standard-96-paint0_linear_1802_10955)"/>
+<path d="M20 17C20 13.134 23.134 10 27 10H60C68.8366 10 76 17.1634 76 26V79C76 82.866 72.866 86 69 86H36C27.1634 86 20 78.8366 20 70V17Z" fill="url(#file-form-generic-standard-96-paint1_linear_1802_10955)"/>
+<path d="M20 17C20 13.134 23.134 10 27 10H60C68.8366 10 76 17.1634 76 26V79C76 82.866 72.866 86 69 86H36C27.1634 86 20 78.8366 20 70V17Z" fill="url(#file-form-generic-standard-96-paint2_radial_1802_10955)"/>
+<path d="M36.5 57C38.433 57 40 58.567 40 60.5C40 62.433 38.433 64 36.5 64C34.567 64 33 62.433 33 60.5C33 58.567 34.567 57 36.5 57Z" fill="url(#file-form-generic-standard-96-paint3_linear_1802_10955)"/>
+<path d="M61.5 59C62.3284 59 63 59.6716 63 60.5C63 61.3284 62.3284 62 61.5 62H45.5C44.6716 62 44 61.3284 44 60.5C44 59.6716 44.6716 59 45.5 59H61.5Z" fill="url(#file-form-generic-standard-96-paint4_linear_1802_10955)"/>
+<path d="M36.5 41C38.433 41 40 42.567 40 44.5C40 46.433 38.433 48 36.5 48C34.567 48 33 46.433 33 44.5C33 42.567 34.567 41 36.5 41Z" fill="url(#file-form-generic-standard-96-paint5_linear_1802_10955)"/>
+<path d="M61.5 43C62.3284 43 63 43.6716 63 44.5C63 45.3284 62.3284 46 61.5 46H45.5C44.6716 46 44 45.3284 44 44.5C44 43.6716 44.6716 43 45.5 43H61.5Z" fill="url(#file-form-generic-standard-96-paint6_linear_1802_10955)"/>
+<path d="M64.5 30C65.3284 30 66 30.6716 66 31.5C66 32.3284 65.3284 33 64.5 33H31.5C30.6716 33 30 32.3284 30 31.5C30 30.6716 30.6716 30 31.5 30H64.5Z" fill="url(#file-form-generic-standard-96-paint7_linear_1802_10955)"/>
+<defs>
+<linearGradient id="file-form-generic-standard-96-paint0_linear_1802_10955" x1="37.375" y1="8" x2="51.5445" y2="87.7032" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-96-paint1_linear_1802_10955" x1="35.5556" y1="10" x2="48.4359" y2="85.9261" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-form-generic-standard-96-paint2_radial_1802_10955" cx="0" cy="0" r="1" gradientTransform="matrix(29.5556 60.1667 -44.3333 22.5625 37.8889 29.7917)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-form-generic-standard-96-paint3_linear_1802_10955" x1="41.0455" y1="34.25" x2="50.3894" y2="63.9144" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-96-paint4_linear_1802_10955" x1="41.0455" y1="34.25" x2="50.3894" y2="63.9144" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-96-paint5_linear_1802_10955" x1="41.0455" y1="34.25" x2="50.3894" y2="63.9144" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-96-paint6_linear_1802_10955" x1="41.0455" y1="34.25" x2="50.3894" y2="63.9144" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-96-paint7_linear_1802_10955" x1="41.0455" y1="34.25" x2="50.3894" y2="63.9144" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

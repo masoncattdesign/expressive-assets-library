@@ -1,0 +1,26 @@
+<svg aria-label="Publisher standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H16C18.2091 2 20 3.79086 20 6V20C20 21.1046 19.1046 22 18 22H8C5.79086 22 4 20.2091 4 18V4Z" fill="url(#file-publisher-standard-24-paint0_linear_1802_16457)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-publisher-standard-24-paint1_linear_1802_16457)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-publisher-standard-24-paint2_radial_1802_16457)"/>
+<path d="M15.2803 8C15.6778 8.00016 16 8.34553 16 8.77148V15.2285C16 15.6545 15.6778 15.9998 15.2803 16H12.7197C12.3222 15.9998 12 15.6545 12 15.2285V8.77148C12 8.34553 12.3222 8.00016 12.7197 8H15.2803Z" fill="#038387"/>
+<path opacity="0.2" d="M15.375 8H14.75V16H15.375V8Z" fill="black"/>
+<path d="M15 12V15H12C12 13.3431 10.6569 12 9 12H15Z" fill="#1A9BA1"/>
+<path d="M8.72727 7H14.2727C14.6727 7 15 7.3375 15 7.75V12H8V7.75C8 7.3375 8.32727 7 8.72727 7Z" fill="#37C6D0"/>
+<rect x="1" y="13" width="10" height="10" rx="2" fill="#038387"/>
+<path d="M5.16096 19.046V21H3.8125V15H5.89573C6.64162 15 7.2094 15.1632 7.59904 15.4895C7.99148 15.8159 8.18769 16.2999 8.18769 16.9414C8.18769 17.6025 7.96782 18.1185 7.52808 18.4895C7.09111 18.8605 6.50386 19.046 5.76631 19.046H5.16096ZM5.16096 16.0377V18.0084H5.72456C6.05854 18.0084 6.31599 17.9205 6.4969 17.7448C6.67781 17.569 6.76826 17.3166 6.76826 16.9874C6.76826 16.6834 6.6792 16.4491 6.50107 16.2845C6.32573 16.1199 6.07385 16.0377 5.74543 16.0377H5.16096Z" fill="white"/>
+<path d="M15 16.25C15 16.6625 14.6725 17 14.2725 17H12V15H15V16.25Z" fill="#038387"/>
+<defs>
+<linearGradient id="file-publisher-standard-24-paint0_linear_1802_16457" x1="9.16667" y1="2" x2="12.5" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-publisher-standard-24-paint1_linear_1802_16457" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-publisher-standard-24-paint2_radial_1802_16457" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

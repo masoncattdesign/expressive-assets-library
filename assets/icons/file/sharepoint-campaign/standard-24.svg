@@ -1,0 +1,70 @@
+<svg aria-label="SharePoint Campaign standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H16C18.2091 2 20 3.79086 20 6V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4Z" fill="url(#file-sharepoint-campaign-standard-24-paint0_linear_556293_557)"/>
+<path d="M19 20C19 20.5523 18.5523 21 18 21H6C5.48232 21 5.05621 20.6067 5.00488 20.1025C5.00145 20.0688 5 20.0346 5 20C5 19.4477 5.44772 19 6 19H18C18.3643 19 18.7058 18.9026 19 18.7324V20Z" fill="url(#file-sharepoint-campaign-standard-24-paint1_linear_556293_557)"/>
+<path d="M19 20C19 20.5523 18.5523 21 18 21H6C5.48232 21 5.05621 20.6067 5.00488 20.1025C5.00145 20.0688 5 20.0346 5 20C5 19.4477 5.44772 19 6 19H18C18.3643 19 18.7058 18.9026 19 18.7324V20Z" fill="url(#file-sharepoint-campaign-standard-24-paint2_radial_556293_557)"/>
+<path d="M16 3C17.6569 3 19 4.34315 19 6V17C19 17.5523 18.5523 18 18 18H6C5.63536 18 5.29437 18.0991 5 18.2695V4C5 3.44772 5.44772 3 6 3H16Z" fill="url(#file-sharepoint-campaign-standard-24-paint3_linear_556293_557)"/>
+<path d="M16 3C17.6569 3 19 4.34315 19 6V17C19 17.5523 18.5523 18 18 18H6C5.63536 18 5.29437 18.0991 5 18.2695V4C5 3.44772 5.44772 3 6 3H16Z" fill="url(#file-sharepoint-campaign-standard-24-paint4_radial_556293_557)"/>
+<rect x="7" y="5" width="4" height="2" rx="0.5" fill="url(#file-sharepoint-campaign-standard-24-paint5_linear_556293_557)"/>
+<rect x="7" y="9" width="4" height="2" rx="0.5" fill="url(#file-sharepoint-campaign-standard-24-paint6_linear_556293_557)"/>
+<rect x="13" y="5" width="4" height="2" rx="0.5" fill="url(#file-sharepoint-campaign-standard-24-paint7_linear_556293_557)"/>
+<rect x="13" y="9" width="4" height="2" rx="0.5" fill="url(#file-sharepoint-campaign-standard-24-paint8_linear_556293_557)"/>
+<rect x="13" y="13" width="4" height="2" rx="0.5" fill="url(#file-sharepoint-campaign-standard-24-paint9_linear_556293_557)"/>
+<rect x="1" y="13" width="10" height="10" rx="2" fill="url(#file-sharepoint-campaign-standard-24-paint10_radial_556293_557)"/>
+<rect x="1" y="13" width="10" height="10" rx="2" fill="url(#file-sharepoint-campaign-standard-24-paint11_radial_556293_557)" fill-opacity="0.6"/>
+<path d="M3.74414 19.7611L4.87969 19.1862C5.00772 19.4372 5.17471 19.6221 5.38066 19.7409C5.58941 19.8596 5.81763 19.919 6.06533 19.919C6.34087 19.919 6.551 19.865 6.69573 19.7571C6.84045 19.6464 6.91282 19.4804 6.91282 19.2591C6.91282 19.0864 6.84324 18.9406 6.70407 18.8219C6.56491 18.7004 6.3186 18.6086 5.96514 18.5466C5.2916 18.4278 4.80176 18.22 4.49561 17.9231C4.19224 17.6262 4.04055 17.2564 4.04055 16.8138C4.04055 16.2632 4.24094 15.8232 4.64172 15.4939C5.0425 15.1646 5.57131 15 6.22815 15C6.67068 15 7.06033 15.0877 7.39709 15.2632C7.73386 15.4386 8.00105 15.6896 8.19866 16.0162L7.08816 16.5709C6.9657 16.3873 6.83349 16.2551 6.69155 16.1741C6.54961 16.0904 6.37148 16.0486 6.15718 16.0486C5.90112 16.0486 5.7063 16.1026 5.5727 16.2105C5.44189 16.3185 5.37649 16.4588 5.37649 16.6316C5.37649 16.78 5.43911 16.9109 5.56435 17.0243C5.69238 17.135 5.94844 17.2254 6.33252 17.2955C6.97822 17.4143 7.45972 17.6302 7.777 17.9433C8.09707 18.2537 8.2571 18.6464 8.2571 19.1215C8.2571 19.6991 8.06645 20.1565 7.68515 20.4939C7.30386 20.8313 6.75974 21 6.05281 21C5.5407 21 5.07869 20.892 4.66677 20.6761C4.25764 20.4575 3.9501 20.1525 3.74414 19.7611Z" fill="white"/>
+<defs>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint0_linear_556293_557" x1="9.16667" y1="2" x2="12.5" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint1_linear_556293_557" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-sharepoint-campaign-standard-24-paint2_radial_556293_557" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint3_linear_556293_557" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-sharepoint-campaign-standard-24-paint4_radial_556293_557" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint5_linear_556293_557" x1="10.2" y1="5" x2="10.2" y2="13.6667" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E3DF"/>
+<stop offset="0.5" stop-color="#0097A8"/>
+<stop offset="1" stop-color="#007791"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint6_linear_556293_557" x1="10" y1="6.33333" x2="10" y2="13.6667" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E3DF"/>
+<stop offset="0.5" stop-color="#0097A8"/>
+<stop offset="1" stop-color="#007791"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint7_linear_556293_557" x1="16.2" y1="5" x2="16.2" y2="13.6667" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E3DF"/>
+<stop offset="0.5" stop-color="#0097A8"/>
+<stop offset="1" stop-color="#007791"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint8_linear_556293_557" x1="16" y1="6.33333" x2="16" y2="13.6667" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E3DF"/>
+<stop offset="0.5" stop-color="#0097A8"/>
+<stop offset="1" stop-color="#007791"/>
+</linearGradient>
+<linearGradient id="file-sharepoint-campaign-standard-24-paint9_linear_556293_557" x1="16" y1="7.66667" x2="16" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00E3DF"/>
+<stop offset="0.5" stop-color="#0097A8"/>
+<stop offset="1" stop-color="#007791"/>
+</linearGradient>
+<radialGradient id="file-sharepoint-campaign-standard-24-paint10_radial_556293_557" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1 13) rotate(45) scale(14.1421)">
+<stop offset="0.0625" stop-color="#00B6BD"/>
+<stop offset="0.890131" stop-color="#00495C"/>
+</radialGradient>
+<radialGradient id="file-sharepoint-campaign-standard-24-paint11_radial_556293_557" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6 19) rotate(90) scale(7 7.96875)">
+<stop offset="0.566964" stop-color="#1E8581" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#1ECBE6"/>
+</radialGradient>
+</defs>
+</svg>

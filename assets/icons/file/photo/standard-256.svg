@@ -1,0 +1,29 @@
+<svg aria-label="Photo standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M58 35H178C202.853 35 223 55.1472 223 80V200C223 211.598 213.598 221 202 221H82C57.1472 221 37 200.853 37 176V56C37 44.402 46.402 35 58 35Z" fill="url(#file-photo-standard-256-paint0_linear_1802_8420)"/>
+<path d="M42 56C42 47.1634 49.1634 40 58 40H178C200.091 40 218 57.9086 218 80V200C218 208.837 210.837 216 202 216H82C59.9086 216 42 198.091 42 176V56Z" fill="url(#file-photo-standard-256-paint1_linear_1802_8420)"/>
+<path d="M42 56C42 47.1634 49.1634 40 58 40H178C200.091 40 218 57.9086 218 80V200C218 208.837 210.837 216 202 216H82C59.9086 216 42 198.091 42 176V56Z" fill="url(#file-photo-standard-256-paint2_radial_1802_8420)"/>
+<circle cx="170" cy="88" r="15" fill="url(#file-photo-standard-256-paint3_linear_1802_8420)"/>
+<path d="M121.868 120.418L78.9221 163.368C71.6782 170.613 76.8092 183 87.0543 183H172.956C183.202 183 188.332 170.612 181.087 163.367L138.131 120.417C133.64 115.926 126.358 115.926 121.868 120.418Z" fill="url(#file-photo-standard-256-paint4_linear_1802_8420)"/>
+<defs>
+<linearGradient id="file-photo-standard-256-paint0_linear_1802_8420" x1="97.0625" y1="35" x2="122.106" y2="222.828" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-photo-standard-256-paint1_linear_1802_8420" x1="90.8889" y1="40" x2="113.152" y2="218.106" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-photo-standard-256-paint2_radial_1802_8420" cx="0" cy="0" r="1" gradientTransform="matrix(92.8889 139.333 -139.333 52.25 98.2222 85.8333)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-photo-standard-256-paint3_linear_1802_8420" x1="155" y1="54.25" x2="187.591" y2="116.647" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-photo-standard-256-paint4_linear_1802_8420" x1="74.5881" y1="92.48" x2="125.824" y2="235.22" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

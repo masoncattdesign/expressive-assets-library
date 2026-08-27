@@ -1,0 +1,34 @@
+<svg aria-label="Video360 standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8C2 6.34315 3.34315 5 5 5H24C27.3137 5 30 7.68629 30 11V24C30 25.6569 28.6569 27 27 27H8C4.68629 27 2 24.3137 2 21V8Z" fill="url(#file-video360-standard-32-paint0_linear_1802_15679)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-video360-standard-32-paint1_linear_1802_15679)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-video360-standard-32-paint2_radial_1802_15679)"/>
+<path d="M13 11.1279V17.8721C13 18.7464 13.9664 19.2873 14.7276 18.839L20.4436 15.4724C21.1849 15.0358 21.1856 13.9772 20.445 13.5395L14.729 10.1619C13.9678 9.7121 13 10.2528 13 11.1279Z" fill="url(#file-video360-standard-32-paint3_linear_1802_15679)"/>
+<path d="M11.9876 13.866C12.0487 14.1353 11.8799 14.4032 11.6106 14.4643C10.1601 14.7934 8.97604 15.2739 8.16774 15.8319C7.34867 16.3973 7 16.9778 7 17.5003C7 18.0803 7.43284 18.7322 8.44196 19.3463C9.43117 19.9484 10.8647 20.4402 12.5823 20.7269C12.8547 20.7724 13.0386 21.0301 12.9932 21.3025C12.9477 21.5748 12.69 21.7588 12.4177 21.7133C10.6207 21.4133 9.05421 20.8896 7.92208 20.2006C6.80985 19.5237 6 18.609 6 17.5003C6 16.4993 6.6629 15.6556 7.59962 15.0089C8.5471 14.3549 9.86302 13.8354 11.3894 13.4891C11.6587 13.428 11.9265 13.5967 11.9876 13.866Z" fill="url(#file-video360-standard-32-paint4_linear_1802_15679)"/>
+<path d="M22.0559 14.4066C22.1579 14.15 22.4487 14.0247 22.7053 14.1267C23.659 14.5058 24.4665 14.9763 25.0437 15.5281C25.6223 16.0811 26 16.7482 26 17.5003C26 18.2249 25.6491 18.8712 25.1062 19.4117C24.5652 19.9502 23.8076 20.4123 22.9115 20.7896C21.1512 21.5308 18.7654 21.9831 16.151 21.9998L16.2774 22.0841C16.5071 22.2373 16.5692 22.5477 16.416 22.7775C16.2628 23.0072 15.9524 23.0693 15.7226 22.9161L14.3475 21.9993C13.9912 21.7618 13.9912 21.2384 14.3475 21.0009L15.7226 20.0841C15.9524 19.9309 16.2628 19.993 16.416 20.2228C16.5692 20.4525 16.5071 20.763 16.2774 20.9161L16.1518 20.9998C18.6639 20.9829 20.9117 20.5466 22.5235 19.8679C23.3466 19.5214 23.9803 19.1215 24.4007 18.703C24.8192 18.2863 25 17.8803 25 17.5003C25 17.1063 24.8053 16.6835 24.3527 16.2509C23.8988 15.817 23.2166 15.4061 22.3358 15.056C22.0792 14.9539 21.9539 14.6632 22.0559 14.4066Z" fill="url(#file-video360-standard-32-paint5_linear_1802_15679)"/>
+<defs>
+<linearGradient id="file-video360-standard-32-paint0_linear_1802_15679" x1="11.0417" y1="5" x2="13.3847" y2="27.3656" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-32-paint1_linear_1802_15679" x1="10.2222" y1="6" x2="12.1806" y2="26.3672" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-video360-standard-32-paint2_radial_1802_15679" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 15.8333 -20.5833 5.9375 11.3056 11.2083)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-video360-standard-32-paint3_linear_1802_15679" x1="11" y1="7.5" x2="13.8546" y2="23.5895" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-32-paint4_linear_1802_15679" x1="11" y1="7.5" x2="13.8546" y2="23.5895" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-32-paint5_linear_1802_15679" x1="11" y1="7.5" x2="13.8546" y2="23.5895" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

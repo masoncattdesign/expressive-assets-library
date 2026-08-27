@@ -1,0 +1,24 @@
+<svg aria-label="Project standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-project-standard-256-paint0_linear_1802_8335)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-project-standard-256-paint1_linear_1802_8335)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-project-standard-256-paint2_radial_1802_8335)"/>
+<path d="M138 73C142.418 73 146 76.5817 146 81V110L109.5 112L73 110V81C73 76.5817 76.5817 73 81 73H138Z" fill="#33C481"/>
+<path d="M157 110C161.418 110 165 113.582 165 118V146L134.5 148L119.107 146.99C113.445 137.986 103.422 132 92 132H73V110H157Z" fill="#21A366"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="#107C41"/>
+<path d="M175.001 146C179.419 146 183.001 149.582 183.001 154V175C183.001 179.418 179.419 183 175.001 183H124.001V164C124.001 157.325 121.957 151.129 118.461 146H175.001Z" fill="#185C37"/>
+<path d="M60.1484 201.761V219.998H47.5312V163.998H67.0234C74.0026 163.998 79.3151 165.521 82.9609 168.567C86.6328 171.613 88.4688 176.13 88.4688 182.118C88.4688 188.288 86.4115 193.105 82.2969 196.567C78.2083 200.03 72.7135 201.761 65.8125 201.761H60.1484ZM60.1484 173.683V192.076H65.4219C68.5469 192.076 70.9557 191.256 72.6484 189.616C74.3411 187.976 75.1875 185.62 75.1875 182.548C75.1875 179.71 74.3542 177.523 72.6875 175.987C71.0469 174.451 68.6901 173.683 65.6172 173.683H60.1484Z" fill="white"/>
+<defs>
+<linearGradient id="file-project-standard-256-paint0_linear_1802_8335" x1="89.3958" y1="43" x2="107.368" y2="215.854" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-project-standard-256-paint1_linear_1802_8335" x1="81.7778" y1="48" x2="97.4449" y2="210.938" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-project-standard-256-paint2_radial_1802_8335" cx="0" cy="0" r="1" gradientTransform="matrix(109.778 126.667 -164.667 47.5 90.4444 89.6667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

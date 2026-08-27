@@ -1,0 +1,44 @@
+<svg aria-label="Form Generic standard 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="url(#file-form-generic-standard-40-paint0_linear_1802_19831)"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="url(#file-form-generic-standard-40-paint1_linear_1802_19831)"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="url(#file-form-generic-standard-40-paint2_radial_1802_19831)"/>
+<path d="M15.5 23C16.3284 23 17 23.6716 17 24.5C17 25.3284 16.3284 26 15.5 26C14.6716 26 14 25.3284 14 24.5C14 23.6716 14.6716 23 15.5 23Z" fill="url(#file-form-generic-standard-40-paint3_linear_1802_19831)"/>
+<path d="M25.5 24C25.7761 24 26 24.2239 26 24.5C26 24.7761 25.7761 25 25.5 25H19.5C19.2239 25 19 24.7761 19 24.5C19 24.2239 19.2239 24 19.5 24H25.5Z" fill="url(#file-form-generic-standard-40-paint4_linear_1802_19831)"/>
+<path d="M15.5 17C16.3284 17 17 17.6716 17 18.5C17 19.3284 16.3284 20 15.5 20C14.6716 20 14 19.3284 14 18.5C14 17.6716 14.6716 17 15.5 17Z" fill="url(#file-form-generic-standard-40-paint5_linear_1802_19831)"/>
+<path d="M25.5 18C25.7761 18 26 18.2239 26 18.5C26 18.7761 25.7761 19 25.5 19H19.5C19.2239 19 19 18.7761 19 18.5C19 18.2239 19.2239 18 19.5 18H25.5Z" fill="url(#file-form-generic-standard-40-paint6_linear_1802_19831)"/>
+<path d="M26.5 13C26.7761 13 27 13.2239 27 13.5C27 13.7761 26.7761 14 26.5 14H13.5C13.2239 14 13 13.7761 13 13.5C13 13.2239 13.2239 13 13.5 13H26.5Z" fill="url(#file-form-generic-standard-40-paint7_linear_1802_19831)"/>
+<defs>
+<linearGradient id="file-form-generic-standard-40-paint0_linear_1802_19831" x1="15.0417" y1="2" x2="21.2034" y2="37.9437" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-40-paint1_linear_1802_19831" x1="14.2222" y1="3" x2="19.7856" y2="37.035" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-form-generic-standard-40-paint2_radial_1802_19831" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 26.9167 -20.5833 10.0937 15.3056 11.8542)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-form-generic-standard-40-paint3_linear_1802_19831" x1="17.2955" y1="14.625" x2="20.8187" y2="26.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-40-paint4_linear_1802_19831" x1="17.2955" y1="14.625" x2="20.8187" y2="26.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-40-paint5_linear_1802_19831" x1="17.2955" y1="14.625" x2="20.8187" y2="26.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-40-paint6_linear_1802_19831" x1="17.2955" y1="14.625" x2="20.8187" y2="26.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-40-paint7_linear_1802_19831" x1="17.2955" y1="14.625" x2="20.8187" y2="26.0015" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

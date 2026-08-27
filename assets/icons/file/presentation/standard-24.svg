@@ -1,0 +1,24 @@
+<svg aria-label="Presentation standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6C2 4.89543 2.89543 4 4 4H18C20.2091 4 22 5.79086 22 8V18C22 19.1046 21.1046 20 20 20H6C3.79086 20 2 18.2091 2 16V6Z" fill="url(#file-presentation-standard-24-paint0_linear_1802_16440)"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H18C19.6569 5 21 6.34315 21 8V18C21 18.5523 20.5523 19 20 19H6C4.34315 19 3 17.6569 3 16V6Z" fill="url(#file-presentation-standard-24-paint1_linear_1802_16440)"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H18C19.6569 5 21 6.34315 21 8V18C21 18.5523 20.5523 19 20 19H6C4.34315 19 3 17.6569 3 16V6Z" fill="url(#file-presentation-standard-24-paint2_radial_1802_16440)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9872 7C9.23283 7 7 9.23283 7 11.9872C7 14.7415 9.23283 16.9743 11.9872 16.9743C14.7415 16.9743 16.9743 14.7415 16.9743 11.9872C16.9743 9.23283 14.7415 7 11.9872 7ZM11.9841 8C9.78345 8.00166 8 9.78614 8 11.9872C8 14.1892 9.78512 15.9743 11.9872 15.9743C14.1892 15.9743 15.9743 14.1892 15.9743 11.9872L12.9841 11.9872C12.4318 11.9872 11.9841 11.5395 11.9841 10.9872V8Z" fill="url(#file-presentation-standard-24-paint3_linear_1802_16440)"/>
+<defs>
+<linearGradient id="file-presentation-standard-24-paint0_linear_1802_16440" x1="8.45833" y1="4" x2="10.1927" y2="20.2594" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-presentation-standard-24-paint1_linear_1802_16440" x1="8" y1="5" x2="9.38582" y2="19.2542" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-presentation-standard-24-paint2_radial_1802_16440" cx="0" cy="0" r="1" gradientTransform="matrix(9.5 11.0833 -14.25 4.15625 8.75 8.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-presentation-standard-24-paint3_linear_1802_16440" x1="10.0603" y1="8.24679" x2="12.9313" y2="16.8551" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

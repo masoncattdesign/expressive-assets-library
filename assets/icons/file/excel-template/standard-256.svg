@@ -1,0 +1,81 @@
+<svg aria-label="Excel Template standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-excel-template-standard-256-paint0_linear_1802_8846)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-excel-template-standard-256-paint1_radial_1802_8846)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M192 45.5H40C29.7827 45.5 21.5 53.7827 21.5 64V168C21.5 191.472 40.5279 210.5 64 210.5H216C226.217 210.5 234.5 202.217 234.5 192V88C234.5 64.5279 215.472 45.5 192 45.5Z" stroke="url(#file-excel-template-standard-256-paint2_linear_1802_8846)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40 20"/>
+<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 87.999 95 87.999H176V177.999Z" fill="url(#file-excel-template-standard-256-paint3_radial_1802_8846)"/>
+<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 87.999 95 87.999H176V177.999Z" fill="url(#file-excel-template-standard-256-paint4_radial_1802_8846)" fill-opacity="0.7"/>
+<path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 67.999 100 67.999H140V108Z" fill="url(#file-excel-template-standard-256-paint5_linear_1802_8846)"/>
+<path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 67.999 100 67.999H140V108Z" fill="url(#file-excel-template-standard-256-paint6_radial_1802_8846)"/>
+<path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 67.999 100 67.999H140V108Z" fill="url(#file-excel-template-standard-256-paint7_linear_1802_8846)"/>
+<path d="M176 78C176 72.4772 171.523 68 166 68H138C132.477 68 128 72.4772 128 78V98C128 103.523 132.477 108 138 108H166C171.523 108 176 103.523 176 98V78Z" fill="url(#file-excel-template-standard-256-paint8_radial_1802_8846)"/>
+<path d="M136.844 107.999C131.873 108.563 128 112.78 128 117.914V137.999C128 142.964 124.381 147.082 119.637 147.863C114.084 138.374 103.787 132 92 132H80V122.999C80.0003 114.715 86.7159 107.999 95 107.999H136.844Z" fill="url(#file-excel-template-standard-256-paint9_linear_1802_8846)"/>
+<path d="M136.844 107.999C131.873 108.563 128 112.78 128 117.914V137.999C128 142.964 124.381 147.082 119.637 147.863C114.084 138.374 103.787 132 92 132H80V122.999C80.0003 114.715 86.7159 107.999 95 107.999H136.844Z" fill="url(#file-excel-template-standard-256-paint10_linear_1802_8846)" fill-opacity="0.3"/>
+<path d="M144 107.999H136.844C137.254 107.952 137.671 107.927 138.095 107.932L144 107.999Z" fill="url(#file-excel-template-standard-256-paint11_linear_1802_8846)"/>
+<path d="M144 107.999H136.844C137.254 107.952 137.671 107.927 138.095 107.932L144 107.999Z" fill="url(#file-excel-template-standard-256-paint12_linear_1802_8846)" fill-opacity="0.3"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="url(#file-excel-template-standard-256-paint13_radial_1802_8846)"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="url(#file-excel-template-standard-256-paint14_radial_1802_8846)" fill-opacity="0.3"/>
+<path d="M89.7812 219.998H74.6641L65.1719 202.151C64.8333 201.527 64.5729 201.032 64.3906 200.668C64.2344 200.277 64.0651 199.834 63.8828 199.34H63.7266C63.4922 199.965 63.2708 200.472 63.0625 200.863C62.8542 201.253 62.6068 201.735 62.3203 202.308L52.4766 219.998H38.2188L55.3281 191.959L39.3906 163.998H54.3125L62.75 179.931C63.0885 180.582 63.375 181.155 63.6094 181.649C63.8698 182.118 64.1302 182.678 64.3906 183.329H64.5469C64.9115 182.574 65.1979 181.975 65.4062 181.532C65.6406 181.09 65.9531 180.504 66.3438 179.775L75.0938 163.998H89.3125L73.1406 191.529L89.7812 219.998Z" fill="white"/>
+<defs>
+<linearGradient id="file-excel-template-standard-256-paint0_linear_1802_8846" x1="79.5556" y1="43" x2="96.4267" y2="216.078" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-excel-template-standard-256-paint1_radial_1802_8846" cx="0" cy="0" r="1" gradientTransform="matrix(115.056 134.583 -172.583 50.4687 88.6389 87.2708)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-excel-template-standard-256-paint2_linear_1802_8846" x1="90.2813" y1="45.5" x2="107.612" y2="213.293" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<radialGradient id="file-excel-template-standard-256-paint3_radial_1802_8846" cx="0" cy="0" r="1" gradientTransform="matrix(-90.6667 -102.777 76.3958 -73.0958 176 196.333)" gradientUnits="userSpaceOnUse">
+<stop offset="0.0647233" stop-color="#379539"/>
+<stop offset="0.422149" stop-color="#297C2D"/>
+<stop offset="0.703448" stop-color="#15561C"/>
+</radialGradient>
+<radialGradient id="file-excel-template-standard-256-paint4_radial_1802_8846" cx="0" cy="0" r="1" gradientTransform="matrix(-38.3333 -39.9302 29.6813 -30.905 109.333 124.111)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#073B10"/>
+<stop offset="0.992234" stop-color="#084A13" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="file-excel-template-standard-256-paint5_linear_1802_8846" x1="82.21" y1="140.385" x2="154.727" y2="98.1281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#66D052"/>
+<stop offset="1" stop-color="#85E972"/>
+</linearGradient>
+<radialGradient id="file-excel-template-standard-256-paint6_radial_1802_8846" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(137.84 106.021) rotate(-180) scale(30.0628 94.7329)">
+<stop offset="0.292495" stop-color="#4EB43B"/>
+<stop offset="1" stop-color="#72CC61" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="file-excel-template-standard-256-paint7_linear_1802_8846" x1="107.049" y1="109.638" x2="80" y2="109.638" gradientUnits="userSpaceOnUse">
+<stop offset="0.183694" stop-color="#C0E075" stop-opacity="0"/>
+<stop offset="1" stop-color="#D1EB95"/>
+</linearGradient>
+<radialGradient id="file-excel-template-standard-256-paint8_radial_1802_8846" cx="0" cy="0" r="1" gradientTransform="matrix(-54.115 -45.598 44.382 -55.5976 182.115 113.598)" gradientUnits="userSpaceOnUse">
+<stop offset="0.439983" stop-color="#79E96D"/>
+<stop offset="1" stop-color="#D0EB76"/>
+</radialGradient>
+<linearGradient id="file-excel-template-standard-256-paint9_linear_1802_8846" x1="62.4559" y1="179.086" x2="124.904" y2="179.085" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52D17C"/>
+<stop offset="0.328512" stop-color="#4AA647"/>
+</linearGradient>
+<linearGradient id="file-excel-template-standard-256-paint10_linear_1802_8846" x1="123.614" y1="107.659" x2="123.614" y2="206.884" gradientUnits="userSpaceOnUse">
+<stop stop-color="#29852F"/>
+<stop offset="0.499968" stop-color="#4AA647" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="file-excel-template-standard-256-paint11_linear_1802_8846" x1="62.4559" y1="179.086" x2="124.904" y2="179.085" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52D17C"/>
+<stop offset="0.328512" stop-color="#4AA647"/>
+</linearGradient>
+<linearGradient id="file-excel-template-standard-256-paint12_linear_1802_8846" x1="123.614" y1="107.659" x2="123.614" y2="206.884" gradientUnits="userSpaceOnUse">
+<stop stop-color="#29852F"/>
+<stop offset="0.499968" stop-color="#4AA647" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="file-excel-template-standard-256-paint13_radial_1802_8846" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 140) rotate(45) scale(147.078 418.691)">
+<stop stop-color="#20A85E"/>
+<stop offset="0.94375" stop-color="#09442A"/>
+</radialGradient>
+<radialGradient id="file-excel-template-standard-256-paint14_radial_1802_8846" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 202.4) rotate(90) scale(72.8 83.85)">
+<stop offset="0.580357" stop-color="#33A662" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#98F0B0"/>
+</radialGradient>
+</defs>
+</svg>

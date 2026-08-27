@@ -1,0 +1,60 @@
+<svg aria-label="Planner Portfolio standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M80 35C68.402 35 59 44.402 59 56V59H56C44.402 59 35 68.402 35 80V152C35 190.108 65.8924 221 104 221H176C187.598 221 197 211.598 197 200V197H200C211.598 197 221 187.598 221 176V80C221 55.1472 200.853 35 176 35H80Z" fill="url(#file-planner-portfolio-standard-256-paint0_linear_376868_2309)"/>
+<path d="M59 64H56C47.1634 64 40 71.1634 40 80V152C40 187.346 68.6538 216 104 216H176C184.837 216 192 208.837 192 200V197H104C79.1472 197 59 176.853 59 152V64Z" fill="url(#file-planner-portfolio-standard-256-paint1_linear_376868_2309)"/>
+<path d="M59 64H56C47.1634 64 40 71.1634 40 80V152C40 187.346 68.6538 216 104 216H176C184.837 216 192 208.837 192 200V197H104C79.1472 197 59 176.853 59 152V64Z" fill="url(#file-planner-portfolio-standard-256-paint2_radial_376868_2309)"/>
+<path d="M200 192C208.837 192 216 184.837 216 176V80C216 57.9086 198.091 40 176 40H80C71.1634 40 64 47.1634 64 56V152C64 174.091 81.9086 192 104 192H200Z" fill="url(#file-planner-portfolio-standard-256-paint3_linear_376868_2309)"/>
+<path d="M200 192C208.837 192 216 184.837 216 176V80C216 57.9086 198.091 40 176 40H80C71.1634 40 64 47.1634 64 56V152C64 174.091 81.9086 192 104 192H200Z" fill="url(#file-planner-portfolio-standard-256-paint4_radial_376868_2309)"/>
+<path d="M123.098 132.901C118.706 137.292 111.587 137.292 107.195 132.901L91.2934 116.999C86.9022 112.608 86.9022 105.489 91.2934 101.098L107.195 85.1957C111.587 80.8045 118.706 80.8045 123.098 85.1957L139 101.098C143.391 105.489 143.391 112.608 139 116.999L123.098 132.901Z" fill="url(#file-planner-portfolio-standard-256-paint5_linear_376868_2309)"/>
+<path d="M123.098 132.901C118.706 137.292 111.587 137.292 107.195 132.901L91.2934 116.999C86.9022 112.608 86.9022 105.489 91.2934 101.098L107.195 85.1957C111.587 80.8045 118.706 80.8045 123.098 85.1957L139 101.098C143.391 105.489 143.391 112.608 139 116.999L123.098 132.901Z" fill="url(#file-planner-portfolio-standard-256-paint6_linear_376868_2309)"/>
+<path d="M91.293 117.001C95.6843 121.392 102.804 121.392 107.195 117.001L154.903 69.2935C159.295 64.9022 166.414 64.9022 170.806 69.2934L186.708 85.1957C191.099 89.587 191.099 96.7067 186.708 101.098L139 148.805C134.609 153.196 127.489 153.196 123.098 148.805L91.293 117.001Z" fill="url(#file-planner-portfolio-standard-256-paint7_linear_376868_2309)"/>
+<path d="M91.293 117.001C95.6843 121.392 102.804 121.392 107.195 117.001L154.903 69.2935C159.295 64.9022 166.414 64.9022 170.806 69.2934L186.708 85.1957C191.099 89.587 191.099 96.7067 186.708 101.098L139 148.805C134.609 153.196 127.489 153.196 123.098 148.805L91.293 117.001Z" fill="url(#file-planner-portfolio-standard-256-paint8_linear_376868_2309)"/>
+<path d="M107.199 132.902C111.591 137.293 118.71 137.293 123.102 132.902L154.907 101.097C159.298 96.7059 166.418 96.7059 170.809 101.097L186.712 116.999C191.103 121.391 191.103 128.51 186.712 132.902L154.907 164.706C150.515 169.098 143.396 169.098 139.004 164.706L107.199 132.902Z" fill="url(#file-planner-portfolio-standard-256-paint9_linear_376868_2309)"/>
+<path d="M107.199 132.902C111.591 137.293 118.71 137.293 123.102 132.902L154.907 101.097C159.298 96.7059 166.418 96.7059 170.809 101.097L186.712 116.999C191.103 121.391 191.103 128.51 186.712 132.902L154.907 164.706C150.515 169.098 143.396 169.098 139.004 164.706L107.199 132.902Z" fill="url(#file-planner-portfolio-standard-256-paint10_linear_376868_2309)"/>
+<defs>
+<linearGradient id="file-planner-portfolio-standard-256-paint0_linear_376868_2309" x1="95.0625" y1="35" x2="120.106" y2="222.828" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint1_linear_376868_2309" x1="88.8889" y1="40" x2="111.152" y2="218.106" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-planner-portfolio-standard-256-paint2_radial_376868_2309" cx="0" cy="0" r="1" gradientTransform="matrix(92.8889 139.333 -139.333 52.25 96.2222 85.8333)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint3_linear_376868_2309" x1="88.8889" y1="40" x2="111.152" y2="218.106" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-planner-portfolio-standard-256-paint4_radial_376868_2309" cx="0" cy="0" r="1" gradientTransform="matrix(92.8889 139.333 -139.333 52.25 96.2222 85.8333)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint5_linear_376868_2309" x1="115.146" y1="81.9024" x2="97.1708" y2="120.303" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8752E0"/>
+<stop offset="1" stop-color="#541278"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint6_linear_376868_2309" x1="123.617" y1="113.047" x2="108.998" y2="98.6935" gradientUnits="userSpaceOnUse">
+<stop offset="0.12172" stop-color="#3D0D59"/>
+<stop offset="1" stop-color="#7034B0" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint7_linear_376868_2309" x1="166.074" y1="65.9999" x2="129.894" y2="152.783" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DB45E0"/>
+<stop offset="1" stop-color="#6C0F71"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint8_linear_376868_2309" x1="166.074" y1="65.9999" x2="129.894" y2="152.783" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DB45E0"/>
+<stop offset="0.677403" stop-color="#A829AE"/>
+<stop offset="1" stop-color="#8F28B3"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint9_linear_376868_2309" x1="164.506" y1="97.8737" x2="147.507" y2="167.997" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3DCBFF"/>
+<stop offset="1" stop-color="#00479E"/>
+</linearGradient>
+<linearGradient id="file-planner-portfolio-standard-256-paint10_linear_376868_2309" x1="165.425" y1="99.6872" x2="132.731" y2="163.481" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3DCBFF"/>
+<stop offset="1" stop-color="#4A40D4"/>
+</linearGradient>
+</defs>
+</svg>

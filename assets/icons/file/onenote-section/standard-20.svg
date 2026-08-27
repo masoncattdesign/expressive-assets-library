@@ -1,0 +1,50 @@
+<svg aria-label="OneNote Section standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C5 2.89543 5.89543 2 7 2H13C15.2091 2 17 3.79086 17 6V14C17 15.1046 16.1046 16 15 16C15 17.1046 14.1046 18 13 18H9C5.68629 18 3 15.3137 3 12V6C3 4.89543 3.89543 4 5 4Z" fill="url(#file-onenote-section-standard-20-paint0_linear_1802_17271)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="url(#file-onenote-section-standard-20-paint1_linear_1802_17271)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="url(#file-onenote-section-standard-20-paint2_radial_1802_17271)"/>
+<path d="M13.999 12.2725C13.999 12.6742 13.6732 13.0001 13.2715 13L10.999 12.999V12C10.999 10.956 10.4652 10.0374 9.65625 9.5L13.999 8.5V12.2725Z" fill="url(#file-onenote-section-standard-20-paint3_radial_1802_17271)"/>
+<path d="M11.2305 6.85938L13.9997 6.75V9.27273C13.9997 9.67439 13.6741 10 13.2724 10H11.2305V6.85938Z" fill="url(#file-onenote-section-standard-20-paint4_linear_1802_17271)"/>
+<path d="M13.2227 5C13.6519 5.00025 13.9998 5.34814 14 5.77734V6.72266C13.9998 7.15187 13.6519 7.49977 13.2227 7.5H12.7773C12.3481 7.50023 12.0002 7.84813 12 8.27734V9.22266C11.9998 9.65187 11.6519 9.99977 11.2227 10H10.2314C9.68219 9.3876 8.88738 9 8 9L8.00098 6.375C8.00113 5.61574 8.61673 5.00005 9.37598 5H13.2227Z" fill="url(#file-onenote-section-standard-20-paint5_linear_1802_17271)"/>
+<path d="M13.2227 5C13.6519 5.00025 13.9998 5.34814 14 5.77734V6.72266C13.9998 7.15187 13.6519 7.49977 13.2227 7.5H12.7773C12.3481 7.50023 12.0002 7.84813 12 8.27734V9.22266C11.9998 9.65187 11.6519 9.99977 11.2227 10H10.2314C9.68219 9.3876 8.88738 9 8 9L8.00098 6.375C8.00113 5.61574 8.61673 5.00005 9.37598 5H13.2227Z" fill="url(#file-onenote-section-standard-20-paint6_radial_1802_17271)"/>
+<rect x="1" y="10" width="9" height="9" rx="2" fill="url(#file-onenote-section-standard-20-paint7_radial_1802_17271)"/>
+<rect x="1" y="10" width="9" height="9" rx="2" fill="url(#file-onenote-section-standard-20-paint8_radial_1802_17271)" fill-opacity="0.8"/>
+<path d="M7.75171 17H6.61357L4.55027 13.9142C4.49208 13.8212 4.4432 13.7411 4.40364 13.6736C4.36407 13.6039 4.33381 13.5458 4.31287 13.4993H4.2989C4.30356 13.5876 4.30705 13.6992 4.30937 13.834C4.3117 13.9689 4.31287 14.1269 4.31287 14.3082V17H3.24805V12H4.46299L6.44949 14.9881C6.49138 15.0556 6.53211 15.1241 6.57168 15.1939C6.61357 15.2613 6.65198 15.3287 6.68689 15.3961H6.70085C6.6962 15.338 6.69271 15.252 6.69038 15.1381C6.68805 15.0219 6.68689 14.8789 6.68689 14.7092V12H7.75171V17Z" fill="white"/>
+<defs>
+<linearGradient id="file-onenote-section-standard-20-paint0_linear_1802_17271" x1="7.52083" y1="2" x2="9.96979" y2="18.0713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-onenote-section-standard-20-paint1_linear_1802_17271" x1="7.33333" y1="3" x2="9.38802" y2="17.0892" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-onenote-section-standard-20-paint2_radial_1802_17271" cx="0" cy="0" r="1" gradientTransform="matrix(6.33333 11.0833 -9.5 4.15625 7.83333 6.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<radialGradient id="file-onenote-section-standard-20-paint3_radial_1802_17271" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.8241 13) scale(9.51467 4.67788)">
+<stop offset="0.158518" stop-color="#A931D8"/>
+<stop offset="0.565784" stop-color="#6E1996"/>
+</radialGradient>
+<linearGradient id="file-onenote-section-standard-20-paint4_linear_1802_17271" x1="15.2428" y1="8.66439" x2="11.6948" y2="7.0428" gradientUnits="userSpaceOnUse">
+<stop offset="0.216532" stop-color="#CA59F7"/>
+<stop offset="0.888362" stop-color="#691A90"/>
+</linearGradient>
+<linearGradient id="file-onenote-section-standard-20-paint5_linear_1802_17271" x1="14.2653" y1="6.71462" x2="8.00133" y2="6.71462" gradientUnits="userSpaceOnUse">
+<stop offset="0.807408" stop-color="#DE66FF"/>
+<stop offset="1" stop-color="#FCB1FF"/>
+</linearGradient>
+<radialGradient id="file-onenote-section-standard-20-paint6_radial_1802_17271" cx="0" cy="0" r="1" gradientTransform="matrix(-3.01614 5.43829 -8.84963 -5.51456 14.4316 4.60198)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC7A3"/>
+<stop offset="0.830508" stop-color="#DE67FD" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="file-onenote-section-standard-20-paint7_radial_1802_17271" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1 10) rotate(45) scale(12.7279)">
+<stop offset="0.071875" stop-color="#AC13EB"/>
+<stop offset="0.878742" stop-color="#580087"/>
+</radialGradient>
+<radialGradient id="file-onenote-section-standard-20-paint8_radial_1802_17271" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5.5 15.4) rotate(90) scale(6.3 7.25625)">
+<stop offset="0.584821" stop-color="#841FB0" stop-opacity="0"/>
+<stop offset="0.968712" stop-color="#D373FC"/>
+</radialGradient>
+</defs>
+</svg>

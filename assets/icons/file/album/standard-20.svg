@@ -1,0 +1,29 @@
+<svg aria-label="Album standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H12C14.2091 2 16 3.79086 16 6V16C16 17.1046 15.1046 18 14 18H6C4.89543 18 4 17.1046 4 16V4Z" fill="url(#file-album-standard-20-paint0_linear_388237_1759)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H12C13.6569 3 15 4.34315 15 6V13C15 13.5523 14.5523 14 14 14H6C5.63571 14 5.29417 14.0974 5 14.2676V4C5 3.44772 5.44772 3 6 3ZM5 16C5 16.5523 5.44772 17 6 17H14C14.5523 17 15 16.5523 15 16V14.7324C14.7058 14.9026 14.3643 15 14 15H6C5.44772 15 5 15.4477 5 16Z" fill="url(#file-album-standard-20-paint1_linear_388237_1759)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H12C13.6569 3 15 4.34315 15 6V13C15 13.5523 14.5523 14 14 14H6C5.63571 14 5.29417 14.0974 5 14.2676V4C5 3.44772 5.44772 3 6 3ZM5 16C5 16.5523 5.44772 17 6 17H14C14.5523 17 15 16.5523 15 16V14.7324C14.7058 14.9026 14.3643 15 14 15H6C5.44772 15 5 15.4477 5 16Z" fill="url(#file-album-standard-20-paint2_radial_388237_1759)"/>
+<path d="M13 5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5Z" fill="url(#file-album-standard-20-paint3_linear_388237_1759)"/>
+<path d="M9.45194 7.32973L7.18776 9.7354C6.73728 10.214 7.07663 10.9994 7.73391 10.9994H12.2623C12.9195 10.9994 13.2589 10.214 12.8084 9.7354L10.5442 7.32973C10.2481 7.01509 9.74806 7.01509 9.45194 7.32973Z" fill="url(#file-album-standard-20-paint4_linear_388237_1759)"/>
+<defs>
+<linearGradient id="file-album-standard-20-paint0_linear_388237_1759" x1="7.875" y1="2" x2="10.7089" y2="17.9406" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-album-standard-20-paint1_linear_388237_1759" x1="7.77778" y1="3" x2="10.221" y2="16.9613" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-album-standard-20-paint2_radial_388237_1759" cx="0" cy="0" r="1" gradientTransform="matrix(5.27778 11.0833 -7.91667 4.15625 8.19444 6.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-album-standard-20-paint3_linear_388237_1759" x1="11" y1="2.75" x2="13.1727" y2="6.90978" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-album-standard-20-paint4_linear_388237_1759" x1="7.99902" y1="5.24945" x2="11.499" y2="12.2495" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

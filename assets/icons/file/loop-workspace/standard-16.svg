@@ -1,0 +1,60 @@
+<svg aria-label="Loop Workspace standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4C1 2.89543 1.89543 2 3 2H11.5C13.433 2 15 3.567 15 5.5V12C15 13.1046 14.1046 14 13 14H4.5C2.567 14 1 12.433 1 10.5V4Z" fill="url(#file-loop-workspace-standard-16-paint0_linear_243560_2005)"/>
+<path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="url(#file-loop-workspace-standard-16-paint1_linear_243560_2005)"/>
+<path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="url(#file-loop-workspace-standard-16-paint2_radial_243560_2005)"/>
+<path d="M12 10C12 10.5523 11.5523 11 11 11H8.89941C8.4361 8.71781 6.41892 7 4 7V6H12V10Z" fill="url(#file-loop-workspace-standard-16-paint3_linear_243560_2005)"/>
+<path d="M11 5C11.5523 5 12 5.44772 12 6V7H4V6C4 5.44772 4.44772 5 5 5H11Z" fill="url(#file-loop-workspace-standard-16-paint4_linear_243560_2005)"/>
+<path d="M6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5C5.38071 9.5 6.5 10.6193 6.5 12Z" fill="#F3F3F3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C6.20914 8 8 9.79086 8 12C8 14.2091 6.20914 16 4 16H0V12C0 9.79086 1.79086 8 4 8ZM4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5H4C4.82843 13.5 5.5 12.8284 5.5 12C5.5 11.1716 4.82843 10.5 4 10.5Z" fill="url(#file-loop-workspace-standard-16-paint5_linear_243560_2005)"/>
+<path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="url(#file-loop-workspace-standard-16-paint6_linear_243560_2005)"/>
+<path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="url(#file-loop-workspace-standard-16-paint7_radial_243560_2005)" fill-opacity="0.56"/>
+<path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="url(#file-loop-workspace-standard-16-paint8_radial_243560_2005)" fill-opacity="0.1"/>
+<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="url(#file-loop-workspace-standard-16-paint9_linear_243560_2005)"/>
+<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="url(#file-loop-workspace-standard-16-paint10_radial_243560_2005)"/>
+<defs>
+<linearGradient id="file-loop-workspace-standard-16-paint0_linear_243560_2005" x1="5.52083" y1="2" x2="6.91218" y2="14.1743" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint1_linear_243560_2005" x1="5.33333" y1="3" x2="6.39244" y2="13.1675" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-loop-workspace-standard-16-paint2_radial_243560_2005" cx="0" cy="0" r="1" gradientTransform="matrix(6.33333 7.91667 -9.5 2.96875 5.83333 5.60417)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint3_linear_243560_2005" x1="8" y1="6" x2="8" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D0BEFE"/>
+<stop offset="1" stop-color="#C2AAFE"/>
+</linearGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint4_linear_243560_2005" x1="8" y1="5" x2="8" y2="7" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AB85FF"/>
+<stop offset="1" stop-color="#9354FF"/>
+</linearGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint5_linear_243560_2005" x1="4.88" y1="10.84" x2="3.56" y2="16.24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9237E3"/>
+<stop offset="1" stop-color="#48E6F3"/>
+</linearGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint6_linear_243560_2005" x1="2.59996" y1="15.4" x2="6.11991" y2="14.6" gradientUnits="userSpaceOnUse">
+<stop stop-color="#51E6FF"/>
+<stop offset="1" stop-color="#71D4FF" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="file-loop-workspace-standard-16-paint7_radial_243560_2005" cx="0" cy="0" r="1" gradientTransform="matrix(1.59998 1.1 -1.93324 2.81204 1.39998 14.3)" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.699824" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="file-loop-workspace-standard-16-paint8_radial_243560_2005" cx="0" cy="0" r="1" gradientTransform="matrix(2.95995 1.84 -3.23379 5.20227 0.919986 14)" gradientUnits="userSpaceOnUse">
+<stop offset="0.328125"/>
+<stop offset="0.604167" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="file-loop-workspace-standard-16-paint9_linear_243560_2005" x1="1.63743" y1="12.3069" x2="3.69556" y2="9.42404" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6D05E8"/>
+<stop offset="1" stop-color="#AB5ADD" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="file-loop-workspace-standard-16-paint10_radial_243560_2005" cx="0" cy="0" r="1" gradientTransform="matrix(5.35159 -0.925791 2.41501 14.1809 -0.678934 10.4956)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6D05E8"/>
+<stop offset="1" stop-color="#6D05E8" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

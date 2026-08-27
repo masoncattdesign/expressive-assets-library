@@ -1,0 +1,19 @@
+<svg aria-label="File Multiple standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C5 2.89543 5.89543 2 7 2H13C15.2091 2 17 3.79086 17 6V14C17 15.1046 16.1046 16 15 16C15 17.1046 14.1046 18 13 18H9C5.68629 18 3 15.3137 3 12V6C3 4.89543 3.89543 4 5 4Z" fill="url(#file-file-multiple-standard-20-paint0_linear_1802_17261)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="url(#file-file-multiple-standard-20-paint1_linear_1802_17261)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="url(#file-file-multiple-standard-20-paint2_radial_1802_17261)"/>
+<defs>
+<linearGradient id="file-file-multiple-standard-20-paint0_linear_1802_17261" x1="7.52083" y1="2" x2="9.96979" y2="18.0713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-file-multiple-standard-20-paint1_linear_1802_17261" x1="7.33333" y1="3" x2="9.38802" y2="17.0892" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-file-multiple-standard-20-paint2_radial_1802_17261" cx="0" cy="0" r="1" gradientTransform="matrix(6.33333 11.0833 -9.5 4.15625 7.83333 6.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

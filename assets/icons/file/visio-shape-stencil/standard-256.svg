@@ -1,0 +1,36 @@
+<svg aria-label="Visio Shape Stencil standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-visio-shape-stencil-standard-256-paint0_linear_1802_8797)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-visio-shape-stencil-standard-256-paint1_linear_1802_8797)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-visio-shape-stencil-standard-256-paint2_radial_1802_8797)"/>
+<path d="M116 80C120.418 80 124 83.5817 124 88V116C124 120.418 120.418 124 116 124H72C67.5817 124 64 120.418 64 116V88C64 83.5817 67.5817 80 72 80H116Z" fill="url(#file-visio-shape-stencil-standard-256-paint3_linear_1802_8797)"/>
+<rect x="132" y="80" width="60" height="44" rx="8" fill="url(#file-visio-shape-stencil-standard-256-paint4_linear_1802_8797)"/>
+<rect x="132" y="132" width="60" height="44" rx="8" fill="url(#file-visio-shape-stencil-standard-256-paint5_linear_1802_8797)"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="#185ABD"/>
+<path d="M90.627 164L71.3409 220H57.0519L38 164H51.4301L63.2594 201.646C63.5457 202.531 63.7669 203.299 63.9231 203.95C64.0793 204.575 64.2615 205.33 64.4697 206.215H64.7039C64.9121 205.278 65.0813 204.497 65.2114 203.872C65.3416 203.221 65.5498 202.427 65.8361 201.49L77.5874 164H90.627Z" fill="white"/>
+<defs>
+<linearGradient id="file-visio-shape-stencil-standard-256-paint0_linear_1802_8797" x1="89.3958" y1="43" x2="107.368" y2="215.854" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-visio-shape-stencil-standard-256-paint1_linear_1802_8797" x1="81.7778" y1="48" x2="97.4449" y2="210.938" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-visio-shape-stencil-standard-256-paint2_radial_1802_8797" cx="0" cy="0" r="1" gradientTransform="matrix(109.778 126.667 -164.667 47.5 90.4444 89.6667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-visio-shape-stencil-standard-256-paint3_linear_1802_8797" x1="94" y1="80" x2="94" y2="124.723" gradientUnits="userSpaceOnUse">
+<stop stop-color="#50D9FF"/>
+<stop offset="1" stop-color="#28A8EA"/>
+</linearGradient>
+<linearGradient id="file-visio-shape-stencil-standard-256-paint4_linear_1802_8797" x1="162" y1="80" x2="162" y2="124" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28A8EA"/>
+<stop offset="1" stop-color="#1490DF"/>
+</linearGradient>
+<linearGradient id="file-visio-shape-stencil-standard-256-paint5_linear_1802_8797" x1="162" y1="132" x2="162" y2="176" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2B7CD3"/>
+<stop offset="1" stop-color="#1D59C1"/>
+</linearGradient>
+</defs>
+</svg>

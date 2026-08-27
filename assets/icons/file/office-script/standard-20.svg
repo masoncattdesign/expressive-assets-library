@@ -1,0 +1,37 @@
+<svg aria-label="Office Script standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89542 4.89542 2 6 2H12C14.2091 2 16 3.79086 16 6V16C16 17.1046 15.1046 18 14 18H5C3.89542 18 3 17.1046 3 16C3 15.2597 3.40219 14.6133 4 14.2675V4Z" fill="url(#file-office-script-standard-20-paint0_linear_140013_1314)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 17H11.7675C11.5974 16.7058 11.5 16.3643 11.5 16C11.5 15.6357 11.5974 15.2942 11.7675 15H5C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17ZM14 17H13.5C12.9477 17 12.5 16.5523 12.5 16C12.5 15.4477 12.9477 15 13.5 15C13.7762 15 14 14.7762 14 14.5C14 14.2238 13.7762 14 13.5 14H5V4C5 3.44772 5.44772 3 6 3H12C13.6569 3 15 4.34314 15 6V16C15 16.5523 14.5523 17 14 17Z" fill="url(#file-office-script-standard-20-paint1_linear_140013_1314)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 17H11.7675C11.5974 16.7058 11.5 16.3643 11.5 16C11.5 15.6357 11.5974 15.2942 11.7675 15H5C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17ZM14 17H13.5C12.9477 17 12.5 16.5523 12.5 16C12.5 15.4477 12.9477 15 13.5 15C13.7762 15 14 14.7762 14 14.5C14 14.2238 13.7762 14 13.5 14H5V4C5 3.44772 5.44772 3 6 3H12C13.6569 3 15 4.34314 15 6V16C15 16.5523 14.5523 17 14 17Z" fill="url(#file-office-script-standard-20-paint2_radial_140013_1314)"/>
+<path d="M12.5 11C12.7761 11 13 11.2239 13 11.5C13 11.7761 12.7761 12 12.5 12H7.5C7.22386 12 7 11.7761 7 11.5C7 11.2239 7.22386 11 7.5 11H12.5Z" fill="url(#file-office-script-standard-20-paint3_linear_140013_1314)"/>
+<path d="M12.5 8C12.7761 8 13 8.22386 13 8.5C13 8.77614 12.7761 9 12.5 9H7.5C7.22386 9 7 8.77614 7 8.5C7 8.22386 7.22386 8 7.5 8H12.5Z" fill="url(#file-office-script-standard-20-paint4_linear_140013_1314)"/>
+<path d="M12.5 5C12.7761 5 13 5.22386 13 5.5C13 5.77614 12.7761 6 12.5 6H7.5C7.22386 6 7 5.77614 7 5.5C7 5.22386 7.22386 5 7.5 5H12.5Z" fill="url(#file-office-script-standard-20-paint5_linear_140013_1314)"/>
+<defs>
+<linearGradient id="file-office-script-standard-20-paint0_linear_140013_1314" x1="7.19792" y1="2" x2="9.82573" y2="18.0132" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-office-script-standard-20-paint1_linear_140013_1314" x1="7.05556" y1="3" x2="9.28819" y2="17.0337" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-office-script-standard-20-paint2_radial_140013_1314" cx="0" cy="0" r="1" gradientTransform="matrix(5.80556 11.0833 -8.70833 4.15625 7.51389 6.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-office-script-standard-20-paint3_linear_140013_1314" x1="4.5" y1="-0.384616" x2="13.6347" y2="12.9101" gradientUnits="userSpaceOnUse">
+<stop offset="0.371041" stop-color="#E15C01"/>
+<stop offset="0.761738" stop-color="#DA4401"/>
+<stop offset="0.943611" stop-color="#D83B01"/>
+</linearGradient>
+<linearGradient id="file-office-script-standard-20-paint4_linear_140013_1314" x1="4.5" y1="-0.384616" x2="13.6347" y2="12.9101" gradientUnits="userSpaceOnUse">
+<stop offset="0.371041" stop-color="#E15C01"/>
+<stop offset="0.761738" stop-color="#DA4401"/>
+<stop offset="0.943611" stop-color="#D83B01"/>
+</linearGradient>
+<linearGradient id="file-office-script-standard-20-paint5_linear_140013_1314" x1="4.5" y1="-0.384616" x2="13.6347" y2="12.9101" gradientUnits="userSpaceOnUse">
+<stop offset="0.371041" stop-color="#E15C01"/>
+<stop offset="0.761738" stop-color="#DA4401"/>
+<stop offset="0.943611" stop-color="#D83B01"/>
+</linearGradient>
+</defs>
+</svg>

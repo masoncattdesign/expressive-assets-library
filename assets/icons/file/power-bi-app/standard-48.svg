@@ -1,0 +1,40 @@
+<svg aria-label="Power BI App standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 13.5C4 11.0147 6.01472 9 8.5 9H35C39.9706 9 44 13.0294 44 18V34.5C44 36.9853 41.9853 39 39.5 39H13C8.02944 39 4 34.9706 4 30V13.5Z" fill="url(#file-power-bi-app-standard-48-paint0_linear_567113_1621)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-power-bi-app-standard-48-paint1_linear_567113_1621)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-power-bi-app-standard-48-paint2_radial_567113_1621)"/>
+<path d="M18 26V44C18 44.5523 17.5523 45 17 45H11L11 26C11 25.4477 11.4477 25 12 25H17C17.5523 25 18 25.4477 18 26Z" fill="url(#file-power-bi-app-standard-48-paint3_linear_567113_1621)"/>
+<path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M14.5 31.0208C14.5 30.457 14.0523 30 13.5 30L9.85714 30.4375V44.5625L14.0714 45H14.5L14.5 31.0208Z" fill="black" fill-opacity="0.5"/>
+<path d="M14 31V45H7V31C7 30.4477 7.44772 30 8 30H13C13.5523 30 14 30.4477 14 31Z" fill="url(#file-power-bi-app-standard-48-paint4_linear_567113_1621)"/>
+<path d="M3 36V44C3 44.5523 3.44772 45 4 45H10V36C10 35.4477 9.55228 35 9 35H4C3.44772 35 3 35.4477 3 36Z" fill="url(#file-power-bi-app-standard-48-paint5_linear_567113_1621)"/>
+<path d="M26.9619 14.3635C27.543 13.7824 28.4853 13.7825 29.0664 14.3635L32.5742 17.8713C33.1548 18.4523 33.1547 19.3938 32.5742 19.9748L29.5498 22.9993H30.4482C31.27 22.9993 31.9364 23.6658 31.9365 24.4875V30.4397C31.9365 31.2615 31.2701 31.928 30.4482 31.928H19V30.9358H23.0088V23.9914H16.0645V24.0002H15.0723V16.552C15.0723 15.7302 15.7387 15.0637 16.5605 15.0637H22.5127C23.3343 15.0639 24 15.7303 24 16.552V17.3254L26.9619 14.3635ZM24 30.9358H30.4482C30.7222 30.9358 30.9443 30.7136 30.9443 30.4397V24.4875C30.9443 24.2137 30.7221 23.9914 30.4482 23.9914H24V30.9358ZM16.5605 16.0559C16.2866 16.0559 16.0645 16.2781 16.0645 16.552V22.9993H23.0088V16.552C23.0088 16.2782 22.7865 16.0561 22.5127 16.0559H16.5605ZM24 22.9993H26.4785L24 20.5198V22.9993Z" fill="url(#file-power-bi-app-standard-48-paint6_linear_567113_1621)"/>
+<defs>
+<linearGradient id="file-power-bi-app-standard-48-paint0_linear_567113_1621" x1="16.9167" y1="9" x2="19.9695" y2="39.5281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-power-bi-app-standard-48-paint1_linear_567113_1621" x1="15.5556" y1="10" x2="18.1838" y2="38.5357" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-power-bi-app-standard-48-paint2_radial_567113_1621" cx="0" cy="0" r="1" gradientTransform="matrix(20.0556 22.1667 -30.0833 8.3125 17.1389 17.2917)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-power-bi-app-standard-48-paint3_linear_567113_1621" x1="9.83333" y1="25" x2="17.4167" y2="43.0833" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="file-power-bi-app-standard-48-paint4_linear_567113_1621" x1="6.99943" y1="30" x2="14.181" y2="44.6244" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="file-power-bi-app-standard-48-paint5_linear_567113_1621" x1="2.99941" y1="35" x2="6.86574" y2="44.8962" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+<linearGradient id="file-power-bi-app-standard-48-paint6_linear_567113_1621" x1="15.0723" y1="13.9277" x2="33.0724" y2="31.865" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB6D00"/>
+<stop offset="1" stop-color="#B85500"/>
+</linearGradient>
+</defs>
+</svg>

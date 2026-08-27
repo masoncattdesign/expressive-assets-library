@@ -1,0 +1,28 @@
+<svg aria-label="Markdown file standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21 2C24.3137 2 27 4.68628 27 8V26.5C27 28.433 25.433 30 23.5 30H6.5C4.567 30 3 28.433 3 26.5C3 25.1038 3.81753 23.8986 5 23.3368V5C5 3.34314 6.34315 2 8 2H21Z" fill="url(#file-markdown-file-standard-32-paint0_linear_555396_878)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 29H21.0505C20.4022 28.3647 20 27.4793 20 26.5C20 25.5207 20.4022 24.6353 21.0505 24H6.5C5.11929 24 4 25.1193 4 26.5C4 27.8807 5.11929 29 6.5 29ZM6.5 23H23.5C23.7761 23 24 23.2238 24 23.5C24 23.7762 23.7761 24 23.5 24C22.1193 24 21 25.1193 21 26.5C21 27.8807 22.1193 29 23.5 29C24.8807 29 26 27.8807 26 26.5V8C26 5.23859 23.7614 3 21 3H8C6.89543 3 6 3.89542 6 5V23.0354C6.1633 23.0121 6.33024 23 6.5 23Z" fill="url(#file-markdown-file-standard-32-paint1_linear_555396_878)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 29H21.0505C20.4022 28.3647 20 27.4793 20 26.5C20 25.5207 20.4022 24.6353 21.0505 24H6.5C5.11929 24 4 25.1193 4 26.5C4 27.8807 5.11929 29 6.5 29ZM6.5 23H23.5C23.7761 23 24 23.2238 24 23.5C24 23.7762 23.7761 24 23.5 24C22.1193 24 21 25.1193 21 26.5C21 27.8807 22.1193 29 23.5 29C24.8807 29 26 27.8807 26 26.5V8C26 5.23859 23.7614 3 21 3H8C6.89543 3 6 3.89542 6 5V23.0354C6.1633 23.0121 6.33024 23 6.5 23Z" fill="url(#file-markdown-file-standard-32-paint2_radial_555396_878)"/>
+<rect x="10" y="8" width="1" height="8" rx="0.5" fill="#365376"/>
+<rect x="9.82617" y="8.39648" width="1" height="5.24504" rx="0.5" transform="rotate(-35.6698 9.82617 8.39648)" fill="#365376"/>
+<rect x="15.3848" y="7.80273" width="1" height="5.25358" rx="0.5" transform="rotate(35.67 15.3848 7.80273)" fill="#365376"/>
+<rect x="15" y="8" width="1" height="8" rx="0.5" fill="#365376"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 8C19.7761 8.00002 20 8.22387 20 8.5V14.293L21.1464 13.1465C21.3417 12.9512 21.6582 12.9512 21.8535 13.1465C22.0487 13.3417 22.0487 13.6583 21.8535 13.8535L19.8535 15.8535C19.763 15.944 19.638 16 19.5 16C19.3619 16 19.2369 15.944 19.1464 15.8535L17.1464 13.8535C16.9512 13.6583 16.9512 13.3417 17.1464 13.1465C17.3417 12.9512 17.6582 12.9512 17.8535 13.1465L19 14.293V8.5C19 8.22386 19.2238 8 19.5 8Z" fill="url(#file-markdown-file-standard-32-paint3_linear_555396_878)"/>
+<defs>
+<linearGradient id="file-markdown-file-standard-32-paint0_linear_555396_878" x1="10.75" y1="2" x2="15.1208" y2="30.0979" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-markdown-file-standard-32-paint1_linear_555396_878" x1="10.1111" y1="3" x2="13.9744" y2="29.1515" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-markdown-file-standard-32-paint2_radial_555396_878" cx="0" cy="0" r="1" gradientTransform="matrix(11.6111 20.5833 -17.4167 7.71875 11.0278 9.77083)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-markdown-file-standard-32-paint3_linear_555396_878" x1="28.256" y1="23.6798" x2="11.7382" y2="19.5662" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,24 @@
+<svg aria-label="Mail standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="url(#file-mail-standard-256-paint0_linear_1802_8199)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-mail-standard-256-paint1_linear_1802_8199)"/>
+<path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="url(#file-mail-standard-256-paint2_radial_1802_8199)"/>
+<path d="M32.6703 72.7845C33.8942 70.9453 36.3772 70.4465 38.2164 71.6703L118.583 125.149C124.287 128.945 131.714 128.945 137.418 125.149L217.784 71.6703C219.624 70.4465 222.107 70.9453 223.331 72.7845C224.554 74.6236 224.056 77.1067 222.216 78.3305L141.85 131.809C133.461 137.392 122.54 137.392 114.151 131.809L33.7845 78.3305C31.9453 77.1067 31.4465 74.6236 32.6703 72.7845Z" fill="url(#file-mail-standard-256-paint3_linear_1802_8199)"/>
+<defs>
+<linearGradient id="file-mail-standard-256-paint0_linear_1802_8199" x1="89.3958" y1="43" x2="107.368" y2="215.854" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-mail-standard-256-paint1_linear_1802_8199" x1="81.7778" y1="48" x2="97.4449" y2="210.938" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-mail-standard-256-paint2_radial_1802_8199" cx="0" cy="0" r="1" gradientTransform="matrix(109.778 126.667 -164.667 47.5 90.4444 89.6667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-mail-standard-256-paint3_linear_1802_8199" x1="97.4546" y1="17.8361" x2="148.025" y2="163.113" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

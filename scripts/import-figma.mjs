@@ -390,6 +390,16 @@ async function importAssets() {
 
     if (!Object.keys(variants).length) continue;
 
+    // Drop artwork the new meta no longer references. When real drawings land
+    // on top of a generated placeholder the old standard/outline/mono files are
+    // still sitting there, referenced by nothing — dead weight that reads as
+    // real artwork to anyone browsing the tree.
+    const keep = new Set(Object.values(variants).flatMap((b) => Object.values(b)));
+    for (const file of await readdir(join(ROOT, dir))) {
+      if (!file.endsWith('.svg') || keep.has(`${dir}/${file}`)) continue;
+      await rm(join(ROOT, dir, file));
+    }
+
     const notes = [];
     if (asset.retired) notes.push('Marked retired in Figma. Set status to deprecated and add replacedBy once a replacement is agreed.');
     notes.push('Imported from Figma. Colours are baked in, so the accent picker is off until the artwork is tokenised.');

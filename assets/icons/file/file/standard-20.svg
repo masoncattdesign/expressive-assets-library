@@ -1,0 +1,19 @@
+<svg aria-label="File standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H12C14.2091 2 16 3.79086 16 6V16C16 17.1046 15.1046 18 14 18H8C5.79086 18 4 16.2091 4 14V4Z" fill="url(#file-file-standard-20-paint0_linear_1802_17161)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H12C13.6569 3 15 4.34315 15 6V16C15 16.5523 14.5523 17 14 17H8C6.34315 17 5 15.6569 5 14V4Z" fill="url(#file-file-standard-20-paint1_linear_1802_17161)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H12C13.6569 3 15 4.34315 15 6V16C15 16.5523 14.5523 17 14 17H8C6.34315 17 5 15.6569 5 14V4Z" fill="url(#file-file-standard-20-paint2_radial_1802_17161)"/>
+<defs>
+<linearGradient id="file-file-standard-20-paint0_linear_1802_17161" x1="7.875" y1="2" x2="10.7089" y2="17.9406" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-file-standard-20-paint1_linear_1802_17161" x1="7.77778" y1="3" x2="10.221" y2="16.9613" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-file-standard-20-paint2_radial_1802_17161" cx="0" cy="0" r="1" gradientTransform="matrix(5.27778 11.0833 -7.91667 4.15625 8.19444 6.64583)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

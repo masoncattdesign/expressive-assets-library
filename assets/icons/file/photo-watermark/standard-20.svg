@@ -1,0 +1,29 @@
+<svg aria-label="Photo Watermark standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 5C3 3.89543 3.89543 3 5 3H13C15.2091 3 17 4.79086 17 7V15C17 16.1046 16.1046 17 15 17H7C4.79086 17 3 15.2091 3 13V5Z" fill="url(#file-photo-watermark-standard-20-paint0_linear_1802_17313)"/>
+<path d="M4 5C4 4.44772 4.44772 4 5 4H13C14.6569 4 16 5.34315 16 7V15C16 15.5523 15.5523 16 15 16H7C5.34315 16 4 14.6569 4 13V5Z" fill="url(#file-photo-watermark-standard-20-paint1_linear_1802_17313)"/>
+<path d="M4 5C4 4.44772 4.44772 4 5 4H13C14.6569 4 16 5.34315 16 7V15C16 15.5523 15.5523 16 15 16H7C5.34315 16 4 14.6569 4 13V5Z" fill="url(#file-photo-watermark-standard-20-paint2_radial_1802_17313)"/>
+<circle cx="13" cy="7" r="1" fill="url(#file-photo-watermark-standard-20-paint3_linear_1802_17313)"/>
+<path d="M9.29269 9.56442L6.56439 12.2931C5.93448 12.923 6.38066 14.0001 7.27154 14.0001H12.7288C13.6198 14.0001 14.0659 12.9229 13.4359 12.293L10.7069 9.56433C10.3164 9.17383 9.68319 9.17387 9.29269 9.56442Z" fill="url(#file-photo-watermark-standard-20-paint4_linear_1802_17313)"/>
+<defs>
+<linearGradient id="file-photo-watermark-standard-20-paint0_linear_1802_17313" x1="7.52083" y1="3" x2="9.40584" y2="17.1376" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-photo-watermark-standard-20-paint1_linear_1802_17313" x1="7.33333" y1="4" x2="8.85128" y2="16.1436" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-photo-watermark-standard-20-paint2_radial_1802_17313" cx="0" cy="0" r="1" gradientTransform="matrix(6.33333 9.5 -9.5 3.5625 7.83333 7.125)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-photo-watermark-standard-20-paint3_linear_1802_17313" x1="11.9827" y1="5.25493" x2="14.1264" y2="8.87018" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-photo-watermark-standard-20-paint4_linear_1802_17313" x1="6.20494" y1="7.50991" x2="10.0092" y2="17.6333" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+</defs>
+</svg>

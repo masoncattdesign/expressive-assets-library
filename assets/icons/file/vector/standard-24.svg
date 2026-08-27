@@ -1,0 +1,29 @@
+<svg aria-label="Vector standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H16C18.2091 2 20 3.79086 20 6V20C20 21.1046 19.1046 22 18 22H8C5.79086 22 4 20.2091 4 18V4Z" fill="url(#file-vector-standard-24-paint0_linear_1802_16619)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-vector-standard-24-paint1_linear_1802_16619)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-vector-standard-24-paint2_radial_1802_16619)"/>
+<path d="M7 8C7 7.44772 7.44772 7 8 7H9.00021C9.55249 7 10.0002 7.44771 10.0002 7.99998H14.085C14.2909 7.4174 14.8465 7 15.4996 7C16.3281 7 16.9996 7.67157 16.9996 8.5C16.9996 9.32843 16.3281 10 15.4996 10C14.8465 10 14.2909 9.58259 14.085 8.99998H12.5402C14.3123 10.0668 15.581 11.8699 15.937 14H16.0002C16.5525 14 17.0002 14.4477 17.0002 15V16C17.0002 16.5523 16.5525 17 16.0002 17H15C14.4477 17 14 16.5523 14 16V15C14 14.4741 14.4059 14.0431 14.9215 14.003C14.437 11.5071 12.4931 9.56333 9.99714 9.07902C9.95684 9.59435 9.52589 9.99997 9.00021 9.99997H8C7.44772 9.99997 7 9.55226 7 8.99997V8Z" fill="url(#file-vector-standard-24-paint3_linear_1802_16619)"/>
+<path d="M9.96426 11.3143C9.88833 11.1245 9.70447 11 9.50002 11C9.29557 11 9.11171 11.1245 9.03578 11.3143L7.03578 16.3143C6.95868 16.507 7.0087 16.7274 7.16146 16.8679C7.31423 17.0085 7.53795 17.0401 7.72363 16.9472L9.50002 16.059L11.2764 16.9472C11.4621 17.0401 11.6858 17.0085 11.8386 16.8679C11.9913 16.7274 12.0414 16.507 11.9643 16.3143L9.96426 11.3143Z" fill="url(#file-vector-standard-24-paint4_linear_1802_16619)"/>
+<defs>
+<linearGradient id="file-vector-standard-24-paint0_linear_1802_16619" x1="9.16667" y1="2" x2="12.5" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-vector-standard-24-paint1_linear_1802_16619" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-vector-standard-24-paint2_radial_1802_16619" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-vector-standard-24-paint3_linear_1802_16619" x1="8.4286" y1="4.85715" x2="13.0843" y2="16.8067" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-vector-standard-24-paint4_linear_1802_16619" x1="8.4286" y1="4.85715" x2="13.0843" y2="16.8067" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

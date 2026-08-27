@@ -1,0 +1,24 @@
+<svg aria-label="Spreadsheet standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 13.5C4 11.0147 6.01472 9 8.5 9H35C39.9706 9 44 13.0294 44 18V34.5C44 36.9853 41.9853 39 39.5 39H13C8.02944 39 4 34.9706 4 30V13.5Z" fill="url(#file-spreadsheet-standard-48-paint0_linear_1802_13691)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-spreadsheet-standard-48-paint1_linear_1802_13691)"/>
+<path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="url(#file-spreadsheet-standard-48-paint2_radial_1802_13691)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.992 18.7285C12.992 17.2097 14.2232 15.9785 15.742 15.9785H32.2582C33.777 15.9785 35.0082 17.2097 35.0082 18.7285V21.6303C35.0145 21.6694 35.0177 21.7095 35.0177 21.7503C35.0177 21.7911 35.0145 21.8312 35.0082 21.8703V29.2721C35.0082 30.7909 33.777 32.0221 32.2582 32.0221H15.742C14.2232 32.0221 12.992 30.7909 12.992 29.2721V26.3577C12.987 26.3227 12.9844 26.2868 12.9844 26.2503C12.9844 26.2138 12.987 26.1779 12.992 26.1429V18.7285ZM21.5025 30.5221H26.5025V27.0003H21.5025V30.5221ZM20.0025 27.0003V30.5221H15.742C15.0517 30.5221 14.492 29.9625 14.492 29.2721V27.0003H20.0025ZM21.5025 25.5003H26.5025V22.5003H21.5025V25.5003ZM20.0025 22.5003V25.5003H14.492V22.5003H20.0025ZM21.5025 21.0003H26.5025V17.4785H21.5025V21.0003ZM20.0025 17.4785V21.0003H14.492V18.7285C14.492 18.0382 15.0517 17.4785 15.742 17.4785H20.0025ZM28.0025 17.4785V21.0003H33.5082V18.7285C33.5082 18.0382 32.9485 17.4785 32.2582 17.4785H28.0025ZM28.0025 22.5003V25.5003H33.5082V22.5003H28.0025ZM28.0025 27.0003V30.5221H32.2582C32.9485 30.5221 33.5082 29.9624 33.5082 29.2721V27.0003H28.0025Z" fill="url(#file-spreadsheet-standard-48-paint3_linear_1802_13691)"/>
+<defs>
+<linearGradient id="file-spreadsheet-standard-48-paint0_linear_1802_13691" x1="16.9167" y1="9" x2="19.9695" y2="39.5281" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-spreadsheet-standard-48-paint1_linear_1802_13691" x1="15.5556" y1="10" x2="18.1838" y2="38.5357" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-spreadsheet-standard-48-paint2_radial_1802_13691" cx="0" cy="0" r="1" gradientTransform="matrix(20.0556 22.1667 -30.0833 8.3125 17.1389 17.2917)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-spreadsheet-standard-48-paint3_linear_1802_13691" x1="17.8042" y1="13.9731" x2="24.924" y2="32.1681" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

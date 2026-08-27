@@ -1,0 +1,44 @@
+<svg aria-label="Code Notebook standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 8.5C9 6.01472 11.0147 4 13.5 4H30C34.9706 4 39 8.02944 39 13V39.5C39 41.9853 36.9853 44 34.5 44H13.5C11.0147 44 9 41.9853 9 39.5V8.5Z" fill="url(#file-code-notebook-standard-48-paint0_linear_178834_474)"/>
+<path d="M13.5 5C11.567 5 10 6.567 10 8.5V36.6713C10.825 35.6518 12.0864 35 13.5 35H34.5C36.433 35 38 33.433 38 31.5V13C38 8.58172 34.4183 5 30 5H13.5Z" fill="url(#file-code-notebook-standard-48-paint1_linear_178834_474)"/>
+<path d="M13.5 5C11.567 5 10 6.567 10 8.5V36.6713C10.825 35.6518 12.0864 35 13.5 35H34.5C36.433 35 38 33.433 38 31.5V13C38 8.58172 34.4183 5 30 5H13.5Z" fill="url(#file-code-notebook-standard-48-paint2_radial_178834_474)"/>
+<path d="M38 34.3287C37.175 35.3482 35.9136 36 34.5 36H13.5C11.567 36 10 37.567 10 39.5C10 41.433 11.567 43 13.5 43H34.5C36.433 43 38 41.433 38 39.5V38.3287C37.175 39.3482 35.9136 40 34.5 40H13.5C13.2239 40 13 39.7761 13 39.5C13 39.2239 13.2239 39 13.5 39H34.5C36.433 39 38 37.433 38 35.5V34.3287Z" fill="url(#file-code-notebook-standard-48-paint3_linear_178834_474)"/>
+<path d="M38 34.3287C37.175 35.3482 35.9136 36 34.5 36H13.5C11.567 36 10 37.567 10 39.5C10 41.433 11.567 43 13.5 43H34.5C36.433 43 38 41.433 38 39.5V38.3287C37.175 39.3482 35.9136 40 34.5 40H13.5C13.2239 40 13 39.7761 13 39.5C13 39.2239 13.2239 39 13.5 39H34.5C36.433 39 38 37.433 38 35.5V34.3287Z" fill="url(#file-code-notebook-standard-48-paint4_radial_178834_474)"/>
+<path d="M26.4723 12.0339C26.8679 12.1567 27.0891 12.5769 26.9663 12.9725L22.4663 27.4725C22.3435 27.8681 21.9233 28.0893 21.5277 27.9665C21.1321 27.8437 20.9109 27.4235 21.0337 27.0279L25.5337 12.5279C25.6565 12.1323 26.0767 11.9111 26.4723 12.0339Z" fill="url(#file-code-notebook-standard-48-paint5_linear_178834_474)"/>
+<path d="M17.7803 15.9699C18.0732 16.2628 18.0732 16.7377 17.7803 17.0306L14.8107 20.0002L17.7803 22.9699C18.0732 23.2628 18.0732 23.7377 17.7803 24.0306C17.4874 24.3235 17.0126 24.3235 16.7197 24.0306L13.2197 20.5306C12.9268 20.2377 12.9268 19.7628 13.2197 19.4699L16.7197 15.9699C17.0126 15.677 17.4874 15.677 17.7803 15.9699Z" fill="url(#file-code-notebook-standard-48-paint6_linear_178834_474)"/>
+<path d="M30.2197 15.9699C30.5126 15.677 30.9874 15.677 31.2803 15.9699L34.7803 19.4699C35.0732 19.7628 35.0732 20.2377 34.7803 20.5306L31.2803 24.0306C30.9874 24.3235 30.5126 24.3235 30.2197 24.0306C29.9268 23.7377 29.9268 23.2628 30.2197 22.9699L33.1893 20.0002L30.2197 17.0306C29.9268 16.7377 29.9268 16.2628 30.2197 15.9699Z" fill="url(#file-code-notebook-standard-48-paint7_linear_178834_474)"/>
+<defs>
+<linearGradient id="file-code-notebook-standard-48-paint0_linear_178834_474" x1="18.6875" y1="4" x2="25.7722" y2="43.8516" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-code-notebook-standard-48-paint1_linear_178834_474" x1="17.7778" y1="5" x2="24.2179" y2="42.963" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-code-notebook-standard-48-paint2_radial_178834_474" cx="0" cy="0" r="1" gradientTransform="matrix(14.7778 30.0833 -22.1667 11.2812 18.9444 14.8958)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-code-notebook-standard-48-paint3_linear_178834_474" x1="17.7778" y1="5" x2="24.2179" y2="42.963" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-code-notebook-standard-48-paint4_radial_178834_474" cx="0" cy="0" r="1" gradientTransform="matrix(14.7778 30.0833 -22.1667 11.2812 18.9444 14.8958)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-code-notebook-standard-48-paint5_linear_178834_474" x1="17.8125" y1="9.33332" x2="24.9031" y2="28.1478" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-code-notebook-standard-48-paint6_linear_178834_474" x1="17.8125" y1="9.33332" x2="24.9031" y2="28.1478" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-code-notebook-standard-48-paint7_linear_178834_474" x1="17.8125" y1="9.33332" x2="24.9031" y2="28.1478" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

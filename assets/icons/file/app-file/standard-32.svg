@@ -1,0 +1,24 @@
+<svg aria-label="App File standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8C2 6.34315 3.34315 5 5 5H24C27.3137 5 30 7.68629 30 11V24C30 25.6569 28.6569 27 27 27H8C4.68629 27 2 24.3137 2 21V8Z" fill="url(#file-app-file-standard-32-paint0_linear_1802_15143)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-app-file-standard-32-paint1_linear_1802_15143)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-app-file-standard-32-paint2_radial_1802_15143)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5986 9.59741C18.3797 8.81655 19.6458 8.81643 20.4268 9.59741L22.4033 11.573C23.1841 12.354 23.1841 13.6211 22.4033 14.4021L20.6816 16.1218C21.4502 16.4008 22 17.1358 22 18.0007V21.0007C21.9998 22.1052 21.1045 23.0007 20 23.0007H11C9.89554 23.0007 9.00018 22.1052 9 21.0007V12.0007C9 10.8962 9.89543 10.0007 11 10.0007H14C14.8642 10.0007 15.5975 10.5496 15.877 11.3171L17.5986 9.59741ZM10 21.0007C10.0002 21.5529 10.4478 22.0007 11 22.0007H15V17.0007H10V21.0007ZM16 22.0007H20C20.5522 22.0007 20.9998 21.5529 21 21.0007V18.0007C21 17.4484 20.5523 17.0007 20 17.0007H16V22.0007ZM16 16.0007H17.2217L16 14.7791V16.0007ZM11 11.0007C10.4477 11.0007 10 11.4484 10 12.0007V16.0007H15V12.0007C15 11.4484 14.5523 11.0007 14 11.0007H11Z" fill="url(#file-app-file-standard-32-paint3_linear_1802_15143)"/>
+<defs>
+<linearGradient id="file-app-file-standard-32-paint0_linear_1802_15143" x1="11.0417" y1="5" x2="13.3847" y2="27.3656" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-app-file-standard-32-paint1_linear_1802_15143" x1="10.2222" y1="6" x2="12.1806" y2="26.3672" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-app-file-standard-32-paint2_radial_1802_15143" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 15.8333 -20.5833 5.9375 11.3056 11.2083)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-app-file-standard-32-paint3_linear_1802_15143" x1="12" y1="9.0004" x2="19.4739" y2="21.3991" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,29 @@
+<svg aria-label="Photo standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6C3 4.34315 4.34315 3 6 3H23C26.3137 3 29 5.68629 29 9V26C29 27.6569 27.6569 29 26 29H9C5.68629 29 3 26.3137 3 23V6Z" fill="url(#file-photo-standard-32-paint0_linear_1802_15353)"/>
+<path d="M4 6C4 4.89543 4.89543 4 6 4H23C25.7614 4 28 6.23858 28 9V26C28 27.1046 27.1046 28 26 28H9C6.23858 28 4 25.7614 4 23V6Z" fill="url(#file-photo-standard-32-paint1_linear_1802_15353)"/>
+<path d="M4 6C4 4.89543 4.89543 4 6 4H23C25.7614 4 28 6.23858 28 9V26C28 27.1046 27.1046 28 26 28H9C6.23858 28 4 25.7614 4 23V6Z" fill="url(#file-photo-standard-32-paint2_radial_1802_15353)"/>
+<circle cx="21" cy="11" r="2" fill="url(#file-photo-standard-32-paint3_linear_1802_15353)"/>
+<path d="M14.9394 15.0605L9.56142 20.4392C8.61656 21.3842 9.28583 22.9998 10.6221 22.9998H21.3795C22.7159 22.9998 23.3851 21.384 22.4401 20.439L17.0608 15.0604C16.4749 14.4746 15.5252 14.4747 14.9394 15.0605Z" fill="url(#file-photo-standard-32-paint4_linear_1802_15353)"/>
+<defs>
+<linearGradient id="file-photo-standard-32-paint0_linear_1802_15353" x1="11.3958" y1="3" x2="14.8966" y2="29.2555" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-photo-standard-32-paint1_linear_1802_15353" x1="10.6667" y1="4" x2="13.7026" y2="28.2872" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-photo-standard-32-paint2_radial_1802_15353" cx="0" cy="0" r="1" gradientTransform="matrix(12.6667 19 -19 7.125 11.6667 10.25)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-photo-standard-32-paint3_linear_1802_15353" x1="19" y1="6.5" x2="23.3454" y2="14.8196" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-photo-standard-32-paint4_linear_1802_15353" x1="9" y1="11.4998" x2="15.5376" y2="29.6106" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

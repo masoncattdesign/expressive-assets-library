@@ -1,0 +1,19 @@
+<svg aria-label="File standard 36" role="img" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 5.5C6 3.567 7.567 2 9.5 2H23C26.866 2 30 5.13401 30 9V30.5C30 32.433 28.433 34 26.5 34H13C9.13401 34 6 30.866 6 27V5.5Z" fill="url(#file-file-standard-36-paint0_linear_1802_14309)"/>
+<path d="M7 5.5C7 4.11929 8.11929 3 9.5 3H23C26.3137 3 29 5.68629 29 9V30.5C29 31.8807 27.8807 33 26.5 33H13C9.68629 33 7 30.3137 7 27V5.5Z" fill="url(#file-file-standard-36-paint1_linear_1802_14309)"/>
+<path d="M7 5.5C7 4.11929 8.11929 3 9.5 3H23C26.3137 3 29 5.68629 29 9V30.5C29 31.8807 27.8807 33 26.5 33H13C9.68629 33 7 30.3137 7 27V5.5Z" fill="url(#file-file-standard-36-paint2_radial_1802_14309)"/>
+<defs>
+<linearGradient id="file-file-standard-36-paint0_linear_1802_14309" x1="13.75" y1="2" x2="19.4178" y2="33.8813" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-file-standard-36-paint1_linear_1802_14309" x1="13.1111" y1="3" x2="18.2184" y2="32.9628" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-file-standard-36-paint2_radial_1802_14309" cx="0" cy="0" r="1" gradientTransform="matrix(11.6111 23.75 -17.4167 8.90625 14.0278 10.8125)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,57 @@
+<svg aria-label="PowerPoint standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8C2 6.34315 3.34315 5 5 5H24C27.3137 5 30 7.68629 30 11V24C30 25.6569 28.6569 27 27 27H8C4.68629 27 2 24.3137 2 21V8Z" fill="url(#file-powerpoint-standard-32-paint0_linear_1802_15412)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-powerpoint-standard-32-paint1_linear_1802_15412)"/>
+<path d="M3 8C3 6.89543 3.89543 6 5 6H24C26.7614 6 29 8.23858 29 11V24C29 25.1046 28.1046 26 27 26H8C5.23858 26 3 23.7614 3 21V8Z" fill="url(#file-powerpoint-standard-32-paint2_radial_1802_15412)"/>
+<path d="M16 9C19.866 9 23 12.1346 23 16.001C22.9998 19.8672 19.8659 23.001 16 23.001C15.6604 23.001 15.3267 22.9755 15 22.9287V21C15 18.7909 13.2091 17 11 17H9.07227C9.02561 16.6736 9.00002 16.3402 9 16.001C9 12.1346 12.134 9 16 9Z" fill="url(#file-powerpoint-standard-32-paint3_linear_1802_15412)"/>
+<path d="M16 9C19.866 9 23 12.1346 23 16.001C22.9998 19.8672 19.8659 23.001 16 23.001C15.6604 23.001 15.3267 22.9755 15 22.9287V21C15 18.7909 13.2091 17 11 17H9.07227C9.02561 16.6736 9.00002 16.3402 9 16.001C9 12.1346 12.134 9 16 9Z" fill="url(#file-powerpoint-standard-32-paint4_radial_1802_15412)"/>
+<path d="M16 9C19.866 9 23 12.1346 23 16.001C22.9998 19.8672 19.8659 23.001 16 23.001C15.6604 23.001 15.3267 22.9755 15 22.9287V21C15 18.7909 13.2091 17 11 17H9.07227C9.02561 16.6736 9.00002 16.3402 9 16.001C9 12.1346 12.134 9 16 9Z" fill="url(#file-powerpoint-standard-32-paint5_radial_1802_15412)" fill-opacity="0.5"/>
+<path d="M16 9C19.866 9 23 12.1346 23 16.001C22.9999 17.2831 22.6525 18.4831 22.0508 19.5166L22.1621 19.2725C22.8546 17.7349 21.7302 15.9952 20.0439 15.9951H17.248C16.5554 15.995 15.9945 15.4329 15.9951 14.7402L15.9971 11.958C15.9983 10.2697 14.2553 9.14358 12.7168 9.83887L12.5098 9.93262C13.5373 9.34019 14.7287 9.00001 16 9Z" fill="url(#file-powerpoint-standard-32-paint6_radial_1802_15412)"/>
+<path d="M16 9C19.866 9 23 12.1346 23 16.001C22.9999 17.2831 22.6525 18.4831 22.0508 19.5166L22.1621 19.2725C22.8546 17.7349 21.7302 15.9952 20.0439 15.9951H17.248C16.5554 15.995 15.9945 15.4329 15.9951 14.7402L15.9971 11.958C15.9983 10.2697 14.2553 9.14358 12.7168 9.83887L12.5098 9.93262C13.5373 9.34019 14.7287 9.00001 16 9Z" fill="url(#file-powerpoint-standard-32-paint7_radial_1802_15412)"/>
+<rect x="1" y="18" width="13" height="13" rx="3" fill="url(#file-powerpoint-standard-32-paint8_radial_1802_15412)"/>
+<rect x="1" y="18" width="13" height="13" rx="3" fill="url(#file-powerpoint-standard-32-paint9_radial_1802_15412)" fill-opacity="0.3"/>
+<path d="M7.01855 25.7204V28H5.44141V21H7.87793C8.75033 21 9.41439 21.1904 9.87012 21.5711C10.3291 21.9519 10.5586 22.5165 10.5586 23.265C10.5586 24.0363 10.3014 24.6383 9.78711 25.0711C9.27604 25.504 8.58919 25.7204 7.72656 25.7204H7.01855ZM7.01855 22.2106V24.5098H7.67773C8.06836 24.5098 8.36947 24.4073 8.58105 24.2022C8.79264 23.9972 8.89844 23.7027 8.89844 23.3187C8.89844 22.964 8.79427 22.6906 8.58594 22.4986C8.38086 22.3066 8.08626 22.2106 7.70215 22.2106H7.01855Z" fill="white"/>
+<defs>
+<linearGradient id="file-powerpoint-standard-32-paint0_linear_1802_15412" x1="11.0417" y1="5" x2="13.3847" y2="27.3656" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-powerpoint-standard-32-paint1_linear_1802_15412" x1="10.2222" y1="6" x2="12.1806" y2="26.3672" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-powerpoint-standard-32-paint2_radial_1802_15412" cx="0" cy="0" r="1" gradientTransform="matrix(13.7222 15.8333 -20.5833 5.9375 11.3056 11.2083)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-powerpoint-standard-32-paint3_linear_1802_15412" x1="15.1255" y1="8.5543" x2="6.54225" y2="16.9404" gradientUnits="userSpaceOnUse">
+<stop offset="0.0582736" stop-color="#FF7F48"/>
+<stop offset="1" stop-color="#E5495B"/>
+</linearGradient>
+<radialGradient id="file-powerpoint-standard-32-paint4_radial_1802_15412" cx="0" cy="0" r="1" gradientTransform="matrix(-10.1505 9.93875 -17.0846 -16.7282 18.6769 13.0625)" gradientUnits="userSpaceOnUse">
+<stop offset="0.151523" stop-color="#AA1D2D"/>
+<stop offset="0.380855" stop-color="#D12B18" stop-opacity="0.44"/>
+<stop offset="0.601996" stop-color="#FF3C00" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="file-powerpoint-standard-32-paint5_radial_1802_15412" cx="0" cy="0" r="1" gradientTransform="matrix(12.3042 -5.69055 10.5289 21.826 6.20639 21.6912)" gradientUnits="userSpaceOnUse">
+<stop offset="0.4067" stop-color="#FF66FB"/>
+<stop offset="1" stop-color="#EA3D01" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="file-powerpoint-standard-32-paint6_radial_1802_15412" cx="0" cy="0" r="1" gradientTransform="matrix(6.39204 -7.32044 6.82218 5.68073 15.2277 16.9563)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FD6EF9"/>
+<stop offset="0.637205" stop-color="#FF9944"/>
+<stop offset="0.85186" stop-color="#FCC479"/>
+</radialGradient>
+<radialGradient id="file-powerpoint-standard-32-paint7_radial_1802_15412" cx="0" cy="0" r="1" gradientTransform="matrix(-0.722024 4.89412 -11.0683 -1.55717 14.5918 9.92427)" gradientUnits="userSpaceOnUse">
+<stop offset="0.144283" stop-color="#FF8D13"/>
+<stop offset="0.537266" stop-color="#FF7F29" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="file-powerpoint-standard-32-paint8_radial_1802_15412" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.998413 18) rotate(45) scale(18.3848)">
+<stop stop-color="#F8193E"/>
+<stop offset="0.939062" stop-color="#920616"/>
+</radialGradient>
+<radialGradient id="file-powerpoint-standard-32-paint9_radial_1802_15412" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.49841 25.8) rotate(90) scale(9.1 10.3594)">
+<stop offset="0.575893" stop-color="#FFB055" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#FFF2BE"/>
+</radialGradient>
+</defs>
+</svg>

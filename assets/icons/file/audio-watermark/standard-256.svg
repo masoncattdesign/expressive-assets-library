@@ -1,0 +1,39 @@
+<svg aria-label="Audio Watermark standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="url(#file-audio-watermark-standard-256-paint0_linear_365523_1651)"/>
+<path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="url(#file-audio-watermark-standard-256-paint1_linear_365523_1651)"/>
+<path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="url(#file-audio-watermark-standard-256-paint2_radial_365523_1651)"/>
+<path d="M113 73C116.314 73 119 75.6863 119 79V177C119 180.314 116.314 183 113 183C109.686 183 107 180.314 107 177V79C107 75.6863 109.686 73 113 73Z" fill="url(#file-audio-watermark-standard-256-paint3_linear_365523_1651)"/>
+<path d="M145 97.125C148.314 97.125 151 99.8113 151 103.125V153C151 156.314 148.314 159 145 159C141.686 159 139 156.314 139 153V103.125C139 99.8113 141.686 97.125 145 97.125Z" fill="url(#file-audio-watermark-standard-256-paint4_linear_365523_1651)"/>
+<path d="M81 112C84.3137 112 87 114.686 87 118V138C87 141.314 84.3137 144 81 144C77.6863 144 75 141.314 75 138V118C75 114.686 77.6863 112 81 112Z" fill="url(#file-audio-watermark-standard-256-paint5_linear_365523_1651)"/>
+<path d="M177 112C180.314 112 183 114.686 183 118V138C183 141.314 180.314 144 177 144C173.686 144 171 141.314 171 138V118C171 114.686 173.686 112 177 112Z" fill="url(#file-audio-watermark-standard-256-paint6_linear_365523_1651)"/>
+<defs>
+<linearGradient id="file-audio-watermark-standard-256-paint0_linear_365523_1651" x1="95.0625" y1="35" x2="120.106" y2="222.828" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-audio-watermark-standard-256-paint1_linear_365523_1651" x1="88.8889" y1="40" x2="111.152" y2="218.106" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-audio-watermark-standard-256-paint2_radial_365523_1651" cx="0" cy="0" r="1" gradientTransform="matrix(92.8889 139.333 -139.333 52.25 96.2222 85.8333)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-audio-watermark-standard-256-paint3_linear_365523_1651" x1="129" y1="156.077" x2="107.684" y2="60.4559" gradientUnits="userSpaceOnUse">
+<stop stop-color="#969696"/>
+<stop offset="1" stop-color="#B2B2B2"/>
+</linearGradient>
+<linearGradient id="file-audio-watermark-standard-256-paint4_linear_365523_1651" x1="129" y1="156.077" x2="107.684" y2="60.4559" gradientUnits="userSpaceOnUse">
+<stop stop-color="#969696"/>
+<stop offset="1" stop-color="#B2B2B2"/>
+</linearGradient>
+<linearGradient id="file-audio-watermark-standard-256-paint5_linear_365523_1651" x1="129" y1="156.077" x2="107.684" y2="60.4559" gradientUnits="userSpaceOnUse">
+<stop stop-color="#969696"/>
+<stop offset="1" stop-color="#B2B2B2"/>
+</linearGradient>
+<linearGradient id="file-audio-watermark-standard-256-paint6_linear_365523_1651" x1="129" y1="156.077" x2="107.684" y2="60.4559" gradientUnits="userSpaceOnUse">
+<stop stop-color="#969696"/>
+<stop offset="1" stop-color="#B2B2B2"/>
+</linearGradient>
+</defs>
+</svg>

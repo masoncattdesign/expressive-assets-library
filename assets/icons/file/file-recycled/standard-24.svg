@@ -1,0 +1,20 @@
+<svg aria-label="File Recycled standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H16C18.2091 2 20 3.79086 20 6V20C20 21.1046 19.1046 22 18 22H8C5.79086 22 4 20.2091 4 18V4Z" fill="url(#file-file-recycled-standard-24-paint0_linear_319233_1308)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-file-recycled-standard-24-paint1_linear_319233_1308)"/>
+<path d="M5 4C5 3.44772 5.44772 3 6 3H16C17.6569 3 19 4.34315 19 6V20C19 20.5523 18.5523 21 18 21H8C6.34315 21 5 19.6569 5 18V4Z" fill="url(#file-file-recycled-standard-24-paint2_radial_319233_1308)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.9502C10.2525 8.9502 8.80854 10.2494 8.58116 11.9346C7.13605 12.0523 6 13.2623 6 14.7377C6 16.291 7.2592 17.5502 8.8125 17.5502H15.1875C16.7408 17.5502 18 16.291 18 14.7377C18 13.2623 16.864 12.0523 15.4188 11.9346C15.1915 10.2494 13.7475 8.9502 12 8.9502ZM9.5 12.4002C9.5 11.0195 10.6193 9.9002 12 9.9002C13.3807 9.9002 14.5 11.0195 14.5 12.4002C14.5 12.6625 14.7127 12.8752 14.975 12.8752H15.1875C16.2161 12.8752 17.05 13.7091 17.05 14.7377C17.05 15.7663 16.2161 16.6002 15.1875 16.6002H8.8125C7.78387 16.6002 6.95 15.7663 6.95 14.7377C6.95 13.7091 7.78387 12.8752 8.8125 12.8752H9.025C9.28734 12.8752 9.5 12.6625 9.5 12.4002Z" fill="#605E5C" fill-opacity="0.67"/>
+<defs>
+<linearGradient id="file-file-recycled-standard-24-paint0_linear_319233_1308" x1="9.16667" y1="2" x2="12.5" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-file-recycled-standard-24-paint1_linear_319233_1308" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-file-recycled-standard-24-paint2_radial_319233_1308" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+</defs>
+</svg>

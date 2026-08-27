@@ -1,0 +1,34 @@
+<svg aria-label="Video360 standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6C2 4.89543 2.89543 4 4 4H14C16.2091 4 18 5.79086 18 8V14C18 15.1046 17.1046 16 16 16H6C3.79086 16 2 14.2091 2 12V6Z" fill="url(#file-video360-standard-20-paint0_linear_1802_17565)"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H14C15.6569 5 17 6.34315 17 8V14C17 14.5523 16.5523 15 16 15H6C4.34315 15 3 13.6569 3 12V6Z" fill="url(#file-video360-standard-20-paint1_linear_1802_17565)"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H14C15.6569 5 17 6.34315 17 8V14C17 14.5523 16.5523 15 16 15H6C4.34315 15 3 13.6569 3 12V6Z" fill="url(#file-video360-standard-20-paint2_radial_1802_17565)"/>
+<path d="M8.00074 6.62662V10.3734C8.00074 10.8591 8.60472 11.1596 9.08048 10.9105L12.0007 9.04022C12.464 8.79767 12.4645 8.20954 12.0016 7.9664L9.08136 6.08994C8.60562 5.84006 8.00074 6.14046 8.00074 6.62662Z" fill="url(#file-video360-standard-20-paint3_linear_1802_17565)"/>
+<path d="M7.08753 9.18542C7.20611 9.43481 7.10006 9.7331 6.85067 9.85168C6.17296 10.1739 6 10.4918 6 10.6624C6 10.7781 6.07204 10.9667 6.38108 11.197C6.68363 11.4225 7.14802 11.6342 7.74741 11.7928C8.01436 11.8635 8.17348 12.1372 8.10282 12.4041C8.03216 12.6711 7.75847 12.8302 7.49153 12.7595C6.81768 12.5812 6.22233 12.3259 5.78346 11.9988C5.35108 11.6765 5 11.2268 5 10.6624C5 9.86459 5.68528 9.29849 6.42128 8.94856C6.67067 8.82998 6.96896 8.93603 7.08753 9.18542Z" fill="url(#file-video360-standard-20-paint4_linear_1802_17565)"/>
+<path d="M12.9601 9.18542C13.0787 8.93603 13.3769 8.82998 13.6263 8.94856C14.3623 9.29849 15.0476 9.86459 15.0476 10.6624C15.0476 11.0712 14.8605 11.424 14.5965 11.7051C14.3349 11.9835 13.979 12.214 13.5754 12.4001C12.9303 12.6978 12.1067 12.9082 11.1942 13.0058C11.4238 13.159 11.4858 13.4694 11.3327 13.699C11.1795 13.9288 10.8691 13.9909 10.6393 13.8377L9.33555 12.9685C8.97931 12.7311 8.97931 12.2076 9.33555 11.9701L10.6393 11.1009C10.8691 10.9477 11.1795 11.0098 11.3327 11.2396C11.4859 11.4693 11.4238 11.7798 11.194 11.933L11.074 12.013C11.9066 11.9252 12.6262 11.7368 13.1566 11.4921C13.487 11.3396 13.7219 11.1755 13.8676 11.0204C14.0109 10.8679 14.0476 10.7482 14.0476 10.6624C14.0476 10.4918 13.8747 10.1739 13.1969 9.85168C12.9476 9.7331 12.8415 9.43481 12.9601 9.18542Z" fill="url(#file-video360-standard-20-paint5_linear_1802_17565)"/>
+<defs>
+<linearGradient id="file-video360-standard-20-paint0_linear_1802_17565" x1="7.16667" y1="4" x2="8.38779" y2="16.2112" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-20-paint1_linear_1802_17565" x1="6.88889" y1="5" x2="7.79929" y2="15.1965" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-video360-standard-20-paint2_radial_1802_17565" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 7.91667 -11.0833 2.96875 7.47222 7.60417)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-video360-standard-20-paint3_linear_1802_17565" x1="7.5119" y1="4.47661" x2="9.59188" y2="14.1419" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-20-paint4_linear_1802_17565" x1="7.5119" y1="4.47661" x2="9.59188" y2="14.1419" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-video360-standard-20-paint5_linear_1802_17565" x1="7.5119" y1="4.47661" x2="9.59188" y2="14.1419" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>

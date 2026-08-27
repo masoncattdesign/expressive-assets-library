@@ -1,0 +1,50 @@
+<svg aria-label="Power BI paginated report standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4C4 2.89543 4.89543 2 6 2H16C18.2091 2 20 3.79086 20 6V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4Z" fill="url(#file-power-bi-paginated-report-standard-24-paint0_linear_567113_757)"/>
+<path d="M19 20C19 20.5523 18.5523 21 18 21H6C5.48232 21 5.05621 20.6067 5.00488 20.1025C5.00145 20.0688 5 20.0346 5 20C5 19.4477 5.44772 19 6 19H18C18.3643 19 18.7058 18.9026 19 18.7324V20Z" fill="url(#file-power-bi-paginated-report-standard-24-paint1_linear_567113_757)"/>
+<path d="M19 20C19 20.5523 18.5523 21 18 21H6C5.48232 21 5.05621 20.6067 5.00488 20.1025C5.00145 20.0688 5 20.0346 5 20C5 19.4477 5.44772 19 6 19H18C18.3643 19 18.7058 18.9026 19 18.7324V20Z" fill="url(#file-power-bi-paginated-report-standard-24-paint2_radial_567113_757)"/>
+<path d="M16 3C17.6569 3 19 4.34315 19 6V17C19 17.5523 18.5523 18 18 18H6C5.63536 18 5.29437 18.0991 5 18.2695V4C5 3.44772 5.44772 3 6 3H16Z" fill="url(#file-power-bi-paginated-report-standard-24-paint3_linear_567113_757)"/>
+<path d="M16 3C17.6569 3 19 4.34315 19 6V17C19 17.5523 18.5523 18 18 18H6C5.63536 18 5.29437 18.0991 5 18.2695V4C5 3.44772 5.44772 3 6 3H16Z" fill="url(#file-power-bi-paginated-report-standard-24-paint4_radial_567113_757)"/>
+<path d="M8 13.67V22.33C8 22.7 7.70003 23 7.33 23H5L5 13.67C5 13.3 5.29997 13 5.67 13H7.33C7.70003 13 8 13.3 8 13.67Z" fill="url(#file-power-bi-paginated-report-standard-24-paint5_linear_567113_757)"/>
+<path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M6.5 16.5568C6.5 16.2493 6.21509 16 5.86363 16L3.54544 16.2386V22.7613L6.22727 23H6.5V16.5568Z" fill="black" fill-opacity="0.5"/>
+<path d="M6 16.6667V23H3V16.67C3 16.3 3.29997 16 3.67 16H5.33333C5.70152 16 6 16.2985 6 16.6667Z" fill="url(#file-power-bi-paginated-report-standard-24-paint6_linear_567113_757)"/>
+<path d="M1 18.67V22.33C1 22.7 1.29997 23 1.67 23H4V18.67C4 18.3 3.70003 18 3.33 18H1.67C1.29997 18 1 18.3 1 18.67Z" fill="url(#file-power-bi-paginated-report-standard-24-paint7_linear_567113_757)"/>
+<path d="M15.5 14C15.7761 14 16 14.2239 16 14.5C16 14.7761 15.7761 15 15.5 15H9V14H15.5ZM15.5 12C15.7761 12 16 12.2239 16 12.5C16 12.7761 15.7761 13 15.5 13H8.91309C8.78005 12.624 8.50203 12.3179 8.14551 12.1475C8.23607 12.0564 8.36143 12 8.5 12H15.5ZM15.5 10C15.7761 10 16 10.2239 16 10.5C16 10.7761 15.7761 11 15.5 11H8.5C8.22386 11 8 10.7761 8 10.5C8 10.2239 8.22386 10 8.5 10H15.5ZM11 5C11.5523 5 12 5.44772 12 6V8C12 8.55228 11.5523 9 11 9H9C8.44772 9 8 8.55228 8 8V6C8 5.44772 8.44772 5 9 5H11ZM15.5 8C15.7761 8 16 8.22386 16 8.5C16 8.77614 15.7761 9 15.5 9H13.5C13.2239 9 13 8.77614 13 8.5C13 8.22386 13.2239 8 13.5 8H15.5ZM15.5 6C15.7761 6 16 6.22386 16 6.5C16 6.77614 15.7761 7 15.5 7H13.5C13.2239 7 13 6.77614 13 6.5C13 6.22386 13.2239 6 13.5 6H15.5Z" fill="url(#file-power-bi-paginated-report-standard-24-paint8_linear_567113_757)"/>
+<defs>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint0_linear_567113_757" x1="9.16667" y1="2" x2="12.5" y2="22" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint1_linear_567113_757" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-power-bi-paginated-report-standard-24-paint2_radial_567113_757" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint3_linear_567113_757" x1="8.88889" y1="3" x2="11.7872" y2="21.0342" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-power-bi-paginated-report-standard-24-paint4_radial_567113_757" cx="0" cy="0" r="1" gradientTransform="matrix(7.38889 14.25 -11.0833 5.34375 9.47222 7.6875)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint5_linear_567113_757" x1="4.5" y1="15" x2="7.38676" y2="22.3755" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint6_linear_567113_757" x1="2.99976" y1="17" x2="5.74976" y2="23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint7_linear_567113_757" x1="0.999749" y1="19" x2="2.46824" y2="23.0272" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+<linearGradient id="file-power-bi-paginated-report-standard-24-paint8_linear_567113_757" x1="8" y1="5" x2="17.7561" y2="12.8049" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C28400"/>
+<stop offset="1" stop-color="#A86500"/>
+</linearGradient>
+</defs>
+</svg>

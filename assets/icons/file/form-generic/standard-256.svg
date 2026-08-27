@@ -1,0 +1,44 @@
+<svg aria-label="Form Generic standard 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M64 19H168C192.853 19 213 39.1472 213 64V216C213 227.598 203.598 237 192 237H88C63.1472 237 43 216.853 43 192V40C43 28.402 52.402 19 64 19Z" fill="url(#file-form-generic-standard-256-paint0_linear_1802_8902)"/>
+<path d="M48 40C48 31.1634 55.1634 24 64 24H168C190.091 24 208 41.9086 208 64V216C208 224.837 200.837 232 192 232H88C65.9086 232 48 214.091 48 192V40Z" fill="url(#file-form-generic-standard-256-paint1_linear_1802_8902)"/>
+<path d="M48 40C48 31.1634 55.1634 24 64 24H168C190.091 24 208 41.9086 208 64V216C208 224.837 200.837 232 192 232H88C65.9086 232 48 214.091 48 192V40Z" fill="url(#file-form-generic-standard-256-paint2_radial_1802_8902)"/>
+<path d="M97 151C103.075 151 108 155.925 108 162C108 168.075 103.075 173 97 173C90.9249 173 86 168.075 86 162C86 155.925 90.9249 151 97 151Z" fill="url(#file-form-generic-standard-256-paint3_linear_1802_8902)"/>
+<path d="M167 158C169.209 158 171 159.791 171 162C171 164.209 169.209 166 167 166H121C118.791 166 117 164.209 117 162C117 159.791 118.791 158 121 158H167Z" fill="url(#file-form-generic-standard-256-paint4_linear_1802_8902)"/>
+<path d="M97 108C103.075 108 108 112.925 108 119C108 125.075 103.075 130 97 130C90.9249 130 86 125.075 86 119C86 112.925 90.9249 108 97 108Z" fill="url(#file-form-generic-standard-256-paint5_linear_1802_8902)"/>
+<path d="M167 115C169.209 115 171 116.791 171 119C171 121.209 169.209 123 167 123H121C118.791 123 117 121.209 117 119C117 116.791 118.791 115 121 115H167Z" fill="url(#file-form-generic-standard-256-paint6_linear_1802_8902)"/>
+<path d="M172 80C174.209 80 176 81.7909 176 84C176 86.2091 174.209 88 172 88H84C81.7909 88 80 86.2091 80 84C80 81.7909 81.7909 80 84 80H172Z" fill="url(#file-form-generic-standard-256-paint7_linear_1802_8902)"/>
+<defs>
+<linearGradient id="file-form-generic-standard-256-paint0_linear_1802_8902" x1="97.8958" y1="19" x2="135.117" y2="236.691" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BBBBBB"/>
+<stop offset="1" stop-color="#888888"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-256-paint1_linear_1802_8902" x1="92.4444" y1="24" x2="126.29" y2="232.278" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EBEBEB"/>
+</linearGradient>
+<radialGradient id="file-form-generic-standard-256-paint2_radial_1802_8902" cx="0" cy="0" r="1" gradientTransform="matrix(84.4444 164.667 -126.667 61.75 99.1111 78.1667)" gradientUnits="userSpaceOnUse">
+<stop offset="0.177083" stop-color="white"/>
+<stop offset="1" stop-color="#EFEFEF"/>
+</radialGradient>
+<linearGradient id="file-form-generic-standard-256-paint3_linear_1802_8902" x1="109.455" y1="91.625" x2="135.548" y2="172.386" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-256-paint4_linear_1802_8902" x1="109.455" y1="91.625" x2="135.548" y2="172.386" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-256-paint5_linear_1802_8902" x1="109.455" y1="91.625" x2="135.548" y2="172.386" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-256-paint6_linear_1802_8902" x1="109.455" y1="91.625" x2="135.548" y2="172.386" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+<linearGradient id="file-form-generic-standard-256-paint7_linear_1802_8902" x1="109.455" y1="91.625" x2="135.548" y2="172.386" gradientUnits="userSpaceOnUse">
+<stop offset="0.0001" stop-color="#597493"/>
+<stop offset="1" stop-color="#0F2F56"/>
+</linearGradient>
+</defs>
+</svg>
