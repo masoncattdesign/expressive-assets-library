@@ -45,8 +45,8 @@ assets/icons/system/settings/
   standard-any.svg   Standard — full colour, one scalable drawing
   outline-20.svg     Outline  — monochrome, drawn for 20px
   outline-24.svg     Outline  — drawn for 24px, a different drawing
-  mono-20.svg        Mono
-  mono-24.svg
+  filled-20.svg      Filled   — monochrome, the solid weight
+  filled-24.svg
   meta.json          Metadata for this asset
 ```
 
@@ -70,7 +70,7 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `collection` | `system` · `product` · `file` · `vscode` · `oobe` · `windows` · `fluent` |
 | `product` | Product artwork only — which product it represents |
 | `status` | `draft` · `published` · `deprecated`, plus `replacedBy` |
-| `themes` | Which of `standard` / `outline` / `mono` exist on disk |
+| `themes` | Which of `standard` / `outline` / `filled` exist on disk |
 | `sizes` | Pixel sizes the geometry is *legible* at, not what it can scale to |
 | `colors` | `primary` / `secondary` baked into the Standard variant |
 | `recolorable` | False for brand marks — the browser greys out the accent picker |
@@ -84,10 +84,13 @@ axes doing one job, and nobody could say what `active` + `alpha` meant together.
 `family` overlapped `collection`, and where it carried real information that
 information was the product — so it became `product`.
 
-**Theme naming.** `standard` is the full-colour base; `outline` and `mono` are
-its monochrome reductions. Keys and labels match deliberately. An earlier split
-had `regular` meaning Outline in this library while Fluent uses "regular" for the
-full-weight base — the kind of collision that costs someone an afternoon.
+**Theme naming.** `standard` is the full-colour base; `outline` and `filled` are
+its monochrome reductions. Keys and labels match deliberately, and `filled`
+matches what the upstream sources already call it — Fluent ships `filled`, and
+the Figma style axis is spelled `Filled` — so the importers no longer translate
+the name on the way in. An earlier split had `regular` meaning Outline here while
+Fluent uses "regular" for the full-weight base — the kind of collision that costs
+someone an afternoon.
 
 ## Using the library
 
@@ -117,7 +120,7 @@ can retint one without touching the file:
 
 `--ea-knockout` sets the color that punches through solid shapes (the hole in a
 gear, the label on a file icon). It defaults to white — override it if you place
-Mono assets on a dark surface.
+Filled assets on a dark surface.
 
 ## Commands
 
@@ -361,7 +364,7 @@ Each icon is authored once on a 24×24 grid and all three themes are derived fro
 it. Open `scripts/sources/specs.mjs` and replace an entry's `glyph` with the real
 path data, using the semantic classes:
 
-| Class | Standard | Outline | Mono |
+| Class | Standard | Outline | Filled |
 |---|---|---|---|
 | `.f` | filled white | stroked | filled |
 | `.s` | stroked white | stroked | stroked, heavier |

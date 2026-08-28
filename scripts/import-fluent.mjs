@@ -46,7 +46,7 @@ const DRY = has('--dry-run');
 /* Fluent's style names on the left, this library's themes on the right.
    Note "regular" means the OUTLINE weight in Fluent — the exact collision that
    made renaming this library's themes worth doing. */
-const STYLE_MAP = { regular: 'outline', filled: 'mono' };
+const STYLE_MAP = { regular: 'outline', filled: 'filled' };
 
 /* System icons are one family, so they share one gradient rather than each
    inventing a brand colour. These are the same tokens the placeholder system
@@ -84,7 +84,7 @@ const namespaceIds = (svg, prefix) =>
     .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`);
 
 /** Make an upstream SVG safe to inline and tintable. */
-function prepareMono(svg, { prefix, label }) {
+function prepareFilled(svg, { prefix, label }) {
   let out = svg.trim().replace(/<\?xml[^>]*\?>\s*/g, '');
   out = namespaceIds(out, prefix);
   out = out.replace(/(fill|stroke)="#(212121|242424|000000|000)"/gi, '$1="currentColor"');
@@ -236,7 +236,7 @@ async function main() {
         const rel = `${outDir}/${theme}-${size}.svg`;
         await writeFile(
           join(ROOT, rel),
-          prepareMono(raw, { prefix: `${prefix}-${theme}-${size}`, label: `${icon.name} ${theme} ${size}` }),
+          prepareFilled(raw, { prefix: `${prefix}-${theme}-${size}`, label: `${icon.name} ${theme} ${size}` }),
           'utf8'
         );
         variants[theme][size] = rel;
@@ -288,7 +288,7 @@ async function main() {
       ...(variants.standard
         ? {
             notes:
-              'Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile.',
+              'Outline and Filled are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the Filled glyph in a gradient tile.',
           }
         : {}),
     };

@@ -10,7 +10,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono",
+    "filled",
     "outline"
   ],
   "sizes": [
@@ -35,13 +35,13 @@
       "32": "assets/icons/product/calendar/standard-32.svg",
       "48": "assets/icons/product/calendar/standard-48.svg"
     },
-    "mono": {
-      "16": "assets/icons/product/calendar/mono-16.svg",
-      "20": "assets/icons/product/calendar/mono-20.svg",
-      "24": "assets/icons/product/calendar/mono-24.svg",
-      "28": "assets/icons/product/calendar/mono-28.svg",
-      "32": "assets/icons/product/calendar/mono-32.svg",
-      "48": "assets/icons/product/calendar/mono-48.svg"
+    "filled": {
+      "16": "assets/icons/product/calendar/filled-16.svg",
+      "20": "assets/icons/product/calendar/filled-20.svg",
+      "24": "assets/icons/product/calendar/filled-24.svg",
+      "28": "assets/icons/product/calendar/filled-28.svg",
+      "32": "assets/icons/product/calendar/filled-32.svg",
+      "48": "assets/icons/product/calendar/filled-48.svg"
     },
     "outline": {
       "16": "assets/icons/product/calendar/outline-16.svg",

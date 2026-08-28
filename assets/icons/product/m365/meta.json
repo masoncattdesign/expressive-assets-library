@@ -9,7 +9,7 @@
   "product": "M365",
   "status": "draft",
   "themes": [
-    "mono",
+    "filled",
     "outline",
     "standard"
   ],
@@ -27,13 +27,13 @@
   },
   "recolorable": true,
   "variants": {
-    "mono": {
-      "16": "assets/icons/product/m365/mono-16.svg",
-      "20": "assets/icons/product/m365/mono-20.svg",
-      "24": "assets/icons/product/m365/mono-24.svg",
-      "28": "assets/icons/product/m365/mono-28.svg",
-      "32": "assets/icons/product/m365/mono-32.svg",
-      "48": "assets/icons/product/m365/mono-48.svg"
+    "filled": {
+      "16": "assets/icons/product/m365/filled-16.svg",
+      "20": "assets/icons/product/m365/filled-20.svg",
+      "24": "assets/icons/product/m365/filled-24.svg",
+      "28": "assets/icons/product/m365/filled-28.svg",
+      "32": "assets/icons/product/m365/filled-32.svg",
+      "48": "assets/icons/product/m365/filled-48.svg"
     },
     "outline": {
       "16": "assets/icons/product/m365/outline-16.svg",

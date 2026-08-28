@@ -11,7 +11,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono",
+    "filled",
     "outline"
   ],
   "sizes": [
@@ -36,13 +36,13 @@
       "32": "assets/icons/product/dragon-copilot/standard-32.svg",
       "48": "assets/icons/product/dragon-copilot/standard-48.svg"
     },
-    "mono": {
-      "16": "assets/icons/product/dragon-copilot/mono-16.svg",
-      "20": "assets/icons/product/dragon-copilot/mono-20.svg",
-      "24": "assets/icons/product/dragon-copilot/mono-24.svg",
-      "28": "assets/icons/product/dragon-copilot/mono-28.svg",
-      "32": "assets/icons/product/dragon-copilot/mono-32.svg",
-      "48": "assets/icons/product/dragon-copilot/mono-48.svg"
+    "filled": {
+      "16": "assets/icons/product/dragon-copilot/filled-16.svg",
+      "20": "assets/icons/product/dragon-copilot/filled-20.svg",
+      "24": "assets/icons/product/dragon-copilot/filled-24.svg",
+      "28": "assets/icons/product/dragon-copilot/filled-28.svg",
+      "32": "assets/icons/product/dragon-copilot/filled-32.svg",
+      "48": "assets/icons/product/dragon-copilot/filled-48.svg"
     },
     "outline": {
       "16": "assets/icons/product/dragon-copilot/outline-16.svg",

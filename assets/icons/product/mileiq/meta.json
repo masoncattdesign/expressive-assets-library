@@ -10,7 +10,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono"
+    "filled"
   ],
   "sizes": [
     24,
@@ -26,9 +26,9 @@
       "24": "assets/icons/product/mileiq/standard-24.svg",
       "28": "assets/icons/product/mileiq/standard-28.svg"
     },
-    "mono": {
-      "24": "assets/icons/product/mileiq/mono-24.svg",
-      "28": "assets/icons/product/mileiq/mono-28.svg"
+    "filled": {
+      "24": "assets/icons/product/mileiq/filled-24.svg",
+      "28": "assets/icons/product/mileiq/filled-28.svg"
     }
   },
   "version": "1.0.0",

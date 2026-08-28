@@ -9,6 +9,7 @@
   "collection": "file",
   "status": "draft",
   "themes": [
+    "filled",
     "standard"
   ],
   "sizes": [
@@ -26,7 +27,7 @@
     "primary": "#EBEBEB",
     "secondary": "#FFF2BE"
   },
-  "recolorable": false,
+  "recolorable": true,
   "variants": {
     "standard": {
       "16": "assets/icons/file/powerpoint-template/standard-16.svg",
@@ -38,6 +39,17 @@
       "48": "assets/icons/file/powerpoint-template/standard-48.svg",
       "96": "assets/icons/file/powerpoint-template/standard-96.svg",
       "256": "assets/icons/file/powerpoint-template/standard-256.svg"
+    },
+    "filled": {
+      "16": "assets/icons/file/powerpoint-template/filled-16.svg",
+      "20": "assets/icons/file/powerpoint-template/filled-20.svg",
+      "24": "assets/icons/file/powerpoint-template/filled-24.svg",
+      "32": "assets/icons/file/powerpoint-template/filled-32.svg",
+      "36": "assets/icons/file/powerpoint-template/filled-36.svg",
+      "40": "assets/icons/file/powerpoint-template/filled-40.svg",
+      "48": "assets/icons/file/powerpoint-template/filled-48.svg",
+      "96": "assets/icons/file/powerpoint-template/filled-96.svg",
+      "256": "assets/icons/file/powerpoint-template/filled-256.svg"
     }
   },
   "figma": {
@@ -45,6 +57,6 @@
     "nodeId": "133783:56"
   },
   "version": "1.0.0",
-  "updated": "2026-08-27",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Filled is derived here from the Standard artwork by luminance, not shipped upstream; it is drawn in currentColor and takes an accent. Outline cannot be derived from these exports and is deliberately absent."
 }

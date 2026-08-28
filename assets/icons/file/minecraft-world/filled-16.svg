@@ -1,0 +1,41 @@
+<svg aria-label="Minecraft World filled 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 3C2 1.89543 2.89543 1 4 1H10.5C12.433 1 14 2.567 14 4.5V13C14 14.1046 13.1046 15 12 15H5.5C3.567 15 2 13.433 2 11.5V3Z" fill="currentColor"/>
+<path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M6.25 5H5V6.25H6.25V5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M7.25 5H6V6.25H7.25V5Z" fill="currentColor"/>
+<path d="M8.25 5H7V6.25H8.25V5Z" fill="currentColor"/>
+<path d="M9.25 5H8V6.25H9.25V5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M10.25 5H9V6.25H10.25V5Z" fill="currentColor"/>
+<path d="M11 5H10V6.25H11V5Z" fill="currentColor"/>
+<path d="M6.25 6H5V7.25H6.25V6Z" fill="currentColor"/>
+<path d="M7.25 6H6V7.25H7.25V6Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M8.25 6H7V7.25H8.25V6Z" fill="currentColor"/>
+<path d="M9.25 6H8V7.25H9.25V6Z" fill="currentColor"/>
+<path d="M10.25 6H9V7.25H10.25V6Z" fill="currentColor"/>
+<path d="M11 6H10V7.25H11V6Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M6.25 7H5V8.25H6.25V7Z" fill="currentColor"/>
+<path d="M7.25 7H6V8.25H7.25V7Z" fill="currentColor"/>
+<path d="M8.25 7H7V8.25H8.25V7Z" fill="currentColor"/>
+<path d="M9.25 7H8V8.25H9.25V7Z" fill="currentColor"/>
+<path d="M10.25 7H9V8.25H10.25V7Z" fill="currentColor"/>
+<path d="M11 7H10V8.25H11V7Z" fill="currentColor"/>
+<path d="M6.25 8H5V9.25H6.25V8Z" fill="currentColor"/>
+<path d="M7.25 8H6V9.25H7.25V8Z" fill="currentColor"/>
+<path d="M8.25 8H7V9.25H8.25V8Z" fill="currentColor"/>
+<path d="M9.25 8H8V9.25H9.25V8Z" fill="currentColor"/>
+<path d="M10.25 8H9V9.25H10.25V8Z" fill="currentColor"/>
+<path d="M11 8H10V9.25H11V8Z" fill="currentColor"/>
+<path d="M6.25 9H5V10.25H6.25V9Z" fill="currentColor"/>
+<path d="M7.25 9H6V10.25H7.25V9Z" fill="currentColor"/>
+<path d="M8.25 9H7V10.25H8.25V9Z" fill="currentColor"/>
+<path d="M9.25 9H8V10.25H9.25V9Z" fill="currentColor"/>
+<path d="M10.25 9H9V10.25H10.25V9Z" fill="currentColor"/>
+<path d="M11 9H10V10.25H11V9Z" fill="currentColor"/>
+<path d="M6.25 10H5V11H6.25V10Z" fill="currentColor"/>
+<path d="M7.25 10H6V11H7.25V10Z" fill="currentColor"/>
+<path d="M8.25 10H7V11H8.25V10Z" fill="currentColor"/>
+<path d="M9.25 10H8V11H9.25V10Z" fill="currentColor"/>
+<path d="M10.25 10H9V11H10.25V10Z" fill="currentColor"/>
+<path d="M11 10H10V11H11V10Z" fill="currentColor"/>
+</svg>

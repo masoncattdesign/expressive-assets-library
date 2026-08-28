@@ -194,7 +194,7 @@ async function survey() {
     fileKey: FILE_KEY,
     sizeProperty: guess(['size']),
     themeProperty: guess(['theme', 'style']),
-    themeMap: { Color: 'standard', Regular: 'outline', Filled: 'mono' },
+    themeMap: { Color: 'standard', Regular: 'outline', Filled: 'filled' },
     /* Map each scope to a collection id, or null to skip it. Collections must
        already exist in the schema enum and in GROUPS in build-manifest.mjs. */
     collections: Object.fromEntries(scopes.map(([scope]) => [scope, null])),
@@ -280,7 +280,7 @@ async function importAssets() {
     for (const variant of set.variants) {
       const rawTheme = config.themeProperty ? variant.props[config.themeProperty] : null;
       const theme = config.themeMap?.[rawTheme] || (rawTheme ? slug(rawTheme) : 'standard');
-      if (!['standard', 'outline', 'mono'].includes(theme)) continue;
+      if (!['standard', 'outline', 'filled'].includes(theme)) continue;
       const rawSize = config.sizeProperty ? variant.props[config.sizeProperty] : null;
       const size = Number(rawSize);
       const key = Number.isInteger(size) && size > 0 ? String(size) : 'any';
@@ -391,7 +391,7 @@ async function importAssets() {
     if (!Object.keys(variants).length) continue;
 
     // Drop artwork the new meta no longer references. When real drawings land
-    // on top of a generated placeholder the old standard/outline/mono files are
+    // on top of a generated placeholder the old standard/outline/filled files are
     // still sitting there, referenced by nothing — dead weight that reads as
     // real artwork to anyone browsing the tree.
     const keep = new Set(Object.values(variants).flatMap((b) => Object.values(b)));

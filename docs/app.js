@@ -20,14 +20,14 @@
 /** Point this at the repo — drives the "Add Assets" and "View source" links. */
 const REPO = 'https://github.com/masoncattdesign/expressive-assets-library';
 
-/** The three themes. Standard is the full-colour base; outline and mono are its
+/** The three themes. Standard is the full-colour base; outline and filled are its
  *  monochrome reductions. Keys and labels deliberately match — an earlier split
  *  had "regular" meaning Outline here and the full-weight base in Fluent, which
  *  is exactly the kind of collision that costs someone an afternoon. */
 const THEMES = [
   { key: 'standard', label: 'Standard' },
   { key: 'outline', label: 'Outline' },
-  { key: 'mono', label: 'Mono' },
+  { key: 'filled', label: 'Filled' },
 ];
 
 /** Windows accent pairs. `null` means "use the asset's own brand colors". */
@@ -154,7 +154,7 @@ const HEX = '#[0-9A-Fa-f]{6}';
  *
  * Two tinting conventions live side by side. Generated artwork declares
  * --ea-primary / --ea-secondary custom properties. Imported monochrome artwork
- * (the Outline and Mono themes of the real product icons) is drawn in
+ * (the Outline and Filled themes of the real product icons) is drawn in
  * currentColor, which tints by setting `color` on the root.
  */
 function tint(source, { primary, secondary, size }) {

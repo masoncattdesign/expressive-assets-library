@@ -1,0 +1,9 @@
+<svg aria-label="Vault Open filled 64" role="img" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4" y="10" width="56" height="44" rx="10" fill="var(--ea-knockout, #fff)"/>
+<rect x="7" y="13" width="50" height="38" rx="7" fill="currentColor"/>
+<rect x="7" y="13" width="50" height="38" rx="7" fill="currentColor" fill-opacity="0.28"/>
+<path d="M20 21C20 19.3431 21.3431 18 23 18H36C39.3137 18 42 20.6863 42 24V43C42 44.6569 40.6569 46 39 46H26C22.6863 46 20 43.3137 20 40V21Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M20 21C20 19.3431 21.3431 18 23 18H36C39.3137 18 42 20.6863 42 24V43C42 44.6569 40.6569 46 39 46H26C22.6863 46 20 43.3137 20 40V21Z" fill="var(--ea-knockout, #fff)"/>
+<rect x="54" y="13" width="3" height="38" rx="1.5" fill="var(--ea-knockout, #fff)"/>
+<path d="M51 19C51 17.3431 52.3431 16 54 16V48C52.3431 48 51 46.6569 51 45V19Z" fill="currentColor"/>
+</svg>

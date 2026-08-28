@@ -8,6 +8,7 @@
   "collection": "file",
   "status": "draft",
   "themes": [
+    "filled",
     "standard"
   ],
   "sizes": [
@@ -25,7 +26,7 @@
     "primary": "#BBBBBB",
     "secondary": "#4A40D4"
   },
-  "recolorable": false,
+  "recolorable": true,
   "variants": {
     "standard": {
       "16": "assets/icons/file/planner/standard-16.svg",
@@ -37,6 +38,17 @@
       "48": "assets/icons/file/planner/standard-48.svg",
       "96": "assets/icons/file/planner/standard-96.svg",
       "256": "assets/icons/file/planner/standard-256.svg"
+    },
+    "filled": {
+      "16": "assets/icons/file/planner/filled-16.svg",
+      "20": "assets/icons/file/planner/filled-20.svg",
+      "24": "assets/icons/file/planner/filled-24.svg",
+      "32": "assets/icons/file/planner/filled-32.svg",
+      "36": "assets/icons/file/planner/filled-36.svg",
+      "40": "assets/icons/file/planner/filled-40.svg",
+      "48": "assets/icons/file/planner/filled-48.svg",
+      "96": "assets/icons/file/planner/filled-96.svg",
+      "256": "assets/icons/file/planner/filled-256.svg"
     }
   },
   "figma": {
@@ -44,6 +56,6 @@
     "nodeId": "335631:2114"
   },
   "version": "1.0.0",
-  "updated": "2026-08-27",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Filled is derived here from the Standard artwork by luminance, not shipped upstream; it is drawn in currentColor and takes an accent. Outline cannot be derived from these exports and is deliberately absent. REVIEW: the derived Filled artwork does not read at small sizes — the brand mark falls on the same side of the luminance split as the page and merges into it. Needs a drawn reduction before this asset leaves draft."
 }

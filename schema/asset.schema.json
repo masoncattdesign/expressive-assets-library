@@ -75,10 +75,10 @@
     },
     "themes": {
       "type": "array",
-      "description": "Rendered theme variants that exist on disk. standard is the full-colour base; outline and mono are the monochrome reductions. The keys match what the UI shows, so nothing means two things in two places.",
+      "description": "Rendered theme variants that exist on disk. standard is the full-colour base; outline and filled are the monochrome reductions. The keys match what the UI shows, so nothing means two things in two places.",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "enum": ["standard", "outline", "mono"] }
+      "items": { "enum": ["standard", "outline", "filled"] }
     },
     "sizes": {
       "type": "array",

@@ -9,7 +9,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono"
+    "filled"
   ],
   "sizes": [
     16
@@ -23,8 +23,8 @@
     "standard": {
       "any": "assets/icons/vscode/twitter/standard-any.svg"
     },
-    "mono": {
-      "16": "assets/icons/vscode/twitter/mono-16.svg"
+    "filled": {
+      "16": "assets/icons/vscode/twitter/filled-16.svg"
     }
   },
   "version": "1.0.0",
@@ -35,5 +35,5 @@
     "license": "CC BY 4.0",
     "copyright": "Copyright (c) Microsoft Corporation"
   },
-  "notes": "Mono is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile."
+  "notes": "Filled is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile."
 }

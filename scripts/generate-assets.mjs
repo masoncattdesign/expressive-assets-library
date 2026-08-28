@@ -177,7 +177,7 @@ async function main() {
   for (const spec of ICONS) {
     const slug = spec.id.split('.')[1];
     const dir = `assets/icons/${spec.collection}`;
-    const themes = ['standard', 'outline', 'mono'];
+    const themes = ['standard', 'outline', 'filled'];
     for (const theme of themes) {
       await write(join(ROOT, dir, slug, `${theme}.svg`), renderIcon(spec, theme));
     }

@@ -10,7 +10,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono",
+    "filled",
     "outline"
   ],
   "sizes": [
@@ -33,13 +33,13 @@
       "24": "assets/icons/product/bing/standard-24.svg",
       "32": "assets/icons/product/bing/standard-32.svg"
     },
-    "mono": {
-      "16": "assets/icons/product/bing/mono-16.svg",
-      "20": "assets/icons/product/bing/mono-20.svg",
-      "24": "assets/icons/product/bing/mono-24.svg",
-      "28": "assets/icons/product/bing/mono-28.svg",
-      "32": "assets/icons/product/bing/mono-32.svg",
-      "48": "assets/icons/product/bing/mono-48.svg"
+    "filled": {
+      "16": "assets/icons/product/bing/filled-16.svg",
+      "20": "assets/icons/product/bing/filled-20.svg",
+      "24": "assets/icons/product/bing/filled-24.svg",
+      "28": "assets/icons/product/bing/filled-28.svg",
+      "32": "assets/icons/product/bing/filled-32.svg",
+      "48": "assets/icons/product/bing/filled-48.svg"
     },
     "outline": {
       "16": "assets/icons/product/bing/outline-16.svg",

@@ -11,7 +11,7 @@
   "status": "draft",
   "themes": [
     "standard",
-    "mono"
+    "filled"
   ],
   "sizes": [
     16,
@@ -29,10 +29,10 @@
       "24": "assets/icons/product/entra-id/standard-24.svg",
       "32": "assets/icons/product/entra-id/standard-32.svg"
     },
-    "mono": {
-      "16": "assets/icons/product/entra-id/mono-16.svg",
-      "24": "assets/icons/product/entra-id/mono-24.svg",
-      "32": "assets/icons/product/entra-id/mono-32.svg"
+    "filled": {
+      "16": "assets/icons/product/entra-id/filled-16.svg",
+      "24": "assets/icons/product/entra-id/filled-24.svg",
+      "32": "assets/icons/product/entra-id/filled-32.svg"
     }
   },
   "version": "1.0.0",

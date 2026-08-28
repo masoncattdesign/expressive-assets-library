@@ -17,7 +17,7 @@
   "collection": "system",
   "status": "draft",
   "themes": [
-    "mono",
+    "filled",
     "outline",
     "standard"
   ],
@@ -30,8 +30,8 @@
   },
   "recolorable": true,
   "variants": {
-    "mono": {
-      "20": "assets/icons/system/device-meeting-room-microphone-above/mono-20.svg"
+    "filled": {
+      "20": "assets/icons/system/device-meeting-room-microphone-above/filled-20.svg"
     },
     "outline": {
       "20": "assets/icons/system/device-meeting-room-microphone-above/outline-20.svg"
@@ -48,5 +48,5 @@
     "license": "MIT",
     "copyright": "Copyright (c) 2020 Microsoft Corporation"
   },
-  "notes": "Outline and Mono are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the filled glyph in a gradient tile."
+  "notes": "Outline and Filled are Fluent System Icons artwork, unmodified except for a currentColor rewrite. Standard is NOT shipped by Fluent — it is generated here by insetting the Filled glyph in a gradient tile."
 }

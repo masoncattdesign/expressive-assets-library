@@ -10,6 +10,7 @@
   "collection": "file",
   "status": "draft",
   "themes": [
+    "filled",
     "standard"
   ],
   "sizes": [
@@ -27,7 +28,7 @@
     "primary": "#F4D58A",
     "secondary": "#F9E589"
   },
-  "recolorable": false,
+  "recolorable": true,
   "variants": {
     "standard": {
       "16": "assets/icons/file/power-bi-dashboard/standard-16.svg",
@@ -39,6 +40,17 @@
       "48": "assets/icons/file/power-bi-dashboard/standard-48.svg",
       "96": "assets/icons/file/power-bi-dashboard/standard-96.svg",
       "256": "assets/icons/file/power-bi-dashboard/standard-256.svg"
+    },
+    "filled": {
+      "16": "assets/icons/file/power-bi-dashboard/filled-16.svg",
+      "20": "assets/icons/file/power-bi-dashboard/filled-20.svg",
+      "24": "assets/icons/file/power-bi-dashboard/filled-24.svg",
+      "32": "assets/icons/file/power-bi-dashboard/filled-32.svg",
+      "36": "assets/icons/file/power-bi-dashboard/filled-36.svg",
+      "40": "assets/icons/file/power-bi-dashboard/filled-40.svg",
+      "48": "assets/icons/file/power-bi-dashboard/filled-48.svg",
+      "96": "assets/icons/file/power-bi-dashboard/filled-96.svg",
+      "256": "assets/icons/file/power-bi-dashboard/filled-256.svg"
     }
   },
   "figma": {
@@ -46,6 +58,6 @@
     "nodeId": "567113:1353"
   },
   "version": "1.0.0",
-  "updated": "2026-08-27",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Filled is derived here from the Standard artwork by luminance, not shipped upstream; it is drawn in currentColor and takes an accent. Outline cannot be derived from these exports and is deliberately absent."
 }

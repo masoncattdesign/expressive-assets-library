@@ -62,7 +62,7 @@ const namespaceIds = (svg, prefix) =>
     .replace(/id="([^"]+)"/g, (_, id) => `id="${prefix}-${id}"`)
     .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`);
 
-function prepareMono(svg, { prefix, label }) {
+function prepareFilled(svg, { prefix, label }) {
   let out = svg.trim().replace(/^\ufeff/, '').replace(/<\?xml[^>]*\?>\s*/g, '');
   out = namespaceIds(out, prefix);
   out = out.replace(/fill="#424242"/gi, 'fill="currentColor"');
@@ -142,10 +142,10 @@ async function main() {
     const raw = await readFile(join(lightDir, file), 'utf8');
     const prefix = `${COLLECTION}-${name}`;
 
-    const monoRel = `${outDir}/mono-16.svg`;
+    const filledRel = `${outDir}/filled-16.svg`;
     await writeFile(
-      join(ROOT, monoRel),
-      prepareMono(raw, { prefix: `${prefix}-mono`, label: `${display} mono` }),
+      join(ROOT, filledRel),
+      prepareFilled(raw, { prefix: `${prefix}-filled`, label: `${display} filled` }),
       'utf8'
     );
 
@@ -163,11 +163,11 @@ async function main() {
       type: 'icon',
       collection: COLLECTION,
       status: 'draft',
-      themes: ['standard', 'mono'],
+      themes: ['standard', 'filled'],
       sizes: [16],
       colors: { primary: TILE.primary, secondary: TILE.secondary },
       recolorable: true,
-      variants: { standard: { any: stdRel }, mono: { 16: monoRel } },
+      variants: { standard: { any: stdRel }, filled: { 16: filledRel } },
       version: '1.0.0',
       updated: today,
       source: {
@@ -177,7 +177,7 @@ async function main() {
         copyright: 'Copyright (c) Microsoft Corporation',
       },
       notes:
-        'Mono is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile.',
+        'Filled is the VS Code light drawing with #424242 rewritten to currentColor, so it adapts to light and dark surfaces. Standard is NOT shipped by VS Code — it is generated here by insetting the glyph in a gradient tile.',
     };
 
     await writeFile(join(ROOT, outDir, 'meta.json'), JSON.stringify(meta, null, 2) + '\n', 'utf8');

@@ -49,7 +49,7 @@ const DRY = has('--dry-run');
 /* Figma's theme names on the left, this library's on the right. Figma calls
    the full-colour base "Color"; here it is "standard", because it is the base
    the other two reduce from. */
-const THEME_MAP = { Color: 'standard', Regular: 'outline', Filled: 'mono' };
+const THEME_MAP = { Color: 'standard', Regular: 'outline', Filled: 'filled' };
 
 const slug = (s) =>
   s

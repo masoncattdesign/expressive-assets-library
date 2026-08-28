@@ -1,0 +1,5 @@
+<svg aria-label="File filled 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 3C2 1.89543 2.89543 1 4 1H10.5C12.433 1 14 2.567 14 4.5V13C14 14.1046 13.1046 15 12 15H5.5C3.567 15 2 13.433 2 11.5V3Z" fill="currentColor"/>
+<path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="var(--ea-knockout, #fff)"/>
+</svg>
