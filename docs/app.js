@@ -714,7 +714,21 @@ function renderPanel() {
     URL.revokeObjectURL(url);
   });
 
-  actions.append(copy, download);
+  // Palette is the sibling tool: Gallery shows the library, Palette restyles a
+  // piece of it. Deep-linked by asset id rather than file path so the link
+  // survives a re-import that changes which sizes exist. Standard only —
+  // Palette reads source colour, which Outline and Filled do not carry.
+  const customize = el('a', {
+    className: 'btn',
+    href: `palette.html?asset=${encodeURIComponent(asset.id)}`,
+    target: '_blank',
+    rel: 'noopener',
+  });
+  customize.innerHTML =
+    '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="9.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="15" cy="9.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="9.5" cy="15" r="1.3" fill="currentColor" stroke="none"/><path d="M12 20.5a2.6 2.6 0 0 0 2.2-4 1.7 1.7 0 0 1 1.4-2.7h1.3"/></svg>';
+  customize.append('Customize in Palette');
+
+  actions.append(copy, download, customize);
   actions.append(
     el('a', {
       className: 'btn',
