@@ -1,0 +1,54 @@
+{
+  "id": "product.password-manager",
+  "name": "Password Manager",
+  "keywords": [
+    "password",
+    "manager"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    32
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "16": "assets/icons/product/password-manager/filled-16.svg",
+      "20": "assets/icons/product/password-manager/filled-20.svg",
+      "24": "assets/icons/product/password-manager/filled-24.svg",
+      "32": "assets/icons/product/password-manager/filled-32.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/password-manager/outline-16.svg",
+      "20": "assets/icons/product/password-manager/outline-20.svg",
+      "24": "assets/icons/product/password-manager/outline-24.svg",
+      "32": "assets/icons/product/password-manager/outline-32.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/password-manager/standard-16.svg",
+      "20": "assets/icons/product/password-manager/standard-20.svg",
+      "24": "assets/icons/product/password-manager/standard-24.svg",
+      "32": "assets/icons/product/password-manager/standard-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "487473:139"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

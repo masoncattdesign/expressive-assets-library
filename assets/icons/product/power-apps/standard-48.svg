@@ -1,0 +1,47 @@
+<svg aria-label="Power Apps standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.3981 8.07151L30.219 21.758C31.0128 23.1472 31.0128 24.8525 30.219 26.2417L22.3981 39.9282C20.1587 43.8471 14.508 43.8471 12.2686 39.9282L4.93859 27.1007C3.84062 25.1793 3.84062 22.8205 4.93859 20.899L12.2686 8.07151C14.508 4.15259 20.1587 4.1526 22.3981 8.07151Z" fill="url(#product-power-apps-standard-48-paint0_linear_527478_900)"/>
+<path d="M22.3981 8.07151L30.219 21.758C31.0128 23.1472 31.0128 24.8525 30.219 26.2417L22.3981 39.9282C20.1587 43.8471 14.508 43.8471 12.2686 39.9282L4.93859 27.1007C3.84062 25.1793 3.84062 22.8205 4.93859 20.899L12.2686 8.07151C14.508 4.15259 20.1587 4.1526 22.3981 8.07151Z" fill="url(#product-power-apps-standard-48-paint1_radial_527478_900)"/>
+<path d="M31.5 24L22.3981 39.9284C20.1587 43.8473 14.508 43.8473 12.2686 39.9284L4.83337 26.9167C7.04413 30.7855 12.6226 30.7855 14.8334 26.9167L24 10.875L31.5 24Z" fill="url(#product-power-apps-standard-48-paint2_linear_527478_900)"/>
+<path d="M31.5 24L22.3981 39.9284C20.1587 43.8473 14.508 43.8473 12.2686 39.9284L4.83337 26.9167C7.04413 30.7855 12.6226 30.7855 14.8334 26.9167L24 10.875L31.5 24Z" fill="url(#product-power-apps-standard-48-paint3_linear_527478_900)"/>
+<path d="M26.8941 15.9396L38.1666 35.6665L42.9117 27.3626C44.1024 25.2789 44.1024 22.7209 42.9117 20.6371L35.7314 8.07152C33.492 4.1526 27.8413 4.15259 25.6019 8.07151L21.1058 15.9396C22.3855 13.7002 25.6145 13.7002 26.8941 15.9396Z" fill="url(#product-power-apps-standard-48-paint4_linear_527478_900)"/>
+<path d="M26.8941 15.9396L38.1666 35.6665L42.9117 27.3626C44.1024 25.2789 44.1024 22.7209 42.9117 20.6371L35.7314 8.07152C33.492 4.1526 27.8413 4.15259 25.6019 8.07151L21.1058 15.9396C22.3855 13.7002 25.6145 13.7002 26.8941 15.9396Z" fill="url(#product-power-apps-standard-48-paint5_linear_527478_900)"/>
+<path d="M37.2216 13.9871L24 37.125L25.6019 39.9284C27.8413 43.8473 33.492 43.8473 35.7314 39.9284L43.1795 26.8941C44.2043 25.1008 44.2043 22.8992 43.1795 21.1059L37.2216 10.6795C37.8071 11.7043 37.8072 12.9625 37.2216 13.9871Z" fill="url(#product-power-apps-standard-48-paint6_linear_527478_900)"/>
+<path d="M25.6019 39.9284L24 37.125L31.5 24L38.1667 35.6667L35.7314 39.9283C33.492 43.8473 27.8413 43.8473 25.6019 39.9284Z" fill="url(#product-power-apps-standard-48-paint7_linear_527478_900)"/>
+<defs>
+<linearGradient id="product-power-apps-standard-48-paint0_linear_527478_900" x1="10.6667" y1="29.2082" x2="15.6664" y2="6.0832" gradientUnits="userSpaceOnUse">
+<stop stop-color="#520B56"/>
+<stop offset="1" stop-color="#742774"/>
+</linearGradient>
+<radialGradient id="product-power-apps-standard-48-paint1_radial_527478_900" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.125 7.3332) rotate(123.811) scale(27.3306 8.46488)">
+<stop offset="0.512391" stop-color="#4C1E4C" stop-opacity="0"/>
+<stop offset="1" stop-color="#4C1E4C"/>
+</radialGradient>
+<linearGradient id="product-power-apps-standard-48-paint2_linear_527478_900" x1="9.00004" y1="33.5833" x2="28.7917" y2="21.2917" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D467B9"/>
+<stop offset="0.308079" stop-color="#982F90"/>
+<stop offset="1" stop-color="#742774"/>
+</linearGradient>
+<linearGradient id="product-power-apps-standard-48-paint3_linear_527478_900" x1="22.3334" y1="26.2916" x2="32.1251" y2="25.2499" gradientUnits="userSpaceOnUse">
+<stop stop-color="#742774" stop-opacity="0"/>
+<stop offset="1" stop-color="#520B56"/>
+</linearGradient>
+<linearGradient id="product-power-apps-standard-48-paint4_linear_527478_900" x1="21.9166" y1="16.0832" x2="38.375" y2="27.3332" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E9A1CB"/>
+<stop offset="0.40829" stop-color="#D467B9"/>
+<stop offset="1" stop-color="#BB35A4"/>
+</linearGradient>
+<linearGradient id="product-power-apps-standard-48-paint5_linear_527478_900" x1="32.125" y1="13.7915" x2="37.75" y2="15.0415" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E48CC7" stop-opacity="0"/>
+<stop offset="1" stop-color="#BB35A4"/>
+</linearGradient>
+<linearGradient id="product-power-apps-standard-48-paint6_linear_527478_900" x1="41.1903" y1="36.1509" x2="35.8548" y2="21.2432" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E48CC7"/>
+<stop offset="1" stop-color="#F7C4E2"/>
+</linearGradient>
+<linearGradient id="product-power-apps-standard-48-paint7_linear_527478_900" x1="35.3333" y1="36.325" x2="26.8621" y2="17.3657" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E48CC7" stop-opacity="0"/>
+<stop offset="0.67724" stop-color="#D467B9" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#BB35A4"/>
+</linearGradient>
+</defs>
+</svg>

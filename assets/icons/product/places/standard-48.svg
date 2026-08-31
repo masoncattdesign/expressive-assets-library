@@ -1,0 +1,21 @@
+<svg aria-label="Places standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41 19C41 23.195 39.4805 27.0351 36.9619 30H36.9897L26.312 42.9138C25.4748 43.9263 24.1387 44.2323 23 43.8318V10H38.4249C40.0568 12.6101 41 15.6949 41 19ZM29.913 3.05658C28.0715 2.37332 26.0793 2 24 2C21.9206 2 19.9285 2.37332 18.0869 3.05658H29.913Z" fill="url(#product-places-standard-48-paint0_radial_277017_2349)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 44.0021V20.5C24 15.8056 27.8056 12 32.5 12C36.9856 12 40.6596 15.4745 40.9777 19.8789C40.9925 19.5878 41 19.2948 41 19C41 9.61116 33.3888 2 24 2C14.6112 2 7 9.61116 7 19C7 23.195 8.51947 27.0351 11.0381 30H11.0103L21.6879 42.9138C22.2879 43.6393 23.1439 44.0021 24 44.0021Z" fill="url(#product-places-standard-48-paint1_radial_277017_2349)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 44.0021V20.5C24 15.8056 27.8056 12 32.5 12C36.9856 12 40.6596 15.4745 40.9777 19.8789C40.9925 19.5878 41 19.2948 41 19C41 9.61116 33.3888 2 24 2C14.6112 2 7 9.61116 7 19C7 23.195 8.51947 27.0351 11.0381 30H11.0103L21.6879 42.9138C22.2879 43.6393 23.1439 44.0021 24 44.0021Z" fill="url(#product-places-standard-48-paint2_linear_277017_2349)"/>
+<defs>
+<radialGradient id="product-places-standard-48-paint0_radial_277017_2349" cx="0" cy="0" r="1" gradientTransform="matrix(15.1536 -40.7154 22.2939 8.42665 18.7063 44.0021)" gradientUnits="userSpaceOnUse">
+<stop offset="0.124165" stop-color="#D59DFF"/>
+<stop offset="0.784303" stop-color="#0078D4"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</radialGradient>
+<radialGradient id="product-places-standard-48-paint1_radial_277017_2349" cx="0" cy="0" r="1" gradientTransform="matrix(27.935 11.155 -13.3216 37.3568 9.9148 12.9355)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#43EFB1"/>
+<stop offset="0.61125" stop-color="#21C6B3"/>
+<stop offset="1" stop-color="#1E8FCF"/>
+</radialGradient>
+<linearGradient id="product-places-standard-48-paint2_linear_277017_2349" x1="33.3887" y1="56.1611" x2="5.71149" y2="32.6201" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A194F4"/>
+<stop offset="1" stop-color="#975ECE" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

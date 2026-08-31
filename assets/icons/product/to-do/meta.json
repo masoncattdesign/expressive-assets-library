@@ -1,0 +1,52 @@
+{
+  "id": "product.to-do",
+  "name": "To Do",
+  "keywords": [
+    "to",
+    "do"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24,
+    28,
+    32
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "20": "assets/icons/product/to-do/filled-20.svg",
+      "24": "assets/icons/product/to-do/filled-24.svg",
+      "28": "assets/icons/product/to-do/filled-28.svg"
+    },
+    "outline": {
+      "20": "assets/icons/product/to-do/outline-20.svg",
+      "24": "assets/icons/product/to-do/outline-24.svg",
+      "28": "assets/icons/product/to-do/outline-28.svg"
+    },
+    "standard": {
+      "20": "assets/icons/product/to-do/standard-20.svg",
+      "24": "assets/icons/product/to-do/standard-24.svg",
+      "28": "assets/icons/product/to-do/standard-28.svg",
+      "32": "assets/icons/product/to-do/standard-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "101635:1"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

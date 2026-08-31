@@ -1,0 +1,40 @@
+<svg aria-label="Power BI standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="product-power-bi-standard-48-mask0_527478_932" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="9" y="4" width="30" height="40">
+<path d="M25.0001 8.25C25.0001 5.90279 26.9029 4 29.2501 4H34.75C37.0972 4 39 5.90279 39 8.25V39.75C39 42.0972 37.0972 44 34.75 44H13.25C10.9028 44 9 42.0972 9 39.75V28.25C9 25.9028 10.9028 24 13.25 24H17.0001V18.25C17.0001 15.9028 18.9029 14 21.2501 14H25.0001V8.25Z" fill="white"/>
+</mask>
+<g mask="url(#product-power-bi-standard-48-mask0_527478_932)">
+<path d="M39 8.25V39.75C39 42.0972 37.0972 44 34.75 44H25L25 8.25C25 5.90279 26.9028 4 29.25 4H34.75C37.0972 4 39 5.90279 39 8.25Z" fill="url(#product-power-bi-standard-48-paint0_linear_527478_932)"/>
+<g filter="url(#product-power-bi-standard-48-filter0_f_527478_932)">
+<path d="M31 18.4082V44.1582H17V18.4082C17 16.061 18.9028 14.1582 21.25 14.1582H26.75C29.0972 14.1582 31 16.061 31 18.4082Z" fill="black" fill-opacity="0.2"/>
+</g>
+<g filter="url(#product-power-bi-standard-48-filter1_f_527478_932)">
+<path d="M31 19.083V43.833H17V19.083C17 16.7358 18.9028 14.833 21.25 14.833H26.75C29.0972 14.833 31 16.7358 31 19.083Z" fill="black" fill-opacity="0.18"/>
+</g>
+<path d="M31 18.25V44H17V18.25C17 15.9028 18.9028 14 21.25 14H26.75C29.0972 14 31 15.9028 31 18.25Z" fill="url(#product-power-bi-standard-48-paint1_linear_527478_932)"/>
+<path d="M9 28.25V39.75C9 42.0972 10.9028 44 13.25 44H23V28.25C23 25.9028 21.0972 24 18.75 24H13.25C10.9028 24 9 25.9028 9 28.25Z" fill="url(#product-power-bi-standard-48-paint2_linear_527478_932)"/>
+</g>
+<defs>
+<filter id="product-power-bi-standard-48-filter0_f_527478_932" x="16.6833" y="13.8415" width="14.6333" height="30.6333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.158333" result="effect1_foregroundBlur_527478_932"/>
+</filter>
+<filter id="product-power-bi-standard-48-filter1_f_527478_932" x="13.6667" y="11.4997" width="20.6667" height="35.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.66667" result="effect1_foregroundBlur_527478_932"/>
+</filter>
+<linearGradient id="product-power-bi-standard-48-paint0_linear_527478_932" x1="22.6667" y1="4" x2="39.7005" y2="41.9111" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="product-power-bi-standard-48-paint1_linear_527478_932" x1="16.9989" y1="14" x2="31.3621" y2="43.2487" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="product-power-bi-standard-48-paint2_linear_527478_932" x1="8.99886" y1="24" x2="16.8919" y2="43.6416" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "id": "product.cortana",
+  "name": "Cortana",
+  "keywords": [
+    "cortana"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    20,
+    24,
+    28,
+    48
+  ],
+  "colors": {
+    "primary": "#1C9FE7",
+    "secondary": "#1C9FE7"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "20": "assets/icons/product/cortana/standard-20.svg",
+      "24": "assets/icons/product/cortana/standard-24.svg",
+      "28": "assets/icons/product/cortana/standard-28.svg",
+      "48": "assets/icons/product/cortana/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "93608:108"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

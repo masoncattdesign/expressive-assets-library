@@ -1,0 +1,19 @@
+<svg aria-label="Viva Insights standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="15" r="11" fill="url(#product-viva-insights-standard-48-paint0_linear_213074_1768)"/>
+<path d="M18.8928 30.102C17.3349 31.8785 15.0484 33 12.4999 33C10.3193 33 8.33048 32.1789 6.82579 30.829L6.82422 30.8302L18.9687 41.963L18.9733 41.9584C20.4594 43.2312 22.3898 44 24.4999 44C26.9339 44 29.1291 42.9769 30.6786 41.3372L41.3371 30.6788C41.4541 30.5682 41.568 30.4543 41.6786 30.3372L41.7053 30.3105L41.7045 30.3097C43.1281 28.7899 43.9999 26.7468 43.9999 24.5C43.9999 19.8056 40.1943 16 35.4999 16C32.8748 16 30.5277 17.1899 28.9685 19.0599L18.8928 30.102Z" fill="url(#product-viva-insights-standard-48-paint1_linear_213074_1768)"/>
+<path d="M15.8049 32.3336C16.9977 31.8297 18.0516 31.0614 18.8929 30.102L22.831 25.7862C18.159 24.8519 14.5556 20.958 14.0586 16.1426C13.5534 16.0489 13.0324 16 12.5 16C7.80558 16 4 19.8056 4 24.5C4 27.0138 5.09126 29.2728 6.82591 30.829C8.3306 32.1789 10.3194 33 12.5 33C13.6722 33 14.7889 32.7627 15.8049 32.3336Z" fill="url(#product-viva-insights-standard-48-paint2_linear_213074_1768)"/>
+<defs>
+<linearGradient id="product-viva-insights-standard-48-paint0_linear_213074_1768" x1="14.4572" y1="2.85368" x2="29.8107" y2="26.7263" gradientUnits="userSpaceOnUse">
+<stop offset="0.176282" stop-color="#98BEF5"/>
+<stop offset="0.94425" stop-color="#3F6FD1"/>
+</linearGradient>
+<linearGradient id="product-viva-insights-standard-48-paint1_linear_213074_1768" x1="37.3224" y1="40.2207" x2="27.3238" y2="15.7549" gradientUnits="userSpaceOnUse">
+<stop stop-color="#283B73"/>
+<stop offset="1" stop-color="#436DCD"/>
+</linearGradient>
+<linearGradient id="product-viva-insights-standard-48-paint2_linear_213074_1768" x1="4.53324" y1="14.331" x2="16.9486" y2="32.8912" gradientUnits="userSpaceOnUse">
+<stop offset="0.1947" stop-color="#4A6DC4"/>
+<stop offset="0.9988" stop-color="#16296F"/>
+</linearGradient>
+</defs>
+</svg>

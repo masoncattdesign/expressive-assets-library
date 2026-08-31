@@ -1,0 +1,27 @@
+<svg aria-label="Power BI standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11" y="2" width="6" height="16" rx="2" fill="url(#product-power-bi-standard-20-paint0_linear_527478_929)"/>
+<g opacity="0.25">
+<path d="M11 6H11.5C12.6046 6 13.5 6.89543 13.5 8V18H11V6Z" fill="url(#product-power-bi-standard-20-paint1_linear_527478_929)"/>
+<path d="M11 6H11.5C12.6046 6 13.5 6.89543 13.5 8V18H11V6Z" fill="black" fill-opacity="0.5"/>
+</g>
+<path d="M7 8C7 6.89543 7.89543 6 9 6H11C12.1046 6 13 6.89543 13 8V18H7V8Z" fill="url(#product-power-bi-standard-20-paint2_linear_527478_929)"/>
+<path d="M3 12C3 10.8954 3.89543 10 5 10H7C8.10457 10 9 10.8954 9 12V18H5C3.89543 18 3 17.1046 3 16V12Z" fill="url(#product-power-bi-standard-20-paint3_linear_527478_929)"/>
+<defs>
+<linearGradient id="product-power-bi-standard-20-paint0_linear_527478_929" x1="10" y1="2" x2="16.5" y2="17.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6AD10"/>
+<stop offset="1" stop-color="#C87E0E"/>
+</linearGradient>
+<linearGradient id="product-power-bi-standard-20-paint1_linear_527478_929" x1="7.49951" y1="6" x2="12.9995" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="product-power-bi-standard-20-paint2_linear_527478_929" x1="6.99951" y1="6" x2="12.4995" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F6D751"/>
+<stop offset="1" stop-color="#E6AD10"/>
+</linearGradient>
+<linearGradient id="product-power-bi-standard-20-paint3_linear_527478_929" x1="2.99951" y1="10" x2="6" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9E589"/>
+<stop offset="1" stop-color="#F6D751"/>
+</linearGradient>
+</defs>
+</svg>

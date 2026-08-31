@@ -1,0 +1,67 @@
+<svg aria-label="PowerPoint standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="8.00049" cy="8.0006" rx="6.75" ry="6.7506" fill="url(#product-powerpoint-standard-16-paint0_linear_116120_209)"/>
+<ellipse cx="8.00049" cy="8.0006" rx="6.75" ry="6.7506" fill="url(#product-powerpoint-standard-16-paint1_radial_116120_209)"/>
+<ellipse cx="8.00049" cy="8.0006" rx="6.75" ry="6.7506" fill="url(#product-powerpoint-standard-16-paint2_radial_116120_209)" fill-opacity="0.5"/>
+<path d="M8 1.25C11.7279 1.25 14.75 4.27272 14.75 8.00098C14.7499 9.23868 14.4145 10.3972 13.833 11.3945C14.5386 9.79587 13.3698 7.9954 11.6182 7.99512H9.38281C8.61597 7.99506 7.99446 7.3733 7.99512 6.60645L7.99707 4.33691C7.99856 2.60231 6.21121 1.44449 4.62988 2.15234C5.62181 1.57939 6.77218 1.25001 8 1.25Z" fill="url(#product-powerpoint-standard-16-paint3_linear_116120_209)"/>
+<path d="M8 1.25C11.7279 1.25 14.75 4.27272 14.75 8.00098C14.7499 9.23868 14.4145 10.3972 13.833 11.3945C14.5386 9.79587 13.3698 7.9954 11.6182 7.99512H9.38281C8.61597 7.99506 7.99446 7.3733 7.99512 6.60645L7.99707 4.33691C7.99856 2.60231 6.21121 1.44449 4.62988 2.15234C5.62181 1.57939 6.77218 1.25001 8 1.25Z" fill="url(#product-powerpoint-standard-16-paint4_radial_116120_209)"/>
+<path d="M8 1.25C11.7279 1.25 14.75 4.27272 14.75 8.00098C14.7499 9.23868 14.4145 10.3972 13.833 11.3945C14.5386 9.79587 13.3698 7.9954 11.6182 7.99512H9.38281C8.61597 7.99506 7.99446 7.3733 7.99512 6.60645L7.99707 4.33691C7.99856 2.60231 6.21121 1.44449 4.62988 2.15234C5.62181 1.57939 6.77218 1.25001 8 1.25Z" fill="url(#product-powerpoint-standard-16-paint5_radial_116120_209)" fill-opacity="0.8"/>
+<path d="M8 1.25C11.7279 1.25 14.75 4.27272 14.75 8.00098C14.7499 9.23868 14.4145 10.3972 13.833 11.3945C14.5386 9.79587 13.3698 7.9954 11.6182 7.99512H9.38281C8.61597 7.99506 7.99446 7.3733 7.99512 6.60645L7.99707 4.33691C7.99856 2.60231 6.21121 1.44449 4.62988 2.15234C5.62181 1.57939 6.77218 1.25001 8 1.25Z" fill="url(#product-powerpoint-standard-16-paint6_radial_116120_209)"/>
+<path d="M8 1.25C11.7279 1.25 14.75 4.27272 14.75 8.00098C14.7499 9.23868 14.4145 10.3972 13.833 11.3945C14.5386 9.79587 13.3698 7.9954 11.6182 7.99512H9.38281C8.61597 7.99506 7.99446 7.3733 7.99512 6.60645L7.99707 4.33691C7.99856 2.60231 6.21121 1.44449 4.62988 2.15234C5.62181 1.57939 6.77218 1.25001 8 1.25Z" fill="url(#product-powerpoint-standard-16-paint7_radial_116120_209)"/>
+<rect x="1" y="6" width="7" height="7" rx="1.5" fill="url(#product-powerpoint-standard-16-paint8_radial_116120_209)"/>
+<rect x="1" y="6" width="7" height="7" rx="1.5" fill="url(#product-powerpoint-standard-16-paint9_radial_116120_209)" fill-opacity="0.3"/>
+<rect x="1" y="6" width="7" height="7" rx="1.25" fill="url(#product-powerpoint-standard-16-paint10_radial_116120_209)"/>
+<rect x="1" y="6" width="7" height="7" rx="1.25" fill="url(#product-powerpoint-standard-16-paint11_radial_116120_209)" fill-opacity="0.3"/>
+<path d="M3.95139 10.3717V12H2.82373V7H4.56584C5.18961 7 5.66441 7.13598 5.99026 7.40795C6.31843 7.67992 6.48252 8.08322 6.48252 8.61785C6.48252 9.16876 6.29865 9.59879 5.93091 9.90795C5.56549 10.2171 5.0744 10.3717 4.45762 10.3717H3.95139ZM3.95139 7.86471V9.50697H4.4227C4.702 9.50697 4.91729 9.43375 5.06858 9.28731C5.21986 9.14086 5.29551 8.9305 5.29551 8.65621C5.29551 8.40284 5.22103 8.20758 5.07207 8.07043C4.92544 7.93329 4.7148 7.86471 4.44016 7.86471H3.95139Z" fill="white"/>
+<defs>
+<linearGradient id="product-powerpoint-standard-16-paint0_linear_116120_209" x1="7.31558" y1="0.820215" x2="-0.955231" y2="8.73253" gradientUnits="userSpaceOnUse">
+<stop offset="0.0582736" stop-color="#FF7F48"/>
+<stop offset="1" stop-color="#E5495B"/>
+</linearGradient>
+<radialGradient id="product-powerpoint-standard-16-paint1_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.6687 5.16741) rotate(135) scale(13.5535 22.8124)">
+<stop offset="0.151523" stop-color="#AA1D2D"/>
+<stop offset="0.380855" stop-color="#D12B18" stop-opacity="0.44"/>
+<stop offset="0.601996" stop-color="#FF3C00" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint2_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-1.1056 13.4879) rotate(-25.2832) scale(12.8481 23.2762)">
+<stop offset="0.4067" stop-color="#FF66FB"/>
+<stop offset="1" stop-color="#EA3D01" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-powerpoint-standard-16-paint3_linear_116120_209" x1="9.28244" y1="9.49733" x2="16.5425" y2="4.11759" gradientUnits="userSpaceOnUse">
+<stop offset="0.310768" stop-color="#FF6E30"/>
+<stop offset="0.634576" stop-color="#FFA05C"/>
+</linearGradient>
+<radialGradient id="product-powerpoint-standard-16-paint4_radial_116120_209" cx="0" cy="0" r="1" gradientTransform="matrix(8.53379 1.78863 -2.30113 8.0125 6.87274 8.80284)" gradientUnits="userSpaceOnUse">
+<stop offset="0.78593" stop-color="#FFA05C" stop-opacity="0"/>
+<stop offset="0.904889" stop-color="#FFCE84"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint5_radial_116120_209" cx="0" cy="0" r="1" gradientTransform="matrix(7.36722 -4.82164 4.61319 7.0448 8.2406 7.89493)" gradientUnits="userSpaceOnUse">
+<stop offset="0.295239" stop-color="#FF99E9"/>
+<stop offset="0.727968" stop-color="#FF99E9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint6_radial_116120_209" cx="0" cy="0" r="1" gradientTransform="matrix(6.16652 -7.06145 6.58147 5.47975 7.25195 8.92486)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FD6EF9"/>
+<stop offset="0.637205" stop-color="#FF9944"/>
+<stop offset="0.85186" stop-color="#FCC479"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint7_radial_116120_209" cx="0" cy="0" r="1" gradientTransform="matrix(-0.696549 4.72097 -10.6778 -1.50208 6.63845 2.14157)" gradientUnits="userSpaceOnUse">
+<stop offset="0.144283" stop-color="#FF8D13"/>
+<stop offset="0.537266" stop-color="#FF7F29" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint8_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.999146 6) rotate(45) scale(9.89949)">
+<stop stop-color="#F8193E"/>
+<stop offset="0.939062" stop-color="#920616"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint9_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.49915 10.2) rotate(90) scale(4.9 5.57813)">
+<stop offset="0.575893" stop-color="#FFB055" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#FFF2BE"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint10_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.999146 6) rotate(45) scale(9.89949)">
+<stop stop-color="#F8193E"/>
+<stop offset="0.939062" stop-color="#920616"/>
+</radialGradient>
+<radialGradient id="product-powerpoint-standard-16-paint11_radial_116120_209" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.49915 10.2) rotate(90) scale(4.9 5.57813)">
+<stop offset="0.575893" stop-color="#FFB055" stop-opacity="0"/>
+<stop offset="0.973806" stop-color="#FFF2BE"/>
+</radialGradient>
+</defs>
+</svg>

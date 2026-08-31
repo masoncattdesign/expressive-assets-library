@@ -1,0 +1,14 @@
+<svg aria-label="Password Manager standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.5 11.5V12C7.5 12.2761 7.27614 12.5 7 12.5H6V13C6 13.5523 5.55228 14 5 14H3C2.44772 14 2 13.5523 2 13V11.7071C2 11.4419 2.10536 11.1875 2.29289 11L6.16219 7.13071C6.05656 6.77171 6 6.39211 6 6C6 3.79086 7.79086 2 10 2C12.2091 2 14 3.79086 14 6C14 8.20914 12.2091 10 10 10H9V11C9 11.2761 8.77614 11.5 8.5 11.5H7.5ZM11 6C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4C10.4477 4 10 4.44772 10 5C10 5.55228 10.4477 6 11 6Z" fill="url(#product-password-manager-standard-16-paint0_linear_487473_131)"/>
+<path d="M12.5684 2.93457C13.4432 3.66833 14 4.76885 14 6C14 8.20914 12.2091 10 10 10H9V11C9 11.2761 8.77614 11.5 8.5 11.5H7.5V12C7.5 12.2761 7.27614 12.5 7 12.5H6V13C6 13.5523 5.55228 14 5 14H3C2.59514 14 2.24714 13.7591 2.08984 13.4131L10.0889 5.41309C10.2461 5.7593 10.595 6 11 6C11.5523 6 12 5.55228 12 5C12 4.59499 11.7593 4.24608 11.4131 4.08887L12.5684 2.93457Z" fill="url(#product-password-manager-standard-16-paint1_radial_487473_131)"/>
+<defs>
+<linearGradient id="product-password-manager-standard-16-paint0_linear_487473_131" x1="4.66667" y1="4" x2="13.3333" y2="12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#29C3FF"/>
+<stop offset="1" stop-color="#2052CB"/>
+</linearGradient>
+<radialGradient id="product-password-manager-standard-16-paint1_radial_487473_131" cx="0" cy="0" r="1" gradientTransform="matrix(5.36481 6.8345 -7.35624 5.73981 2.34598 10.404)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#236FD9"/>
+<stop offset="0.767782" stop-color="#236FD9" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

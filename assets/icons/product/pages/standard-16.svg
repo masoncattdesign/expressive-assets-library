@@ -1,0 +1,20 @@
+<svg aria-label="Pages standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.25 6C13.2165 6 14 6.7835 14 7.75V13C14 14.1046 13.1046 15 12 15H4C2.89543 15 2 14.1046 2 13V10C2 9.72386 2.22386 9.5 2.5 9.5C2.77614 9.5 3 9.72386 3 10V11.5H8.5C9.32843 11.5 10 10.8284 10 10V7.75C10 6.7835 10.7835 6 11.75 6H12.25Z" fill="url(#product-pages-standard-16-paint0_linear_495747_3585)"/>
+<path d="M10.25 3.5C11.2165 3.5 12 4.2835 12 5.25V11.25C12 12.2221 11.217 12.9833 10.2812 13.0391C8.26435 13.1592 5.41989 13.5841 2.86035 14.6426C2.34071 14.2814 2 13.6808 2 13V12.3584C2.00004 11.6343 2.44627 10.9855 3.12207 10.7256L8.01953 8.8418C8.30905 8.73037 8.49996 8.45183 8.5 8.1416V4.5C8.5 3.9478 8.9478 3.5 9.5 3.5H10.25Z" fill="url(#product-pages-standard-16-paint1_radial_495747_3585)"/>
+<path d="M8.09151 1.1023C9.06571 0.7189 10.0004 1.47922 10.0007 2.448V9.57886C10.0007 10.3661 9.39645 10.9942 8.6501 11.0945C6.08469 11.4385 4.38719 12.2598 3.34151 12.9773C2.81807 13.3366 2.45408 13.6727 2.2253 13.9128L2.22237 13.9148C2.08086 13.6405 1.99973 13.3297 1.99971 12.9998V10.9998C1.99971 10.9697 1.996 10.9404 1.99092 10.9119C1.99674 10.8738 2.00068 10.8352 2.00069 10.7966V7.99879C2.00096 5.97428 3.04564 4.43763 4.3044 3.32886C5.55882 2.22411 7.06305 1.50751 8.09151 1.1023Z" fill="url(#product-pages-standard-16-paint2_radial_495747_3585)"/>
+<defs>
+<linearGradient id="product-pages-standard-16-paint0_linear_495747_3585" x1="10.8442" y1="10.5" x2="25.7597" y2="45.8061" gradientUnits="userSpaceOnUse">
+<stop offset="0.0347811" stop-color="#4022A0"/>
+<stop offset="0.169224" stop-color="#C570FB"/>
+</linearGradient>
+<radialGradient id="product-pages-standard-16-paint1_radial_495747_3585" cx="0" cy="0" r="1" gradientTransform="matrix(-11.1623 -10.4355 18.0663 -19.8237 13.1623 13.9355)" gradientUnits="userSpaceOnUse">
+<stop offset="0.224919" stop-color="#E331D8"/>
+<stop offset="0.688249" stop-color="#AC3445"/>
+</radialGradient>
+<radialGradient id="product-pages-standard-16-paint2_radial_495747_3585" cx="0" cy="0" r="1" gradientTransform="matrix(6.63237 13.0731 -9.82058 9.87921 3.10339 -1.70136)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8C48FF"/>
+<stop offset="0.384017" stop-color="#F2598A"/>
+<stop offset="0.853186" stop-color="#FFB152"/>
+</radialGradient>
+</defs>
+</svg>

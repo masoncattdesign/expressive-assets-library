@@ -1,0 +1,19 @@
+<svg aria-label="Viva Learning standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 28V13.582C6.06812 14.7695 4 17.6426 4 21V36C4 40.418 7.58167 44 12 44H20C23.3137 44 26 41.3145 26 38C26 34.6855 23.3137 32 20 32H13C10.7909 32 9 30.209 9 28Z" fill="url(#product-viva-learning-standard-48-paint0_linear_213074_1703)"/>
+<path d="M26 13C26 8.0293 21.9706 4 17 4C12.0294 4 8 8.0293 8 13V28C8 30.209 9.79089 32 12 32H20C23.3137 32 26 34.6855 26 38V13Z" fill="url(#product-viva-learning-standard-48-paint1_linear_213074_1703)"/>
+<path d="M20 44H36C40.4183 44 44 40.418 44 36V21C44 16.582 40.4183 13 36 13H26V38C26 41.3145 23.3137 44 20 44Z" fill="url(#product-viva-learning-standard-48-paint2_linear_213074_1703)"/>
+<defs>
+<linearGradient id="product-viva-learning-standard-48-paint0_linear_213074_1703" x1="4.62297" y1="10.5957" x2="28.6507" y2="34.049" gradientUnits="userSpaceOnUse">
+<stop offset="0.1947" stop-color="#057093"/>
+<stop offset="0.9988" stop-color="#043346"/>
+</linearGradient>
+<linearGradient id="product-viva-learning-standard-48-paint1_linear_213074_1703" x1="8.37408" y1="2.22842" x2="33.9653" y2="23.2943" gradientUnits="userSpaceOnUse">
+<stop offset="0.176282" stop-color="#64D9E1"/>
+<stop offset="0.94425" stop-color="#1098B6"/>
+</linearGradient>
+<linearGradient id="product-viva-learning-standard-48-paint2_linear_213074_1703" x1="39.6891" y1="39.8158" x2="24.832" y2="18.6173" gradientUnits="userSpaceOnUse">
+<stop stop-color="#084961"/>
+<stop offset="1" stop-color="#1282A4"/>
+</linearGradient>
+</defs>
+</svg>

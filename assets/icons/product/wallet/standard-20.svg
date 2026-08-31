@@ -1,0 +1,40 @@
+<svg aria-label="Wallet standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.99992 5.50002C1.99991 4.1193 3.1192 3 4.49992 3H13.9999C15.1045 3 15.9999 3.89543 15.9999 5V8H4.49992C3.11922 8 1.99993 6.88072 1.99992 5.50002Z" fill="url(#product-wallet-standard-20-paint0_linear_342923_683)"/>
+<path d="M1.99992 5.50002C1.99991 4.1193 3.1192 3 4.49992 3H13.9999C15.1045 3 15.9999 3.89543 15.9999 5V8H4.49992C3.11922 8 1.99993 6.88072 1.99992 5.50002Z" fill="url(#product-wallet-standard-20-paint1_radial_342923_683)"/>
+<path d="M3.72599 8.5847C3.26058 7.77857 3.53678 6.74778 4.3429 6.28237L13.1006 1.22609C13.9068 0.760668 14.9376 1.03687 15.403 1.84299L18.7738 7.68148C19.2392 8.48761 18.963 9.5184 18.1569 9.98382L9.39918 15.0401C8.59305 15.5055 7.56226 15.2293 7.09685 14.4232L3.72599 8.5847Z" fill="url(#product-wallet-standard-20-paint2_linear_342923_683)"/>
+<path d="M3.72599 8.5847C3.26058 7.77857 3.53678 6.74778 4.3429 6.28237L13.1006 1.22609C13.9068 0.760668 14.9376 1.03687 15.403 1.84299L18.7738 7.68148C19.2392 8.48761 18.963 9.5184 18.1569 9.98382L9.39918 15.0401C8.59305 15.5055 7.56226 15.2293 7.09685 14.4232L3.72599 8.5847Z" fill="url(#product-wallet-standard-20-paint3_radial_342923_683)"/>
+<path d="M1.99993 5.5C1.99994 6.8807 3.11922 8 4.49993 8H11.9999C12.0227 8 12.0454 7.99962 12.0681 7.99886H15.9999C17.1045 7.99886 17.9999 8.89429 17.9999 9.99886V15.9998C17.9999 17.1043 17.1045 17.9998 15.9999 17.9998H5.99991C3.79077 17.9998 1.99991 16.2089 1.99991 13.9998L1.99993 5.5Z" fill="url(#product-wallet-standard-20-paint4_linear_342923_683)"/>
+<path d="M1.99993 5.5C1.99994 6.8807 3.11922 8 4.49993 8H11.9999C12.0227 8 12.0454 7.99962 12.0681 7.99886H15.9999C17.1045 7.99886 17.9999 8.89429 17.9999 9.99886V15.9998C17.9999 17.1043 17.1045 17.9998 15.9999 17.9998H5.99991C3.79077 17.9998 1.99991 16.2089 1.99991 13.9998L1.99993 5.5Z" fill="url(#product-wallet-standard-20-paint5_radial_342923_683)"/>
+<path d="M11.9999 11.564C11.9999 11.2525 12.2524 11 12.5639 11H14.4359C14.7474 11 14.9999 11.2525 14.9999 11.564V13.436C14.9999 13.7475 14.7474 14 14.4359 14H12.5639C12.2524 14 11.9999 13.7475 11.9999 13.436V11.564Z" fill="#1A43BC"/>
+<defs>
+<linearGradient id="product-wallet-standard-20-paint0_linear_342923_683" x1="15.6331" y1="5.5" x2="1.99992" y2="5.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2253CE"/>
+<stop offset="0.753615" stop-color="#004099"/>
+<stop offset="1" stop-color="#003580"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-20-paint1_radial_342923_683" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.2011 5.5) rotate(180) scale(14.2012 5.4375)">
+<stop stop-color="#2253CE"/>
+<stop offset="0.764063" stop-color="#2253CE"/>
+<stop offset="1" stop-color="#003580"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-20-paint2_linear_342923_683" x1="16.1968" y1="1" x2="5.69228" y2="7.12503" gradientUnits="userSpaceOnUse">
+<stop offset="0.14" stop-color="#EF91F3"/>
+<stop offset="0.54" stop-color="#E656EB"/>
+<stop offset="1" stop-color="#C543FE"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-20-paint3_radial_342923_683" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(3.49991 8.5) rotate(0.563451) scale(14.5007 2.53631)">
+<stop offset="0.454281" stop-color="#B91CBF"/>
+<stop offset="1" stop-color="#B91CBF" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-20-paint4_linear_342923_683" x1="18.2613" y1="12.8698" x2="1.896" y2="12.8698" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2764E7"/>
+<stop offset="0.725" stop-color="#367AF2"/>
+<stop offset="0.87" stop-color="#0091EB"/>
+<stop offset="1" stop-color="#33B1FF"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-20-paint5_radial_342923_683" cx="0" cy="0" r="1" gradientTransform="matrix(-8.47487 2.67011 -3.71939 -9.85517 18.5535 11.0007)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AD7DFF"/>
+<stop offset="1" stop-color="#AD7DFF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

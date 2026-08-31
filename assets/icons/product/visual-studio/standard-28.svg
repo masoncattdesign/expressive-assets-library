@@ -1,0 +1,45 @@
+<svg aria-label="Visual Studio standard 28" role="img" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 22.2602L3.25 19.7602C2.51 19.3902 2 18.6302 2 17.7502V10.2502C2 9.37023 2.51 8.61023 3.25 8.24023L8.25 5.74023C7.51 6.11023 7 6.87023 7 7.75023V20.2502C7 21.1302 7.51 21.8902 8.25 22.2602Z" fill="url(#product-visual-studio-standard-28-paint0_linear_454911_3970)"/>
+<path d="M24.61 5.67C24.35 5.56 24.06 5.5 23.75 5.5C23 5.5 22.33 5.87 21.92 6.44L20 9.12L16.5 14L12.76 19.21L11.08 21.56C10.67 22.13 10 22.5 9.25 22.5C8.89 22.5 8.55 22.41 8.25 22.26L3.25 19.76C3.55 19.91 3.89 20 4.25 20C5.04 20 5.74 19.59 6.14 18.98L7 17.66L9.38 14L12.76 8.79L15.86 4.02C16.26 3.41 16.96 3 17.75 3C18.06 3 18.35 3.06 18.61 3.17L24.61 5.67Z" fill="url(#product-visual-studio-standard-28-paint1_linear_454911_3970)"/>
+<path d="M24.61 5.67C24.35 5.56 24.06 5.5 23.75 5.5C23 5.5 22.33 5.87 21.92 6.44L20 9.12L16.5 14L12.76 19.21L11.08 21.56C10.67 22.13 10 22.5 9.25 22.5C8.89 22.5 8.55 22.41 8.25 22.26L3.25 19.76C3.55 19.91 3.89 20 4.25 20C5.04 20 5.74 19.59 6.14 18.98L7 17.66L9.38 14L12.76 8.79L15.86 4.02C16.26 3.41 16.96 3 17.75 3C18.06 3 18.35 3.06 18.61 3.17L24.61 5.67Z" fill="url(#product-visual-studio-standard-28-paint2_linear_454911_3970)" fill-opacity="0.3"/>
+<path d="M24.61 22.33L18.61 24.83C18.35 24.94 18.06 25 17.75 25C16.96 25 16.26 24.59 15.86 23.98L12.76 19.21L9.38 14L7 10.34L6.14 9.02C5.74 8.41 5.04 8 4.25 8C3.89 8 3.55 8.09 3.25 8.24L8.25 5.74C8.55 5.59 8.89 5.5 9.25 5.5C10 5.5 10.67 5.87 11.08 6.44L12.76 8.79L16.5 14L20 18.88L21.92 21.56C22.33 22.13 23 22.5 23.75 22.5C24.06 22.5 24.35 22.44 24.61 22.33Z" fill="url(#product-visual-studio-standard-28-paint3_linear_454911_3970)"/>
+<path d="M24.61 22.33L18.61 24.83C18.35 24.94 18.06 25 17.75 25C16.96 25 16.26 24.59 15.86 23.98L12.76 19.21L9.38 14L7 10.34L6.14 9.02C5.74 8.41 5.04 8 4.25 8C3.89 8 3.55 8.09 3.25 8.24L8.25 5.74C8.55 5.59 8.89 5.5 9.25 5.5C10 5.5 10.67 5.87 11.08 6.44L12.76 8.79L16.5 14L20 18.88L21.92 21.56C22.33 22.13 23 22.5 23.75 22.5C24.06 22.5 24.35 22.44 24.61 22.33Z" fill="url(#product-visual-studio-standard-28-paint4_radial_454911_3970)"/>
+<path d="M26 7.74992V20.2499C26 21.1899 25.43 21.9899 24.61 22.3299L18.61 24.8299C19.43 24.4899 20 23.6899 20 22.7499V5.24992C20 4.30992 19.43 3.50992 18.61 3.16992L24.61 5.66992C25.43 6.00992 26 6.80992 26 7.74992Z" fill="url(#product-visual-studio-standard-28-paint5_linear_454911_3970)"/>
+<defs>
+<linearGradient id="product-visual-studio-standard-28-paint0_linear_454911_3970" x1="-0.327466" y1="22.2602" x2="9.91622" y2="16.6812" gradientUnits="userSpaceOnUse">
+<stop offset="0.0725439" stop-color="#85148A"/>
+<stop offset="0.296162" stop-color="#7F21A9"/>
+<stop offset="0.661273" stop-color="#5B2AB5"/>
+<stop offset="0.854932" stop-color="#4B20A0"/>
+</linearGradient>
+<linearGradient id="product-visual-studio-standard-28-paint1_linear_454911_3970" x1="17.4983" y1="2.25" x2="7.22525" y2="23.8892" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4B20A0"/>
+<stop offset="0.265936" stop-color="#6D37CD"/>
+<stop offset="0.7848" stop-color="#7A41DC"/>
+<stop offset="1" stop-color="#CA59F7"/>
+</linearGradient>
+<linearGradient id="product-visual-studio-standard-28-paint2_linear_454911_3970" x1="15.3058" y1="12.375" x2="7.89527" y2="17.6796" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30116E" stop-opacity="0"/>
+<stop offset="0.164241" stop-color="#30116E" stop-opacity="0.7"/>
+<stop offset="0.712141" stop-color="#30116E"/>
+<stop offset="1" stop-color="#30116E" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-visual-studio-standard-28-paint3_linear_454911_3970" x1="6.18322" y1="5.5" x2="17.4366" y2="27.4926" gradientUnits="userSpaceOnUse">
+<stop offset="0.0374343" stop-color="#FFBAC7"/>
+<stop offset="0.187907" stop-color="#EA71EF"/>
+<stop offset="0.349289" stop-color="#CA59F7"/>
+<stop offset="0.618324" stop-color="#8B52F4"/>
+<stop offset="1" stop-color="#5750E2"/>
+</linearGradient>
+<radialGradient id="product-visual-studio-standard-28-paint4_radial_454911_3970" cx="0" cy="0" r="1" gradientTransform="matrix(20.2405 8.125 -18.4984 46.1254 1.63076 16)" gradientUnits="userSpaceOnUse">
+<stop offset="0.611142" stop-color="#8B52F4" stop-opacity="0"/>
+<stop offset="0.977982" stop-color="#30116E"/>
+</radialGradient>
+<linearGradient id="product-visual-studio-standard-28-paint5_linear_454911_3970" x1="22.305" y1="0.999939" x2="22.305" y2="27.7499" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFBAC7"/>
+<stop offset="0.291496" stop-color="#EA71EF"/>
+<stop offset="0.675458" stop-color="#8B52F4"/>
+<stop offset="0.916582" stop-color="#5750E2"/>
+</linearGradient>
+</defs>
+</svg>

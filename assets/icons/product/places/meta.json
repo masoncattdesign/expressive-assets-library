@@ -1,0 +1,61 @@
+{
+  "id": "product.places",
+  "name": "Places",
+  "keywords": [
+    "places"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "16": "assets/icons/product/places/filled-16.svg",
+      "20": "assets/icons/product/places/filled-20.svg",
+      "24": "assets/icons/product/places/filled-24.svg",
+      "28": "assets/icons/product/places/filled-28.svg",
+      "32": "assets/icons/product/places/filled-32.svg",
+      "48": "assets/icons/product/places/filled-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/places/outline-16.svg",
+      "20": "assets/icons/product/places/outline-20.svg",
+      "24": "assets/icons/product/places/outline-24.svg",
+      "28": "assets/icons/product/places/outline-28.svg",
+      "32": "assets/icons/product/places/outline-32.svg",
+      "48": "assets/icons/product/places/outline-48.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/places/standard-16.svg",
+      "20": "assets/icons/product/places/standard-20.svg",
+      "24": "assets/icons/product/places/standard-24.svg",
+      "28": "assets/icons/product/places/standard-28.svg",
+      "32": "assets/icons/product/places/standard-32.svg",
+      "48": "assets/icons/product/places/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "277017:2350"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

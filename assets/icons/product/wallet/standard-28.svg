@@ -1,0 +1,40 @@
+<svg aria-label="Wallet standard 28" role="img" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.00012 7.99997C2.00012 6.34312 3.33884 4.99995 4.9957 4.99991C8.61687 4.99981 14.4714 4.99963 18.0061 4.99951C19.663 4.99946 21 6.34262 21 7.99951V11H5.00012C3.34327 11 2.00012 9.65683 2.00012 7.99997Z" fill="url(#product-wallet-standard-28-paint0_linear_342923_684)"/>
+<path d="M2.00012 7.99997C2.00012 6.34312 3.33884 4.99995 4.9957 4.99991C8.61687 4.99981 14.4714 4.99963 18.0061 4.99951C19.663 4.99946 21 6.34262 21 7.99951V11H5.00012C3.34327 11 2.00012 9.65683 2.00012 7.99997Z" fill="url(#product-wallet-standard-28-paint1_radial_342923_684)"/>
+<path d="M4.29608 11.7184C3.60424 10.5792 4.01481 9.12256 5.21311 8.46485L18.2314 1.3195C19.4297 0.661785 20.9619 1.0521 21.6537 2.19129L26.6645 10.442C27.3563 11.5812 26.9457 13.0379 25.7474 13.6956L12.7292 20.841C11.5309 21.4987 9.99864 21.1084 9.30681 19.9692L4.29608 11.7184Z" fill="url(#product-wallet-standard-28-paint2_linear_342923_684)"/>
+<path d="M4.29608 11.7184C3.60424 10.5792 4.01481 9.12256 5.21311 8.46485L18.2314 1.3195C19.4297 0.661785 20.9619 1.0521 21.6537 2.19129L26.6645 10.442C27.3563 11.5812 26.9457 13.0379 25.7474 13.6956L12.7292 20.841C11.5309 21.4987 9.99864 21.1084 9.30681 19.9692L4.29608 11.7184Z" fill="url(#product-wallet-standard-28-paint3_radial_342923_684)"/>
+<path d="M2.00012 8L2 21.5004C2 23.9857 4.01478 26.0004 6.50009 26.0004L22.0001 26.0001C23.6569 26 25 24.6569 25 23.0001V13.9993C25 12.3424 23.6569 10.9993 22 10.9993L5.00012 11C3.34327 11 2.00012 9.65685 2.00012 8Z" fill="url(#product-wallet-standard-28-paint4_linear_342923_684)"/>
+<path d="M2.00012 8L2 21.5004C2 23.9857 4.01478 26.0004 6.50009 26.0004L22.0001 26.0001C23.6569 26 25 24.6569 25 23.0001V13.9993C25 12.3424 23.6569 10.9993 22 10.9993L5.00012 11C3.34327 11 2.00012 9.65685 2.00012 8Z" fill="url(#product-wallet-standard-28-paint5_radial_342923_684)"/>
+<path d="M17 18C17 17.4477 17.4477 17 18 17H20C20.5523 17 21 17.4477 21 18V20C21 20.5523 20.5523 21 20 21H18C17.4477 21 17 20.5523 17 20V18Z" fill="#1A43BC"/>
+<defs>
+<linearGradient id="product-wallet-standard-28-paint0_linear_342923_684" x1="22.0293" y1="7.99951" x2="2.00023" y2="7.99951" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2253CE"/>
+<stop offset="0.753615" stop-color="#004099"/>
+<stop offset="1" stop-color="#003580"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-28-paint1_radial_342923_684" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.8639 7.99951) rotate(180) scale(20.8637 6.525)">
+<stop stop-color="#2253CE"/>
+<stop offset="0.764063" stop-color="#2253CE"/>
+<stop offset="1" stop-color="#003580"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-28-paint2_linear_342923_684" x1="22.8338" y1="1" x2="7.62963" y2="10.3253" gradientUnits="userSpaceOnUse">
+<stop offset="0.14" stop-color="#EF91F3"/>
+<stop offset="0.54" stop-color="#E656EB"/>
+<stop offset="1" stop-color="#C543FE"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-28-paint3_radial_342923_684" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.46001 12) scale(20.5 3.53125)">
+<stop offset="0.454281" stop-color="#B91CBF"/>
+<stop offset="1" stop-color="#B91CBF" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-28-paint4_linear_342923_684" x1="25.1686" y1="17.454" x2="1.87204" y2="17.454" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2764E7"/>
+<stop offset="0.725" stop-color="#367AF2"/>
+<stop offset="0.87" stop-color="#0091EB"/>
+<stop offset="1" stop-color="#33B1FF"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-28-paint5_radial_342923_684" cx="0" cy="0" r="1" gradientTransform="matrix(-12.0643 4.36898 -5.2947 -16.1256 25.5847 14.3958)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AD7DFF"/>
+<stop offset="1" stop-color="#AD7DFF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

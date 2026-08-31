@@ -1,0 +1,21 @@
+<svg aria-label="Viva standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.7574 12.2426C14.1005 14.5858 17.8995 14.5858 20.2426 12.2426C22.5858 9.89949 22.5858 6.10051 20.2426 3.75736C17.8995 1.41421 14.1005 1.41421 11.7574 3.75736C9.41421 6.1005 9.41421 9.8995 11.7574 12.2426Z" fill="url(#product-viva-standard-32-paint0_linear_213074_1527)"/>
+<path d="M23 26.4192L29.7499 18.2768C30.0862 17.8678 30.09 17.2871 29.7208 16.9049C25.7715 12.8178 19.8382 13.0437 16.1075 17.5812L9 26.4192C12.9254 31.1936 19.0746 31.1936 23 26.4192Z" fill="url(#product-viva-standard-32-paint1_linear_213074_1527)"/>
+<path d="M9 26.4193L2.25003 18.2767C1.91383 17.8677 1.90998 17.2871 2.27925 16.9049C6.22848 12.8178 12.1618 13.0437 15.8925 17.5811L23 26.4193C19.0746 31.1936 12.9254 31.1935 9 26.4193Z" fill="url(#product-viva-standard-32-paint2_linear_213074_1527)"/>
+<defs>
+<linearGradient id="product-viva-standard-32-paint0_linear_213074_1527" x1="19.7505" y1="12.5002" x2="15.8089" y2="2.17666" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5077CB"/>
+<stop offset="1" stop-color="#72E4ED"/>
+</linearGradient>
+<linearGradient id="product-viva-standard-32-paint1_linear_213074_1527" x1="15.8176" y1="23.123" x2="25.3034" y2="10.29" gradientUnits="userSpaceOnUse">
+<stop stop-color="#213781"/>
+<stop offset="0.667497" stop-color="#6C7EE5"/>
+<stop offset="0.980043" stop-color="#B7A1ED"/>
+</linearGradient>
+<linearGradient id="product-viva-standard-32-paint2_linear_213074_1527" x1="6.4862" y1="15.2629" x2="11.5883" y2="31.226" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4AA5D9"/>
+<stop offset="0.562399" stop-color="#436DCD"/>
+<stop offset="0.999411" stop-color="#213781"/>
+</linearGradient>
+</defs>
+</svg>

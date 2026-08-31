@@ -1,0 +1,21 @@
+<svg aria-label="Places standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.83972 15.0076V4.03516H13.1313C13.5848 4.86433 13.8426 5.81584 13.8426 6.82756C13.8426 8.25407 13.33 9.56087 12.4791 10.5738H12.4825L9.15848 14.4886C8.81739 14.8903 8.31754 15.0633 7.83972 15.0076Z" fill="url(#product-places-standard-16-paint0_radial_277017_2340)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.01504 15.0177V7.2438C8.01504 5.63457 9.31957 4.33003 10.9288 4.33003C12.4802 4.33003 13.7484 5.54245 13.8376 7.07146C13.8409 6.99057 13.8426 6.90925 13.8426 6.82754C13.8426 3.60908 11.2335 1 8.01504 1C4.79658 1 2.1875 3.60908 2.1875 6.82754C2.1875 8.25405 2.70005 9.56084 3.55104 10.5738H3.54755L6.87162 14.4886C7.17114 14.8414 7.59309 15.0177 8.01504 15.0177Z" fill="url(#product-places-standard-16-paint1_radial_277017_2340)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.01504 15.0177V7.2438C8.01504 5.63457 9.31957 4.33003 10.9288 4.33003C12.4802 4.33003 13.7484 5.54245 13.8376 7.07146C13.8409 6.99057 13.8426 6.90925 13.8426 6.82754C13.8426 3.60908 11.2335 1 8.01504 1C4.79658 1 2.1875 3.60908 2.1875 6.82754C2.1875 8.25405 2.70005 9.56084 3.55104 10.5738H3.54755L6.87162 14.4886C7.17114 14.8414 7.59309 15.0177 8.01504 15.0177Z" fill="url(#product-places-standard-16-paint2_linear_277017_2340)"/>
+<defs>
+<radialGradient id="product-places-standard-16-paint0_radial_277017_2340" cx="0" cy="0" r="1" gradientTransform="matrix(3.97 -10.6462 5.84067 2.20338 8.00199 15.0178)" gradientUnits="userSpaceOnUse">
+<stop offset="0.124165" stop-color="#D59DFF"/>
+<stop offset="0.784303" stop-color="#0078D4"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</radialGradient>
+<radialGradient id="product-places-standard-16-paint1_radial_277017_2340" cx="0" cy="0" r="1" gradientTransform="matrix(10.2689 4.19269 -4.89703 14.0409 2.78324 4.35181)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#43EFB1"/>
+<stop offset="0.61125" stop-color="#21C6B3"/>
+<stop offset="1" stop-color="#1E8FCF"/>
+</radialGradient>
+<linearGradient id="product-places-standard-16-paint2_linear_277017_2340" x1="11.4122" y1="20.5985" x2="1.04904" y2="11.9777" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A194F4"/>
+<stop offset="1" stop-color="#975ECE" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

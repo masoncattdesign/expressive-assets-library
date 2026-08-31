@@ -1,0 +1,66 @@
+{
+  "id": "product.viva-learning",
+  "name": "Viva Learning",
+  "keywords": [
+    "viva",
+    "learning"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "12": "assets/icons/product/viva-learning/filled-12.svg",
+      "16": "assets/icons/product/viva-learning/filled-16.svg",
+      "20": "assets/icons/product/viva-learning/filled-20.svg",
+      "24": "assets/icons/product/viva-learning/filled-24.svg",
+      "28": "assets/icons/product/viva-learning/filled-28.svg",
+      "32": "assets/icons/product/viva-learning/filled-32.svg",
+      "48": "assets/icons/product/viva-learning/filled-48.svg"
+    },
+    "outline": {
+      "12": "assets/icons/product/viva-learning/outline-12.svg",
+      "16": "assets/icons/product/viva-learning/outline-16.svg",
+      "20": "assets/icons/product/viva-learning/outline-20.svg",
+      "24": "assets/icons/product/viva-learning/outline-24.svg",
+      "28": "assets/icons/product/viva-learning/outline-28.svg",
+      "32": "assets/icons/product/viva-learning/outline-32.svg",
+      "48": "assets/icons/product/viva-learning/outline-48.svg"
+    },
+    "standard": {
+      "12": "assets/icons/product/viva-learning/standard-12.svg",
+      "16": "assets/icons/product/viva-learning/standard-16.svg",
+      "20": "assets/icons/product/viva-learning/standard-20.svg",
+      "24": "assets/icons/product/viva-learning/standard-24.svg",
+      "28": "assets/icons/product/viva-learning/standard-28.svg",
+      "32": "assets/icons/product/viva-learning/standard-32.svg",
+      "48": "assets/icons/product/viva-learning/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "213074:1674"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

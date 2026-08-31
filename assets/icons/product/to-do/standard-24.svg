@@ -1,0 +1,10 @@
+<svg aria-label="To Do standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 8.5002L2.3 11.2002C1.9 11.6002 1.9 12.2002 2.3 12.6002L6.4 16.7002L10.5 12.6002L6.4 8.5002C6 8.1002 5.4 8.1002 5 8.5002Z" fill="#185ABD"/>
+<path d="M21.6 7L18.9 4.3C18.5 3.9 17.9 3.9 17.5 4.3L10 11.8L6.40001 15.3C6.00001 15.7 6.00001 16.3 6.40001 16.7L9.20001 19.5C9.60001 19.9 10.2 19.9 10.6 19.5L21.5 8.6C22 8.1 22 7.4 21.6 7Z" fill="url(#product-to-do-standard-24-paint0_linear_5634_608)"/>
+<defs>
+<linearGradient id="product-to-do-standard-24-paint0_linear_5634_608" x1="13.7208" y1="-0.383706" x2="1.77386" y2="12.0908" gradientUnits="userSpaceOnUse">
+<stop stop-color="#62C4F6"/>
+<stop offset="1" stop-color="#2A88E5"/>
+</linearGradient>
+</defs>
+</svg>

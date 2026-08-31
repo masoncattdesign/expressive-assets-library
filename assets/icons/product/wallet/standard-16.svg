@@ -1,0 +1,40 @@
+<svg aria-label="Wallet standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.00002 4.99953C1.00001 3.89495 1.89544 2.99951 3.00002 2.99951H10C11.1046 2.99951 12 3.89494 12 4.99951V6.99951H3.00002C1.89545 6.99951 1.00002 6.10409 1.00002 4.99953Z" fill="url(#product-wallet-standard-16-paint0_linear_342923_687)"/>
+<path d="M1.00002 4.99953C1.00001 3.89495 1.89544 2.99951 3.00002 2.99951H10C11.1046 2.99951 12 3.89494 12 4.99951V6.99951H3.00002C1.89545 6.99951 1.00002 6.10409 1.00002 4.99953Z" fill="url(#product-wallet-standard-16-paint1_radial_342923_687)"/>
+<path d="M2.30821 7.29807C1.92147 6.62823 2.15098 5.7717 2.82083 5.38496L10.098 1.18347C10.7679 0.796734 11.6244 1.02624 12.0111 1.69609L14.8121 6.54755C15.1989 7.2174 14.9694 8.07393 14.2995 8.46066L7.02232 12.6622C6.35247 13.0489 5.49594 12.8194 5.1092 12.1495L2.30821 7.29807Z" fill="url(#product-wallet-standard-16-paint2_linear_342923_687)"/>
+<path d="M2.30821 7.29807C1.92147 6.62823 2.15098 5.7717 2.82083 5.38496L10.098 1.18347C10.7679 0.796734 11.6244 1.02624 12.0111 1.69609L14.8121 6.54755C15.1989 7.2174 14.9694 8.07393 14.2995 8.46066L7.02232 12.6622C6.35247 13.0489 5.49594 12.8194 5.1092 12.1495L2.30821 7.29807Z" fill="url(#product-wallet-standard-16-paint3_radial_342923_687)"/>
+<path d="M1.00001 5.00098L1 12.0003C0.999997 13.6572 2.34325 15.0004 4.00017 15.0003L12.0001 14.9998C13.1046 14.9998 14 14.1043 14 12.9998V8.9997C14 7.89513 13.1046 6.9997 12 6.9997H3.00001C1.89587 6.9997 1.0007 6.10496 1.00001 5.00098Z" fill="url(#product-wallet-standard-16-paint4_linear_342923_687)"/>
+<path d="M1.00001 5.00098L1 12.0003C0.999997 13.6572 2.34325 15.0004 4.00017 15.0003L12.0001 14.9998C13.1046 14.9998 14 14.1043 14 12.9998V8.9997C14 7.89513 13.1046 6.9997 12 6.9997H3.00001C1.89587 6.9997 1.0007 6.10496 1.00001 5.00098Z" fill="url(#product-wallet-standard-16-paint5_radial_342923_687)"/>
+<path d="M9 10.4995C9 10.2234 9.22386 9.99951 9.5 9.99951H11C11.2761 9.99951 11.5 10.2234 11.5 10.4995V11.9995C11.5 12.2757 11.2761 12.4995 11 12.4995H9.5C9.22386 12.4995 9 12.2757 9 11.9995V10.4995Z" fill="#1A43BC"/>
+<defs>
+<linearGradient id="product-wallet-standard-16-paint0_linear_342923_687" x1="11.9091" y1="4.99951" x2="1.00001" y2="4.99951" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2253CE"/>
+<stop offset="0.753615" stop-color="#004099"/>
+<stop offset="1" stop-color="#003580"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-16-paint1_radial_342923_687" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.3637 4.99951) rotate(180) scale(11.3636 4.35)">
+<stop stop-color="#2253CE"/>
+<stop offset="0.764063" stop-color="#2253CE"/>
+<stop offset="1" stop-color="#003580"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-16-paint2_linear_342923_687" x1="12.6708" y1="0.995606" x2="3.94209" y2="6.08517" gradientUnits="userSpaceOnUse">
+<stop offset="0.14" stop-color="#EF91F3"/>
+<stop offset="0.54" stop-color="#E656EB"/>
+<stop offset="1" stop-color="#C543FE"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-16-paint3_radial_342923_687" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.99998 7.49951) scale(12 2.37879)">
+<stop offset="0.454281" stop-color="#B91CBF"/>
+<stop offset="1" stop-color="#B91CBF" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-wallet-standard-16-paint4_linear_342923_687" x1="14.0713" y1="10.3315" x2="1" y2="10.3315" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2764E7"/>
+<stop offset="0.725" stop-color="#367AF2"/>
+<stop offset="0.87" stop-color="#0091EB"/>
+<stop offset="1" stop-color="#33B1FF"/>
+</linearGradient>
+<radialGradient id="product-wallet-standard-16-paint5_radial_342923_687" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.3047 8.69757) rotate(160.974) scale(7.16021 9.11302)">
+<stop stop-color="#AD7DFF"/>
+<stop offset="1" stop-color="#AD7DFF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

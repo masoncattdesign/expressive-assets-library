@@ -6,28 +6,32 @@
   ],
   "type": "icon",
   "collection": "product",
-  "product": "Launcher",
   "status": "draft",
   "themes": [
-    "standard",
-    "outline"
+    "outline",
+    "standard"
   ],
   "sizes": [
     24
   ],
   "colors": {
-    "primary": "#005DB1",
-    "secondary": "#3DB5F1"
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
   },
   "recolorable": true,
   "variants": {
-    "standard": {
-      "24": "assets/icons/product/launcher/standard-24.svg"
-    },
     "outline": {
       "24": "assets/icons/product/launcher/outline-24.svg"
+    },
+    "standard": {
+      "24": "assets/icons/product/launcher/standard-24.svg"
     }
   },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "101619:204"
+  },
   "version": "1.0.0",
-  "updated": "2026-08-25"
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
 }

@@ -1,0 +1,14 @@
+<svg aria-label="Viva Connections standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 16C2 12.134 5.13401 9 9 9H19.5C21.433 9 23 10.5668 23 12.5C23 14.4332 21.433 16 19.5 16H12.5C10.567 16 9 17.5668 9 19.5C9 21.4332 10.567 23 12.5 23H23C23 26.866 19.866 30 16 30H9C5.13401 30 2 26.866 2 23V16Z" fill="url(#product-viva-connections-standard-32-paint0_linear_213074_1837)"/>
+<path d="M30 16C30 19.866 26.866 23 23 23H12.5C10.567 23 9 21.4332 9 19.5C9 17.5668 10.567 16 12.5 16H19.5C21.433 16 23 14.4332 23 12.5C23 10.5668 21.433 9 19.5 9L9 9C9 5.13401 12.134 2 16 2L23 2C26.866 2 30 5.13401 30 9V16Z" fill="url(#product-viva-connections-standard-32-paint1_linear_213074_1837)"/>
+<defs>
+<linearGradient id="product-viva-connections-standard-32-paint0_linear_213074_1837" x1="4.23129" y1="11.4896" x2="20.0457" y2="28.7712" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#0D3766"/>
+</linearGradient>
+<linearGradient id="product-viva-connections-standard-32-paint1_linear_213074_1837" x1="11.7071" y1="3.78051" x2="27.2899" y2="21.3928" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6BD6F6"/>
+<stop offset="1" stop-color="#1489CE"/>
+</linearGradient>
+</defs>
+</svg>

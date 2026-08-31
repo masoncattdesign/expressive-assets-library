@@ -1,0 +1,62 @@
+{
+  "id": "product.sticky-notes",
+  "name": "Sticky Notes",
+  "keywords": [
+    "sticky",
+    "notes"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "16": "assets/icons/product/sticky-notes/filled-16.svg",
+      "20": "assets/icons/product/sticky-notes/filled-20.svg",
+      "24": "assets/icons/product/sticky-notes/filled-24.svg",
+      "28": "assets/icons/product/sticky-notes/filled-28.svg",
+      "32": "assets/icons/product/sticky-notes/filled-32.svg",
+      "48": "assets/icons/product/sticky-notes/filled-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/sticky-notes/outline-16.svg",
+      "20": "assets/icons/product/sticky-notes/outline-20.svg",
+      "24": "assets/icons/product/sticky-notes/outline-24.svg",
+      "28": "assets/icons/product/sticky-notes/outline-28.svg",
+      "32": "assets/icons/product/sticky-notes/outline-32.svg",
+      "48": "assets/icons/product/sticky-notes/outline-48.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/sticky-notes/standard-16.svg",
+      "20": "assets/icons/product/sticky-notes/standard-20.svg",
+      "24": "assets/icons/product/sticky-notes/standard-24.svg",
+      "28": "assets/icons/product/sticky-notes/standard-28.svg",
+      "32": "assets/icons/product/sticky-notes/standard-32.svg",
+      "48": "assets/icons/product/sticky-notes/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "299885:1981"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

@@ -1,0 +1,32 @@
+<svg aria-label="Security Copilot standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.16278 13.7163L5.00059 10.5535C5.00059 10.5535 4.0425 4.69514 3.97212 4.23608C3.86655 3.54777 4.13207 2.81413 4.66203 2.28417C5.54549 1.40072 6.9781 1.40072 7.86155 2.28417L9.51169 3.88899L11.6459 10.4213C12.5294 11.3048 12.2458 12.8323 11.3623 13.7163C10.4788 14.5997 9.04624 14.5997 8.16278 13.7163Z" fill="url(#product-security-copilot-standard-16-paint0_linear_553499_695)"/>
+<path d="M8.16278 13.7163L5.00059 10.5535C5.00059 10.5535 4.0425 4.69514 3.97212 4.23608C3.86655 3.54777 4.13207 2.81413 4.66203 2.28417C5.54549 1.40072 6.9781 1.40072 7.86155 2.28417L9.51169 3.88899L11.6459 10.4213C12.5294 11.3048 12.2458 12.8323 11.3623 13.7163C10.4788 14.5997 9.04624 14.5997 8.16278 13.7163Z" fill="url(#product-security-copilot-standard-16-paint1_radial_553499_695)" fill-opacity="0.4"/>
+<path d="M11.3508 10.5352L9.32533 8.51345C7.68318 6.87398 7.68318 4.21669 9.32533 2.57775L9.54019 2.36341C10.1176 1.78706 11.0544 1.78706 11.6318 2.36341L15.1619 5.88709C16.2794 7.00247 16.2794 8.81096 15.1619 9.92634L11.3508 13.7299C12.2348 12.8475 12.2348 11.4176 11.3508 10.5352Z" fill="url(#product-security-copilot-standard-16-paint2_radial_553499_695)"/>
+<path d="M0.839332 10.1438C-0.279777 9.0274 -0.279777 7.21678 0.839332 6.10033L4.65625 2.29248C3.7712 3.1754 3.7712 4.60748 4.65625 5.49039L6.67214 7.50202C8.31695 9.14309 8.31695 11.8036 6.67214 13.4441L6.45674 13.659C5.87826 14.2359 4.94042 14.2359 4.36194 13.659L0.839332 10.1438Z" fill="url(#product-security-copilot-standard-16-paint3_radial_553499_695)"/>
+<path d="M0.839332 10.1438C-0.279777 9.0274 -0.279777 7.21678 0.839332 6.10033L4.65625 2.29248C3.7712 3.1754 3.7712 4.60748 4.65625 5.49039L6.67214 7.50202C8.31695 9.14309 8.31695 11.8036 6.67214 13.4441L6.45674 13.659C5.87826 14.2359 4.94042 14.2359 4.36194 13.659L0.839332 10.1438Z" fill="url(#product-security-copilot-standard-16-paint4_linear_553499_695)" fill-opacity="0.8"/>
+<defs>
+<linearGradient id="product-security-copilot-standard-16-paint0_linear_553499_695" x1="3.93744" y1="3.1838" x2="11.4614" y2="13.365" gradientUnits="userSpaceOnUse">
+<stop stop-color="#294EE4"/>
+<stop offset="0.512922" stop-color="#0938A5"/>
+<stop offset="0.97828" stop-color="#294EE4"/>
+</linearGradient>
+<radialGradient id="product-security-copilot-standard-16-paint1_radial_553499_695" cx="0" cy="0" r="1" gradientTransform="matrix(4.68064 5.52689 -14.7786 15.2766 6.81897 8.00022)" gradientUnits="userSpaceOnUse">
+<stop offset="0.227837" stop-color="#003375"/>
+<stop offset="0.781673" stop-color="#003375" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="product-security-copilot-standard-16-paint2_radial_553499_695" cx="0" cy="0" r="1" gradientTransform="matrix(10.6245 5.68725 -6.84044 4.40154 6.0314 3.99707)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#23C0FE"/>
+<stop offset="0.697115" stop-color="#1D99FF"/>
+<stop offset="1" stop-color="#077EEE"/>
+</radialGradient>
+<radialGradient id="product-security-copilot-standard-16-paint3_radial_553499_695" cx="0" cy="0" r="1" gradientTransform="matrix(-8.53088 4.06233 -0.261856 -11.3942 7.93688 6.18398)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#92EEFE"/>
+<stop offset="0.520063" stop-color="#35DDFF"/>
+<stop offset="1" stop-color="#08B1F9"/>
+</radialGradient>
+<linearGradient id="product-security-copilot-standard-16-paint4_linear_553499_695" x1="6.15571" y1="11.2775" x2="1.06218" y2="6.34022" gradientUnits="userSpaceOnUse">
+<stop offset="0.110619" stop-color="#22CBFD" stop-opacity="0"/>
+<stop offset="0.97092" stop-color="#92DEFF"/>
+</linearGradient>
+</defs>
+</svg>

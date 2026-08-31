@@ -1,0 +1,20 @@
+<svg aria-label="Viva Amplify standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.3332 34.8336C22.3332 39.8962 18.2292 44.0002 13.1666 44.0002C8.10403 44.0002 4 39.8962 4 34.8336C4 29.771 8.10403 25.667 13.1666 25.667C18.2292 25.667 22.3332 29.771 22.3332 34.8336Z" fill="url(#product-viva-amplify-standard-48-paint0_linear_241594_2523)"/>
+<path d="M12.4422 15.6168L4.96094 30.7388C6.0406 29.0834 7.89607 28.0003 10.0198 28.0003C12.3584 28.0003 14.3871 29.3271 15.3943 31.269C16.9796 34.3421 18.4704 37.4681 20.0072 40.5659C20.9805 42.5972 23.0557 44 25.4585 44.0001L38.5835 44.0002L35.8603 42.8638L22.6401 17.2689C21.2073 15.5275 19.0355 14.417 16.6044 14.417C15.0744 14.417 13.6472 14.8568 12.4422 15.6168Z" fill="url(#product-viva-amplify-standard-48-paint1_linear_241594_2523)"/>
+<path d="M30.7677 8.4832L42.5409 31.9232C42.9786 32.7884 43.3418 33.7885 43.3418 33.7885C43.7297 34.7955 43.9654 35.9273 44 37.1248C44 37.4025 44.0002 37.6803 44.0002 37.9581C44.0002 41.2948 41.5284 43.9997 38.4794 43.9997C36.3567 43.9997 34.5138 42.6887 33.5899 40.7663C30.0416 33.7877 26.6428 26.7067 22.9331 19.8129C21.6885 17.5406 19.2748 15.9999 16.5013 15.9999C14.3404 15.9999 12.3979 16.9352 11.0566 18.423L15.9827 8.48325C17.3731 5.81887 20.1618 4 23.3752 4C26.5886 4 29.3772 5.81884 30.7677 8.4832Z" fill="url(#product-viva-amplify-standard-48-paint2_linear_241594_2523)"/>
+<defs>
+<linearGradient id="product-viva-amplify-standard-48-paint0_linear_241594_2523" x1="0.2649" y1="40.3019" x2="18.6812" y2="34.9767" gradientUnits="userSpaceOnUse">
+<stop offset="0.141549" stop-color="#9B52AA"/>
+<stop offset="0.9988" stop-color="#4F2757"/>
+</linearGradient>
+<linearGradient id="product-viva-amplify-standard-48-paint1_linear_241594_2523" x1="26.9131" y1="37.9188" x2="13.7779" y2="17.8956" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B75CC9"/>
+<stop offset="1" stop-color="#E8AAF4"/>
+</linearGradient>
+<linearGradient id="product-viva-amplify-standard-48-paint2_linear_241594_2523" x1="19.9545" y1="10.3541" x2="37.6249" y2="45.0935" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CB6ADE"/>
+<stop offset="0.435975" stop-color="#8D479B"/>
+<stop offset="1" stop-color="#4F2757"/>
+</linearGradient>
+</defs>
+</svg>

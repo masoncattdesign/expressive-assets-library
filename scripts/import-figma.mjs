@@ -46,7 +46,10 @@ const SURVEY_PATH = join(ROOT, 'figma-survey.json');
 
 const args = process.argv.slice(2);
 const has = (flag) => args.includes(flag);
-const arg = (name) => args.find((a) => a.startsWith(`--${name}=`))?.split('=').slice(1).join('=');
+// Last occurrence wins, the way every other CLI behaves. `npm run figma:run --
+// --plan=other.json` appends to the flags already in the npm script, so taking
+// the FIRST match would silently run the wrong plan.
+const arg = (name) => args.filter((a) => a.startsWith(`--${name}=`)).pop()?.split('=').slice(1).join('=');
 
 const TOKEN = process.env.FIGMA_TOKEN;
 const FILE_KEY = arg('file') || process.env.FIGMA_FILE_KEY;
@@ -234,9 +237,17 @@ const namespaceIds = (svg, prefix) =>
     .replace(/id="([^"]+)"/g, (_, id) => `id="${prefix}-${id}"`)
     .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`);
 
-function prepare(svg, { prefix, label }) {
+function prepare(svg, { prefix, label, theme }) {
   let out = svg.trim().replace(/^﻿/, '').replace(/<\?xml[^>]*\?>\s*/g, '');
   out = namespaceIds(out, prefix);
+
+  // Monochrome themes export from Figma as flat black. Everywhere else in this
+  // library Outline and Filled are drawn in currentColor, which is what lets
+  // the accent picker retint them; leaving these hard black would make one
+  // collection quietly behave differently from the rest.
+  if (theme && theme !== 'standard') {
+    out = out.replace(/(fill|stroke)="(black|#000|#000000)"/gi, '$1="currentColor"');
+  }
   if (!out.includes('role="img"')) out = out.replace('<svg ', '<svg role="img" ');
   if (!out.includes('aria-label=')) {
     out = out.replace('<svg ', `<svg aria-label="${label.replace(/"/g, '&quot;')}" `);
@@ -380,7 +391,7 @@ async function importAssets() {
         const rel = `${dir}/${theme}-${size}.svg`;
         await writeFile(
           join(ROOT, rel),
-          prepare(svg, { prefix: `${asset.id.replace(/\./g, '-')}-${theme}-${size}`, label: `${asset.name} ${theme} ${size}` }),
+          prepare(svg, { prefix: `${asset.id.replace(/\./g, '-')}-${theme}-${size}`, label: `${asset.name} ${theme} ${size}`, theme }),
           'utf8'
         );
         (variants[theme] ||= {})[size] = rel;
@@ -548,6 +559,7 @@ async function runPlan() {
           prepare(svg, {
             prefix: `${asset.id.replace(/\./g, '-')}-${theme}-${size}`,
             label: `${asset.name} ${theme} ${size}`,
+            theme,
           }),
           'utf8'
         );
@@ -570,13 +582,17 @@ async function runPlan() {
           themes: Object.keys(variants),
           sizes: asset.sizes,
           colors: extractColors(sample),
-          recolorable: false,
+          // isTintable() asks each theme's source for tint hooks. Standard is
+          // baked brand colour and has none, so opening this up costs nothing
+          // there while letting the currentColor themes take an accent.
+          recolorable: Object.keys(variants).some((t) => t !== 'standard'),
           variants,
           figma: { fileKey, nodeId: asset.nodeId },
           version: '1.0.0',
           updated: today,
-          notes:
-            'Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.',
+          notes: Object.keys(variants).some((t) => t !== 'standard')
+            ? 'Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.'
+            : 'Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.',
         },
         null,
         2

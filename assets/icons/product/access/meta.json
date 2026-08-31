@@ -6,12 +6,11 @@
   ],
   "type": "icon",
   "collection": "product",
-  "product": "Access",
   "status": "draft",
   "themes": [
-    "standard",
     "filled",
-    "outline"
+    "outline",
+    "standard"
   ],
   "sizes": [
     16,
@@ -22,19 +21,11 @@
     48
   ],
   "colors": {
-    "primary": "#9C0D55",
-    "secondary": "#FF5778"
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
   },
   "recolorable": true,
   "variants": {
-    "standard": {
-      "16": "assets/icons/product/access/standard-16.svg",
-      "20": "assets/icons/product/access/standard-20.svg",
-      "24": "assets/icons/product/access/standard-24.svg",
-      "28": "assets/icons/product/access/standard-28.svg",
-      "32": "assets/icons/product/access/standard-32.svg",
-      "48": "assets/icons/product/access/standard-48.svg"
-    },
     "filled": {
       "16": "assets/icons/product/access/filled-16.svg",
       "20": "assets/icons/product/access/filled-20.svg",
@@ -50,8 +41,21 @@
       "28": "assets/icons/product/access/outline-28.svg",
       "32": "assets/icons/product/access/outline-32.svg",
       "48": "assets/icons/product/access/outline-48.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/access/standard-16.svg",
+      "20": "assets/icons/product/access/standard-20.svg",
+      "24": "assets/icons/product/access/standard-24.svg",
+      "28": "assets/icons/product/access/standard-28.svg",
+      "32": "assets/icons/product/access/standard-32.svg",
+      "48": "assets/icons/product/access/standard-48.svg"
     }
   },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "500631:7859"
+  },
   "version": "1.0.0",
-  "updated": "2026-08-25"
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
 }

@@ -6,11 +6,10 @@
   ],
   "type": "icon",
   "collection": "product",
-  "product": "GitHub",
   "status": "draft",
   "themes": [
-    "standard",
-    "filled"
+    "filled",
+    "standard"
   ],
   "sizes": [
     16,
@@ -26,14 +25,6 @@
   },
   "recolorable": true,
   "variants": {
-    "standard": {
-      "16": "assets/icons/product/github/standard-16.svg",
-      "20": "assets/icons/product/github/standard-20.svg",
-      "24": "assets/icons/product/github/standard-24.svg",
-      "28": "assets/icons/product/github/standard-28.svg",
-      "32": "assets/icons/product/github/standard-32.svg",
-      "48": "assets/icons/product/github/standard-48.svg"
-    },
     "filled": {
       "16": "assets/icons/product/github/filled-16.svg",
       "20": "assets/icons/product/github/filled-20.svg",
@@ -41,8 +32,21 @@
       "28": "assets/icons/product/github/filled-28.svg",
       "32": "assets/icons/product/github/filled-32.svg",
       "48": "assets/icons/product/github/filled-48.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/github/standard-16.svg",
+      "20": "assets/icons/product/github/standard-20.svg",
+      "24": "assets/icons/product/github/standard-24.svg",
+      "28": "assets/icons/product/github/standard-28.svg",
+      "32": "assets/icons/product/github/standard-32.svg",
+      "48": "assets/icons/product/github/standard-48.svg"
     }
   },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "515207:550"
+  },
   "version": "1.0.0",
-  "updated": "2026-08-25"
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
 }

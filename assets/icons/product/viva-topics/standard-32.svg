@@ -1,0 +1,19 @@
+<svg aria-label="Viva Topics standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="14.5" cy="10.5" r="8.5" fill="url(#product-viva-topics-standard-32-paint0_linear_213074_1643)"/>
+<path d="M6.45012 13.2329L18 16.994L19.1418 24.8402C17.7008 27.8899 14.5968 29.9998 11 29.9998C6.02944 29.9998 2 25.9704 2 20.9998C2 17.6892 3.78755 14.796 6.45012 13.2329Z" fill="url(#product-viva-topics-standard-32-paint1_linear_213074_1643)"/>
+<path d="M22.865 12.0013L18 17L19.1415 24.8415C20.2478 25.5737 21.5741 26 23 26C26.866 26 30 22.866 30 19C30 15.134 26.866 12 23 12C22.9549 12 22.9099 12.0004 22.865 12.0013Z" fill="url(#product-viva-topics-standard-32-paint2_linear_213074_1643)"/>
+<defs>
+<linearGradient id="product-viva-topics-standard-32-paint0_linear_213074_1643" x1="6.3533" y1="1.11421" x2="18.2173" y2="19.5613" gradientUnits="userSpaceOnUse">
+<stop offset="0.176282" stop-color="#D1AAF4"/>
+<stop offset="0.94425" stop-color="#8A5CC9"/>
+</linearGradient>
+<linearGradient id="product-viva-topics-standard-32-paint1_linear_213074_1643" x1="2.48541" y1="11.5868" x2="15.0758" y2="28.9585" gradientUnits="userSpaceOnUse">
+<stop offset="0.1947" stop-color="#7252AA"/>
+<stop offset="0.9988" stop-color="#372757"/>
+</linearGradient>
+<linearGradient id="product-viva-topics-standard-32-paint2_linear_213074_1643" x1="27.8446" y1="24.1104" x2="19.87" y2="12.386" gradientUnits="userSpaceOnUse">
+<stop stop-color="#47326B"/>
+<stop offset="1" stop-color="#8661C5"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,62 @@
+{
+  "id": "product.suite-taskbar",
+  "name": "Suite Taskbar",
+  "keywords": [
+    "suite",
+    "taskbar"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "outline",
+    "standard"
+  ],
+  "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "16": "assets/icons/product/suite-taskbar/filled-16.svg",
+      "20": "assets/icons/product/suite-taskbar/filled-20.svg",
+      "24": "assets/icons/product/suite-taskbar/filled-24.svg",
+      "28": "assets/icons/product/suite-taskbar/filled-28.svg",
+      "32": "assets/icons/product/suite-taskbar/filled-32.svg",
+      "48": "assets/icons/product/suite-taskbar/filled-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/suite-taskbar/outline-16.svg",
+      "20": "assets/icons/product/suite-taskbar/outline-20.svg",
+      "24": "assets/icons/product/suite-taskbar/outline-24.svg",
+      "28": "assets/icons/product/suite-taskbar/outline-28.svg",
+      "32": "assets/icons/product/suite-taskbar/outline-32.svg",
+      "48": "assets/icons/product/suite-taskbar/outline-48.svg"
+    },
+    "standard": {
+      "16": "assets/icons/product/suite-taskbar/standard-16.svg",
+      "20": "assets/icons/product/suite-taskbar/standard-20.svg",
+      "24": "assets/icons/product/suite-taskbar/standard-24.svg",
+      "28": "assets/icons/product/suite-taskbar/standard-28.svg",
+      "32": "assets/icons/product/suite-taskbar/standard-32.svg",
+      "48": "assets/icons/product/suite-taskbar/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "458246:4085"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}

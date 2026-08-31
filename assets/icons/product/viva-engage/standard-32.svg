@@ -1,0 +1,30 @@
+<svg aria-label="Viva Engage standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 2C12.866 2 16 5.13401 16 9L16 18H2V9C2 5.13401 5.13401 2 9 2Z" fill="url(#product-viva-engage-standard-32-paint0_linear_241594_2493)"/>
+<path d="M23 2C19.134 2 16 5.13401 16 9L16 18H30V9C30 5.13401 26.866 2 23 2Z" fill="url(#product-viva-engage-standard-32-paint1_linear_241594_2493)"/>
+<path d="M23 14C23 10.134 19.866 7 16 7C12.134 7 9 10.134 9 14C9 17.866 12.134 21 16 21C19.866 21 23 17.866 23 14Z" fill="url(#product-viva-engage-standard-32-paint2_linear_241594_2493)"/>
+<path d="M29.9939 8.70508C29.8178 12.9837 25.9506 15.9996 21.5 15.9996C17.3579 15.9996 14 19.1336 14 22.9996C14 26.8656 17.3579 29.9996 21.5 29.9996C27.1573 29.9996 30 25.1143 30 19.9371V8.99957C30 8.90091 29.998 8.80274 29.9939 8.70508Z" fill="url(#product-viva-engage-standard-32-paint3_linear_241594_2493)"/>
+<path d="M2 8.99956V19.9371C2 25.1143 4.84273 29.9996 10.5 29.9996C14.6421 29.9996 18 26.8656 18 22.9996C18 19.1336 14.6421 15.9996 10.5 15.9996C6.04943 15.9996 2.18217 12.9837 2.00608 8.70508C2.00204 8.80274 2 8.90091 2 8.99956Z" fill="url(#product-viva-engage-standard-32-paint4_linear_241594_2493)"/>
+<defs>
+<linearGradient id="product-viva-engage-standard-32-paint0_linear_241594_2493" x1="4.625" y1="15.9259" x2="7.80194" y2="1.10616" gradientUnits="userSpaceOnUse">
+<stop stop-color="#053377"/>
+<stop offset="1" stop-color="#2F91F2"/>
+</linearGradient>
+<linearGradient id="product-viva-engage-standard-32-paint1_linear_241594_2493" x1="25.3454" y1="4.20205" x2="18.1795" y2="14.7847" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4AC1FF"/>
+<stop offset="0.926632" stop-color="#155EB5"/>
+</linearGradient>
+<linearGradient id="product-viva-engage-standard-32-paint2_linear_241594_2493" x1="14.1042" y1="8.89583" x2="20.9583" y2="22.4583" gradientUnits="userSpaceOnUse">
+<stop stop-color="#96DFFF"/>
+<stop offset="0.413439" stop-color="#53ADEE"/>
+<stop offset="1" stop-color="#006BB9"/>
+</linearGradient>
+<linearGradient id="product-viva-engage-standard-32-paint3_linear_241594_2493" x1="19.1321" y1="18.9148" x2="26.4481" y2="31.5338" gradientUnits="userSpaceOnUse">
+<stop offset="0.0799194" stop-color="#4AC1FF"/>
+<stop offset="1" stop-color="#155EB5"/>
+</linearGradient>
+<linearGradient id="product-viva-engage-standard-32-paint4_linear_241594_2493" x1="5.03632" y1="14.0307" x2="11.8511" y2="31.0402" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2F91F2"/>
+<stop offset="1" stop-color="#053377"/>
+</linearGradient>
+</defs>
+</svg>

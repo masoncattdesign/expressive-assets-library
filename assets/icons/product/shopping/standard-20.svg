@@ -1,0 +1,25 @@
+<svg aria-label="Shopping standard 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.9054 8.63402C19.077 9.27445 18.9871 9.95681 18.6556 10.531L14.7985 17.212C14.1081 18.4077 12.5792 18.8174 11.3834 18.1271L6.33172 15.2105C5.136 14.5201 4.7263 12.9912 5.41664 11.7954L9.2738 5.11446C9.60531 4.54023 10.1514 4.12123 10.7918 3.94962L15.9834 2.55853C16.6503 2.37985 17.3357 2.77559 17.5144 3.44243L18.9054 8.63402ZM13.5 7C14.3284 7 15 6.32843 15 5.5C15 4.67157 14.3284 4 13.5 4C12.6716 4 12 4.67157 12 5.5C12 6.32843 12.6716 7 13.5 7Z" fill="url(#product-shopping-standard-20-paint0_linear_404091_1182)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.9054 8.63402C19.077 9.27445 18.9871 9.95681 18.6556 10.531L14.7985 17.212C14.1081 18.4077 12.5792 18.8174 11.3834 18.1271L6.33172 15.2105C5.136 14.5201 4.7263 12.9912 5.41664 11.7954L9.2738 5.11446C9.60531 4.54023 10.1514 4.12123 10.7918 3.94962L15.9834 2.55853C16.6503 2.37985 17.3357 2.77559 17.5144 3.44243L18.9054 8.63402ZM13.5 7C14.3284 7 15 6.32843 15 5.5C15 4.67157 14.3284 4 13.5 4C12.6716 4 12 4.67157 12 5.5C12 6.32843 12.6716 7 13.5 7Z" fill="url(#product-shopping-standard-20-paint1_radial_404091_1182)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.9129 8.62473C16.9129 9.28775 16.6495 9.92361 16.1807 10.3924L9.89248 16.6808C8.91617 17.6571 7.33324 17.6571 6.35693 16.6808L2.23223 12.5561C1.25593 11.5798 1.25592 9.99693 2.23221 9.02062L8.52044 2.73225C8.98928 2.2634 9.62517 2 10.2882 2H15.663C16.3533 2 16.913 2.55965 16.913 3.25002L16.9129 8.62473ZM13.5 7C14.3284 7 15 6.32843 15 5.5C15 4.67157 14.3284 4 13.5 4C12.6716 4 12 4.67157 12 5.5C12 6.32843 12.6716 7 13.5 7Z" fill="url(#product-shopping-standard-20-paint2_linear_404091_1182)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.9129 8.62473C16.9129 9.28775 16.6495 9.92361 16.1807 10.3924L9.89248 16.6808C8.91617 17.6571 7.33324 17.6571 6.35693 16.6808L2.23223 12.5561C1.25593 11.5798 1.25592 9.99693 2.23221 9.02062L8.52044 2.73225C8.98928 2.2634 9.62517 2 10.2882 2H15.663C16.3533 2 16.913 2.55965 16.913 3.25002L16.9129 8.62473ZM13.5 7C14.3284 7 15 6.32843 15 5.5C15 4.67157 14.3284 4 13.5 4C12.6716 4 12 4.67157 12 5.5C12 6.32843 12.6716 7 13.5 7Z" fill="url(#product-shopping-standard-20-paint3_linear_404091_1182)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 4.5C12.9477 4.5 12.5 4.94772 12.5 5.5C12.5 6.05228 12.9477 6.5 13.5 6.5C14.0523 6.5 14.5 6.05228 14.5 5.5C14.5 4.94772 14.0523 4.5 13.5 4.5ZM11.5 5.5C11.5 4.39543 12.3954 3.5 13.5 3.5C14.6046 3.5 15.5 4.39543 15.5 5.5C15.5 6.60457 14.6046 7.5 13.5 7.5C12.3954 7.5 11.5 6.60457 11.5 5.5Z" fill="#2764E7"/>
+<defs>
+<linearGradient id="product-shopping-standard-20-paint0_linear_404091_1182" x1="15.2458" y1="20.6705" x2="15.2458" y2="2.51563" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF835C"/>
+<stop offset="1" stop-color="#FFD638"/>
+</linearGradient>
+<radialGradient id="product-shopping-standard-20-paint1_radial_404091_1182" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.0833 13.3335) rotate(39.8056) scale(3.25427 11.49)">
+<stop offset="0.148565" stop-color="#B91D6B" stop-opacity="0.45"/>
+<stop offset="0.733606" stop-color="#D7257D" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-shopping-standard-20-paint2_linear_404091_1182" x1="9.36331" y1="17.413" x2="6.59721" y2="2.51353" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9C6CFE"/>
+<stop offset="1" stop-color="#4894FE"/>
+</linearGradient>
+<linearGradient id="product-shopping-standard-20-paint3_linear_404091_1182" x1="4.80232" y1="-0.516406" x2="8.26238" y2="9.70653" gradientUnits="userSpaceOnUse">
+<stop stop-color="#61DBFF" stop-opacity="0.8"/>
+<stop offset="1" stop-color="#61DBFF" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

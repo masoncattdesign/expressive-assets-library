@@ -1,0 +1,27 @@
+<svg aria-label="Power Automate standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2243 1.99979C13.859 1.99979 14.4635 2.27123 14.8852 2.74565L19.9239 8.41421C21.3134 9.97744 20.4445 12.4589 18.3833 12.8138L6.3333 14.8887L7.84434 13.1805C8.44039 12.5067 8.43917 11.4939 7.84152 10.8215L3.2876 5.69837C2.01372 4.26526 3.03106 1.99979 4.9485 1.99979H13.2243Z" fill="url(#product-power-automate-standard-24-paint0_linear_527478_994)"/>
+<path d="M4.94849 22C3.03105 22 2.0137 19.7345 3.28758 18.3014L14.6876 5.47636C15.436 4.63439 15.436 3.3656 14.6876 2.52364L14.2222 2L21.7987 10.5236C22.5471 11.3656 22.5471 12.6344 21.7987 13.4764L14.8852 21.2541C14.4634 21.7286 13.859 22 13.2242 22H4.94849Z" fill="url(#product-power-automate-standard-24-paint1_linear_527478_994)"/>
+<path d="M4.94849 22C3.03105 22 2.0137 19.7345 3.28758 18.3014L14.6876 5.47636C15.436 4.63439 15.436 3.3656 14.6876 2.52364L14.2222 2L21.7987 10.5236C22.5471 11.3656 22.5471 12.6344 21.7987 13.4764L14.8852 21.2541C14.4634 21.7286 13.859 22 13.2242 22H4.94849Z" fill="url(#product-power-automate-standard-24-paint2_linear_527478_994)"/>
+<path d="M10.0802 22C8.92974 22 8.31933 20.6407 9.08366 19.7809L18.2432 9.47636C18.9916 8.63439 18.9916 7.3656 18.2432 6.52363L17.3333 5.5L21.7988 10.5236C22.5472 11.3656 22.5472 12.6344 21.7988 13.4764L14.8852 21.2541C14.4635 21.7286 13.859 22 13.2243 22H10.0802Z" fill="url(#product-power-automate-standard-24-paint3_linear_527478_994)"/>
+<defs>
+<linearGradient id="product-power-automate-standard-24-paint0_linear_527478_994" x1="12.2222" y1="8.33312" x2="4.66663" y2="0.777566" gradientUnits="userSpaceOnUse">
+<stop stop-color="#102784"/>
+<stop offset="0.274053" stop-color="#1B44B1"/>
+<stop offset="1" stop-color="#2764E7"/>
+</linearGradient>
+<linearGradient id="product-power-automate-standard-24-paint1_linear_527478_994" x1="18.5555" y1="6.88889" x2="4.11106" y2="21.6667" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0FAFFF"/>
+<stop offset="0.177827" stop-color="#4894FE"/>
+<stop offset="1" stop-color="#2764E7"/>
+</linearGradient>
+<linearGradient id="product-power-automate-standard-24-paint2_linear_527478_994" x1="7.88884" y1="17.3333" x2="10.1111" y2="19.8889" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2764E7" stop-opacity="0"/>
+<stop offset="1" stop-color="#2052CB"/>
+</linearGradient>
+<linearGradient id="product-power-automate-standard-24-paint3_linear_527478_994" x1="21.3333" y1="9.88888" x2="11.1111" y2="21.4444" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6CE0FF"/>
+<stop offset="0.211723" stop-color="#66C0FF"/>
+<stop offset="1" stop-color="#58AAFE"/>
+</linearGradient>
+</defs>
+</svg>

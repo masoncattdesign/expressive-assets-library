@@ -1,0 +1,20 @@
+<svg aria-label="Viva Sales standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.00195 33.5C4.00195 35.1635 4.63656 36.827 5.90576 38.0962C7.17496 39.3654 8.83846 40 10.502 40C12.1654 40 13.8289 39.3654 15.0981 38.0962L38.0981 15.0962C39.3674 13.827 40.002 12.1635 40.002 10.5C40.002 8.8365 39.3674 7.17301 38.0981 5.90381C36.8289 4.6346 35.1654 4 33.5019 4L10.502 4C8.83846 4 7.17496 4.6346 5.90576 5.90381C4.63655 7.17301 4.00195 8.83651 4.00195 10.5V33.5Z" fill="url(#product-viva-sales-standard-48-paint0_linear_241594_2529)"/>
+<path d="M30.502 44C37.9578 44 44.002 37.9558 44.002 30.5C44.002 23.0442 37.9578 17 30.502 17C23.0461 17 17.002 23.0442 17.002 30.5C17.002 37.9558 23.0461 44 30.502 44Z" fill="url(#product-viva-sales-standard-48-paint1_linear_241594_2529)"/>
+<path d="M4.00195 33.5C4.00195 35.1635 4.63656 36.827 5.90576 38.0962C7.17496 39.3654 8.83846 40 10.502 40C12.1654 40 13.8289 39.3654 15.0981 38.0962L25.0981 28.0962C26.3674 26.827 27.002 25.1635 27.002 23.5C27.002 21.8365 26.3674 20.173 25.0981 18.9038C23.8289 17.6346 22.1654 17 20.502 17L10.502 17C8.83846 17 7.17496 16.3654 5.90576 15.0962C4.63656 13.827 4.00195 12.1635 4.00195 10.5V33.5Z" fill="url(#product-viva-sales-standard-48-paint2_linear_241594_2529)"/>
+<defs>
+<linearGradient id="product-viva-sales-standard-48-paint0_linear_241594_2529" x1="18.7928" y1="1.70846" x2="15.8763" y2="21.9157" gradientUnits="userSpaceOnUse">
+<stop stop-color="#53C99E"/>
+<stop offset="1" stop-color="#108057"/>
+</linearGradient>
+<linearGradient id="product-viva-sales-standard-48-paint1_linear_241594_2529" x1="39.7832" y1="19.1094" x2="19.7441" y2="34.5078" gradientUnits="userSpaceOnUse">
+<stop stop-color="#118F61"/>
+<stop offset="1" stop-color="#074B32"/>
+</linearGradient>
+<linearGradient id="product-viva-sales-standard-48-paint2_linear_241594_2529" x1="6.96127" y1="19.0896" x2="21.4164" y2="33.6743" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6AE4B7"/>
+<stop offset="0.588888" stop-color="#4ECA9D"/>
+<stop offset="1" stop-color="#27B17F"/>
+</linearGradient>
+</defs>
+</svg>

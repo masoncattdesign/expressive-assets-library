@@ -1,0 +1,40 @@
+{
+  "id": "product.translator",
+  "name": "Translator",
+  "keywords": [
+    "translator"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "filled",
+    "standard"
+  ],
+  "sizes": [
+    24,
+    28
+  ],
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#8764B8"
+  },
+  "recolorable": true,
+  "variants": {
+    "filled": {
+      "24": "assets/icons/product/translator/filled-24.svg",
+      "28": "assets/icons/product/translator/filled-28.svg"
+    },
+    "standard": {
+      "24": "assets/icons/product/translator/standard-24.svg",
+      "28": "assets/icons/product/translator/standard-28.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "101635:0"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-28",
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+}
