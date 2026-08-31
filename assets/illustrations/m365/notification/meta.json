@@ -8,19 +8,27 @@
   "collection": "m365",
   "status": "draft",
   "themes": [
+    "filled",
+    "outline",
     "standard"
   ],
   "sizes": [
     160
   ],
   "colors": {
-    "primary": "#182047",
-    "secondary": "#8B52F4"
+    "primary": "#8B52F4",
+    "secondary": "#F83F54"
   },
-  "recolorable": false,
+  "recolorable": true,
   "variants": {
     "standard": {
       "any": "assets/illustrations/m365/notification/standard-any.svg"
+    },
+    "outline": {
+      "any": "assets/illustrations/m365/notification/outline-any.svg"
+    },
+    "filled": {
+      "any": "assets/illustrations/m365/notification/filled-any.svg"
     }
   },
   "figma": {
@@ -29,5 +37,5 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-31",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+  "notes": "Standard is the shipped Figma artwork. Outline and Filled are derived here — Outline strokes each shape and fills it with the knockout colour so overlapping shapes still occlude; Filled treats everything but near-white detail as the body. Both are drawn in currentColor and take an accent."
 }

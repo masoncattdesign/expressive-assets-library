@@ -157,13 +157,47 @@ const HEX = '#[0-9A-Fa-f]{6}';
  * (the Outline and Filled themes of the real product icons) is drawn in
  * currentColor, which tints by setting `color` on the root.
  */
+/** Mix a hex toward white. The illustration palette pairs every hue with a much
+ *  lighter companion — purple with lavender, coral with periwinkle. Recolouring
+ *  the hue and leaving its companion behind pulls the drawing in two, so the
+ *  companions move with it. */
+function lighten(hex, toward) {
+  const m = hex.match(/^#([0-9a-f]{6})$/i);
+  if (!m) return hex;
+  const parts = [0, 2, 4].map((i) => {
+    const c = parseInt(m[1].slice(i, i + 2), 16);
+    return Math.round(c + (255 - c) * toward);
+  });
+  return `#${parts.map((c) => c.toString(16).padStart(2, '0')).join('')}`;
+}
+
 function tint(source, { primary, secondary, size }) {
   let out = source;
+
+  // Generated artwork declares the properties inside a <style> block, so the
+  // value is substituted in place.
   if (primary) out = out.replace(new RegExp(`--ea-primary:${HEX}`), `--ea-primary:${primary}`);
   if (secondary) out = out.replace(new RegExp(`--ea-secondary:${HEX}`), `--ea-secondary:${secondary}`);
-  if (primary && out.includes('currentColor') && !out.includes('style="color:')) {
-    out = out.replace('<svg ', `<svg style="color:${primary}" `);
+
+  // Imported artwork carries its hooks inline as `var(--ea-role, #shipped)` and
+  // has no style block to patch, so the properties are set on the root instead.
+  // Both kinds, plus currentColor, resolve into ONE style attribute — writing a
+  // second one produces invalid markup that browsers silently drop.
+  const decls = [];
+  if (primary && out.includes('currentColor')) decls.push(`color:${primary}`);
+  if (primary && out.includes('var(--ea-primary,')) {
+    const second = secondary || primary;
+    decls.push(
+      `--ea-primary:${primary}`,
+      `--ea-primary-tint:${lighten(primary, 0.72)}`,
+      `--ea-secondary:${second}`,
+      `--ea-tint:${lighten(second, 0.8)}`
+    );
   }
+  if (decls.length && !/<svg[^>]*\sstyle=/.test(out)) {
+    out = out.replace('<svg ', `<svg style="${decls.join(';')}" `);
+  }
+
   if (size) out = out.replace(/width="\d+"\s+height="\d+"/, `width="${size}" height="${size}"`);
   return out;
 }
