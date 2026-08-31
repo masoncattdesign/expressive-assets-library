@@ -32,7 +32,7 @@ assets/
     fluent/      Fluent Illustrations
     product/     Product Illustrations
 
-docs/            The browsing interface (plain HTML/CSS/JS, no build step)
+docs/            Gallery — the browsing tool (plain HTML/CSS/JS, no build step)
 schema/          JSON Schema every asset's meta.json must satisfy
 scripts/         Generation, manifest, validation, site assembly
 manifest.json    Generated index — the file consumers read
@@ -142,7 +142,12 @@ No dependencies. Node 18+ and nothing else — a design-system repo that needs a
 `npm install` before it can tell you whether an SVG is valid does not get run
 locally.
 
-## The browsing interface
+## Gallery
+
+**Gallery** is the browsing tool; **Expressive Assets** is the library it shows.
+The distinction is load-bearing, not branding: Gallery never touches the asset
+tree. It reads `manifest.json` and nothing else, which means it can show any
+library that emits that manifest, not just this one.
 
 `docs/` is three files: `index.html`, `styles.css`, `app.js`. It reads
 `manifest.json` and the SVGs it points at, and gives you search across names,

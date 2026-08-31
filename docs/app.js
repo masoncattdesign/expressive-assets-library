@@ -1,5 +1,9 @@
 /**
- * Expressive Assets — browsing interface.
+ * Gallery — the browsing tool for Expressive Assets.
+ *
+ * Gallery is the tool; Expressive Assets is the library. Gallery knows nothing
+ * about this library in particular — it reads the manifest, so it can show any
+ * library that emits one.
  *
  * Reads manifest.json — the library's public contract — and the SVG files it
  * points at. No framework, no build tooling: the whole app is three files
