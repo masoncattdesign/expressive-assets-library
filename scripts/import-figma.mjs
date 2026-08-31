@@ -466,14 +466,21 @@ const PLACEHOLDER = /^Placeholder artwork\./;
  *
  * The generator stamps every asset it invents with a notes line starting
  * "Placeholder artwork." — that string is the only thing this looks at, so it
- * can never eat imported work. Only runs on a full import of a collection:
- * with --limit or --only in play the collection is half-populated and pulling
- * the placeholders would leave holes in the grid rather than close them.
+ * can never eat imported work.
+ *
+ * Scoped to the TYPES actually imported as well as the collections. Sharing a
+ * collection name is not sharing a subject: importing product ICONS says
+ * nothing about whether a placeholder product ILLUSTRATION has been superseded,
+ * and an earlier version of this deleted two that nothing had replaced.
+ *
+ * Only runs on a full import of a collection: with --limit or --only in play
+ * the collection is half-populated and pulling the placeholders would leave
+ * holes in the grid rather than close them.
  */
-async function retirePlaceholders(collections) {
+async function retirePlaceholders(collections, types) {
   const retired = [];
   for (const collection of collections) {
-    for (const type of ['icons', 'illustrations']) {
+    for (const type of types) {
       const base = join(ROOT, 'assets', type, collection);
       let entries;
       try {
@@ -611,7 +618,8 @@ async function runPlan() {
   const partial = LIMIT !== Infinity || ONLY;
   if (written && !partial) {
     const touched = [...new Set(assets.map((a) => a.collection))];
-    const retired = await retirePlaceholders(touched);
+    const types = [...new Set(assets.map((a) => `${a.type}s`))];
+    const retired = await retirePlaceholders(touched, types);
     if (retired.length) {
       console.log(`\n  Retired ${retired.length} generated placeholders, now superseded by real artwork:`);
       console.log(`    ${retired.join(', ')}`);

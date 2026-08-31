@@ -56,7 +56,7 @@
     "collection": {
       "type": "string",
       "description": "Sub-collection within the type. Extend this list as new collections are added — it is deliberately open to growth.",
-      "enum": ["system", "product", "file", "vscode", "windows", "fluent", "oobe"]
+      "enum": ["system", "product", "file", "vscode", "windows", "fluent", "oobe", "m365"]
     },
     "product": {
       "type": "string",

@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3438,
+  "total": 3468,
   "groups": [
     {
       "type": "icon",
@@ -41,6 +41,11 @@
           "count": 27
         },
         {
+          "id": "m365",
+          "label": "M365 Illustrations",
+          "count": 28
+        },
+        {
           "id": "windows",
           "label": "Windows Illustrations",
           "count": 2
@@ -53,7 +58,7 @@
         {
           "id": "product",
           "label": "Product Illustrations",
-          "count": 0
+          "count": 2
         }
       ]
     }
@@ -174780,6 +174785,938 @@
       "updated": "2026-08-26"
     },
     {
+      "id": "m365.calendar",
+      "name": "Calendar",
+      "keywords": [
+        "calendar"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#8B52F4",
+        "secondary": "#F7F7F7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/calendar/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2133"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.celebration",
+      "name": "Celebration",
+      "keywords": [
+        "celebration"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#CCD5F3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/celebration/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5673"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.chat",
+      "name": "Chat",
+      "keywords": [
+        "chat"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#F7F7F7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/chat/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2002"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.data",
+      "name": "Data",
+      "keywords": [
+        "data"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#E6BFED"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/data/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2555"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.design-layout",
+      "name": "Design layout",
+      "keywords": [
+        "design",
+        "layout"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#8B52F4",
+        "secondary": "#F83F54"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/design-layout/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4505"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.device-shield",
+      "name": "Device shield",
+      "keywords": [
+        "device",
+        "shield"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#CFE5AF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/device-shield/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3899"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.document",
+      "name": "Document",
+      "keywords": [
+        "document"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/document/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2816"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.email",
+      "name": "Email",
+      "keywords": [
+        "email"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#CCD5F3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/email/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2962"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.folder",
+      "name": "Folder",
+      "keywords": [
+        "folder"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#E6BFED"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/folder/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2273"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.inbox",
+      "name": "Inbox",
+      "keywords": [
+        "inbox"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/inbox/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4934"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.laptop",
+      "name": "Laptop",
+      "keywords": [
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#F83F54"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/laptop/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2419"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.link",
+      "name": "Link",
+      "keywords": [
+        "link"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/link/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4072"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.m365-folder",
+      "name": "M365 Folder",
+      "keywords": [
+        "m365",
+        "folder"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#FCC479"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/m365-folder/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5274"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.ms-account",
+      "name": "MS Account",
+      "keywords": [
+        "ms",
+        "account"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#F83F54",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/ms-account/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5089"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.notification",
+      "name": "Notification",
+      "keywords": [
+        "notification"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/notification/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4204"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.pencil",
+      "name": "Pencil",
+      "keywords": [
+        "pencil"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#E6BFED",
+        "secondary": "#182047"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/pencil/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5950"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.people",
+      "name": "People",
+      "keywords": [
+        "people"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#E6BFED",
+        "secondary": "#F83F54"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/people/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3098"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.person-checkmark",
+      "name": "Person Checkmark",
+      "keywords": [
+        "person",
+        "checkmark"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#E6BFED",
+        "secondary": "#182047"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/person-checkmark/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5120"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.photo",
+      "name": "Photo",
+      "keywords": [
+        "photo"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/photo/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4649"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.privacy",
+      "name": "Privacy",
+      "keywords": [
+        "privacy"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#F83F54"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/privacy/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3632"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.progress-ring",
+      "name": "Progress Ring",
+      "keywords": [
+        "progress",
+        "ring"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/progress-ring/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:2683"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.search",
+      "name": "Search",
+      "keywords": [
+        "search"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/search/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3230"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.share",
+      "name": "Share",
+      "keywords": [
+        "share"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#8B52F4",
+        "secondary": "#F7F7F7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/share/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3767"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.shield",
+      "name": "Shield",
+      "keywords": [
+        "shield"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#CCD5F3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/shield/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3364"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.sign-in",
+      "name": "Sign In",
+      "keywords": [
+        "sign",
+        "in"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#D9D9D9",
+        "secondary": "#E6BFED"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/sign-in/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4336"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.task-complete",
+      "name": "Task Complete",
+      "keywords": [
+        "task",
+        "complete"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#8B52F4",
+        "secondary": "#182047"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/task-complete/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:5810"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.tasks",
+      "name": "Tasks",
+      "keywords": [
+        "tasks"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/tasks/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:4780"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
+      "id": "m365.warning",
+      "name": "Warning",
+      "keywords": [
+        "warning"
+      ],
+      "type": "illustration",
+      "collection": "m365",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        160
+      ],
+      "colors": {
+        "primary": "#182047",
+        "secondary": "#8B52F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/m365/warning/standard-any.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582201:3502"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-31",
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+    },
+    {
       "id": "windows.empty-state",
       "name": "Empty State",
       "keywords": [
@@ -174922,6 +175859,80 @@
       "variants": {
         "standard": {
           "any": "assets/illustrations/fluent/success/standard.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.sync",
+      "name": "Sync",
+      "keywords": [
+        "refresh",
+        "update",
+        "cloud sync",
+        "in progress",
+        "loading"
+      ],
+      "type": "illustration",
+      "collection": "product",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#0F6CBD",
+        "secondary": "#38C6C6"
+      },
+      "recolorable": true,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/product/sync/standard.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "1.0.0",
+      "updated": "2026-08-25",
+      "notes": "Placeholder artwork. Replace the geometry in scripts/sources/specs.mjs with the shipping Windows drawing; metadata and consumers are unaffected."
+    },
+    {
+      "id": "product.upload",
+      "name": "Upload",
+      "keywords": [
+        "add files",
+        "drop zone",
+        "import",
+        "attach",
+        "cloud"
+      ],
+      "type": "illustration",
+      "collection": "product",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        96,
+        128,
+        192,
+        256
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": true,
+      "variants": {
+        "standard": {
+          "any": "assets/illustrations/product/upload/standard.svg"
         }
       },
       "owner": "@windows-design-systems",

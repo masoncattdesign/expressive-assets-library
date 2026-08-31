@@ -18,6 +18,7 @@
     "build": "npm run notices && npm run manifest && npm run validate && node scripts/build-site.mjs",
     "dev": "node scripts/build-site.mjs && node scripts/serve.mjs",
     "figma:run": "node scripts/import-figma.mjs --plan=figma-plan.json",
-    "figma:run:product": "node scripts/import-figma.mjs --plan=figma-product-plan.json"
+    "figma:run:product": "node scripts/import-figma.mjs --plan=figma-product-plan.json",
+    "figma:run:m365": "node scripts/import-figma.mjs --plan=figma-m365-plan.json"
   }
 }

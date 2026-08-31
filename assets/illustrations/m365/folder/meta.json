@@ -1,0 +1,33 @@
+{
+  "id": "m365.folder",
+  "name": "Folder",
+  "keywords": [
+    "folder"
+  ],
+  "type": "illustration",
+  "collection": "m365",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    160
+  ],
+  "colors": {
+    "primary": "#182047",
+    "secondary": "#E6BFED"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/m365/folder/standard-any.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582201:2273"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

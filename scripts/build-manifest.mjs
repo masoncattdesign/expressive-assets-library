@@ -37,6 +37,7 @@ export const GROUPS = [
     dir: 'assets/illustrations',
     collections: [
       { id: 'oobe', label: 'OOBE Illustrations' },
+      { id: 'm365', label: 'M365 Illustrations' },
       { id: 'windows', label: 'Windows Illustrations' },
       { id: 'fluent', label: 'Fluent Illustrations' },
       { id: 'product', label: 'Product Illustrations' },
@@ -94,11 +95,17 @@ export function buildManifest(assets) {
     groups: GROUPS.map((g) => ({
       type: g.type,
       label: g.label,
-      collections: g.collections.map((c) => ({
-        id: c.id,
-        label: c.label,
-        count: clean.filter((a) => a.type === g.type && a.collection === c.id).length,
-      })),
+      // A collection with nothing in it is a row in the sidebar that leads
+      // nowhere. GROUPS is the declared ORDER, not a promise that every entry
+      // has artwork — a collection can be listed here before its first import,
+      // or emptied by one.
+      collections: g.collections
+        .map((c) => ({
+          id: c.id,
+          label: c.label,
+          count: clean.filter((a) => a.type === g.type && a.collection === c.id).length,
+        }))
+        .filter((c) => c.count > 0),
     })),
     assets: clean,
   };

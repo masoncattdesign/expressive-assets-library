@@ -1,0 +1,34 @@
+{
+  "id": "m365.task-complete",
+  "name": "Task Complete",
+  "keywords": [
+    "task",
+    "complete"
+  ],
+  "type": "illustration",
+  "collection": "m365",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    160
+  ],
+  "colors": {
+    "primary": "#8B52F4",
+    "secondary": "#182047"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/m365/task-complete/standard-any.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582201:5810"
+  },
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

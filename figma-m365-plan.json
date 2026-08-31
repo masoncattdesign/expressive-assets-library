@@ -1,0 +1,430 @@
+{
+  "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+  "page": "M365 Illustrations",
+  "generated": "2026-08-31",
+  "note": "Precomputed from the 'M365 Illustations' frame (582201:2000 \u2014 the typo is upstream). Names come from each group's TEXT label, not the artwork frame name: the frame names are stale and wrong, e.g. Chat's artwork frame is called 'Calendar' and Shield's is called 'Search'. One drawing each, scalable, so the size key is 'any'. Authored at 160px (the frames measure 157\u2013159 after auto-layout), so sizes lists 160 alone rather than a guessed legibility range \u2014 widen it after a designer has looked.",
+  "duplicateIds": [],
+  "skipped": [],
+  "assets": [
+    {
+      "id": "m365.chat",
+      "name": "Chat",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2002",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2004"
+        }
+      }
+    },
+    {
+      "id": "m365.calendar",
+      "name": "Calendar",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2133",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2135"
+        }
+      }
+    },
+    {
+      "id": "m365.folder",
+      "name": "Folder",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2273",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2275"
+        }
+      }
+    },
+    {
+      "id": "m365.laptop",
+      "name": "Laptop",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2419",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2421"
+        }
+      }
+    },
+    {
+      "id": "m365.data",
+      "name": "Data",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2555",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2557"
+        }
+      }
+    },
+    {
+      "id": "m365.progress-ring",
+      "name": "Progress Ring",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2683",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2685"
+        }
+      }
+    },
+    {
+      "id": "m365.document",
+      "name": "Document",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2816",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2818"
+        }
+      }
+    },
+    {
+      "id": "m365.email",
+      "name": "Email",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:2962",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:2964"
+        }
+      }
+    },
+    {
+      "id": "m365.people",
+      "name": "People",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3098",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3100"
+        }
+      }
+    },
+    {
+      "id": "m365.search",
+      "name": "Search",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3230",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3232"
+        }
+      }
+    },
+    {
+      "id": "m365.shield",
+      "name": "Shield",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3364",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3366"
+        }
+      }
+    },
+    {
+      "id": "m365.warning",
+      "name": "Warning",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3502",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3504"
+        }
+      }
+    },
+    {
+      "id": "m365.privacy",
+      "name": "Privacy",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3632",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3634"
+        }
+      }
+    },
+    {
+      "id": "m365.share",
+      "name": "Share",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3767",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3769"
+        }
+      }
+    },
+    {
+      "id": "m365.device-shield",
+      "name": "Device shield",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:3899",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:3901"
+        }
+      }
+    },
+    {
+      "id": "m365.link",
+      "name": "Link",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4072",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4074"
+        }
+      }
+    },
+    {
+      "id": "m365.notification",
+      "name": "Notification",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4204",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4206"
+        }
+      }
+    },
+    {
+      "id": "m365.sign-in",
+      "name": "Sign In",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4336",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4338"
+        }
+      }
+    },
+    {
+      "id": "m365.design-layout",
+      "name": "Design layout",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4505",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4507"
+        }
+      }
+    },
+    {
+      "id": "m365.photo",
+      "name": "Photo",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4649",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4651"
+        }
+      }
+    },
+    {
+      "id": "m365.tasks",
+      "name": "Tasks",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4780",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4782"
+        }
+      }
+    },
+    {
+      "id": "m365.inbox",
+      "name": "Inbox",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:4934",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:4936"
+        }
+      }
+    },
+    {
+      "id": "m365.ms-account",
+      "name": "MS Account",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5089",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5091"
+        }
+      }
+    },
+    {
+      "id": "m365.person-checkmark",
+      "name": "Person Checkmark",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5120",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5122"
+        }
+      }
+    },
+    {
+      "id": "m365.m365-folder",
+      "name": "M365 Folder",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5274",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5276"
+        }
+      }
+    },
+    {
+      "id": "m365.celebration",
+      "name": "Celebration",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5673",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5675"
+        }
+      }
+    },
+    {
+      "id": "m365.task-complete",
+      "name": "Task Complete",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5810",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5812"
+        }
+      }
+    },
+    {
+      "id": "m365.pencil",
+      "name": "Pencil",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582201:5950",
+      "sizes": [
+        160
+      ],
+      "renders": {
+        "standard": {
+          "any": "582201:5952"
+        }
+      }
+    }
+  ]
+}
