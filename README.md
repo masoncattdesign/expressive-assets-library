@@ -193,6 +193,7 @@ npm run figma:survey  # read the Figma file and report what is in it
 npm run figma:plan    # show what an import would do, write nothing
 npm run figma:import  # export SVGs and write assets/
 npm run figma:run     # run the reviewed figma-plan.json instead of surveying
+npm run test:plugin   # run the Figma sync plugin against a fake Figma, in Node
 ```
 
 No dependencies. Node 18+ and nothing else — a design-system repo that needs an

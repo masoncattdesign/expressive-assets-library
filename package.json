@@ -2,7 +2,7 @@
   "name": "expressive-assets",
   "version": "0.1.0",
   "private": true,
-  "description": "Expressive Assets — the icon and illustration library for Windows Design Systems.",
+  "description": "Expressive Assets \u2014 the icon and illustration library for Windows Design Systems.",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -19,6 +19,7 @@
     "dev": "node scripts/build-site.mjs && node scripts/serve.mjs",
     "figma:run": "node scripts/import-figma.mjs --plan=figma-plan.json",
     "figma:run:product": "node scripts/import-figma.mjs --plan=figma-product-plan.json",
-    "figma:run:m365": "node scripts/import-figma.mjs --plan=figma-m365-plan.json"
+    "figma:run:m365": "node scripts/import-figma.mjs --plan=figma-m365-plan.json",
+    "test:plugin": "node plugin/test-sync.mjs"
   }
 }

@@ -117,6 +117,17 @@ function findOrMakeBoard(page, name, count) {
   return board;
 }
 
+/** The first version of this page laid the icons out in four big frames, one
+ *  per style plus a heading. Those are ours, so they can go; anything else on
+ *  the board is left where it is. */
+function clearOldLayout(board) {
+  const old = board.children.filter(
+    (n) => n.type === 'FRAME' && ['Heading', 'Standard', 'Outline', 'Filled'].indexOf(n.name) !== -1
+  );
+  old.forEach((n) => n.remove());
+  return old.length;
+}
+
 /* The grid, laid out by hand.
    ------------------------------------------------------------------
    Letting Figma auto-arrange the variants was the mistake. A wrap layout
