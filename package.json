@@ -22,6 +22,8 @@
     "figma:run:m365": "node scripts/import-figma.mjs --plan=figma-m365-plan.json",
     "test:plugin": "node plugin/test-sync.mjs",
     "figma:plan:3p": "node scripts/build-3p-plan.mjs",
-    "figma:run:3p": "node scripts/import-figma.mjs --plan=figma-3p-plan.json"
+    "figma:run:3p": "node scripts/import-figma.mjs --plan=figma-3p-plan.json",
+    "figma:plan:appicons": "node scripts/build-appicons-plan.mjs",
+    "figma:run:appicons": "node scripts/import-figma.mjs --plan=figma-appicons-plan.json"
   }
 }
