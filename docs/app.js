@@ -66,7 +66,7 @@ const state = {
   filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
-  theme: 'standard',
+  theme: 'outline',
   size: null,
   accent: 'default',
 };
@@ -174,8 +174,10 @@ function lighten(hex, toward) {
   return `#${parts.map((c) => c.toString(16).padStart(2, '0')).join('')}`;
 }
 
-function tint(source, { primary, secondary, size }) {
+function tint(source, { ink, inkSecondary, size }) {
   let out = source;
+  const primary = ink;
+  const secondary = inkSecondary;
 
   // Generated artwork declares the properties inside a <style> block, so the
   // value is substituted in place.
@@ -210,9 +212,20 @@ function tint(source, { primary, secondary, size }) {
 function colorsFor(asset, accentId = state.accent, theme = state.theme) {
   const accent = ACCENTS.find((a) => a.id === accentId) || ACCENTS[0];
   const canTint = isTintable(asset, theme);
+  const chosen = canTint && accent.primary ? accent : null;
   return {
-    primary: (canTint && accent.primary) || asset.colors.primary,
-    secondary: (canTint && accent.secondary) || asset.colors.secondary,
+    // What the metadata panel reports: the asset's own colours unless an accent
+    // is overriding them.
+    primary: (chosen && chosen.primary) || asset.colors.primary,
+    secondary: (chosen && chosen.secondary) || asset.colors.secondary,
+    // What actually gets painted onto currentColor and the --ea-* hooks. Null
+    // means "leave it alone". A monochrome glyph has no colour of its own — the
+    // hex in `colors` was extracted from the FULL-COLOUR variant at import, so
+    // painting Outline with it turned every system icon Fluent blue and every
+    // file icon PDF red. Untinted, these inherit the surface: near-white on
+    // dark, near-black on light, which is what a monochrome style is for.
+    ink: chosen ? chosen.primary : null,
+    inkSecondary: chosen ? chosen.secondary : null,
   };
 }
 
