@@ -343,13 +343,18 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .row .v code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
 .chip-color { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgba(0, 0, 0, .12); flex: none; }
 
-.accents { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Flat, and round. The swatches were beveled gradient tiles, which is the one
+   thing Bridge's surface treatment does not do — it has no gloss and no
+   shadow. The two colours still have to show, since an accent is a pair, so
+   they meet on a hard diagonal rather than blending into a sheen. */
+.accents { display: flex; flex-wrap: wrap; gap: 7px; }
 .accents button {
-  width: 24px; height: 24px; border-radius: 7px; cursor: pointer;
-  border: 2px solid transparent; padding: 0; background-clip: padding-box;
+  width: 22px; height: 22px; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, .14); padding: 0; background-clip: padding-box;
 }
-.accents button.on { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--text); }
+.accents button.on { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--text); }
 .accents button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+:root[data-theme="dark"] .accents button { border-color: rgba(255, 255, 255, .2); }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tags button {

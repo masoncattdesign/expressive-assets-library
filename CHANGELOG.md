@@ -56,6 +56,10 @@ Also in this release:
   not the original authoring page, so edits made to the generated components
   come back. See "The round trip" in the README.
 - `npm run test:plugin` runs the sync plugin against a fake Figma in Node.
+- Accent swatches are flat circles with a hard two-tone split, replacing the
+  beveled gradient tiles. Bridge has no gloss and no shadow, and the pair still
+  has to read, so the two colours meet on an edge rather than blending.
+- An import plan for the App Icons section: 32 Windows app tiles at 64px.
 - The Gallery sidebar marks are System Icons from the library rather than
   shapes drawn by hand in `app.js`. `scripts/inline-nav-icons.mjs` names each
   pick by asset id and regenerates the block, so swapping one is a line edit.

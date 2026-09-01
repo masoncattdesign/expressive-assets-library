@@ -1,0 +1,505 @@
+{
+  "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+  "page": "App Icons",
+  "sectionNodeId": "582226:11368",
+  "componentSetId": "582222:10812",
+  "generated": "2026-09-01",
+  "note": "Windows app tiles, 64px, Standard only. Outline, Filled and the smaller sizes are derived after import. Four non-icon variants are excluded; see scripts/sources/appicons-nodes.json for which and why.",
+  "warnings": [
+    "Bookings: product.bookings is taken, imported as product.bookings-app",
+    "Editor: product.editor is taken, imported as product.editor-app",
+    "Exchange: product.exchange is taken, imported as product.exchange-app",
+    "Loop: product.loop is taken, imported as product.loop-app",
+    "Places: product.places is taken, imported as product.places-app",
+    "Publisher: product.publisher is taken, imported as product.publisher-app",
+    "Visio: product.visio is taken, imported as product.visio-app"
+  ],
+  "excluded": {
+    "Blank": "582222:10813 — an empty tile, not an icon",
+    "App36 (a)": "582222:10827 — placeholder name",
+    "App36 (b)": "582222:10861 — placeholder name, and a duplicate of the one above; a set cannot normally hold two variants with the same value, so one is a conflict",
+    "App26": "582222:11249 — placeholder name, hidden, and parked outside the parent frame's bounds"
+  },
+  "assets": [
+    {
+      "id": "product.admin-center",
+      "name": "Admin Center",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10814",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10814"
+        }
+      }
+    },
+    {
+      "id": "product.bookings-app",
+      "name": "Bookings (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10836",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10836"
+        }
+      }
+    },
+    {
+      "id": "product.calculator",
+      "name": "Calculator",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10848",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10848"
+        }
+      }
+    },
+    {
+      "id": "product.command-prompt",
+      "name": "Command Prompt",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10869",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10869"
+        }
+      }
+    },
+    {
+      "id": "product.dev-home",
+      "name": "Dev Home",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10870",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10870"
+        }
+      }
+    },
+    {
+      "id": "product.editor-app",
+      "name": "Editor (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10872",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10872"
+        }
+      }
+    },
+    {
+      "id": "product.exchange-app",
+      "name": "Exchange (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10893",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10893"
+        }
+      }
+    },
+    {
+      "id": "product.feedback-hub",
+      "name": "Feedback Hub",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10908",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10908"
+        }
+      }
+    },
+    {
+      "id": "product.file-explorer",
+      "name": "File Explorer",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10916",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10916"
+        }
+      }
+    },
+    {
+      "id": "product.game-bar",
+      "name": "Game Bar",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10930",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10930"
+        }
+      }
+    },
+    {
+      "id": "product.get-help",
+      "name": "Get Help",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10948",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10948"
+        }
+      }
+    },
+    {
+      "id": "product.get-started",
+      "name": "Get Started",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10956",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10956"
+        }
+      }
+    },
+    {
+      "id": "product.loop-app",
+      "name": "Loop (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10965",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10965"
+        }
+      }
+    },
+    {
+      "id": "product.media-player",
+      "name": "Media Player",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10977",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10977"
+        }
+      }
+    },
+    {
+      "id": "product.news",
+      "name": "News",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10982",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10982"
+        }
+      }
+    },
+    {
+      "id": "product.notepad",
+      "name": "Notepad",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:10992",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:10992"
+        }
+      }
+    },
+    {
+      "id": "product.paint",
+      "name": "Paint",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11012",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11012"
+        }
+      }
+    },
+    {
+      "id": "product.phone-link",
+      "name": "Phone Link",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11030",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11030"
+        }
+      }
+    },
+    {
+      "id": "product.photos",
+      "name": "Photos",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11046",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11046"
+        }
+      }
+    },
+    {
+      "id": "product.places-app",
+      "name": "Places (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11060",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11060"
+        }
+      }
+    },
+    {
+      "id": "product.publisher-app",
+      "name": "Publisher (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11079",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11079"
+        }
+      }
+    },
+    {
+      "id": "product.quick-assist",
+      "name": "Quick Assist",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11097",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11097"
+        }
+      }
+    },
+    {
+      "id": "product.settings",
+      "name": "Settings",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11109",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11109"
+        }
+      }
+    },
+    {
+      "id": "product.snipping-tool",
+      "name": "Snipping Tool",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11114",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11114"
+        }
+      }
+    },
+    {
+      "id": "product.solitaire",
+      "name": "Solitaire",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11145",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11145"
+        }
+      }
+    },
+    {
+      "id": "product.sound-recorder",
+      "name": "Sound Recorder",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11146",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11146"
+        }
+      }
+    },
+    {
+      "id": "product.store-dark-theme",
+      "name": "Store Dark Theme",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11161",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11161"
+        }
+      }
+    },
+    {
+      "id": "product.store-light-theme",
+      "name": "Store Light Theme",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11182",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11182"
+        }
+      }
+    },
+    {
+      "id": "product.terminal",
+      "name": "Terminal",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11203",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11203"
+        }
+      }
+    },
+    {
+      "id": "product.visio-app",
+      "name": "Visio (app)",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11216",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11216"
+        }
+      }
+    },
+    {
+      "id": "product.weather",
+      "name": "Weather",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11229",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11229"
+        }
+      }
+    },
+    {
+      "id": "product.white-board",
+      "name": "White Board",
+      "collection": "product",
+      "type": "icon",
+      "nodeId": "582222:11236",
+      "sizes": [
+        64
+      ],
+      "renders": {
+        "standard": {
+          "64": "582222:11236"
+        }
+      }
+    }
+  ]
+}

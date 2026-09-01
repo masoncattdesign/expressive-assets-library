@@ -757,9 +757,10 @@ function renderPanel() {
         className: state.accent === accent.id ? 'on' : '',
         title: label,
         ariaLabel: label,
+        // Hard stops, not a blend: the pair is information, the sheen was not.
         style: followsSurface
-          ? 'background:linear-gradient(135deg, var(--text), var(--text-3))'
-          : `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary}, ${accent.secondary || asset.colors.secondary})`,
+          ? 'background:linear-gradient(135deg, var(--text) 0 50%, var(--text-3) 50% 100%)'
+          : `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary} 0 50%, ${accent.secondary || asset.colors.secondary} 50% 100%)`,
       });
       btn.addEventListener('click', () => {
         state.accent = accent.id;
