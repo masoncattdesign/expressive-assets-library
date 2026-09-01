@@ -7,18 +7,18 @@
    themes come from one place. */
 
 :root {
-  --paper: #FAFAFC;
+  --paper: #FFFFFF;
   --surface: #FFFFFF;
-  --sunk: #F2F2F7;
-  --ink: #17181F;
-  --ink-2: #4A4D5B;
-  --ink-3: #7A7E8E;
-  --rule: #E3E3EC;
-  --rule-soft: #EFEFF5;
-  --accent: #5B3BD6;
-  --accent-soft: #EEEAFC;
-  --accent-ring: #CFC3F5;
-  --signal: #B3443A;
+  --sunk: #F5F5F7;
+  --ink: #111214;
+  --ink-2: #3A3D42;
+  --ink-3: #5F6368;
+  --rule: #E6E6E8;
+  --rule-soft: #F0F0F2;
+  --accent: #111214;
+  --accent-soft: #F5F5F7;
+  --accent-ring: #D8D8DC;
+  --signal: #B8271A;
   --signal-soft: #FBECEA;
 
   /* The four anatomy parts. Distinct hues rather than one accent, because a
@@ -28,24 +28,25 @@
   --p-badge: #6B3FA0;     --p-badge-bg: #F0E9F8;
   --p-accent: #1F7A54;    --p-accent-bg: #E5F2EB;
 
-  --display: Archivo, "Segoe UI Variable", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --body: "IBM Plex Sans", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --display: "Segoe UI", -apple-system, Roboto, BlinkMacSystemFont, system-ui, sans-serif;
+  --body: "Segoe UI", -apple-system, Roboto, BlinkMacSystemFont, system-ui, sans-serif;
   --mono: "IBM Plex Mono", "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --shadow: 0 1px 2px rgba(20, 22, 40, .05), 0 8px 26px -18px rgba(20, 22, 40, .22);
+  --shadow: none;
+  --pill: 999px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #101219; --surface: #181B23; --sunk: #1E212B;
-    --ink: #E9EBF2; --ink-2: #A9AEBD; --ink-3: #7C8291;
-    --rule: #272B36; --rule-soft: #1D2027;
-    --accent: #A88CFF; --accent-soft: #241E3D; --accent-ring: #3B3163;
+    --paper: #131416; --surface: #1B1C1F; --sunk: #202124;
+    --ink: #ECEDEF; --ink-2: #B4B7BD; --ink-3: #85898F;
+    --rule: #2C2D31; --rule-soft: #232427;
+    --accent: #ECEDEF; --accent-soft: #26272B; --accent-ring: #3A3C41;
     --signal: #F08D82; --signal-soft: #2E1C1A;
     --p-container: #7FB0E8; --p-container-bg: #152232;
     --p-glyph: #E5A075;     --p-glyph-bg: #2B1D14;
     --p-badge: #B99AE0;     --p-badge-bg: #211A2E;
     --p-accent: #79C9A0;    --p-accent-bg: #13241C;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 26px -18px rgba(0, 0, 0, .8);
+    --shadow: none;
   }
 }
 :root[data-theme="dark"] {
@@ -91,7 +92,7 @@ body {
 .ea-brand svg { width: 22px; height: 22px; border-radius: 6px; background: #0078D4; padding: 3px; fill: #fff; flex: none; }
 .ea-tab {
   font-size: 13.5px; color: var(--ink-2); text-decoration: none;
-  padding: 6px 11px; border-radius: 8px; white-space: nowrap;
+  padding: 6px 12px; border-radius: var(--pill); white-space: nowrap;
 }
 .ea-tab:hover { background: var(--sunk); color: var(--ink); }
 .ea-tab.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
@@ -270,7 +271,7 @@ ul.open .a { font-size: 15.5px; color: var(--ink-2); }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
 .card-link {
   display: flex; flex-direction: column; gap: 6px; text-decoration: none;
-  border: 1px solid var(--rule); border-radius: 12px; background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 14px; background: var(--surface);
   padding: 16px 18px 18px; transition: border-color .12s, box-shadow .12s, transform .12s;
 }
 a.card-link:hover { border-color: var(--accent-ring); box-shadow: var(--shadow); transform: translateY(-1px); }
@@ -353,3 +354,17 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 .status .todo { background: var(--rule-soft); color: var(--ink-3); }
 .status p { font-size: 15px; color: var(--ink-2); margin: 0; }
 .status strong { color: var(--ink); }
+
+
+/* Theme control. Same three states as the tools; see theme.js. */
+.theme-switch {
+  display: inline-flex; background: var(--sunk); border: 1px solid var(--rule);
+  border-radius: var(--pill); padding: 3px; gap: 2px;
+}
+.theme-switch button {
+  border: 0; background: none; border-radius: var(--pill); cursor: pointer;
+  font: inherit; font-size: 11.5px; color: var(--ink-3); padding: 4px 10px;
+}
+.theme-switch button:hover { color: var(--ink); }
+.theme-switch button[aria-pressed="true"] { background: var(--accent); color: var(--paper); font-weight: 600; }
+.theme-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }

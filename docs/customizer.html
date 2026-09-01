@@ -8,6 +8,8 @@
 <meta name="description" content="Apply an icon style across a set of Expressive Assets and tune it: palette, stroke, texture, surface.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
+<script src="theme.js"></script>
+<script>applyStoredTheme();</script>
 <style>
 /* ── HEADER ── */
 
@@ -244,7 +246,8 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
     </div>
 
     <div class="sidebar-foot">
-      <p class="version">Customizer 1.1 <span aria-hidden="true">&middot;</span> <a href="customizer-v1.html" title="The previous Customizer, kept exactly as it was">1.0 archive</a></p>
+      <div data-theme-switch style="margin:0 auto 10px"></div>
+      <p class="version">Customizer 1.2 <span aria-hidden="true">&middot;</span> <a href="customizer-v1.html" title="The previous Customizer, kept exactly as it was">1.0 archive</a></p>
     </div>
   </aside>
 

@@ -1,45 +1,89 @@
 /* Expressive Assets — browsing interface
-   Light by default, dark via prefers-color-scheme. Every color is a token so
-   the whole surface can be retinted without hunting through rules. */
+   ----------------------------------------------------------------------
+   Styled to Bridge, so the two read as one system rather than two products
+   that happen to share a team. Bridge's plugin UI is the reference: ink
+   accent, pill controls, hairline borders and no shadow at all.
+
+   Two deliberate departures, both noted where they occur. Bridge is light
+   only; an icon library has to be checkable on a dark ground, so the dark
+   theme stays and takes Bridge's values inverted. And Bridge shows focus by
+   darkening a border, which is too quiet to rely on, so focus keeps a ring —
+   in ink rather than blue.
+
+   Colour is not banished, it is reassigned. Bridge's own Theme Generation
+   screen is ink chrome wrapped around a panel of saturated swatches: colour
+   belongs to the subject, ink to the frame. Here the subject is artwork. */
 
 :root {
-  --bg: #F5F6F8;
+  --bg: #F5F5F7;
   --surface: #FFFFFF;
-  --surface-2: #FAFBFC;
-  --sidebar: #FCFCFD;
-  --line: #E4E6EA;
-  --line-soft: #EEF0F3;
-  --text: #16181D;
-  --text-2: #5A6069;
-  --text-3: #868C96;
-  --accent: #0078D4;
-  --accent-soft: #E8F2FB;
-  --accent-ring: #B8D9F2;
-  --selected-ring: #E8A33D;
-  --shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .04);
-  --shadow-lg: 0 8px 28px rgba(16, 24, 40, .10);
-  --radius: 10px;
-  --font: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --surface-2: #F5F5F7;
+  --sidebar: #FFFFFF;
+  --line: #E6E6E8;
+  --line-soft: #F0F0F2;
+  --text: #111214;
+  --text-2: #3A3D42;
+  --text-3: #5F6368;
+  --accent: #111214;
+  --accent-soft: #F5F5F7;
+  --accent-ring: #D8D8DC;
+  --selected-ring: #A3720C;
+  --shadow: none;
+  --shadow-lg: none;
+  --radius: 14px;
+  --pill: 999px;
+  --font: "Segoe UI", -apple-system, Roboto, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #17191D;
-    --surface: #202329;
-    --surface-2: #1B1E23;
-    --sidebar: #1B1E23;
-    --line: #31353D;
-    --line-soft: #282C33;
-    --text: #EDEFF2;
-    --text-2: #A8AEB8;
-    --text-3: #7E858F;
-    --accent: #4CA6E8;
-    --accent-soft: #1D2E3E;
-    --accent-ring: #2C4E6B;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
-    --shadow-lg: 0 10px 32px rgba(0, 0, 0, .45);
+  :root:not([data-theme="light"]) {
+    /* Bridge has no dark palette. This is it, derived by the same logic:
+       ink becomes the lightest value, surfaces step down, borders stay
+       hairline. If Bridge ever wants one, it can take these. */
+    --bg: #131416;
+    --surface: #1B1C1F;
+    --surface-2: #202124;
+    --sidebar: #1B1C1F;
+    --line: #2C2D31;
+    --line-soft: #232427;
+    --text: #ECEDEF;
+    --text-2: #B4B7BD;
+    --text-3: #85898F;
+    --accent: #ECEDEF;
+    --accent-soft: #26272B;
+    --accent-ring: #3A3C41;
+    --selected-ring: #D8A73C;
+    --shadow: none;
+    --shadow-lg: none;
   }
 }
+
+/* The same values again for an explicit dark choice, so the toggle wins over a
+   light OS. Bare :root above is the complete light palette; nothing here
+   defines a colour that is not also defined there. */
+:root[data-theme="dark"] {
+    --bg: #131416;
+    --surface: #1B1C1F;
+    --surface-2: #202124;
+    --sidebar: #1B1C1F;
+    --line: #2C2D31;
+    --line-soft: #232427;
+    --text: #ECEDEF;
+    --text-2: #B4B7BD;
+    --text-3: #85898F;
+    --accent: #ECEDEF;
+    --accent-soft: #26272B;
+    --accent-ring: #3A3C41;
+    --selected-ring: #D8A73C;
+    --shadow: none;
+    --shadow-lg: none;
+}
+
+/* An ink accent inverts between themes, so anything painted ON the accent
+   needs the opposite value rather than a hardcoded white. */
+:root { --on-accent: #FFFFFF; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --on-accent: #131416; } }
+:root[data-theme="dark"] { --on-accent: #131416; }
 
 * { box-sizing: border-box; }
 
@@ -61,7 +105,7 @@ body {
 }
 .skip:focus {
   position: fixed; top: 10px; left: 10px; z-index: 50;
-  background: var(--accent); color: #fff; padding: 8px 14px; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent); padding: 8px 14px; border-radius: var(--pill);
 }
 
 .app { display: grid; grid-template-columns: 268px 1fr; height: 100vh; }
@@ -77,7 +121,7 @@ body {
 
 .brand { display: flex; align-items: center; gap: 12px; padding: 18px 18px 14px; }
 .brand-tile {
-  width: 34px; height: 34px; border-radius: 9px; flex: none;
+  width: 34px; height: 34px; border-radius: 10px; flex: none;
   background: linear-gradient(135deg, #0078D4, #8764B8);
   display: grid; place-items: center;
 }
@@ -98,15 +142,15 @@ body {
 .nav-item {
   width: 100%; display: flex; align-items: center; gap: 10px;
   padding: 8px 10px; margin-bottom: 2px;
-  border: 0; border-radius: 8px; background: none; cursor: pointer;
+  border: 0; border-radius: var(--pill); background: none; cursor: pointer;
   font: inherit; color: var(--text-2); text-align: left;
 }
 .nav-item:hover { background: var(--line-soft); color: var(--text); }
-.nav-item.on { background: var(--accent); color: #fff; font-weight: 600; }
+.nav-item.on { background: var(--accent); color: var(--on-accent); font-weight: 600; }
 .nav-item .ico { width: 16px; height: 16px; flex: none; opacity: .85; }
 .nav-item .label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nav-item .n { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--text-3); }
-.nav-item.on .n { color: rgba(255, 255, 255, .85); }
+.nav-item.on .n { color: var(--on-accent); opacity: .7; }
 .nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
 .sidebar-foot { padding: 14px; border-top: 1px solid var(--line); }
@@ -125,31 +169,31 @@ body {
 .search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; color: var(--text-3); }
 .search input {
   width: 100%; padding: 10px 12px 10px 38px;
-  border: 1px solid var(--line); border-radius: 22px;
+  border: 1px solid var(--line); border-radius: var(--pill);
   background: var(--surface-2); color: var(--text); font: inherit;
 }
 .search input::placeholder { color: var(--text-3); }
-.search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.search input:focus { outline: none; border-color: var(--text-3); }
 
 .count { font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 .select select {
   appearance: none; font: inherit; color: var(--text-2);
   background: var(--surface-2); border: 1px solid var(--line);
-  border-radius: 8px; padding: 8px 28px 8px 10px; cursor: pointer;
+  border-radius: var(--pill); padding: 8px 28px 8px 12px; cursor: pointer;
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
   background-position: right 13px center, right 8px center;
   background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
 }
 .select select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
-.segment { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 2px; gap: 2px; }
+.segment { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--pill); padding: 3px; gap: 2px; }
 .segment button {
-  border: 0; background: none; border-radius: 7px; cursor: pointer;
-  font: inherit; color: var(--text-2); padding: 6px 12px; white-space: nowrap;
+  border: 0; background: none; border-radius: var(--pill); cursor: pointer;
+  font: inherit; color: var(--text-2); padding: 6px 14px; white-space: nowrap;
 }
 .segment button:hover { color: var(--text); }
-.segment button.on { background: var(--accent); color: #fff; font-weight: 600; }
+.segment button.on { background: var(--accent); color: var(--on-accent); font-weight: 600; }
 .segment button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .view button { padding: 5px 9px; display: grid; place-items: center; }
 .view svg { width: 17px; height: 17px; fill: currentColor; }
@@ -168,7 +212,7 @@ body {
 
 .card {
   --ea-knockout: var(--surface);
-  border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
   padding: 16px 10px 12px; cursor: pointer; text-align: center;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   transition: border-color .12s, box-shadow .12s, transform .12s;
@@ -184,7 +228,7 @@ body {
   contain-intrinsic-size: auto 116px;
 }
 .grid.list .card { contain-intrinsic-size: auto 52px; }
-.card:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+.card:hover { border-color: var(--accent-ring); transform: translateY(-1px); }
 .card.on { border-color: var(--selected-ring); box-shadow: 0 0 0 2px var(--selected-ring); }
 .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .card .thumb { height: 52px; display: grid; place-items: center; }
@@ -210,7 +254,7 @@ body {
 .grid.list { grid-template-columns: 1fr; gap: 6px; }
 .grid.list .card {
   flex-direction: row; align-items: center; gap: 14px;
-  text-align: left; padding: 10px 14px; border-radius: 9px;
+  text-align: left; padding: 10px 14px; border-radius: var(--pill);
 }
 .grid.list .card .thumb { height: 32px; width: 32px; }
 .grid.list .card .thumb svg { width: 28px; height: 28px; }
@@ -244,7 +288,7 @@ body {
 
 .callout {
   font-size: 12.5px; line-height: 1.5; margin: 0 0 14px;
-  padding: 9px 12px; border-radius: 8px;
+  padding: 9px 12px; border-radius: 10px;
   background: var(--accent-soft); color: var(--text-2);
   border: 1px solid var(--accent-ring);
 }
@@ -255,7 +299,7 @@ body {
 
 .preview {
   --ea-knockout: var(--surface-2);
-  border-radius: 12px; background: linear-gradient(140deg, var(--accent-soft), var(--surface-2));
+  border-radius: var(--radius); background: var(--surface-2);
   border: 1px solid var(--line-soft);
   height: 168px; display: grid; place-items: center; margin-bottom: 6px; overflow: hidden;
 }
@@ -310,11 +354,11 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font: inherit; font-weight: 600; font-size: 13.5px; cursor: pointer;
-  border-radius: 9px; padding: 11px 14px; border: 1px solid var(--line);
+  border-radius: var(--pill); padding: 11px 16px; border: 1px solid var(--line);
   background: var(--surface-2); color: var(--text); text-decoration: none;
 }
 .btn:hover { background: var(--line-soft); }
-.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { filter: brightness(1.07); background: var(--accent); }
 .btn.block { width: 100%; }
 .btn .ico { width: 16px; height: 16px; fill: none; }
@@ -322,8 +366,8 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 
 .toast {
   position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 12px);
-  background: var(--text); color: var(--bg); padding: 10px 18px; border-radius: 999px;
-  font-size: 13px; font-weight: 550; box-shadow: var(--shadow-lg);
+  background: var(--text); color: var(--bg); padding: 10px 18px; border-radius: var(--pill);
+  font-size: 13px; font-weight: 600; border: 1px solid var(--line);
   opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s;
 }
 .toast.on { opacity: 1; transform: translate(-50%, 0); }
@@ -352,3 +396,23 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .grid.list .card[data-type="illustration"] { contain-intrinsic-size: auto 52px; }
 .grid.list .card[data-type="illustration"] .thumb { height: 32px; }
 .grid.list .card[data-type="illustration"] .thumb svg { width: 30px; height: 30px; }
+
+
+/* --- Theme control ---------------------------------------------------
+   Bridge is light only. An icon library is not: checking artwork on both
+   grounds is the job, not a preference. So the theme is a control rather
+   than a guess, with three states — the OS default has to stay reachable
+   once a choice has been made. */
+
+.theme-switch {
+  display: inline-flex; background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--pill); padding: 3px; gap: 2px;
+}
+.theme-switch button {
+  border: 0; background: none; border-radius: var(--pill); cursor: pointer;
+  font: inherit; font-size: 11.5px; color: var(--text-2);
+  padding: 4px 10px; white-space: nowrap;
+}
+.theme-switch button:hover { color: var(--text); }
+.theme-switch button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+.theme-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
