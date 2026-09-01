@@ -1,9 +1,9 @@
 <svg aria-label="Vault Open filled 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="4" width="20" height="16" rx="3.5" fill="var(--ea-knockout, #fff)"/>
-<rect x="3" y="5" width="18" height="14" rx="2.5" fill="currentColor"/>
-<rect x="3" y="5" width="18" height="14" rx="2.5" fill="currentColor" fill-opacity="0.28"/>
-<path d="M8 8.5C8 7.67157 8.67157 7 9.5 7H13.5C14.8807 7 16 8.11929 16 9.5V15.5C16 16.3284 15.3284 17 14.5 17H10.5C9.11929 17 8 15.8807 8 14.5V8.5Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M8 8.5C8 7.67157 8.67157 7 9.5 7H13.5C14.8807 7 16 8.11929 16 9.5V15.5C16 16.3284 15.3284 17 14.5 17H10.5C9.11929 17 8 15.8807 8 14.5V8.5Z" fill="var(--ea-knockout, #fff)"/>
-<rect x="20" y="5" width="1" height="14" rx="0.5" fill="var(--ea-knockout, #fff)"/>
-<path d="M19 7C19 6.44772 19.4477 6 20 6V18C19.4477 18 19 17.5523 19 17V7Z" fill="currentColor"/>
+<rect x="2" y="4" width="20" height="16" rx="3.5" fill="currentColor"/>
+<rect x="3" y="5" width="18" height="14" rx="2.5" fill="var(--ea-knockout, #fff)"/>
+<rect x="3" y="5" width="18" height="14" rx="2.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.28"/>
+<path d="M8 8.5C8 7.67157 8.67157 7 9.5 7H13.5C14.8807 7 16 8.11929 16 9.5V15.5C16 16.3284 15.3284 17 14.5 17H10.5C9.11929 17 8 15.8807 8 14.5V8.5Z" fill="currentColor"/>
+<path d="M8 8.5C8 7.67157 8.67157 7 9.5 7H13.5C14.8807 7 16 8.11929 16 9.5V15.5C16 16.3284 15.3284 17 14.5 17H10.5C9.11929 17 8 15.8807 8 14.5V8.5Z" fill="currentColor"/>
+<rect x="20" y="5" width="1" height="14" rx="0.5" fill="currentColor"/>
+<path d="M19 7C19 6.44772 19.4477 6 20 6V18C19.4477 18 19 17.5523 19 17V7Z" fill="var(--ea-knockout, #fff)"/>
 </svg>

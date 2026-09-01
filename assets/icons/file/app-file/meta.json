@@ -9,8 +9,9 @@
   "collection": "file",
   "status": "draft",
   "themes": [
-    "filled",
-    "standard"
+    "standard",
+    "outline",
+    "filled"
   ],
   "sizes": [
     16,
@@ -40,6 +41,17 @@
       "96": "assets/icons/file/app-file/standard-96.svg",
       "256": "assets/icons/file/app-file/standard-256.svg"
     },
+    "outline": {
+      "16": "assets/icons/file/app-file/outline-16.svg",
+      "20": "assets/icons/file/app-file/outline-20.svg",
+      "24": "assets/icons/file/app-file/outline-24.svg",
+      "32": "assets/icons/file/app-file/outline-32.svg",
+      "36": "assets/icons/file/app-file/outline-36.svg",
+      "40": "assets/icons/file/app-file/outline-40.svg",
+      "48": "assets/icons/file/app-file/outline-48.svg",
+      "96": "assets/icons/file/app-file/outline-96.svg",
+      "256": "assets/icons/file/app-file/outline-256.svg"
+    },
     "filled": {
       "16": "assets/icons/file/app-file/filled-16.svg",
       "20": "assets/icons/file/app-file/filled-20.svg",
@@ -58,5 +70,5 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Filled is derived here from the Standard artwork by luminance, not shipped upstream; it is drawn in currentColor and takes an accent. Outline cannot be derived from these exports and is deliberately absent."
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent."
 }

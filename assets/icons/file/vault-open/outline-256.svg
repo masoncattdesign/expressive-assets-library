@@ -1,0 +1,9 @@
+<svg Vault Open outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="19" y="43" width="218" height="170" rx="38" fill="var(--ea-knockout, #fff)"/>
+<rect x="31" y="55" width="194" height="146" rx="26" fill="currentColor"/>
+<rect x="31" y="55" width="194" height="146" rx="26" fill="currentColor" fill-opacity="0.28"/>
+<path d="M81 83C81 76.3726 86.3726 71 93 71H145C157.15 71 167 80.8497 167 93V173C167 179.627 161.627 185 155 185H103C90.8497 185 81 175.15 81 163V83Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M81 83C81 76.3726 86.3726 71 93 71H145C157.15 71 167 80.8497 167 93V173C167 179.627 161.627 185 155 185H103C90.8497 185 81 175.15 81 163V83Z" fill="var(--ea-knockout, #fff)"/>
+<rect x="213" y="55" width="12" height="146" rx="6" fill="var(--ea-knockout, #fff)"/>
+<path d="M201 79C201 72.3726 206.373 67 213 67V189C206.373 189 201 183.627 201 177V79Z" fill="currentColor"/>
+</svg>

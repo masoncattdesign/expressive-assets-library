@@ -1,0 +1,12 @@
+<svg Lists outline 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6C2 4.89543 2.89543 4 4 4H14C16.2091 4 18 5.79086 18 8V14C18 15.1046 17.1046 16 16 16H6C3.79086 16 2 14.2091 2 12V6Z" fill="currentColor"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H14C15.6569 5 17 6.34315 17 8V14C17 14.5523 16.5523 15 16 15H6C4.34315 15 3 13.6569 3 12V6Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M3 6C3 5.44772 3.44772 5 4 5H14C15.6569 5 17 6.34315 17 8V14C17 14.5523 16.5523 15 16 15H6C4.34315 15 3 13.6569 3 12V6Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M6 8L8 6H13.6821C13.8583 6 14 6.14167 14 6.31786V8L10 8.91667L6 8Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M8.47619 9.94048L6 10.9643V8H8L8.47619 9.94048Z" fill="currentColor"/>
+<path d="M14 10.0238V8H8V10.0476L10.7262 10.5357L14 10.0238Z" fill="currentColor"/>
+<path d="M8 12L6 12.6667V10H8V12Z" fill="currentColor"/>
+<path d="M13.9991 12V10H7.55859V12.0119L11.5229 12.381L13.9991 12Z" fill="currentColor"/>
+<path d="M8 14H6.37619C6.16786 14 6 13.8321 6 13.6238V12H8V14Z" fill="currentColor"/>
+<path d="M8.00093 12L7.69141 12.9524L8.00093 14H12.0009L14.0009 12H8.00093Z" fill="currentColor"/>
+</svg>

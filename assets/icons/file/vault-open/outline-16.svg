@@ -1,0 +1,9 @@
+<svg Vault Open outline 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="2.5" width="13" height="11" rx="2" stroke="currentColor"/>
+<rect x="2" y="3" width="12" height="10" rx="1.5" fill="currentColor"/>
+<rect x="2" y="3" width="12" height="10" rx="1.5" fill="currentColor" fill-opacity="0.28"/>
+<path d="M4 4.75C4 4.33579 4.33579 4 4.75 4H8.5C9.32843 4 10 4.67157 10 5.5V11.25C10 11.6642 9.66421 12 9.25 12H5.5C4.67157 12 4 11.3284 4 10.5V4.75Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M4 4.75C4 4.33579 4.33579 4 4.75 4H8.5C9.32843 4 10 4.67157 10 5.5V11.25C10 11.6642 9.66421 12 9.25 12H5.5C4.67157 12 4 11.3284 4 10.5V4.75Z" fill="var(--ea-knockout, #fff)"/>
+<rect x="13" y="3" width="1" height="10" rx="0.5" fill="var(--ea-knockout, #fff)"/>
+<path d="M12 5C12 4.44772 12.4477 4 13 4V12C12.4477 12 12 11.5523 12 11V5Z" fill="currentColor"/>
+</svg>

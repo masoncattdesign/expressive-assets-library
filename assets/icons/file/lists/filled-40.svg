@@ -1,12 +1,12 @@
 <svg aria-label="Lists filled 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="currentColor"/>
-<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M12 16L16 12H27.3643C27.7167 12 28 12.2833 28 12.6357V16L20 17.8333L12 16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.9524 19.881L12 21.9286V16H16L16.9524 19.881Z" fill="currentColor"/>
-<path d="M28 20.0476V16H16V20.0952L21.4524 21.0714L28 20.0476Z" fill="currentColor"/>
-<path d="M16 24L12 25.3333V20H16V24Z" fill="currentColor"/>
-<path d="M28.0001 24V20H15.1191V24.0238L23.0477 24.7619L28.0001 24Z" fill="currentColor"/>
-<path d="M16 28H12.7524C12.3357 28 12 27.6643 12 27.2476V24H16V28Z" fill="currentColor"/>
-<path d="M15.9999 24L15.3809 25.9048L15.9999 28H23.9999L27.9999 24H15.9999Z" fill="currentColor"/>
+<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
+<path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
+<path d="M12 16L16 12H27.3643C27.7167 12 28 12.2833 28 12.6357V16L20 17.8333L12 16Z" fill="currentColor"/>
+<path d="M16.9524 19.881L12 21.9286V16H16L16.9524 19.881Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M28 20.0476V16H16V20.0952L21.4524 21.0714L28 20.0476Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M16 24L12 25.3333V20H16V24Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M28.0001 24V20H15.1191V24.0238L23.0477 24.7619L28.0001 24Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M16 28H12.7524C12.3357 28 12 27.6643 12 27.2476V24H16V28Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M15.9999 24L15.3809 25.9048L15.9999 28H23.9999L27.9999 24H15.9999Z" fill="var(--ea-knockout, #fff)"/>
 </svg>
