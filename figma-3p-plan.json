@@ -1,0 +1,1467 @@
+{
+  "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+  "page": "3P Icons",
+  "pageNodeId": "582219:10748",
+  "generated": "2026-09-01",
+  "note": "Third-party brand marks. One size (32) and one or two styles per brand, exactly as the file holds them. Outline does not exist here and is derived after import. Every asset carries a `source.owner`, which THIRD-PARTY-NOTICES.md is built from.",
+  "warnings": [
+    "Apple: no Standard — only a monochrome mark exists",
+    "Content Credentials: no Filled — only a colour mark exists",
+    "MCP: no Standard — only a monochrome mark exists",
+    "Polly: no Filled — only a colour mark exists"
+  ],
+  "assets": [
+    {
+      "id": "third-party.adobe-after-effects",
+      "name": "Adobe After Effects",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:217",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:217"
+        },
+        "filled": {
+          "32": "367698:2336"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe After Effects",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-audition",
+      "name": "Adobe Audition",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:220",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:220"
+        },
+        "filled": {
+          "32": "367698:2345"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Audition",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-illustrator",
+      "name": "Adobe Illustrator",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:218",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:218"
+        },
+        "filled": {
+          "32": "367698:2352"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Illustrator",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-indesign",
+      "name": "Adobe Indesign",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:215",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:215"
+        },
+        "filled": {
+          "32": "367704:2363"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Indesign",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-media-encoder",
+      "name": "Adobe Media Encoder",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:221",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:221"
+        },
+        "filled": {
+          "32": "367704:2372"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Media Encoder",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-photoshop",
+      "name": "Adobe Photoshop",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:216",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:216"
+        },
+        "filled": {
+          "32": "367704:2379"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Photoshop",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-reader",
+      "name": "Adobe Reader",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:219",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:219"
+        },
+        "filled": {
+          "32": "367704:2388"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Reader",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-spark",
+      "name": "Adobe Spark",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:214",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:214"
+        },
+        "filled": {
+          "32": "367707:87"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe Spark",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.adobe-xd",
+      "name": "Adobe XD",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "105551:213",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "105551:213"
+        },
+        "filled": {
+          "32": "367707:96"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Adobe XD",
+        "owner": "Adobe Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.android",
+      "name": "Android",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "515207:545",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "515207:545"
+        },
+        "filled": {
+          "32": "515207:542"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Android",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.apple",
+      "name": "Apple",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "458246:3624",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "filled": {
+          "32": "458246:3624"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Apple",
+        "owner": "Apple Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.apple-mail",
+      "name": "Apple Mail",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:73",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:73"
+        },
+        "filled": {
+          "32": "355643:72"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Apple Mail",
+        "owner": "Apple Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.apple-messages",
+      "name": "Apple Messages",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:82",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:82"
+        },
+        "filled": {
+          "32": "355643:81"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Apple Messages",
+        "owner": "Apple Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.box",
+      "name": "Box",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:911",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:911"
+        },
+        "filled": {
+          "32": "5634:905"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Box",
+        "owner": "Box, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.content-credentials",
+      "name": "Content Credentials",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "337231:170",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "337231:170"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Content Credentials",
+        "owner": "Coalition for Content Provenance and Authenticity",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.dropbox",
+      "name": "Dropbox",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:869",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:869"
+        },
+        "filled": {
+          "32": "5634:864"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Dropbox",
+        "owner": "Dropbox, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.evernote",
+      "name": "Evernote",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:849",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:849"
+        },
+        "filled": {
+          "32": "5634:844"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Evernote",
+        "owner": "Evernote Corporation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.facebook",
+      "name": "Facebook",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:841",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:841"
+        },
+        "filled": {
+          "32": "5634:839"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Facebook",
+        "owner": "Meta Platforms, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.facebook-messenger",
+      "name": "Facebook Messenger",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:85",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:85"
+        },
+        "filled": {
+          "32": "355643:84"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Facebook Messenger",
+        "owner": "Meta Platforms, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.figma",
+      "name": "Figma",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "204271:1297",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "204271:1297"
+        },
+        "filled": {
+          "32": "204271:1296"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Figma",
+        "owner": "Figma, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.firefox",
+      "name": "Firefox",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "233210:3253",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "233210:3253"
+        },
+        "filled": {
+          "32": "233210:3252"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Firefox",
+        "owner": "Mozilla Foundation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google",
+      "name": "Google",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:795",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:795"
+        },
+        "filled": {
+          "32": "5634:793"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google-chrome",
+      "name": "Google Chrome",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "233210:2970",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "233210:2970"
+        },
+        "filled": {
+          "32": "233210:2969"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google Chrome",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google-drive",
+      "name": "Google Drive",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:814",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:814"
+        },
+        "filled": {
+          "32": "5634:809"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google Drive",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google-mail",
+      "name": "Google Mail",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:97",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:97"
+        },
+        "filled": {
+          "32": "355643:98"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google Mail",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google-photos",
+      "name": "Google Photos",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "222804:1574",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "222804:1574"
+        },
+        "filled": {
+          "32": "222804:1575"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google Photos",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.google-slides",
+      "name": "Google Slides",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "272991:1676",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "272991:1676"
+        },
+        "filled": {
+          "32": "272991:1675"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Google Slides",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.icloud",
+      "name": "iCloud",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "266081:1795",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "266081:1795"
+        },
+        "filled": {
+          "32": "266081:1794"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "iCloud",
+        "owner": "Apple Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.instacart",
+      "name": "Instacart",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "357471:10",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "357471:10"
+        },
+        "filled": {
+          "32": "357471:9"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Instacart",
+        "owner": "Maplebear Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.instagram",
+      "name": "Instagram",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:96",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:96"
+        },
+        "filled": {
+          "32": "355643:95"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Instagram",
+        "owner": "Meta Platforms, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.line-messenger",
+      "name": "Line Messenger",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "356854:1643",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "356854:1643"
+        },
+        "filled": {
+          "32": "356854:1642"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Line Messenger",
+        "owner": "LY Corporation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.linux",
+      "name": "Linux",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "437453:4272",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "437453:4272"
+        },
+        "filled": {
+          "32": "437453:4267"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Linux",
+        "owner": "Linux Mark Institute",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.mcp",
+      "name": "MCP",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "515207:544",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "filled": {
+          "32": "515207:544"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "MCP",
+        "owner": "Anthropic PBC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.meetup",
+      "name": "Meetup",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:744",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:744"
+        },
+        "filled": {
+          "32": "5634:730"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Meetup",
+        "owner": "Meetup LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.miro",
+      "name": "Miro",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "117702:201",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "117702:201"
+        },
+        "filled": {
+          "32": "117702:228"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Miro",
+        "owner": "RealtimeBoard, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.opera",
+      "name": "Opera",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "233210:3292",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "233210:3292"
+        },
+        "filled": {
+          "32": "233210:3291"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Opera",
+        "owner": "Opera Norway AS",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.pearson",
+      "name": "Pearson",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "504899:4639",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "504899:4639"
+        },
+        "filled": {
+          "32": "504899:4640"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Pearson",
+        "owner": "Pearson plc",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.polly",
+      "name": "Polly",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "10276:56",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "10276:56"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Polly",
+        "owner": "Polly.ai",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.safari",
+      "name": "Safari",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "233210:3217",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "233210:3217"
+        },
+        "filled": {
+          "32": "233210:3216"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Safari",
+        "owner": "Apple Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.servicenow",
+      "name": "ServiceNow",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "117703:168",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "117703:168"
+        },
+        "filled": {
+          "32": "117703:187"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "ServiceNow",
+        "owner": "ServiceNow, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.sketch",
+      "name": "Sketch",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "515089:840",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "515089:840"
+        },
+        "filled": {
+          "32": "515089:839"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Sketch",
+        "owner": "Sketch B.V.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.slack",
+      "name": "Slack",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "480868:135",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "480868:135"
+        },
+        "filled": {
+          "32": "480868:134"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Slack",
+        "owner": "Salesforce, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.squarespace",
+      "name": "Squarespace",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "502071:92",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "502071:92"
+        },
+        "filled": {
+          "32": "502071:102"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Squarespace",
+        "owner": "Squarespace, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.stack-overflow",
+      "name": "Stack Overflow",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "204271:1286",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "204271:1286"
+        },
+        "filled": {
+          "32": "204271:1285"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Stack Overflow",
+        "owner": "Stack Exchange, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.telegram",
+      "name": "Telegram",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:70",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:70"
+        },
+        "filled": {
+          "32": "355643:69"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Telegram",
+        "owner": "Telegram FZ-LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.tiktok",
+      "name": "TikTok",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "515207:539",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "515207:539"
+        },
+        "filled": {
+          "32": "515207:538"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "TikTok",
+        "owner": "ByteDance Ltd.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.trello",
+      "name": "Trello",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "10276:55",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "10276:55"
+        },
+        "filled": {
+          "32": "364286:1872"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Trello",
+        "owner": "Atlassian Corporation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.twitter",
+      "name": "Twitter",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "204271:1283",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "204271:1283"
+        },
+        "filled": {
+          "32": "204271:1282"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Twitter",
+        "owner": "X Corp.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.twitter-circle",
+      "name": "Twitter Circle",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "111855:11",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "111855:11"
+        },
+        "filled": {
+          "32": "111855:25"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Twitter Circle",
+        "owner": "X Corp.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.viber",
+      "name": "Viber",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:79",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:79"
+        },
+        "filled": {
+          "32": "355643:78"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Viber",
+        "owner": "Rakuten Group, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.wechat",
+      "name": "WeChat",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "555030:2084",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "555030:2084"
+        },
+        "filled": {
+          "32": "555030:2085"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "WeChat",
+        "owner": "Tencent Holdings Limited",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.weibo",
+      "name": "Weibo",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "555030:2086",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "555030:2086"
+        },
+        "filled": {
+          "32": "555030:2087"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Weibo",
+        "owner": "Weibo Corporation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.whatsapp",
+      "name": "Whatsapp",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "283002:2212",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "283002:2212"
+        },
+        "filled": {
+          "32": "283002:2211"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Whatsapp",
+        "owner": "Meta Platforms, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.whatsapp-business",
+      "name": "Whatsapp Business",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "355643:76",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "355643:76"
+        },
+        "filled": {
+          "32": "355643:75"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Whatsapp Business",
+        "owner": "Meta Platforms, Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.wix",
+      "name": "Wix",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "502071:96",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "502071:96"
+        },
+        "filled": {
+          "32": "502071:104"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Wix",
+        "owner": "Wix.com Ltd.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.wordpress",
+      "name": "WordPress",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "502071:88",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "502071:88"
+        },
+        "filled": {
+          "32": "502071:100"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "WordPress",
+        "owner": "Automattic Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.wunderlist",
+      "name": "Wunderlist",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:537",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:537"
+        },
+        "filled": {
+          "32": "5634:532"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Wunderlist",
+        "owner": "Microsoft Corporation",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.x",
+      "name": "X",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "305679:605",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "filled": {
+          "32": "305679:604"
+        },
+        "standard": {
+          "32": "305679:605"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "X",
+        "owner": "X Corp.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.xiaohongshu",
+      "name": "Xiaohongshu",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "555030:2088",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "555030:2088"
+        },
+        "filled": {
+          "32": "555030:2089"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Xiaohongshu",
+        "owner": "Xingin Information Technology Co., Ltd.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.yahoo",
+      "name": "Yahoo",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "5634:507",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "5634:507"
+        },
+        "filled": {
+          "32": "5634:502"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Yahoo",
+        "owner": "Yahoo Inc.",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    },
+    {
+      "id": "third-party.youtube",
+      "name": "Youtube",
+      "collection": "third-party",
+      "type": "icon",
+      "nodeId": "162417:622",
+      "sizes": [
+        32
+      ],
+      "renders": {
+        "standard": {
+          "32": "162417:622"
+        },
+        "filled": {
+          "32": "162417:615"
+        }
+      },
+      "recolorable": false,
+      "source": {
+        "project": "Youtube",
+        "owner": "Google LLC",
+        "note": "Third-party trademark, reproduced for interface use. Ownership is best effort and not a legal opinion."
+      }
+    }
+  ]
+}
