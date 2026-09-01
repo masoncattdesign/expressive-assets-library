@@ -101,12 +101,12 @@ function findOrMakeBoard(page, name) {
   board.layoutWrap = 'WRAP';
   board.primaryAxisSizingMode = 'FIXED';
   board.counterAxisSizingMode = 'AUTO';
-  board.itemSpacing = 32;
-  board.counterAxisSpacing = 32;
+  board.itemSpacing = 24;
+  board.counterAxisSpacing = 24;
   board.paddingLeft = 56; board.paddingRight = 56;
   board.paddingTop = 48; board.paddingBottom = 56;
   board.fills = solid(PAPER);
-  if (board.width < 1400) board.resize(1800, board.height);
+  if (board.width < 1400) board.resize(1720, board.height);
   return board;
 }
 
@@ -120,7 +120,32 @@ function clearOldLayout(board) {
   return old.length;
 }
 
-/** A variant is a component wrapping one SVG frame, sized to the icon. */
+/* The grid, laid out by hand.
+   ------------------------------------------------------------------
+   Letting Figma auto-arrange the variants was the mistake. A wrap layout
+   packs them by intrinsic size, so columns do not line up between rows, the
+   largest icon gets clipped by a frame sized before it was added, and there
+   is nowhere to hang a label that stays put.
+
+   Component sets accept manually positioned variants, so the grid is
+   computed instead: three columns of styles, six rows of sizes, every cell
+   the same square with the artwork centred in it. Uniform cells are what
+   make the labels alignable, and centring in a constant square is also the
+   honest way to show a 16 next to a 48 — you see the size difference against
+   something fixed. */
+
+const CELL = 64;
+const GAP = 8;
+const LEFT = 52;   // room for the size labels
+const TOP = 96;    // room for the title and the style labels
+
+const gridX = (col) => col * (CELL + GAP);
+const gridY = (row) => row * (CELL + GAP);
+const gridW = 3 * CELL + 2 * GAP;
+const gridH = 6 * CELL + 5 * GAP;
+
+/** A variant is a component at the icon's true size, so an instance someone
+ *  places is 16x16 when they pick 16. The cell is the space around it. */
 function buildVariant(svg, size, flagged) {
   const art = figma.createNodeFromSvg(paint(svg));
   art.name = 'art';
@@ -134,6 +159,11 @@ function buildVariant(svg, size, flagged) {
   return comp;
 }
 
+function placeVariant(comp, col, row, size) {
+  comp.x = gridX(col) + (CELL - size) / 2;
+  comp.y = gridY(row) + (CELL - size) / 2;
+}
+
 function swapArtwork(comp, svg) {
   const art = figma.createNodeFromSvg(paint(svg));
   art.name = 'art';
@@ -141,6 +171,50 @@ function swapArtwork(comp, svg) {
   comp.appendChild(art);
   art.x = 0;
   art.y = 0;
+}
+
+/** The card is the bounding box: name, the style headings across the top, the
+ *  sizes down the left, and the component set sitting in the grid. */
+function dressCard(card, set, asset, placeholderCount) {
+  card.name = asset.name;
+  card.layoutMode = 'NONE';
+  card.fills = solid(PAPER);
+  card.strokes = solid({ r: 0.902, g: 0.902, b: 0.910 });
+  card.strokeWeight = 1;
+  card.cornerRadius = 14;
+  card.clipsContent = false;
+  card.resize(LEFT + gridW + 24, TOP + gridH + 24);
+
+  card.children.slice().forEach((c) => { if (c.type === 'TEXT') c.remove(); });
+
+  const title = text(asset.name, 15, 1);
+  title.x = 20; title.y = 18;
+  card.appendChild(title);
+
+  const sub = text(asset.id + (placeholderCount ? '  ·  ' + placeholderCount + ' generated' : ''), 11, 0.5);
+  sub.x = 20; sub.y = 40;
+  card.appendChild(sub);
+
+  STYLES.forEach((style, col) => {
+    const t = text(style.label, 10, 0.5);
+    card.appendChild(t);
+    t.textAlignHorizontal = 'CENTER';
+    t.resize(CELL, t.height);
+    t.x = LEFT + gridX(col);
+    t.y = TOP - 18;
+  });
+
+  SIZES.forEach((size, row) => {
+    const t = text(String(size), 10, 0.5);
+    card.appendChild(t);
+    t.textAlignHorizontal = 'RIGHT';
+    t.resize(LEFT - 14, t.height);
+    t.x = 6;
+    t.y = TOP + gridY(row) + (CELL - t.height) / 2;
+  });
+
+  set.x = LEFT;
+  set.y = TOP;
 }
 
 async function sync(payload) {
@@ -168,8 +242,7 @@ async function sync(payload) {
   // Existing sets, by the asset id stamped on them rather than by display name,
   // so renaming an icon in the library does not orphan its component.
   const existingSets = {};
-  for (const node of board.children) {
-    if (node.type !== 'COMPONENT_SET') continue;
+  for (const node of board.findAll((n) => n.type === 'COMPONENT_SET')) {
     const id = node.getSharedPluginData(NS, 'id') || node.name;
     existingSets[id] = node;
   }
@@ -218,10 +291,19 @@ async function sync(payload) {
 
     if (!fresh.length) continue;
 
+    let card = set && set.parent && set.parent.type === 'FRAME' && set.parent !== board
+      ? set.parent
+      : null;
+
+    if (!card) {
+      card = figma.createFrame();
+      board.appendChild(card);
+    }
+
     if (set) {
       fresh.forEach((c) => set.appendChild(c));
     } else {
-      set = figma.combineAsVariants(fresh, board);
+      set = figma.combineAsVariants(fresh, card);
       report.sets++;
     }
 
@@ -230,13 +312,22 @@ async function sync(payload) {
     set.description = asset.id + (placeholders.length
       ? '\n' + placeholders.length + ' of 18 variants are generated rather than authored.'
       : '');
-    set.layoutMode = 'HORIZONTAL';
-    set.layoutWrap = 'WRAP';
-    set.itemSpacing = 20;
-    set.counterAxisSpacing = 20;
-    set.paddingLeft = 20; set.paddingRight = 20;
-    set.paddingTop = 20; set.paddingBottom = 20;
-    set.resize(Math.max(set.width, 420), set.height);
+    set.layoutMode = 'NONE';
+    set.clipsContent = false;
+    set.fills = [];
+    set.strokes = [];
+    set.resize(gridW, gridH);
+
+    // Every variant to its computed cell, including ones that already existed.
+    STYLES.forEach((style, col) => {
+      SIZES.forEach((size, row) => {
+        const v = set.children.find((c) => c.name === variantName(style, size));
+        if (v) placeVariant(v, col, row, size);
+      });
+    });
+
+    if (!card.children.includes(set)) card.appendChild(set);
+    dressCard(card, set, asset, placeholders.length);
   }
 
   figma.currentPage.selection = [board];
