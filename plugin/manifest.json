@@ -1,0 +1,17 @@
+{
+  "name": "Expressive Assets Sync",
+  "id": "1659900000000000001",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://masoncattdesign.github.io",
+      "https://raw.githubusercontent.com",
+      "http://localhost:4173"
+    ],
+    "reasoning": "Reads manifest.json and the SVG drawings from the published Expressive Assets site, or from a local dev server, and writes them into this file. Nothing is sent anywhere."
+  }
+}

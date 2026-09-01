@@ -1,0 +1,152 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; font-family: Inter, "Segoe UI", system-ui, sans-serif; }
+  body { margin: 0; padding: 16px; font-size: 12px; color: var(--figma-color-text); background: var(--figma-color-bg); }
+  h1 { font-size: 13px; margin: 0 0 4px; }
+  p.sub { margin: 0 0 16px; color: var(--figma-color-text-secondary); line-height: 1.45; }
+  label { display: block; font-size: 11px; color: var(--figma-color-text-secondary); margin: 0 0 5px; }
+  input, select {
+    width: 100%; font: inherit; padding: 7px 9px; border-radius: 6px; margin-bottom: 12px;
+    border: 1px solid var(--figma-color-border); background: var(--figma-color-bg-secondary);
+    color: var(--figma-color-text);
+  }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .row input[type=checkbox] { width: auto; margin: 0; }
+  .row label { margin: 0; }
+  button {
+    width: 100%; font: inherit; font-weight: 600; padding: 9px; border-radius: 6px; border: 0;
+    background: var(--figma-color-bg-brand); color: var(--figma-color-text-onbrand); cursor: pointer;
+  }
+  button:disabled { opacity: .5; cursor: default; }
+  #log {
+    margin-top: 14px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px;
+    line-height: 1.6; white-space: pre-wrap; color: var(--figma-color-text-secondary);
+    max-height: 190px; overflow-y: auto;
+  }
+  #log b { color: var(--figma-color-text); font-weight: 500; }
+  .bad { color: var(--figma-color-text-danger); }
+</style>
+
+<h1>Expressive Assets Sync</h1>
+<p class="sub">Builds this file's page from the library. Adds what is missing, replaces what changed, leaves everything else alone. Never deletes.</p>
+
+<label for="src">Source</label>
+<select id="src">
+  <option value="https://masoncattdesign.github.io/expressive-assets-library">Published site</option>
+  <option value="http://localhost:4173">Local dev server (npm run dev)</option>
+  <option value="https://raw.githubusercontent.com/masoncattdesign/expressive-assets-library/main">GitHub, main branch</option>
+</select>
+
+<label for="collection">Collection</label>
+<select id="collection">
+  <option value="product">Product Icons</option>
+  <option value="file">File Icons</option>
+  <option value="system">System Icons</option>
+</select>
+
+<div class="row">
+  <input type="checkbox" id="dry">
+  <label for="dry">Report only, write nothing</label>
+</div>
+
+<button id="go">Sync</button>
+<div id="log"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const log = (html) => { $('log').innerHTML += html + '\n'; $('log').scrollTop = 1e6; };
+
+const SIZES = [16, 20, 24, 28, 32, 48];
+const STYLES = ['standard', 'outline', 'filled'];
+const LABEL = { product: 'Product Icons', file: 'File Icons', system: 'System Icons' };
+
+/** Fetch with a small amount of concurrency. One at a time is slow across
+ *  1,600 files; all at once trips rate limiting and the browser's own queue. */
+async function pool(items, limit, worker) {
+  const out = [];
+  let i = 0;
+  const runners = Array.from({ length: limit }, async () => {
+    while (i < items.length) {
+      const n = i++;
+      out[n] = await worker(items[n], n);
+    }
+  });
+  await Promise.all(runners);
+  return out;
+}
+
+$('go').addEventListener('click', async () => {
+  const base = $('src').value.replace(/\/$/, '');
+  const collection = $('collection').value;
+  const dry = $('dry').checked;
+  $('go').disabled = true;
+  $('log').innerHTML = '';
+
+  try {
+    log('Reading manifest…');
+    const res = await fetch(base + '/manifest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('manifest.json returned ' + res.status);
+    const manifest = await res.json();
+
+    const assets = manifest.assets
+      .filter((a) => a.type === 'icon' && a.collection === collection)
+      .map((a) => ({ id: a.id, name: a.name, variants: a.variants, placeholders: a.placeholders || [] }));
+    log('<b>' + assets.length + '</b> assets in ' + LABEL[collection]);
+
+    const wanted = [];
+    for (const a of assets) {
+      for (const style of STYLES) {
+        for (const size of SIZES) {
+          const path = a.variants && a.variants[style] && a.variants[style][size];
+          if (path) wanted.push({ key: a.id + '|' + style + '|' + size, path });
+        }
+      }
+    }
+    log('<b>' + wanted.length + '</b> drawings to fetch');
+
+    let done = 0;
+    const drawings = {};
+    await pool(wanted, 12, async (item) => {
+      const r = await fetch(base + '/' + item.path, { cache: 'no-store' });
+      if (r.ok) drawings[item.key] = await r.text();
+      if (++done % 200 === 0) log('  fetched ' + done + '…');
+    });
+    log('<b>' + Object.keys(drawings).length + '</b> fetched');
+
+    if (dry) {
+      log('\nReport only. Nothing was written.');
+      $('go').disabled = false;
+      return;
+    }
+
+    log('Writing into the file…');
+    parent.postMessage({ pluginMessage: {
+      type: 'sync',
+      payload: { assets: assets.map(({ id, name, placeholders }) => ({ id, name, placeholders })), drawings, pageName: LABEL[collection] },
+    } }, '*');
+  } catch (err) {
+    log('<span class="bad">' + err.message + '</span>');
+    if (/Failed to fetch/i.test(err.message)) {
+      log('The source is unreachable. If the site is behind a sign-in, a plugin cannot reach it: use the local dev server, or GitHub.');
+    }
+    $('go').disabled = false;
+  }
+});
+
+onmessage = (event) => {
+  const msg = event.data.pluginMessage;
+  if (!msg) return;
+  if (msg.type === 'error') { log('<span class="bad">' + msg.message + '</span>'); }
+  if (msg.type === 'done') {
+    const r = msg.result;
+    log('\n<b>' + r.created + '</b> created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
+    if (r.missing) log('<b>' + r.missing + '</b> not in the library');
+    if (r.strayCount) {
+      log('<b>' + r.strayCount + '</b> on the page but not in the library, left alone:');
+      r.strays.forEach((n) => log('  ' + n));
+    }
+  }
+  $('go').disabled = false;
+};
+</script>
