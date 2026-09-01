@@ -88,7 +88,7 @@ function pageIsSafe(page, boardName) {
   return page.children.every((n) => n.name === boardName && n.type === 'FRAME');
 }
 
-function findOrMakeBoard(page, name) {
+function findOrMakeBoard(page, name, count) {
   let board = page.children.find((n) => n.name === name && n.type === 'FRAME');
   if (!board) {
     board = figma.createFrame();
@@ -101,23 +101,20 @@ function findOrMakeBoard(page, name) {
   board.layoutWrap = 'WRAP';
   board.primaryAxisSizingMode = 'FIXED';
   board.counterAxisSizingMode = 'AUTO';
-  board.itemSpacing = 24;
-  board.counterAxisSpacing = 24;
-  board.paddingLeft = 56; board.paddingRight = 56;
-  board.paddingTop = 48; board.paddingBottom = 56;
+  board.itemSpacing = CARD_GAP;
+  board.counterAxisSpacing = CARD_GAP;
+  board.paddingLeft = PAD; board.paddingRight = PAD;
+  board.paddingTop = 48; board.paddingBottom = PAD;
   board.fills = solid(PAPER);
-  if (board.width < 1400) board.resize(1720, board.height);
-  return board;
-}
 
-/** The first version of this plugin laid the page out as three style sections
- *  of ninety rows. Those are ours, so they can go. */
-function clearOldLayout(board) {
-  const old = board.children.filter(
-    (n) => n.type === 'FRAME' && ['Heading', 'Standard', 'Outline', 'Filled'].indexOf(n.name) !== -1
-  );
-  old.forEach((n) => n.remove());
-  return old.length;
+  // Cards are taller than they are wide, so an equal column and row count
+  // gives a very tall board. Solve for the column count that makes the whole
+  // block roughly square instead, and let wrap do the rest.
+  const cols = Math.max(3, Math.round(
+    Math.sqrt(Math.max(count, 1) * (CARD_H + CARD_GAP) / (CARD_W + CARD_GAP))
+  ));
+  board.resize(PAD * 2 + cols * CARD_W + (cols - 1) * CARD_GAP, board.height);
+  return board;
 }
 
 /* The grid, laid out by hand.
@@ -143,6 +140,10 @@ const gridX = (col) => col * (CELL + GAP);
 const gridY = (row) => row * (CELL + GAP);
 const gridW = 3 * CELL + 2 * GAP;
 const gridH = 6 * CELL + 5 * GAP;
+const CARD_W = LEFT + gridW + 24;
+const CARD_H = TOP + gridH + 24;
+const CARD_GAP = 24;
+const PAD = 56;
 
 /** A variant is a component at the icon's true size, so an instance someone
  *  places is 16x16 when they pick 16. The cell is the space around it. */
@@ -234,10 +235,10 @@ async function sync(payload) {
     };
   }
 
-  const board = findOrMakeBoard(page, pageName);
+  const board = findOrMakeBoard(page, pageName, assets.length);
   const removedOld = clearOldLayout(board);
 
-  const report = { sets: 0, created: 0, replaced: 0, unchanged: 0, missing: 0, removedOld };
+  const report = { sets: 0, created: 0, replaced: 0, unchanged: 0, missing: 0, laid: 0, removedOld };
 
   // Existing sets, by the asset id stamped on them rather than by display name,
   // so renaming an icon in the library does not orphan its component.
@@ -289,7 +290,7 @@ async function sync(payload) {
       }
     }
 
-    if (!fresh.length) continue;
+    if (!set && !fresh.length) continue;
 
     let card = set && set.parent && set.parent.type === 'FRAME' && set.parent !== board
       ? set.parent
@@ -300,11 +301,13 @@ async function sync(payload) {
       board.appendChild(card);
     }
 
-    if (set) {
-      fresh.forEach((c) => set.appendChild(c));
-    } else {
-      set = figma.combineAsVariants(fresh, card);
-      report.sets++;
+    if (fresh.length) {
+      if (set) {
+        fresh.forEach((c) => set.appendChild(c));
+      } else {
+        set = figma.combineAsVariants(fresh, card);
+        report.sets++;
+      }
     }
 
     set.name = asset.name;
@@ -328,6 +331,7 @@ async function sync(payload) {
 
     if (!card.children.includes(set)) card.appendChild(set);
     dressCard(card, set, asset, placeholders.length);
+    report.laid++;
   }
 
   figma.currentPage.selection = [board];

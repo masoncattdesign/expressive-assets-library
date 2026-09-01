@@ -161,8 +161,9 @@ onmessage = (event) => {
     if (r.removedOld) log('Removed <b>' + r.removedOld + '</b> sections from the old row layout');
     if (r.sets) log('<b>' + r.sets + '</b> component sets created');
     log('\n<b>' + r.created + '</b> variants created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
+    log('<b>' + r.laid + '</b> cards laid out');
     if (r.missing) log('<b>' + r.missing + '</b> not in the library');
-    log('\nRun it again: everything should come back unchanged.');
+    log('\nRun it again: nothing should be created or replaced, and the cards get laid out the same way.');
   }
   $('go').disabled = false;
 };
