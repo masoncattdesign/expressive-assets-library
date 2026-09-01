@@ -92,27 +92,50 @@ the name on the way in. An earlier split had `regular` meaning Outline here whil
 Fluent uses "regular" for the full-weight base — the kind of collision that costs
 someone an afternoon.
 
-## Palette
+## The three tools
 
-**Palette** (`docs/palette.html`) is the sibling tool: Gallery shows the library,
-Palette restyles a piece of it. It takes an asset and re-renders it through one
+Gallery, Customizer, and Builder. One library, three verbs.
+
+| | Does | Acts on |
+|---|---|---|
+| **Gallery** | find | the whole library |
+| **Customizer** | restyle | one existing asset |
+| **Builder** | compose | parts, into an asset that did not exist |
+
+Gallery is the odd one out grammatically, and deliberately: it is the one you
+only look through. The other two make something.
+
+The risk in this set is that *customize* and *build* both colloquially mean
+"make it mine", so the boundary has to stay sharp in the product itself:
+Customizer never adds or removes a shape, and Builder never recolours one.
+
+**Builder does not exist yet**, and the library is not ready for it. Composing
+from parts requires assets to HAVE parts, and every asset here is a flat SVG
+with no declared anatomy. Bridge already models this — its icon schema carries
+an `anatomy` block with named parts — so whatever Builder eventually consumes
+should look like that rather than being invented separately.
+
+## Customizer
+
+**Customizer** (`docs/customizer.html`) is the sibling tool: Gallery shows the
+library, Customizer restyles a piece of it. It takes an asset and re-renders it through one
 of seven themable pipelines driven by a single seed colour, reading the source
 shapes, bucketing them by luminance, and re-filling.
 
-Gallery's detail panel has a **Customize in Palette** button that deep-links the
+Gallery's detail panel has an **Open in Customizer** button that deep-links the
 selected asset:
 
 ```
-palette.html?asset=file.pdf&asset=m365.chat
+customizer.html?asset=file.pdf&asset=m365.chat
 ```
 
 Linked by asset id rather than file path, so the link survives a re-import that
-changes which sizes exist. Palette picks the largest drawing available; these
+changes which sizes exist. It picks the largest drawing available; these
 pipelines bucket by luminance and read better with more shapes to work from.
 
 Two constraints are deliberate.
 
-**Standard artwork only.** Palette works by reading source colours. Outline and
+**Standard artwork only.** Customizer works by reading source colours. Outline and
 Filled are drawn in `currentColor` and have none, so they are not offered.
 Recolouring those is Gallery's accent picker, which is the right tool for it.
 That leaves roughly 210 full-colour assets: the file icons, the product icons,
@@ -120,10 +143,10 @@ and the illustrations.
 
 **It still opens with a double-click.** `fetch` is blocked on `file://`, so a
 failed manifest load is a normal state rather than an error. The built-in sample
-icons stay, the library row simply never appears, and Palette says so.
+icons stay, the library row simply never appears, and the page says so.
 
 One interop note. Tokenised artwork carries its tint hooks inline as
-`var(--ea-primary, #8B52F4)`, and every colour reader in Palette handles `#hex`
+`var(--ea-primary, #8B52F4)`, and every colour reader in Customizer handles `#hex`
 and `rgb()` only. `resolveColorVars()` collapses each token to its fallback on
 the way in. Without it the M365 illustrations, the one set authored to be
 recoloured, would be the set that failed.

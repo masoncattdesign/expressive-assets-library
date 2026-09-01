@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Palette — Expressive Assets</title>
+<title>Customizer — Expressive Assets</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -137,7 +137,7 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 
 <header>
   <div class="logo"></div>
-  <h1>Palette</h1>
+  <h1>Customizer</h1>
   <div class="header-right">
     <div class="preview-bg-toggle">
       <button class="bg-btn active" id="bg-dark" onclick="setBg('dark')">Dark</button>
@@ -3005,7 +3005,7 @@ function updateM365Toggle(){
 /* ======================================================================
    Expressive Assets library
    ----------------------------------------------------------------------
-   Palette's pipeline takes an SVG STRING and knows nothing about where it
+   The pipeline takes an SVG STRING and knows nothing about where it
    came from, so pulling from the library is a data-loading problem rather
    than a pipeline change. Nothing below this section had to move.
 
@@ -3111,7 +3111,7 @@ async function renderLibraryRow(){
   cells.forEach(c => row.appendChild(c));
 }
 
-/* Gallery links here as palette.html?asset=<id>[&asset=<id>…]. Deep-linking by
+/* Gallery links here as customizer.html?asset=<id>[&asset=<id>…]. Deep-linking by
    id rather than by file path means the link survives a re-import that changes
    which sizes exist. */
 async function libApplyDeepLink(){
