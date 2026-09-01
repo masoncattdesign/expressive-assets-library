@@ -1,22 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Customizer &mdash; Expressive Assets</title>
-<meta name="description" content="Apply an icon style across a set of Expressive Assets and tune it: palette, stroke, texture, surface.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customizer 1.0 (archived) — Expressive Assets</title>
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111113;--surface:#1c1c1f;--surface2:#28282d;--surface3:#333338;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --text:#e8e8ec;--text2:#9090a0;--text3:#50505e;
+  --accent:#7c6ef7;--radius:12px;--font:'Segoe UI',system-ui,sans-serif;
+}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+
 /* ── HEADER ── */
-
-
-
-
+header{display:flex;align-items:center;gap:14px;padding:0 24px;height:52px;border-bottom:1px solid var(--border);flex-shrink:0}
+.logo{width:22px;height:22px;background:linear-gradient(135deg,#7c6ef7,#c084fc);border-radius:6px}
+header h1{font-size:13px;font-weight:500;letter-spacing:-0.01em;color:var(--text)}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
 .m365-lock{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--text2);padding:5px 10px;border:1px solid var(--border2);border-radius:20px;cursor:pointer;user-select:none;transition:all .15s}
 .export-btn{font-size:11px;color:var(--text2);padding:5px 12px;border:1px solid var(--border2);border-radius:20px;cursor:pointer;background:transparent;font-family:var(--font);transition:all .15s}
-.export-btn:hover{border-color:var(--accent-ring);color:var(--text)}
-.m365-lock:hover{border-color:var(--accent-ring)}
+.export-btn:hover{border-color:rgba(255,255,255,0.22);color:var(--text)}
+.m365-lock:hover{border-color:rgba(255,255,255,0.22)}
 .m365-lock.locked{border-color:var(--accent);color:var(--accent)}
 .lock-icon{font-size:12px}
 .preview-bg-toggle{display:flex;align-items:center;gap:2px;background:var(--surface2);border-radius:20px;padding:3px}
@@ -24,23 +30,23 @@
 .bg-btn.active{background:var(--surface3);color:var(--text)}
 
 /* ── MAIN LAYOUT ── */
-
+.layout{display:flex;flex:1;overflow:hidden}
 
 /* ── LEFT SIDEBAR — MODE SELECTOR ── */
-
+.sidebar{width:200px;border-right:1px solid var(--border);padding:16px 12px;display:flex;flex-direction:column;gap:6px;flex-shrink:0;overflow-y:auto}
 .sidebar-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding:0 4px;margin-bottom:4px;margin-top:4px}
 .mode-card{border-radius:10px;border:1.5px solid var(--border2);background:var(--surface);cursor:pointer;padding:10px;display:flex;flex-direction:column;gap:8px;transition:all .15s;position:relative}
-.mode-card:hover{border-color:var(--accent-ring);background:var(--surface2)}
+.mode-card:hover{border-color:rgba(255,255,255,0.22);background:var(--surface2)}
 .mode-card.active{border-color:var(--accent);background:var(--surface2)}
 .mode-check{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
 .mode-card.active .mode-check{background:var(--accent);border-color:var(--accent);color:#fff}
-.mode-thumb{height:44px;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:4px;background:var(--surface-2);flex-shrink:0}
+.mode-thumb{height:44px;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:4px;background:rgba(255,255,255,0.04);flex-shrink:0}
 .mode-thumb svg{width:28px;height:28px}
 .mode-name{font-size:12px;font-weight:500;color:var(--text)}
 .mode-desc{font-size:10px;color:var(--text3);line-height:1.4}
 
 /* ── CENTER — PREVIEW ── */
-
+.preview-area{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .preview-pane{flex:1;display:flex;align-items:center;justify-content:center;transition:background .3s;position:relative;overflow:hidden}
 .preview-pane.dark-bg{background:#1a1a1f}
 .preview-pane.light-bg{background:#EFEFED}
@@ -48,7 +54,7 @@
 .row-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(128,128,140,0.6);margin-bottom:8px;padding-left:2px;display:flex;align-items:center;gap:8px}
 .light-bg .row-label{color:rgba(80,80,100,0.5)}
 .row-lock-badge{font-size:9px;padding:2px 6px;border-radius:10px;background:rgba(124,110,247,0.15);color:var(--accent);border:1px solid rgba(124,110,247,0.25)}
-.m365-toggle{display:inline-flex;background:var(--surface-2);border:1px solid var(--border2);border-radius:10px;padding:2px;gap:2px}
+.m365-toggle{display:inline-flex;background:rgba(255,255,255,0.04);border:1px solid var(--border2);border-radius:10px;padding:2px;gap:2px}
 .m365-toggle-label{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(128,128,140,0.55);margin-left:4px}
 .light-bg .m365-toggle-label{color:rgba(80,80,100,0.5)}
 .light-bg .m365-toggle{background:rgba(0,0,0,0.04);border-color:rgba(0,0,0,0.08)}
@@ -74,7 +80,7 @@
 .illus-picker{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0 0}
 .illus-thumb{width:40px;height:40px;border-radius:6px;border:2px solid transparent;cursor:pointer;overflow:hidden;transition:all .12s;flex-shrink:0;background:#fff}
 .illus-thumb svg{width:40px;height:40px;display:block}
-.illus-thumb:hover{border-color:var(--accent-ring);transform:scale(1.08)}
+.illus-thumb:hover{border-color:rgba(255,255,255,0.3);transform:scale(1.08)}
 .illus-thumb.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 .illus-thumb.disabled{opacity:0.35;cursor:not-allowed;transform:none}
 .illus-count{font-size:10px;color:var(--text3);margin-top:2px}
@@ -89,7 +95,7 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 .slider-row{display:flex;align-items:center;gap:7px}
 .slider-row .slabel{font-size:11px;color:var(--text2);min-width:72px}
 .slider-row input[type=range]{flex:1;-webkit-appearance:none;height:3px;background:var(--border2);border-radius:2px;outline:none}
-.slider-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--text);cursor:pointer}
+.slider-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:#fff;cursor:pointer}
 .slider-row .sval{font-size:10px;color:var(--text3);min-width:30px;text-align:right;font-family:monospace}
 .tog-row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text2);cursor:pointer;user-select:none}
 .tog{width:28px;height:16px;border-radius:8px;background:var(--surface2);border:1px solid var(--border2);position:relative;transition:background .2s;flex-shrink:0}
@@ -113,90 +119,40 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 .preset-swatches{display:flex;gap:5px;flex-wrap:wrap}
 .preset-swatch{width:24px;height:24px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .12s;flex-shrink:0}
 .preset-swatch:hover{transform:scale(1.15)}
-.preset-swatch.active{border-color:var(--text);box-shadow:0 0 0 1px var(--accent-ring)}
+.preset-swatch.active{border-color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,0.3)}
 
 /* ---- Expressive Assets library picker ---------------------------------- */
-.lib-search{flex:1;min-width:0;margin-left:12px;background:var(--surface2,#2a2a2e);border:1px solid var(--line);
+.lib-search{flex:1;min-width:0;margin-left:12px;background:var(--surface2,#2a2a2e);border:1px solid rgba(255,255,255,.12);
   color:inherit;font:inherit;font-size:12px;padding:5px 9px;border-radius:6px}
 .lib-search:focus{outline:2px solid var(--accent,#4a9eff);outline-offset:1px}
 .lib-results{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
-.lib-hit{background:var(--surface2,#2a2a2e);border:1px solid var(--line);color:inherit;
+.lib-hit{background:var(--surface2,#2a2a2e);border:1px solid rgba(255,255,255,.12);color:inherit;
   font:inherit;font-size:11px;padding:4px 9px;border-radius:20px;cursor:pointer}
 .lib-hit:hover{border-color:var(--accent,#4a9eff)}
 .lib-hit .lib-col{opacity:.5;margin-left:6px}
 .lib-note{font-size:11px;opacity:.55;margin-top:10px;line-height:1.5;max-width:60ch}
-
-/* Customizer runs inside Gallery's shell and inherits every token from it, so
-   the two tools read as one product. The old page carried its own dark-only
-   palette; these aliases point its variable names at Gallery's, which is why
-   the controls below theme themselves with the rest of the site. */
-:root {
-  --surface2: var(--surface-2);
-  --surface3: var(--line-soft);
-  --border: var(--line-soft);
-  --border2: var(--line);
-  --text2: var(--text-2);
-  --text3: var(--text-3);
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-.nav { flex: none; }
-.nav a.nav-item { text-decoration: none; }
-.modes { padding: 4px 12px 20px; overflow-y: auto; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 6px; }
-
-.ttl { display: flex; flex-direction: column; line-height: 1.25; }
-.ttl strong { font-size: 15px; }
-.ttl span { font-size: 12px; color: var(--text-3); }
-.spacer { flex: 1; }
-.toolbar .btn { padding: 8px 12px; font-size: 12.5px; }
-
-/* The canvas: the set under the current style, big and close together, with no
-   bounding box around each icon. The artwork is the thing being judged, so
-   nothing is drawn around it. */
-.preview-area { flex: 1; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
-.preview-grid-wrap { max-width: 780px; padding: 40px 32px; }
-.icon-row { gap: 12px; margin-bottom: 26px; }
-.icon-cell svg, .icon-cell .icon-img { width: 72px; height: 72px; }
-.icon-label { font-size: 11px; }
-.row-label { margin-bottom: 12px; }
-
-.controls { width: 268px; background: var(--surface); }
-
-/* A cell is clickable because clicking it is how you swap it. The selected one
-   has to read at a glance from across a room in a review, so it gets a ring and
-   its name goes accent. */
-.icon-cell { cursor: pointer; border-radius: 10px; padding: 6px 2px; transition: background .12s; }
-.icon-cell:hover { background: rgba(127, 127, 140, .10); }
-.icon-cell.picking { background: rgba(127, 127, 140, .12); }
-.icon-cell.picking svg, .icon-cell.picking .icon-img { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 8px; }
-.icon-cell.picking .icon-label { color: var(--accent); font-weight: 600; }
-#set-hint { text-transform: none; letter-spacing: 0; }
 </style>
 </head>
 <body>
 
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-tile" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>
-      </div>
-      <div class="brand-text">
-        <strong>Expressive Assets</strong>
-        <span>Windows Design Systems</span>
-      </div>
+<header>
+  <div class="logo"></div>
+  <h1>Customizer</h1>
+  <div class="header-right">
+    <div class="preview-bg-toggle">
+      <button class="bg-btn active" id="bg-dark" onclick="setBg('dark')">Dark</button>
+      <button class="bg-btn" id="bg-light" onclick="setBg('light')">Light</button>
     </div>
+    <button class="export-btn" onclick="exportAllSvgs()" title="Download all 12 icons as ZIP">Export all</button>
+  </div>
+</header>
 
-    <nav class="nav" aria-label="Tools">
-      <div class="nav-group">Tools</div>
-      <a class="nav-item" href="index.html">Gallery</a>
-      <a class="nav-item on" href="customizer.html" aria-current="page">Customizer</a>
-    </nav>
+<div class="layout">
 
-    <div class="modes">
-      <div class="sidebar-label">Icon style</div>
-      <div class="mode-card active" data-mode="default" onclick="setMode('default')">
+  <!-- MODE SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Icon style</div>
+    <div class="mode-card active" data-mode="default" onclick="setMode('default')">
       <div class="mode-check">✓</div>
       <div class="mode-thumb" id="thumb-default"></div>
       <div class="mode-name">Default</div>
@@ -238,54 +194,39 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
       <div class="mode-name">Acrylic</div>
       <div class="mode-desc">Frosted glass — layered plates with depth</div>
     </div>
-    </div>
-
-    <div class="sidebar-foot">
-      <p class="version">Customizer 1.1 <span aria-hidden="true">&middot;</span> <a href="customizer-v1.html" title="The previous Customizer, kept exactly as it was">1.0 archive</a></p>
-    </div>
   </aside>
 
-  <main class="main">
-    <header class="toolbar">
-      <div class="ttl">
-        <strong>Customizer</strong>
-        <span id="canvas-count">Canvas &middot; 12 assets</span>
-      </div>
-      <div class="spacer"></div>
-      <div class="preview-bg-toggle">
-        <button class="bg-btn active" id="bg-dark" onclick="setBg('dark')">Dark</button>
-        <button class="bg-btn" id="bg-light" onclick="setBg('light')">Light</button>
-      </div>
-      <button class="export-btn" onclick="exportAllSvgs()" title="Download every icon on the canvas as SVG">Export all</button>
-      <a class="btn" href="index.html">Open Gallery</a>
-    </header>
-
-    <div class="content">
-      <div class="preview-area">
-        <div class="preview-pane dark-bg" id="preview-pane">
-          <div class="preview-grid-wrap">
-            <div class="row-label">
-              <span>The set</span>
-              <span class="m365-toggle-label" id="set-hint">Click a name to swap it</span>
-              <button class="m365-tog-btn" id="set-reset" onclick="setReset()">Reset</button>
-            </div>
-            <div class="icon-row" id="row-set"></div>
-            <div class="row-label" id="lib-label" style="display:none">
-              <span>Swap in</span>
-              <input id="lib-search" class="lib-search" type="search" placeholder="Search by name&hellip;" autocomplete="off">
-              <button class="m365-tog-btn" id="lib-clear" onclick="libClear()">Clear</button>
-            </div>
-            <div class="lib-results" id="lib-results" hidden></div>
-            <div class="lib-note" id="lib-note" hidden></div>
+  <!-- PREVIEW -->
+  <main class="preview-area">
+    <div class="preview-pane dark-bg" id="preview-pane">
+      <div class="preview-grid-wrap">
+        <div class="row-label">
+          <span>Microsoft 365</span>
+          <span class="m365-toggle-label">Recolor</span>
+          <div class="m365-toggle" id="m365-toggle">
+            <button class="m365-tog-btn" id="m365-recolor-on-btn" onclick="setM365Recolor('on')">On</button>
+            <button class="m365-tog-btn" id="m365-recolor-off-btn" onclick="setM365Recolor('off')">Off</button>
           </div>
         </div>
+        <div class="icon-row" id="row-m365"></div>
+        <div class="row-label">Windows Apps</div>
+        <div class="icon-row" id="row-win"></div>
+        <div class="row-label" id="lib-label" style="display:none">
+          <span>From the library</span>
+          <input id="lib-search" class="lib-search" type="search" placeholder="Search 3,468 assets…" autocomplete="off">
+          <button class="m365-tog-btn" id="lib-clear" onclick="libClear()">Clear</button>
+        </div>
+        <div class="lib-results" id="lib-results" hidden></div>
+        <div class="icon-row" id="row-library"></div>
+        <div class="lib-note" id="lib-note" hidden></div>
       </div>
-
-      <aside class="controls" id="controls-panel"></aside>
     </div>
   </main>
-</div>
 
+  <!-- CONTROLS -->
+  <aside class="controls" id="controls-panel"></aside>
+
+</div>
 
 <script>
 // ═══════════════════════════════════════════════════════
@@ -3184,210 +3125,11 @@ renderThumbs();
 renderControls();
 updateM365Toggle();
 renderIcons();
-/* ======================================================================
-   Canvas 1.1
-   ----------------------------------------------------------------------
-   The canvas used to be two fixed rows of built-in artwork: Microsoft 365
-   above, Windows apps below, with a toggle for whether the M365 row took the
-   recolour. That split was about where the sample art came from, which is not
-   a distinction anyone tuning a style cares about.
-
-   Now it is ONE set of twelve, pulled from the library like everything else,
-   and every slot is swappable: click a name to select it, search by title,
-   pick a result. Nothing above this block changed. These declarations hoist
-   over the originals, so the engine keeps calling the same names.
-   ====================================================================== */
-
-/** The anatomy pilot group, so the styling work and the anatomy work are
- *  looking at the same twelve icons. */
-var SET_DEFAULT = [
-  'product.word', 'product.excel', 'product.powerpoint', 'product.onenote',
-  'product.teams', 'product.outlook', 'product.sharepoint', 'product.copilot',
-  'product.edge', 'product.microsoft', 'product.swiftkey', 'product.github',
-];
-
-var SET = [];
-var picking = -1;
-
-/** Largest standard drawing: these pipelines bucket by luminance and read
- *  better with more shapes to work from. */
-async function fetchAsset(id) {
-  const asset = LIB.byId.get(id);
-  if (!asset) return null;
-  const sizes = Object.keys(asset.variants.standard);
-  const pick = sizes.includes('any') ? 'any' : String(Math.max(...sizes.map(Number).filter(Number.isFinite)));
-  const path = asset.variants.standard[pick];
-  try {
-    const res = await fetch(path, { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    return { id, name: asset.name, svg: resolveColorVars(await res.text()) };
-  } catch (err) {
-    return null;
-  }
-}
-
-async function loadSet(ids) {
-  const loaded = await Promise.all(ids.map(fetchAsset));
-  SET.length = 0;
-  loaded.filter(Boolean).forEach((a) => SET.push(a));
-}
-
-async function setReset() {
-  picking = -1;
-  await loadSet(SET_DEFAULT);
-  updateHint();
-  renderIcons();
-}
-
-function updateHint() {
-  const hint = document.getElementById('set-hint');
-  if (!hint) return;
-  if (!Array.isArray(SET)) return;
-  hint.textContent = picking >= 0 && SET[picking]
-    ? 'Swapping ' + SET[picking].name + ', pick one below'
-    : 'Click a name to swap it';
-}
-
-function selectSlot(i) {
-  picking = picking === i ? -1 : i;
-  updateHint();
-  renderIcons();
-  const search = document.getElementById('lib-search');
-  if (picking >= 0 && search) search.focus();
-}
-
-var _setToken = 0;
-async function renderIcons() {
-  const row = document.getElementById('row-set');
-  // First call lands before the initialisers below have run: nothing to draw
-  // yet, and loadLibrary calls back once the set is in.
-  if (!row || !Array.isArray(SET)) return;
-  const token = (_setToken = (_setToken || 0) + 1);
-  const cells = await Promise.all(SET.map(async (a, i) => {
-    const cell = await renderIconCell(a.name, a.svg, false);
-    cell.classList.toggle('picking', i === picking);
-    cell.title = 'Click to swap, right-click to download the SVG';
-    cell.addEventListener('click', () => selectSlot(i));
-    return cell;
-  }));
-  if (token !== _setToken) return;
-  row.innerHTML = '';
-  cells.forEach((c) => row.appendChild(c));
-}
-
-/** The library row is gone: a picked asset lands in the set itself. */
-async function renderLibraryRow() {}
-
-/** Rank by how early the match lands, so a title that starts with what you
- *  typed beats one that merely contains it. */
-function libSearch(query) {
-  const box = document.getElementById('lib-results');
-  const q = query.trim().toLowerCase();
-  if (q.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
-  const hits = [];
-  for (const a of LIB.assets) {
-    const at = (a.name + ' ' + a.id + ' ' + (a.keywords || []).join(' ')).toLowerCase().indexOf(q);
-    if (at >= 0) hits.push([at, a]);
-    if (hits.length > 400) break;
-  }
-  hits.sort((x, y) => x[0] - y[0] || x[1].name.localeCompare(y[1].name));
-  box.hidden = false;
-  box.innerHTML = hits.slice(0, 24).map(([, a]) =>
-    '<button class="lib-hit" onclick="libAdd(&quot;' + a.id + '&quot;)">' + a.name +
-    '<span class="lib-col">' + a.collection + '</span></button>'
-  ).join('') || '<span class="lib-note">No match.</span>';
-}
-
-/** Named libAdd because the deep link from Gallery already calls it. */
-async function libAdd(id) {
-  const asset = await fetchAsset(id);
-  if (!asset) {
-    const note = document.getElementById('lib-note');
-    if (note) { note.hidden = false; note.textContent = 'Could not load ' + id + '.'; }
-    return;
-  }
-  if (picking >= 0) SET[picking] = asset;
-  else SET.push(asset);
-  picking = -1;
-  const search = document.getElementById('lib-search');
-  if (search) search.value = '';
-  const box = document.getElementById('lib-results');
-  if (box) { box.hidden = true; box.innerHTML = ''; }
-  updateHint();
-  renderIcons();
-}
-
-function libClear() {
-  const search = document.getElementById('lib-search');
-  if (search) search.value = '';
-  const box = document.getElementById('lib-results');
-  if (box) { box.hidden = true; box.innerHTML = ''; }
-  picking = -1;
-  updateHint();
-  renderIcons();
-}
-
-/** Export what is on the canvas, not a fixed list of built-ins. */
-async function exportAllSvgs() {
-  if (typeof JSZip === 'undefined') {
-    await new Promise((resolve, reject) => {
-      const s = document.createElement('script');
-      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
-      s.onload = resolve; s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-  const zip = new JSZip();
-  const cfg = currentExportConfig();
-  SET.forEach((a) => zip.file(buildExportFilename(a.name, cfg), svgForExport(transformSvg(a.svg, a.name, false))));
-  const blob = await zip.generateAsync({ type: 'blob' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  const parts = [cfg.mode];
-  if (cfg.modeOption) parts.push(cfg.modeOption);
-  if (cfg.seed) parts.push(seedLabel(cfg.seed));
-  parts.push(cfg.bg);
-  a.href = url; a.download = 'expressive-assets_' + parts.join('_') + '.zip';
-  document.body.appendChild(a); a.click();
-  setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
-}
-
-async function loadLibrary() {
-  try {
-    const res = await fetch('manifest.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const manifest = await res.json();
-    LIB.assets = (manifest.assets || []).filter((a) => a.variants && a.variants.standard);
-    LIB.assets.forEach((a) => LIB.byId.set(a.id, a));
-    LIB.available = LIB.assets.length > 0;
-  } catch (err) {
-    LIB.available = false;
-  }
-
-  const label = document.getElementById('lib-label');
-  const note = document.getElementById('lib-note');
-  if (!LIB.available) {
-    // fetch is blocked on file://, which is a normal state rather than a bug.
-    note.hidden = false;
-    note.textContent = 'Library not loaded. Open this page from the published site, or any local server, to pull assets from Expressive Assets.';
-    return;
-  }
-
-  label.style.display = '';
-  const search = document.getElementById('lib-search');
-  search.placeholder = 'Search ' + LIB.assets.length.toLocaleString() + ' assets by name';
-  search.addEventListener('input', () => libSearch(search.value));
-  note.hidden = false;
-  note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source colour for these pipelines to read. Recolour those in Gallery instead.';
-
-  // Gallery deep-links here as customizer.html?asset=<id>, which opens the set
-  // on what you clicked rather than on the default twelve.
-  const asked = new URLSearchParams(location.search).getAll('asset');
-  await loadSet(asked.length ? asked : SET_DEFAULT);
-  updateHint();
-  renderIcons();
-}
-
 </script>
+
+<p style="font:11px 'Segoe UI',system-ui,sans-serif;color:#50505e;text-align:center;padding:10px 0 14px">
+  Customizer 1.0 &middot; archived &middot;
+  <a href="customizer.html" style="color:#7c6ef7">open the current version</a>
+</p>
 </body>
 </html>

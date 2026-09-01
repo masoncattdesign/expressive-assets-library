@@ -265,6 +265,16 @@ body {
 }
 .panel .hint { font-size: 12px; line-height: 1.45; color: var(--text-3); margin: 0 0 10px; }
 .panel .segment { width: 100%; }
+
+/* Version line. Both tools carry one so a screenshot in a review names the
+   build it came from. */
+.version {
+  font-size: 11px; color: var(--text-3); text-align: center;
+  padding: 10px 4px 0; margin: 0;
+  display: flex; gap: 7px; justify-content: center; align-items: center;
+}
+.version a { color: var(--text-3); text-decoration: none; border-bottom: 1px solid var(--line); }
+.version a:hover { color: var(--text-2); }
 .panel .segment button { flex: 1; padding: 7px 4px; font-size: 13px; }
 
 .size-row { display: flex; align-items: center; justify-content: space-between; margin: 20px 0 4px; }
