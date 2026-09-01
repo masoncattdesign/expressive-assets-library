@@ -71,6 +71,7 @@
         "file",
         "oobe",
         "m365",
+        "app",
         "third-party",
         "wip"
       ]

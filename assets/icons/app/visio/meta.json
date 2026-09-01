@@ -1,0 +1,34 @@
+{
+  "id": "app.visio",
+  "name": "Visio",
+  "keywords": [
+    "visio",
+    "app"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    64
+  ],
+  "colors": {
+    "primary": "#2B7CD3",
+    "secondary": "#1146AC"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "64": "assets/icons/app/visio/standard-64.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582222:11216"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+}

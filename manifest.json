@@ -12,8 +12,13 @@
       "collections": [
         {
           "id": "product",
+          "label": "Product Icons",
+          "count": 90
+        },
+        {
+          "id": "app",
           "label": "App Icons",
-          "count": 122
+          "count": 32
         },
         {
           "id": "third-party",
@@ -130,40 +135,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.admin-center",
-      "name": "Admin Center",
-      "keywords": [
-        "admin",
-        "center"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#D9D9D9",
-        "secondary": "#0669BC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/admin-center/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10814"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.bing",
@@ -298,73 +269,6 @@
         "filled:32",
         "filled:48"
       ]
-    },
-    {
-      "id": "product.bookings-app",
-      "name": "Bookings (app)",
-      "keywords": [
-        "bookings",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#057093",
-        "secondary": "#0A6181"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/bookings-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10836"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.calculator",
-      "name": "Calculator",
-      "keywords": [
-        "calculator"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#CAD2D9",
-        "secondary": "#114A8B"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/calculator/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10848"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.calendar-taskbar",
@@ -549,40 +453,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.command-prompt",
-      "name": "Command Prompt",
-      "keywords": [
-        "command",
-        "prompt"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#EB8383",
-        "secondary": "#EB8383"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/command-prompt/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10869"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.copilot",
@@ -908,40 +778,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.dev-home",
-      "name": "Dev Home",
-      "keywords": [
-        "dev",
-        "home"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#7252AA",
-        "secondary": "#AD64D7"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/dev-home/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10870"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.dragon-copilot",
       "name": "Dragon Copilot",
       "keywords": [
@@ -1124,40 +960,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.editor-app",
-      "name": "Editor (app)",
-      "keywords": [
-        "editor",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#103F91",
-        "secondary": "#2B7CD3"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/editor-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10872"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.entra-id",
@@ -1427,40 +1229,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.exchange-app",
-      "name": "Exchange (app)",
-      "keywords": [
-        "exchange",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#28A8EA",
-        "secondary": "#0A63C9"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/exchange-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10893"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.facilitator",
       "name": "Facilitator",
       "keywords": [
@@ -1582,74 +1350,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.feedback-hub",
-      "name": "Feedback Hub",
-      "keywords": [
-        "feedback",
-        "hub"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#0C59A4",
-        "secondary": "#35C1F1"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/feedback-hub/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10908"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.file-explorer",
-      "name": "File Explorer",
-      "keywords": [
-        "file",
-        "explorer"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#C4C4C4",
-        "secondary": "#1493DF"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/file-explorer/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10916"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.files-taskbar",
@@ -1835,108 +1535,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.game-bar",
-      "name": "Game Bar",
-      "keywords": [
-        "game",
-        "bar"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#139613",
-        "secondary": "#94E60B"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/game-bar/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10930"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.get-help",
-      "name": "Get Help",
-      "keywords": [
-        "get",
-        "help"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#1B9DE2",
-        "secondary": "#0078D4"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/get-help/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10948"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.get-started",
-      "name": "Get Started",
-      "keywords": [
-        "get",
-        "started"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#0078D4",
-        "secondary": "#DFDFDF"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/get-started/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10956"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.github",
@@ -2343,40 +1941,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.loop-app",
-      "name": "Loop (app)",
-      "keywords": [
-        "loop",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#9237E3",
-        "secondary": "#AB5ADD"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/loop-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10965"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.m365",
       "name": "M365",
       "keywords": [
@@ -2759,40 +2323,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.media-player",
-      "name": "Media Player",
-      "keywords": [
-        "media",
-        "player"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#8661C5",
-        "secondary": "#CCCCCC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/media-player/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10977"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.microsoft",
@@ -3189,39 +2719,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.news",
-      "name": "News",
-      "keywords": [
-        "news"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#940E16",
-        "secondary": "#CCCCCC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/news/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10982"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.newsletter",
       "name": "Newsletter",
       "keywords": [
@@ -3281,39 +2778,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.notepad",
-      "name": "Notepad",
-      "keywords": [
-        "notepad"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#B0570C",
-        "secondary": "#7FDAF5"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/notepad/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:10992"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.onedrive",
@@ -3691,39 +3155,6 @@
       ]
     },
     {
-      "id": "product.paint",
-      "name": "Paint",
-      "keywords": [
-        "paint"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#0078D4",
-        "secondary": "#56B60E"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/paint/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11012"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.password-manager",
       "name": "Password Manager",
       "keywords": [
@@ -3856,73 +3287,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.phone-link",
-      "name": "Phone Link",
-      "keywords": [
-        "phone",
-        "link"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#184F85",
-        "secondary": "#0C63AD"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/phone-link/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11030"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.photos",
-      "name": "Photos",
-      "keywords": [
-        "photos"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#1493DF",
-        "secondary": "#D6DEE6"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/photos/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11046"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.places",
       "name": "Places",
       "keywords": [
@@ -3982,40 +3346,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.places-app",
-      "name": "Places (app)",
-      "keywords": [
-        "places",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#D59DFF",
-        "secondary": "#975ECE"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/places-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11060"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.planner",
@@ -4449,74 +3779,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.publisher-app",
-      "name": "Publisher (app)",
-      "keywords": [
-        "publisher",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#038387",
-        "secondary": "#026D71"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/publisher-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11079"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.quick-assist",
-      "name": "Quick Assist",
-      "keywords": [
-        "quick",
-        "assist"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#8A9299",
-        "secondary": "#50E6FF"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/quick-assist/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11097"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.security-copilot",
       "name": "Security Copilot",
       "keywords": [
@@ -4577,39 +3839,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.settings",
-      "name": "Settings",
-      "keywords": [
-        "settings"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#626F7A",
-        "secondary": "#0669BC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/settings/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11109"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.sharepoint",
@@ -4886,107 +4115,6 @@
       ]
     },
     {
-      "id": "product.snipping-tool",
-      "name": "Snipping Tool",
-      "keywords": [
-        "snipping",
-        "tool"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#CAD2D9",
-        "secondary": "#A1A8AD"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/snipping-tool/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11114"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.solitaire",
-      "name": "Solitaire",
-      "keywords": [
-        "solitaire"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#EB8383",
-        "secondary": "#EB8383"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/solitaire/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11145"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.sound-recorder",
-      "name": "Sound Recorder",
-      "keywords": [
-        "sound",
-        "recorder"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#626F7A",
-        "secondary": "#EC6725"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/sound-recorder/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11146"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.sticky-notes",
       "name": "Sticky Notes",
       "keywords": [
@@ -5047,76 +4175,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.store-dark-theme",
-      "name": "Store Dark Theme",
-      "keywords": [
-        "store",
-        "dark",
-        "theme"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#F25022",
-        "secondary": "#3CCBF4"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/store-dark-theme/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11161"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.store-light-theme",
-      "name": "Store Light Theme",
-      "keywords": [
-        "store",
-        "light",
-        "theme"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#F25022",
-        "secondary": "#3CCBF4"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/store-light-theme/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11182"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.stride",
@@ -5439,39 +4497,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.terminal",
-      "name": "Terminal",
-      "keywords": [
-        "terminal"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#CCCCCC",
-        "secondary": "#E6E6E6"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/terminal/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11203"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.to-do",
       "name": "To Do",
       "keywords": [
@@ -5680,40 +4705,6 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.visio-app",
-      "name": "Visio (app)",
-      "keywords": [
-        "visio",
-        "app"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#2B7CD3",
-        "secondary": "#1146AC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/visio-app/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11216"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
     },
     {
       "id": "product.visual-studio",
@@ -6627,73 +5618,6 @@
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
     },
     {
-      "id": "product.weather",
-      "name": "Weather",
-      "keywords": [
-        "weather"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#E25A01",
-        "secondary": "#CCCCCC"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/weather/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11229"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
-      "id": "product.white-board",
-      "name": "White Board",
-      "keywords": [
-        "white",
-        "board"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "published",
-      "themes": [
-        "standard"
-      ],
-      "sizes": [
-        64
-      ],
-      "colors": {
-        "primary": "#333333",
-        "secondary": "#0C34FB"
-      },
-      "recolorable": false,
-      "variants": {
-        "standard": {
-          "64": "assets/icons/product/white-board/standard-64.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "582222:11236"
-      },
-      "version": "1.0.0",
-      "updated": "2026-09-01",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
-    },
-    {
       "id": "product.whiteboard",
       "name": "Whiteboard",
       "keywords": [
@@ -6955,6 +5879,1087 @@
       "version": "1.0.0",
       "updated": "2026-08-28",
       "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+    },
+    {
+      "id": "app.admin-center",
+      "name": "Admin Center",
+      "keywords": [
+        "admin",
+        "center"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#D9D9D9",
+        "secondary": "#0669BC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/admin-center/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10814"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.bookings",
+      "name": "Bookings",
+      "keywords": [
+        "bookings",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#057093",
+        "secondary": "#0A6181"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/bookings/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10836"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.calculator",
+      "name": "Calculator",
+      "keywords": [
+        "calculator"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#CAD2D9",
+        "secondary": "#114A8B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/calculator/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10848"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.command-prompt",
+      "name": "Command Prompt",
+      "keywords": [
+        "command",
+        "prompt"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#EB8383",
+        "secondary": "#EB8383"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/command-prompt/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10869"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.dev-home",
+      "name": "Dev Home",
+      "keywords": [
+        "dev",
+        "home"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#7252AA",
+        "secondary": "#AD64D7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/dev-home/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10870"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.editor",
+      "name": "Editor",
+      "keywords": [
+        "editor",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#103F91",
+        "secondary": "#2B7CD3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/editor/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10872"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.exchange",
+      "name": "Exchange",
+      "keywords": [
+        "exchange",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#28A8EA",
+        "secondary": "#0A63C9"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/exchange/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10893"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.feedback-hub",
+      "name": "Feedback Hub",
+      "keywords": [
+        "feedback",
+        "hub"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#0C59A4",
+        "secondary": "#35C1F1"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/feedback-hub/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10908"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.file-explorer",
+      "name": "File Explorer",
+      "keywords": [
+        "file",
+        "explorer"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#C4C4C4",
+        "secondary": "#1493DF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/file-explorer/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10916"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.game-bar",
+      "name": "Game Bar",
+      "keywords": [
+        "game",
+        "bar"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#139613",
+        "secondary": "#94E60B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/game-bar/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10930"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.get-help",
+      "name": "Get Help",
+      "keywords": [
+        "get",
+        "help"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#1B9DE2",
+        "secondary": "#0078D4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/get-help/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10948"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.get-started",
+      "name": "Get Started",
+      "keywords": [
+        "get",
+        "started"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#DFDFDF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/get-started/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10956"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.loop",
+      "name": "Loop",
+      "keywords": [
+        "loop",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#9237E3",
+        "secondary": "#AB5ADD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/loop/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10965"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.media-player",
+      "name": "Media Player",
+      "keywords": [
+        "media",
+        "player"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#8661C5",
+        "secondary": "#CCCCCC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/media-player/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10977"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.news",
+      "name": "News",
+      "keywords": [
+        "news"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#940E16",
+        "secondary": "#CCCCCC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/news/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10982"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.notepad",
+      "name": "Notepad",
+      "keywords": [
+        "notepad"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#B0570C",
+        "secondary": "#7FDAF5"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/notepad/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:10992"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.paint",
+      "name": "Paint",
+      "keywords": [
+        "paint"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#56B60E"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/paint/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11012"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.phone-link",
+      "name": "Phone Link",
+      "keywords": [
+        "phone",
+        "link"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#184F85",
+        "secondary": "#0C63AD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/phone-link/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11030"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.photos",
+      "name": "Photos",
+      "keywords": [
+        "photos"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#1493DF",
+        "secondary": "#D6DEE6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/photos/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11046"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.places",
+      "name": "Places",
+      "keywords": [
+        "places",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#D59DFF",
+        "secondary": "#975ECE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/places/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11060"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.publisher",
+      "name": "Publisher",
+      "keywords": [
+        "publisher",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#038387",
+        "secondary": "#026D71"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/publisher/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11079"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.quick-assist",
+      "name": "Quick Assist",
+      "keywords": [
+        "quick",
+        "assist"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#8A9299",
+        "secondary": "#50E6FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/quick-assist/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11097"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.settings",
+      "name": "Settings",
+      "keywords": [
+        "settings"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#626F7A",
+        "secondary": "#0669BC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/settings/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11109"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.snipping-tool",
+      "name": "Snipping Tool",
+      "keywords": [
+        "snipping",
+        "tool"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#CAD2D9",
+        "secondary": "#A1A8AD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/snipping-tool/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11114"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.solitaire",
+      "name": "Solitaire",
+      "keywords": [
+        "solitaire"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#EB8383",
+        "secondary": "#EB8383"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/solitaire/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11145"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.sound-recorder",
+      "name": "Sound Recorder",
+      "keywords": [
+        "sound",
+        "recorder"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#626F7A",
+        "secondary": "#EC6725"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/sound-recorder/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11146"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.store-dark-theme",
+      "name": "Store Dark Theme",
+      "keywords": [
+        "store",
+        "dark",
+        "theme"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#F25022",
+        "secondary": "#3CCBF4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/store-dark-theme/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11161"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.store-light-theme",
+      "name": "Store Light Theme",
+      "keywords": [
+        "store",
+        "light",
+        "theme"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#F25022",
+        "secondary": "#3CCBF4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/store-light-theme/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11182"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.terminal",
+      "name": "Terminal",
+      "keywords": [
+        "terminal"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#CCCCCC",
+        "secondary": "#E6E6E6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/terminal/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11203"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.visio",
+      "name": "Visio",
+      "keywords": [
+        "visio",
+        "app"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#2B7CD3",
+        "secondary": "#1146AC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/visio/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11216"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.weather",
+      "name": "Weather",
+      "keywords": [
+        "weather"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#E25A01",
+        "secondary": "#CCCCCC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/weather/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11229"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+    },
+    {
+      "id": "app.white-board",
+      "name": "White Board",
+      "keywords": [
+        "white",
+        "board"
+      ],
+      "type": "icon",
+      "collection": "app",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        64
+      ],
+      "colors": {
+        "primary": "#333333",
+        "secondary": "#0C34FB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "64": "assets/icons/app/white-board/standard-64.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "582222:11236"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
     },
     {
       "id": "third-party.adobe-after-effects",

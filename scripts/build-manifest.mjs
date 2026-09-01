@@ -26,7 +26,10 @@ export const GROUPS = [
     label: 'Product Icons',
     dir: 'assets/icons',
     collections: [
-      { id: 'product', label: 'App Icons' },
+      // Product Icons inside Product Icons is repetitive, and correct: that is
+      // what the Fluent and Windows ecosystem calls these.
+      { id: 'product', label: 'Product Icons' },
+      { id: 'app', label: 'App Icons' },
       { id: 'third-party', label: 'Third Party' },
       { id: 'wip', label: 'In Progress' },
     ],

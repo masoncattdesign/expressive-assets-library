@@ -70,9 +70,14 @@ Also in this release:
 - Accent swatches are flat circles with a hard two-tone split, replacing the
   beveled gradient tiles. Bridge has no gloss and no shadow, and the pair still
   has to read, so the two colours meet on an edge rather than blending.
-- 32 Windows app tiles imported as App Icons at 64px. Seven landed as
-  `<name>-app` beside existing marks of the same name rather than over them.
-  Smaller sizes and derived styles are still to generate.
+- **App Icons is its own collection.** The 32 Windows app tiles moved out of
+  `product` into `app`, which drops the `-app` suffix seven of them needed to
+  avoid colliding. The collision was the library pointing out that an app tile
+  and a product mark are different objects. Smaller sizes and derived styles
+  are still to generate.
+- The `product` collection is labelled **Product Icons** again, matching what
+  Fluent and Windows call these. It sits inside a group of the same name,
+  which is repetitive and correct.
 - The Gallery sidebar marks are System Icons from the library rather than
   shapes drawn by hand in `app.js`. `scripts/inline-nav-icons.mjs` names each
   pick by asset id and regenerates the block, so swapping one is a line edit.

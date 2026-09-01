@@ -25,6 +25,7 @@ const PICKS = [
   ['all',                       'system.grid',         'filled',  'Everything, evenly'],
   ['product-icons',             'system.apps',         'filled',  'A group of app tiles'],
   ['product-icons:product',     'system.app-generic',  'outline', 'One app'],
+  ['product-icons:app',         'system.window-apps',  'outline', 'An app on the desktop'],
   ['product-icons:third-party', 'system.puzzle-piece', 'outline', 'Something from outside that plugs in'],
   ['product-icons:wip',         'system.wrench',       'outline', 'Still being made'],
   ['file-icons',                'system.document',     'filled',  'A file'],
