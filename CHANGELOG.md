@@ -42,6 +42,11 @@ Also in this release:
 
 ## Unreleased
 
+- **M365 Illustrations replaced.** The previous 28 (160px, with Outline and
+  Filled derived here) are removed; 40 new ones at 512px, Standard only, are
+  planned for import. Ids come from a recorded node map rather than frame
+  names, because two frames are both called `Chat` and hold different drawings.
+
 - File Icons become their own top-level group, out of Product Icons. A file
   icon is a plate carrying a label, drawn at nine sizes, which is a different
   object from an app mark and customises differently.

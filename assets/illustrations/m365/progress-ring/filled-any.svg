@@ -1,9 +1,0 @@
-<svg aria-label="Progress Ring filled any" role="img" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="79.995" cy="80" r="56.0591" fill="currentColor"/>
-<circle cx="79.9964" cy="71.32" r="42.3257" fill="var(--ea-knockout, #fff)"/>
-<circle cx="79.9958" cy="66.8293" r="28.0575" fill="currentColor"/>
-<circle cx="79.9958" cy="62.1055" r="28.0575" fill="currentColor"/>
-<path d="M70.6797 63.4264L78.81 71.5567L89.2166 53.5319" stroke="currentColor" stroke-width="7.81217" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="116.224" cy="102.222" r="11.4236" fill="currentColor"/>
-<circle cx="57.6585" cy="90.1645" r="11.4236" fill="currentColor"/>
-</svg>

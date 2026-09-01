@@ -1,23 +1,27 @@
 {
   "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-  "page": "M365 Illustrations",
-  "generated": "2026-08-31",
-  "note": "Precomputed from the 'M365 Illustations' frame (582201:2000 \u2014 the typo is upstream). Names come from each group's TEXT label, not the artwork frame name: the frame names are stale and wrong, e.g. Chat's artwork frame is called 'Calendar' and Shield's is called 'Search'. One drawing each, scalable, so the size key is 'any'. Authored at 160px (the frames measure 157\u2013159 after auto-layout), so sizes lists 160 alone rather than a guessed legibility range \u2014 widen it after a designer has looked.",
-  "duplicateIds": [],
-  "skipped": [],
+  "page": "M365 Brand",
+  "sectionNodeId": "582232:12652",
+  "generated": "2026-09-01",
+  "note": "40 illustrations at 512px, Standard only. Replaces the previous 28. Ids come from the recorded node map rather than from frame names, because the names collide.",
+  "warnings": [
+    "Chat: Two frames are both called Chat (582232:12654 row 1, 582232:12849 row 3) and hold different drawings. Ids are assigned by node, not by name, so the second becomes chat-2 rather than overwriting the first. Worth renaming upstream.",
+    "Workflow / Workflows: 582232:12901 and 582232:13047, two different illustrations separated by one letter.",
+    "Inbox / Inbox Empty: 582232:12985 and 582232:12992, the only pair that reads as a deliberate state pair, expressed as two frames rather than one asset with two states."
+  ],
   "assets": [
     {
       "id": "m365.chat",
       "name": "Chat",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2002",
+      "nodeId": "582232:12654",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2004"
+          "512": "582232:12654"
         }
       }
     },
@@ -26,28 +30,43 @@
       "name": "Calendar",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2133",
+      "nodeId": "582232:12666",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2135"
+          "512": "582232:12666"
         }
       }
     },
     {
-      "id": "m365.folder",
-      "name": "Folder",
+      "id": "m365.file",
+      "name": "File",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2273",
+      "nodeId": "582232:12681",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2275"
+          "512": "582232:12681"
+        }
+      }
+    },
+    {
+      "id": "m365.mail",
+      "name": "Mail",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12688",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12688"
         }
       }
     },
@@ -56,13 +75,13 @@
       "name": "Laptop",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2419",
+      "nodeId": "582232:12696",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2421"
+          "512": "582232:12696"
         }
       }
     },
@@ -71,223 +90,73 @@
       "name": "Data",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2555",
+      "nodeId": "582232:12728",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2557"
+          "512": "582232:12728"
         }
       }
     },
     {
-      "id": "m365.progress-ring",
-      "name": "Progress Ring",
+      "id": "m365.task",
+      "name": "Task",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2683",
+      "nodeId": "582232:12735",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2685"
+          "512": "582232:12735"
         }
       }
     },
     {
-      "id": "m365.document",
-      "name": "Document",
+      "id": "m365.topics",
+      "name": "Topics",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2816",
+      "nodeId": "582232:12744",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2818"
+          "512": "582232:12744"
         }
       }
     },
     {
-      "id": "m365.email",
-      "name": "Email",
+      "id": "m365.report",
+      "name": "Report",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:2962",
+      "nodeId": "582232:12758",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:2964"
+          "512": "582232:12758"
         }
       }
     },
     {
-      "id": "m365.people",
-      "name": "People",
+      "id": "m365.arrange",
+      "name": "Arrange",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:3098",
+      "nodeId": "582232:12773",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:3100"
-        }
-      }
-    },
-    {
-      "id": "m365.search",
-      "name": "Search",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3230",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3232"
-        }
-      }
-    },
-    {
-      "id": "m365.shield",
-      "name": "Shield",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3364",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3366"
-        }
-      }
-    },
-    {
-      "id": "m365.warning",
-      "name": "Warning",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3502",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3504"
-        }
-      }
-    },
-    {
-      "id": "m365.privacy",
-      "name": "Privacy",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3632",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3634"
-        }
-      }
-    },
-    {
-      "id": "m365.share",
-      "name": "Share",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3767",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3769"
-        }
-      }
-    },
-    {
-      "id": "m365.device-shield",
-      "name": "Device shield",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:3899",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:3901"
-        }
-      }
-    },
-    {
-      "id": "m365.link",
-      "name": "Link",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:4072",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:4074"
-        }
-      }
-    },
-    {
-      "id": "m365.notification",
-      "name": "Notification",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:4204",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:4206"
-        }
-      }
-    },
-    {
-      "id": "m365.sign-in",
-      "name": "Sign In",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:4336",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:4338"
-        }
-      }
-    },
-    {
-      "id": "m365.design-layout",
-      "name": "Design layout",
-      "collection": "m365",
-      "type": "illustration",
-      "nodeId": "582201:4505",
-      "sizes": [
-        160
-      ],
-      "renders": {
-        "standard": {
-          "any": "582201:4507"
+          "512": "582232:12773"
         }
       }
     },
@@ -296,28 +165,238 @@
       "name": "Photo",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:4649",
+      "nodeId": "582232:12780",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:4651"
+          "512": "582232:12780"
         }
       }
     },
     {
-      "id": "m365.tasks",
-      "name": "Tasks",
+      "id": "m365.keys",
+      "name": "Keys",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:4780",
+      "nodeId": "582232:12787",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:4782"
+          "512": "582232:12787"
+        }
+      }
+    },
+    {
+      "id": "m365.dataflow",
+      "name": "Dataflow",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12807",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12807"
+        }
+      }
+    },
+    {
+      "id": "m365.clock",
+      "name": "Clock",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12817",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12817"
+        }
+      }
+    },
+    {
+      "id": "m365.approvals",
+      "name": "Approvals",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12833",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12833"
+        }
+      }
+    },
+    {
+      "id": "m365.trophy",
+      "name": "Trophy",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12841",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12841"
+        }
+      }
+    },
+    {
+      "id": "m365.chat-2",
+      "name": "Chat",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12849",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12849"
+        }
+      }
+    },
+    {
+      "id": "m365.document",
+      "name": "Document",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12857",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12857"
+        }
+      }
+    },
+    {
+      "id": "m365.plants",
+      "name": "Plants",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12869",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12869"
+        }
+      }
+    },
+    {
+      "id": "m365.compass",
+      "name": "Compass",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12885",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12885"
+        }
+      }
+    },
+    {
+      "id": "m365.workflow",
+      "name": "Workflow",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12901",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12901"
+        }
+      }
+    },
+    {
+      "id": "m365.audio",
+      "name": "Audio",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12911",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12911"
+        }
+      }
+    },
+    {
+      "id": "m365.multi-modal",
+      "name": "Multi-modal",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12930",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12930"
+        }
+      }
+    },
+    {
+      "id": "m365.agents",
+      "name": "Agents",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12949",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12949"
+        }
+      }
+    },
+    {
+      "id": "m365.news",
+      "name": "News",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12957",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12957"
+        }
+      }
+    },
+    {
+      "id": "m365.dashboard",
+      "name": "Dashboard",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:12970",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:12970"
         }
       }
     },
@@ -326,58 +405,163 @@
       "name": "Inbox",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:4934",
+      "nodeId": "582232:12985",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:4936"
+          "512": "582232:12985"
         }
       }
     },
     {
-      "id": "m365.ms-account",
-      "name": "MS Account",
+      "id": "m365.inbox-empty",
+      "name": "Inbox Empty",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5089",
+      "nodeId": "582232:12992",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5091"
+          "512": "582232:12992"
         }
       }
     },
     {
-      "id": "m365.person-checkmark",
-      "name": "Person Checkmark",
+      "id": "m365.work",
+      "name": "Work",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5120",
+      "nodeId": "582232:12997",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5122"
+          "512": "582232:12997"
         }
       }
     },
     {
-      "id": "m365.m365-folder",
-      "name": "M365 Folder",
+      "id": "m365.plan",
+      "name": "Plan",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5274",
+      "nodeId": "582232:13004",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5276"
+          "512": "582232:13004"
+        }
+      }
+    },
+    {
+      "id": "m365.shield",
+      "name": "Shield",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13025",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13025"
+        }
+      }
+    },
+    {
+      "id": "m365.workflows",
+      "name": "Workflows",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13047",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13047"
+        }
+      }
+    },
+    {
+      "id": "m365.search",
+      "name": "Search",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13055",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13055"
+        }
+      }
+    },
+    {
+      "id": "m365.catalog",
+      "name": "Catalog",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13064",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13064"
+        }
+      }
+    },
+    {
+      "id": "m365.settings",
+      "name": "Settings",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13080",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13080"
+        }
+      }
+    },
+    {
+      "id": "m365.create",
+      "name": "Create",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13100",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13100"
+        }
+      }
+    },
+    {
+      "id": "m365.people",
+      "name": "People",
+      "collection": "m365",
+      "type": "illustration",
+      "nodeId": "582232:13118",
+      "sizes": [
+        512
+      ],
+      "renders": {
+        "standard": {
+          "512": "582232:13118"
         }
       }
     },
@@ -386,43 +570,43 @@
       "name": "Celebration",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5673",
+      "nodeId": "582232:13124",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5675"
+          "512": "582232:13124"
         }
       }
     },
     {
-      "id": "m365.task-complete",
-      "name": "Task Complete",
+      "id": "m365.food",
+      "name": "Food",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5810",
+      "nodeId": "582232:13134",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5812"
+          "512": "582232:13134"
         }
       }
     },
     {
-      "id": "m365.pencil",
-      "name": "Pencil",
+      "id": "m365.automations",
+      "name": "Automations",
       "collection": "m365",
       "type": "illustration",
-      "nodeId": "582201:5950",
+      "nodeId": "582232:13141",
       "sizes": [
-        160
+        512
       ],
       "renders": {
         "standard": {
-          "any": "582201:5952"
+          "512": "582232:13141"
         }
       }
     }
