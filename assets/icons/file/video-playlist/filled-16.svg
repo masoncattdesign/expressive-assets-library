@@ -1,6 +1,19 @@
 <svg aria-label="Video Playlist filled 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2H10.5C12.433 2 14 3.567 14 5.5V10C14 11.1046 13.1046 12 12 12C12 13.1046 11.1046 14 10 14H7.5C4.46243 14 2 11.5376 2 8.5V6C2 4.89543 2.89543 4 4 4Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<defs>
+<mask id="ea-knock-video-playlist-16" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+<rect width="16" height="16" fill="#fff"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2H10.5C12.433 2 14 3.567 14 5.5V10C14 11.1046 13.1046 12 12 12C12 13.1046 11.1046 14 10 14H7.5C4.46243 14 2 11.5376 2 8.5V6C2 4.89543 2.89543 4 4 4Z" fill="#000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H10.5C11.8807 3 13 4.11929 13 5.5V10C13 10.5523 12.5523 11 12 11H7.5C6.11929 11 5 9.88071 5 8.5V4C5 3.44772 5.44772 3 6 3ZM4 5C3.44772 5 3 5.44772 3 6V8.5C3 10.9853 5.01472 13 7.5 13H10C10.5523 13 11 12.5523 11 12H7.5C5.567 12 4 10.433 4 8.5V5Z" fill="#fff"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H10.5C11.8807 3 13 4.11929 13 5.5V10C13 10.5523 12.5523 11 12 11H7.5C6.11929 11 5 9.88071 5 8.5V4C5 3.44772 5.44772 3 6 3ZM4 5C3.44772 5 3 5.44772 3 6V8.5C3 10.9853 5.01472 13 7.5 13H10C10.5523 13 11 12.5523 11 12H7.5C5.567 12 4 10.433 4 8.5V5Z" fill="#fff"/>
+<path d="M8.04877 4.62929C7.69285 4.39924 7.25 4.68993 7.25 5.1536V8.94405C7.25 9.40773 7.69285 9.69842 8.04877 9.46837L11.25 7.54883C11.6087 7.317 11.6087 6.73202 11.25 6.5002L8.04877 4.62929Z" fill="#000"/>
+</mask>
+</defs>
+<g mask="url(#ea-knock-video-playlist-16)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2H10.5C12.433 2 14 3.567 14 5.5V10C14 11.1046 13.1046 12 12 12C12 13.1046 11.1046 14 10 14H7.5C4.46243 14 2 11.5376 2 8.5V6C2 4.89543 2.89543 4 4 4Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H10.5C11.8807 3 13 4.11929 13 5.5V10C13 10.5523 12.5523 11 12 11H7.5C6.11929 11 5 9.88071 5 8.5V4C5 3.44772 5.44772 3 6 3ZM4 5C3.44772 5 3 5.44772 3 6V8.5C3 10.9853 5.01472 13 7.5 13H10C10.5523 13 11 12.5523 11 12H7.5C5.567 12 4 10.433 4 8.5V5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 3H10.5C11.8807 3 13 4.11929 13 5.5V10C13 10.5523 12.5523 11 12 11H7.5C6.11929 11 5 9.88071 5 8.5V4C5 3.44772 5.44772 3 6 3ZM4 5C3.44772 5 3 5.44772 3 6V8.5C3 10.9853 5.01472 13 7.5 13H10C10.5523 13 11 12.5523 11 12H7.5C5.567 12 4 10.433 4 8.5V5Z" fill="currentColor"/>
-<path d="M8.04877 4.62929C7.69285 4.39924 7.25 4.68993 7.25 5.1536V8.94405C7.25 9.40773 7.69285 9.69842 8.04877 9.46837L11.25 7.54883C11.6087 7.317 11.6087 6.73202 11.25 6.5002L8.04877 4.62929Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M8.04877 4.62929C7.69285 4.39924 7.25 4.68993 7.25 5.1536V8.94405C7.25 9.40773 7.69285 9.69842 8.04877 9.46837L11.25 7.54883C11.6087 7.317 11.6087 6.73202 11.25 6.5002L8.04877 4.62929Z" fill="currentColor"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C4 2.89543 4.89543 2 6 2H10.5C12.433 2 14 3.567 14 5.5V10C14 11.1046 13.1046 12 12 12C12 13.1046 11.1046 14 10 14H7.5C4.46243 14 2 11.5376 2 8.5V6C2 4.89543 2.89543 4 4 4Z" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M8.04877 4.62929C7.69285 4.39924 7.25 4.68993 7.25 5.1536V8.94405C7.25 9.40773 7.69285 9.69842 8.04877 9.46837L11.25 7.54883C11.6087 7.317 11.6087 6.73202 11.25 6.5002L8.04877 4.62929Z" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 </svg>

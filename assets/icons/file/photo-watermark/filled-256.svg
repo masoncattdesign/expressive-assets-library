@@ -1,7 +1,21 @@
 <svg aria-label="Photo Watermark filled 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+<defs>
+<mask id="ea-knock-photo-watermark-256" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+<rect width="256" height="256" fill="#fff"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="#000"/>
+<path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="#fff"/>
+<path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="#fff"/>
+<circle cx="168" cy="88" r="15" fill="#000"/>
+<path d="M119.868 120.418L76.9221 163.368C69.6782 170.613 74.8092 183 85.0543 183H170.956C181.202 183 186.332 170.612 179.087 163.367L136.131 120.417C131.64 115.926 124.358 115.926 119.868 120.418Z" fill="#000"/>
+</mask>
+</defs>
+<g mask="url(#ea-knock-photo-watermark-256)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="currentColor"/>
 <path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="currentColor"/>
 <path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="currentColor"/>
-<circle cx="168" cy="88" r="15" fill="var(--ea-knockout, #fff)"/>
-<path d="M119.868 120.418L76.9221 163.368C69.6782 170.613 74.8092 183 85.0543 183H170.956C181.202 183 186.332 170.612 179.087 163.367L136.131 120.417C131.64 115.926 124.358 115.926 119.868 120.418Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="168" cy="88" r="15" fill="currentColor"/>
+<path d="M119.868 120.418L76.9221 163.368C69.6782 170.613 74.8092 183 85.0543 183H170.956C181.202 183 186.332 170.612 179.087 163.367L136.131 120.417C131.64 115.926 124.358 115.926 119.868 120.418Z" fill="currentColor"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+<path d="M119.868 120.418L76.9221 163.368C69.6782 170.613 74.8092 183 85.0543 183H170.956C181.202 183 186.332 170.612 179.087 163.367L136.131 120.417C131.64 115.926 124.358 115.926 119.868 120.418Z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 </svg>

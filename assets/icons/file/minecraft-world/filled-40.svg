@@ -1,69 +1,144 @@
 <svg aria-label="Minecraft World filled 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<defs>
+<mask id="ea-knock-minecraft-world-40" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+<rect width="40" height="40" fill="#fff"/>
+<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="#000"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="#fff"/>
+<path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="#fff"/>
+<path d="M14.5 12H12V14.5H14.5V12Z" fill="#fff"/>
+<path d="M16.5 12H14V14.5H16.5V12Z" fill="#000"/>
+<path d="M18.5 12H16V14.5H18.5V12Z" fill="#000"/>
+<path d="M20.5 12H18V14.5H20.5V12Z" fill="#fff"/>
+<path d="M22.5 12H20V14.5H22.5V12Z" fill="#000"/>
+<path d="M24.5 12H22V14.5H24.5V12Z" fill="#000"/>
+<path d="M26.5 12H24V14.5H26.5V12Z" fill="#000"/>
+<path d="M28 12H26V14.5H28V12Z" fill="#000"/>
+<path d="M14.5 14H12V16.5H14.5V14Z" fill="#000"/>
+<path d="M16.5 14H14V16.5H16.5V14Z" fill="#000"/>
+<path d="M18.5 14H16V16.5H18.5V14Z" fill="#000"/>
+<path d="M20.5 14H18V16.5H20.5V14Z" fill="#000"/>
+<path d="M22.5 14H20V16.5H22.5V14Z" fill="#000"/>
+<path d="M24.5 14H22V16.5H24.5V14Z" fill="#000"/>
+<path d="M26.5 14H24V16.5H26.5V14Z" fill="#000"/>
+<path d="M28 14H26V16.5H28V14Z" fill="#000"/>
+<path d="M14.5 16H12V18.5H14.5V16Z" fill="#000"/>
+<path d="M16.5 16H14V18.5H16.5V16Z" fill="#000"/>
+<path d="M18.5 16H16V18.5H18.5V16Z" fill="#000"/>
+<path d="M20.5 16H18V18.5H20.5V16Z" fill="#000"/>
+<path d="M22.5 16H20V18.5H22.5V16Z" fill="#000"/>
+<path d="M24.5 16H22V18.5H24.5V16Z" fill="#000"/>
+<path d="M26.5 16H24V18.5H26.5V16Z" fill="#000"/>
+<path d="M28 16H26V18.5H28V16Z" fill="#000"/>
+<path d="M14.5 18H12V20.5H14.5V18Z" fill="#000"/>
+<path d="M16.5 18H14V20.5H16.5V18Z" fill="#000"/>
+<path d="M18.5 18H16V20.5H18.5V18Z" fill="#000"/>
+<path d="M20.5 18H18V20.5H20.5V18Z" fill="#000"/>
+<path d="M22.5 18H20V20.5H22.5V18Z" fill="#000"/>
+<path d="M24.5 18H22V20.5H24.5V18Z" fill="#000"/>
+<path d="M26.5 18H24V20.5H26.5V18Z" fill="#000"/>
+<path d="M28 18H26V20.5H28V18Z" fill="#000"/>
+<path d="M14.5 20H12V22.5H14.5V20Z" fill="#000"/>
+<path d="M16.5 20H14V22.5H16.5V20Z" fill="#000"/>
+<path d="M18.5 20H16V22.5H18.5V20Z" fill="#000"/>
+<path d="M20.5 20H18V22.5H20.5V20Z" fill="#000"/>
+<path d="M22.5 20H20V22.5H22.5V20Z" fill="#000"/>
+<path d="M24.5 20H22V22.5H24.5V20Z" fill="#000"/>
+<path d="M26.5 20H24V22.5H26.5V20Z" fill="#000"/>
+<path d="M28 20H26V22.5H28V20Z" fill="#000"/>
+<path d="M14.5 22H12V24.5H14.5V22Z" fill="#000"/>
+<path d="M16.5 22H14V24.5H16.5V22Z" fill="#000"/>
+<path d="M18.5 22H16V24.5H18.5V22Z" fill="#000"/>
+<path d="M20.5 22H18V24.5H20.5V22Z" fill="#000"/>
+<path d="M22.5 22H20V24.5H22.5V22Z" fill="#000"/>
+<path d="M24.5 22H22V24.5H24.5V22Z" fill="#000"/>
+<path d="M26.5 22H24V24.5H26.5V22Z" fill="#000"/>
+<path d="M28 22H26V24.5H28V22Z" fill="#000"/>
+<path d="M14.5 24H12V26.5H14.5V24Z" fill="#000"/>
+<path d="M16.5 24H14V26.5H16.5V24Z" fill="#000"/>
+<path d="M18.5 24H16V26.5H18.5V24Z" fill="#000"/>
+<path d="M20.5 24H18V26.5H20.5V24Z" fill="#000"/>
+<path d="M22.5 24H20V26.5H22.5V24Z" fill="#000"/>
+<path d="M24.5 24H22V26.5H24.5V24Z" fill="#000"/>
+<path d="M26.5 24H24V26.5H26.5V24Z" fill="#000"/>
+<path d="M28 24H26V26.5H28V24Z" fill="#000"/>
+<path d="M14.5 26H12V28H14.5V26Z" fill="#000"/>
+<path d="M16.5 26H14V28H16.5V26Z" fill="#000"/>
+<path d="M18.5 26H16V28H18.5V26Z" fill="#000"/>
+<path d="M20.5 26H18V28H20.5V26Z" fill="#000"/>
+<path d="M22.5 26H20V28H22.5V26Z" fill="#000"/>
+<path d="M24.5 26H22V28H24.5V26Z" fill="#000"/>
+<path d="M26.5 26H24V28H26.5V26Z" fill="#000"/>
+<path d="M28 26H26V28H28V26Z" fill="#000"/>
+</mask>
+</defs>
+<g mask="url(#ea-knock-minecraft-world-40)">
+<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="currentColor"/>
 <path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="currentColor"/>
 <path d="M7 6C7 4.34315 8.34315 3 10 3H26C29.866 3 33 6.13401 33 10V34C33 35.6569 31.6569 37 30 37H14C10.134 37 7 33.866 7 30V6Z" fill="currentColor"/>
 <path d="M14.5 12H12V14.5H14.5V12Z" fill="currentColor"/>
-<path d="M16.5 12H14V14.5H16.5V12Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 12H16V14.5H18.5V12Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M16.5 12H14V14.5H16.5V12Z" fill="currentColor"/>
+<path d="M18.5 12H16V14.5H18.5V12Z" fill="currentColor"/>
 <path d="M20.5 12H18V14.5H20.5V12Z" fill="currentColor"/>
-<path d="M22.5 12H20V14.5H22.5V12Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 12H22V14.5H24.5V12Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 12H24V14.5H26.5V12Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 12H26V14.5H28V12Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 14H12V16.5H14.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 14H14V16.5H16.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 14H16V16.5H18.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 14H18V16.5H20.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 14H20V16.5H22.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 14H22V16.5H24.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 14H24V16.5H26.5V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 14H26V16.5H28V14Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 16H12V18.5H14.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 16H14V18.5H16.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 16H16V18.5H18.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 16H18V18.5H20.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 16H20V18.5H22.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 16H22V18.5H24.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 16H24V18.5H26.5V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 16H26V18.5H28V16Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 18H12V20.5H14.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 18H14V20.5H16.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 18H16V20.5H18.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 18H18V20.5H20.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 18H20V20.5H22.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 18H22V20.5H24.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 18H24V20.5H26.5V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 18H26V20.5H28V18Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 20H12V22.5H14.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 20H14V22.5H16.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 20H16V22.5H18.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 20H18V22.5H20.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 20H20V22.5H22.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 20H22V22.5H24.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 20H24V22.5H26.5V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 20H26V22.5H28V20Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 22H12V24.5H14.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 22H14V24.5H16.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 22H16V24.5H18.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 22H18V24.5H20.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 22H20V24.5H22.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 22H22V24.5H24.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 22H24V24.5H26.5V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 22H26V24.5H28V22Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 24H12V26.5H14.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 24H14V26.5H16.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 24H16V26.5H18.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 24H18V26.5H20.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 24H20V26.5H22.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 24H22V26.5H24.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 24H24V26.5H26.5V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 24H26V26.5H28V24Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M14.5 26H12V28H14.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M16.5 26H14V28H16.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M18.5 26H16V28H18.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M20.5 26H18V28H20.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M22.5 26H20V28H22.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M24.5 26H22V28H24.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M26.5 26H24V28H26.5V26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M28 26H26V28H28V26Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M22.5 12H20V14.5H22.5V12Z" fill="currentColor"/>
+<path d="M24.5 12H22V14.5H24.5V12Z" fill="currentColor"/>
+<path d="M26.5 12H24V14.5H26.5V12Z" fill="currentColor"/>
+<path d="M28 12H26V14.5H28V12Z" fill="currentColor"/>
+<path d="M14.5 14H12V16.5H14.5V14Z" fill="currentColor"/>
+<path d="M16.5 14H14V16.5H16.5V14Z" fill="currentColor"/>
+<path d="M18.5 14H16V16.5H18.5V14Z" fill="currentColor"/>
+<path d="M20.5 14H18V16.5H20.5V14Z" fill="currentColor"/>
+<path d="M22.5 14H20V16.5H22.5V14Z" fill="currentColor"/>
+<path d="M24.5 14H22V16.5H24.5V14Z" fill="currentColor"/>
+<path d="M26.5 14H24V16.5H26.5V14Z" fill="currentColor"/>
+<path d="M28 14H26V16.5H28V14Z" fill="currentColor"/>
+<path d="M14.5 16H12V18.5H14.5V16Z" fill="currentColor"/>
+<path d="M16.5 16H14V18.5H16.5V16Z" fill="currentColor"/>
+<path d="M18.5 16H16V18.5H18.5V16Z" fill="currentColor"/>
+<path d="M20.5 16H18V18.5H20.5V16Z" fill="currentColor"/>
+<path d="M22.5 16H20V18.5H22.5V16Z" fill="currentColor"/>
+<path d="M24.5 16H22V18.5H24.5V16Z" fill="currentColor"/>
+<path d="M26.5 16H24V18.5H26.5V16Z" fill="currentColor"/>
+<path d="M28 16H26V18.5H28V16Z" fill="currentColor"/>
+<path d="M14.5 18H12V20.5H14.5V18Z" fill="currentColor"/>
+<path d="M16.5 18H14V20.5H16.5V18Z" fill="currentColor"/>
+<path d="M18.5 18H16V20.5H18.5V18Z" fill="currentColor"/>
+<path d="M20.5 18H18V20.5H20.5V18Z" fill="currentColor"/>
+<path d="M22.5 18H20V20.5H22.5V18Z" fill="currentColor"/>
+<path d="M24.5 18H22V20.5H24.5V18Z" fill="currentColor"/>
+<path d="M26.5 18H24V20.5H26.5V18Z" fill="currentColor"/>
+<path d="M28 18H26V20.5H28V18Z" fill="currentColor"/>
+<path d="M14.5 20H12V22.5H14.5V20Z" fill="currentColor"/>
+<path d="M16.5 20H14V22.5H16.5V20Z" fill="currentColor"/>
+<path d="M18.5 20H16V22.5H18.5V20Z" fill="currentColor"/>
+<path d="M20.5 20H18V22.5H20.5V20Z" fill="currentColor"/>
+<path d="M22.5 20H20V22.5H22.5V20Z" fill="currentColor"/>
+<path d="M24.5 20H22V22.5H24.5V20Z" fill="currentColor"/>
+<path d="M26.5 20H24V22.5H26.5V20Z" fill="currentColor"/>
+<path d="M28 20H26V22.5H28V20Z" fill="currentColor"/>
+<path d="M14.5 22H12V24.5H14.5V22Z" fill="currentColor"/>
+<path d="M16.5 22H14V24.5H16.5V22Z" fill="currentColor"/>
+<path d="M18.5 22H16V24.5H18.5V22Z" fill="currentColor"/>
+<path d="M20.5 22H18V24.5H20.5V22Z" fill="currentColor"/>
+<path d="M22.5 22H20V24.5H22.5V22Z" fill="currentColor"/>
+<path d="M24.5 22H22V24.5H24.5V22Z" fill="currentColor"/>
+<path d="M26.5 22H24V24.5H26.5V22Z" fill="currentColor"/>
+<path d="M28 22H26V24.5H28V22Z" fill="currentColor"/>
+<path d="M14.5 24H12V26.5H14.5V24Z" fill="currentColor"/>
+<path d="M16.5 24H14V26.5H16.5V24Z" fill="currentColor"/>
+<path d="M18.5 24H16V26.5H18.5V24Z" fill="currentColor"/>
+<path d="M20.5 24H18V26.5H20.5V24Z" fill="currentColor"/>
+<path d="M22.5 24H20V26.5H22.5V24Z" fill="currentColor"/>
+<path d="M24.5 24H22V26.5H24.5V24Z" fill="currentColor"/>
+<path d="M26.5 24H24V26.5H26.5V24Z" fill="currentColor"/>
+<path d="M28 24H26V26.5H28V24Z" fill="currentColor"/>
+<path d="M14.5 26H12V28H14.5V26Z" fill="currentColor"/>
+<path d="M16.5 26H14V28H16.5V26Z" fill="currentColor"/>
+<path d="M18.5 26H16V28H18.5V26Z" fill="currentColor"/>
+<path d="M20.5 26H18V28H20.5V26Z" fill="currentColor"/>
+<path d="M22.5 26H20V28H22.5V26Z" fill="currentColor"/>
+<path d="M24.5 26H22V28H24.5V26Z" fill="currentColor"/>
+<path d="M26.5 26H24V28H26.5V26Z" fill="currentColor"/>
+<path d="M28 26H26V28H28V26Z" fill="currentColor"/>
+</g>
+<path d="M6 6C6 3.79086 7.79086 2 10 2H26C30.4183 2 34 5.58172 34 10V34C34 36.2091 32.2091 38 30 38H14C9.58172 38 6 34.4183 6 30V6Z" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 </svg>

@@ -88,37 +88,78 @@ function extent(tag, box) {
  *  lines of text on the PDF icon the first time. */
 const TILE = 0.06;
 
+/**
+ * Filled: a solid plate with real holes cut through it.
+ *
+ * The first attempt painted knockouts as an opaque colour, which is not a
+ * knockout at all. Two things gave it away. A shape carrying fill-opacity let
+ * the ink beneath bleed through, so the PowerPoint tile came out grey instead
+ * of clear. And on any surface that was not exactly the knockout colour, the
+ * holes were visible as pale shapes rather than as background.
+ *
+ * So the holes are a mask now. Every shape is painted currentColor inside a
+ * masked group; the mask itself replays the same shapes in document order,
+ * white where material is body and black where it is a hole. Painting order
+ * does the compositing for free — a letterform drawn after the tile it sits in
+ * repaints itself white in the mask and survives the hole around it.
+ *
+ * Shapes big enough to be a plate in their own right also get a stroked edge
+ * outside the mask, because the letter tile overhangs the page and would
+ * otherwise lose the part hanging past it.
+ */
 function deriveFilled(svg, name, size) {
   const at = svg.indexOf('<defs');
   const body = at === -1 ? svg : svg.slice(0, at);
   const box = Number((svg.match(/viewBox="0 0 (\d+)/) || [, 48])[1]) || 48;
-  // Scaled from the 48px drawings, floored so it does not vanish at 16.
   const weight = Math.max(0.75, Math.round((1.5 * box) / 48 * 100) / 100);
-  // Rewrite whole tags rather than fills alone, so each shape's own geometry
-  // is available when deciding whether it needs an edge.
-  const out = body.replace(/<(path|rect|ellipse|circle|polygon)\b[^>]*?\/>/g, (tag) => {
+  const maskId = `ea-knock-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${size}`;
+
+  const open = (svg.match(/<svg[^>]*>/) || ['<svg>'])[0]
+    .replace(/aria-label="[^"]*"/, `aria-label="${name} filled ${size}"`);
+
+  const shapes = [...body.matchAll(/<(path|rect|ellipse|circle|polygon)\b[^>]*?\/>/g)].map((m) => m[0]);
+
+  const painted = [];   // every shape, flat, in currentColor
+  const maskParts = []; // the same shapes, white for body and black for a hole
+  const edges = [];     // outlines for holes large enough to be plates
+
+  for (const tag of shapes) {
     const f = tag.match(/fill="([^"]+)"/);
-    if (!f || f[1] === 'none') return tag;
+    if (!f || f[1] === 'none') continue;
+
     let rgb = toRgb(f[1]);
     const g = f[1].match(/^url\(#(.+)\)$/);
     if (g) rgb = gradientAverage(svg, g[1]);
-    if (!rgb) return tag.replace(/fill="[^"]+"/, 'fill="currentColor"');
-    if (luminance(rgb) > PAPER) return tag.replace(/fill="[^"]+"/, 'fill="currentColor"');
+    const isBody = !rgb || luminance(rgb) > PAPER;
 
-    // Ink knocks out of the body. A shape big enough to be a plate in its own
-    // right also gets an edge: the letter tile on a Word or Excel icon
-    // overhangs the page, so the part hanging past it has nothing to knock out
-    // of and would simply disappear. Small marks are left unstroked, because an
-    // outline on a thin shape paints it back in.
-    const stroked = extent(tag, box) > TILE
-      ? ` stroke="currentColor" stroke-width="${weight}" stroke-linejoin="round"`
-      : '';
-    return tag.replace(/fill="[^"]+"/, `fill="${KNOCKOUT}"`).replace(/\/>$/, `${stroked}/>`);
-  });
-  return out
-    .replace(/aria-label="[^"]*"/, `aria-label="${name} filled ${size}"`)
-    .replace(/\n{2,}/g, '\n')
-    .trimEnd() + '\n</svg>\n';
+    // Opacity is what turned a knockout grey. Strip every trace of it: the
+    // mask decides what is visible now, so a shape is either fully painted or
+    // fully absent.
+    const bare = tag.replace(/\s(fill|fill-opacity|opacity|stroke[a-z-]*)="[^"]*"/g, '');
+
+    painted.push(bare.replace('/>', ' fill="currentColor"/>'));
+    maskParts.push(bare.replace('/>', ` fill="${isBody ? '#fff' : '#000'}"/>`));
+
+    if (!isBody && extent(tag, box) > TILE) {
+      edges.push(bare.replace('/>', ` fill="none" stroke="currentColor" stroke-width="${weight}" stroke-linejoin="round"/>`));
+    }
+  }
+
+  return [
+    open,
+    '<defs>',
+    `<mask id="${maskId}" maskUnits="userSpaceOnUse" x="0" y="0" width="${box}" height="${box}">`,
+    `<rect width="${box}" height="${box}" fill="#fff"/>`,
+    ...maskParts,
+    '</mask>',
+    '</defs>',
+    `<g mask="url(#${maskId})">`,
+    ...painted,
+    '</g>',
+    ...edges,
+    '</svg>',
+    '',
+  ].join('\n');
 }
 
 const dir = join(ROOT, 'assets/icons/file');

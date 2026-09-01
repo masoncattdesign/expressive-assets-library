@@ -1,12 +1,35 @@
 <svg aria-label="Lists filled 96" role="img" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 27C8 22.0294 12.0294 18 17 18H70C79.9411 18 88 26.0589 88 36V69C88 73.9706 83.9706 78 79 78H26C16.0589 78 8 69.9411 8 60V27Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<defs>
+<mask id="ea-knock-lists-96" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="96">
+<rect width="96" height="96" fill="#fff"/>
+<path d="M8 27C8 22.0294 12.0294 18 17 18H70C79.9411 18 88 26.0589 88 36V69C88 73.9706 83.9706 78 79 78H26C16.0589 78 8 69.9411 8 60V27Z" fill="#000"/>
+<path d="M10 27C10 23.134 13.134 20 17 20H70C78.8366 20 86 27.1634 86 36V69C86 72.866 82.866 76 79 76H26C17.1634 76 10 68.8366 10 60V27Z" fill="#fff"/>
+<path d="M10 27C10 23.134 13.134 20 17 20H70C78.8366 20 86 27.1634 86 36V69C86 72.866 82.866 76 79 76H26C17.1634 76 10 68.8366 10 60V27Z" fill="#fff"/>
+<path d="M28 38L38 28H66.4107C67.2917 28 68 28.7083 68 29.5893V38L48 42.5833L28 38Z" fill="#fff"/>
+<path d="M40.381 47.7024L28 52.8214V38H38L40.381 47.7024Z" fill="#000"/>
+<path d="M68 48.119V38H38V48.2381L51.631 50.6786L68 48.119Z" fill="#000"/>
+<path d="M38 58L28 61.3333V48H38V58Z" fill="#000"/>
+<path d="M67.9993 58V48H35.7969V58.0595L55.6183 59.9048L67.9993 58Z" fill="#000"/>
+<path d="M38 68H29.881C28.8393 68 28 67.1607 28 66.119V58H38V68Z" fill="#000"/>
+<path d="M38.0007 58L36.4531 62.7619L38.0007 68H58.0007L68.0007 58H38.0007Z" fill="#000"/>
+</mask>
+</defs>
+<g mask="url(#ea-knock-lists-96)">
+<path d="M8 27C8 22.0294 12.0294 18 17 18H70C79.9411 18 88 26.0589 88 36V69C88 73.9706 83.9706 78 79 78H26C16.0589 78 8 69.9411 8 60V27Z" fill="currentColor"/>
 <path d="M10 27C10 23.134 13.134 20 17 20H70C78.8366 20 86 27.1634 86 36V69C86 72.866 82.866 76 79 76H26C17.1634 76 10 68.8366 10 60V27Z" fill="currentColor"/>
 <path d="M10 27C10 23.134 13.134 20 17 20H70C78.8366 20 86 27.1634 86 36V69C86 72.866 82.866 76 79 76H26C17.1634 76 10 68.8366 10 60V27Z" fill="currentColor"/>
 <path d="M28 38L38 28H66.4107C67.2917 28 68 28.7083 68 29.5893V38L48 42.5833L28 38Z" fill="currentColor"/>
-<path d="M40.381 47.7024L28 52.8214V38H38L40.381 47.7024Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M68 48.119V38H38V48.2381L51.631 50.6786L68 48.119Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-<path d="M38 58L28 61.3333V48H38V58Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-<path d="M67.9993 58V48H35.7969V58.0595L55.6183 59.9048L67.9993 58Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-<path d="M38 68H29.881C28.8393 68 28 67.1607 28 66.119V58H38V68Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-<path d="M38.0007 58L36.4531 62.7619L38.0007 68H58.0007L68.0007 58H38.0007Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M40.381 47.7024L28 52.8214V38H38L40.381 47.7024Z" fill="currentColor"/>
+<path d="M68 48.119V38H38V48.2381L51.631 50.6786L68 48.119Z" fill="currentColor"/>
+<path d="M38 58L28 61.3333V48H38V58Z" fill="currentColor"/>
+<path d="M67.9993 58V48H35.7969V58.0595L55.6183 59.9048L67.9993 58Z" fill="currentColor"/>
+<path d="M38 68H29.881C28.8393 68 28 67.1607 28 66.119V58H38V68Z" fill="currentColor"/>
+<path d="M38.0007 58L36.4531 62.7619L38.0007 68H58.0007L68.0007 58H38.0007Z" fill="currentColor"/>
+</g>
+<path d="M8 27C8 22.0294 12.0294 18 17 18H70C79.9411 18 88 26.0589 88 36V69C88 73.9706 83.9706 78 79 78H26C16.0589 78 8 69.9411 8 60V27Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M68 48.119V38H38V48.2381L51.631 50.6786L68 48.119Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M38 58L28 61.3333V48H38V58Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M67.9993 58V48H35.7969V58.0595L55.6183 59.9048L67.9993 58Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M38 68H29.881C28.8393 68 28 67.1607 28 66.119V58H38V68Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+<path d="M38.0007 58L36.4531 62.7619L38.0007 68H58.0007L68.0007 58H38.0007Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
 </svg>
