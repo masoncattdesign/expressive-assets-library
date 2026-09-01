@@ -40,6 +40,14 @@ Also in this release:
   properties, laid out by hand into a labelled card. Fixed a bug where a sync
   that changed no artwork also changed no layout.
 
+## Unreleased
+
+- `figma-sources.json` records where each collection is pulled from. Product
+  Icons now pull from the sync board the plugin writes (node `582216:23014`),
+  not the original authoring page, so edits made to the generated components
+  come back. See "The round trip" in the README.
+- `npm run test:plugin` runs the sync plugin against a fake Figma in Node.
+
 ## 1.2 — 1 September 2026
 
 - Aligned to Bridge: ink accent, pill controls, no shadows, Bridge's neutral
@@ -81,6 +89,9 @@ Carried between sessions so it does not get lost.
   placeholder.
 - **Matrix gaps** for System Icons and Illustrations, the way Product Icons
   were filled.
+- **The pull half of the round trip.** The plugin writes to Figma; nothing
+  reads that page back yet. First step is proving the REST API returns
+  `sharedPluginData`, which the whole design depends on.
 - **Figma sync policy.** On a conflict: overwrite, skip, or flag for review.
 - **3P icons.** 70 third-party trademarks, deliberately unimported pending a
   licence review.

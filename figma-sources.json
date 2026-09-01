@@ -1,0 +1,22 @@
+{
+  "note": "Where each collection is pulled from. The importer and the sync plugin both read this rather than carrying node ids in prose or in someone's memory.",
+  "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+  "fileName": "Expressive Assets Library",
+  "collections": {
+    "product": {
+      "label": "Product Icons",
+      "pull": {
+        "nodeId": "582216:23014",
+        "page": "Product Icons",
+        "kind": "sync-board",
+        "note": "The board the sync plugin writes and Mason edits. One component set per icon, variants named 'Style=<Style>, Size=<Size>', each stamped with expressiveassets:id, :style, :size and :hash in shared plugin data. This is the canonical pull target as of 1 September 2026."
+      },
+      "origin": {
+        "nodeId": "101619:226",
+        "page": "Product icons",
+        "kind": "authoring",
+        "note": "The hand-built page the first 90 icons were imported from, kept for provenance. Superseded by the sync board above; do not import from both."
+      }
+    }
+  }
+}

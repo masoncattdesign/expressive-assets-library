@@ -327,6 +327,36 @@ accent. The Color theme keeps its brand gradients untouched, and the browser
 detects that per theme at runtime — so the accent picker is offered exactly
 where it can do something, and explains itself where it cannot.
 
+## The round trip
+
+Artwork moves both ways between the library and Figma, and after 1 September
+2026 there is one page per collection that it moves through.
+`figma-sources.json` records which.
+
+**Out.** `plugin/` builds a page in the Figma file: one component set per icon,
+variants named `Style=Standard, Size=48`, each stamped with the asset id, its
+style, its size and a hash of the drawing in *shared* plugin data. Shared
+rather than private, because shared is the kind the REST API can read.
+
+**In.** The pull reads that same page back. Because every variant carries the
+hash of the drawing the library last wrote, the pull can tell the difference
+between a cell nobody touched and a cell somebody redrew, without diffing
+artwork: the hash matches, or it does not.
+
+That distinction is what keeps `generated` honest. A cell the library derived
+comes back unchanged and stays `generated`. A cell somebody actually drew over
+in Figma comes back different, and the flag clears, because the drawing is
+authored now.
+
+The pull is not built yet. When it is, the first thing to prove is that the
+REST API really does return `sharedPluginData` for these nodes, since the whole
+design rests on it.
+
+> **Do not pull from the old authoring page as well.** The 90 product icons
+> were first imported from a hand-built page, recorded in `figma-sources.json`
+> as `origin`. Importing from both would give every icon two sources of truth
+> and no way to say which won.
+
 ## Importing from the Figma API
 
 `scripts/import-figma.mjs` runs in two passes on purpose. At 500+ components you
