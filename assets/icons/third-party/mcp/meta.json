@@ -1,0 +1,38 @@
+{
+  "id": "third-party.mcp",
+  "name": "MCP",
+  "keywords": [
+    "mcp"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#242424",
+    "secondary": "#242424"
+  },
+  "recolorable": false,
+  "variants": {
+    "filled": {
+      "32": "assets/icons/third-party/mcp/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "515207:544"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "MCP brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Only one mark exists upstream (filled), so this asset has no counterpart style. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Anthropic PBC",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "MCP is a trademark of Anthropic PBC."
+  }
+}

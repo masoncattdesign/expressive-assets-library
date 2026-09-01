@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3129,
+  "total": 3190,
   "groups": [
     {
       "id": "product-icons",
@@ -19,6 +19,11 @@
           "id": "file",
           "label": "File Icons",
           "count": 88
+        },
+        {
+          "id": "third-party",
+          "label": "Third Party",
+          "count": 61
         }
       ]
     },
@@ -14154,6 +14159,2574 @@
         "outline:48",
         "outline:96"
       ]
+    },
+    {
+      "id": "third-party.adobe-after-effects",
+      "name": "Adobe After Effects",
+      "keywords": [
+        "adobe",
+        "after",
+        "effects"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#00005B",
+        "secondary": "#9999FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-after-effects/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-after-effects/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:217"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe After Effects brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe After Effects is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-audition",
+      "name": "Adobe Audition",
+      "keywords": [
+        "adobe",
+        "audition"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#00005B",
+        "secondary": "#9999FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-audition/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-audition/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:220"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Audition brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Audition is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-illustrator",
+      "name": "Adobe Illustrator",
+      "keywords": [
+        "adobe",
+        "illustrator"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#330000",
+        "secondary": "#FF9A00"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-illustrator/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-illustrator/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:218"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Illustrator brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Illustrator is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-indesign",
+      "name": "Adobe Indesign",
+      "keywords": [
+        "adobe",
+        "indesign"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#49021F",
+        "secondary": "#FF3366"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-indesign/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-indesign/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:215"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Indesign brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Indesign is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-media-encoder",
+      "name": "Adobe Media Encoder",
+      "keywords": [
+        "adobe",
+        "media",
+        "encoder"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#00005B",
+        "secondary": "#9999FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-media-encoder/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-media-encoder/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:221"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Media Encoder brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Media Encoder is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-photoshop",
+      "name": "Adobe Photoshop",
+      "keywords": [
+        "adobe",
+        "photoshop"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#001E36",
+        "secondary": "#31A8FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-photoshop/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-photoshop/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:216"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Photoshop brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Photoshop is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-reader",
+      "name": "Adobe Reader",
+      "keywords": [
+        "adobe",
+        "reader"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#B30B00",
+        "secondary": "#B30B00"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-reader/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-reader/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:219"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Reader brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Reader is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-spark",
+      "name": "Adobe Spark",
+      "keywords": [
+        "adobe",
+        "spark"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#370000",
+        "secondary": "#E3171C"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-spark/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-spark/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:214"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe Spark brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe Spark is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.adobe-xd",
+      "name": "Adobe XD",
+      "keywords": [
+        "adobe",
+        "xd"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#470137",
+        "secondary": "#FF61F6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/adobe-xd/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/adobe-xd/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "105551:213"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Adobe XD brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Adobe Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Adobe XD is a trademark of Adobe Inc.."
+      }
+    },
+    {
+      "id": "third-party.android",
+      "name": "Android",
+      "keywords": [
+        "android"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#34A853",
+        "secondary": "#202124"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/android/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/android/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "515207:545"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Android brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Android is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.apple",
+      "name": "Apple",
+      "keywords": [
+        "apple"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#242424",
+        "secondary": "#242424"
+      },
+      "recolorable": false,
+      "variants": {
+        "filled": {
+          "32": "assets/icons/third-party/apple/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "458246:3624"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Apple brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Only one mark exists upstream (filled), so this asset has no counterpart style. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Apple Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Apple is a trademark of Apple Inc.."
+      }
+    },
+    {
+      "id": "third-party.apple-mail",
+      "name": "Apple Mail",
+      "keywords": [
+        "apple",
+        "mail"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#1C72F3",
+        "secondary": "#1AC8FC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/apple-mail/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/apple-mail/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:73"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Apple Mail brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Apple Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Apple Mail is a trademark of Apple Inc.."
+      }
+    },
+    {
+      "id": "third-party.apple-messages",
+      "name": "Apple Messages",
+      "keywords": [
+        "apple",
+        "messages"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#5DF877",
+        "secondary": "#0BBD29"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/apple-messages/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/apple-messages/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:82"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Apple Messages brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Apple Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Apple Messages is a trademark of Apple Inc.."
+      }
+    },
+    {
+      "id": "third-party.box",
+      "name": "Box",
+      "keywords": [
+        "box"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0061D5",
+        "secondary": "#0061D5"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/box/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/box/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:911"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Box brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Box, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Box is a trademark of Box, Inc.."
+      }
+    },
+    {
+      "id": "third-party.content-credentials",
+      "name": "Content Credentials",
+      "keywords": [
+        "content",
+        "credentials"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/content-credentials/standard-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "337231:170"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Content Credentials brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Only one mark exists upstream (standard), so this asset has no counterpart style. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Coalition for Content Provenance and Authenticity",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Content Credentials is a trademark of Coalition for Content Provenance and Authenticity."
+      }
+    },
+    {
+      "id": "third-party.dropbox",
+      "name": "Dropbox",
+      "keywords": [
+        "dropbox"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0061FF",
+        "secondary": "#0061FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/dropbox/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/dropbox/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:869"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Dropbox brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Dropbox, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Dropbox is a trademark of Dropbox, Inc.."
+      }
+    },
+    {
+      "id": "third-party.evernote",
+      "name": "Evernote",
+      "keywords": [
+        "evernote"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#00A82D",
+        "secondary": "#00A82D"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/evernote/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/evernote/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:849"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Evernote brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Evernote Corporation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Evernote is a trademark of Evernote Corporation."
+      }
+    },
+    {
+      "id": "third-party.facebook",
+      "name": "Facebook",
+      "keywords": [
+        "facebook"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#1877F2",
+        "secondary": "#1877F2"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/facebook/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/facebook/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:841"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Facebook brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meta Platforms, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Facebook is a trademark of Meta Platforms, Inc.."
+      }
+    },
+    {
+      "id": "third-party.facebook-messenger",
+      "name": "Facebook Messenger",
+      "keywords": [
+        "facebook",
+        "messenger"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0B92FF",
+        "secondary": "#FF7461"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/facebook-messenger/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/facebook-messenger/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:85"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Facebook Messenger brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meta Platforms, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Facebook Messenger is a trademark of Meta Platforms, Inc.."
+      }
+    },
+    {
+      "id": "third-party.figma",
+      "name": "Figma",
+      "keywords": [
+        "figma"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0ACF83",
+        "secondary": "#1ABCFE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/figma/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/figma/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "204271:1297"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Figma brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Figma, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Figma is a trademark of Figma, Inc.."
+      }
+    },
+    {
+      "id": "third-party.firefox",
+      "name": "Firefox",
+      "keywords": [
+        "firefox"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FFEA00",
+        "secondary": "#FFA000"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/firefox/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/firefox/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "233210:3253"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Firefox brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Mozilla Foundation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Firefox is a trademark of Mozilla Foundation."
+      }
+    },
+    {
+      "id": "third-party.google",
+      "name": "Google",
+      "keywords": [
+        "google"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#4285F4",
+        "secondary": "#EA4335"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:795"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.google-chrome",
+      "name": "Google Chrome",
+      "keywords": [
+        "google",
+        "chrome"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FBBF12",
+        "secondary": "#279847"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google-chrome/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google-chrome/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "233210:2970"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google Chrome brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google Chrome is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.google-drive",
+      "name": "Google Drive",
+      "keywords": [
+        "google",
+        "drive"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#3E82F7",
+        "secondary": "#FDD04A"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google-drive/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google-drive/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:814"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google Drive brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google Drive is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.google-mail",
+      "name": "Google Mail",
+      "keywords": [
+        "google",
+        "mail"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#4285F4",
+        "secondary": "#C5221F"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google-mail/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google-mail/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:97"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google Mail brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google Mail is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.google-photos",
+      "name": "Google Photos",
+      "keywords": [
+        "google",
+        "photos"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#F6B704",
+        "secondary": "#34A353"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google-photos/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google-photos/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "222804:1574"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google Photos brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google Photos is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.google-slides",
+      "name": "Google Slides",
+      "keywords": [
+        "google",
+        "slides"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#F8BF08",
+        "secondary": "#F59307"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/google-slides/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/google-slides/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "272991:1676"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Google Slides brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Google Slides is a trademark of Google LLC."
+      }
+    },
+    {
+      "id": "third-party.icloud",
+      "name": "iCloud",
+      "keywords": [
+        "icloud"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#B4E7FC",
+        "secondary": "#59C2F9"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/icloud/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/icloud/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "266081:1795"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "iCloud brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Apple Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "iCloud is a trademark of Apple Inc.."
+      }
+    },
+    {
+      "id": "third-party.instacart",
+      "name": "Instacart",
+      "keywords": [
+        "instacart"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0AAD0A",
+        "secondary": "#FF7009"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/instacart/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/instacart/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "357471:10"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Instacart brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Maplebear Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Instacart is a trademark of Maplebear Inc.."
+      }
+    },
+    {
+      "id": "third-party.instagram",
+      "name": "Instagram",
+      "keywords": [
+        "instagram"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FFE19A",
+        "secondary": "#344AEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/instagram/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/instagram/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:96"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Instagram brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meta Platforms, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Instagram is a trademark of Meta Platforms, Inc.."
+      }
+    },
+    {
+      "id": "third-party.line-messenger",
+      "name": "Line Messenger",
+      "keywords": [
+        "line",
+        "messenger"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#06C755",
+        "secondary": "#06C755"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/line-messenger/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/line-messenger/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "356854:1643"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Line Messenger brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "LY Corporation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Line Messenger is a trademark of LY Corporation."
+      }
+    },
+    {
+      "id": "third-party.linux",
+      "name": "Linux",
+      "keywords": [
+        "linux"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#020204",
+        "secondary": "#D79B08"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/linux/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/linux/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "437453:4272"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Linux brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Linux Mark Institute",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Linux is a trademark of Linux Mark Institute."
+      }
+    },
+    {
+      "id": "third-party.mcp",
+      "name": "MCP",
+      "keywords": [
+        "mcp"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#242424",
+        "secondary": "#242424"
+      },
+      "recolorable": false,
+      "variants": {
+        "filled": {
+          "32": "assets/icons/third-party/mcp/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "515207:544"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "MCP brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Only one mark exists upstream (filled), so this asset has no counterpart style. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Anthropic PBC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "MCP is a trademark of Anthropic PBC."
+      }
+    },
+    {
+      "id": "third-party.meetup",
+      "name": "Meetup",
+      "keywords": [
+        "meetup"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#ED1C40",
+        "secondary": "#ED1C40"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/meetup/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/meetup/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:744"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Meetup brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meetup LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Meetup is a trademark of Meetup LLC."
+      }
+    },
+    {
+      "id": "third-party.miro",
+      "name": "Miro",
+      "keywords": [
+        "miro"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FFD02F",
+        "secondary": "#050038"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/miro/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/miro/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "117702:201"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Miro brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "RealtimeBoard, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Miro is a trademark of RealtimeBoard, Inc.."
+      }
+    },
+    {
+      "id": "third-party.opera",
+      "name": "Opera",
+      "keywords": [
+        "opera"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FF1B2D",
+        "secondary": "#FF4B4B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/opera/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/opera/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "233210:3292"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Opera brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Opera Norway AS",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Opera is a trademark of Opera Norway AS."
+      }
+    },
+    {
+      "id": "third-party.pearson",
+      "name": "Pearson",
+      "keywords": [
+        "pearson"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0D004D",
+        "secondary": "#0E004E"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/pearson/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/pearson/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "504899:4639"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Pearson brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Pearson plc",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Pearson is a trademark of Pearson plc."
+      }
+    },
+    {
+      "id": "third-party.polly",
+      "name": "Polly",
+      "keywords": [
+        "polly"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#141414",
+        "secondary": "#7DCCEB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/polly/standard-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "10276:56"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Polly brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Only one mark exists upstream (standard), so this asset has no counterpart style. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Polly.ai",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Polly is a trademark of Polly.ai."
+      }
+    },
+    {
+      "id": "third-party.safari",
+      "name": "Safari",
+      "keywords": [
+        "safari"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#CD151E",
+        "secondary": "#0072C4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/safari/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/safari/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "233210:3217"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Safari brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Apple Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Safari is a trademark of Apple Inc.."
+      }
+    },
+    {
+      "id": "third-party.servicenow",
+      "name": "ServiceNow",
+      "keywords": [
+        "servicenow"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#82B6A1",
+        "secondary": "#82B6A1"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/servicenow/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/servicenow/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "117703:168"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "ServiceNow brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "ServiceNow, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "ServiceNow is a trademark of ServiceNow, Inc.."
+      }
+    },
+    {
+      "id": "third-party.sketch",
+      "name": "Sketch",
+      "keywords": [
+        "sketch"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#EA6C00",
+        "secondary": "#FEEEB7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/sketch/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/sketch/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "515089:840"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Sketch brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Sketch B.V.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Sketch is a trademark of Sketch B.V.."
+      }
+    },
+    {
+      "id": "third-party.slack",
+      "name": "Slack",
+      "keywords": [
+        "slack"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#E3066A",
+        "secondary": "#1AB9FF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/slack/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/slack/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "480868:135"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Slack brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Salesforce, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Slack is a trademark of Salesforce, Inc.."
+      }
+    },
+    {
+      "id": "third-party.squarespace",
+      "name": "Squarespace",
+      "keywords": [
+        "squarespace"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/squarespace/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/squarespace/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "502071:92"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Squarespace brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Squarespace, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Squarespace is a trademark of Squarespace, Inc.."
+      }
+    },
+    {
+      "id": "third-party.stack-overflow",
+      "name": "Stack Overflow",
+      "keywords": [
+        "stack",
+        "overflow"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#BCBBBB",
+        "secondary": "#F48024"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/stack-overflow/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/stack-overflow/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "204271:1286"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Stack Overflow brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Stack Exchange, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Stack Overflow is a trademark of Stack Exchange, Inc.."
+      }
+    },
+    {
+      "id": "third-party.telegram",
+      "name": "Telegram",
+      "keywords": [
+        "telegram"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#26A5E4",
+        "secondary": "#26A5E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/telegram/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/telegram/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:70"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Telegram brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Telegram FZ-LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Telegram is a trademark of Telegram FZ-LLC."
+      }
+    },
+    {
+      "id": "third-party.tiktok",
+      "name": "TikTok",
+      "keywords": [
+        "tiktok"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#2DCCD3",
+        "secondary": "#F1204A"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/tiktok/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/tiktok/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "515207:539"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "TikTok brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "ByteDance Ltd.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "TikTok is a trademark of ByteDance Ltd.."
+      }
+    },
+    {
+      "id": "third-party.trello",
+      "name": "Trello",
+      "keywords": [
+        "trello"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#2684FF",
+        "secondary": "#0152CC"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/trello/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/trello/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "10276:55"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Trello brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Atlassian Corporation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Trello is a trademark of Atlassian Corporation."
+      }
+    },
+    {
+      "id": "third-party.twitter",
+      "name": "Twitter",
+      "keywords": [
+        "twitter"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#1D9BF0",
+        "secondary": "#1D9BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/twitter/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/twitter/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "204271:1283"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Twitter brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "X Corp.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Twitter is a trademark of X Corp.."
+      }
+    },
+    {
+      "id": "third-party.twitter-circle",
+      "name": "Twitter Circle",
+      "keywords": [
+        "twitter",
+        "circle"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#1B9DF0",
+        "secondary": "#1B9DF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/twitter-circle/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/twitter-circle/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "111855:11"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Twitter Circle brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "X Corp.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Twitter Circle is a trademark of X Corp.."
+      }
+    },
+    {
+      "id": "third-party.viber",
+      "name": "Viber",
+      "keywords": [
+        "viber"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#7053F4",
+        "secondary": "#7053F4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/viber/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/viber/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:79"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Viber brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Rakuten Group, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Viber is a trademark of Rakuten Group, Inc.."
+      }
+    },
+    {
+      "id": "third-party.wechat",
+      "name": "WeChat",
+      "keywords": [
+        "wechat"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#168743",
+        "secondary": "#F0F0F0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/wechat/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/wechat/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555030:2084"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "WeChat brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Tencent Holdings Limited",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "WeChat is a trademark of Tencent Holdings Limited."
+      }
+    },
+    {
+      "id": "third-party.weibo",
+      "name": "Weibo",
+      "keywords": [
+        "weibo"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#E6162D",
+        "secondary": "#FF9933"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/weibo/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/weibo/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555030:2086"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Weibo brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Weibo Corporation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Weibo is a trademark of Weibo Corporation."
+      }
+    },
+    {
+      "id": "third-party.whatsapp",
+      "name": "Whatsapp",
+      "keywords": [
+        "whatsapp"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#61FD7D",
+        "secondary": "#2BB826"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/whatsapp/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/whatsapp/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "283002:2212"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Whatsapp brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meta Platforms, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Whatsapp is a trademark of Meta Platforms, Inc.."
+      }
+    },
+    {
+      "id": "third-party.whatsapp-business",
+      "name": "Whatsapp Business",
+      "keywords": [
+        "whatsapp",
+        "business"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#61FD7D",
+        "secondary": "#2BB826"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/whatsapp-business/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/whatsapp-business/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "355643:76"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Whatsapp Business brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Meta Platforms, Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Whatsapp Business is a trademark of Meta Platforms, Inc.."
+      }
+    },
+    {
+      "id": "third-party.wix",
+      "name": "Wix",
+      "keywords": [
+        "wix"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/wix/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/wix/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "502071:96"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Wix brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Wix.com Ltd.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Wix is a trademark of Wix.com Ltd.."
+      }
+    },
+    {
+      "id": "third-party.wordpress",
+      "name": "WordPress",
+      "keywords": [
+        "wordpress"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#32373C",
+        "secondary": "#32373C"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/wordpress/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/wordpress/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "502071:88"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "WordPress brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Automattic Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "WordPress is a trademark of Automattic Inc.."
+      }
+    },
+    {
+      "id": "third-party.wunderlist",
+      "name": "Wunderlist",
+      "keywords": [
+        "wunderlist"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#D42B2B",
+        "secondary": "#D42B2B"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/wunderlist/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/wunderlist/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:537"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Wunderlist brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Microsoft Corporation",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Wunderlist is a trademark of Microsoft Corporation."
+      }
+    },
+    {
+      "id": "third-party.x",
+      "name": "X",
+      "keywords": [],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "filled",
+        "standard"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#242424",
+        "secondary": "#242424"
+      },
+      "recolorable": false,
+      "variants": {
+        "filled": {
+          "32": "assets/icons/third-party/x/filled-32.svg"
+        },
+        "standard": {
+          "32": "assets/icons/third-party/x/standard-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "305679:605"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "X brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "X Corp.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "X is a trademark of X Corp.."
+      }
+    },
+    {
+      "id": "third-party.xiaohongshu",
+      "name": "Xiaohongshu",
+      "keywords": [
+        "xiaohongshu"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FF2741",
+        "secondary": "#FF2741"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/xiaohongshu/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/xiaohongshu/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "555030:2088"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Xiaohongshu brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Xingin Information Technology Co., Ltd.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Xiaohongshu is a trademark of Xingin Information Technology Co., Ltd.."
+      }
+    },
+    {
+      "id": "third-party.yahoo",
+      "name": "Yahoo",
+      "keywords": [
+        "yahoo"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#5F01D1",
+        "secondary": "#5F01D1"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/yahoo/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/yahoo/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "5634:507"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Yahoo brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Yahoo Inc.",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Yahoo is a trademark of Yahoo Inc.."
+      }
+    },
+    {
+      "id": "third-party.youtube",
+      "name": "Youtube",
+      "keywords": [
+        "youtube"
+      ],
+      "type": "icon",
+      "collection": "third-party",
+      "status": "published",
+      "themes": [
+        "standard",
+        "filled"
+      ],
+      "sizes": [
+        32
+      ],
+      "colors": {
+        "primary": "#FF0000",
+        "secondary": "#FF0000"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "32": "assets/icons/third-party/youtube/standard-32.svg"
+        },
+        "filled": {
+          "32": "assets/icons/third-party/youtube/filled-32.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "162417:622"
+      },
+      "version": "1.0.0",
+      "updated": "2026-09-01",
+      "notes": "Youtube brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+      "source": {
+        "project": "Google LLC",
+        "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+        "copyright": "Youtube is a trademark of Google LLC."
+      }
     },
     {
       "id": "system.access-time",

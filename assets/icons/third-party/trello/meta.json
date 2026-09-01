@@ -1,0 +1,42 @@
+{
+  "id": "third-party.trello",
+  "name": "Trello",
+  "keywords": [
+    "trello"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#2684FF",
+    "secondary": "#0152CC"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/trello/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/trello/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "10276:55"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Trello brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Atlassian Corporation",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Trello is a trademark of Atlassian Corporation."
+  }
+}

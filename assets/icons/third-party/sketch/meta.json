@@ -1,0 +1,42 @@
+{
+  "id": "third-party.sketch",
+  "name": "Sketch",
+  "keywords": [
+    "sketch"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#EA6C00",
+    "secondary": "#FEEEB7"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/sketch/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/sketch/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "515089:840"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Sketch brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Sketch B.V.",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Sketch is a trademark of Sketch B.V.."
+  }
+}

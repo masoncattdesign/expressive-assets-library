@@ -1,0 +1,42 @@
+{
+  "id": "third-party.wunderlist",
+  "name": "Wunderlist",
+  "keywords": [
+    "wunderlist"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#D42B2B",
+    "secondary": "#D42B2B"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/wunderlist/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/wunderlist/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "5634:537"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Wunderlist brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Microsoft Corporation",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Wunderlist is a trademark of Microsoft Corporation."
+  }
+}

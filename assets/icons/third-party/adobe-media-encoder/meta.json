@@ -1,0 +1,44 @@
+{
+  "id": "third-party.adobe-media-encoder",
+  "name": "Adobe Media Encoder",
+  "keywords": [
+    "adobe",
+    "media",
+    "encoder"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#00005B",
+    "secondary": "#9999FF"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/adobe-media-encoder/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/adobe-media-encoder/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "105551:221"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Adobe Media Encoder brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Adobe Inc.",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Adobe Media Encoder is a trademark of Adobe Inc.."
+  }
+}

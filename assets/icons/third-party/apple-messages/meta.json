@@ -1,0 +1,43 @@
+{
+  "id": "third-party.apple-messages",
+  "name": "Apple Messages",
+  "keywords": [
+    "apple",
+    "messages"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#5DF877",
+    "secondary": "#0BBD29"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/apple-messages/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/apple-messages/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "355643:82"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Apple Messages brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Apple Inc.",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Apple Messages is a trademark of Apple Inc.."
+  }
+}

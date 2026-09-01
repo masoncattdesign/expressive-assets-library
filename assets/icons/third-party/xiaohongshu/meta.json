@@ -1,0 +1,42 @@
+{
+  "id": "third-party.xiaohongshu",
+  "name": "Xiaohongshu",
+  "keywords": [
+    "xiaohongshu"
+  ],
+  "type": "icon",
+  "collection": "third-party",
+  "status": "published",
+  "themes": [
+    "standard",
+    "filled"
+  ],
+  "sizes": [
+    32
+  ],
+  "colors": {
+    "primary": "#FF2741",
+    "secondary": "#FF2741"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "32": "assets/icons/third-party/xiaohongshu/standard-32.svg"
+    },
+    "filled": {
+      "32": "assets/icons/third-party/xiaohongshu/filled-32.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "555030:2088"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Xiaohongshu brand mark, imported from the 3P Icons page at 32px, the only size the file holds. Standard is the colour mark and Filled the monochrome one, both as the owner draws them. Not recolourable: altering a third-party mark is what their brand guidelines forbid.",
+  "source": {
+    "project": "Xingin Information Technology Co., Ltd.",
+    "license": "Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.",
+    "copyright": "Xiaohongshu is a trademark of Xingin Information Technology Co., Ltd.."
+  }
+}

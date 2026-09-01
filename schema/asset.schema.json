@@ -70,7 +70,9 @@
         "product",
         "file",
         "oobe",
-        "m365"
+        "m365",
+        "third-party",
+        "wip"
       ]
     },
     "product": {
