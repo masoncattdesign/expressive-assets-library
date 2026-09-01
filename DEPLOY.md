@@ -56,10 +56,17 @@ Static Web App resource, Settings, Environment variables (application settings):
 - `AAD_CLIENT_ID` = the Application (client) ID from step 1
 - `AAD_CLIENT_SECRET` = the secret value from step 1
 
-**4. Check the tenant id.**
-`docs/staticwebapp.config.json` has Microsoft's tenant id in `openIdIssuer`.
-Confirm it matches the tenant your app registration lives in before relying on
-it.
+**4. Set the tenant id.**
+`docs/staticwebapp.config.json` has `REPLACE-WITH-YOUR-TENANT-ID` in
+`openIdIssuer`. Put the **Directory (tenant) ID** from the app registration
+overview page there.
+
+This is worth being careful about. The account is `@teksystemsgs.com`, so the
+registration lives in the TEKsystems directory rather than Microsoft's, and the
+issuer has to name the same directory the registration is in or sign-in fails.
+Whichever directory it is, that directory is also who can get in: single-tenant
+plus this issuer means accounts in that one tenant and nobody else. If people in
+the other org need access, they come in as guests in this one.
 
 **5. Turn GitHub Pages off.**
 Repo Settings, Pages, Source: None. Until you do this the old public URL keeps

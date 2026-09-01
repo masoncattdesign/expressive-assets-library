@@ -8,6 +8,9 @@
     "authenticated Entra ID user. That is the difference between this and a password",
     "box: the artwork itself is behind the check, not just the page that lists it.",
     "",
+    "Put the Directory (tenant) ID from your app registration into openIdIssuer",
+    "above, replacing the placeholder. It is on the registration overview page.",
+    "",
     "Set AAD_CLIENT_ID and AAD_CLIENT_SECRET in the Static Web App's application",
     "settings, and put your tenant id in openIdIssuer below. A single-tenant app",
     "registration is what keeps this to Microsoft accounts rather than any Entra",
@@ -18,7 +21,7 @@
     "identityProviders": {
       "azureActiveDirectory": {
         "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0",
+          "openIdIssuer": "https://login.microsoftonline.com/REPLACE-WITH-YOUR-TENANT-ID/v2.0",
           "clientIdSettingName": "AAD_CLIENT_ID",
           "clientSecretSettingName": "AAD_CLIENT_SECRET"
         }
