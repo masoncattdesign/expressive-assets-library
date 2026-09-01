@@ -1,0 +1,33 @@
+{
+  "id": "product.calculator",
+  "name": "Calculator",
+  "keywords": [
+    "calculator"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    64
+  ],
+  "colors": {
+    "primary": "#CAD2D9",
+    "secondary": "#114A8B"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "64": "assets/icons/product/calculator/standard-64.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582222:10848"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

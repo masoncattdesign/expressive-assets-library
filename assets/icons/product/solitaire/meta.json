@@ -1,0 +1,33 @@
+{
+  "id": "product.solitaire",
+  "name": "Solitaire",
+  "keywords": [
+    "solitaire"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    64
+  ],
+  "colors": {
+    "primary": "#EB8383",
+    "secondary": "#EB8383"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "64": "assets/icons/product/solitaire/standard-64.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582222:11145"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

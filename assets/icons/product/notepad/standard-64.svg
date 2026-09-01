@@ -1,0 +1,67 @@
+<svg aria-label="Notepad standard 64" role="img" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.3299 5.99999H10.67C9.1954 5.99999 7.99998 7.19539 7.99998 8.66998V61.3299C7.99998 62.8045 9.1954 63.9999 10.67 63.9999H53.3299C54.8045 63.9999 55.9999 62.8045 55.9999 61.3299V8.66998C55.9999 7.19539 54.8045 5.99999 53.3299 5.99999Z" fill="#B0570C"/>
+<mask id="product-notepad-standard-64-mask0_582222_10992" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="13" width="48" height="51">
+<path d="M53.3299 13H10.67C9.1954 13 7.99998 14.1954 7.99998 15.67V61.3299C7.99998 62.8045 9.1954 63.9999 10.67 63.9999H53.3299C54.8045 63.9999 55.9999 62.8045 55.9999 61.3299V15.67C55.9999 14.1954 54.8045 13 53.3299 13Z" fill="url(#product-notepad-standard-64-paint0_linear_582222_10992)"/>
+</mask>
+<g mask="url(#product-notepad-standard-64-mask0_582222_10992)">
+<g filter="url(#product-notepad-standard-64-filter0_d_582222_10992)">
+<path d="M53.3299 8.99998H10.67C9.1954 8.99998 7.99998 10.1954 7.99998 11.67V56.3299C7.99998 57.8045 9.1954 58.9999 10.67 58.9999H53.3299C54.8045 58.9999 55.9999 57.8045 55.9999 56.3299V11.67C55.9999 10.1954 54.8045 8.99998 53.3299 8.99998Z" fill="url(#product-notepad-standard-64-paint1_linear_582222_10992)"/>
+</g>
+</g>
+<path d="M53.3299 7.99998H10.67C9.1954 7.99998 7.99998 9.19538 7.99998 10.67V56.3299C7.99998 57.8045 9.1954 58.9999 10.67 58.9999H53.3299C54.8045 58.9999 55.9999 57.8045 55.9999 56.3299V10.67C55.9999 9.19538 54.8045 7.99998 53.3299 7.99998Z" fill="url(#product-notepad-standard-64-paint2_linear_582222_10992)"/>
+<mask id="product-notepad-standard-64-mask1_582222_10992" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="48" height="51">
+<path d="M53.3299 7.99998H10.67C9.1954 7.99998 7.99998 9.19538 7.99998 10.67V56.3299C7.99998 57.8045 9.1954 58.9999 10.67 58.9999H53.3299C54.8045 58.9999 55.9999 57.8045 55.9999 56.3299V10.67C55.9999 9.19538 54.8045 7.99998 53.3299 7.99998Z" fill="url(#product-notepad-standard-64-paint3_linear_582222_10992)"/>
+</mask>
+<g mask="url(#product-notepad-standard-64-mask1_582222_10992)">
+<g filter="url(#product-notepad-standard-64-filter1_d_582222_10992)">
+<path d="M53.3299 3.99999H10.67C9.1954 3.99999 7.99998 5.19539 7.99998 6.66999V51.3299C7.99998 52.8045 9.1954 53.9999 10.67 53.9999H53.3299C54.8045 53.9999 55.9999 52.8045 55.9999 51.3299V6.66999C55.9999 5.19539 54.8045 3.99999 53.3299 3.99999Z" fill="url(#product-notepad-standard-64-paint4_linear_582222_10992)"/>
+</g>
+</g>
+<path d="M53.3299 3.99999H10.67C9.1954 3.99999 7.99998 5.19539 7.99998 6.66999V51.3299C7.99998 52.8045 9.1954 53.9999 10.67 53.9999H53.3299C54.8045 53.9999 55.9999 52.8045 55.9999 51.3299V6.66999C55.9999 5.19539 54.8045 3.99999 53.3299 3.99999Z" fill="url(#product-notepad-standard-64-paint5_linear_582222_10992)"/>
+<path d="M46.6698 38.9999C47.4044 38.9999 47.9999 39.5955 47.9999 40.33V41.6698C47.9999 42.4044 47.4044 42.9999 46.6698 42.9999H17.33C16.5955 42.9999 16 42.4044 16 41.6698V40.33C16 39.5955 16.5955 38.9999 17.33 38.9999H46.6698ZM46.6698 27.9999C47.4044 27.9999 47.9999 28.5955 47.9999 29.33V30.6699C47.9999 31.4044 47.4044 31.9999 46.6698 31.9999H17.33C16.5955 31.9999 16 31.4044 16 30.6699V29.33C16 28.5955 16.5955 27.9999 17.33 27.9999H46.6698ZM46.6698 17C47.4044 17 47.9999 17.5955 47.9999 18.33V19.6699C47.9999 20.4044 47.4044 21 46.6698 21H17.33C16.5955 21 16 20.4044 16 19.6699V18.33C16 17.5955 16.5955 17 17.33 17H46.6698Z" fill="#057093"/>
+<path d="M14.9804 0C16.6204 0.000247352 17.95 1.32972 17.9502 2.96972V5.03026C17.95 6.67027 16.6204 7.99974 14.9804 7.99998H14.9697C13.3296 7.99984 12.0001 6.67033 12 5.03026V2.96972C12.0001 1.32966 13.3296 0.000148418 14.9697 0H14.9804ZM25.9804 0C27.6204 0.000247352 28.95 1.32972 28.9501 2.96972V5.03026C28.95 6.67027 27.6204 7.99974 25.9804 7.99998H25.9697C24.3296 7.99984 23.0001 6.67033 23 5.03026V2.96972C23.0001 1.32966 24.3296 0.000148418 25.9697 0H25.9804ZM37.9804 0C39.6204 0.000247352 40.95 1.32972 40.9501 2.96972V5.03026C40.95 6.67027 39.6204 7.99974 37.9804 7.99998H37.9697C36.3296 7.99984 35.0001 6.67033 34.9999 5.03026V2.96972C35.0001 1.32966 36.3296 0.000148418 37.9697 0H37.9804ZM48.9804 0C50.6204 0.000247352 51.9499 1.32972 51.9501 2.96972V5.03026C51.9499 6.67027 50.6204 7.99974 48.9804 7.99998H48.9696C47.3296 7.99984 46.0001 6.67033 45.9999 5.03026V2.96972C46.0001 1.32966 47.3296 0.000148418 48.9696 0H48.9804Z" fill="#057093"/>
+<defs>
+<filter id="product-notepad-standard-64-filter0_d_582222_10992" x="5.33332" y="7.66665" width="53.3332" height="55.3332" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_10992"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_582222_10992" result="shape"/>
+</filter>
+<filter id="product-notepad-standard-64-filter1_d_582222_10992" x="5.33332" y="2.66666" width="53.3332" height="55.3332" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_10992"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_582222_10992" result="shape"/>
+</filter>
+<linearGradient id="product-notepad-standard-64-paint0_linear_582222_10992" x1="48.5499" y1="67.1699" x2="15.45" y2="9.82998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="product-notepad-standard-64-paint1_linear_582222_10992" x1="48.3399" y1="62.2999" x2="15.66" y2="5.69999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#40ADCD"/>
+<stop offset="1" stop-color="#7FDAF5"/>
+</linearGradient>
+<linearGradient id="product-notepad-standard-64-paint2_linear_582222_10992" x1="48.5499" y1="62.1699" x2="15.45" y2="4.82999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="product-notepad-standard-64-paint3_linear_582222_10992" x1="48.5499" y1="62.1699" x2="15.45" y2="4.82999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="product-notepad-standard-64-paint4_linear_582222_10992" x1="48.3399" y1="57.2999" x2="15.66" y2="0.699995" gradientUnits="userSpaceOnUse">
+<stop stop-color="#40ADCD"/>
+<stop offset="1" stop-color="#7FDAF5"/>
+</linearGradient>
+<linearGradient id="product-notepad-standard-64-paint5_linear_582222_10992" x1="48.3399" y1="57.2999" x2="15.66" y2="0.699995" gradientUnits="userSpaceOnUse">
+<stop stop-color="#40ADCD"/>
+<stop offset="1" stop-color="#7FDAF5"/>
+</linearGradient>
+</defs>
+</svg>

@@ -9,8 +9,7 @@
   "status": "published",
   "themes": [
     "standard",
-    "outline",
-    "filled"
+    "outline"
   ],
   "sizes": [
     16,
@@ -50,17 +49,6 @@
       "48": "assets/icons/file/presentation/outline-48.svg",
       "96": "assets/icons/file/presentation/outline-96.svg",
       "256": "assets/icons/file/presentation/outline-256.svg"
-    },
-    "filled": {
-      "16": "assets/icons/file/presentation/filled-16.svg",
-      "20": "assets/icons/file/presentation/filled-20.svg",
-      "24": "assets/icons/file/presentation/filled-24.svg",
-      "32": "assets/icons/file/presentation/filled-32.svg",
-      "36": "assets/icons/file/presentation/filled-36.svg",
-      "40": "assets/icons/file/presentation/filled-40.svg",
-      "48": "assets/icons/file/presentation/filled-48.svg",
-      "96": "assets/icons/file/presentation/filled-96.svg",
-      "256": "assets/icons/file/presentation/filled-256.svg"
     }
   },
   "figma": {
@@ -69,17 +57,8 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent.",
+  "notes": "Imported from Figma. Standard is the shipped artwork and keeps its baked colours. Outline is derived from it by luminance: paper knocks out, ink is the body, drawn in currentColor so it takes an accent. There is no Filled — none exists upstream, and a solid plate with the marks cut out of it is not a style a file icon needs.",
   "generated": [
-    "filled:16",
-    "filled:20",
-    "filled:24",
-    "filled:256",
-    "filled:32",
-    "filled:36",
-    "filled:40",
-    "filled:48",
-    "filled:96",
     "outline:16",
     "outline:20",
     "outline:24",

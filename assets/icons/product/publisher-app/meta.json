@@ -1,0 +1,34 @@
+{
+  "id": "product.publisher-app",
+  "name": "Publisher (app)",
+  "keywords": [
+    "publisher",
+    "app"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    64
+  ],
+  "colors": {
+    "primary": "#038387",
+    "secondary": "#026D71"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "64": "assets/icons/product/publisher-app/standard-64.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582222:11079"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

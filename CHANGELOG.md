@@ -42,6 +42,13 @@ Also in this release:
 
 ## Unreleased
 
+- File Icons become their own top-level group, out of Product Icons. A file
+  icon is a plate carrying a label, drawn at nine sizes, which is a different
+  object from an app mark and customises differently.
+- **Filled removed from File Icons**, 799 drawings deleted. It was never
+  authored: it was derived from Standard as an inverse of Outline to square a
+  matrix that did not need squaring, and nothing upstream has one.
+
 - **Third-party icons imported.** 61 brand marks, 118 drawings, one size (32).
   Not recolourable, since altering a third-party mark is the thing brand
   guidelines exist to prevent. Every one names a holder in

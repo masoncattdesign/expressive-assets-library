@@ -1,0 +1,35 @@
+{
+  "id": "product.store-dark-theme",
+  "name": "Store Dark Theme",
+  "keywords": [
+    "store",
+    "dark",
+    "theme"
+  ],
+  "type": "icon",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    64
+  ],
+  "colors": {
+    "primary": "#F25022",
+    "secondary": "#3CCBF4"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "64": "assets/icons/product/store-dark-theme/standard-64.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582222:11161"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

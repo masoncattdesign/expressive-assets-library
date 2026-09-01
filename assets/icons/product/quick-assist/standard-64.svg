@@ -1,0 +1,59 @@
+<svg aria-label="Quick Assist standard 64" role="img" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 62.6599H26V54.6599H22V62.6599Z" fill="url(#product-quick-assist-standard-64-paint0_linear_582222_11097)"/>
+<path d="M34 64H14C14 62.34 15.34 61 17 61H31C32.66 61 34 62.34 34 64Z" fill="url(#product-quick-assist-standard-64-paint1_linear_582222_11097)"/>
+<path d="M45.33 20H2.67001C1.19541 20 0 21.1954 0 22.67V53.33C0 54.8046 1.19541 56 2.67001 56H45.33C46.8046 56 48 54.8046 48 53.33V22.67C48 21.1954 46.8046 20 45.33 20Z" fill="url(#product-quick-assist-standard-64-paint2_linear_582222_11097)"/>
+<path d="M61.33 8H18.67C17.1954 8 16 9.1954 16 10.67V41.33C16 42.8046 17.1954 44 18.67 44H61.33C62.8046 44 64 42.8046 64 41.33V10.67C64 9.1954 62.8046 8 61.33 8Z" fill="url(#product-quick-assist-standard-64-paint3_linear_582222_11097)"/>
+<mask id="product-quick-assist-standard-64-mask0_582222_11097" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="8" width="64" height="48">
+<path d="M61.3301 8C62.8046 8.00005 64 9.19539 64 10.6699V41.3301C64 42.8046 62.8046 44 61.3301 44H48V53.3301C48 54.8046 46.8046 56 45.3301 56H2.66992C1.19539 56 4.12313e-05 54.8046 0 53.3301V22.6699C4.22618e-05 21.1954 1.19539 20 2.66992 20H16V10.6699C16 9.19539 17.1954 8.00005 18.6699 8H61.3301Z" fill="url(#product-quick-assist-standard-64-paint4_linear_582222_11097)"/>
+</mask>
+<g mask="url(#product-quick-assist-standard-64-mask0_582222_11097)">
+<g filter="url(#product-quick-assist-standard-64-filter0_dd_582222_11097)">
+<path d="M16 20H45.33C46.8 20 48 21.19 48 22.67V44H18.67C17.2 44 16 42.81 16 41.33V20Z" fill="url(#product-quick-assist-standard-64-paint5_linear_582222_11097)"/>
+</g>
+</g>
+<path d="M16 20H45.33C46.8 20 48 21.19 48 22.67V44H18.67C17.2 44 16 42.81 16 41.33V20Z" fill="url(#product-quick-assist-standard-64-paint6_linear_582222_11097)"/>
+<defs>
+<filter id="product-quick-assist-standard-64-filter0_dd_582222_11097" x="13" y="17" width="38" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.42 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11097"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.133333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11097" result="effect2_dropShadow_582222_11097"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11097" result="shape"/>
+</filter>
+<linearGradient id="product-quick-assist-standard-64-paint0_linear_582222_11097" x1="24" y1="62.5599" x2="24" y2="55.0299" gradientUnits="userSpaceOnUse">
+<stop offset="0.51" stop-color="#8A9299"/>
+<stop offset="0.91" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint1_linear_582222_11097" x1="26.59" y1="68.09" x2="21.18" y2="58.72" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint2_linear_582222_11097" x1="36.94" y1="60.41" x2="11.89" y2="17.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint3_linear_582222_11097" x1="52.94" y1="48.41" x2="27.89" y2="5.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint4_linear_582222_11097" x1="52.94" y1="48.41" x2="27.89" y2="5.02" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint5_linear_582222_11097" x1="40.94" y1="47.49" x2="23.63" y2="17.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="product-quick-assist-standard-64-paint6_linear_582222_11097" x1="40.94" y1="47.49" x2="23.63" y2="17.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+</defs>
+</svg>

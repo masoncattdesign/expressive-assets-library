@@ -27,9 +27,20 @@ export const GROUPS = [
     dir: 'assets/icons',
     collections: [
       { id: 'product', label: 'App Icons' },
-      { id: 'file', label: 'File Icons' },
       { id: 'third-party', label: 'Third Party' },
       { id: 'wip', label: 'In Progress' },
+    ],
+  },
+  {
+    // Its own group rather than a collection under Product Icons: a file icon
+    // is a plate carrying a label, drawn at nine sizes in two styles, which is
+    // a different object from an app mark and customises differently.
+    id: 'file-icons',
+    type: 'icon',
+    label: 'File Icons',
+    dir: 'assets/icons',
+    collections: [
+      { id: 'file', label: 'File Icons' },
     ],
   },
   {
