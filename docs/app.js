@@ -34,6 +34,69 @@ const THEMES = [
   { key: 'filled', label: 'Filled' },
 ];
 
+/**
+ * Asset families. The library holds three shapes of thing, and they do not want
+ * the same panel. A System icon is monochrome line work with no brand colour of
+ * its own. A Product icon (app and file icons both, for now) ships full-colour
+ * Standard artwork that cannot be retinted. An Illustration is a scene built
+ * from colour roles.
+ *
+ * Family decides which styles are offered, which one opens by default, and
+ * whether a Colors section says anything true. System icons have no Standard,
+ * so the control does not offer one.
+ */
+const FAMILIES = {
+  system: {
+    label: 'System icon',
+    styles: ['outline', 'filled'],
+    fallback: 'filled',
+    brandColors: false,
+    colorNote: 'Monochrome. Follows the surface it sits on until you pick an accent.',
+  },
+  product: {
+    label: 'Product icon',
+    styles: ['standard', 'outline', 'filled'],
+    fallback: 'standard',
+    brandColors: true,
+  },
+  illustration: {
+    label: 'Illustration',
+    styles: ['standard', 'outline', 'filled'],
+    fallback: 'standard',
+    brandColors: true,
+  },
+};
+
+/** File and app icons sit in the product family for now: to a person choosing
+ *  one they are the same kind of object, whatever the collection says. */
+function familyOf(asset) {
+  if (asset.type === 'illustration') return 'illustration';
+  if (asset.collection === 'system') return 'system';
+  return 'product';
+}
+
+/** The styles this asset actually offers, in family order. A style the artwork
+ *  never had is left out rather than shown disabled, because a greyed-out
+ *  button still claims the style exists somewhere. */
+function stylesFor(asset) {
+  const family = FAMILIES[familyOf(asset)];
+  const offered = family.styles.filter((k) => asset.themes.includes(k));
+  return offered.length ? offered : asset.themes.slice();
+}
+
+/** Which style is on screen for this asset: the family's remembered choice if
+ *  the asset has it, then the family default, then whatever exists. Remembering
+ *  per family stops a choice made in System Icons following you into Product
+ *  Icons, where it means something different. */
+function themeFor(asset) {
+  const family = familyOf(asset);
+  const styles = stylesFor(asset);
+  const chosen = state.themes[family];
+  if (chosen && styles.includes(chosen)) return chosen;
+  const fallback = FAMILIES[family].fallback;
+  return styles.includes(fallback) ? fallback : styles[0];
+}
+
 /** Windows accent pairs. `null` means "use the asset's own brand colors". */
 const ACCENTS = [
   { id: 'default', label: 'Asset default', primary: null, secondary: null },
@@ -66,7 +129,7 @@ const state = {
   filter: { group: 'all', collection: null, query: '', status: '' },
   view: 'grid',
   selectedId: null,
-  theme: 'outline',
+  themes: { system: 'filled', product: 'standard', illustration: 'standard' },
   size: null,
   accent: 'default',
 };
@@ -91,7 +154,7 @@ const el = (tag, props = {}, kids = []) => {
  * the nearest size below (scaling a bigger drawing down beats blowing a smaller
  * one up), then whatever is left.
  */
-function drawingPath(asset, theme = state.theme, size = state.size) {
+function drawingPath(asset, theme = themeFor(asset), size = state.size) {
   const drawings = asset.variants?.[theme] || asset.variants?.[asset.themes[0]];
   if (!drawings) return null;
 
@@ -132,7 +195,7 @@ function loadDrawing(path) {
 }
 
 /** Synchronous read of an already-loaded drawing. */
-function sourceFor(asset, theme = state.theme, size = state.size) {
+function sourceFor(asset, theme = themeFor(asset), size = state.size) {
   const path = drawingPath(asset, theme, size);
   return path ? drawings.get(path) || null : null;
 }
@@ -140,7 +203,7 @@ function sourceFor(asset, theme = state.theme, size = state.size) {
 /** Whether the accent picker can actually do anything to this drawing.
  *  Brand artwork ships with its colors baked in and has no tint hooks —
  *  better to say so than to offer a control that silently does nothing. */
-function isTintable(asset, theme = state.theme) {
+function isTintable(asset, theme = themeFor(asset)) {
   if (asset.recolorable === false) return false;
   const source = sourceFor(asset, theme);
   return Boolean(source) && (source.includes('--ea-primary') || source.includes('currentColor'));
@@ -209,7 +272,7 @@ function tint(source, { ink, inkSecondary, size }) {
 
 /** Effective colors for an asset. Artwork with no tint hooks keeps its own
  *  colors — brand marks ship as authored or not at all. */
-function colorsFor(asset, accentId = state.accent, theme = state.theme) {
+function colorsFor(asset, accentId = state.accent, theme = themeFor(asset)) {
   const accent = ACCENTS.find((a) => a.id === accentId) || ACCENTS[0];
   const canTint = isTintable(asset, theme);
   const chosen = canTint && accent.primary ? accent : null;
@@ -455,7 +518,6 @@ async function openPanel(id) {
   if (!asset) return;
 
   state.selectedId = id;
-  if (!asset.themes.includes(state.theme)) state.theme = asset.themes[0];
   state.size = asset.sizes.includes(state.size) ? state.size : asset.sizes[asset.sizes.length - 1];
 
   for (const card of document.querySelectorAll('.card')) {
@@ -464,7 +526,7 @@ async function openPanel(id) {
 
   // Load every theme's drawing at this size so the Style toggle and the
   // accent-availability note are correct the moment the panel opens.
-  await Promise.all(asset.themes.map((t) => loadDrawing(drawingPath(asset, t))));
+  await Promise.all(stylesFor(asset).map((t) => loadDrawing(drawingPath(asset, t))));
   if (state.selectedId === id) renderPanel();
 }
 
@@ -477,7 +539,7 @@ function closePanel() {
 /** "One scalable drawing" vs "6 sizes: 16, 20, 24…" — tells you at a glance
  *  whether you are looking at per-size artwork or one scalable file. */
 function drawingSummary(asset) {
-  const drawings = asset.variants?.[state.theme] || {};
+  const drawings = asset.variants?.[themeFor(asset)] || {};
   const sizes = Object.keys(drawings).filter((k) => k !== 'any');
   if (!sizes.length) return 'One scalable drawing';
   return `${sizes.length} per-size (${sizes.map(Number).sort((a, b) => a - b).join(', ')})`;
@@ -485,7 +547,7 @@ function drawingSummary(asset) {
 
 /** Repo path of the drawing currently on screen. */
 function sourcePath(asset) {
-  const drawings = asset.variants?.[state.theme] || asset.variants?.[asset.themes[0]] || {};
+  const drawings = asset.variants?.[themeFor(asset)] || asset.variants?.[asset.themes[0]] || {};
   if (drawings[state.size]) return drawings[state.size];
   if (drawings.any) return drawings.any;
   const numeric = Object.keys(drawings).map(Number).filter(Number.isFinite).sort((a, b) => a - b);
@@ -512,7 +574,7 @@ function renderPanel() {
   const colors = colorsFor(asset);
   const canTint = isTintable(asset);
   // Which themes CAN take an accent — used to explain why the picker is off.
-  const tintableThemes = asset.themes.filter((t) => isTintable(asset, t));
+  const tintableThemes = stylesFor(asset).filter((t) => isTintable(asset, t));
 
   /* Head */
   const head = el('div', { className: 'panel-head' });
@@ -552,28 +614,33 @@ function renderPanel() {
   panel.append(preview);
   panel.append(el('p', { className: 'preview-note', textContent: `Shown at actual size — ${state.size}px` }));
 
-  /* Style */
-  panel.append(el('h3', { textContent: 'Style' }));
-  const seg = el('div', { className: 'segment', role: 'group' });
-  for (const theme of THEMES) {
-    const available = asset.themes.includes(theme.key);
-    const btn = el('button', {
-      type: 'button',
-      textContent: theme.label,
-      className: state.theme === theme.key ? 'on' : '',
-      disabled: !available,
-      title: available ? `${theme.label} (${theme.key})` : `Not authored for ${asset.name}`,
-    });
-    btn.setAttribute('aria-pressed', String(state.theme === theme.key));
-    btn.addEventListener('click', async () => {
-      state.theme = theme.key;
-      await loadDrawing(drawingPath(asset));
-      repaintVisible();
-      renderPanel();
-    });
-    seg.append(btn);
+  /* Style. Only what this family offers and this asset has: a System icon
+     shows Outline and Filled, and never a Standard it was never drawn in. */
+  const family = FAMILIES[familyOf(asset)];
+  const styles = stylesFor(asset);
+  const theme = themeFor(asset);
+  if (styles.length > 1) {
+    panel.append(el('h3', { textContent: 'Style' }));
+    const seg = el('div', { className: 'segment', role: 'group' });
+    for (const key of styles) {
+      const label = THEMES.find((t) => t.key === key)?.label || key;
+      const btn = el('button', {
+        type: 'button',
+        textContent: label,
+        className: theme === key ? 'on' : '',
+        title: `${label} (${key})`,
+      });
+      btn.setAttribute('aria-pressed', String(theme === key));
+      btn.addEventListener('click', async () => {
+        state.themes[familyOf(asset)] = key;
+        await loadDrawing(drawingPath(asset));
+        repaintVisible();
+        renderPanel();
+      });
+      seg.append(btn);
+    }
+    panel.append(seg);
   }
-  panel.append(seg);
 
   /* Size */
   const sizeRow = el('div', { className: 'size-row' });
@@ -597,39 +664,51 @@ function renderPanel() {
   });
   panel.append(slider);
 
-  /* Colors */
-  panel.append(el('h3', { textContent: 'Colors' }));
-  const rows = el('div', { className: 'rows' });
-  for (const [key, value] of [['Primary', colors.primary], ['Secondary', colors.secondary]]) {
-    const row = el('div', { className: 'row' });
-    const v = el('div', { className: 'v' });
-    v.append(el('code', { textContent: value }), el('span', { className: 'chip-color', style: `background:${value}` }));
-    row.append(el('span', { className: 'k', textContent: key }), v);
-    rows.append(row);
+  /* Colors. A System icon has no brand colour of its own — the pair stored on
+     it is a library-wide default — so showing swatches would be inventing
+     information. That family gets a sentence under Color instead. */
+  if (family.brandColors) {
+    panel.append(el('h3', { textContent: 'Colors' }));
+    const rows = el('div', { className: 'rows' });
+    for (const [key, value] of [['Primary', colors.primary], ['Secondary', colors.secondary]]) {
+      const row = el('div', { className: 'row' });
+      const v = el('div', { className: 'v' });
+      v.append(el('code', { textContent: value }), el('span', { className: 'chip-color', style: `background:${value}` }));
+      row.append(el('span', { className: 'k', textContent: key }), v);
+      rows.append(row);
+    }
+    panel.append(rows);
   }
-  panel.append(rows);
 
   /* Accents */
-  panel.append(el('h3', { textContent: 'Windows accents' }));
+  panel.append(el('h3', { textContent: family.brandColors ? 'Windows accents' : 'Color' }));
+  if (family.colorNote) panel.append(el('p', { className: 'hint', textContent: family.colorNote }));
   if (!canTint) {
     const others = tintableThemes.map((t) => THEMES.find((x) => x.key === t)?.label).filter(Boolean);
     panel.append(
       el('p', {
         className: 'callout',
         textContent: others.length
-          ? `${THEMES.find((t) => t.key === state.theme)?.label} ships in brand colors and can't be retinted. Switch to ${others.join(' or ')} to apply an accent.`
+          ? `${THEMES.find((t) => t.key === theme)?.label} ships in brand colors and can't be retinted. Switch to ${others.join(' or ')} to apply an accent.`
           : 'Not recolorable — this asset ships in its own brand colors.',
       })
     );
   } else {
     const accents = el('div', { className: 'accents' });
     for (const accent of ACCENTS) {
+      // "Asset default" means different things per family: a brand pair for a
+      // product icon, the surrounding surface for a monochrome system icon. The
+      // swatch has to say which, or it reads as a colour the icon does not have.
+      const followsSurface = accent.id === 'default' && !family.brandColors;
+      const label = followsSurface ? 'Follow the surface' : accent.label;
       const btn = el('button', {
         type: 'button',
         className: state.accent === accent.id ? 'on' : '',
-        title: accent.label,
-        ariaLabel: accent.label,
-        style: `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary}, ${accent.secondary || asset.colors.secondary})`,
+        title: label,
+        ariaLabel: label,
+        style: followsSurface
+          ? 'background:linear-gradient(135deg, var(--text), var(--text-3))'
+          : `background:linear-gradient(135deg, ${accent.primary || asset.colors.primary}, ${accent.secondary || asset.colors.secondary})`,
       });
       btn.addEventListener('click', () => {
         state.accent = accent.id;
@@ -646,10 +725,11 @@ function renderPanel() {
   const metaRows = el('div', { className: 'rows' });
   const entries = [
     ['ID', asset.id],
+    ['Family', family.label],
     ['Status', STATUS_LABEL[asset.status]],
-    ['Themes', THEMES.filter((t) => asset.themes.includes(t.key)).map((t) => t.label).join(', ')],
+    ['Styles', styles.map((k) => THEMES.find((t) => t.key === k)?.label || k).join(', ')],
     ['Sizes', asset.sizes.join(', ')],
-    ['Accent', tintableThemes.length ? `${tintableThemes.length} of ${asset.themes.length} themes` : 'Not applicable'],
+    ['Accent', tintableThemes.length ? `${tintableThemes.length} of ${styles.length} styles` : 'Not applicable'],
     ['Drawings', drawingSummary(asset)],
     ['Version', `${asset.version} · ${asset.updated}`],
   ];
@@ -719,7 +799,7 @@ function renderPanel() {
   download.addEventListener('click', () => {
     const blob = new Blob([exportSource()], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(blob);
-    const a = el('a', { href: url, download: `${asset.id.replace('.', '-')}-${state.theme}-${state.size}.svg` });
+    const a = el('a', { href: url, download: `${asset.id.replace('.', '-')}-${theme}-${state.size}.svg` });
     document.body.append(a);
     a.click();
     a.remove();
