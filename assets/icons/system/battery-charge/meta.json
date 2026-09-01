@@ -9,7 +9,7 @@
   "description": "Used for power indication on devices.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -15,7 +15,7 @@
   "description": "Used to represent general location tracking apps and experiences.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

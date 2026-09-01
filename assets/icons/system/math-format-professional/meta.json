@@ -12,7 +12,7 @@
   "description": "Used in formula formats in math formula scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -11,7 +11,7 @@
   "description": "Used for general connection scenarios (airdrop, cast, etc).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

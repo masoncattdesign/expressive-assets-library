@@ -10,7 +10,7 @@
   "description": "Used in loading content on iOS.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

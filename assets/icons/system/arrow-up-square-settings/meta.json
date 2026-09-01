@@ -15,7 +15,7 @@
   "description": "Used in scenarios of uploading/updating settings.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

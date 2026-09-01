@@ -15,7 +15,7 @@
   "description": "Used to represent a file collection and actions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

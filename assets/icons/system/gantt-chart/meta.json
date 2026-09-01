@@ -11,7 +11,7 @@
   "description": "Used to represent a Gnatt chart, which helps teams to plan work around deadlines and properly allocate resources",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

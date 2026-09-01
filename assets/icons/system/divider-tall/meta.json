@@ -11,7 +11,7 @@
   "description": "Used in places where horizontal dividers are needed.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

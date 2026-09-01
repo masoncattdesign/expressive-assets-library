@@ -14,7 +14,7 @@
   "description": "Used to represent general media assets.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

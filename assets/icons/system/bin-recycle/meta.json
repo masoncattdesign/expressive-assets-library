@@ -14,7 +14,7 @@
   "description": "Used to represent a more eco-friendly trash can.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

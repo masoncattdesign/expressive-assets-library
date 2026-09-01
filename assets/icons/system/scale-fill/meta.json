@@ -13,7 +13,7 @@
   "description": "Used to scale content to fit UI space. Similar to Arrow Fit, Auto Fit, Scale Fit, Full Screen, Arrow Minimize, Arrow Maximize, Page Fit.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

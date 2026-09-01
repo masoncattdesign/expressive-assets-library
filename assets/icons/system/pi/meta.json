@@ -10,7 +10,7 @@
   "description": "Used to insert math formulas in products. It also represents the ratio of a circle's circumference to its diameter.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

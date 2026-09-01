@@ -12,7 +12,7 @@
   "description": "Used to represent video playlist in editing & general media scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

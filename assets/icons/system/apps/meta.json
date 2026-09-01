@@ -10,7 +10,7 @@
   "description": "Used for plugins, apps, tools.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

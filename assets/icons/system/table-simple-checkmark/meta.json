@@ -14,7 +14,7 @@
   "description": "Used to represent the Educational Grades app in Teams.â ï¸ Should not be used for other scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

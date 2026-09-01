@@ -12,7 +12,7 @@
   "description": "Used to represent physical or digital health.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

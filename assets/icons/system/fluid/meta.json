@@ -9,7 +9,7 @@
   "description": "Used to represent intelligence components, where they can be updated across products.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

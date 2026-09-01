@@ -14,7 +14,7 @@
   "description": "Used to represent a cell in a table with the ability to apply a brush.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

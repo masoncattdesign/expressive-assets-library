@@ -16,7 +16,7 @@
   "description": "Used to represent an elevator.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

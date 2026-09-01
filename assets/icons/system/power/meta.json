@@ -10,7 +10,7 @@
   "description": "Used to represent physical power to devices, or turning on and off digital processes.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

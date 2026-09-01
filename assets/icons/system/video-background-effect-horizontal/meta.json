@@ -23,7 +23,7 @@
   "description": "Used in video meeting scenarios around background blurring.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -176,7 +176,7 @@ function swapArtwork(comp, svg) {
 
 /** The card is the bounding box: name, the style headings across the top, the
  *  sizes down the left, and the component set sitting in the grid. */
-function dressCard(card, set, asset, placeholderCount) {
+function dressCard(card, set, asset, generatedCount) {
   card.name = asset.name;
   card.layoutMode = 'NONE';
   card.fills = solid(PAPER);
@@ -192,7 +192,7 @@ function dressCard(card, set, asset, placeholderCount) {
   title.x = 20; title.y = 18;
   card.appendChild(title);
 
-  const sub = text(asset.id + (placeholderCount ? '  ·  ' + placeholderCount + ' generated' : ''), 11, 0.5);
+  const sub = text(asset.id + (generatedCount ? '  ·  ' + generatedCount + ' generated' : ''), 11, 0.5);
   sub.x = 20; sub.y = 40;
   card.appendChild(sub);
 
@@ -249,7 +249,7 @@ async function sync(payload) {
   }
 
   for (const asset of assets) {
-    const placeholders = asset.placeholders || [];
+    const generated = asset.generated || [];
     let set = existingSets[asset.id];
     const fresh = [];
 
@@ -259,7 +259,7 @@ async function sync(payload) {
         if (!svg) { report.missing++; continue; }
 
         const name = variantName(style, size);
-        const flagged = placeholders.indexOf(style.key + ':' + size) !== -1;
+        const flagged = generated.indexOf(style.key + ':' + size) !== -1;
         const stamp = hash(svg);
         const existing = set ? set.children.find((c) => c.name === name) : null;
 
@@ -283,7 +283,7 @@ async function sync(payload) {
         comp.setSharedPluginData(NS, 'size', String(size));
         comp.setSharedPluginData(NS, 'hash', stamp);
         if (flagged) {
-          comp.description = 'Generated to complete the matrix, not authored artwork.';
+          comp.description = 'Generated here to complete the matrix, not received artwork.';
         }
         fresh.push(comp);
         report.created++;
@@ -312,8 +312,8 @@ async function sync(payload) {
 
     set.name = asset.name;
     set.setSharedPluginData(NS, 'id', asset.id);
-    set.description = asset.id + (placeholders.length
-      ? '\n' + placeholders.length + ' of 18 variants are generated rather than authored.'
+    set.description = asset.id + (generated.length
+      ? '\n' + generated.length + ' of 18 variants were generated here rather than received.'
       : '');
     set.layoutMode = 'NONE';
     set.clipsContent = false;
@@ -330,7 +330,7 @@ async function sync(payload) {
     });
 
     if (!card.children.includes(set)) card.appendChild(set);
-    dressCard(card, set, asset, placeholders.length);
+    dressCard(card, set, asset, generated.length);
     report.laid++;
   }
 

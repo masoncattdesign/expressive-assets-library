@@ -13,7 +13,7 @@
   "description": "Used in UI to map experiences together in a flow chart.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -9,7 +9,7 @@
   "description": "Used for device bluetooth scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

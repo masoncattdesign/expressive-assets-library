@@ -14,7 +14,7 @@
   "description": "Used to represent images made for device backgrounds.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

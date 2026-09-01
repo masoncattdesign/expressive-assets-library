@@ -11,7 +11,7 @@
   "description": "Used in general type column creation scenarios. Contains column breakup variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

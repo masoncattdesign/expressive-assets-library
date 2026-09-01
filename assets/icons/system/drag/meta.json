@@ -10,7 +10,7 @@
   "description": "Used to represent cursor moving. Old metaphor, suggest using Arrow Move.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used to represent microphone audio with processing on.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

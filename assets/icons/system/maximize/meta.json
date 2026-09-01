@@ -12,7 +12,7 @@
   "description": "Shouldn't be used. Like it's just a square. How did this get in the library?!Use either Full Screen, Fit, Arrow Maximize instead.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

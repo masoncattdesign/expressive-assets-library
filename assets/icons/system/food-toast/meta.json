@@ -12,7 +12,7 @@
   "description": "Used to represent food based scenarios (restaurant, meals, etc).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

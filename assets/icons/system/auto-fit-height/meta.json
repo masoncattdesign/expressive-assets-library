@@ -14,7 +14,7 @@
   "description": "Used to scale content to fit. Similar to Arrow Fit. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

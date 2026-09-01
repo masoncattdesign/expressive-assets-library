@@ -14,7 +14,7 @@
   "description": "Used to represent a hard drive for computers. Collection contains Storage as well.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

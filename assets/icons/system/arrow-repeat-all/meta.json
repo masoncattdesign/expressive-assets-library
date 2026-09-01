@@ -10,7 +10,7 @@
   "description": "Used to turn on repeat actions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used to represent tablet and laptop scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

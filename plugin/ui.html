@@ -96,7 +96,7 @@ $('go').addEventListener('click', async () => {
 
     const assets = manifest.assets
       .filter((a) => a.type === 'icon' && a.collection === collection)
-      .map((a) => ({ id: a.id, name: a.name, variants: a.variants, placeholders: a.placeholders || [] }));
+      .map((a) => ({ id: a.id, name: a.name, variants: a.variants, generated: a.generated || [] }));
     log('<b>' + assets.length + '</b> assets in ' + LABEL[collection]);
 
     const wanted = [];
@@ -129,7 +129,7 @@ $('go').addEventListener('click', async () => {
     parent.postMessage({ pluginMessage: {
       type: 'sync',
       payload: {
-        assets: assets.map(({ id, name, placeholders }) => ({ id, name, placeholders })),
+        assets: assets.map(({ id, name, generated }) => ({ id, name, generated })),
         drawings,
         pageName: LABEL[collection],
         force: $('force').checked,

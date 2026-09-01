@@ -10,7 +10,7 @@
   "description": "Used in emoji picker & some simple voting scenarios.â ï¸ Should not be used as emoji.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

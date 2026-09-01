@@ -186,7 +186,7 @@
   <b>"id"</b>: "product.access",           <i>// collection.name, stable, the address</i>
   <b>"type"</b>: "icon",                   <i>// icon | illustration</i>
   <b>"collection"</b>: "product",
-  <b>"status"</b>: "draft",                <i>// draft | published</i>
+  <b>"status"</b>: "published",            <i>// draft | published | deprecated</i>
   <b>"themes"</b>: ["standard", "outline", "filled"],
   <b>"sizes"</b>: [16, 20, 24, 28, 32, 48],
   <b>"colors"</b>: { "primary": "#0078D4", "secondary": "#8764B8" },
@@ -308,7 +308,7 @@
   <section>
     <div class="col">
       <h2>Where the library stands</h2>
-      <p>Counts from the current build. Every asset validates against the schema, and every asset is still <code>draft</code>, which is deliberate: nothing is published until the naming decision below is settled, because ids are the one thing we cannot change quietly afterwards.</p>
+      <p>Counts from the current build. Every asset validates against the schema, and every asset is now <code>published</code>: the artwork we received is real, and calling 2,891 unmodified Fluent icons drafts said nothing true about them. Provenance moved to where it belongs, on the variant: 1,836 individual drawings carry <code>generated</code>, meaning they were produced here to square a style-by-size matrix rather than received. Published is a claim about the drawing, not about the id — the naming decision below is still open, and the ids it touches will change.</p>
     </div>
 
     <div class="stats">
@@ -346,7 +346,7 @@
       </li>
       <li>
         <span class="q">Publishing</span>
-        <span class="a">Nothing is published. We need a bar for what makes an asset publishable, and a first set to put over it, or the draft flag stops meaning anything.</span>
+        <span class="a">Everything is published, on the bar that the artwork was received rather than generated here. That bar says nothing about whether a drawing is any good, and there is no review step behind it yet. <code>deprecated</code> also has no process: no asset has ever been retired, so the path has never been walked.</span>
       </li>
       <li>
         <span class="q">Figma sync</span>

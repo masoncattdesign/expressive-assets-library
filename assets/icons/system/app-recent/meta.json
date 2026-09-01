@@ -10,7 +10,7 @@
   "description": "Used for content around app ui.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used for time keeping scenarios. Filled states are made to lay on top of Hourglass Regular icon.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

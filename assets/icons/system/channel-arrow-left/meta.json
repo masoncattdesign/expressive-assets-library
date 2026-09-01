@@ -12,7 +12,7 @@
   "description": "Used for chat channel scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -12,7 +12,7 @@
   "description": "Used to represent bugs in code or malicious bugs in the system.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

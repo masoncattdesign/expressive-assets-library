@@ -11,7 +11,7 @@
   "description": "Used to represent scanning scenarios and aperture settings in image edit UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

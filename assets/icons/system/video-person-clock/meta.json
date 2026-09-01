@@ -20,7 +20,7 @@
   "description": "Used to represent general video meetings, views & settings in video meetings, meeting time, meeting timer.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

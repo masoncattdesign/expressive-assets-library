@@ -11,7 +11,7 @@
   "description": "Used to represent files attached to communications.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

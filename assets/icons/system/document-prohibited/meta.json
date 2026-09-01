@@ -13,7 +13,7 @@
   "description": "Used to represent blocked, missing, or no access to files.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

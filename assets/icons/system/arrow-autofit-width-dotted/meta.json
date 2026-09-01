@@ -13,7 +13,7 @@
   "description": "Used for adjusting content size. Dotted versions are used for autofit. Contains height & width variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

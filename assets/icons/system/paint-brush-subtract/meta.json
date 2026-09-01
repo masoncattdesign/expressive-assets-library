@@ -15,7 +15,7 @@
   "description": "Used to remove photo mask/selection.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

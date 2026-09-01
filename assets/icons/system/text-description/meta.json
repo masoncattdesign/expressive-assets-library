@@ -13,7 +13,7 @@
   "description": "Used as default to basic text representation.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

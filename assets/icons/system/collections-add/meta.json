@@ -12,7 +12,7 @@
   "description": "Used in scenarios specifically to add to a collection.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

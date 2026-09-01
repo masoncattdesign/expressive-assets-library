@@ -12,7 +12,7 @@
   "description": "Used to represent a swatch palette or system collection.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -10,7 +10,7 @@
   "description": "Used for pulling content from source. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

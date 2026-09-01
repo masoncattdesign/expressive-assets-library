@@ -17,7 +17,7 @@
   "description": "Used to represent current weather.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

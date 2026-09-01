@@ -14,7 +14,7 @@
   "description": "Used to represent an org admin, or other IT professionals attached to an organization.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

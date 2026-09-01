@@ -11,7 +11,7 @@
   "description": "Used to represent a stove being used for cooking or heating.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

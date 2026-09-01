@@ -14,7 +14,7 @@
   "description": "Used to represent exposure updates in photo edit scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

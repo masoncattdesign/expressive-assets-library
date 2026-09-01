@@ -10,7 +10,7 @@
   "description": "Used in styling content scenarios. Contains option variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -20,7 +20,7 @@
   "description": "Used to represent commute time in driving scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

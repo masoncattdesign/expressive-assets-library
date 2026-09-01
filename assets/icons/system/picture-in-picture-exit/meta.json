@@ -16,7 +16,7 @@
   "description": "Used in layered video scenarios for dual videos, or for minimizing video on top of other ui.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

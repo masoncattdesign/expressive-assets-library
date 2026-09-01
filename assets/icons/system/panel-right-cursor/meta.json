@@ -14,7 +14,7 @@
   "description": "Used to represent secondary, elevated panels in UI. Contains direction and action variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -9,7 +9,7 @@
   "description": "Used for device connection status. Contains level variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

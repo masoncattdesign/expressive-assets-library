@@ -585,6 +585,16 @@ function sourcePath(asset) {
   return drawings[below ?? numeric[numeric.length - 1]] || '';
 }
 
+/** Was the cell on screen produced here rather than received? Provenance is
+ *  per variant, not per asset: an icon can be published, real artwork and
+ *  still show you a style that was derived from it. Saying so on the preview
+ *  is the difference between a library and a pile of drawings. */
+function isGenerated(asset, theme, size) {
+  const cells = asset.generated || [];
+  if (!cells.length) return false;
+  return cells.indexOf(theme + ':' + size) !== -1 || cells.indexOf(theme + ':any') !== -1;
+}
+
 function collectionLabel(asset) {
   for (const g of state.manifest.groups) {
     const c = g.collections.find((x) => x.id === asset.collection);
@@ -642,7 +652,12 @@ function renderPanel() {
     if (node) preview.append(node);
   }
   panel.append(preview);
-  panel.append(el('p', { className: 'preview-note', textContent: `Shown at actual size — ${state.size}px` }));
+  const note = el('p', { className: 'preview-note' });
+  note.append(`Shown at actual size — ${state.size}px`);
+  if (isGenerated(asset, themeFor(asset), state.size)) {
+    note.append(' ', el('span', { className: 'badge generated', textContent: 'Generated' }));
+  }
+  panel.append(note);
 
   /* Style. Only what this family offers and this asset has: a System icon
      shows Outline and Filled, and never a Standard it was never drawn in. */
@@ -763,6 +778,10 @@ function renderPanel() {
     ['Drawings', drawingSummary(asset)],
     ['Version', `${asset.version} · ${asset.updated}`],
   ];
+  if (asset.generated?.length) {
+    const total = Object.values(asset.variants || {}).reduce((n, d) => n + Object.keys(d).length, 0);
+    entries.splice(6, 0, ['Generated', `${asset.generated.length} of ${total} drawings`]);
+  }
   if (asset.aliases?.length) entries.splice(1, 0, ['Also known as', asset.aliases.join(', ')]);
   if (asset.owner) entries.push(['Owner', asset.owner]);
   if (asset.source) entries.push(['Source', `${asset.source.project} · ${asset.source.license}`]);

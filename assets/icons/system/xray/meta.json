@@ -14,7 +14,7 @@
   "description": "Used to represent x-rays and general medical equipment.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

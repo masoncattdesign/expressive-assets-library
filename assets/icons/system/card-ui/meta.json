@@ -12,7 +12,7 @@
   "description": "Used to represent any card or modal UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

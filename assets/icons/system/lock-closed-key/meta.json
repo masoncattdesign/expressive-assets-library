@@ -15,7 +15,7 @@
   "description": "Used in generic access, security, or safety scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used for directions or gesture directions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

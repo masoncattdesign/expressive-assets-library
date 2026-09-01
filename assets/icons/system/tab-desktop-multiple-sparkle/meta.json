@@ -15,7 +15,7 @@
   "description": "Used to represent tab auto-grouping.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -9,7 +9,7 @@
   "description": "Used for board views, collecting columns in a horizontal view.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

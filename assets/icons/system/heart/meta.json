@@ -11,7 +11,7 @@
   "description": "Used to represent really liking an idea in chat, following in comments, or content to save for later.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -10,7 +10,7 @@
   "description": "Means function of x (variable). Used in general math formulas and module scripting scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

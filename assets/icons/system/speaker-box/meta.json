@@ -14,7 +14,7 @@
   "description": "Used to represent speakers in all forms.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

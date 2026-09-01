@@ -10,7 +10,7 @@
  * claim is that artwork is REDRAWN per size rather than scaled, so a generated
  * cell that pretended to be authored would quietly falsify the thing the
  * contract promises. Each one is therefore recorded in the asset's
- * `placeholders` list and carries a comment in the file saying where it came
+ * `generated` list and carries a comment in the file saying where it came
  * from, so the Figma page, the Gallery and anyone opening the SVG can all tell
  * a drawing from a stand-in.
  *
@@ -136,7 +136,7 @@ for (const asset of icons) {
   const metaPath = join(dir, 'meta.json');
   if (!existsSync(metaPath)) { failed.push(`${asset.id}: no meta.json`); continue; }
   const meta = JSON.parse(readFileSync(metaPath, 'utf8'));
-  const placeholders = new Set(meta.placeholders || []);
+  const generated = new Set(meta.generated || meta.placeholders || []);
   let changed = false;
 
   // Snapshot what was authored before anything is added, and always source from
@@ -146,12 +146,12 @@ for (const asset of icons) {
   for (const style of STYLES) {
     authored[style] = Object.keys(meta.variants?.[style] || {})
       .map(Number).filter(Number.isFinite)
-      .filter((size) => !placeholders.has(`${style}:${size}`));
+      .filter((size) => !generated.has(`${style}:${size}`));
   }
 
   for (const style of STYLES) {
     for (const size of SIZES) {
-      if (meta.variants?.[style]?.[size] && !(REFRESH && placeholders.has(`${style}:${size}`))) continue;
+      if (meta.variants?.[style]?.[size] && !(REFRESH && generated.has(`${style}:${size}`))) continue;
 
       const haveInStyle = authored[style];
       let out = null, kind = null;
@@ -175,7 +175,7 @@ for (const asset of icons) {
       const rel = `assets/icons/product/${asset.id.split('.')[1]}/${style}-${size}.svg`;
       if (!DRY) writeFileSync(join(ROOT, rel), out, 'utf8');
       (meta.variants[style] ||= {})[size] = rel;
-      placeholders.add(`${style}:${size}`);
+      generated.add(`${style}:${size}`);
       changed = true;
       kind === 'scale' ? scaled++ : derived++;
       touched.add(asset.id);
@@ -196,7 +196,8 @@ for (const asset of icons) {
   const ordered = {};
   for (const style of STYLES) if (meta.variants[style]) ordered[style] = meta.variants[style];
   meta.variants = ordered;
-  meta.placeholders = [...placeholders].sort();
+  meta.generated = [...generated].sort();
+  delete meta.placeholders;
   if (!DRY) writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n', 'utf8');
 }
 

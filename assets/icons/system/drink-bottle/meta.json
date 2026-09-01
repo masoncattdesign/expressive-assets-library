@@ -12,7 +12,7 @@
   "description": "Used to represent plastic usage and drinks in plastic containers.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

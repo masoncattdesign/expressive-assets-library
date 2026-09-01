@@ -11,7 +11,7 @@
   "description": "Used in scenarios where UI is closed, dismissed, or removed.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

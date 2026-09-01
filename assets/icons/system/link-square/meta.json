@@ -12,7 +12,7 @@
   "description": "Used in sharing to multiple channels in Teams.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

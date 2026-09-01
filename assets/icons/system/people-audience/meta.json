@@ -13,7 +13,7 @@
   "description": "Used to represent a large audience and for teams view in video calls.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

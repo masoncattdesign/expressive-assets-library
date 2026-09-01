@@ -14,7 +14,7 @@
   "description": "Used in generic scenarios.Note that we also have Navigation used in navigation moments.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

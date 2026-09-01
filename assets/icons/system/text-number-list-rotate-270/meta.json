@@ -15,7 +15,7 @@
   "description": "Used in general type creation and editing scenarios. Contains directional and rotational variants. Collection includes Task List & Bullet List.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

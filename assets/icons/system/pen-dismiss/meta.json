@@ -14,7 +14,7 @@
   "description": "Used to represent a signature, a device drawing input. Use edit in common editing scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

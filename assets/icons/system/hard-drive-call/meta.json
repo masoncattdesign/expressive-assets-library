@@ -20,7 +20,7 @@
   "description": "Used to represent a voice gateway.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

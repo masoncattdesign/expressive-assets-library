@@ -13,7 +13,7 @@
   "description": "Used to represent toggling off music. Contains two variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

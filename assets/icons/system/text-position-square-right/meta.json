@@ -20,7 +20,7 @@
   "description": "Used in general type creation and editing scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

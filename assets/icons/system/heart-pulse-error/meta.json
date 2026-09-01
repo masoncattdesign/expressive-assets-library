@@ -14,7 +14,7 @@
   "description": "Used to represent health (physically or device).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

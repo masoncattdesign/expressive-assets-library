@@ -14,7 +14,7 @@
   "description": "Used to represent garage at home.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

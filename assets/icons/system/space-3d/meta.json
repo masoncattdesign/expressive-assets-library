@@ -17,7 +17,7 @@
   "description": "Used to represent 3D spaces in games or other virtual spaces.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

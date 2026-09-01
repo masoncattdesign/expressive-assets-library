@@ -11,7 +11,7 @@
   "description": "Used to represent multi-select in canvas selection scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

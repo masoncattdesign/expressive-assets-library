@@ -12,7 +12,7 @@
   "description": "Used for content about pets & speed indicator (slow).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

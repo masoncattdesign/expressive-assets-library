@@ -15,7 +15,7 @@
   "description": "Used to represent home in UI or physical home space in travel scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

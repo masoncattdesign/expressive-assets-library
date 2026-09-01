@@ -17,7 +17,7 @@
   "description": "Used in general type creation and editing scenarios. Global readiness notes universal enough to not need locale specific variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

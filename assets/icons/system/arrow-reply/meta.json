@@ -10,7 +10,7 @@
   "description": "Used to reply back in mail. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

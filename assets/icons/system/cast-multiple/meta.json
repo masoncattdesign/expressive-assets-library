@@ -10,7 +10,7 @@
   "description": "Used in screen casting to other devices.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

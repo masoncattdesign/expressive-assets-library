@@ -12,7 +12,7 @@
   "description": "Used to wait in line to talk in video meetings.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

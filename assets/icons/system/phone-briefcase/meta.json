@@ -12,7 +12,7 @@
   "description": "Used to represent work / organization devices. Specifically a phone.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -10,7 +10,7 @@
   "description": "Used to represent timeline UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

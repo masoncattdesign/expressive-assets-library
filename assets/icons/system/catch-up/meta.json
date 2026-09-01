@@ -14,7 +14,7 @@
   "description": "Used to summarize changes in a document that are specifically for you - replies, tasks, mentions, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

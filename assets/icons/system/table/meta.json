@@ -12,7 +12,7 @@
   "description": "Used to represent a data table.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

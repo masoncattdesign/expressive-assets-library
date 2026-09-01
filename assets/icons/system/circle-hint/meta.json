@@ -12,7 +12,7 @@
   "description": "Used to represent a missing shape, hint of round object, unfilled content, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used to represent UI layouts, ribbon, settings.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

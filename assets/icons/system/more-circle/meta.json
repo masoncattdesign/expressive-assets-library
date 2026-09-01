@@ -11,7 +11,7 @@
   "description": "Used in overflow menus.The question I have for you is, do you need this? Can you design a cleaner solution that doesn't require 5 billion choices?",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

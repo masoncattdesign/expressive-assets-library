@@ -17,7 +17,7 @@
   "description": "Used to represent file type content styles and scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

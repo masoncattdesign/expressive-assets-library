@@ -14,7 +14,7 @@
   "description": "Used in window scaling scenarios & representative of the act of deploying.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

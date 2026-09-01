@@ -13,7 +13,7 @@
   "description": "Used to pick font.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

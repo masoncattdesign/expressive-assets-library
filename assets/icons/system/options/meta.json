@@ -9,7 +9,7 @@
   "description": "Used in general options scenarios - customization, not as deep as full settings.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

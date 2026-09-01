@@ -12,7 +12,7 @@
   "description": "Used to represent medical organization or business.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

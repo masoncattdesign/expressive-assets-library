@@ -16,7 +16,7 @@
   "description": "Used to represent a work profile on device.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

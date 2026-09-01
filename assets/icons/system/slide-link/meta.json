@@ -9,7 +9,7 @@
   "description": "Used to represent a link to share for slide deck.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

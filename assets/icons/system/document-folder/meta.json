@@ -11,7 +11,7 @@
   "description": "Used to represent an open folder of documents.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used in general type creation and editing scenarios. Represents off state of text wrapping.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

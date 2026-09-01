@@ -11,7 +11,7 @@
   "description": "Used in UI connecting mobile and desktop devices.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -11,7 +11,7 @@
   "description": "Used in erasing content scenarios. Contains size modifiers.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

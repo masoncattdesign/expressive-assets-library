@@ -13,7 +13,7 @@
   "description": "Used to represent a meeting grid. Use sparingly as it is a little too close to Microsoft's mark.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

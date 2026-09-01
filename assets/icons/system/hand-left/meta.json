@@ -11,7 +11,7 @@
   "description": "Used to wait in line to talk in video meetings. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

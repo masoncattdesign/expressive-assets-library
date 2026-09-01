@@ -11,7 +11,7 @@
   "description": "Used to change view to three day view in calendar.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

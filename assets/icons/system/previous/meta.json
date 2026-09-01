@@ -11,7 +11,7 @@
   "description": "Used in playback controls. Collection includes Fastforward, Rewind, Play, Next, Stop, Pause.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

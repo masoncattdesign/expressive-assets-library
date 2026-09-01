@@ -11,7 +11,7 @@
   "description": "Used in Teams to represent a to do app.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

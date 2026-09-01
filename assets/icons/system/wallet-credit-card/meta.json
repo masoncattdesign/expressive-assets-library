@@ -16,7 +16,7 @@
   "description": "Used to represent a physical collection of payment options, money balance, or other purchase scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

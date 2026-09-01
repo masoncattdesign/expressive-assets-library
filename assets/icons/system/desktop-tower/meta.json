@@ -12,7 +12,7 @@
   "description": "Used to represent stationary work stations with a tower.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

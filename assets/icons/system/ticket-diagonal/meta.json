@@ -10,7 +10,7 @@
   "description": "Used to represent general event scenarios. Contains horizontal & diagonal variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

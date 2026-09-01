@@ -12,7 +12,7 @@
   "description": "Used in directional scenarios. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

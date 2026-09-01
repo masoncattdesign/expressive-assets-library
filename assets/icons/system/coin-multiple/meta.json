@@ -12,7 +12,7 @@
   "description": "Used to represent 'credit balance' around work tokens plus generic coin usage.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

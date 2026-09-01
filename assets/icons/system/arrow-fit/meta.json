@@ -12,7 +12,7 @@
   "description": "Used to scale content to fit. Shared with Arrow Fit In & similar to Auto Fit.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used to represent adding decoration to imagesâincluding borders and other decorations.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

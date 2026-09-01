@@ -13,7 +13,7 @@
   "description": "Used in square shaped placeholder avatars in UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

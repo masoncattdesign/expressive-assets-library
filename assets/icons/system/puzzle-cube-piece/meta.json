@@ -14,7 +14,7 @@
   "description": "Used to represent complex problems that need layered actions to solve.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

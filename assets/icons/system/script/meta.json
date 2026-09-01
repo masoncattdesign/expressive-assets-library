@@ -9,7 +9,7 @@
   "description": "Used to represent script in file type scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

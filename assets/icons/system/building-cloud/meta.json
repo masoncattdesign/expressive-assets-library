@@ -14,7 +14,7 @@
   "description": "Used to represent cloud connections with work/organizations.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

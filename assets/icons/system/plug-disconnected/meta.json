@@ -11,7 +11,7 @@
   "description": "Used to represent connections - physical or with app add ins.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

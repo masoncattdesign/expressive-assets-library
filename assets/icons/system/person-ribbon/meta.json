@@ -18,7 +18,7 @@
   "description": "Used to represent a person, ribbon, reward, award, bonus.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

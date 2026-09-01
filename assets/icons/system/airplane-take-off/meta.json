@@ -13,7 +13,7 @@
   "description": "Used for lift off time and general travel.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

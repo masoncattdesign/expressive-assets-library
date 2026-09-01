@@ -14,7 +14,7 @@
   "description": "Used to undo the deletion of content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

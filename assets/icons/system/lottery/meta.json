@@ -11,7 +11,7 @@
   "description": "Used to represent lottery & raffle scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

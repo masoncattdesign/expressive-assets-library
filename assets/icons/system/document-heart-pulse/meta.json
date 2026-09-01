@@ -18,7 +18,7 @@
   "description": "Used to represent good health of a document or medical file types and actions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

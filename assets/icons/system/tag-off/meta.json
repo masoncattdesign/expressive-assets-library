@@ -14,7 +14,7 @@
   "description": "Used to represent information tied to specific data.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

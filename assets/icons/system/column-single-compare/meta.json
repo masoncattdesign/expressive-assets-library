@@ -12,7 +12,7 @@
   "description": "Used to represent a single column review.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

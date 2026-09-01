@@ -14,7 +14,7 @@
   "description": "Used for billable hours.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

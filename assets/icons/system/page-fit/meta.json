@@ -13,7 +13,7 @@
   "description": "Used to scale content to fit a landscape page. Similar to Arrow Fit, Auto Fit, Scale Fit, Full Screen.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

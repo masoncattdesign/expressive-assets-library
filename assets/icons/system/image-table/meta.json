@@ -13,7 +13,7 @@
   "description": "Used to represent placing an image into a cell or table structure.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

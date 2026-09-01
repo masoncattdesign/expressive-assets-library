@@ -12,7 +12,7 @@
   "description": "Used to change view to month view in calendar.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

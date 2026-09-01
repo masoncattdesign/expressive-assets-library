@@ -14,7 +14,7 @@
   "description": "Used to represent general UI, app tile, content or other general layouts",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

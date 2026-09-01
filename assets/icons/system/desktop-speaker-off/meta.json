@@ -14,7 +14,7 @@
   "description": "Used to represent stationary work stations, large screen devices, office, and actions in general computer scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -15,7 +15,7 @@
   "description": "Used in specific fullscreen scaling moments. Contains state variants (maximize & minimize.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

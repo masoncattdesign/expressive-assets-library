@@ -13,7 +13,7 @@
   "description": "Used to represent tap actions in touchscreen scenarios. Contains single and double tap variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

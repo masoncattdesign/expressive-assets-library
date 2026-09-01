@@ -220,9 +220,9 @@
       "type": "string",
       "description": "Usage guidance, restrictions, or redraw history."
     },
-    "placeholders": {
+    "generated": {
       "type": "array",
-      "description": "Cells in the style-by-size matrix that were generated to complete it rather than authored, as \"style:size\" strings. A placeholder is either the same drawing shown at another size, or a silhouette derived from Standard. It exists so the matrix is square and the gap is visible; it is not a substitute for a drawing. Absent means every variant listed is authored artwork.",
+      "description": "Cells in the style-by-size matrix that were produced here rather than received, as \"style:size\" strings. A generated cell is one of: the same drawing shown at another size, a style derived from the received artwork by luminance, or a silhouette. It exists so the matrix is square and the gap stays visible; it is not a substitute for a drawing, and a published asset can still carry generated cells. Absent means every variant listed is artwork as it arrived.",
       "items": {
         "type": "string",
         "pattern": "^(standard|outline|filled):(any|[0-9]{1,3})$"

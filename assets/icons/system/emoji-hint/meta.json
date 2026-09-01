@@ -11,7 +11,7 @@
   "description": "Used in emoji picker for custom emoji.â ï¸ Should not be used as emoji.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

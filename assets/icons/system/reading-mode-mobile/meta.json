@@ -16,7 +16,7 @@
   "description": "Used to represent a collection of content for phone.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

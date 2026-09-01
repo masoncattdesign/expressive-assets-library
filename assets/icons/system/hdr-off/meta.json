@@ -13,7 +13,7 @@
   "description": "Used to represent HDR settings in video and game content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

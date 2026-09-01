@@ -11,7 +11,7 @@
   "description": "Used to stop sharing screen on video calls. Collection includes Share Close Tray & Share Screen Stop.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

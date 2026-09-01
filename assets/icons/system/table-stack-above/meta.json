@@ -14,7 +14,7 @@
   "description": "Used in adding to table scenarios. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

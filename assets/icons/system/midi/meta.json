@@ -13,7 +13,7 @@
   "description": "Used to represent musical devices and in concert event scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

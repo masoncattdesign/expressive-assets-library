@@ -10,7 +10,7 @@
   "description": "Used to represent a type of allergen around mold.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

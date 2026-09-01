@@ -15,7 +15,7 @@
   "description": "Used to represent general computer guts and processing power.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

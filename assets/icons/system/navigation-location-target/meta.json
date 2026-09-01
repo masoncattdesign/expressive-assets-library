@@ -15,7 +15,7 @@
   "description": "Used to represent general bullet list UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used to represent PDF file types and actions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

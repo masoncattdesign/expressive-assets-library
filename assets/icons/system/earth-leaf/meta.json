@@ -12,7 +12,7 @@
   "description": "Used to represent sustainable practices like carbon neutral, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

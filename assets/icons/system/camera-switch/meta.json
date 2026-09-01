@@ -11,7 +11,7 @@
   "description": "Used in devices for switching from front to back camera.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

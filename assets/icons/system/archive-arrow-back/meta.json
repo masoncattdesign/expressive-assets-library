@@ -12,7 +12,7 @@
   "description": "Used in moments to undo archiving content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

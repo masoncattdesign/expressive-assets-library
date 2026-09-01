@@ -9,7 +9,7 @@
   "description": "Used to represent component connections within Loop.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

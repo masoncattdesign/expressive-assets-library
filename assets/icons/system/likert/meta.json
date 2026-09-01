@@ -11,7 +11,7 @@
   "description": "Used to represent a Likert item (scale of agreement/disagreement).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

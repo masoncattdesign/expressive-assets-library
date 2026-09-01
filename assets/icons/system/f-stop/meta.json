@@ -10,7 +10,7 @@
   "description": "Used in scenarios where the focal length of a camera can be adjusted.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

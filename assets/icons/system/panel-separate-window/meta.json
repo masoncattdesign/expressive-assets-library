@@ -13,7 +13,7 @@
   "description": "Used to represent disconnecting the elevated panel in UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

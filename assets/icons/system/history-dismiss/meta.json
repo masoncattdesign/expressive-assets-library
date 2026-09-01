@@ -14,7 +14,7 @@
   "description": "Used in scenarios needing to see history of changes.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

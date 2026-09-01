@@ -14,7 +14,7 @@
   "description": "Used in general type creation and editing scenarios. Contains locale variants.Collection includes Text Color Accent, which can be colored in Regular variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

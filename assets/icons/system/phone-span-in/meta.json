@@ -18,7 +18,7 @@
   "description": "Used to represent digital changes in content on screen. Contains in and out variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

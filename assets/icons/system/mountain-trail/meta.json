@@ -15,7 +15,7 @@
   "description": "Used to represent a trail down a mountain, whether for a ski run, or for a pathway.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used to represent general file types and actions.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -249,6 +249,7 @@ body {
 }
 .badge.draft { background: #FFF4CE; color: #7A5B00; }
 .badge.deprecated { background: var(--line-soft); color: var(--text-3); text-decoration: line-through; }
+.badge.generated { background: var(--surface-2); color: var(--text-3); border: 1px solid var(--line); }
 @media (prefers-color-scheme: dark) {
   .badge.draft { background: #40350D; color: #F3D77A; }
 }

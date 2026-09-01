@@ -9,7 +9,7 @@
   "description": "Used to indicate extensible app connectivity built in.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

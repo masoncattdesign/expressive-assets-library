@@ -13,7 +13,7 @@
   "description": "Used to jump to next item. Paired with Previous Frame.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

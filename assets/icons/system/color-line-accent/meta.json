@@ -12,7 +12,7 @@
   "description": "Used in edit mode for color changes - specifically the background for color reflection in UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "outline"
   ],

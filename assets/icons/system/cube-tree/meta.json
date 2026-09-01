@@ -13,7 +13,7 @@
   "description": "Used for shipping, production scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

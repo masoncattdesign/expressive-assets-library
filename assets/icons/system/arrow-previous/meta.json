@@ -13,7 +13,7 @@
   "description": "Used for skipping back a known block of content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

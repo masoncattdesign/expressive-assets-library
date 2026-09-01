@@ -6,7 +6,7 @@
   ],
   "type": "illustration",
   "collection": "m365",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline",
@@ -37,5 +37,9 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-31",
-  "notes": "Standard is the shipped Figma artwork. Outline and Filled are derived here — Outline strokes each shape and fills it with the knockout colour so overlapping shapes still occlude; Filled treats everything but near-white detail as the body. Both are drawn in currentColor and take an accent. REVIEW (Filled only): the checkmark is lost — it is drawn in the same tint as the bell body elsewhere in the set, so no single threshold keeps both. Outline and Standard are unaffected. Needs a drawn reduction before this leaves draft."
+  "notes": "Standard is the shipped Figma artwork. Outline and Filled are derived here — Outline strokes each shape and fills it with the knockout colour so overlapping shapes still occlude; Filled treats everything but near-white detail as the body. Both are drawn in currentColor and take an accent. REVIEW (Filled only): the checkmark is lost — it is drawn in the same tint as the bell body elsewhere in the set, so no single threshold keeps both. Outline and Standard are unaffected. Needs a drawn reduction before this leaves draft.",
+  "generated": [
+    "filled:any",
+    "outline:any"
+  ]
 }

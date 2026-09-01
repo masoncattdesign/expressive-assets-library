@@ -9,7 +9,7 @@
   "description": "Used in scenarios where earth as a whole is discussed (ecological, planetary, etc). Can be troublesome to use if it doesn't represent the featured geographical area in the icon.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

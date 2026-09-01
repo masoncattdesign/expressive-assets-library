@@ -12,7 +12,7 @@
   "description": "Used to represent a sprint when talking about timing or process.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

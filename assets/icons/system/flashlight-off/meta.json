@@ -13,7 +13,7 @@
   "description": "Used in physical scenarios, where a light is turned on.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

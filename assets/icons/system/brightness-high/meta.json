@@ -11,7 +11,7 @@
   "description": "Used in device brightness scenarios. Contains high & low variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

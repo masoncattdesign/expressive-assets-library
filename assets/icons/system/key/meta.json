@@ -12,7 +12,7 @@
   "description": "Used for approved access or password.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

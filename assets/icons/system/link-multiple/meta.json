@@ -11,7 +11,7 @@
   "description": "Used for generic linking collections only. Use Link for standard single link scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -15,7 +15,7 @@
   "description": "Used to represent a checklist, goals in task oriented scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

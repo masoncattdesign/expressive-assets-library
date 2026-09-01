@@ -14,7 +14,7 @@
   "description": "Used to represent unsure, missing & questions within files.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

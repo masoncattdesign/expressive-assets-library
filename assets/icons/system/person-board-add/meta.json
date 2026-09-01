@@ -16,7 +16,7 @@
   "description": "Used to represent a people card, a collection of information about them.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

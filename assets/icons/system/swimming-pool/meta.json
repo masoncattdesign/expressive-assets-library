@@ -15,7 +15,7 @@
   "description": "Used to represent a pool, hot tub, or other water elements in a home or other building.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

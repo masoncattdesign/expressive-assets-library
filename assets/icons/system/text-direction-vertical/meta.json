@@ -14,7 +14,7 @@
   "description": "Used to choose text direction in editor scenarios. Contains directional, rotation and locale specific variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

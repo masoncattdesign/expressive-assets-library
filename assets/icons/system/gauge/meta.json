@@ -12,7 +12,7 @@
   "description": "Used to represent moments that need measurement.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

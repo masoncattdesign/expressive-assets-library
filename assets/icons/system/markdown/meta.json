@@ -14,7 +14,7 @@
   "description": "Used to represent converting to Markdown text. Markdown is a lightweight markup language for creating formatted text.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

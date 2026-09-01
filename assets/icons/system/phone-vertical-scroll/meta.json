@@ -16,7 +16,7 @@
   "description": "Used to represent scrolling scenarios on phone.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

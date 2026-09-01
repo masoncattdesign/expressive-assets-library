@@ -11,7 +11,7 @@
   "description": "Used to represent a physical or digital drawer.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

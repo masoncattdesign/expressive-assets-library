@@ -13,7 +13,7 @@
   "description": "Used to represent generic collections or knowledge base.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

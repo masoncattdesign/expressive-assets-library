@@ -13,7 +13,7 @@
   "description": "Used in not connected, disconnect, or can't find device scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

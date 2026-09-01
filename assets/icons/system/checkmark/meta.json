@@ -9,7 +9,7 @@
   "description": "Used for toggle selection states or approvals.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

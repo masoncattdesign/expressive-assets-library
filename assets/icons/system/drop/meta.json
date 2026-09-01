@@ -10,7 +10,7 @@
   "description": "Used for various liquid scenarios (water usage, blood donation, etc).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

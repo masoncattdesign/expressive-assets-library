@@ -10,7 +10,7 @@
   "description": "Used for Window Ad scenarios that need settings.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

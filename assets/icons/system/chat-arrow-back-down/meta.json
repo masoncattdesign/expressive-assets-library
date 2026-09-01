@@ -13,7 +13,7 @@
   "description": "Used in real time chat scenarios (versus comment - different icon).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

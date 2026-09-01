@@ -10,7 +10,7 @@
   "description": "Used to represent multiple tables and or tabs in a spreadsheet.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

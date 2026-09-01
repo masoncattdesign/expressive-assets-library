@@ -13,7 +13,7 @@
   "description": "Used to represent a voice message recording and audio playback scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -14,7 +14,7 @@
   "description": "Used to represent a data table. Contains simple variant.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

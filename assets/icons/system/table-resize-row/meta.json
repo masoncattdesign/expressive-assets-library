@@ -16,7 +16,7 @@
   "description": "Used in resizing table scenarios. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

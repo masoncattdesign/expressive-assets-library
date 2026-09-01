@@ -11,7 +11,7 @@
   "description": "Used to close the sharing tray. Collection includes Share Screen Start & Share Screen Stop.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -11,7 +11,7 @@
   "description": "Used specifically for the Learning App in teams.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

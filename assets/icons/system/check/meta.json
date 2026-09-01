@@ -12,7 +12,7 @@
   "description": "Used to represent a paper form of payment.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -9,7 +9,7 @@
   "description": "Used in classification scenarios (normal, private, confidential, etc) in mail.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

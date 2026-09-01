@@ -11,7 +11,7 @@
   "description": "Used for accessibility checker pass state.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

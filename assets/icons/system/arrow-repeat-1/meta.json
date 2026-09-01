@@ -13,7 +13,7 @@
   "description": "Used in playback controls. Collection includes Fastforward, Rewind, Previous, Next, Stop, Pause, Video Play Pause, Arrow Shuffle, Arrow Repeat All, Arrow Repeat 1.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

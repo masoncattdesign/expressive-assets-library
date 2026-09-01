@@ -13,7 +13,7 @@
   "description": "Used in general scenarios around shapes for canvas editing, generic page, landscape content, or screens.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -15,7 +15,7 @@
   "description": "Used to flip a UI card element over, to view additional info.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

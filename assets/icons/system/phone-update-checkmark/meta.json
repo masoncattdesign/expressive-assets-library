@@ -15,7 +15,7 @@
   "description": "Used to represent a completed update for the phone.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

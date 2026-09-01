@@ -12,7 +12,7 @@
   "description": "Used to represent physical connection ports in devices.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

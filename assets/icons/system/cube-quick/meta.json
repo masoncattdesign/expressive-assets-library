@@ -15,7 +15,7 @@
   "description": "Used to represent shipping and movement speed in VR.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

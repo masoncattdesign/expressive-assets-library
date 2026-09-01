@@ -13,7 +13,7 @@
   "description": "Used in scenarios where a user is not allowed to delete content (set by admin).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

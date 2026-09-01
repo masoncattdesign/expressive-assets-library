@@ -11,7 +11,7 @@
   "description": "Used for restaurant, product & calendar scenarios. Contains state variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

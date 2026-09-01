@@ -14,7 +14,7 @@
   "description": "Used for directional indicators, links. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

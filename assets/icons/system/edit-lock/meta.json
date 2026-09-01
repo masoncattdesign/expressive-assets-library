@@ -11,7 +11,7 @@
   "description": "Represents locking content, to prevent any edits.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

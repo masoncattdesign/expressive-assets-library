@@ -13,7 +13,7 @@
   "description": "Used in splitting cells, tables & other content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -12,7 +12,7 @@
   "description": "Contains Japanese (default) & Chinese variant.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

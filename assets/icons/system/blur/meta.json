@@ -10,7 +10,7 @@
   "description": "Used in photo editing modes.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

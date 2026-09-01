@@ -9,7 +9,7 @@
   "description": "Used to represent generic system shapes.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

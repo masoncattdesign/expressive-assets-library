@@ -14,7 +14,7 @@
   "description": "Used to represent cable car running on a cableway.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

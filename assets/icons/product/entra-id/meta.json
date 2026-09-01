@@ -7,7 +7,7 @@
   ],
   "type": "icon",
   "collection": "product",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "standard",
     "outline",
@@ -59,7 +59,7 @@
   "version": "1.0.0",
   "updated": "2026-08-28",
   "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
-  "placeholders": [
+  "generated": [
     "filled:20",
     "filled:28",
     "filled:48",

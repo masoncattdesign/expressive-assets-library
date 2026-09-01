@@ -12,7 +12,7 @@
   "description": "Used to represent physical memory cards used by devices like cameras, phones, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

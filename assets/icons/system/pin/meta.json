@@ -11,7 +11,7 @@
   "description": "Used to represent saving content for easy finding, whether it be channels, chats, mail, files, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

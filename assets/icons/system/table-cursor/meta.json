@@ -13,7 +13,7 @@
   "description": "Used for picking cells in a table.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

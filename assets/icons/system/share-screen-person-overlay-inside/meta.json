@@ -17,7 +17,7 @@
   "description": "Used in views when sharing screen. Collection includes Share Screen Person, Share Screen Person Overlay, Share Screen Person Overlay Inside, Share Screen Person P.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

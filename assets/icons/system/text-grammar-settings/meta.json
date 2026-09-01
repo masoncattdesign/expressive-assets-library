@@ -19,7 +19,7 @@
   "description": "Used in text grammar check scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

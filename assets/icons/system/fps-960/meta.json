@@ -10,7 +10,7 @@
   "description": "Used in scenarios where frames per second can be edited, or represented.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

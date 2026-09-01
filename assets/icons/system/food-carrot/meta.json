@@ -11,7 +11,7 @@
   "description": "Used to represent vegetarian/vegan diets & healthy eating and events.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

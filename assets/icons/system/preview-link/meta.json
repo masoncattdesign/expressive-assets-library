@@ -10,7 +10,7 @@
   "description": "Used to represent a link preview of a group of content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

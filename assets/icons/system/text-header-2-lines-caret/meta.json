@@ -15,7 +15,7 @@
   "description": "Used to represent blocks of text with an expandable section header.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

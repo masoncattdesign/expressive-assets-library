@@ -14,7 +14,7 @@
   "description": "Used to represent a reward or a certificate (physical or digital).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

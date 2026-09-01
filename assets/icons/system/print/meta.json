@@ -14,7 +14,7 @@
   "description": "Used to represent a physical or digital printer.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

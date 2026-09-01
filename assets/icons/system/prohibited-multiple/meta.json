@@ -14,7 +14,7 @@
   "description": "Used to represent blocked or unauthorized access for files, accounts, etc.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

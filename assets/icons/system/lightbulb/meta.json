@@ -13,7 +13,7 @@
   "description": "Used in tooltip, sharing knowledge, or AI suggested scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

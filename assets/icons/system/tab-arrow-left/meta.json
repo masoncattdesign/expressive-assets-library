@@ -12,7 +12,7 @@
   "description": "Used in browser tab scenarios. Contains option variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

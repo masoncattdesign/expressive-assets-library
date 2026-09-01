@@ -11,7 +11,7 @@
   "description": "Used in purchase funnels and payment options. Other options include Money, Wallet, Wallet Credit Card.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -10,7 +10,7 @@
   "description": "Used to represent steps in the manufacturing process.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

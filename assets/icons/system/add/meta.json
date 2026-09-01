@@ -10,7 +10,7 @@
   "description": "Used for adding actions.â ï¸ Note - because of the way strokes blur in between 2 pixels, we have made Add work for low density screens for 16, 20px sizes.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

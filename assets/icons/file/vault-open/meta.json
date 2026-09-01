@@ -7,7 +7,7 @@
   ],
   "type": "icon",
   "collection": "file",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "standard",
     "outline",
@@ -74,5 +74,27 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.  REVIEW: the derived Filled artwork does not read at small sizes — the brand mark falls on the same side of the luminance split as the page and merges into it. Needs a drawn reduction before this asset leaves draft. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent."
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.  REVIEW: the derived Filled artwork does not read at small sizes — the brand mark falls on the same side of the luminance split as the page and merges into it. Needs a drawn reduction before this asset leaves draft. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent. Outline is derived from the Standard artwork by luminance: paper knocks out, ink is the body. Filled is the inverse of the same classification, so the plate is solid and the marks cut out of it. Both are drawn in currentColor and take an accent.",
+  "generated": [
+    "filled:16",
+    "filled:20",
+    "filled:24",
+    "filled:256",
+    "filled:32",
+    "filled:36",
+    "filled:40",
+    "filled:48",
+    "filled:64",
+    "filled:96",
+    "outline:16",
+    "outline:20",
+    "outline:24",
+    "outline:256",
+    "outline:32",
+    "outline:36",
+    "outline:40",
+    "outline:48",
+    "outline:64",
+    "outline:96"
+  ]
 }

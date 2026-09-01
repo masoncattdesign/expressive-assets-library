@@ -13,7 +13,7 @@
   "description": "Used to represent getting started, successful progress, or space scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used to represent a device tied to a person, through enrollment.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

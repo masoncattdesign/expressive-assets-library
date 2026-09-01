@@ -15,7 +15,7 @@
   "description": "Used to represent general video short content scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

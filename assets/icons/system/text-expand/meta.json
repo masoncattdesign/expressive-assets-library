@@ -13,7 +13,7 @@
   "description": "Used in general type creation and editing scenarios. Collection includes Text Collapse.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used for toggle selection states. Contains state variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

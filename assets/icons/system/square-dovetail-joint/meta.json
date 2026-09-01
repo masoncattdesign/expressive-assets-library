@@ -12,7 +12,7 @@
   "description": "Used to represent toolkit in general, and specifically as toolkits for products.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

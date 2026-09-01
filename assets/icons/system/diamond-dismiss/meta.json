@@ -11,7 +11,7 @@
   "description": "Used in general shape creation scenarios with the ability to dismiss the shape.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

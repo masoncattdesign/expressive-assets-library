@@ -15,7 +15,7 @@
   "description": "Used to represent pen details with arrow tips in drawing scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

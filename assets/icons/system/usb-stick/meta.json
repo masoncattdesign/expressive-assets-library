@@ -14,7 +14,7 @@
   "description": "Used to represent physical usb connections in stick form. Minor difference with USB Plug.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

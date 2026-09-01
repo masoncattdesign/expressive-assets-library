@@ -11,7 +11,7 @@
   "description": "Used to represent devices with sensors, software, and other technology that shares data with other devices.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

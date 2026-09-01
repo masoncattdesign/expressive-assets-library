@@ -12,7 +12,7 @@
   "description": "Used to scale content to fit while zooming content.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

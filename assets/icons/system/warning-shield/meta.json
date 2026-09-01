@@ -12,7 +12,7 @@
   "description": "Used as a general warning for tons of scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

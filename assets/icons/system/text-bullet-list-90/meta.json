@@ -14,7 +14,7 @@
   "description": "Used in general type creation and editing scenarios. Contains directional and rotate variants",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -13,7 +13,7 @@
   "description": "Used in window scaling scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

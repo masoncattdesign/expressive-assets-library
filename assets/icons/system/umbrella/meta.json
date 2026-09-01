@@ -10,7 +10,7 @@
   "description": "Used to represent physical umbrella, great protector from the rain. We don't use them in Seattle.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

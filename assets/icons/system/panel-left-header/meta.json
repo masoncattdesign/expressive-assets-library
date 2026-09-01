@@ -12,7 +12,7 @@
   "description": "Represents workspace in Loop, amongst other general UI layouts.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

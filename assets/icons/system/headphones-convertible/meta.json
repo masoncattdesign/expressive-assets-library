@@ -13,7 +13,7 @@
   "description": "Used to represent headphone device audio.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

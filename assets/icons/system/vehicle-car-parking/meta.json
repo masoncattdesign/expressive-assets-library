@@ -13,7 +13,7 @@
   "description": "Used to represent a vehicle parking lot.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

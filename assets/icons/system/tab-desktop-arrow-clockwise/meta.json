@@ -13,7 +13,7 @@
   "description": "Used in large screen browser tab scenarios. Contains option variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

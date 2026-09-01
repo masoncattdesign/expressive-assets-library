@@ -16,7 +16,7 @@
   "description": "Used when download content is not allowed.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

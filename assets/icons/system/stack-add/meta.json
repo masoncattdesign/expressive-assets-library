@@ -13,7 +13,7 @@
   "description": "Used to represent adding stacked content & collections.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

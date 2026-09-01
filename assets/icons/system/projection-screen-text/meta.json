@@ -15,7 +15,7 @@
   "description": "Used to represent slide view or general presentation with text.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

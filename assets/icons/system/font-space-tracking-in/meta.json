@@ -15,7 +15,7 @@
   "description": "Used to update font tracking (space in-between letters).",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

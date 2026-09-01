@@ -11,7 +11,7 @@
   "description": "Used in selected state scenarios in UI.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

@@ -10,7 +10,7 @@
   "description": "Used to represent lake or beach area.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

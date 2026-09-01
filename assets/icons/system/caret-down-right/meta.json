@@ -14,7 +14,7 @@
   "description": "Used in dropdown & expanding contracting scenarios. Contains directional variants.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

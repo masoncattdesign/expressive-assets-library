@@ -11,7 +11,7 @@
   "description": "Used in scenarios that need generic gesture representation.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

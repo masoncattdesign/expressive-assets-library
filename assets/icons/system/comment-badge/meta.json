@@ -12,7 +12,7 @@
   "description": "Used in commenting alerts or notifications.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"

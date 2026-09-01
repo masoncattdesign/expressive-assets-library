@@ -11,7 +11,7 @@
   "description": "Used in math completion scenarios.",
   "type": "icon",
   "collection": "system",
-  "status": "draft",
+  "status": "published",
   "themes": [
     "filled",
     "outline"
