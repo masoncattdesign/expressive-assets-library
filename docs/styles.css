@@ -153,6 +153,13 @@ body {
 .nav-item.on .n { color: var(--on-accent); opacity: .7; }
 .nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
+/* Two levels: a group, and the collections inside it. The indent and the
+   lighter weight are the whole hierarchy, because a heading you cannot click
+   next to a row you can was the confusing part of the old sidebar. */
+.nav-top { margin-top: 14px; font-weight: 600; color: var(--text); }
+.nav-sub { margin-left: 22px; width: calc(100% - 22px); font-size: 13.5px; }
+.nav-sub .ico { width: 14px; height: 14px; opacity: .6; }
+
 .sidebar-foot { padding: 14px; border-top: 1px solid var(--line); }
 
 /* --- Toolbar -------------------------------------------------------- */

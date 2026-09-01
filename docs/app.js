@@ -118,6 +118,10 @@ const NAV_ICONS = {
   product: '<circle cx="12" cy="12" r="7.5"/>',
   file: '<path d="M7 3.5h6l4.5 4.5V19a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5Z"/>',
   illustration: '<path d="M4 17.5 9 8l4 5.5L15.5 10l4.5 7.5Z"/>',
+  'product-icons': '<circle cx="12" cy="12" r="7.5"/>',
+  'system-icons': '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/>',
+  'third-party': '<circle cx="12" cy="12" r="7.5"/>',
+  wip: '<circle cx="12" cy="12" r="7.5"/>',
 };
 
 /* ------------------------------------------------------------------ */
@@ -307,11 +311,26 @@ function svgNode(source, size) {
 /* Filtering                                                           */
 /* ------------------------------------------------------------------ */
 
+/** Groups are the top level of the sidebar, and they are not the same thing as
+ *  `type`: Product Icons and System Icons are both `icon`, and both Product
+ *  Icons and Illustrations own a collection called `product`. So a group is
+ *  matched on its type AND its own collection list, never on either alone. */
+function groupById(id) {
+  return state.manifest.groups.find((g) => g.id === id) || null;
+}
+
+function inGroup(asset, g) {
+  return asset.type === g.type && g.collections.some((c) => c.id === asset.collection);
+}
+
 function visibleAssets() {
   const { group, collection, query, status } = state.filter;
   const q = query.trim().toLowerCase();
   return state.manifest.assets.filter((a) => {
-    if (group !== 'all' && a.type !== group) return false;
+    if (group !== 'all') {
+      const g = groupById(group);
+      if (!g || !inGroup(a, g)) return false;
+    }
     if (collection && a.collection !== collection) return false;
     if (status && a.status !== status) return false;
     if (!q) return true;
@@ -355,17 +374,28 @@ function renderNav() {
   );
 
   for (const g of state.manifest.groups) {
-    nav.append(el('div', { className: 'nav-group', textContent: g.label.toUpperCase() }));
+    // The group itself is the row you click. Its collections sit under it, and
+    // a group holding exactly one collection does not repeat itself.
+    const head = navButton({
+      label: g.label,
+      count: g.collections.reduce((n, c) => n + c.count, 0),
+      icon: NAV_ICONS[g.id] || NAV_ICONS.all,
+      active: group === g.id && !collection,
+      onClick: () => selectCollection(g.id, null),
+    });
+    head.classList.add('nav-top');
+    nav.append(head);
+    if (g.collections.length < 2) continue;
     for (const c of g.collections) {
-      nav.append(
-        navButton({
-          label: c.label,
-          count: c.count,
-          icon: NAV_ICONS[g.type === 'illustration' ? 'illustration' : c.id] || NAV_ICONS.all,
-          active: group === g.type && collection === c.id,
-          onClick: () => selectCollection(g.type, c.id),
-        })
-      );
+      const btn = navButton({
+        label: c.label,
+        count: c.count,
+        icon: NAV_ICONS[g.type === 'illustration' ? 'illustration' : c.id] || NAV_ICONS.all,
+        active: group === g.id && collection === c.id,
+        onClick: () => selectCollection(g.id, c.id),
+      });
+      btn.classList.add('nav-sub');
+      nav.append(btn);
     }
   }
 }

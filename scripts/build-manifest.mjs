@@ -21,16 +21,28 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export const GROUPS = [
   {
+    id: 'product-icons',
     type: 'icon',
-    label: 'Icons',
+    label: 'Product Icons',
     dir: 'assets/icons',
     collections: [
-      { id: 'product', label: 'Product Icons' },
-      { id: 'system', label: 'System Icons' },
+      { id: 'product', label: 'App Icons' },
       { id: 'file', label: 'File Icons' },
+      { id: 'third-party', label: 'Third Party' },
+      { id: 'wip', label: 'In Progress' },
     ],
   },
   {
+    id: 'system-icons',
+    type: 'icon',
+    label: 'System Icons',
+    dir: 'assets/icons',
+    collections: [
+      { id: 'system', label: 'System Icons' },
+    ],
+  },
+  {
+    id: 'illustrations',
     type: 'illustration',
     label: 'Illustrations',
     dir: 'assets/illustrations',
@@ -69,8 +81,11 @@ export async function collectAssets() {
  *  then alphabetical by display name. Consumers that want a different order can
  *  re-sort; this one exists so the browsing grid reads like the sidebar. */
 function order(asset) {
-  const g = GROUPS.findIndex((x) => x.type === asset.type);
-  const c = GROUPS[g]?.collections.findIndex((x) => x.id === asset.collection) ?? 0;
+  const g = GROUPS.findIndex(
+    (x) => x.type === asset.type && x.collections.some((c) => c.id === asset.collection)
+  );
+  if (g < 0) return [GROUPS.length, 0];
+  const c = GROUPS[g].collections.findIndex((x) => x.id === asset.collection);
   return [g, c];
 }
 
@@ -90,6 +105,7 @@ export function buildManifest(assets) {
     generator: 'scripts/build-manifest.mjs',
     total: clean.length,
     groups: GROUPS.map((g) => ({
+      id: g.id,
       type: g.type,
       label: g.label,
       // A collection with nothing in it is a row in the sidebar that leads
