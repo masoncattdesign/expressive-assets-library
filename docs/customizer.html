@@ -8,7 +8,7 @@
 <meta name="description" content="Apply an icon style across a set of Expressive Assets and tune it: palette, stroke, texture, surface.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
-<script src="theme.js"></script>
+<script src="chrome.js"></script>
 <script>applyStoredTheme();</script>
 <style>
 /* ── HEADER ── */
@@ -22,6 +22,7 @@
 .m365-lock:hover{border-color:var(--accent-ring)}
 .m365-lock.locked{border-color:var(--accent);color:var(--accent)}
 .lock-icon{font-size:12px}
+.ctl-label{font-size:11px;color:var(--text3);letter-spacing:.04em;text-transform:uppercase;font-weight:650}
 .preview-bg-toggle{display:flex;align-items:center;gap:2px;background:var(--surface2);border-radius:20px;padding:3px}
 .bg-btn{font-size:11px;padding:4px 10px;border-radius:16px;cursor:pointer;color:var(--text2);border:none;background:none;font-family:var(--font);transition:all .12s}
 .bg-btn.active{background:var(--surface3);color:var(--text)}
@@ -246,7 +247,6 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
     </div>
 
     <div class="sidebar-foot">
-      <div data-theme-switch style="margin:0 auto 10px"></div>
       <p class="version">Customizer 1.2 <span aria-hidden="true">&middot;</span> <a href="customizer-v1.html" title="The previous Customizer, kept exactly as it was">1.0 archive</a></p>
     </div>
   </aside>
@@ -258,12 +258,14 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
         <span id="canvas-count">Canvas &middot; 12 assets</span>
       </div>
       <div class="spacer"></div>
-      <div class="preview-bg-toggle">
+      <span class="ctl-label">Canvas</span>
+      <div class="preview-bg-toggle" role="group" aria-label="Canvas background">
         <button class="bg-btn active" id="bg-dark" onclick="setBg('dark')">Dark</button>
         <button class="bg-btn" id="bg-light" onclick="setBg('light')">Light</button>
       </div>
       <button class="export-btn" onclick="exportAllSvgs()" title="Download every icon on the canvas as SVG">Export all</button>
-      <a class="btn" href="index.html">Open Gallery</a>
+      <span data-theme-switch></span>
+      <span data-app-menu></span>
     </header>
 
     <div class="content">

@@ -359,12 +359,44 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 /* Theme control. Same three states as the tools; see theme.js. */
 .theme-switch {
   display: inline-flex; background: var(--sunk); border: 1px solid var(--rule);
-  border-radius: var(--pill); padding: 3px; gap: 2px;
+  border-radius: var(--pill); padding: 3px; gap: 2px; flex: none;
 }
 .theme-switch button {
   border: 0; background: none; border-radius: var(--pill); cursor: pointer;
-  font: inherit; font-size: 11.5px; color: var(--ink-3); padding: 4px 10px;
+  color: var(--ink-2); padding: 5px; display: flex; line-height: 0;
 }
+.theme-switch button svg { width: 16px; height: 16px; }
 .theme-switch button:hover { color: var(--ink); }
-.theme-switch button[aria-pressed="true"] { background: var(--accent); color: var(--paper); font-weight: 600; }
+.theme-switch button[aria-pressed="true"] { background: var(--accent); color: var(--paper); }
 .theme-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* --- App menu ------------------------------------------------------- */
+
+.app-menu { position: relative; flex: none; }
+.app-menu-btn {
+  display: flex; line-height: 0; padding: 7px; cursor: pointer;
+  border: 1px solid var(--rule); border-radius: var(--pill);
+  background: var(--sunk); color: var(--ink-2);
+}
+.app-menu-btn svg { width: 16px; height: 16px; }
+.app-menu-btn:hover { color: var(--ink); border-color: var(--accent); }
+.app-menu-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.app-menu-btn[aria-expanded="true"] { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+.app-menu-pop {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+  min-width: 190px; padding: 6px;
+  background: var(--paper); border: 1px solid var(--rule);
+  border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,.14);
+}
+.app-menu-pop .app-menu-group {
+  font-size: 10.5px; font-weight: 650; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--ink-3); padding: 8px 10px 4px;
+}
+.app-menu-pop a {
+  display: block; padding: 7px 10px; border-radius: 8px;
+  font-size: 13.5px; color: var(--ink-2); text-decoration: none;
+}
+.app-menu-pop a:hover { background: var(--sunk); color: var(--ink); }
+.app-menu-pop a.on { background: var(--accent); color: var(--paper); font-weight: 600; }
+.app-menu-pop a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
