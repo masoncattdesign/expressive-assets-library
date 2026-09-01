@@ -7,109 +7,22 @@
 <title>Icon Anatomy Pilot — Expressive Assets</title>
 <meta name="description" content="Twelve product icons and a proposed vocabulary for naming the parts inside an asset.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="doc.css">
 </head>
 <body>
-<div class="ea-bar">
-  <a href="about.html">Expressive Assets</a>
-  <span class="ea-sep">/</span>
-  <span class="ea-here">Anatomy Pilot</span>
-  <span class="ea-right"><a href="index.html">Gallery</a><a href="about.html">About</a><a href="system-map.html">System Map</a></span>
-</div>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-:root{
-  --paper:#F8F8FB; --surface:#FFFFFF; --ink:#15171C; --ink-2:#4C515E; --ink-3:#7A8090;
-  --rule:#E4E6EE; --rule-soft:#EFF1F6; --accent:#0D6E70; --accent-soft:#E3F0F0;
-  --p-container:#2563A8; --p-container-bg:#E7EFF9;
-  --p-glyph:#B0521E; --p-glyph-bg:#FBEDE3;
-  --p-badge:#6B3FA0; --p-badge-bg:#F0E9F8;
-  --p-accent:#1F7A54; --p-accent-bg:#E5F2EB;
-  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#0F1116; --surface:#171A21; --ink:#E9EBF1; --ink-2:#A8AEBD; --ink-3:#7B8291;
-    --rule:#262A34; --rule-soft:#1D2027; --accent:#5FBFC0; --accent-soft:#12292A;
-    --p-container:#7FB0E8; --p-container-bg:#152232;
-    --p-glyph:#E5A075; --p-glyph-bg:#2B1D14;
-    --p-badge:#B99AE0; --p-badge-bg:#211A2E;
-    --p-accent:#79C9A0; --p-accent-bg:#13241C;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#0F1116; --surface:#171A21; --ink:#E9EBF1; --ink-2:#A8AEBD; --ink-3:#7B8291;
-  --rule:#262A34; --rule-soft:#1D2027; --accent:#5FBFC0; --accent-soft:#12292A;
-  --p-container:#7FB0E8; --p-container-bg:#152232;
-  --p-glyph:#E5A075; --p-glyph-bg:#2B1D14;
-  --p-badge:#B99AE0; --p-badge-bg:#211A2E;
-  --p-accent:#79C9A0; --p-accent-bg:#13241C;
-}
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:920px;margin:0 auto;padding:70px 28px 120px;display:flex;flex-direction:column;gap:54px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin:0}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,6vw,56px);line-height:1.03;letter-spacing:-.025em;margin:0;text-wrap:balance}
-.stand{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:12px;color:var(--ink-3);padding-top:14px;border-top:1px solid var(--rule)}
-section{display:flex;flex-direction:column;gap:20px}
-h2{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.015em;margin:0;text-wrap:balance}
-h3{font-family:var(--display);font-weight:600;font-size:17px;margin:0}
-p{margin:0;max-width:66ch}p+p{margin-top:.85em}
-code{font-family:var(--mono);font-size:.87em;background:var(--rule-soft);padding:.1em .36em;border-radius:3px}
-strong{font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:14px}
-.spec{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px}
-.art{height:62px;display:flex;align-items:center;justify-content:center}
-.art svg{width:48px;height:48px}
-figcaption{display:flex;flex-direction:column;gap:5px}
-.nm{font-weight:600;font-size:14.5px}
-.fam{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:20px;align-self:flex-start}
-.fam-plate{background:var(--p-container-bg);color:var(--p-container)}
-.fam-hybrid{background:var(--p-badge-bg);color:var(--p-badge)}
-.fam-mark{background:var(--p-glyph-bg);color:var(--p-glyph)}
-.fam-tile{background:var(--p-accent-bg);color:var(--p-accent)}
-.fam-stress,.fam-degenerate{background:var(--rule-soft);color:var(--ink-3)}
-.counts{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.counts b{color:var(--ink-2);font-weight:500}
-.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-.part{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;border-top:3px solid var(--pc,var(--accent))}
-.part .k{font-family:var(--mono);font-size:13px;color:var(--pc,var(--accent));font-weight:500}
-.part p{font-size:14px;color:var(--ink-2)}
-.p1{--pc:var(--p-container)}.p2{--pc:var(--p-glyph)}.p3{--pc:var(--p-badge)}.p4{--pc:var(--p-accent)}
-pre{font-family:var(--mono);font-size:12.5px;line-height:1.7;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;margin:0;overflow-x:auto;color:var(--ink-2)}
-pre .g{color:var(--ink-3)}
-pre .b{color:var(--accent)}
-.bad{border-left:3px solid #B3443A}
-.good{border-left:3px solid var(--p-accent)}
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-th{text-align:left;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);padding:0 14px 9px 0;border-bottom:1px solid var(--rule)}
-td{padding:12px 14px 12px 0;border-bottom:1px solid var(--rule-soft);color:var(--ink-2);vertical-align:top}
-td:first-child{color:var(--ink);font-weight:500}
-ol.q{list-style:none;counter-reset:q;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
-ol.q li{counter-increment:q;display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start}
-ol.q li::before{content:counter(q);font-family:var(--mono);font-size:12.5px;color:var(--accent);background:var(--accent-soft);border-radius:6px;width:30px;height:24px;display:grid;place-items:center}
-.foot{border-top:1px solid var(--rule);padding-top:24px;font-size:13.5px;color:var(--ink-3)}
-@media(max-width:600px){.wrap{padding:44px 18px 80px;gap:42px}}
-
-  /* A thin bar so a document opened from the Gallery still knows where it came
-     from. It uses the page's own tokens, so it themes with whatever it sits on. */
-  .ea-bar {
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    font-family: ui-monospace, "IBM Plex Mono", SFMono-Regular, Menlo, monospace;
-    font-size: 12px; padding: 12px 24px; border-bottom: 1px solid var(--rule);
-    position: sticky; top: 0; z-index: 20;
-    background: inherit; backdrop-filter: saturate(1.2) blur(6px);
-  }
-  .ea-bar a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
-  .ea-bar a:hover { border-bottom-color: var(--accent); }
-  .ea-bar a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-  .ea-bar .ea-sep { opacity: .4; }
-  .ea-bar .ea-here { opacity: .65; }
-  .ea-bar .ea-right { margin-left: auto; display: flex; gap: 14px; }
-</style>
-
+<nav class="ea-bar" aria-label="Documents">
+  <a class="ea-brand" href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Expressive Assets</a>
+  <a class="ea-tab" href="about.html">About</a>
+  <a class="ea-tab" href="system-map.html">System Map</a>
+  <a class="ea-tab on" href="anatomy-pilot.html" aria-current="page">Anatomy Pilot</a>
+  <span class="ea-right">
+    <a class="ea-tab" href="index.html">Gallery</a>
+    <a class="ea-tab" href="customizer.html">Customizer</a>
+  </span>
+</nav>
 <div class="wrap">
   <header style="display:flex;flex-direction:column;gap:18px">
     <p class="eyebrow">Expressive Assets · Windows Design Systems</p>

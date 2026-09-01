@@ -3,194 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>About — Expressive Assets</title>
 <meta name="description" content="What Expressive Assets is, the tools around it, and the documents describing how it works.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css">
-<style>
-  /* About runs in the same shell as the tools, so the project reads as one
-     thing rather than three pages that happen to share a colour. */
-  .nav { flex: none; }
-  .nav a.nav-item { text-decoration: none; }
-
-  .reader { overflow-y: auto; flex: 1; min-width: 0; }
-  .col { max-width: 68ch; padding: 40px 40px 80px; display: flex; flex-direction: column; gap: 40px; }
-  @media (max-width: 640px) { .col { padding: 28px 20px 60px; gap: 30px; } }
-
-  .lede h1 { font-size: 30px; font-weight: 650; letter-spacing: -.02em; margin: 0 0 12px; }
-  .lede p { font-size: 16.5px; line-height: 1.6; color: var(--text-2); margin: 0 0 12px; max-width: 62ch; }
-  .lede p:last-child { margin-bottom: 0; }
-
-  section h2 {
-    font-size: 12px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--text-3); margin: 0 0 14px;
-  }
-  section p { font-size: 15px; line-height: 1.62; color: var(--text-2); margin: 0 0 12px; }
-  section p:last-child { margin-bottom: 0; }
-  code { font-family: "Cascadia Code", Consolas, ui-monospace, monospace; font-size: .88em; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
-
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 12px; }
-  .card-link {
-    display: flex; flex-direction: column; gap: 6px; text-decoration: none;
-    border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
-    padding: 16px 18px 18px; transition: border-color .12s, box-shadow .12s, transform .12s;
-  }
-  .card-link:hover { border-color: var(--accent-ring); box-shadow: var(--shadow); transform: translateY(-1px); }
-  .card-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .card-link strong { font-size: 14.5px; color: var(--text); display: flex; align-items: center; gap: 8px; }
-  .card-link span { font-size: 13px; line-height: 1.5; color: var(--text-2); }
-  .tag {
-    font-size: 10px; letter-spacing: .07em; text-transform: uppercase; font-weight: 650;
-    padding: 2px 7px; border-radius: 20px; background: var(--accent-soft); color: var(--accent);
-  }
-  .tag.soon { background: var(--surface-2); color: var(--text-3); }
-
-  .figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-  .fig { background: var(--surface); padding: 14px 16px 16px; }
-  .fig b { display: block; font-size: 22px; font-weight: 650; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-  .fig span { font-size: 12px; color: var(--text-3); }
-
-  dl.contact { margin: 0; display: grid; grid-template-columns: 108px 1fr; gap: 10px 16px; font-size: 14.5px; }
-  dl.contact dt { color: var(--text-3); font-size: 13px; }
-  dl.contact dd { margin: 0; color: var(--text-2); }
-  dl.contact a { color: var(--accent); }
-
-  .foot { border-top: 1px solid var(--line); padding-top: 18px; font-size: 12.5px; color: var(--text-3); }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="doc.css">
 </head>
 <body>
 
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-tile" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>
-      </div>
-      <div class="brand-text">
-        <strong>Expressive Assets</strong>
-        <span>Windows Design Systems</span>
+<nav class="ea-bar" aria-label="Documents">
+  <a class="ea-brand" href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Expressive Assets</a>
+  <a class="ea-tab on" href="about.html" aria-current="page">About</a>
+  <a class="ea-tab" href="system-map.html">System Map</a>
+  <a class="ea-tab" href="anatomy-pilot.html">Anatomy Pilot</a>
+  <span class="ea-right">
+    <a class="ea-tab" href="index.html">Gallery</a>
+    <a class="ea-tab" href="customizer.html">Customizer</a>
+  </span>
+</nav>
+
+<div class="wrap">
+
+  <header style="display:flex;flex-direction:column;gap:18px">
+    <p class="eyebrow">Expressive Assets · Windows Design Systems</p>
+    <h1>An asset library that tools can read</h1>
+    <p class="stand">Expressive Assets is the icon and illustration library for Windows Design
+    Systems, together with the tools built on top of it. This page is the way in: what it is,
+    what the tools do, and where the working documents are.</p>
+    <div class="meta">
+      <span>1 September 2026</span><span>3,129 assets</span><span>6 collections</span>
+      <span>Gallery 1.1 · Customizer 1.1</span><span>Working draft</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>How it works, in short</h2>
+    <p>Artwork is designed in Figma, imported through a reviewed plan, and stored as flat SVG with
+    metadata beside it. A build step turns that tree into one file, <code>manifest.json</code>, and
+    everything downstream reads only that.</p>
+    <p>That single rule is what makes the rest possible. A tool never walks the asset folders, so
+    adding a collection, a style or a size changes nothing in the tools. It is also why a new tool
+    takes an afternoon rather than a sprint. The <a href="system-map.html">System Map</a> draws the
+    whole thing end to end.</p>
+  </section>
+
+  <section>
+    <h2>The tools</h2>
+    <div class="cards">
+      <a class="card-link" href="index.html">
+        <strong>Gallery <span class="tag">Live</span></strong>
+        <span>Browse and search the whole library. Filter by collection, style and size, preview
+        against light and dark, copy or download any drawing.</span>
+      </a>
+      <a class="card-link" href="customizer.html">
+        <strong>Customizer <span class="tag">Live</span></strong>
+        <span>Apply an icon style across a set of twelve at once and tune it: palette, stroke,
+        texture, surface. Any slot swaps for anything in the library.</span>
+      </a>
+      <div class="card-link">
+        <strong>Builder <span class="tag soon">Later</span></strong>
+        <span>Compose illustrations from reusable pieces. Waits on the illustration cleanup and an
+        agreed illustration style.</span>
       </div>
     </div>
+  </section>
 
-    <nav class="nav" aria-label="Tools">
-      <div class="nav-group">Tools</div>
-      <a class="nav-item" href="index.html">Gallery</a>
-      <a class="nav-item" href="customizer.html">Customizer</a>
-      <div class="nav-group">Project</div>
-      <a class="nav-item on" href="about.html" aria-current="page">About</a>
-      <a class="nav-item" href="system-map.html">System Map</a>
-      <a class="nav-item" href="anatomy-pilot.html">Anatomy Pilot</a>
-    </nav>
-
-    <div class="sidebar-foot">
-      <p class="version">About 1.1</p>
+  <section>
+    <h2>The library today</h2>
+    <div class="stats">
+      <div class="stat"><span class="stat-n">3,129</span><span class="stat-l">assets</span></div>
+      <div class="stat"><span class="stat-n">6</span><span class="stat-l">collections</span></div>
+      <div class="stat"><span class="stat-n">3</span><span class="stat-l">styles</span></div>
+      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">schema valid</span></div>
     </div>
-  </aside>
+    <table>
+      <thead><tr><th>Collection</th><th class="num">Assets</th><th>Styles</th></tr></thead>
+      <tbody>
+        <tr><td>System Icons</td><td class="num">2,891</td><td>Outline, Filled</td></tr>
+        <tr><td>Product Icons</td><td class="num">90</td><td>Standard, Outline, Filled</td></tr>
+        <tr><td>File Icons</td><td class="num">88</td><td>Standard, Filled</td></tr>
+        <tr><td>M365 Illustrations</td><td class="num">28</td><td>Standard, Outline, Filled</td></tr>
+        <tr><td>OOBE Illustrations</td><td class="num">27</td><td>Standard</td></tr>
+        <tr><td>Product Illustrations</td><td class="num">5</td><td>Standard</td></tr>
+      </tbody>
+    </table>
+    <p>Every asset is still <code>draft</code>, which is deliberate. Ids are the one thing that
+    cannot change quietly later, so nothing is published until the naming convention is settled.</p>
+  </section>
 
-  <main class="main">
-    <header class="toolbar">
-      <div style="display:flex;flex-direction:column;line-height:1.25">
-        <strong style="font-size:15px">About</strong>
-        <span style="font-size:12px;color:var(--text-3)">Expressive Assets, and the tools around it</span>
-      </div>
-    </header>
-
-    <div class="content">
-      <div class="reader">
-        <div class="col">
-
-          <div class="lede">
-            <h1>An asset library that tools can read</h1>
-            <p>Expressive Assets is the icon and illustration library for Windows Design Systems,
-            together with the tools built on top of it. Artwork is designed in Figma, imported
-            through a reviewed plan, and stored as flat SVG with metadata beside it. A build step
-            turns that tree into one file, <code>manifest.json</code>, and everything downstream
-            reads only that.</p>
-            <p>That single rule is what makes the rest possible. A tool never walks the asset
-            folders, so adding a collection, a style or a size changes nothing in the tools. It is
-            also why a new tool takes an afternoon rather than a sprint.</p>
-          </div>
-
-          <section>
-            <h2>The tools</h2>
-            <div class="cards">
-              <a class="card-link" href="index.html">
-                <strong>Gallery <span class="tag">Live</span></strong>
-                <span>Browse and search the whole library. Filter by collection, style and size,
-                preview against light and dark, copy or download any drawing.</span>
-              </a>
-              <a class="card-link" href="customizer.html">
-                <strong>Customizer <span class="tag">Live</span></strong>
-                <span>Apply an icon style across a set of twelve at once and tune it: palette,
-                stroke, texture, surface. Any slot swaps for anything in the library.</span>
-              </a>
-              <div class="card-link" style="cursor:default">
-                <strong>Builder <span class="tag soon">Later</span></strong>
-                <span>Compose illustrations from reusable pieces. Waits on the illustration
-                cleanup and an agreed illustration style.</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2>The library today</h2>
-            <div class="figures">
-              <div class="fig"><b>3,129</b><span>assets</span></div>
-              <div class="fig"><b>6</b><span>collections</span></div>
-              <div class="fig"><b>3</b><span>styles</span></div>
-              <div class="fig"><b>100%</b><span>schema valid</span></div>
-            </div>
-            <p style="margin-top:14px">System Icons 2,891 &middot; Product Icons 90 &middot; File Icons 88
-            &middot; M365 Illustrations 28 &middot; OOBE Illustrations 27 &middot; Product
-            Illustrations 5. Every asset is still <code>draft</code>, which is deliberate: ids are
-            the one thing that cannot change quietly later, so nothing is published until the
-            naming convention is settled.</p>
-          </section>
-
-          <section>
-            <h2>Reference</h2>
-            <div class="cards">
-              <a class="card-link" href="system-map.html">
-                <strong>System Map</strong>
-                <span>How the pieces fit together, end to end: Figma to plan to importer to the
-                asset tree to the manifest, and the tools that read it. Includes the current state
-                of the library and the decisions still open.</span>
-              </a>
-              <a class="card-link" href="anatomy-pilot.html">
-                <strong>Icon Anatomy Pilot</strong>
-                <span>Twelve product icons, and a proposed vocabulary for naming the parts inside
-                an asset so they can be addressed individually. The work in progress right now.</span>
-              </a>
-            </div>
-          </section>
-
-          <section>
-            <h2>How to read these</h2>
-            <p>Both documents are working drafts rather than published specifications. They are
-            written to be argued with: where something is undecided it says so, and the open
-            questions at the end of each are genuinely open. If one of them is wrong, that is worth
-            more to me than if it is agreed with.</p>
-          </section>
-
-          <section>
-            <h2>Contact</h2>
-            <dl class="contact">
-              <dt>Owner</dt><dd>Mason Catt, Senior UX/UI Designer, Windows Design Systems</dd>
-              <dt>Email</dt><dd><a href="mailto:mason.catt@teksystemsgs.com">mason.catt@teksystemsgs.com</a></dd>
-              <dt>Source</dt><dd><a href="https://github.com/masoncattdesign/expressive-assets-library">github.com/masoncattdesign/expressive-assets-library</a></dd>
-              <dt>Issues</dt><dd><a href="https://github.com/masoncattdesign/expressive-assets-library/issues">Open an issue</a> for a missing asset, a wrong drawing, or a request.</dd>
-            </dl>
-          </section>
-
-          <div class="foot">
-            Gallery 1.1 &middot; Customizer 1.1 &middot; built from the library at commit
-            <code>d06684df</code>, 1 September 2026.
-          </div>
-
-        </div>
-      </div>
+  <section>
+    <h2>The documents</h2>
+    <div class="cards">
+      <a class="card-link" href="system-map.html">
+        <strong>System Map</strong>
+        <span>How the pieces fit together end to end: Figma, the import plan, the importer, the
+        asset tree, the manifest, and the tools that read it. Includes where the library stands and
+        the decisions still open.</span>
+      </a>
+      <a class="card-link" href="anatomy-pilot.html">
+        <strong>Icon Anatomy Pilot</strong>
+        <span>Twelve product icons, and a proposed vocabulary for naming the parts inside an asset
+        so each one can be addressed on its own. The work in progress right now.</span>
+      </a>
     </div>
-  </main>
+    <p>Both are working drafts rather than published specifications, and they are written to be
+    argued with. Where something is undecided they say so, and the open questions at the end of
+    each are genuinely open. If one of them is wrong, that is worth more to me than if it is
+    agreed with.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <dl class="contact">
+      <dt>Owner</dt>
+      <dd>Mason Catt, Senior UX/UI Designer, Windows Design Systems</dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:mason.catt@teksystemsgs.com">mason.catt@teksystemsgs.com</a></dd>
+      <dt>Source</dt>
+      <dd><a href="https://github.com/masoncattdesign/expressive-assets-library">github.com/masoncattdesign/expressive-assets-library</a></dd>
+      <dt>Issues</dt>
+      <dd><a href="https://github.com/masoncattdesign/expressive-assets-library/issues">Open an issue</a> for a missing asset, a wrong drawing, or a request.</dd>
+    </dl>
+  </section>
+
+  <div class="foot">
+    Built from the library at commit <code>cea0fdd8</code>, 1 September 2026. Counts come from the
+    current <code>manifest.json</code>; anything marked Later is not built yet.
+  </div>
+
 </div>
 
 </body>
