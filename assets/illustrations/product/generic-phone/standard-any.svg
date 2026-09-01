@@ -1,0 +1,46 @@
+<svg aria-label="Generic Phone" role="img" width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M62.0836 23.5119C62.0836 18.2586 66.3422 14 71.5955 14L156.738 14C161.992 14 166.25 18.2586 166.25 23.5119V204.488C166.25 209.741 161.992 214 156.738 214H71.5955C66.3422 214 62.0836 209.741 62.0836 204.488V23.5119Z" fill="url(#product-generic-phone-paint0_linear_582207_6498)"/>
+<path opacity="0.25" d="M114.167 14H71.5955C66.3422 14 62.0836 18.2586 62.0836 23.5119V204.488C62.0836 209.741 66.3422 214 71.5955 214H114.167V14Z" fill="url(#product-generic-phone-paint1_linear_582207_6498)"/>
+<path opacity="0.25" d="M114.166 14H156.738C161.991 14 166.25 18.2586 166.25 23.5119V204.488C166.25 209.741 161.991 214 156.738 214H114.166V14Z" fill="url(#product-generic-phone-paint2_linear_582207_6498)"/>
+<path d="M159.696 20.2495H68.6366C67.3184 20.2495 66.2498 21.3182 66.2498 22.6364V205.363C66.2498 206.681 67.3184 207.75 68.6366 207.75H159.696C161.014 207.75 162.083 206.681 162.083 205.363V22.6364C162.083 21.3182 161.014 20.2495 159.696 20.2495Z" fill="url(#product-generic-phone-paint3_linear_582207_6498)"/>
+<path d="M68.6248 21.437H159.708C160.364 21.437 160.895 21.9687 160.895 22.6245V205.375C160.895 206.03 160.364 206.562 159.708 206.562H68.6248C67.9689 206.562 67.4373 206.03 67.4373 205.375V22.6245C67.4373 21.9687 67.9689 21.437 68.6248 21.437Z" stroke="url(#product-generic-phone-paint4_linear_582207_6498)" stroke-width="2.375"/>
+<path d="M60 57.7503C60 56.5997 60.9327 55.667 62.0833 55.667V70.2503C60.9327 70.2503 60 69.3176 60 68.167V57.7503Z" fill="url(#product-generic-phone-paint5_linear_582207_6498)"/>
+<path d="M60 76.5003C60 75.3497 60.9327 74.417 62.0833 74.417V89.0003C60.9327 89.0003 60 88.0676 60 86.917V76.5003Z" fill="url(#product-generic-phone-paint6_linear_582207_6498)"/>
+<path d="M166.25 53.5835C167.4 53.5835 168.333 54.5162 168.333 55.6668V76.5002C168.333 77.6508 167.4 78.5835 166.25 78.5835V53.5835Z" fill="url(#product-generic-phone-paint7_linear_582207_6498)"/>
+<path d="M156.739 14C161.992 14.0003 166.251 18.2587 166.251 23.5117L166.25 26.5V25.5811C166.25 20.3278 161.991 16.0693 156.738 16.0693H71.5953C66.3421 16.0693 62.0836 20.3278 62.0836 25.5811V23.5117C62.0837 18.2586 66.3422 14.0001 71.5953 14H156.739Z" fill="#8A9299"/>
+<path d="M156.739 214C161.992 214 166.251 209.741 166.251 204.488L166.25 201.5V202.393C166.25 207.646 161.991 211.905 156.738 211.905H71.5953C66.3421 211.905 62.0836 207.646 62.0836 202.393V204.488C62.0837 209.741 66.3422 214 71.5953 214H156.739Z" fill="#1E2021"/>
+<defs>
+<linearGradient id="product-generic-phone-paint0_linear_582207_6498" x1="143.134" y1="249.849" x2="-21.3106" y2="144.658" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint1_linear_582207_6498" x1="59.3094" y1="114" x2="77.4242" y2="114" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.6"/>
+<stop offset="0.9949" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint2_linear_582207_6498" x1="166.387" y1="114" x2="148.79" y2="114" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.6"/>
+<stop offset="0.9949" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint3_linear_582207_6498" x1="140.38" y1="239.276" x2="-10.051" y2="144.845" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#40E6E8"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint4_linear_582207_6498" x1="95.5322" y1="20.2495" x2="192.762" y2="166.376" gradientUnits="userSpaceOnUse">
+<stop stop-color="#173A73" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#173A73" stop-opacity="0.25"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint5_linear_582207_6498" x1="61.621" y1="72.8643" x2="57.1248" y2="72.0754" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint6_linear_582207_6498" x1="61.621" y1="91.6143" x2="57.1248" y2="90.8254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="product-generic-phone-paint7_linear_582207_6498" x1="167.871" y1="83.0646" x2="163.284" y2="82.5952" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+</defs>
+</svg>

@@ -28,7 +28,6 @@ export const GROUPS = [
       { id: 'product', label: 'Product Icons' },
       { id: 'system', label: 'System Icons' },
       { id: 'file', label: 'File Icons' },
-      { id: 'vscode', label: 'VS Code Icons' },
     ],
   },
   {
@@ -38,8 +37,6 @@ export const GROUPS = [
     collections: [
       { id: 'oobe', label: 'OOBE Illustrations' },
       { id: 'm365', label: 'M365 Illustrations' },
-      { id: 'windows', label: 'Windows Illustrations' },
-      { id: 'fluent', label: 'Fluent Illustrations' },
       { id: 'product', label: 'Product Illustrations' },
     ],
   },

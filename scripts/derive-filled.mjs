@@ -98,8 +98,9 @@ export function deriveFilled(svg, { label } = {}) {
 }
 
 async function main() {
-  // Filter on the declared collection, not the path — 'file' is also an asset
-  // NAME inside the vscode set, and a path glob happily matches both.
+  // Filter on the declared collection, not the path. Collection names and asset
+  // names share a namespace — 'file' has been both — and a path glob happily
+  // matches either.
   const metas = execSync('find assets -name meta.json', { cwd: ROOT })
     .toString().trim().split('\n').filter(Boolean);
 

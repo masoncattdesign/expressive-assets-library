@@ -1,0 +1,61 @@
+<svg aria-label="Generic Desktop" role="img" width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="product-generic-desktop-mask0_582207_6538" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="228" height="228">
+<g clip-path="url(#product-generic-desktop-clip0_582207_6538)">
+<g clip-path="url(#product-generic-desktop-clip1_582207_6538)">
+<path d="M7 221V7H221V221H7Z" stroke="#FF4444" stroke-opacity="0.2" stroke-width="14"/>
+<circle cx="114" cy="114" r="114" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="14" y="14" width="100" height="100" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="14" y="114" width="100" height="100" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+<rect y="28" width="228" height="171" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="199" width="228" height="171" rx="9.5" transform="rotate(90 199 0)" fill="#8000FF" fill-opacity="0.1"/>
+<rect y="57" width="228" height="114" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="171" width="228" height="114" rx="9.5" transform="rotate(90 171 0)" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="114" y="14" width="100" height="100" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+<rect x="114" y="114" width="100" height="100" rx="9.5" fill="#8000FF" fill-opacity="0.1"/>
+</g>
+</g>
+</mask>
+<g mask="url(#product-generic-desktop-mask0_582207_6538)">
+</g>
+<g clip-path="url(#product-generic-desktop-clip2_582207_6538)">
+<path d="M213.75 33.25C213.75 28.025 210.544 23.75 206.625 23.75H21.375C17.4562 23.75 14.25 28.025 14.25 33.25H213.75Z" fill="#B8C2CC"/>
+<path d="M73.8848 194.75H154.115V193.952H161.5V202.835C161.5 203.542 160.973 204.25 160.27 204.25H67.7305C66.9395 204.25 66.5 203.542 66.5 202.835V193.952H73.8848V194.75Z" fill="url(#product-generic-desktop-paint0_linear_582207_6538)"/>
+<path d="M66.881 193.325L68.6392 192.138C70.6612 190.772 73.3864 190 76.2875 190H151.716C154.617 190 157.342 190.772 159.364 192.138L161.122 193.325C161.913 193.859 161.386 194.75 160.243 194.75H67.6722C66.6172 194.75 66.0897 193.859 66.881 193.325Z" fill="url(#product-generic-desktop-paint1_linear_582207_6538)"/>
+<path d="M128.161 194.75H99.75V166.25H128.25L128.161 194.75Z" fill="url(#product-generic-desktop-paint2_linear_582207_6538)"/>
+<path d="M208.309 171H19.6909C16.6984 171 14.25 168.534 14.25 165.519V33.9808C14.25 30.9663 16.6984 28.5 19.6909 28.5H208.309C211.302 28.5 213.75 30.9663 213.75 33.9808V165.519C213.75 168.534 211.302 171 208.309 171Z" fill="url(#product-generic-desktop-paint3_linear_582207_6538)"/>
+<path d="M19.6904 30.875H208.31C209.974 30.8753 211.375 32.2616 211.375 33.9805V165.52C211.375 167.238 209.974 168.625 208.31 168.625H19.6904C18.0262 168.625 16.6252 167.238 16.625 165.52V33.9805C16.6252 32.2617 18.0262 30.8753 19.6904 30.875Z" stroke="url(#product-generic-desktop-paint4_linear_582207_6538)" stroke-width="4.75" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="product-generic-desktop-paint0_linear_582207_6538" x1="66.4618" y1="199.494" x2="161.45" y2="199.494" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="0.03" stop-color="#45494D"/>
+<stop offset="0.97" stop-color="#45494D"/>
+<stop offset="1" stop-color="#2E3133"/>
+</linearGradient>
+<linearGradient id="product-generic-desktop-paint1_linear_582207_6538" x1="66.4912" y1="192.375" x2="161.512" y2="192.375" gradientUnits="userSpaceOnUse">
+<stop offset="0.00537635" stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="product-generic-desktop-paint2_linear_582207_6538" x1="114" y1="194.75" x2="114" y2="166.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="0.9946" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="product-generic-desktop-paint3_linear_582207_6538" x1="168.57" y1="194.96" x2="58.2307" y2="5.23714" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#40E6E8"/>
+</linearGradient>
+<linearGradient id="product-generic-desktop-paint4_linear_582207_6538" x1="169.477" y1="196.543" x2="57.304" y2="3.6665" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<clipPath id="product-generic-desktop-clip0_582207_6538">
+<rect width="228" height="228" fill="white"/>
+</clipPath>
+<clipPath id="product-generic-desktop-clip1_582207_6538">
+<rect width="228" height="228" fill="white"/>
+</clipPath>
+<clipPath id="product-generic-desktop-clip2_582207_6538">
+<rect width="228" height="228" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "id": "product.generic-laptop",
+  "name": "Generic Laptop",
+  "keywords": [
+    "generic",
+    "laptop"
+  ],
+  "type": "illustration",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    228
+  ],
+  "colors": {
+    "primary": "#B8C2CC",
+    "secondary": "#8A9299"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/product/generic-laptop/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-09-01"
+}

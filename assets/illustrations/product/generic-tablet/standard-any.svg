@@ -1,0 +1,19 @@
+<svg aria-label="Generic Tablet" role="img" width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#product-generic-tablet-clip0_582207_6564)">
+<path d="M14.25 47.4998C14.25 41.3787 19.2122 36.4165 25.3333 36.4165H202.667C208.788 36.4165 213.75 41.3787 213.75 47.4998V53.0415H14.25V47.4998Z" fill="#B8C2CC"/>
+<path d="M25.333 44.729H202.667C207.258 44.7292 210.979 48.4509 210.979 53.0415V174.958C210.979 179.549 207.258 183.271 202.667 183.271H25.333C20.7423 183.271 17.0205 179.549 17.0205 174.958V53.0415C17.0207 48.4509 20.7424 44.7292 25.333 44.729Z" fill="url(#product-generic-tablet-paint0_linear_582207_6564)" stroke="url(#product-generic-tablet-paint1_linear_582207_6564)" stroke-width="5.54167" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="product-generic-tablet-paint0_linear_582207_6564" x1="168.57" y1="210.268" x2="56.3987" y2="19.5145" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#40E6E8"/>
+</linearGradient>
+<linearGradient id="product-generic-tablet-paint1_linear_582207_6564" x1="169.477" y1="211.868" x2="55.4415" y2="17.9443" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<clipPath id="product-generic-tablet-clip0_582207_6564">
+<rect width="228" height="228" fill="white"/>
+</clipPath>
+</defs>
+</svg>

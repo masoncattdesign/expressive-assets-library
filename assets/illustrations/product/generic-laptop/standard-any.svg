@@ -1,0 +1,29 @@
+<svg aria-label="Generic Laptop" role="img" width="228" height="228" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M194.836 171H33.1636C30.5986 171 28.5 168.863 28.5 166.25V52.25C28.5 49.6375 30.5986 47.5 33.1636 47.5H194.836C197.401 47.5 199.5 49.6375 199.5 52.25V166.25C199.5 168.863 197.401 171 194.836 171Z" fill="url(#product-generic-laptop-paint0_linear_582207_6550)"/>
+<path d="M28.5 49.875C28.5 45.94 31.69 42.75 35.625 42.75H192.375C196.31 42.75 199.5 45.94 199.5 49.875V52.25H28.5V49.875Z" fill="#B8C2CC"/>
+<path d="M33.1641 49.875H194.836C196.048 49.875 197.125 50.9079 197.125 52.25V166.25C197.125 167.592 196.048 168.625 194.836 168.625H33.1641C31.9516 168.625 30.875 167.592 30.875 166.25V52.25C30.875 50.9079 31.9516 49.875 33.1641 49.875Z" stroke="url(#product-generic-laptop-paint1_linear_582207_6550)" stroke-width="4.75" stroke-miterlimit="10"/>
+<path d="M198.104 175.75C198.998 175.75 199.856 176.105 200.488 176.737L224.491 200.741H227.987V205.634H227.985C227.97 207.356 226.629 209 224.608 209H3.39166C1.37088 209 0.030464 207.356 0.0147095 205.634H0.0127563V200.741H3.50885L27.5128 176.737C28.1451 176.105 29.0025 175.75 29.8965 175.75H198.104Z" fill="url(#product-generic-laptop-paint2_linear_582207_6550)"/>
+<path d="M1.00722 198.493L27.5122 171.988C28.1447 171.355 29.0025 171 29.8969 171H198.103C198.998 171 199.855 171.355 200.488 171.988L226.993 198.493C229.117 200.617 227.613 204.25 224.608 204.25H3.39194C0.387359 204.25 -1.11733 200.617 1.00722 198.493Z" fill="url(#product-generic-laptop-paint3_linear_582207_6550)"/>
+<path opacity="0.3" d="M89.5544 190.696L84.8044 195.446C83.3082 196.942 84.3679 199.5 86.4838 199.5H146.266C148.382 199.5 149.442 196.942 147.946 195.446L143.196 190.696C142.75 190.25 142.146 190 141.516 190H91.2338C90.6039 190 89.9998 190.25 89.5544 190.696Z" fill="white"/>
+<path opacity="0.09" d="M37.3044 171.696L27.8044 181.196C26.3082 182.692 27.3679 185.25 29.4838 185.25H198.516C200.632 185.25 201.692 182.692 200.196 181.196L190.696 171.696C190.25 171.25 189.646 171 189.016 171H38.9838C38.3539 171 37.7498 171.25 37.3044 171.696Z" fill="#1E2021"/>
+<defs>
+<linearGradient id="product-generic-laptop-paint0_linear_582207_6550" x1="160.774" y1="191.766" x2="64.6274" y2="28.2623" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#40E6E8"/>
+</linearGradient>
+<linearGradient id="product-generic-laptop-paint1_linear_582207_6550" x1="161.552" y1="193.137" x2="63.8069" y2="26.9164" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="0.9946" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="product-generic-laptop-paint2_linear_582207_6550" x1="2.30095e-07" y1="204.25" x2="228" y2="204.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="0.0139974" stop-color="#A1AAB3"/>
+<stop offset="0.985677" stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#8A9299"/>
+</linearGradient>
+<linearGradient id="product-generic-laptop-paint3_linear_582207_6550" x1="160.56" y1="332.605" x2="19.6502" y2="151.966" gradientUnits="userSpaceOnUse">
+<stop offset="0.00537635" stop-color="#B8C2CC"/>
+<stop offset="1" stop-color="#CAD2D9"/>
+</linearGradient>
+</defs>
+</svg>

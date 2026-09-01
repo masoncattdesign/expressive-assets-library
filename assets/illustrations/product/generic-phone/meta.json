@@ -1,0 +1,32 @@
+{
+  "id": "product.generic-phone",
+  "name": "Generic Phone",
+  "keywords": [
+    "generic",
+    "phone"
+  ],
+  "type": "illustration",
+  "collection": "product",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    128,
+    192,
+    228
+  ],
+  "colors": {
+    "primary": "#8A9299",
+    "secondary": "#173A73"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "any": "assets/illustrations/product/generic-phone/standard-any.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "1.0.0",
+  "updated": "2026-09-01"
+}

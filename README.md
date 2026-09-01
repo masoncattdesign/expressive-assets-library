@@ -5,7 +5,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 3,318 — 2,891 Fluent system, 338 VS Code, 46 product, 27 OOBE illustrations, 16 placeholder |
+| **Assets** | 3,128 — 2,891 Fluent system, 90 product, 88 file, 28 M365 illustrations, 27 OOBE illustrations, 2 placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
@@ -25,11 +25,9 @@ assets/
     system/      System Icons     — OS surfaces: settings, search, battery…
     product/     Product Icons    — first-party apps: mail, photos, store…
     file/        File Icons       — document types: doc, xls, pdf, zip…
-    vscode/      VS Code Icons    — VS Code UI glyphs: debug, git, terminal…
   illustrations/
     oobe/        OOBE Illustrations — out-of-box setup: wifi, PIN, privacy…
-    windows/     Windows Illustrations
-    fluent/      Fluent Illustrations
+    m365/        M365 Illustrations — spot illustrations: chat, tasks, search…
     product/     Product Illustrations
 
 docs/            Gallery — the browsing tool (plain HTML/CSS/JS, no build step)
@@ -67,7 +65,7 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `keywords` | Synonyms someone would type who doesn't know the name |
 | `description` | One line on what it depicts. Also the duplicate-detector |
 | `type` | `icon` or `illustration` |
-| `collection` | `system` · `product` · `file` · `vscode` · `oobe` · `windows` · `fluent` |
+| `collection` | `system` · `product` · `file` · `oobe` · `m365` |
 | `product` | Product artwork only — which product it represents |
 | `status` | `draft` · `published` · `deprecated`, plus `replacedBy` |
 | `themes` | Which of `standard` / `outline` / `filled` exist on disk |
@@ -298,28 +296,6 @@ a smudge you cannot tell from the next one.
 It also reports **embedded rasters**. Three of the OOBE files carry bitmaps
 inside the SVG, which will not scale like vector artwork; those assets say so in
 their `notes` rather than looking identical to the ones that will.
-
-## Importing VS Code icons
-
-```bash
-git clone --depth 1 https://github.com/microsoft/vscode-icons.git
-node scripts/import-vscode.mjs --from=./vscode-icons --dry-run
-node scripts/import-vscode.mjs --from=./vscode-icons
-npm run notices && npm run manifest && npm run validate
-```
-
-CC BY 4.0, Copyright (c) Microsoft Corporation — attribution is a licence
-condition here, not a courtesy.
-
-**One drawing per icon, not two.** Upstream ships `icons/light` and `icons/dark`,
-but they are the same geometry at two colours (`#424242` and `#C5C5C5`).
-Importing both would be 338 duplicate files each pinned to a surface the library
-cannot know about. The light drawing is rewritten to `currentColor` instead, so
-one file adapts to whatever it sits on. The 43 icons carrying semantic colour —
-debug states, info badges — keep it.
-
-Standard is synthesised the same way as the Fluent set, and flagged the same
-way. VS Code has no full-colour icon.
 
 ## Importing a folder export
 
