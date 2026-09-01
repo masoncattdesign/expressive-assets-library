@@ -199,6 +199,10 @@ No dependencies. Node 18+ and nothing else — a design-system repo that needs a
 `npm install` before it can tell you whether an SVG is valid does not get run
 locally.
 
+Anything that changes the tools or the manifest shape gets a line in
+[CHANGELOG.md](CHANGELOG.md), and the rules for which number moves are in
+[VERSIONING.md](VERSIONING.md).
+
 ## Gallery
 
 **Gallery** is the browsing tool; **Expressive Assets** is the library it shows.

@@ -24,12 +24,7 @@ Note that 1.12 is not a thing. It sorts before 1.2 and reads as a typo.
 
 ## History
 
-| Version | What changed |
-|---|---|
-| 1.0 | Gallery, and the first Customizer. |
-| 1.1 | Customizer rebuilt in the Gallery shell; the panel takes its shape from the asset family; About, System Map and Asset Anatomy added as one set of documents. |
-| 1.2 | Aligned to Bridge: ink accent, pill controls, no shadows, Bridge's neutral ramp and type scale. Dark theme kept and given an explicit control. |
-| 2.0 | **Contract break.** `manifest.json` groups gained an `id` and no longer map one-to-one onto `type`, so a consumer keyed on `type` to find a group has to change. The asset field `placeholders` became `generated` and widened to mean any drawing produced here rather than received. Also in this release, and not the reason for the major: the sidebar splits into Product Icons, System Icons and Illustrations; the theme control and a page menu move to the toolbar and Auto is dropped; every asset is published. |
+See [CHANGELOG.md](CHANGELOG.md). One list, kept in one place.
 
 ## The asset library is versioned separately
 
