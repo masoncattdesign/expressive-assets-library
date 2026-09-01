@@ -146,12 +146,36 @@ function findOrMakeCell(row, size, flagged) {
   return cell;
 }
 
+/**
+ * Refuse to write into somebody else's page.
+ *
+ * The source library file has a page called "Product Icons" holding real design
+ * work, and this plugin would happily start filling it in. A page is safe to
+ * write to only if it is empty, or if the only thing on it is this plugin's own
+ * board. Anything else stops, and the person has to say so explicitly.
+ */
+function pageIsSafe(page, boardName) {
+  if (page.children.length === 0) return true;
+  return page.children.every((n) => n.name === boardName && n.type === 'FRAME');
+}
+
 async function sync(payload) {
-  const { assets, drawings, pageName } = payload;
+  const { assets, drawings, pageName, force } = payload;
   await figma.loadFontAsync({ family: 'Inter', style: 'Regular' });
 
   const page = await findOrMakePage(pageName);
   await figma.setCurrentPageAsync(page);
+
+  if (!force && !pageIsSafe(page, pageName)) {
+    return {
+      refused: true,
+      pageName,
+      fileName: figma.root.name,
+      layers: page.children.length,
+      sample: page.children.slice(0, 6).map((n) => n.name),
+    };
+  }
+
   const board = findOrMakeBoard(page, pageName);
 
   const report = { created: 0, replaced: 0, unchanged: 0, missing: 0, seen: [] };

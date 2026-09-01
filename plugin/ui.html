@@ -50,6 +50,11 @@
   <label for="dry">Report only, write nothing</label>
 </div>
 
+<div class="row">
+  <input type="checkbox" id="force">
+  <label for="force">Write into a page that already has other work on it</label>
+</div>
+
 <button id="go">Sync</button>
 <div id="log"></div>
 
@@ -123,7 +128,12 @@ $('go').addEventListener('click', async () => {
     log('Writing into the file…');
     parent.postMessage({ pluginMessage: {
       type: 'sync',
-      payload: { assets: assets.map(({ id, name, placeholders }) => ({ id, name, placeholders })), drawings, pageName: LABEL[collection] },
+      payload: {
+        assets: assets.map(({ id, name, placeholders }) => ({ id, name, placeholders })),
+        drawings,
+        pageName: LABEL[collection],
+        force: $('force').checked,
+      },
     } }, '*');
   } catch (err) {
     log('<span class="bad">' + err.message + '</span>');
@@ -140,6 +150,14 @@ onmessage = (event) => {
   if (msg.type === 'error') { log('<span class="bad">' + msg.message + '</span>'); }
   if (msg.type === 'done') {
     const r = msg.result;
+    if (r.refused) {
+      log('<span class="bad">Stopped. Nothing was written.</span>');
+      log('"' + r.pageName + '" in ' + r.fileName + ' already has <b>' + r.layers + '</b> layers on it:');
+      r.sample.forEach((n) => log('  ' + n));
+      log('\nThis is probably the source library rather than the generated file. Open the generated file and run it there, or tick the checkbox above if you really mean this page.');
+      $('go').disabled = false;
+      return;
+    }
     log('\n<b>' + r.created + '</b> created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
     if (r.missing) log('<b>' + r.missing + '</b> not in the library');
     if (r.strayCount) {
