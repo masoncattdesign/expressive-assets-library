@@ -30,10 +30,16 @@ for (const entry of plan.assets) {
   // A brand mark is drawn by its owner. Retinting it is the thing their
   // guidelines exist to prevent, so the accent picker stays off entirely.
   meta.recolorable = false;
+  // The notices template punctuates for itself, so neither string ends in a
+  // full stop of its own or the file reads "Adobe Inc..".
+  const owner = entry.source.owner;
   meta.source = {
-    project: entry.source.owner,
-    license: 'Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.',
-    copyright: `${entry.name} is a trademark of ${entry.source.owner}.`,
+    project: owner,
+    license: 'trademark of the named holder, reproduced for interface use and not licensed for redistribution',
+    // The notices file groups by project, so this line stands for every mark
+    // in the group rather than for one of them. Naming a single brand there
+    // would be accurate about one asset and wrong about the other eight.
+    copyright: `The marks in this group are trademarks of ${owner}`,
   };
   meta.notes =
     `${entry.name} brand mark, imported from the 3P Icons page at 32px, the only size the file holds. ` +

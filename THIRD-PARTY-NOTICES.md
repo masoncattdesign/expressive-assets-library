@@ -15,253 +15,253 @@ Upstream: https://github.com/microsoft/fluentui-system-icons
 
 **9 assets** in `assets/icons/third-party/`
 
-Adobe After Effects is a trademark of Adobe Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Adobe Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Google LLC
 
 **8 assets** in `assets/icons/third-party/`
 
-Android is a trademark of Google LLC.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Google LLC
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Apple Inc.
 
 **5 assets** in `assets/icons/third-party/`
 
-Apple is a trademark of Apple Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Apple Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Meta Platforms, Inc.
 
 **5 assets** in `assets/icons/third-party/`
 
-Facebook is a trademark of Meta Platforms, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Meta Platforms, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## X Corp.
 
 **3 assets** in `assets/icons/third-party/`
 
-Twitter is a trademark of X Corp..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of X Corp.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Box, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Box is a trademark of Box, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Box, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Coalition for Content Provenance and Authenticity
 
 **1 assets** in `assets/icons/third-party/`
 
-Content Credentials is a trademark of Coalition for Content Provenance and Authenticity.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Coalition for Content Provenance and Authenticity
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Dropbox, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Dropbox is a trademark of Dropbox, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Dropbox, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Evernote Corporation
 
 **1 assets** in `assets/icons/third-party/`
 
-Evernote is a trademark of Evernote Corporation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Evernote Corporation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Figma, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Figma is a trademark of Figma, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Figma, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Mozilla Foundation
 
 **1 assets** in `assets/icons/third-party/`
 
-Firefox is a trademark of Mozilla Foundation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Mozilla Foundation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Maplebear Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Instacart is a trademark of Maplebear Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Maplebear Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## LY Corporation
 
 **1 assets** in `assets/icons/third-party/`
 
-Line Messenger is a trademark of LY Corporation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of LY Corporation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Linux Mark Institute
 
 **1 assets** in `assets/icons/third-party/`
 
-Linux is a trademark of Linux Mark Institute.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Linux Mark Institute
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Anthropic PBC
 
 **1 assets** in `assets/icons/third-party/`
 
-MCP is a trademark of Anthropic PBC.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Anthropic PBC
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Meetup LLC
 
 **1 assets** in `assets/icons/third-party/`
 
-Meetup is a trademark of Meetup LLC.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Meetup LLC
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## RealtimeBoard, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Miro is a trademark of RealtimeBoard, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of RealtimeBoard, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Opera Norway AS
 
 **1 assets** in `assets/icons/third-party/`
 
-Opera is a trademark of Opera Norway AS.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Opera Norway AS
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Pearson plc
 
 **1 assets** in `assets/icons/third-party/`
 
-Pearson is a trademark of Pearson plc.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Pearson plc
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Polly.ai
 
 **1 assets** in `assets/icons/third-party/`
 
-Polly is a trademark of Polly.ai.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Polly.ai
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## ServiceNow, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-ServiceNow is a trademark of ServiceNow, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of ServiceNow, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Sketch B.V.
 
 **1 assets** in `assets/icons/third-party/`
 
-Sketch is a trademark of Sketch B.V..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Sketch B.V.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Salesforce, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Slack is a trademark of Salesforce, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Salesforce, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Squarespace, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Squarespace is a trademark of Squarespace, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Squarespace, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Stack Exchange, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Stack Overflow is a trademark of Stack Exchange, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Stack Exchange, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Telegram FZ-LLC
 
 **1 assets** in `assets/icons/third-party/`
 
-Telegram is a trademark of Telegram FZ-LLC.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Telegram FZ-LLC
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## ByteDance Ltd.
 
 **1 assets** in `assets/icons/third-party/`
 
-TikTok is a trademark of ByteDance Ltd..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of ByteDance Ltd.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Atlassian Corporation
 
 **1 assets** in `assets/icons/third-party/`
 
-Trello is a trademark of Atlassian Corporation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Atlassian Corporation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Rakuten Group, Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Viber is a trademark of Rakuten Group, Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Rakuten Group, Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Tencent Holdings Limited
 
 **1 assets** in `assets/icons/third-party/`
 
-WeChat is a trademark of Tencent Holdings Limited.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Tencent Holdings Limited
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Weibo Corporation
 
 **1 assets** in `assets/icons/third-party/`
 
-Weibo is a trademark of Weibo Corporation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Weibo Corporation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Wix.com Ltd.
 
 **1 assets** in `assets/icons/third-party/`
 
-Wix is a trademark of Wix.com Ltd..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Wix.com Ltd.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Automattic Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-WordPress is a trademark of Automattic Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Automattic Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Microsoft Corporation
 
 **1 assets** in `assets/icons/third-party/`
 
-Wunderlist is a trademark of Microsoft Corporation.
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Microsoft Corporation
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Xingin Information Technology Co., Ltd.
 
 **1 assets** in `assets/icons/third-party/`
 
-Xiaohongshu is a trademark of Xingin Information Technology Co., Ltd..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Xingin Information Technology Co., Ltd.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ## Yahoo Inc.
 
 **1 assets** in `assets/icons/third-party/`
 
-Yahoo is a trademark of Yahoo Inc..
-Used under **Trademark of the named holder. Reproduced for interface use; not licensed for redistribution.**.
+The marks in this group are trademarks of Yahoo Inc.
+Used under **trademark of the named holder, reproduced for interface use and not licensed for redistribution**.
 
 ---
 

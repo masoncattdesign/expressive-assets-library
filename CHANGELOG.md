@@ -42,6 +42,15 @@ Also in this release:
 
 ## Unreleased
 
+- **Third-party icons imported.** 61 brand marks, 118 drawings, one size (32).
+  Not recolourable, since altering a third-party mark is the thing brand
+  guidelines exist to prevent. Every one names a holder in
+  THIRD-PARTY-NOTICES.md; attribution is best effort and wants confirming.
+  Outline and the missing sizes are still to derive.
+- Customizer: canvas controls moved onto the canvas, sidebar nav removed in
+  favour of the toolbar menu, "Icon style" renamed "Asset style", and the style
+  cards rebuilt around their preview and drawn from the current asset set.
+
 - `figma-sources.json` records where each collection is pulled from. Product
   Icons now pull from the sync board the plugin writes (node `582216:23014`),
   not the original authoring page, so edits made to the generated components
@@ -93,8 +102,12 @@ Carried between sessions so it does not get lost.
   reads that page back yet. First step is proving the REST API returns
   `sharedPluginData`, which the whole design depends on.
 - **Figma sync policy.** On a conflict: overwrite, skip, or flag for review.
-- **3P icons.** 70 third-party trademarks, deliberately unimported pending a
-  licence review.
+- **3P licence review.** The 61 marks are now imported and public. The review
+  has not happened. If it lands badly the collection has to come out of the
+  repo and the site, which is one gitignore line and one build exclusion, but
+  the git history keeps them either way.
+- **Outline and sizes for third-party.** Only 32px exists upstream, and Outline
+  does not exist at all.
 - **Publishing bar.** Everything is published on the basis that the artwork was
   received. There is no review step behind that, and `deprecated` has never
   been used.
