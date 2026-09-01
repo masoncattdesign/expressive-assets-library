@@ -1,0 +1,6 @@
+<svg aria-label="People standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M96 236C96 213.909 113.909 196 136 196H276C298.091 196 316 213.909 316 236V316C316 371.228 271.228 416 216 416H196C140.772 416 96 371.228 96 316V236Z" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+<path d="M252 334C252 288.713 288.713 252 334 252C379.287 252 416 288.713 416 334C416 379.287 379.287 416 334 416C288.713 416 252 379.287 252 334Z" fill="#FD6F03"/>
+<circle cx="206" cy="146" r="50" fill="#3073FD"/>
+<circle cx="334" cy="202" r="50" fill="#FEDA83" stroke="#673114" stroke-width="2"/>
+</svg>

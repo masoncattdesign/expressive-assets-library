@@ -1,0 +1,12 @@
+<svg aria-label="Topics standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="282" y="272" width="116" height="64" rx="20" fill="#222E48"/>
+<rect x="283" y="209" width="114" height="62" rx="19" fill="#F4E6F5" stroke="#472741" stroke-width="2"/>
+<rect x="282" y="144" width="116" height="64" rx="20" fill="#3073FD"/>
+<rect x="111" y="96" width="241" height="320" rx="40" fill="#222E48"/>
+<rect x="112" y="96" width="240" height="296" rx="40" fill="#D3B6F8"/>
+<rect x="112" y="96" width="240" height="272" rx="40" fill="#F5F5F5"/>
+<path d="M138 365.479C122.814 359.803 112 345.166 112 328V136C112 118.834 122.814 104.196 138 98.5205V365.479Z" fill="#FD6F03"/>
+<rect x="112" y="96" width="240" height="272" rx="40" stroke="#222E48" stroke-width="2"/>
+<rect x="158" y="129" width="171" height="111" rx="19" fill="#C9E8F7"/>
+<path d="M185.165 186.862C228.665 142.362 283.485 138.882 311.666 166.862C346.891 201.837 312.934 299.967 242.71 302.103C172.485 304.239 226.936 194.403 259.068 205.324C288.165 215.214 250.319 294.648 173.665 292.442" stroke="#3073FD" stroke-width="8" stroke-linecap="round"/>
+</svg>

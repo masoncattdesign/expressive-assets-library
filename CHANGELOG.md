@@ -43,8 +43,7 @@ Also in this release:
 ## Unreleased
 
 - **M365 Illustrations replaced.** The previous 28 (160px, with Outline and
-  Filled derived here) are removed; 40 new ones at 512px, Standard only, are
-  planned for import. Ids come from a recorded node map rather than frame
+  Filled derived here) are gone; 40 new ones at 512px, Standard only, are in. Ids come from a recorded node map rather than frame
   names, because two frames are both called `Chat` and hold different drawings.
 
 - File Icons become their own top-level group, out of Product Icons. A file
@@ -71,7 +70,9 @@ Also in this release:
 - Accent swatches are flat circles with a hard two-tone split, replacing the
   beveled gradient tiles. Bridge has no gloss and no shadow, and the pair still
   has to read, so the two colours meet on an edge rather than blending.
-- An import plan for the App Icons section: 32 Windows app tiles at 64px.
+- 32 Windows app tiles imported as App Icons at 64px. Seven landed as
+  `<name>-app` beside existing marks of the same name rather than over them.
+  Smaller sizes and derived styles are still to generate.
 - The Gallery sidebar marks are System Icons from the library rather than
   shapes drawn by hand in `app.js`. `scripts/inline-nav-icons.mjs` names each
   pick by asset id and regenerates the block, so swapping one is a line edit.

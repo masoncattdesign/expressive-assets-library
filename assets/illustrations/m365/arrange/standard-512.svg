@@ -1,0 +1,7 @@
+<svg aria-label="Arrange standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M96.093 152.5C96.093 121.296 121.389 96 152.593 96C183.797 96 209.093 121.296 209.093 152.5V175.5C209.093 206.704 183.797 232 152.593 232C121.389 232 96.093 206.704 96.093 175.5V152.5Z" fill="#FD6F03"/>
+<rect x="280" y="233" width="135" height="183" rx="39.9532" fill="#81B93A"/>
+<rect x="96.093" y="232" width="184" height="184" rx="39.9532" fill="#222E48"/>
+<path d="M144.093 321.769L175.683 353L232.093 295" stroke="#F5F5F5" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 136.953C210 114.888 227.888 97 249.953 97H375.047C397.112 97 415 114.888 415 136.953V192.047C415 214.112 397.112 232 375.047 232H249.953C227.888 232 210 214.112 210 192.047V136.953Z" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+</svg>

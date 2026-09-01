@@ -1,0 +1,34 @@
+{
+  "id": "m365.inbox-empty",
+  "name": "Inbox Empty",
+  "keywords": [
+    "inbox",
+    "empty"
+  ],
+  "type": "illustration",
+  "collection": "m365",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#222E48",
+    "secondary": "#F5F5F5"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/m365/inbox-empty/standard-512.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+    "nodeId": "582232:12992"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-01",
+  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+}

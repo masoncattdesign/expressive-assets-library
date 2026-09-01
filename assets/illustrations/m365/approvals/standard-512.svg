@@ -1,0 +1,8 @@
+<svg aria-label="Approvals standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="144" y="225" width="224" height="160" rx="40" fill="#FD6F03"/>
+<rect x="96" y="178.5" width="320" height="143" rx="40" fill="#81B93A"/>
+<rect x="180" y="129" width="284" height="132" rx="40" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+<rect x="48" y="129" width="132" height="132" rx="40" fill="#222E48"/>
+<path d="M83 193.423L105.256 215.5L145 174.5" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M213 224.362C296.471 219.542 321.329 154.401 287.806 149.176C250.786 143.405 214.118 233.658 289.743 226.001C305.376 224.08 343.213 215.794 341.821 195.569C340.433 175.395 312.118 182.559 321.479 202.341C332.548 225.729 416.588 219.507 440.924 200.489" stroke="#222E48" stroke-width="8" stroke-linecap="round"/>
+</svg>

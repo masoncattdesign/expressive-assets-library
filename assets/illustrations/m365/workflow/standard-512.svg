@@ -1,0 +1,9 @@
+<svg aria-label="Workflow standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="206" height="106" transform="matrix(1 0 0 -1 194 202)" fill="#222E48"/>
+<path d="M309 177C309 132.817 273.183 97.0002 229 97.0002H101L101 202H187C195.837 202 203 209.164 203 218V335C203 379.183 238.817 415 283 415L395 415V311L325 311C316.163 311 309 303.837 309 295V177Z" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+<path d="M101 149H216C238.091 149 256 166.909 256 189V323C256 345.091 273.909 363 296 363L411 363" stroke="#222E48" stroke-width="8"/>
+<ellipse cx="54" cy="53" rx="54" ry="53" transform="matrix(1 0 0 -1 341 416)" fill="#FD6F03"/>
+<circle cx="53" cy="53" r="53" transform="matrix(1 0 0 -1 344 202)" fill="#3073FD"/>
+<rect x="63" y="96" width="106" height="106" rx="20" fill="#D3B6F8" stroke="#D3B6F8" stroke-width="2"/>
+<circle cx="19" cy="19" r="19" transform="matrix(1 0 0 -1 97 168)" fill="#F4E6F5"/>
+</svg>

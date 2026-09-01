@@ -1,0 +1,7 @@
+<svg aria-label="Work standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M99 184C99 161.909 116.909 144 139 144H373C395.091 144 413 161.909 413 184V376C413 398.091 395.091 416 373 416H139C116.909 416 99 398.091 99 376V184Z" fill="#36990F"/>
+<path d="M96 184C96 161.909 113.909 144 136 144H376C398.091 144 416 161.909 416 184V236C416 280.183 380.183 316 336 316H176C131.817 316 96 280.183 96 236V184Z" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+<rect x="230" y="268" width="52" height="96" rx="26" fill="#FD99C0"/>
+<rect x="236" y="318" width="40" height="40" rx="20" fill="#222E48"/>
+<path d="M322 170V146C322 123.909 304.091 106 282 106H230C207.909 106 190 123.909 190 146V170" stroke="#222E48" stroke-width="20" stroke-linecap="round"/>
+</svg>

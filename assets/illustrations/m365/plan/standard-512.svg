@@ -1,0 +1,19 @@
+<svg aria-label="Plan standard 512" role="img" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M254 370L142 256" stroke="#DEDEDE" stroke-width="16" stroke-linecap="square"/>
+<path d="M256 144L368 258" stroke="#DEDEDE" stroke-width="16" stroke-linecap="square"/>
+<path d="M143 261V367" stroke="#DEDEDE" stroke-width="16"/>
+<path d="M368 150V256" stroke="#DEDEDE" stroke-width="15"/>
+<path d="M256 144L150 144" stroke="#DEDEDE" stroke-width="16"/>
+<path d="M355 368L249 368" stroke="#DEDEDE" stroke-width="15"/>
+<circle cx="144" cy="256" r="38" fill="#36990F"/>
+<circle cx="144" cy="368" r="37" fill="#B3D180" stroke="#394024" stroke-width="2"/>
+<circle cx="368" cy="144" r="38" fill="#AE73FC"/>
+<circle cx="368" cy="256" r="38" fill="#FD6F03"/>
+<circle cx="256" cy="144" r="38" fill="#FD99C0" stroke="#E90463" stroke-width="2"/>
+<circle cx="368" cy="368" r="55" fill="#F5F5F5" stroke="#222E48" stroke-width="2"/>
+<circle cx="256" cy="368" r="38" fill="#3073FD"/>
+<path d="M351 351L384 384" stroke="#222E48" stroke-width="16" stroke-linecap="round"/>
+<path d="M384 351L351 384" stroke="#222E48" stroke-width="16" stroke-linecap="round"/>
+<circle cx="144" cy="144" r="57" fill="#222E48"/>
+<path d="M122 145.385L137.795 161L166 132" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
