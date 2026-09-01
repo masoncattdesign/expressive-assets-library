@@ -120,9 +120,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
@@ -138,13 +138,13 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/bing/filled-16.svg",
-          "20": "assets/icons/product/bing/filled-20.svg",
-          "24": "assets/icons/product/bing/filled-24.svg",
-          "28": "assets/icons/product/bing/filled-28.svg",
-          "32": "assets/icons/product/bing/filled-32.svg",
-          "48": "assets/icons/product/bing/filled-48.svg"
+        "standard": {
+          "16": "assets/icons/product/bing/standard-16.svg",
+          "20": "assets/icons/product/bing/standard-20.svg",
+          "24": "assets/icons/product/bing/standard-24.svg",
+          "28": "assets/icons/product/bing/standard-28.svg",
+          "32": "assets/icons/product/bing/standard-32.svg",
+          "48": "assets/icons/product/bing/standard-48.svg"
         },
         "outline": {
           "16": "assets/icons/product/bing/outline-16.svg",
@@ -154,11 +154,13 @@
           "32": "assets/icons/product/bing/outline-32.svg",
           "48": "assets/icons/product/bing/outline-48.svg"
         },
-        "standard": {
-          "16": "assets/icons/product/bing/standard-16.svg",
-          "20": "assets/icons/product/bing/standard-20.svg",
-          "24": "assets/icons/product/bing/standard-24.svg",
-          "32": "assets/icons/product/bing/standard-32.svg"
+        "filled": {
+          "16": "assets/icons/product/bing/filled-16.svg",
+          "20": "assets/icons/product/bing/filled-20.svg",
+          "24": "assets/icons/product/bing/filled-24.svg",
+          "28": "assets/icons/product/bing/filled-28.svg",
+          "32": "assets/icons/product/bing/filled-32.svg",
+          "48": "assets/icons/product/bing/filled-48.svg"
         }
       },
       "figma": {
@@ -167,7 +169,11 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "standard:28",
+        "standard:48"
+      ]
     },
     {
       "id": "product.bookings",
@@ -179,8 +185,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
@@ -196,6 +203,14 @@
       },
       "recolorable": true,
       "variants": {
+        "standard": {
+          "16": "assets/icons/product/bookings/standard-16.svg",
+          "20": "assets/icons/product/bookings/standard-20.svg",
+          "24": "assets/icons/product/bookings/standard-24.svg",
+          "28": "assets/icons/product/bookings/standard-28.svg",
+          "32": "assets/icons/product/bookings/standard-32.svg",
+          "48": "assets/icons/product/bookings/standard-48.svg"
+        },
         "outline": {
           "16": "assets/icons/product/bookings/outline-16.svg",
           "20": "assets/icons/product/bookings/outline-20.svg",
@@ -204,13 +219,13 @@
           "32": "assets/icons/product/bookings/outline-32.svg",
           "48": "assets/icons/product/bookings/outline-48.svg"
         },
-        "standard": {
-          "16": "assets/icons/product/bookings/standard-16.svg",
-          "20": "assets/icons/product/bookings/standard-20.svg",
-          "24": "assets/icons/product/bookings/standard-24.svg",
-          "28": "assets/icons/product/bookings/standard-28.svg",
-          "32": "assets/icons/product/bookings/standard-32.svg",
-          "48": "assets/icons/product/bookings/standard-48.svg"
+        "filled": {
+          "16": "assets/icons/product/bookings/filled-16.svg",
+          "20": "assets/icons/product/bookings/filled-20.svg",
+          "24": "assets/icons/product/bookings/filled-24.svg",
+          "28": "assets/icons/product/bookings/filled-28.svg",
+          "32": "assets/icons/product/bookings/filled-32.svg",
+          "48": "assets/icons/product/bookings/filled-48.svg"
         }
       },
       "figma": {
@@ -219,7 +234,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48"
+      ]
     },
     {
       "id": "product.calendar-taskbar",
@@ -539,12 +562,16 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
+        16,
         20,
         24,
         28,
+        32,
         48
       ],
       "colors": {
@@ -554,10 +581,28 @@
       "recolorable": false,
       "variants": {
         "standard": {
+          "16": "assets/icons/product/cortana/standard-16.svg",
           "20": "assets/icons/product/cortana/standard-20.svg",
           "24": "assets/icons/product/cortana/standard-24.svg",
           "28": "assets/icons/product/cortana/standard-28.svg",
+          "32": "assets/icons/product/cortana/standard-32.svg",
           "48": "assets/icons/product/cortana/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/cortana/outline-16.svg",
+          "20": "assets/icons/product/cortana/outline-20.svg",
+          "24": "assets/icons/product/cortana/outline-24.svg",
+          "28": "assets/icons/product/cortana/outline-28.svg",
+          "32": "assets/icons/product/cortana/outline-32.svg",
+          "48": "assets/icons/product/cortana/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/cortana/filled-16.svg",
+          "20": "assets/icons/product/cortana/filled-20.svg",
+          "24": "assets/icons/product/cortana/filled-24.svg",
+          "28": "assets/icons/product/cortana/filled-28.svg",
+          "32": "assets/icons/product/cortana/filled-32.svg",
+          "48": "assets/icons/product/cortana/filled-48.svg"
         }
       },
       "figma": {
@@ -566,7 +611,23 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised."
+      "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:32"
+      ]
     },
     {
       "id": "product.defender",
@@ -885,51 +946,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
-      ],
-      "sizes": [
-        16,
-        24,
-        32
-      ],
-      "colors": {
-        "primary": "#0078D4",
-        "secondary": "#8764B8"
-      },
-      "recolorable": true,
-      "variants": {
-        "filled": {
-          "16": "assets/icons/product/entra-id/filled-16.svg",
-          "24": "assets/icons/product/entra-id/filled-24.svg",
-          "32": "assets/icons/product/entra-id/filled-32.svg"
-        },
-        "standard": {
-          "16": "assets/icons/product/entra-id/standard-16.svg",
-          "24": "assets/icons/product/entra-id/standard-24.svg",
-          "32": "assets/icons/product/entra-id/standard-32.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "281540:217"
-      },
-      "version": "1.0.0",
-      "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.eventify",
-      "name": "Eventify",
-      "keywords": [
-        "eventify"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "draft",
-      "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
         16,
@@ -945,14 +964,81 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/eventify/filled-16.svg",
-          "20": "assets/icons/product/eventify/filled-20.svg",
-          "24": "assets/icons/product/eventify/filled-24.svg",
-          "28": "assets/icons/product/eventify/filled-28.svg",
-          "32": "assets/icons/product/eventify/filled-32.svg",
-          "48": "assets/icons/product/eventify/filled-48.svg"
+        "standard": {
+          "16": "assets/icons/product/entra-id/standard-16.svg",
+          "20": "assets/icons/product/entra-id/standard-20.svg",
+          "24": "assets/icons/product/entra-id/standard-24.svg",
+          "28": "assets/icons/product/entra-id/standard-28.svg",
+          "32": "assets/icons/product/entra-id/standard-32.svg",
+          "48": "assets/icons/product/entra-id/standard-48.svg"
         },
+        "outline": {
+          "16": "assets/icons/product/entra-id/outline-16.svg",
+          "20": "assets/icons/product/entra-id/outline-20.svg",
+          "24": "assets/icons/product/entra-id/outline-24.svg",
+          "28": "assets/icons/product/entra-id/outline-28.svg",
+          "32": "assets/icons/product/entra-id/outline-32.svg",
+          "48": "assets/icons/product/entra-id/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/entra-id/filled-16.svg",
+          "20": "assets/icons/product/entra-id/filled-20.svg",
+          "24": "assets/icons/product/entra-id/filled-24.svg",
+          "28": "assets/icons/product/entra-id/filled-28.svg",
+          "32": "assets/icons/product/entra-id/filled-32.svg",
+          "48": "assets/icons/product/entra-id/filled-48.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "281540:217"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-28",
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:20",
+        "filled:28",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:20",
+        "standard:28",
+        "standard:48"
+      ]
+    },
+    {
+      "id": "product.eventify",
+      "name": "Eventify",
+      "keywords": [
+        "eventify"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "status": "draft",
+      "themes": [
+        "standard",
+        "outline",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": true,
+      "variants": {
         "standard": {
           "16": "assets/icons/product/eventify/standard-16.svg",
           "20": "assets/icons/product/eventify/standard-20.svg",
@@ -960,6 +1046,22 @@
           "28": "assets/icons/product/eventify/standard-28.svg",
           "32": "assets/icons/product/eventify/standard-32.svg",
           "48": "assets/icons/product/eventify/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/eventify/outline-16.svg",
+          "20": "assets/icons/product/eventify/outline-20.svg",
+          "24": "assets/icons/product/eventify/outline-24.svg",
+          "28": "assets/icons/product/eventify/outline-28.svg",
+          "32": "assets/icons/product/eventify/outline-32.svg",
+          "48": "assets/icons/product/eventify/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/eventify/filled-16.svg",
+          "20": "assets/icons/product/eventify/filled-20.svg",
+          "24": "assets/icons/product/eventify/filled-24.svg",
+          "28": "assets/icons/product/eventify/filled-28.svg",
+          "32": "assets/icons/product/eventify/filled-32.svg",
+          "48": "assets/icons/product/eventify/filled-48.svg"
         }
       },
       "figma": {
@@ -968,7 +1070,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48"
+      ]
     },
     {
       "id": "product.excel",
@@ -1410,8 +1520,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
         16,
@@ -1427,14 +1538,6 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/github/filled-16.svg",
-          "20": "assets/icons/product/github/filled-20.svg",
-          "24": "assets/icons/product/github/filled-24.svg",
-          "28": "assets/icons/product/github/filled-28.svg",
-          "32": "assets/icons/product/github/filled-32.svg",
-          "48": "assets/icons/product/github/filled-48.svg"
-        },
         "standard": {
           "16": "assets/icons/product/github/standard-16.svg",
           "20": "assets/icons/product/github/standard-20.svg",
@@ -1442,6 +1545,22 @@
           "28": "assets/icons/product/github/standard-28.svg",
           "32": "assets/icons/product/github/standard-32.svg",
           "48": "assets/icons/product/github/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/github/outline-16.svg",
+          "20": "assets/icons/product/github/outline-20.svg",
+          "24": "assets/icons/product/github/outline-24.svg",
+          "28": "assets/icons/product/github/outline-28.svg",
+          "32": "assets/icons/product/github/outline-32.svg",
+          "48": "assets/icons/product/github/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/github/filled-16.svg",
+          "20": "assets/icons/product/github/filled-20.svg",
+          "24": "assets/icons/product/github/filled-24.svg",
+          "28": "assets/icons/product/github/filled-28.svg",
+          "32": "assets/icons/product/github/filled-32.svg",
+          "48": "assets/icons/product/github/filled-48.svg"
         }
       },
       "figma": {
@@ -1450,7 +1569,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48"
+      ]
     },
     {
       "id": "product.groupme",
@@ -1523,45 +1650,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
+        "standard",
         "outline",
-        "standard"
-      ],
-      "sizes": [
-        24
-      ],
-      "colors": {
-        "primary": "#0078D4",
-        "secondary": "#8764B8"
-      },
-      "recolorable": true,
-      "variants": {
-        "outline": {
-          "24": "assets/icons/product/launcher/outline-24.svg"
-        },
-        "standard": {
-          "24": "assets/icons/product/launcher/standard-24.svg"
-        }
-      },
-      "figma": {
-        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
-        "nodeId": "101619:204"
-      },
-      "version": "1.0.0",
-      "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
-    },
-    {
-      "id": "product.linkedin",
-      "name": "LinkedIn",
-      "keywords": [
-        "linkedin"
-      ],
-      "type": "icon",
-      "collection": "product",
-      "status": "draft",
-      "themes": [
-        "filled",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
@@ -1577,14 +1668,85 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/linkedin/filled-16.svg",
-          "20": "assets/icons/product/linkedin/filled-20.svg",
-          "24": "assets/icons/product/linkedin/filled-24.svg",
-          "28": "assets/icons/product/linkedin/filled-28.svg",
-          "32": "assets/icons/product/linkedin/filled-32.svg",
-          "48": "assets/icons/product/linkedin/filled-48.svg"
+        "standard": {
+          "16": "assets/icons/product/launcher/standard-16.svg",
+          "20": "assets/icons/product/launcher/standard-20.svg",
+          "24": "assets/icons/product/launcher/standard-24.svg",
+          "28": "assets/icons/product/launcher/standard-28.svg",
+          "32": "assets/icons/product/launcher/standard-32.svg",
+          "48": "assets/icons/product/launcher/standard-48.svg"
         },
+        "outline": {
+          "16": "assets/icons/product/launcher/outline-16.svg",
+          "20": "assets/icons/product/launcher/outline-20.svg",
+          "24": "assets/icons/product/launcher/outline-24.svg",
+          "28": "assets/icons/product/launcher/outline-28.svg",
+          "32": "assets/icons/product/launcher/outline-32.svg",
+          "48": "assets/icons/product/launcher/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/launcher/filled-16.svg",
+          "20": "assets/icons/product/launcher/filled-20.svg",
+          "24": "assets/icons/product/launcher/filled-24.svg",
+          "28": "assets/icons/product/launcher/filled-28.svg",
+          "32": "assets/icons/product/launcher/filled-32.svg",
+          "48": "assets/icons/product/launcher/filled-48.svg"
+        }
+      },
+      "figma": {
+        "fileKey": "l752WyMxGqlvG5g8zkOaxm",
+        "nodeId": "101619:204"
+      },
+      "version": "1.0.0",
+      "updated": "2026-08-28",
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:28",
+        "standard:32",
+        "standard:48"
+      ]
+    },
+    {
+      "id": "product.linkedin",
+      "name": "LinkedIn",
+      "keywords": [
+        "linkedin"
+      ],
+      "type": "icon",
+      "collection": "product",
+      "status": "draft",
+      "themes": [
+        "standard",
+        "outline",
+        "filled"
+      ],
+      "sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
+      ],
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#8764B8"
+      },
+      "recolorable": true,
+      "variants": {
         "standard": {
           "16": "assets/icons/product/linkedin/standard-16.svg",
           "20": "assets/icons/product/linkedin/standard-20.svg",
@@ -1592,6 +1754,22 @@
           "28": "assets/icons/product/linkedin/standard-28.svg",
           "32": "assets/icons/product/linkedin/standard-32.svg",
           "48": "assets/icons/product/linkedin/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/linkedin/outline-16.svg",
+          "20": "assets/icons/product/linkedin/outline-20.svg",
+          "24": "assets/icons/product/linkedin/outline-24.svg",
+          "28": "assets/icons/product/linkedin/outline-28.svg",
+          "32": "assets/icons/product/linkedin/outline-32.svg",
+          "48": "assets/icons/product/linkedin/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/linkedin/filled-16.svg",
+          "20": "assets/icons/product/linkedin/filled-20.svg",
+          "24": "assets/icons/product/linkedin/filled-24.svg",
+          "28": "assets/icons/product/linkedin/filled-28.svg",
+          "32": "assets/icons/product/linkedin/filled-32.svg",
+          "48": "assets/icons/product/linkedin/filled-48.svg"
         }
       },
       "figma": {
@@ -1600,7 +1778,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48"
+      ]
     },
     {
       "id": "product.lists",
@@ -1801,8 +1987,9 @@
       "collection": "product",
       "status": "draft",
       "themes": [
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
@@ -1818,6 +2005,14 @@
       },
       "recolorable": true,
       "variants": {
+        "standard": {
+          "16": "assets/icons/product/m365-admin-center/standard-16.svg",
+          "20": "assets/icons/product/m365-admin-center/standard-20.svg",
+          "24": "assets/icons/product/m365-admin-center/standard-24.svg",
+          "28": "assets/icons/product/m365-admin-center/standard-28.svg",
+          "32": "assets/icons/product/m365-admin-center/standard-32.svg",
+          "48": "assets/icons/product/m365-admin-center/standard-48.svg"
+        },
         "outline": {
           "16": "assets/icons/product/m365-admin-center/outline-16.svg",
           "20": "assets/icons/product/m365-admin-center/outline-20.svg",
@@ -1826,13 +2021,13 @@
           "32": "assets/icons/product/m365-admin-center/outline-32.svg",
           "48": "assets/icons/product/m365-admin-center/outline-48.svg"
         },
-        "standard": {
-          "16": "assets/icons/product/m365-admin-center/standard-16.svg",
-          "20": "assets/icons/product/m365-admin-center/standard-20.svg",
-          "24": "assets/icons/product/m365-admin-center/standard-24.svg",
-          "28": "assets/icons/product/m365-admin-center/standard-28.svg",
-          "32": "assets/icons/product/m365-admin-center/standard-32.svg",
-          "48": "assets/icons/product/m365-admin-center/standard-48.svg"
+        "filled": {
+          "16": "assets/icons/product/m365-admin-center/filled-16.svg",
+          "20": "assets/icons/product/m365-admin-center/filled-20.svg",
+          "24": "assets/icons/product/m365-admin-center/filled-24.svg",
+          "28": "assets/icons/product/m365-admin-center/filled-28.svg",
+          "32": "assets/icons/product/m365-admin-center/filled-32.svg",
+          "48": "assets/icons/product/m365-admin-center/filled-48.svg"
         }
       },
       "figma": {
@@ -1841,7 +2036,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48"
+      ]
     },
     {
       "id": "product.m365-taskbar-calendar",
@@ -2105,11 +2308,11 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
@@ -2123,23 +2326,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "12": "assets/icons/product/microsoft/filled-12.svg",
-          "16": "assets/icons/product/microsoft/filled-16.svg",
-          "20": "assets/icons/product/microsoft/filled-20.svg",
-          "24": "assets/icons/product/microsoft/filled-24.svg",
-          "28": "assets/icons/product/microsoft/filled-28.svg",
-          "32": "assets/icons/product/microsoft/filled-32.svg",
-          "48": "assets/icons/product/microsoft/filled-48.svg"
-        },
         "standard": {
-          "12": "assets/icons/product/microsoft/standard-12.svg",
           "16": "assets/icons/product/microsoft/standard-16.svg",
           "20": "assets/icons/product/microsoft/standard-20.svg",
           "24": "assets/icons/product/microsoft/standard-24.svg",
           "28": "assets/icons/product/microsoft/standard-28.svg",
           "32": "assets/icons/product/microsoft/standard-32.svg",
           "48": "assets/icons/product/microsoft/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/microsoft/outline-16.svg",
+          "20": "assets/icons/product/microsoft/outline-20.svg",
+          "24": "assets/icons/product/microsoft/outline-24.svg",
+          "28": "assets/icons/product/microsoft/outline-28.svg",
+          "32": "assets/icons/product/microsoft/outline-32.svg",
+          "48": "assets/icons/product/microsoft/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/microsoft/filled-16.svg",
+          "20": "assets/icons/product/microsoft/filled-20.svg",
+          "24": "assets/icons/product/microsoft/filled-24.svg",
+          "28": "assets/icons/product/microsoft/filled-28.svg",
+          "32": "assets/icons/product/microsoft/filled-32.svg",
+          "48": "assets/icons/product/microsoft/filled-48.svg"
         }
       },
       "figma": {
@@ -2148,7 +2357,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48"
+      ]
     },
     {
       "id": "product.microsoft-blend",
@@ -2347,12 +2564,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
+        16,
+        20,
         24,
-        28
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -2360,13 +2582,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "24": "assets/icons/product/mileiq/filled-24.svg",
-          "28": "assets/icons/product/mileiq/filled-28.svg"
-        },
         "standard": {
+          "16": "assets/icons/product/mileiq/standard-16.svg",
+          "20": "assets/icons/product/mileiq/standard-20.svg",
           "24": "assets/icons/product/mileiq/standard-24.svg",
-          "28": "assets/icons/product/mileiq/standard-28.svg"
+          "28": "assets/icons/product/mileiq/standard-28.svg",
+          "32": "assets/icons/product/mileiq/standard-32.svg",
+          "48": "assets/icons/product/mileiq/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/mileiq/outline-16.svg",
+          "20": "assets/icons/product/mileiq/outline-20.svg",
+          "24": "assets/icons/product/mileiq/outline-24.svg",
+          "28": "assets/icons/product/mileiq/outline-28.svg",
+          "32": "assets/icons/product/mileiq/outline-32.svg",
+          "48": "assets/icons/product/mileiq/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/mileiq/filled-16.svg",
+          "20": "assets/icons/product/mileiq/filled-20.svg",
+          "24": "assets/icons/product/mileiq/filled-24.svg",
+          "28": "assets/icons/product/mileiq/filled-28.svg",
+          "32": "assets/icons/product/mileiq/filled-32.svg",
+          "48": "assets/icons/product/mileiq/filled-48.svg"
         }
       },
       "figma": {
@@ -2375,7 +2613,23 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:32",
+        "standard:48"
+      ]
     },
     {
       "id": "product.msn",
@@ -2815,14 +3069,16 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
         20,
         24,
+        28,
+        32,
         48
       ],
       "colors": {
@@ -2831,23 +3087,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/pages/filled-16.svg",
-          "20": "assets/icons/product/pages/filled-20.svg",
-          "24": "assets/icons/product/pages/filled-24.svg",
-          "48": "assets/icons/product/pages/filled-48.svg"
+        "standard": {
+          "16": "assets/icons/product/pages/standard-16.svg",
+          "20": "assets/icons/product/pages/standard-20.svg",
+          "24": "assets/icons/product/pages/standard-24.svg",
+          "28": "assets/icons/product/pages/standard-28.svg",
+          "32": "assets/icons/product/pages/standard-32.svg",
+          "48": "assets/icons/product/pages/standard-48.svg"
         },
         "outline": {
           "16": "assets/icons/product/pages/outline-16.svg",
           "20": "assets/icons/product/pages/outline-20.svg",
           "24": "assets/icons/product/pages/outline-24.svg",
+          "28": "assets/icons/product/pages/outline-28.svg",
+          "32": "assets/icons/product/pages/outline-32.svg",
           "48": "assets/icons/product/pages/outline-48.svg"
         },
-        "standard": {
-          "16": "assets/icons/product/pages/standard-16.svg",
-          "20": "assets/icons/product/pages/standard-20.svg",
-          "24": "assets/icons/product/pages/standard-24.svg",
-          "48": "assets/icons/product/pages/standard-48.svg"
+        "filled": {
+          "16": "assets/icons/product/pages/filled-16.svg",
+          "20": "assets/icons/product/pages/filled-20.svg",
+          "24": "assets/icons/product/pages/filled-24.svg",
+          "28": "assets/icons/product/pages/filled-28.svg",
+          "32": "assets/icons/product/pages/filled-32.svg",
+          "48": "assets/icons/product/pages/filled-48.svg"
         }
       },
       "figma": {
@@ -2856,7 +3118,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:28",
+        "filled:32",
+        "outline:28",
+        "outline:32",
+        "standard:28",
+        "standard:32"
+      ]
     },
     {
       "id": "product.password-manager",
@@ -2869,15 +3139,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
         16,
         20,
         24,
-        32
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -2885,23 +3157,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "16": "assets/icons/product/password-manager/filled-16.svg",
-          "20": "assets/icons/product/password-manager/filled-20.svg",
-          "24": "assets/icons/product/password-manager/filled-24.svg",
-          "32": "assets/icons/product/password-manager/filled-32.svg"
+        "standard": {
+          "16": "assets/icons/product/password-manager/standard-16.svg",
+          "20": "assets/icons/product/password-manager/standard-20.svg",
+          "24": "assets/icons/product/password-manager/standard-24.svg",
+          "28": "assets/icons/product/password-manager/standard-28.svg",
+          "32": "assets/icons/product/password-manager/standard-32.svg",
+          "48": "assets/icons/product/password-manager/standard-48.svg"
         },
         "outline": {
           "16": "assets/icons/product/password-manager/outline-16.svg",
           "20": "assets/icons/product/password-manager/outline-20.svg",
           "24": "assets/icons/product/password-manager/outline-24.svg",
-          "32": "assets/icons/product/password-manager/outline-32.svg"
+          "28": "assets/icons/product/password-manager/outline-28.svg",
+          "32": "assets/icons/product/password-manager/outline-32.svg",
+          "48": "assets/icons/product/password-manager/outline-48.svg"
         },
-        "standard": {
-          "16": "assets/icons/product/password-manager/standard-16.svg",
-          "20": "assets/icons/product/password-manager/standard-20.svg",
-          "24": "assets/icons/product/password-manager/standard-24.svg",
-          "32": "assets/icons/product/password-manager/standard-32.svg"
+        "filled": {
+          "16": "assets/icons/product/password-manager/filled-16.svg",
+          "20": "assets/icons/product/password-manager/filled-20.svg",
+          "24": "assets/icons/product/password-manager/filled-24.svg",
+          "28": "assets/icons/product/password-manager/filled-28.svg",
+          "32": "assets/icons/product/password-manager/filled-32.svg",
+          "48": "assets/icons/product/password-manager/filled-48.svg"
         }
       },
       "figma": {
@@ -2910,7 +3188,15 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:28",
+        "filled:48",
+        "outline:28",
+        "outline:48",
+        "standard:28",
+        "standard:48"
+      ]
     },
     {
       "id": "product.people-taskbar",
@@ -3660,15 +3946,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
-        12,
         16,
         20,
         24,
-        28
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -3676,19 +3964,29 @@
       },
       "recolorable": true,
       "variants": {
-        "outline": {
-          "12": "assets/icons/product/skype/outline-12.svg",
-          "16": "assets/icons/product/skype/outline-16.svg",
-          "20": "assets/icons/product/skype/outline-20.svg",
-          "24": "assets/icons/product/skype/outline-24.svg",
-          "28": "assets/icons/product/skype/outline-28.svg"
-        },
         "standard": {
-          "12": "assets/icons/product/skype/standard-12.svg",
           "16": "assets/icons/product/skype/standard-16.svg",
           "20": "assets/icons/product/skype/standard-20.svg",
           "24": "assets/icons/product/skype/standard-24.svg",
-          "28": "assets/icons/product/skype/standard-28.svg"
+          "28": "assets/icons/product/skype/standard-28.svg",
+          "32": "assets/icons/product/skype/standard-32.svg",
+          "48": "assets/icons/product/skype/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/skype/outline-16.svg",
+          "20": "assets/icons/product/skype/outline-20.svg",
+          "24": "assets/icons/product/skype/outline-24.svg",
+          "28": "assets/icons/product/skype/outline-28.svg",
+          "32": "assets/icons/product/skype/outline-32.svg",
+          "48": "assets/icons/product/skype/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/skype/filled-16.svg",
+          "20": "assets/icons/product/skype/filled-20.svg",
+          "24": "assets/icons/product/skype/filled-24.svg",
+          "28": "assets/icons/product/skype/filled-28.svg",
+          "32": "assets/icons/product/skype/filled-32.svg",
+          "48": "assets/icons/product/skype/filled-48.svg"
         }
       },
       "figma": {
@@ -3697,7 +3995,19 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48",
+        "outline:32",
+        "outline:48",
+        "standard:32",
+        "standard:48"
+      ]
     },
     {
       "id": "product.skype-for-business",
@@ -3711,12 +4021,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
+        16,
+        20,
         24,
-        28
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -3724,13 +4039,29 @@
       },
       "recolorable": true,
       "variants": {
-        "outline": {
-          "24": "assets/icons/product/skype-for-business/outline-24.svg",
-          "28": "assets/icons/product/skype-for-business/outline-28.svg"
-        },
         "standard": {
+          "16": "assets/icons/product/skype-for-business/standard-16.svg",
+          "20": "assets/icons/product/skype-for-business/standard-20.svg",
           "24": "assets/icons/product/skype-for-business/standard-24.svg",
-          "28": "assets/icons/product/skype-for-business/standard-28.svg"
+          "28": "assets/icons/product/skype-for-business/standard-28.svg",
+          "32": "assets/icons/product/skype-for-business/standard-32.svg",
+          "48": "assets/icons/product/skype-for-business/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/skype-for-business/outline-16.svg",
+          "20": "assets/icons/product/skype-for-business/outline-20.svg",
+          "24": "assets/icons/product/skype-for-business/outline-24.svg",
+          "28": "assets/icons/product/skype-for-business/outline-28.svg",
+          "32": "assets/icons/product/skype-for-business/outline-32.svg",
+          "48": "assets/icons/product/skype-for-business/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/skype-for-business/filled-16.svg",
+          "20": "assets/icons/product/skype-for-business/filled-20.svg",
+          "24": "assets/icons/product/skype-for-business/filled-24.svg",
+          "28": "assets/icons/product/skype-for-business/filled-28.svg",
+          "32": "assets/icons/product/skype-for-business/filled-32.svg",
+          "48": "assets/icons/product/skype-for-business/filled-48.svg"
         }
       },
       "figma": {
@@ -3739,7 +4070,23 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:24",
+        "filled:28",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:32",
+        "standard:48"
+      ]
     },
     {
       "id": "product.sticky-notes",
@@ -3997,12 +4344,16 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
+        16,
+        20,
         24,
         28,
+        32,
         48
       ],
       "colors": {
@@ -4011,15 +4362,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "24": "assets/icons/product/swiftkey/filled-24.svg",
-          "28": "assets/icons/product/swiftkey/filled-28.svg",
-          "48": "assets/icons/product/swiftkey/filled-48.svg"
-        },
         "standard": {
+          "16": "assets/icons/product/swiftkey/standard-16.svg",
+          "20": "assets/icons/product/swiftkey/standard-20.svg",
           "24": "assets/icons/product/swiftkey/standard-24.svg",
           "28": "assets/icons/product/swiftkey/standard-28.svg",
+          "32": "assets/icons/product/swiftkey/standard-32.svg",
           "48": "assets/icons/product/swiftkey/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/swiftkey/outline-16.svg",
+          "20": "assets/icons/product/swiftkey/outline-20.svg",
+          "24": "assets/icons/product/swiftkey/outline-24.svg",
+          "28": "assets/icons/product/swiftkey/outline-28.svg",
+          "32": "assets/icons/product/swiftkey/outline-32.svg",
+          "48": "assets/icons/product/swiftkey/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/swiftkey/filled-16.svg",
+          "20": "assets/icons/product/swiftkey/filled-20.svg",
+          "24": "assets/icons/product/swiftkey/filled-24.svg",
+          "28": "assets/icons/product/swiftkey/filled-28.svg",
+          "32": "assets/icons/product/swiftkey/filled-32.svg",
+          "48": "assets/icons/product/swiftkey/filled-48.svg"
         }
       },
       "figma": {
@@ -4028,7 +4393,21 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:32",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:32"
+      ]
     },
     {
       "id": "product.teams",
@@ -4102,15 +4481,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
+        "standard",
         "outline",
-        "standard"
+        "filled"
       ],
       "sizes": [
+        16,
         20,
         24,
         28,
-        32
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -4118,21 +4499,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "20": "assets/icons/product/to-do/filled-20.svg",
-          "24": "assets/icons/product/to-do/filled-24.svg",
-          "28": "assets/icons/product/to-do/filled-28.svg"
-        },
-        "outline": {
-          "20": "assets/icons/product/to-do/outline-20.svg",
-          "24": "assets/icons/product/to-do/outline-24.svg",
-          "28": "assets/icons/product/to-do/outline-28.svg"
-        },
         "standard": {
+          "16": "assets/icons/product/to-do/standard-16.svg",
           "20": "assets/icons/product/to-do/standard-20.svg",
           "24": "assets/icons/product/to-do/standard-24.svg",
           "28": "assets/icons/product/to-do/standard-28.svg",
-          "32": "assets/icons/product/to-do/standard-32.svg"
+          "32": "assets/icons/product/to-do/standard-32.svg",
+          "48": "assets/icons/product/to-do/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/to-do/outline-16.svg",
+          "20": "assets/icons/product/to-do/outline-20.svg",
+          "24": "assets/icons/product/to-do/outline-24.svg",
+          "28": "assets/icons/product/to-do/outline-28.svg",
+          "32": "assets/icons/product/to-do/outline-32.svg",
+          "48": "assets/icons/product/to-do/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/to-do/filled-16.svg",
+          "20": "assets/icons/product/to-do/filled-20.svg",
+          "24": "assets/icons/product/to-do/filled-24.svg",
+          "28": "assets/icons/product/to-do/filled-28.svg",
+          "32": "assets/icons/product/to-do/filled-32.svg",
+          "48": "assets/icons/product/to-do/filled-48.svg"
         }
       },
       "figma": {
@@ -4141,7 +4530,17 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:48"
+      ]
     },
     {
       "id": "product.translator",
@@ -4153,12 +4552,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
+        16,
+        20,
         24,
-        28
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -4166,13 +4570,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "24": "assets/icons/product/translator/filled-24.svg",
-          "28": "assets/icons/product/translator/filled-28.svg"
-        },
         "standard": {
+          "16": "assets/icons/product/translator/standard-16.svg",
+          "20": "assets/icons/product/translator/standard-20.svg",
           "24": "assets/icons/product/translator/standard-24.svg",
-          "28": "assets/icons/product/translator/standard-28.svg"
+          "28": "assets/icons/product/translator/standard-28.svg",
+          "32": "assets/icons/product/translator/standard-32.svg",
+          "48": "assets/icons/product/translator/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/translator/outline-16.svg",
+          "20": "assets/icons/product/translator/outline-20.svg",
+          "24": "assets/icons/product/translator/outline-24.svg",
+          "28": "assets/icons/product/translator/outline-28.svg",
+          "32": "assets/icons/product/translator/outline-32.svg",
+          "48": "assets/icons/product/translator/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/translator/filled-16.svg",
+          "20": "assets/icons/product/translator/filled-20.svg",
+          "24": "assets/icons/product/translator/filled-24.svg",
+          "28": "assets/icons/product/translator/filled-28.svg",
+          "32": "assets/icons/product/translator/filled-32.svg",
+          "48": "assets/icons/product/translator/filled-48.svg"
         }
       },
       "figma": {
@@ -4181,7 +4601,23 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:32",
+        "standard:48"
+      ]
     },
     {
       "id": "product.visio",
@@ -5226,11 +5662,17 @@
       "collection": "product",
       "status": "draft",
       "themes": [
-        "filled",
-        "standard"
+        "standard",
+        "outline",
+        "filled"
       ],
       "sizes": [
-        24
+        16,
+        20,
+        24,
+        28,
+        32,
+        48
       ],
       "colors": {
         "primary": "#0078D4",
@@ -5238,11 +5680,29 @@
       },
       "recolorable": true,
       "variants": {
-        "filled": {
-          "24": "assets/icons/product/windows/filled-24.svg"
-        },
         "standard": {
-          "24": "assets/icons/product/windows/standard-24.svg"
+          "16": "assets/icons/product/windows/standard-16.svg",
+          "20": "assets/icons/product/windows/standard-20.svg",
+          "24": "assets/icons/product/windows/standard-24.svg",
+          "28": "assets/icons/product/windows/standard-28.svg",
+          "32": "assets/icons/product/windows/standard-32.svg",
+          "48": "assets/icons/product/windows/standard-48.svg"
+        },
+        "outline": {
+          "16": "assets/icons/product/windows/outline-16.svg",
+          "20": "assets/icons/product/windows/outline-20.svg",
+          "24": "assets/icons/product/windows/outline-24.svg",
+          "28": "assets/icons/product/windows/outline-28.svg",
+          "32": "assets/icons/product/windows/outline-32.svg",
+          "48": "assets/icons/product/windows/outline-48.svg"
+        },
+        "filled": {
+          "16": "assets/icons/product/windows/filled-16.svg",
+          "20": "assets/icons/product/windows/filled-20.svg",
+          "24": "assets/icons/product/windows/filled-24.svg",
+          "28": "assets/icons/product/windows/filled-28.svg",
+          "32": "assets/icons/product/windows/filled-32.svg",
+          "48": "assets/icons/product/windows/filled-48.svg"
         }
       },
       "figma": {
@@ -5251,7 +5711,25 @@
       },
       "version": "1.0.0",
       "updated": "2026-08-28",
-      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+      "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+      "placeholders": [
+        "filled:16",
+        "filled:20",
+        "filled:28",
+        "filled:32",
+        "filled:48",
+        "outline:16",
+        "outline:20",
+        "outline:24",
+        "outline:28",
+        "outline:32",
+        "outline:48",
+        "standard:16",
+        "standard:20",
+        "standard:28",
+        "standard:32",
+        "standard:48"
+      ]
     },
     {
       "id": "product.word",

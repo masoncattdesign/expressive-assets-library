@@ -1,0 +1,11 @@
+<svg aria-label="To Do standard 16" role="img" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 20px standard drawing shown at 16px, not authored at this size -->
+<path d="M3.36709 6.98099L1.32278 9.02529C0.892405 9.45567 0.892405 10.1012 1.32278 10.5316L4.98101 14.0823L8.53165 10.5316L4.98101 6.98099C4.55063 6.55061 3.79747 6.55061 3.36709 6.98099Z" fill="#185ABD"/>
+<path d="M17.6772 5.47468L15.6329 3.32278C15.2025 2.89241 14.557 2.89241 14.1266 3.32278L11.3291 6.12025L7.77849 9.77848L4.98102 12.576C4.55064 13.0063 4.55064 13.6519 4.98102 14.0823L7.02532 16.1266C7.4557 16.557 8.10127 16.557 8.53165 16.1266L11.3291 13.3291L14.8798 9.77848L17.6772 6.98101C18.1076 6.55063 18.1076 5.79747 17.6772 5.47468Z" fill="url(#product-to-do-standard-20-paint0_linear_72779_86)"/>
+<defs>
+<linearGradient id="product-to-do-standard-20-paint0_linear_72779_86" x1="11.098" y1="-0.731524" x2="0.925538" y2="9.81288" gradientUnits="userSpaceOnUse">
+<stop stop-color="#62C4F6"/>
+<stop offset="1" stop-color="#2A88E5"/>
+</linearGradient>
+</defs>
+</svg>

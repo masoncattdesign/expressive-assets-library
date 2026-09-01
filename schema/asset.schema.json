@@ -35,13 +35,19 @@
       "type": "array",
       "description": "Names this asset used to have, or is commonly called. Search matches against these, so a rename never makes an asset unfindable for the people who learned the old name.",
       "uniqueItems": true,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "keywords": {
       "type": "array",
       "description": "Search terms, especially synonyms someone would type who does not know the asset's name. At 500+ assets this is the difference between a library and a folder of SVGs.",
       "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9 -]+$" }
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9 -]+$"
+      }
     },
     "description": {
       "type": "string",
@@ -51,12 +57,21 @@
     "type": {
       "type": "string",
       "description": "Top-level asset kind.",
-      "enum": ["icon", "illustration"]
+      "enum": [
+        "icon",
+        "illustration"
+      ]
     },
     "collection": {
       "type": "string",
       "description": "Sub-collection within the type. Extend this list as new collections are added — it is deliberately open to growth.",
-      "enum": ["system", "product", "file", "oobe", "m365"]
+      "enum": [
+        "system",
+        "product",
+        "file",
+        "oobe",
+        "m365"
+      ]
     },
     "product": {
       "type": "string",
@@ -66,7 +81,11 @@
     "status": {
       "type": "string",
       "description": "The single lifecycle axis. draft = in progress, do not ship. published = approved for use. deprecated = still present for back-compat, must not be used in new work.",
-      "enum": ["draft", "published", "deprecated"]
+      "enum": [
+        "draft",
+        "published",
+        "deprecated"
+      ]
     },
     "replacedBy": {
       "type": "string",
@@ -78,23 +97,42 @@
       "description": "Rendered theme variants that exist on disk. standard is the full-colour base; outline and filled are the monochrome reductions. The keys match what the UI shows, so nothing means two things in two places.",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "enum": ["standard", "outline", "filled"] }
+      "items": {
+        "enum": [
+          "standard",
+          "outline",
+          "filled"
+        ]
+      }
     },
     "sizes": {
       "type": "array",
       "description": "Pixel sizes the artwork is designed to read correctly at — not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12.",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "type": "integer", "minimum": 8, "maximum": 512 }
+      "items": {
+        "type": "integer",
+        "minimum": 8,
+        "maximum": 512
+      }
     },
     "colors": {
       "type": "object",
       "description": "Brand colours baked into the standard variant.",
       "additionalProperties": false,
-      "required": ["primary", "secondary"],
+      "required": [
+        "primary",
+        "secondary"
+      ],
       "properties": {
-        "primary": { "type": "string", "pattern": "^#[0-9A-F]{6}$" },
-        "secondary": { "type": "string", "pattern": "^#[0-9A-F]{6}$" }
+        "primary": {
+          "type": "string",
+          "pattern": "^#[0-9A-F]{6}$"
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#[0-9A-F]{6}$"
+        }
       }
     },
     "recolorable": {
@@ -108,30 +146,59 @@
       "additionalProperties": {
         "type": "object",
         "minProperties": 1,
-        "propertyNames": { "pattern": "^(any|[0-9]{1,3})$" },
-        "additionalProperties": { "type": "string", "pattern": "^assets/.+\\.svg$" }
+        "propertyNames": {
+          "pattern": "^(any|[0-9]{1,3})$"
+        },
+        "additionalProperties": {
+          "type": "string",
+          "pattern": "^assets/.+\\.svg$"
+        }
       }
     },
     "figma": {
       "type": "object",
       "description": "Where this artwork came from upstream. At 500+ assets, being able to jump from a file on disk back to the component that produced it is not optional.",
       "additionalProperties": false,
-      "required": ["fileKey", "nodeId"],
+      "required": [
+        "fileKey",
+        "nodeId"
+      ],
       "properties": {
-        "fileKey": { "type": "string", "minLength": 1 },
-        "nodeId": { "type": "string", "minLength": 1 }
+        "fileKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nodeId": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "source": {
       "type": "object",
       "description": "Upstream provenance for artwork the library did not draw. Required in practice for anything vendored from a third-party project — the licence obligation travels with the file, not with the README, and an asset that cannot name where it came from cannot be audited later.",
       "additionalProperties": false,
-      "required": ["project", "license"],
+      "required": [
+        "project",
+        "license"
+      ],
       "properties": {
-        "project": { "type": "string", "minLength": 1 },
-        "url": { "type": "string", "minLength": 1 },
-        "license": { "type": "string", "minLength": 1 },
-        "copyright": { "type": "string", "minLength": 1 }
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copyright": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "owner": {
@@ -152,6 +219,15 @@
     "notes": {
       "type": "string",
       "description": "Usage guidance, restrictions, or redraw history."
+    },
+    "placeholders": {
+      "type": "array",
+      "description": "Cells in the style-by-size matrix that were generated to complete it rather than authored, as \"style:size\" strings. A placeholder is either the same drawing shown at another size, or a silhouette derived from Standard. It exists so the matrix is square and the gap is visible; it is not a substitute for a drawing. Absent means every variant listed is authored artwork.",
+      "items": {
+        "type": "string",
+        "pattern": "^(standard|outline|filled):(any|[0-9]{1,3})$"
+      },
+      "uniqueItems": true
     }
   }
 }

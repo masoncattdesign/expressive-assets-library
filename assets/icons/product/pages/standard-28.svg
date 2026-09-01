@@ -1,0 +1,21 @@
+<svg aria-label="Pages standard 28" role="img" width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 48px standard drawing shown at 28px, not authored at this size -->
+<path d="M7.22751 42.74L14 35L34.5 33.5V15.5H36V16.0049C39.3359 16.1361 42 18.882 42 22.25V37.75C42 41.2018 39.2018 44 35.75 44H10.25C9.06831 44 7.9983 43.5185 7.22751 42.74Z" fill="url(#product-pages-standard-48-paint0_linear_447383_19)"/>
+<path d="M6.5 41.7553C6.77436 42.2676 7.15082 42.7169 7.6021 43.0762C15.0182 37.277 26.5489 36.0337 32.3723 35.7901C34.3563 35.707 36 34.0988 36 32.113V12.75C36 10.4028 34.0972 8.5 31.75 8.5H30C20.3805 8.50002 6.50001 32.0002 6.5 41.7553Z" fill="url(#product-pages-standard-48-paint1_radial_447383_19)"/>
+<path d="M30 5.16764C30 3.15496 28.1546 1.51706 26.0751 2.1306C23.2208 2.9728 18.2453 4.81458 13.9611 8.3445C9.64498 11.9008 6 17.205 6 24.8688V39.7041C6 40.5501 6.23613 41.3646 6.65741 42.027C7.86108 35.0178 15.5252 30.4705 26.0026 29.5627C28.2036 29.372 30 27.593 30 25.3718V5.16764Z" fill="url(#product-pages-standard-48-paint2_radial_447383_19)"/>
+<defs>
+<linearGradient id="product-pages-standard-48-paint0_linear_447383_19" x1="32.5325" y1="23.128" x2="120.888" y2="158.402" gradientUnits="userSpaceOnUse">
+<stop offset="0.0347811" stop-color="#5029CE"/>
+<stop offset="0.169224" stop-color="#C570FB"/>
+</linearGradient>
+<radialGradient id="product-pages-standard-48-paint1_radial_447383_19" cx="0" cy="0" r="1" gradientTransform="matrix(-28.0932 -38.2294 45.4694 -72.6224 33.8966 40.4855)" gradientUnits="userSpaceOnUse">
+<stop offset="0.224919" stop-color="#E331D8"/>
+<stop offset="0.688249" stop-color="#DB374F"/>
+</radialGradient>
+<radialGradient id="product-pages-standard-48-paint2_radial_447383_19" cx="0" cy="0" r="1" gradientTransform="matrix(19.8728 40.6493 -29.4258 30.7183 10.5365 -6.0023)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8C48FF"/>
+<stop offset="0.384017" stop-color="#F2598A"/>
+<stop offset="0.853186" stop-color="#FFB152"/>
+</radialGradient>
+</defs>
+</svg>

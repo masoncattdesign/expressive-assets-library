@@ -8,11 +8,17 @@
   "collection": "product",
   "status": "draft",
   "themes": [
+    "standard",
     "outline",
-    "standard"
+    "filled"
   ],
   "sizes": [
-    24
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
   ],
   "colors": {
     "primary": "#0078D4",
@@ -20,11 +26,29 @@
   },
   "recolorable": true,
   "variants": {
-    "outline": {
-      "24": "assets/icons/product/launcher/outline-24.svg"
-    },
     "standard": {
-      "24": "assets/icons/product/launcher/standard-24.svg"
+      "16": "assets/icons/product/launcher/standard-16.svg",
+      "20": "assets/icons/product/launcher/standard-20.svg",
+      "24": "assets/icons/product/launcher/standard-24.svg",
+      "28": "assets/icons/product/launcher/standard-28.svg",
+      "32": "assets/icons/product/launcher/standard-32.svg",
+      "48": "assets/icons/product/launcher/standard-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/launcher/outline-16.svg",
+      "20": "assets/icons/product/launcher/outline-20.svg",
+      "24": "assets/icons/product/launcher/outline-24.svg",
+      "28": "assets/icons/product/launcher/outline-28.svg",
+      "32": "assets/icons/product/launcher/outline-32.svg",
+      "48": "assets/icons/product/launcher/outline-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/launcher/filled-16.svg",
+      "20": "assets/icons/product/launcher/filled-20.svg",
+      "24": "assets/icons/product/launcher/filled-24.svg",
+      "28": "assets/icons/product/launcher/filled-28.svg",
+      "32": "assets/icons/product/launcher/filled-32.svg",
+      "48": "assets/icons/product/launcher/filled-48.svg"
     }
   },
   "figma": {
@@ -33,5 +57,23 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "placeholders": [
+    "filled:16",
+    "filled:20",
+    "filled:24",
+    "filled:28",
+    "filled:32",
+    "filled:48",
+    "outline:16",
+    "outline:20",
+    "outline:28",
+    "outline:32",
+    "outline:48",
+    "standard:16",
+    "standard:20",
+    "standard:28",
+    "standard:32",
+    "standard:48"
+  ]
 }

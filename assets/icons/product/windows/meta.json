@@ -8,11 +8,17 @@
   "collection": "product",
   "status": "draft",
   "themes": [
-    "filled",
-    "standard"
+    "standard",
+    "outline",
+    "filled"
   ],
   "sizes": [
-    24
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
   ],
   "colors": {
     "primary": "#0078D4",
@@ -20,11 +26,29 @@
   },
   "recolorable": true,
   "variants": {
-    "filled": {
-      "24": "assets/icons/product/windows/filled-24.svg"
-    },
     "standard": {
-      "24": "assets/icons/product/windows/standard-24.svg"
+      "16": "assets/icons/product/windows/standard-16.svg",
+      "20": "assets/icons/product/windows/standard-20.svg",
+      "24": "assets/icons/product/windows/standard-24.svg",
+      "28": "assets/icons/product/windows/standard-28.svg",
+      "32": "assets/icons/product/windows/standard-32.svg",
+      "48": "assets/icons/product/windows/standard-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/product/windows/outline-16.svg",
+      "20": "assets/icons/product/windows/outline-20.svg",
+      "24": "assets/icons/product/windows/outline-24.svg",
+      "28": "assets/icons/product/windows/outline-28.svg",
+      "32": "assets/icons/product/windows/outline-32.svg",
+      "48": "assets/icons/product/windows/outline-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/product/windows/filled-16.svg",
+      "20": "assets/icons/product/windows/filled-20.svg",
+      "24": "assets/icons/product/windows/filled-24.svg",
+      "28": "assets/icons/product/windows/filled-28.svg",
+      "32": "assets/icons/product/windows/filled-32.svg",
+      "48": "assets/icons/product/windows/filled-48.svg"
     }
   },
   "figma": {
@@ -33,5 +57,23 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "placeholders": [
+    "filled:16",
+    "filled:20",
+    "filled:28",
+    "filled:32",
+    "filled:48",
+    "outline:16",
+    "outline:20",
+    "outline:24",
+    "outline:28",
+    "outline:32",
+    "outline:48",
+    "standard:16",
+    "standard:20",
+    "standard:28",
+    "standard:32",
+    "standard:48"
+  ]
 }
