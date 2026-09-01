@@ -1,5 +1,5 @@
 <svg aria-label="Minecraft World filled 36" role="img" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 5.5C6 3.567 7.567 2 9.5 2H23C26.866 2 30 5.13401 30 9V30.5C30 32.433 28.433 34 26.5 34H13C9.13401 34 6 30.866 6 27V5.5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M6 5.5C6 3.567 7.567 2 9.5 2H23C26.866 2 30 5.13401 30 9V30.5C30 32.433 28.433 34 26.5 34H13C9.13401 34 6 30.866 6 27V5.5Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.13" stroke-linejoin="round"/>
 <path d="M7 5.5C7 4.11929 8.11929 3 9.5 3H23C26.3137 3 29 5.68629 29 9V30.5C29 31.8807 27.8807 33 26.5 33H13C9.68629 33 7 30.3137 7 27V5.5Z" fill="currentColor"/>
 <path d="M7 5.5C7 4.11929 8.11929 3 9.5 3H23C26.3137 3 29 5.68629 29 9V30.5C29 31.8807 27.8807 33 26.5 33H13C9.68629 33 7 30.3137 7 27V5.5Z" fill="currentColor"/>
 <path d="M12.5 10H10V12.5H12.5V10Z" fill="currentColor"/>

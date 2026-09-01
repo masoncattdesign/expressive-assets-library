@@ -1,7 +1,7 @@
 <svg aria-label="Photo filled 64" role="img" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 14C8 10.6863 10.6863 8 14 8H44C50.6274 8 56 13.3726 56 20V50C56 53.3137 53.3137 56 50 56H20C13.3726 56 8 50.6274 8 44V14Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M8 14C8 10.6863 10.6863 8 14 8H44C50.6274 8 56 13.3726 56 20V50C56 53.3137 53.3137 56 50 56H20C13.3726 56 8 50.6274 8 44V14Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
 <path d="M9 14C9 11.2386 11.2386 9 14 9H44C50.0751 9 55 13.9249 55 20V50C55 52.7614 52.7614 55 50 55H20C13.9249 55 9 50.0751 9 44V14Z" fill="currentColor"/>
 <path d="M9 14C9 11.2386 11.2386 9 14 9H44C50.0751 9 55 13.9249 55 20V50C55 52.7614 52.7614 55 50 55H20C13.9249 55 9 50.0751 9 44V14Z" fill="currentColor"/>
-<path d="M30.0547 30.2304L19.9808 40.3056C18.2485 42.038 19.4755 45 21.9254 45H42.0758C44.5259 45 45.7528 42.0377 44.0202 40.3053L33.9438 30.2301C32.8698 29.1563 31.1286 29.1564 30.0547 30.2304Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M30.0547 30.2304L19.9808 40.3056C18.2485 42.038 19.4755 45 21.9254 45H42.0758C44.5259 45 45.7528 42.0377 44.0202 40.3053L33.9438 30.2301C32.8698 29.1563 31.1286 29.1564 30.0547 30.2304Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="41.5" cy="22.5" r="3.5" fill="var(--ea-knockout, #fff)"/>
 </svg>

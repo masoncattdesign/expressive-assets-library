@@ -1,15 +1,15 @@
 <svg aria-label="Lists Form filled 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
 <path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
-<path d="M26 12C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H18V23.5C18 22.6716 17.3284 22 16.5 22H12V14C12 12.8954 12.8954 12 14 12H26Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M23.9521 21C25.0567 21 25.9521 21.8954 25.9521 23C25.9521 24.1046 25.0567 25 23.9521 25H17.9668V24H23.9521C24.5044 24 24.9521 23.5523 24.9521 23C24.9521 22.4477 24.5044 22 23.9521 22H14.3691C14.7151 21.4027 15.3597 21 16.0996 21H23.9521Z" fill="var(--ea-knockout, #fff)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M23.9521 15C25.0567 15 25.9521 15.8954 25.9521 17C25.9521 18.1046 25.0567 19 23.9521 19H16.0996C14.995 19 14.0996 18.1046 14.0996 17C14.0996 15.8954 14.995 15 16.0996 15H23.9521ZM16.0996 16C15.5473 16 15.0996 16.4477 15.0996 17C15.0996 17.5523 15.5473 18 16.0996 18H23.9521C24.5044 18 24.9521 17.5523 24.9521 17C24.9521 16.4477 24.5044 16 23.9521 16H16.0996Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M26 12C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H18V23.5C18 22.6716 17.3284 22 16.5 22H12V14C12 12.8954 12.8954 12 14 12H26Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M23.9521 21C25.0567 21 25.9521 21.8954 25.9521 23C25.9521 24.1046 25.0567 25 23.9521 25H17.9668V24H23.9521C24.5044 24 24.9521 23.5523 24.9521 23C24.9521 22.4477 24.5044 22 23.9521 22H14.3691C14.7151 21.4027 15.3597 21 16.0996 21H23.9521Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.9521 15C25.0567 15 25.9521 15.8954 25.9521 17C25.9521 18.1046 25.0567 19 23.9521 19H16.0996C14.995 19 14.0996 18.1046 14.0996 17C14.0996 15.8954 14.995 15 16.0996 15H23.9521ZM16.0996 16C15.5473 16 15.0996 16.4477 15.0996 17C15.0996 17.5523 15.5473 18 16.0996 18H23.9521C24.5044 18 24.9521 17.5523 24.9521 17C24.9521 16.4477 24.5044 16 23.9521 16H16.0996Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M1 27L5 23H16.3643C16.7167 23 17 23.2833 17 23.6357V27L9 28.8333L1 27Z" fill="currentColor"/>
-<path d="M5.95238 30.881L1 32.9286V27H5L5.95238 30.881Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M17 31.0476V27H5V31.0952L10.4524 32.0714L17 31.0476Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M17.0001 35V31H4.11914V35.0238L12.0477 35.7619L17.0001 35Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M5 35L1 36.3333V31H5V35Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M4.99991 35L4.38086 36.9048L4.99991 39H12.9999L16.9999 35H4.99991Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M5 39H1.75238C1.33571 39 1 38.6643 1 38.2476V35H5V39Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M5.95238 30.881L1 32.9286V27H5L5.95238 30.881Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M17 31.0476V27H5V31.0952L10.4524 32.0714L17 31.0476Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M17.0001 35V31H4.11914V35.0238L12.0477 35.7619L17.0001 35Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M5 35L1 36.3333V31H5V35Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M4.99991 35L4.38086 36.9048L4.99991 39H12.9999L16.9999 35H4.99991Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M5 39H1.75238C1.33571 39 1 38.6643 1 38.2476V35H5V39Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 </svg>

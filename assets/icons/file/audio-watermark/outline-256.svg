@@ -1,4 +1,4 @@
-<svg Audio Watermark outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg aria-label="Audio Watermark outline 256" Audio Watermark outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M56 35H176C200.853 35 221 55.1472 221 80V200C221 211.598 211.598 221 200 221H80C55.1472 221 35 200.853 35 176V56C35 44.402 44.402 35 56 35Z" fill="currentColor"/>
 <path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M40 56C40 47.1634 47.1634 40 56 40H176C198.091 40 216 57.9086 216 80V200C216 208.837 208.837 216 200 216H80C57.9086 216 40 198.091 40 176V56Z" fill="var(--ea-knockout, #fff)"/>

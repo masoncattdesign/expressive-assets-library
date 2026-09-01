@@ -1,9 +1,9 @@
 <svg aria-label="Vault Open filled 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="2" y="7" width="36" height="27" rx="6.5" fill="currentColor"/>
-<rect x="4" y="9" width="32" height="23" rx="4.5" fill="var(--ea-knockout, #fff)"/>
-<rect x="4" y="9" width="32" height="23" rx="4.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.28"/>
+<rect x="4" y="9" width="32" height="23" rx="4.5" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<rect x="4" y="9" width="32" height="23" rx="4.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.28" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M12 13C12 11.8954 12.8954 11 14 11H22C24.2091 11 26 12.7909 26 15V28C26 29.1046 25.1046 30 24 30H16C13.7909 30 12 28.2091 12 26V13Z" fill="currentColor"/>
 <path d="M12 13C12 11.8954 12.8954 11 14 11H22C24.2091 11 26 12.7909 26 15V28C26 29.1046 25.1046 30 24 30H16C13.7909 30 12 28.2091 12 26V13Z" fill="currentColor"/>
 <rect x="34" y="9" width="2" height="23" rx="1" fill="currentColor"/>
-<path d="M32 13C32 11.8954 32.8954 11 34 11V30C32.8954 30 32 29.1046 32 28V13Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M32 13C32 11.8954 32.8954 11 34 11V30C32.8954 30 32 29.1046 32 28V13Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 </svg>

@@ -1,10 +1,10 @@
 <svg aria-label="Visio Shape Stencil filled 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="var(--ea-knockout, #fff)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 <path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="currentColor"/>
 <path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="currentColor"/>
 <path d="M116 80C120.418 80 124 83.5817 124 88V116C124 120.418 120.418 124 116 124H72C67.5817 124 64 120.418 64 116V88C64 83.5817 67.5817 80 72 80H116Z" fill="var(--ea-knockout, #fff)"/>
 <rect x="132" y="80" width="60" height="44" rx="8" fill="var(--ea-knockout, #fff)"/>
 <rect x="132" y="132" width="60" height="44" rx="8" fill="var(--ea-knockout, #fff)"/>
-<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 <path d="M90.627 164L71.3409 220H57.0519L38 164H51.4301L63.2594 201.646C63.5457 202.531 63.7669 203.299 63.9231 203.95C64.0793 204.575 64.2615 205.33 64.4697 206.215H64.7039C64.9121 205.278 65.0813 204.497 65.2114 203.872C65.3416 203.221 65.5498 202.427 65.8361 201.49L77.5874 164H90.627Z" fill="currentColor"/>
 </svg>

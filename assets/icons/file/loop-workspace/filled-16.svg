@@ -1,14 +1,14 @@
 <svg aria-label="Loop Workspace filled 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 4C1 2.89543 1.89543 2 3 2H11.5C13.433 2 15 3.567 15 5.5V12C15 13.1046 14.1046 14 13 14H4.5C2.567 14 1 12.433 1 10.5V4Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M1 4C1 2.89543 1.89543 2 3 2H11.5C13.433 2 15 3.567 15 5.5V12C15 13.1046 14.1046 14 13 14H4.5C2.567 14 1 12.433 1 10.5V4Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="currentColor"/>
 <path d="M2 4C2 3.44772 2.44772 3 3 3H11.5C12.8807 3 14 4.11929 14 5.5V12C14 12.5523 13.5523 13 13 13H4.5C3.11929 13 2 11.8807 2 10.5V4Z" fill="currentColor"/>
 <path d="M12 10C12 10.5523 11.5523 11 11 11H8.89941C8.4361 8.71781 6.41892 7 4 7V6H12V10Z" fill="currentColor"/>
-<path d="M11 5C11.5523 5 12 5.44772 12 6V7H4V6C4 5.44772 4.44772 5 5 5H11Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M11 5C11.5523 5 12 5.44772 12 6V7H4V6C4 5.44772 4.44772 5 5 5H11Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5C5.38071 9.5 6.5 10.6193 6.5 12Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C6.20914 8 8 9.79086 8 12C8 14.2091 6.20914 16 4 16H0V12C0 9.79086 1.79086 8 4 8ZM4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5H4C4.82843 13.5 5.5 12.8284 5.5 12C5.5 11.1716 4.82843 10.5 4 10.5Z" fill="var(--ea-knockout, #fff)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C6.20914 8 8 9.79086 8 12C8 14.2091 6.20914 16 4 16H0V12C0 9.79086 1.79086 8 4 8ZM4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5H4C4.82843 13.5 5.5 12.8284 5.5 12C5.5 11.1716 4.82843 10.5 4 10.5Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="currentColor"/>
 <path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="currentColor" fill-opacity="0.56"/>
 <path d="M8 12C8 14.2091 6.20908 15.9999 4 16H0C0 14.6193 1.11929 13.5 2.5 13.5H4C4.77661 13.4999 5.4154 12.9097 5.49219 12.1533L5.5 12H8Z" fill="currentColor" fill-opacity="0.1"/>
-<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M4 8C5.10457 8 6.10427 8.44802 6.82812 9.17188L5.06055 10.9395C4.7891 10.668 4.41421 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12V13.5C2.5 14.8807 1.38071 16 0 16V12C0 9.79086 1.79086 8 4 8Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 </svg>

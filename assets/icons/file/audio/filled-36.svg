@@ -1,5 +1,5 @@
 <svg aria-label="Audio filled 36" role="img" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 7.5C4 5.567 5.567 4 7.5 4H25C28.866 4 32 7.13401 32 11V28.5C32 30.433 30.433 32 28.5 32H11C7.13401 32 4 28.866 4 25V7.5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M4 7.5C4 5.567 5.567 4 7.5 4H25C28.866 4 32 7.13401 32 11V28.5C32 30.433 30.433 32 28.5 32H11C7.13401 32 4 28.866 4 25V7.5Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.13" stroke-linejoin="round"/>
 <path d="M5 7.5C5 6.11929 6.11929 5 7.5 5H25C28.3137 5 31 7.68629 31 11V28.5C31 29.8807 29.8807 31 28.5 31H11C7.68629 31 5 28.3137 5 25V7.5Z" fill="currentColor"/>
 <path d="M5 7.5C5 6.11929 6.11929 5 7.5 5H25C28.3137 5 31 7.68629 31 11V28.5C31 29.8807 29.8807 31 28.5 31H11C7.68629 31 5 28.3137 5 25V7.5Z" fill="currentColor"/>
 <path d="M16.25 10C16.6642 10 17 10.3358 17 10.75V25.25C17 25.6642 16.6642 26 16.25 26C15.8358 26 15.5 25.6642 15.5 25.25V10.75C15.5 10.3358 15.8358 10 16.25 10Z" fill="var(--ea-knockout, #fff)"/>

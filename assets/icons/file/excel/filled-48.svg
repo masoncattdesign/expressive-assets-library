@@ -1,13 +1,13 @@
 <svg aria-label="Excel filled 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 13.5C4 11.0147 6.01472 9 8.5 9H35C39.9706 9 44 13.0294 44 18V34.5C44 36.9853 41.9853 39 39.5 39H13C8.02944 39 4 34.9706 4 30V13.5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M4 13.5C4 11.0147 6.01472 9 8.5 9H35C39.9706 9 44 13.0294 44 18V34.5C44 36.9853 41.9853 39 39.5 39H13C8.02944 39 4 34.9706 4 30V13.5Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
 <path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="currentColor"/>
 <path d="M5 13.5C5 11.567 6.567 10 8.5 10H35C39.4183 10 43 13.5817 43 18V34.5C43 36.433 41.433 38 39.5 38H13C8.58172 38 5 34.4183 5 30V13.5Z" fill="currentColor"/>
-<path d="M32 32.333C32 33.2535 31.2535 34 30.333 34H24V29.5C24 26.4624 21.5376 24 18.5 24H15V20.9443C15.0001 19.5637 16.1194 18.4443 17.5 18.4443H32V32.333Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M32 32.333C32 33.2535 31.2535 34 30.333 34H24V29.5C24 26.4624 21.5376 24 18.5 24H15V20.9443C15.0001 19.5637 16.1194 18.4443 17.5 18.4443H32V32.333Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.7"/>
+<path d="M32 32.333C32 33.2535 31.2535 34 30.333 34H24V29.5C24 26.4624 21.5376 24 18.5 24H15V20.9443C15.0001 19.5637 16.1194 18.4443 17.5 18.4443H32V32.333Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M32 32.333C32 33.2535 31.2535 34 30.333 34H24V29.5C24 26.4624 21.5376 24 18.5 24H15V20.9443C15.0001 19.5637 16.1194 18.4443 17.5 18.4443H32V32.333Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
 <path d="M25.667 21C24.7465 21 24 21.7465 24 22.667V25.833C24 26.3286 23.7818 26.7719 23.4385 27.0771C22.5426 25.2546 20.668 24 18.5 24H15V23.5C15 22.1193 16.1193 21 17.5 21H25.667Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M25.667 21C24.7465 21 24 21.7465 24 22.667V25.833C24 26.3286 23.7818 26.7719 23.4385 27.0771C22.5426 25.2546 20.668 24 18.5 24H15V23.5C15 22.1193 16.1193 21 17.5 21H25.667Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
-<rect x="3" y="25" width="20" height="20" rx="4.5" fill="var(--ea-knockout, #fff)"/>
-<rect x="3" y="25" width="20" height="20" rx="4.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
+<rect x="3" y="25" width="20" height="20" rx="4.5" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="3" y="25" width="20" height="20" rx="4.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
 <path d="M32 15.6429C32 14.7203 31.2504 13.9732 30.3278 13.9762L24.6612 13.995C23.7428 13.998 23 14.7433 23 15.6616V19.3338C23 20.2543 23.7462 21.0005 24.6667 21.0005H30.3333C31.2538 21.0005 32 20.2543 32 19.3338V15.6429Z" fill="currentColor"/>
 <path d="M25 21H18.333C16.6047 21.0002 15.1838 22.3157 15.0166 24H15V17.333C15.0002 15.4923 16.4923 14.0002 18.333 14H25V21Z" fill="currentColor"/>
 <path d="M25 21H18.333C16.6047 21.0002 15.1838 22.3157 15.0166 24H15V17.333C15.0002 15.4923 16.4923 14.0002 18.333 14H25V21Z" fill="var(--ea-knockout, #fff)"/>

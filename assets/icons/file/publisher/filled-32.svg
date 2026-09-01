@@ -1,12 +1,12 @@
 <svg aria-label="Publisher filled 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 5C5 3.34315 6.34315 2 8 2H21C24.3137 2 27 4.68629 27 8V27C27 28.6569 25.6569 30 24 30H11C7.68629 30 5 27.3137 5 24V5Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M5 5C5 3.34315 6.34315 2 8 2H21C24.3137 2 27 4.68629 27 8V27C27 28.6569 25.6569 30 24 30H11C7.68629 30 5 27.3137 5 24V5Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
 <path d="M6 5C6 3.89543 6.89543 3 8 3H21C23.7614 3 26 5.23858 26 8V27C26 28.1046 25.1046 29 24 29H11C8.23858 29 6 26.7614 6 24V5Z" fill="currentColor"/>
 <path d="M6 5C6 3.89543 6.89543 3 8 3H21C23.7614 3 26 5.23858 26 8V27C26 28.1046 25.1046 29 24 29H11C8.23858 29 6 26.7614 6 24V5Z" fill="currentColor"/>
-<path d="M21.0547 10C21.5766 10 22 10.4234 22 10.9453V21.0547C22 21.5766 21.5766 22 21.0547 22H17.9453C17.4234 22 17 21.5766 17 21.0547V10.9453C17 10.4234 17.4234 10 17.9453 10H21.0547Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M10.875 9H19.125C19.6062 9 20 9.39375 20 9.875V16H10V9.875C10 9.39375 10.3937 9 10.875 9Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M21.0547 10C21.5766 10 22 10.4234 22 10.9453V21.0547C22 21.5766 21.5766 22 21.0547 22H17.9453C17.4234 22 17 21.5766 17 21.0547V10.9453C17 10.4234 17.4234 10 17.9453 10H21.0547Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+<path d="M10.875 9H19.125C19.6062 9 20 9.39375 20 9.875V16H10V9.875C10 9.39375 10.3937 9 10.875 9Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
 <path opacity="0.2" d="M21 10H20V22H21V10Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M20 16V19.5H14.708C14.1145 18.0343 12.6785 17 11 17H10V16H20Z" fill="var(--ea-knockout, #fff)"/>
-<rect x="1" y="18" width="13" height="13" rx="3" fill="var(--ea-knockout, #fff)"/>
+<rect x="1" y="18" width="13" height="13" rx="3" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
 <path d="M19.999 22.125C19.999 22.6063 19.6053 23 19.124 23H14.999V21C14.999 20.4694 14.8946 19.9633 14.707 19.5H19.999V22.125Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M7.01855 25.7204V28H5.44141V21H7.87793C8.75033 21 9.41439 21.1904 9.87012 21.5711C10.3291 21.9519 10.5586 22.5165 10.5586 23.265C10.5586 24.0363 10.3014 24.6383 9.78711 25.0711C9.27604 25.504 8.58919 25.7204 7.72656 25.7204H7.01855ZM7.01855 22.2106V24.5098H7.67773C8.06836 24.5098 8.36947 24.4073 8.58105 24.2022C8.79264 23.9972 8.89844 23.7027 8.89844 23.3187C8.89844 22.964 8.79427 22.6906 8.58594 22.4986C8.38086 22.3066 8.08626 22.2106 7.70215 22.2106H7.01855Z" fill="currentColor"/>
 </svg>

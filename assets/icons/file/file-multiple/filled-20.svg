@@ -1,5 +1,5 @@
 <svg aria-label="File Multiple filled 20" role="img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C5 2.89543 5.89543 2 7 2H13C15.2091 2 17 3.79086 17 6V14C17 15.1046 16.1046 16 15 16C15 17.1046 14.1046 18 13 18H9C5.68629 18 3 15.3137 3 12V6C3 4.89543 3.89543 4 5 4Z" fill="var(--ea-knockout, #fff)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C5 2.89543 5.89543 2 7 2H13C15.2091 2 17 3.79086 17 6V14C17 15.1046 16.1046 16 15 16C15 17.1046 14.1046 18 13 18H9C5.68629 18 3 15.3137 3 12V6C3 4.89543 3.89543 4 5 4Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3H13C14.6569 3 16 4.34315 16 6V14C16 14.5523 15.5523 15 15 15H9C7.34315 15 6 13.6569 6 12V4C6 3.44772 6.44772 3 7 3ZM5 5C4.44772 5 4 5.44772 4 6V12C4 14.7614 6.23858 17 9 17H13C13.5523 17 14 16.5523 14 16H9C6.79086 16 5 14.2091 5 12V5Z" fill="currentColor"/>
 </svg>

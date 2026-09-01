@@ -1,15 +1,15 @@
 <svg aria-label="Excel filled 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="var(--ea-knockout, #fff)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 43H192C216.853 43 237 63.1472 237 88V192C237 203.598 227.598 213 216 213H64C39.1472 213 19 192.853 19 168V64C19 52.402 28.402 43 40 43Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 <path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="currentColor"/>
 <path d="M24 64C24 55.1634 31.1634 48 40 48H192C214.091 48 232 65.9086 232 88V192C232 200.837 224.837 208 216 208H64C41.9086 208 24 190.091 24 168V64Z" fill="currentColor"/>
-<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 88 95 88H176V177.999Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 88 95 88H176V177.999Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.7"/>
+<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 88 95 88H176V177.999Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+<path d="M176 177.999C176 183.522 171.523 188 166 188H124V164C124 146.327 109.673 132 92 132H80V102.999C80.0003 94.715 86.7159 88 95 88H176V177.999Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.7" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 <path d="M136.84 108C131.871 108.565 128 112.782 128 117.914V138C128 142.965 124.381 147.082 119.637 147.863C114.084 138.374 103.787 132.001 92 132.001H80V123C80.0001 114.715 86.7158 108 95 108H136.84Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M136.84 108C131.871 108.565 128 112.782 128 117.914V138C128 142.965 124.381 147.082 119.637 147.863C114.084 138.374 103.787 132.001 92 132.001H80V123C80.0001 114.715 86.7158 108 95 108H136.84Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
 <path d="M144 108H136.84C137.251 107.953 137.67 107.927 138.095 107.932L144 108Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M144 108H136.84C137.251 107.953 137.67 107.927 138.095 107.932L144 108Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
-<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)"/>
-<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+<rect x="12" y="140" width="104" height="104" rx="24" fill="var(--ea-knockout, #fff)" fill-opacity="0.3" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
 <path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 68 100 68H140V108Z" fill="currentColor"/>
 <path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 68 100 68H140V108Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M140 108H100C88.9543 108 80 116.954 80 128V87.999C80.0003 76.9536 88.9545 68 100 68H140V108Z" fill="currentColor"/>

@@ -1,14 +1,14 @@
 <svg aria-label="Word filled 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 3C2 1.89543 2.89543 1 4 1H10.5C12.433 1 14 2.567 14 4.5V13C14 14.1046 13.1046 15 12 15H5.5C3.567 15 2 13.433 2 11.5V3Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M2 3C2 1.89543 2.89543 1 4 1H10.5C12.433 1 14 2.567 14 4.5V13C14 14.1046 13.1046 15 12 15H5.5C3.567 15 2 13.433 2 11.5V3Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="currentColor"/>
 <path d="M3 3C3 2.44772 3.44772 2 4 2H10.5C11.8807 2 13 3.11929 13 4.5V13C13 13.5523 12.5523 14 12 14H5.5C4.11929 14 3 12.8807 3 11.5V3Z" fill="currentColor"/>
-<path d="M11.001 8.75391V11.2656C11.0008 11.6711 10.6721 11.9999 10.2666 12H8.00098V10.5C8.00098 9.44035 7.3409 8.53675 6.41016 8.17285L7.78711 6.33301L11.001 8.75391Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.6"/>
-<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.1"/>
+<path d="M11.001 8.75391V11.2656C11.0008 11.6711 10.6721 11.9999 10.2666 12H8.00098V10.5C8.00098 9.44035 7.3409 8.53675 6.41016 8.17285L7.78711 6.33301L11.001 8.75391Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.6" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<path d="M11 8.59863C11 9.00426 10.6712 9.3329 10.2656 9.33301H7.70996C7.29063 8.54056 6.45896 8 5.5 8H5V7.35059C5.00003 6.83132 5.41925 6.40953 5.93848 6.40625L10.3672 6.37988L11 6V8.59863Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.1" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M10.2656 4C10.6712 4.0001 10.9999 4.32884 11 4.73438V5.93164C11 6.33727 10.6712 6.66689 10.2656 6.66699H6.18066C5.52866 6.66699 5 7.19565 5 7.84766V5.25879C5.00025 4.56369 5.56369 4.00025 6.25879 4H10.2656Z" fill="currentColor"/>
 <path d="M10.2656 4C10.6712 4.0001 10.9999 4.32884 11 4.73438V5.93164C11 6.33727 10.6712 6.66689 10.2656 6.66699H6.18066C5.52866 6.66699 5 7.19565 5 7.84766V5.25879C5.00025 4.56369 5.56369 4.00025 6.25879 4H10.2656Z" fill="currentColor" fill-opacity="0.8"/>
-<rect y="9" width="7" height="7" rx="1.5" fill="var(--ea-knockout, #fff)"/>
-<rect y="9" width="7" height="7" rx="1.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.65"/>
+<rect y="9" width="7" height="7" rx="1.5" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
+<rect y="9" width="7" height="7" rx="1.5" fill="var(--ea-knockout, #fff)" fill-opacity="0.65" stroke="currentColor" stroke-width="0.75" stroke-linejoin="round"/>
 <path d="M6.21777 10.2354L5.24232 14.7636L4.07635 14.7642L3.50049 12.0469L2.89767 14.7642H1.72055L0.783203 10.2359H1.74463L2.323 13.2244L2.89767 10.2359H4.07635L4.67798 13.2244L5.24232 10.2359L6.21777 10.2354Z" fill="currentColor"/>
 </svg>

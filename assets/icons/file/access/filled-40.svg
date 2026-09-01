@@ -1,15 +1,15 @@
 <svg aria-label="Access filled 40" role="img" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M2 10C2 7.79086 3.79086 6 6 6H30C34.4183 6 38 9.58172 38 14V30C38 32.2091 36.2091 34 34 34H10C5.58172 34 2 30.4183 2 26V10Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
 <path d="M3 10C3 8.34315 4.34315 7 6 7H30C33.866 7 37 10.134 37 14V30C37 31.6569 35.6569 33 34 33H10C6.13401 33 3 29.866 3 26V10Z" fill="currentColor"/>
 <path d="M27 27C27 28.2888 23.8656 29.334 20 29.334V25C20 24.0192 19.7165 23.105 19.2285 22.333H27V27Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M27 27C27 28.2888 23.8656 29.334 20 29.334V25C20 24.0192 19.7165 23.105 19.2285 22.333H27V27Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.7"/>
-<path d="M27 22.333C27 23.6218 23.8656 24.667 20 24.667C19.9958 24.667 19.9915 24.666 19.9873 24.666C19.8154 22.0604 17.6492 20 15 20H13V17.666H27V22.333Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M27 22.333C27 23.6218 23.8656 24.667 20 24.667C19.9958 24.667 19.9915 24.666 19.9873 24.666C19.8154 22.0604 17.6492 20 15 20H13V17.666H27V22.333Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.3"/>
-<path d="M27 17.667C26.9995 18.9556 23.8652 20 20 20C16.1348 20 13.0005 18.9556 13 17.667V13H27V17.667Z" fill="var(--ea-knockout, #fff)"/>
-<path d="M27 17.667C26.9995 18.9556 23.8652 20 20 20C16.1348 20 13.0005 18.9556 13 17.667V13H27V17.667Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.4"/>
+<path d="M27 22.333C27 23.6218 23.8656 24.667 20 24.667C19.9958 24.667 19.9915 24.666 19.9873 24.666C19.8154 22.0604 17.6492 20 15 20H13V17.666H27V22.333Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M27 22.333C27 23.6218 23.8656 24.667 20 24.667C19.9958 24.667 19.9915 24.666 19.9873 24.666C19.8154 22.0604 17.6492 20 15 20H13V17.666H27V22.333Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.3" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M27 17.667C26.9995 18.9556 23.8652 20 20 20C16.1348 20 13.0005 18.9556 13 17.667V13H27V17.667Z" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<path d="M27 17.667C26.9995 18.9556 23.8652 20 20 20C16.1348 20 13.0005 18.9556 13 17.667V13H27V17.667Z" fill="var(--ea-knockout, #fff)" fill-opacity="0.4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M20 15.3327C16.134 15.3327 13 14.288 13 12.9993C13 11.7107 16.134 10.666 20 10.666C23.866 10.666 27 11.7107 27 12.9993C27 14.288 23.866 15.3327 20 15.3327Z" fill="var(--ea-knockout, #fff)"/>
-<rect x="1" y="21" width="18" height="18" rx="4" fill="var(--ea-knockout, #fff)"/>
-<rect x="1" y="21" width="18" height="18" rx="4" fill="var(--ea-knockout, #fff)" fill-opacity="0.5"/>
+<rect x="1" y="21" width="18" height="18" rx="4" fill="var(--ea-knockout, #fff)" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+<rect x="1" y="21" width="18" height="18" rx="4" fill="var(--ea-knockout, #fff)" fill-opacity="0.5" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
 <path d="M5.13281 35L8.70923 25H11.3741L14.8671 35H12.5013L11.8125 32.9986H8.15259L7.47766 35H5.13281ZM8.66748 31.1576H11.2767L10.2122 27.6639C10.175 27.5384 10.1403 27.4245 10.1078 27.3222C10.0753 27.2152 10.0428 27.0921 10.0104 26.9526H9.95471C9.92688 27.0688 9.89673 27.1827 9.86426 27.2943C9.83179 27.4059 9.79468 27.5267 9.75293 27.6569L8.66748 31.1576Z" fill="currentColor"/>
 </svg>

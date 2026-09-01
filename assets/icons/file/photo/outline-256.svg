@@ -1,4 +1,4 @@
-<svg Photo outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg aria-label="Photo outline 256" Photo outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M58 35H178C202.853 35 223 55.1472 223 80V200C223 211.598 213.598 221 202 221H82C57.1472 221 37 200.853 37 176V56C37 44.402 46.402 35 58 35Z" fill="currentColor"/>
 <path d="M42 56C42 47.1634 49.1634 40 58 40H178C200.091 40 218 57.9086 218 80V200C218 208.837 210.837 216 202 216H82C59.9086 216 42 198.091 42 176V56Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M42 56C42 47.1634 49.1634 40 58 40H178C200.091 40 218 57.9086 218 80V200C218 208.837 210.837 216 202 216H82C59.9086 216 42 198.091 42 176V56Z" fill="var(--ea-knockout, #fff)"/>

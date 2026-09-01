@@ -60,16 +60,60 @@ const head = (svg) => (svg.includes('<defs') ? svg.slice(0, svg.indexOf('<defs')
  * Filled: paper becomes the body, ink knocks out of it. The inverse of the
  * rule that produced the outline, applied to the same Standard source.
  */
+/**
+ * Rough extent of a shape, as a fraction of the artboard.
+ *
+ * Only used to tell a letter tile from a line of text, so a crude read of the
+ * coordinate stream is enough: min and max over every number in the geometry.
+ * Curve control points push the box out a little, which does not matter for a
+ * size comparison.
+ */
+function extent(tag, box) {
+  const rect = tag.match(/<rect[^>]*width="([\d.]+)"[^>]*height="([\d.]+)"/);
+  if (rect) return (Number(rect[1]) * Number(rect[2])) / (box * box);
+  const d = tag.match(/ d="([^"]+)"/);
+  if (!d) return 0;
+  const nums = (d[1].match(/-?\d*\.?\d+/g) || []).map(Number);
+  if (nums.length < 4) return 0;
+  const xs = nums.filter((_, i) => i % 2 === 0);
+  const ys = nums.filter((_, i) => i % 2 === 1);
+  const w = Math.max(...xs) - Math.min(...xs);
+  const h = Math.max(...ys) - Math.min(...ys);
+  return (w * h) / (box * box);
+}
+
+/** Above this, a knocked-out shape is a plate in its own right rather than a
+ *  mark on one, so it needs an edge to survive leaving the page. Below it, an
+ *  outline would simply paint the mark back in — which is what happened to the
+ *  lines of text on the PDF icon the first time. */
+const TILE = 0.06;
+
 function deriveFilled(svg, name, size) {
   const at = svg.indexOf('<defs');
   const body = at === -1 ? svg : svg.slice(0, at);
-  const out = body.replace(/fill="([^"]+)"/g, (whole, value) => {
-    if (value === 'none') return whole;
-    let rgb = toRgb(value);
-    const g = value.match(/^url\(#(.+)\)$/);
+  const box = Number((svg.match(/viewBox="0 0 (\d+)/) || [, 48])[1]) || 48;
+  // Scaled from the 48px drawings, floored so it does not vanish at 16.
+  const weight = Math.max(0.75, Math.round((1.5 * box) / 48 * 100) / 100);
+  // Rewrite whole tags rather than fills alone, so each shape's own geometry
+  // is available when deciding whether it needs an edge.
+  const out = body.replace(/<(path|rect|ellipse|circle|polygon)\b[^>]*?\/>/g, (tag) => {
+    const f = tag.match(/fill="([^"]+)"/);
+    if (!f || f[1] === 'none') return tag;
+    let rgb = toRgb(f[1]);
+    const g = f[1].match(/^url\(#(.+)\)$/);
     if (g) rgb = gradientAverage(svg, g[1]);
-    if (!rgb) return 'fill="currentColor"';
-    return luminance(rgb) > PAPER ? 'fill="currentColor"' : `fill="${KNOCKOUT}"`;
+    if (!rgb) return tag.replace(/fill="[^"]+"/, 'fill="currentColor"');
+    if (luminance(rgb) > PAPER) return tag.replace(/fill="[^"]+"/, 'fill="currentColor"');
+
+    // Ink knocks out of the body. A shape big enough to be a plate in its own
+    // right also gets an edge: the letter tile on a Word or Excel icon
+    // overhangs the page, so the part hanging past it has nothing to knock out
+    // of and would simply disappear. Small marks are left unstroked, because an
+    // outline on a thin shape paints it back in.
+    const stroked = extent(tag, box) > TILE
+      ? ` stroke="currentColor" stroke-width="${weight}" stroke-linejoin="round"`
+      : '';
+    return tag.replace(/fill="[^"]+"/, `fill="${KNOCKOUT}"`).replace(/\/>$/, `${stroked}/>`);
   });
   return out
     .replace(/aria-label="[^"]*"/, `aria-label="${name} filled ${size}"`)
@@ -88,10 +132,12 @@ for (const folder of folders) {
   const meta = JSON.parse(await readFile(metaPath, 'utf8'));
   if (!meta.variants?.filled) continue;
 
+  // Second run onwards: outline already exists, so only Filled is rebuilt.
+  const REDERIVE_ONLY = Boolean(meta.variants.outline);
   const sizes = Object.keys(meta.variants.filled);
 
   // 1. The existing Filled is Outline. Move the files, keep the drawings.
-  for (const size of sizes) {
+  for (const size of REDERIVE_ONLY ? [] : sizes) {
     const from = join(ROOT, meta.variants.filled[size]);
     const to = from.replace(/\/filled-(\d+)\.svg$/, '/outline-$1.svg');
     if (!DRY) {
@@ -101,9 +147,11 @@ for (const folder of folders) {
     }
     renamed++;
   }
-  meta.variants.outline = {};
-  for (const size of sizes) {
-    meta.variants.outline[size] = meta.variants.filled[size].replace(/\/filled-(\d+)\.svg$/, '/outline-$1.svg');
+  if (!REDERIVE_ONLY) {
+    meta.variants.outline = {};
+    for (const size of sizes) {
+      meta.variants.outline[size] = meta.variants.filled[size].replace(/\/filled-(\d+)\.svg$/, '/outline-$1.svg');
+    }
   }
 
   // 2. A real Filled, from the Standard artwork, by the inverted rule.

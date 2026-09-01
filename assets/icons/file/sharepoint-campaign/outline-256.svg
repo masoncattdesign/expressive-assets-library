@@ -1,4 +1,4 @@
-<svg SharePoint Campaign outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg aria-label="SharePoint Campaign outline 256" SharePoint Campaign outline 256" role="img" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M64 19H168C192.853 19 213 39.1473 213 64V216C213 227.598 203.598 237 192 237H68C54.1929 237 43 225.807 43 212V40C43 28.4019 52.4021 19 64 19Z" fill="currentColor"/>
 <path d="M168 24H64C55.1635 24 48 31.1633 48 40V196.332C52.6458 190.063 60.0984 186 68.5 186H191.5C200.613 186 208 178.613 208 169.5V64C208 41.9087 190.091 24 168 24Z" fill="var(--ea-knockout, #fff)"/>
 <path d="M168 24H64C55.1635 24 48 31.1633 48 40V196.332C52.6458 190.063 60.0984 186 68.5 186H191.5C200.613 186 208 178.613 208 169.5V64C208 41.9087 190.091 24 168 24Z" fill="var(--ea-knockout, #fff)"/>
