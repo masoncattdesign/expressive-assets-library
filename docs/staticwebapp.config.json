@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+
+  "//": [
+    "Azure Static Web Apps configuration for Expressive Assets.",
+    "",
+    "Every route, including manifest.json and every SVG under assets/, requires an",
+    "authenticated Entra ID user. That is the difference between this and a password",
+    "box: the artwork itself is behind the check, not just the page that lists it.",
+    "",
+    "Set AAD_CLIENT_ID and AAD_CLIENT_SECRET in the Static Web App's application",
+    "settings, and put your tenant id in openIdIssuer below. A single-tenant app",
+    "registration is what keeps this to Microsoft accounts rather than any Entra",
+    "account anywhere."
+  ],
+
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0",
+          "clientIdSettingName": "AAD_CLIENT_ID",
+          "clientSecretSettingName": "AAD_CLIENT_SECRET"
+        }
+      }
+    }
+  },
+
+  "routes": [
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad"
+    },
+    "404": {
+      "rewrite": "/index.html"
+    }
+  },
+
+  "globalHeaders": {
+    "X-Robots-Tag": "noindex, nofollow",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin"
+  },
+
+  "mimeTypes": {
+    ".svg": "image/svg+xml",
+    ".json": "application/json"
+  }
+}

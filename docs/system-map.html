@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>System Map — Expressive Assets</title>
+<meta name="description" content="How the Expressive Assets library, its import pipeline and its tools fit together.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="ea-bar">
+  <a href="about.html">Expressive Assets</a>
+  <span class="ea-sep">/</span>
+  <span class="ea-here">System Map</span>
+  <span class="ea-right"><a href="index.html">Gallery</a><a href="about.html">About</a><a href="anatomy-pilot.html">Anatomy Pilot</a></span>
+</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root {
+    --ground: #FBFAFD;
+    --surface: #FFFFFF;
+    --sunk: #F3F1F9;
+    --ink: #191B33;
+    --ink-soft: #4A4D6B;
+    --muted: #6E7191;
+    --rule: #E3E0EF;
+    --accent: #6B32D6;
+    --accent-soft: #EFE7FE;
+    --signal: #C62237;
+    --signal-soft: #FDECEE;
+    --shadow: 0 1px 2px rgba(25, 27, 51, .06), 0 8px 24px -16px rgba(25, 27, 51, .18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131427;
+      --surface: #1B1D35;
+      --sunk: #202343;
+      --ink: #ECEDF8;
+      --ink-soft: #C3C5DD;
+      --muted: #9497B7;
+      --rule: #2E3152;
+      --accent: #B192FF;
+      --accent-soft: #2A2454;
+      --signal: #FF8794;
+      --signal-soft: #3A1F2A;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131427;
+    --surface: #1B1D35;
+    --sunk: #202343;
+    --ink: #ECEDF8;
+    --ink-soft: #C3C5DD;
+    --muted: #9497B7;
+    --rule: #2E3152;
+    --accent: #B192FF;
+    --accent-soft: #2A2454;
+    --signal: #FF8794;
+    --signal-soft: #3A1F2A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.62;
+    margin: 0;
+    padding: 0 24px 96px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  .col { max-width: 66ch; }
+
+  h1, h2, h3, .eyebrow, .chip, .stat-n, th { font-family: Archivo, "Helvetica Neue", Arial, sans-serif; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 11.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+
+  header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 72px 0 28px;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: clamp(34px, 5.4vw, 52px);
+    line-height: 1.04;
+    letter-spacing: -.024em;
+    font-weight: 700;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .standfirst {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0 0 28px;
+  }
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .facts b { color: var(--ink-soft); font-weight: 500; }
+
+  section { margin: 0 0 56px; }
+  h2 {
+    font-size: 26px;
+    letter-spacing: -.015em;
+    font-weight: 600;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -.005em;
+    margin: 0 0 4px;
+  }
+  p { margin: 0 0 16px; }
+  .col > p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, .stage:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: .86em;
+  }
+  p code, li code, td code {
+    background: var(--sunk);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+
+  figure {
+    margin: 32px 0;
+    padding: 0;
+  }
+  .figframe {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 22px 20px 14px;
+    overflow-x: auto;
+  }
+  figure svg { display: block; width: 100%; min-width: 720px; height: auto; color: var(--ink); }
+  figcaption {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 12px;
+    max-width: 68ch;
+  }
+
+  .stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 28px;
+  }
+  @media (max-width: 860px) { .stages { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .stages { grid-template-columns: 1fr; } }
+  .stage {
+    background: var(--surface);
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stage .n {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 11.5px;
+    color: var(--accent);
+    letter-spacing: .08em;
+  }
+  .stage p { font-size: 15px; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+  .stage .file {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: auto;
+    padding-top: 6px;
+  }
+
+  pre {
+    background: var(--sunk);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 12.5px;
+    line-height: 1.65;
+    margin: 22px 0;
+    color: var(--ink-soft);
+  }
+  pre b { color: var(--accent); font-weight: 500; }
+  pre i { color: var(--muted); font-style: normal; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  th {
+    text-align: left;
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 0 14px 8px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  td {
+    padding: 11px 14px 11px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink-soft);
+  }
+  td:first-child { color: var(--ink); white-space: nowrap; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; padding-right: 24px; white-space: nowrap; }
+
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    vertical-align: 2px;
+    margin-left: 8px;
+  }
+  .chip.todo { background: var(--signal-soft); color: var(--signal); }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 26px 0;
+  }
+  .stat { background: var(--surface); padding: 18px 18px 20px; }
+  .stat-n {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+    display: block;
+    line-height: 1.1;
+  }
+  .stat-l { font-size: 13px; color: var(--muted); }
+
+  ul.open { list-style: none; padding: 0; margin: 20px 0 0; }
+  ul.open li {
+    border-top: 1px solid var(--rule);
+    padding: 14px 0 14px 0;
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 20px;
+    align-items: baseline;
+  }
+  ul.open li:last-child { border-bottom: 1px solid var(--rule); }
+  ul.open .q {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 11.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  ul.open .a { font-size: 15.5px; color: var(--ink-soft); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 66ch;
+  }
+
+  @media (max-width: 620px) {
+    body { font-size: 16px; padding: 0 18px 72px; }
+    ul.open li { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* A thin bar so a document opened from the Gallery still knows where it came
+     from. It uses the page's own tokens, so it themes with whatever it sits on. */
+  .ea-bar {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-family: ui-monospace, "IBM Plex Mono", SFMono-Regular, Menlo, monospace;
+    font-size: 12px; padding: 12px 24px; border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 20;
+    background: inherit; backdrop-filter: saturate(1.2) blur(6px);
+  }
+  .ea-bar a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  .ea-bar a:hover { border-bottom-color: var(--accent); }
+  .ea-bar a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .ea-bar .ea-sep { opacity: .4; }
+  .ea-bar .ea-here { opacity: .65; }
+  .ea-bar .ea-right { margin-left: auto; display: flex; gap: 14px; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Windows Design Systems / Internal</p>
+    <h1>Expressive Assets System Map</h1>
+    <p class="standfirst">One library of icons and illustrations, one machine-readable contract, and the tools that read it. This is what exists today, how the pieces hand off to each other, and what is still open.</p>
+    <div class="facts">
+      <span><b>3,129</b> assets</span>
+      <span><b>6</b> collections</span>
+      <span><b>3</b> themes</span>
+      <span>as of <b>1 Sep 2026</b></span>
+      <span>head <b>2d4c1707</b></span>
+    </div>
+  </header>
+
+  <section class="col">
+    <h2>In one paragraph</h2>
+    <p>Artwork is designed in Figma. A reviewed plan file says exactly which Figma nodes become which assets, an importer pulls them down and normalises them, and every asset lands in <code>assets/</code> as flat SVG files plus a <code>meta.json</code> describing itself. A build step walks that tree once and writes <code>manifest.json</code>. Everything downstream, the Gallery, the Customizer, and anything we build later, reads only the manifest. That single rule is what keeps the tools from growing private knowledge of how the folders are arranged.</p>
+  </section>
+
+  <figure>
+    <div class="figframe">
+      <svg viewBox="0 0 980 386" role="img" aria-label="Pipeline diagram: a Figma file is surveyed into a plan file, the importer runs the plan and writes SVG artwork plus metadata into the assets tree, derivation scripts rewrite that artwork in place, a build step reads the tree once to produce manifest.json, and four consumers read only the manifest.">
+        <defs>
+          <marker id="ea-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+          <marker id="ea-arrow-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
+          </marker>
+        </defs>
+
+        <g fill="none" stroke="currentColor" stroke-width="1.25">
+          <rect x="24" y="100" width="118" height="76" rx="7"/>
+          <rect x="190" y="100" width="140" height="76" rx="7"/>
+          <rect x="378" y="100" width="150" height="76" rx="7"/>
+          <rect x="576" y="100" width="150" height="76" rx="7"/>
+        </g>
+        <rect x="774" y="100" width="150" height="76" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+        <rect x="560" y="16" width="182" height="46" rx="7" fill="none" stroke="currentColor" stroke-width="1.25" stroke-dasharray="4 3"/>
+
+        <g font-family="Archivo, sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" fill="currentColor">
+          <text x="83" y="132">Figma file</text>
+          <text x="260" y="132">Plan</text>
+          <text x="453" y="132">Importer</text>
+          <text x="651" y="132">assets/</text>
+          <text x="849" y="132" fill="var(--accent)">manifest.json</text>
+          <text x="651" y="38">derive + tokenise</text>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".62">
+          <text x="83" y="152">4 pages</text>
+          <text x="260" y="152">figma-*-plan.json</text>
+          <text x="453" y="152">import-figma.mjs</text>
+          <text x="651" y="152">svg + meta.json</text>
+          <text x="849" y="152" fill="var(--accent)" opacity="1">the contract</text>
+          <text x="651" y="54">3 scripts</text>
+        </g>
+
+        <g stroke="currentColor" stroke-width="1.25" marker-end="url(#ea-arrow)">
+          <line x1="142" y1="138" x2="184" y2="138"/>
+          <line x1="330" y1="138" x2="372" y2="138"/>
+          <line x1="528" y1="138" x2="570" y2="138"/>
+          <line x1="726" y1="138" x2="768" y2="138"/>
+          <line x1="614" y1="100" x2="614" y2="68"/>
+          <line x1="688" y1="68" x2="688" y2="96"/>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="9.5" text-anchor="middle" fill="currentColor" opacity=".62">
+          <text x="163" y="130">survey</text>
+          <text x="351" y="130">review</text>
+          <text x="549" y="130">render</text>
+          <text x="747" y="130">walk</text>
+          <text x="576" y="86">read</text>
+          <text x="726" y="86">write</text>
+        </g>
+
+        <g stroke="var(--accent)" stroke-width="1.5" fill="none">
+          <path d="M 849 176 L 849 256 L 120 256"/>
+          <line x1="165" y1="256" x2="165" y2="290" marker-end="url(#ea-arrow-a)"/>
+          <line x1="375" y1="256" x2="375" y2="290" marker-end="url(#ea-arrow-a)"/>
+          <line x1="585" y1="256" x2="585" y2="290" marker-end="url(#ea-arrow-a)"/>
+          <line x1="795" y1="256" x2="795" y2="290" marker-end="url(#ea-arrow-a)"/>
+        </g>
+
+        <g fill="none" stroke="currentColor" stroke-width="1.25">
+          <rect x="100" y="294" width="130" height="62" rx="7"/>
+          <rect x="310" y="294" width="130" height="62" rx="7"/>
+          <rect x="520" y="294" width="130" height="62" rx="7" stroke-dasharray="4 3"/>
+          <rect x="730" y="294" width="130" height="62" rx="7" stroke-dasharray="4 3"/>
+        </g>
+        <g font-family="Archivo, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="currentColor">
+          <text x="165" y="320">Gallery</text>
+          <text x="375" y="320">Customizer</text>
+          <text x="585" y="320">Builder</text>
+          <text x="795" y="320">Bridge</text>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="10" text-anchor="middle" fill="currentColor" opacity=".62">
+          <text x="165" y="338">browse</text>
+          <text x="375" y="338">retheme</text>
+          <text x="585" y="338">illustrations</text>
+          <text x="795" y="338">naming</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>The whole system. Solid boxes are built and running; dashed boxes are planned. Everything to the right of the violet line reads <code>manifest.json</code> and nothing else, which is why a consumer never has to know how <code>assets/</code> is laid out.</figcaption>
+  </figure>
+
+  <section>
+    <div class="col">
+      <h2>The pipeline, stage by stage</h2>
+      <p>These are numbered because they really are a sequence: each stage only runs on the output of the one before it, and each one is a separate command so a bad step can be rerun without redoing the rest.</p>
+    </div>
+
+    <div class="stages">
+      <div class="stage">
+        <span class="n">01</span>
+        <h3>Survey the Figma file</h3>
+        <p>Reads the source file and lists every page, frame and component with its node id and size set. Nothing is written yet. This is how we find out what is actually in the file rather than what we assume is in it.</p>
+        <span class="file">npm run figma:survey</span>
+      </div>
+      <div class="stage">
+        <span class="n">02</span>
+        <h3>Write and review a plan</h3>
+        <p>The plan is a checked-in JSON file mapping Figma node ids to asset ids, collections, themes and sizes. It is reviewed by a person before anything is imported, so an import is repeatable and reviewable instead of a one-off script run.</p>
+        <span class="file">figma-plan.json, and two more</span>
+      </div>
+      <div class="stage">
+        <span class="n">03</span>
+        <h3>Run the import</h3>
+        <p>Renders the planned nodes through the Figma API in batches of 60, cleans each SVG, rewrites monochrome fills to <code>currentColor</code>, namespaces ids, and writes artwork plus a <code>meta.json</code> per asset. Placeholders it replaces are retired.</p>
+        <span class="file">npm run figma:run:product</span>
+      </div>
+      <div class="stage">
+        <span class="n">04</span>
+        <h3>Derive and tokenise</h3>
+        <p>Fills the gaps Figma cannot. Filled file icons are derived by luminance, illustration themes are derived by contour, and six brand colours are swapped for <code>var(--ea-*)</code> roles so illustrations can be retinted without touching logo colours.</p>
+        <span class="file">derive-filled, derive-illustration-themes, tokenize-illustrations</span>
+      </div>
+      <div class="stage">
+        <span class="n">05</span>
+        <h3>Build and validate</h3>
+        <p>Walks the tree once, writes third-party notices, emits <code>manifest.json</code>, then validates every record against the JSON schema and fails loudly on a broken path or an unknown theme. One command, four steps.</p>
+        <span class="file">npm run build</span>
+      </div>
+      <div class="stage">
+        <span class="n">06</span>
+        <h3>Consume</h3>
+        <p>The Gallery and the Customizer fetch the manifest at load and work from it. Adding a collection or a theme to the library needs no change in either tool, because both were written against the contract rather than the folders.</p>
+        <span class="file">docs/index.html, docs/customizer.html</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The contract</h2>
+      <p><code>manifest.json</code> is the only file a consumer is allowed to read. Every asset appears as one record that says what it is, which themes and sizes exist, where each drawing lives, and whether it can be retinted. If it is not in the record, a tool cannot depend on it.</p>
+    </div>
+<pre><b>{</b>
+  <b>"id"</b>: "product.access",           <i>// collection.name, stable, the address</i>
+  <b>"type"</b>: "icon",                   <i>// icon | illustration</i>
+  <b>"collection"</b>: "product",
+  <b>"status"</b>: "draft",                <i>// draft | published</i>
+  <b>"themes"</b>: ["standard", "outline", "filled"],
+  <b>"sizes"</b>: [16, 20, 24, 28, 32, 48],
+  <b>"colors"</b>: { "primary": "#0078D4", "secondary": "#8764B8" },
+  <b>"recolorable"</b>: true,              <i>// true when a non-standard theme exists</i>
+  <b>"variants"</b>: {                     <i>// per theme, per size, never guessed</i>
+    "outline": { "16": "assets/icons/product/access/outline-16.svg", ... }
+  <b>}</b>,
+  <b>"figma"</b>: { "fileKey": "l752...", "nodeId": "500631:7859" }
+<b>}</b></pre>
+    <div class="col">
+      <p>Three rules hold this together. Artwork is stored per size rather than scaled at runtime, because a 16px icon is a different drawing and not a shrunken 48px one. Themes are a fixed vocabulary of <code>standard</code>, <code>outline</code> and <code>filled</code>, so a tool can reason about them. And monochrome themes are written in <code>currentColor</code> or <code>var(--ea-role, #hex)</code>, so tinting is a CSS decision made by the consumer, not a file we have to ship twice.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The three tools</h2>
+      <p>The tools split by verb. You look things up in one, change how they look in another, and later compose new illustrations in a third. Gallery and the Customizer cover the whole library. The Builder is an illustration tool specifically, and it is not on the critical path right now.</p>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Tool</th><th>What it does</th><th>State</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gallery</td>
+          <td>Browse and search the whole library, filter by collection, theme and size, preview against light and dark surfaces, and copy or download a drawing. Each asset links straight into the Customizer.</td>
+          <td>Running</td>
+        </tr>
+        <tr>
+          <td>Customizer</td>
+          <td>Pull any asset out of the library and retint it live: accent colours, surface, the <code>--ea-*</code> roles. Answers the question a designer actually asks, which is what this looks like in my theme.</td>
+          <td>Running</td>
+        </tr>
+        <tr>
+          <td>Builder</td>
+          <td>Compose <em>illustrations</em> from a kit of reusable pieces rather than drawing each scene from scratch. Not an icon tool. It waits on the illustration cleanup and an agreed illustration style, because there is no kit to build from until those exist.</td>
+          <td>Later</td>
+        </tr>
+        <tr>
+          <td>Bridge</td>
+          <td>The separate naming and semantics system. It already has an icon schema with an anatomy block, so the long-term shape is that Bridge names the parts and Expressive Assets provides the drawings.</td>
+          <td>Adjacent</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Anatomy, the layer being added now<span class="chip todo">In progress</span></h2>
+      <p>Today the smallest addressable thing is a whole asset. Anatomy makes the parts inside an asset addressable, which is what lets someone say "put a two pixel stroke on the plate of every product icon" and have it mean something. A part is a set of shapes that share a colour ramp, not a contiguous region, which is why the two head circles in the Teams icon belong to the plate below them. This work is about <em>icons</em>: it feeds the Customizer and the naming grammar, not the Builder.</p>
+    </div>
+
+    <figure>
+      <div class="figframe">
+        <svg viewBox="0 0 980 180" role="img" aria-label="Anatomy diagram: an icon is separated into plate, glyph and badge parts; each part gets an address of the form system dot family dot asset dot part, and each address can carry a fill, a stroke and an effect.">
+          <defs>
+            <marker id="ea-arrow-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <g stroke="currentColor" stroke-width="1.25" fill="none">
+            <rect x="40" y="80" width="96" height="62" rx="10"/>
+            <rect x="64" y="50" width="96" height="62" rx="10" fill="var(--surface)"/>
+            <rect x="88" y="20" width="96" height="62" rx="10" fill="var(--surface)"/>
+          </g>
+          <text x="112" y="168" font-family="'IBM Plex Mono', monospace" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".62">one asset</text>
+
+          <g stroke="currentColor" stroke-width="1.25" marker-end="url(#ea-arrow-b)">
+            <line x1="196" y1="51" x2="248" y2="36"/>
+            <line x1="172" y1="81" x2="248" y2="81"/>
+            <line x1="148" y1="111" x2="248" y2="126"/>
+          </g>
+
+          <g font-family="Archivo, sans-serif" font-size="13.5" font-weight="600" fill="currentColor">
+            <text x="258" y="41">badge</text>
+            <text x="258" y="86">glyph</text>
+            <text x="258" y="131">plate</text>
+          </g>
+          <g font-family="'IBM Plex Mono', monospace" font-size="10.5" fill="currentColor" opacity=".62">
+            <text x="322" y="41">status, optional</text>
+            <text x="322" y="86">the symbol that names it</text>
+            <text x="322" y="131">3 to 4 shapes, one ramp</text>
+          </g>
+
+          <path d="M 528 22 L 546 22 L 546 78 L 564 82 L 546 86 L 546 142 L 528 142" fill="none" stroke="currentColor" stroke-width="1.25" opacity=".5"/>
+
+          <rect x="586" y="58" width="360" height="48" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="766" y="80" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle" fill="var(--accent)">windows.producticon.teams.plate</text>
+          <text x="766" y="97" font-family="'IBM Plex Mono', monospace" font-size="10" text-anchor="middle" fill="var(--accent)" opacity=".75">one address per part</text>
+
+          <g stroke="currentColor" stroke-width="1.25" marker-end="url(#ea-arrow-b)">
+            <line x1="646" y1="106" x2="646" y2="134"/>
+            <line x1="766" y1="106" x2="766" y2="134"/>
+            <line x1="886" y1="106" x2="886" y2="134"/>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1.25">
+            <rect x="602" y="136" width="88" height="30" rx="15"/>
+            <rect x="722" y="136" width="88" height="30" rx="15"/>
+            <rect x="842" y="136" width="88" height="30" rx="15"/>
+          </g>
+          <g font-family="'IBM Plex Mono', monospace" font-size="11.5" text-anchor="middle" fill="currentColor">
+            <text x="646" y="156">fill</text>
+            <text x="766" y="156">stroke</text>
+            <text x="886" y="156">effect</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>What anatomy buys us. Naming the parts turns an asset from one opaque drawing into a small set of addresses, and each address can then carry a fill, a stroke or an effect. Strokes here are authored onto a part, not edited on an existing outline, which is the distinction that came out of the supervisor review.</figcaption>
+    </figure>
+
+    <div class="col">
+      <p>The 12 icon pilot proved this works on real artwork. Parts are marked in the SVG with <code>data-part</code>, so the drawing stays a valid standalone SVG and anything that ignores the attribute still renders correctly. The open question is ownership: if a designer re-exports an icon from Figma, who reapplies the part names.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Where the library stands</h2>
+      <p>Counts from the current build. Every asset validates against the schema, and every asset is still <code>draft</code>, which is deliberate: nothing is published until the naming decision below is settled, because ids are the one thing we cannot change quietly afterwards.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-n">3,129</span><span class="stat-l">assets, all valid</span></div>
+      <div class="stat"><span class="stat-n">3,096</span><span class="stat-l">retintable</span></div>
+      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">have keywords</span></div>
+      <div class="stat"><span class="stat-n">79%</span><span class="stat-l">have descriptions</span></div>
+      <div class="stat"><span class="stat-n">0</span><span class="stat-l">published</span></div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Collection</th><th class="num">Assets</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>System Icons</td><td class="num">2,891</td><td>Outline and Filled only, defaulting to Outline, and monochrome follows the surface it sits on.</td></tr>
+        <tr><td>Product Icons</td><td class="num">90</td><td>Full colour Standard plus derived Outline and Filled, six sizes each. The anatomy pilot lives here.</td></tr>
+        <tr><td>File Icons</td><td class="num">88</td><td>Filled is derived by luminance. Outline cannot be derived from the source art and has to be drawn.</td></tr>
+        <tr><td>M365 Illustrations</td><td class="num">28</td><td>Tokenised to six colour roles, with Outline and Filled derived by contour.</td></tr>
+        <tr><td>OOBE Illustrations</td><td class="num">27</td><td>Imported from the existing set, untouched since.</td></tr>
+        <tr><td>Product Illustrations</td><td class="num">5</td><td>Device drawings, added by hand from SVG.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Open decisions</h2>
+      <p>These are the things that need an answer from a person rather than more code, listed with the cost of getting them wrong.</p>
+    </div>
+    <ul class="open">
+      <li>
+        <span class="q">Naming</span>
+        <span class="a">2,665 of 3,129 ids carry a hyphen inside a name segment, which Bridge's grammar does not allow. Either the ids change or the grammar does, and the longer we wait the more expensive the rename gets.</span>
+      </li>
+      <li>
+        <span class="q">Publishing</span>
+        <span class="a">Nothing is published. We need a bar for what makes an asset publishable, and a first set to put over it, or the draft flag stops meaning anything.</span>
+      </li>
+      <li>
+        <span class="q">Figma sync</span>
+        <span class="a">Writing assets back into a Figma file has to be a plugin, since the REST API cannot write file content. The policy question comes first: on a conflict, does the library overwrite, skip, or flag for review.</span>
+      </li>
+      <li>
+        <span class="q">Anatomy owner</span>
+        <span class="a">Whether part names live in the Figma layer names, in the repo, or in Bridge. This decides who reapplies them on every re-export.</span>
+      </li>
+      <li>
+        <span class="q">Illustrations</span>
+        <span class="a">A separate track from the icon work. The illustration sets need a cleanup and organising pass, and then an interim style with real guidelines to draw against while the long-term direction settles. The Builder sits at the end of that track, not at the front of it.</span>
+      </li>
+      <li>
+        <span class="q">Third party</span>
+        <span class="a">The 3P page holds roughly 70 third-party trademarks. It stays unimported until someone signs off on the licensing.</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Generated from the repository at commit <code>2d4c1707</code> on 1 September 2026. Counts come from the current <code>manifest.json</code>; anything marked planned is not built yet.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
