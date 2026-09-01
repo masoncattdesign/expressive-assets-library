@@ -29,7 +29,7 @@
 </style>
 
 <h1>Expressive Assets Sync</h1>
-<p class="sub">Builds this file's page from the library. Adds what is missing, replaces what changed, leaves everything else alone. Never deletes.</p>
+<p class="sub">Builds this file's page from the library as one component set per icon, with Style and Size as variant properties. Adds what is missing, replaces the artwork inside components that changed so placed instances follow, and leaves everything else alone.</p>
 
 <label for="src">Source</label>
 <select id="src">
@@ -158,12 +158,11 @@ onmessage = (event) => {
       $('go').disabled = false;
       return;
     }
-    log('\n<b>' + r.created + '</b> created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
+    if (r.removedOld) log('Removed <b>' + r.removedOld + '</b> sections from the old row layout');
+    if (r.sets) log('<b>' + r.sets + '</b> component sets created');
+    log('\n<b>' + r.created + '</b> variants created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
     if (r.missing) log('<b>' + r.missing + '</b> not in the library');
-    if (r.strayCount) {
-      log('<b>' + r.strayCount + '</b> on the page but not in the library, left alone:');
-      r.strays.forEach((n) => log('  ' + n));
-    }
+    log('\nRun it again: everything should come back unchanged.');
   }
   $('go').disabled = false;
 };

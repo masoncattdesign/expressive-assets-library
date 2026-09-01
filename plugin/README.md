@@ -25,25 +25,35 @@ build time, which is what Bridge Builder does.
 One direction only, library to Figma. It never writes back, and it never
 deletes.
 
-  - Creates the page and the section-per-style, row-per-icon layout if missing.
-  - Adds a cell for every style and size in the manifest.
-  - Replaces the artwork in a cell when the library's drawing has changed, and
-    leaves it alone when it has not.
+  - Creates one component set per icon, named for the icon, holding eighteen
+    variants across two properties: Style (Standard, Outline, Filled) and Size
+    (16 to 48). A designer drops "Word" and switches both in the properties
+    panel.
+  - Replaces the artwork INSIDE an existing component when the library's drawing
+    has changed, rather than rebuilding the component. That keeps the
+    component's identity, so every instance anyone has already placed updates
+    with it. Rebuilding would orphan all of them, which is the main reason to
+    componentise now rather than later.
   - Reports anything on the page that the library does not have, rather than
     removing it. A node the library does not know about is usually a designer's
     work in progress, and deleting it would be the worst possible default.
 
-Every artwork node is named `<asset id>/<style>/<size>`, which is how the
-plugin finds it again on the next run and how the importer will read it going
-back the other way. Renaming a node breaks the link; moving it does not.
+Each variant is named `Style=Standard, Size=48`, which is what Figma reads to
+build the two properties. The asset id, style, size and a hash of the drawing
+are stored on every component under the `expressiveassets` namespace as *shared*
+plugin data rather than private, because the REST API can read shared data. That
+is how the trip back into the library will identify what it is looking at
+without depending on layer names a designer might reasonably rename.
 
-A hash of the drawing is stored on each node with `setPluginData`. That is what
-makes "has this changed since last sync" answerable without comparing SVG text
-on every run, and it is invisible in the layer panel.
+The hash is what makes "has this changed since last sync" answerable without
+comparing SVG text on every run. Sets are matched by stamped asset id rather
+than by display name, so renaming an icon in the library does not orphan its
+component.
 
 ## Placeholders
 
-Cells the library generated rather than authored are drawn on an amber ground.
+Variants the library generated rather than authored are drawn on an amber
+ground and say so in their component description.
 180 of the 1,620 product icon cells are stand-ins today: 84 are the same drawing
 shown at another size, 96 are silhouettes derived from Standard. They are on the
 page so the matrix is square and the gaps are visible, not because they are
