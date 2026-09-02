@@ -499,8 +499,8 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px
 }
 .hub-thumb svg { display: block; width: 100%; height: 100%; min-width: 0; }
 .hub-body { padding: 15px 17px 18px; display: flex; flex-direction: column; gap: 7px; }
-.hub-head { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
-.hub-head strong { font-family: var(--display); font-size: 15.5px; color: var(--ink); }
+.hub-head { display: block; }
+.hub-head strong { font-family: var(--display); font-size: 15.5px; color: var(--ink); margin-right: 8px; }
 .hub-body p { font-size: 13.8px; line-height: 1.52; color: var(--ink-2); margin: 0; max-width: none; }
 .hub-where {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
@@ -510,9 +510,10 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px
 /* Status is deliberately one word. Six projects with a sentence of status each
    is a page nobody scans, and the sentence belongs in the update anyway. */
 .st {
+  display: inline-block; vertical-align: 1.5px;
   font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em;
   text-transform: uppercase; font-weight: 500; padding: 3px 8px;
-  border-radius: 20px; white-space: nowrap; flex: none;
+  border-radius: 20px; white-space: nowrap;
 }
 .st-live   { background: var(--p-accent-bg);    color: var(--p-accent); }
 .st-build  { background: var(--p-glyph-bg);     color: var(--p-glyph); }
@@ -552,3 +553,13 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px
 .entry-body li { font-size: 14.5px; color: var(--ink-2); max-width: 64ch; }
 .entry-who { font-size: 13.5px; color: var(--ink-3); }
 .entry-who b { color: var(--ink-2); font-weight: 500; }
+
+/* The work page is Mason's, not the library's, so its brand is his initials
+   rather than the Expressive Assets tile. Same slot, same size, so the bar
+   does not shift when you move between the two sets of pages. */
+.mc-mark {
+  width: 22px; height: 22px; border-radius: 6px; flex: none;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 9px; font-weight: 500;
+  display: grid; place-items: center;
+}

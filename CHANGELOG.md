@@ -13,12 +13,12 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
-- A work page at `docs/work.html` collects every project with its real status
-  and draws how they feed each other, and `docs/updates.html` is the running
-  log to send rather than a screenshot. Six things were reachable only by
-  knowing the right URL, which made the whole body of work look smaller than it
-  is; it also had nowhere to say that the Component Library and the Marketing
-  Compendiums are real work with no manifest, no build and no URL.
+- `docs/work.html` is Mason's work page rather than another library document:
+  everything in flight, banded by focus rather than by build status, with the
+  Component Library and the Marketing Compendiums linked straight through to
+  their Figma files. It carries his own brand mark and its own two-tab bar, and
+  the library's documents reach it from a muted link in the right-hand slot.
+  `docs/updates.html` is the running log to send.
 
 - The BentoOS icon personalization prototype is served from the site at
   `docs/bentos.html` and listed in the page menu beside the Gallery and the

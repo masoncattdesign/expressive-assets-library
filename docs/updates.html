@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Updates — Windows Design Systems</title>
+<title>Updates — Mason Catt</title>
 <meta name="description" content="A running log of what changed across Expressive Assets and the work around it, written to be read by someone who was not in the room.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,10 @@
 </head>
 <body>
 
-<nav class="ea-bar" aria-label="Documents">
-  <a class="ea-brand" href="work.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Expressive Assets</a>
+<nav class="ea-bar" aria-label="Sections">
+  <a class="ea-brand mc" href="work.html"><span class="mc-mark" aria-hidden="true">MC</span>Mason Catt</a>
   <a class="ea-tab" href="work.html">Work</a>
   <a class="ea-tab on" href="updates.html" aria-current="page">Updates</a>
-  <a class="ea-tab" href="about.html">About</a>
-  <a class="ea-tab" href="system-map.html">System Map</a>
-  <a class="ea-tab" href="asset-anatomy.html">Asset Anatomy</a>
   <span class="ea-right">
     <span data-theme-switch></span>
     <span data-app-menu></span>
@@ -32,11 +29,10 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="eyebrow">Updates · Windows Design Systems</p>
+    <p class="eyebrow">Mason Catt · Windows Design Systems</p>
     <h1>What changed, and what it means</h1>
-    <p class="stand">A running log across everything on the <a href="work.html">work page</a>, newest
-    first. Written for someone who was not in the room, so each entry says what was believed, what
-    turned out to be true, and what it costs. The detailed record is the commit log.</p>
+    <p class="stand">A running log across everything on the <a href="work.html">work page</a>,
+    newest first.</p>
     <div class="facts">
       <span>Updated <b>2 September 2026</b></span>
       <span>Library at <b>3,234 assets</b></span>
@@ -66,19 +62,18 @@
         </div>
         <div class="entry-body">
           <h3>One page for everything, and the desktop prototype joins the set</h3>
-          <p>Six projects were reachable only by knowing the right URL, which made the whole body of
-          work look smaller than it is. There is now a <a href="work.html">work page</a> that shows
-          every piece with its real status, and a map of how they feed each other.</p>
+          <p>Everything was reachable only by knowing the right URL. There is now a
+          <a href="work.html">work page</a> covering every piece by focus level, with a map of how
+          they feed each other.</p>
           <ul>
             <li>The BentoOS icon personalization prototype is <a href="bentos.html">on the site</a>
             rather than in a downloads folder, and appears in the page menu beside the Gallery and
             the Customizer.</li>
-            <li>Marketing Compendiums and the Component Library are listed honestly: real work, no
-            manifest, no build, no URL. Naming the gap is the first step to closing it.</li>
+            <li>The Component Library and the Marketing Compendiums are listed and linked
+            straight through to their Figma files.</li>
             <li>Windows Illustrations is on the board as the next thing to open.</li>
           </ul>
-          <p class="entry-who">Send this page rather than a screenshot. It follows your theme and it
-          is current by construction.</p>
+          <p class="entry-who">Send this page rather than a screenshot.</p>
         </div>
       </article>
 
@@ -179,9 +174,8 @@
   </section>
 
   <div class="foot">
-    This page is a summary. <code>CHANGELOG.md</code> in the repo is the release record and
-    <code>git log</code> is the detailed one. If something here reads as settled and you think it is
-    not, say so; that is worth more to me than agreement.
+    A summary. <code>CHANGELOG.md</code> is the release record and <code>git log</code> is the
+    detailed one. If something here reads as settled and you think it is not, say so.
   </div>
 
 </div>

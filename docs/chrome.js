@@ -95,14 +95,16 @@
      into everything else. BentoOS is a self-contained prototype and does not
      load this file, so it appears in the menu but does not show one. */
   var PAGES = [
+    { group: 'Work', items: [
+      { href: 'work.html', label: 'All work' },
+      { href: 'updates.html', label: 'Updates' },
+    ] },
     { group: 'Tools', items: [
       { href: 'index.html', label: 'Gallery' },
       { href: 'customizer.html', label: 'Customizer' },
       { href: 'bentos.html', label: 'BentoOS' },
     ] },
-    { group: 'Project', items: [
-      { href: 'work.html', label: 'Work' },
-      { href: 'updates.html', label: 'Updates' },
+    { group: 'Expressive Assets', items: [
       { href: 'about.html', label: 'About' },
       { href: 'system-map.html', label: 'System Map' },
       { href: 'asset-anatomy.html', label: 'Asset Anatomy' },
