@@ -13,6 +13,10 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- A 15 second screen recording of the theming story lives at
+  `docs/media/expressive-assets-theming.mp4`, so the published site serves it
+  as a direct link rather than it living in someone's downloads folder.
+
 - `scripts/record-demo.mjs` records a short screen capture of the theming
   story: cursor, click pulses and highlights are drawn in the page, so the
   browser's own compositor animates them and the capture stays smooth.
