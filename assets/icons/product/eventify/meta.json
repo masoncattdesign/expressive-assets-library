@@ -65,5 +65,48 @@
     "outline:28",
     "outline:32",
     "outline:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 1,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#00ffd1",
+              "#00a3ff"
+            ],
+            "shapes": [
+              0,
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      }
+    ],
+    "hash": "ab57c863ab915649"
+  }
 }

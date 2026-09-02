@@ -69,5 +69,90 @@
     "outline:40",
     "outline:48",
     "outline:96"
-  ]
+  ],
+  "roles": {
+    "from": "standard-256.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#ffd75e"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#ffb900"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#bf5712"
+            ],
+            "shapes": [
+              3,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group3.member1",
+        "part": null
+      }
+    ],
+    "hash": "fe11de45878f5a42"
+  }
 }

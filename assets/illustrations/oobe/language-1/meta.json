@@ -28,5 +28,96 @@
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",
-  "updated": "2026-08-26"
+  "updated": "2026-08-26",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 2,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#0078d4",
+              "#5b41d3"
+            ],
+            "shapes": [
+              0,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#c4c4c4"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#f4f3f3"
+        ],
+        "shapes": [
+          3
+        ]
+      },
+      {
+        "id": "held.2",
+        "stops": [
+          "#000000"
+        ],
+        "shapes": [
+          2
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "held.2",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group1.member1",
+        "part": null
+      }
+    ],
+    "hash": "44aa83ba16b00111"
+  }
 }

@@ -30,5 +30,98 @@
   "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-08-26",
-  "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it."
+  "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it.",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 2,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#eeeeee"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#cad2d9",
+              "#a1aab3"
+            ],
+            "shapes": [
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          7
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "5a0220c7d87b26a8"
+  }
 }

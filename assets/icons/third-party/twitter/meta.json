@@ -80,5 +80,35 @@
     "standard:24",
     "standard:28",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 1,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#1d9bf0"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      }
+    ],
+    "hash": "c6b0027e8837f8da"
+  }
 }

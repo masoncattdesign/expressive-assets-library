@@ -57,5 +57,224 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#6864f6"
+            ],
+            "shapes": [
+              6
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#4a43cb"
+            ],
+            "shapes": [
+              0,
+              1,
+              8
+            ]
+          },
+          {
+            "id": "group1.member3",
+            "stops": [
+              "#3d2db8"
+            ],
+            "shapes": [
+              2,
+              5,
+              15
+            ]
+          },
+          {
+            "id": "group1.member4",
+            "stops": [
+              "#1d17a0"
+            ],
+            "shapes": [
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#9acaff"
+            ],
+            "shapes": [
+              16
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#3bd5ff",
+              "#8f8fff"
+            ],
+            "shapes": [
+              14
+            ]
+          },
+          {
+            "id": "group2.member3",
+            "stops": [
+              "#3bd5ff",
+              "#6864f6"
+            ],
+            "shapes": [
+              11
+            ]
+          },
+          {
+            "id": "group2.member4",
+            "stops": [
+              "#4d84f9"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#e3acfd"
+            ],
+            "shapes": [
+              9
+            ]
+          },
+          {
+            "id": "group3.member2",
+            "stops": [
+              "#dc8afd"
+            ],
+            "shapes": [
+              4,
+              10
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          7,
+          13
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member3",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member4",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group3.member2",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group1.member3",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 10,
+        "role": "group3.member2",
+        "part": null
+      },
+      {
+        "i": 11,
+        "role": "group2.member3",
+        "part": null
+      },
+      {
+        "i": 12,
+        "role": "group1.member4",
+        "part": null
+      },
+      {
+        "i": 13,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 14,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 15,
+        "role": "group1.member3",
+        "part": null
+      },
+      {
+        "i": 16,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "144b3bf5df6d4ec7"
+  }
 }

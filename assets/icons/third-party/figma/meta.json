@@ -80,5 +80,106 @@
     "standard:24",
     "standard:28",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#ff7262"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#f24e1e"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#a259ff"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#0acf83"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#1abcfe"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group4.member1",
+        "part": null
+      }
+    ],
+    "hash": "19123c85cbc1488f"
+  }
 }

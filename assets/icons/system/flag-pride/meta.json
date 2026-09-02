@@ -40,5 +40,125 @@
     "license": "MIT",
     "copyright": "Copyright (c) 2020 Microsoft Corporation"
   },
-  "notes": "Outline and Filled are Fluent System Icons artwork, unmodified except for a currentColor rewrite. The generated Standard variant was removed: it was invented here, not shipped by Fluent, and a system icon is a monochrome glyph."
+  "notes": "Outline and Filled are Fluent System Icons artwork, unmodified except for a currentColor rewrite. The generated Standard variant was removed: it was invented here, not shipped by Fluent, and a system icon is a monochrome glyph.",
+  "roles": {
+    "from": "filled-24.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#f36d38"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#e62c46"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#ffd23e"
+            ],
+            "shapes": [
+              2
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#61bc51"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#1793e8"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#b73fbb"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": null,
+        "part": null
+      }
+    ],
+    "hash": "31c1751ff00c48a6"
+  }
 }

@@ -81,5 +81,150 @@
     "standard:24",
     "standard:28",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#141414"
+            ],
+            "shapes": [
+              0,
+              1,
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#35a8e0"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#7dcceb"
+            ],
+            "shapes": [
+              9,
+              10
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#f8b133"
+            ],
+            "shapes": [
+              5,
+              7
+            ]
+          },
+          {
+            "id": "group4.member2",
+            "stops": [
+              "#f29100"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "group4.member2",
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 10,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 11,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 12,
+        "role": "group1.member1",
+        "part": null
+      }
+    ],
+    "hash": "5683db503bad3283"
+  }
 }

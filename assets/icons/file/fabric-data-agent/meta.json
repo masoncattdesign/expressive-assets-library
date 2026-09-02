@@ -70,5 +70,231 @@
     "outline:40",
     "outline:48",
     "outline:96"
-  ]
+  ],
+  "roles": {
+    "from": "standard-256.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#ffffff",
+              "#ebebeb"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#bbbbbb",
+              "#888888"
+            ],
+            "shapes": [
+              0
+            ]
+          },
+          {
+            "id": "group1.member3",
+            "stops": [
+              "#063d3b",
+              "#063d3b"
+            ],
+            "shapes": [
+              12
+            ]
+          },
+          {
+            "id": "group1.member4",
+            "stops": [
+              "#063d3b",
+              "#063d3b",
+              "#063d3b",
+              "#063d3b"
+            ],
+            "shapes": [
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#25ffd4",
+              "#55ddb9"
+            ],
+            "shapes": [
+              9
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#6ad6f9",
+              "#60e9d0",
+              "#6de9bb",
+              "#abe88e"
+            ],
+            "shapes": [
+              10
+            ]
+          },
+          {
+            "id": "group2.member3",
+            "stops": [
+              "#abe88e",
+              "#2aaa92",
+              "#117865"
+            ],
+            "shapes": [
+              7
+            ]
+          },
+          {
+            "id": "group2.member4",
+            "stops": [
+              "#2aac94",
+              "#239c87",
+              "#177e71",
+              "#0e6961",
+              "#095d57",
+              "#085954"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#4ba446",
+              "#3f7d35"
+            ],
+            "shapes": [
+              3,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#6ad6f9"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          11
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group2.member4",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group2.member3",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 10,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 11,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 12,
+        "role": "group1.member3",
+        "part": null
+      },
+      {
+        "i": 13,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 14,
+        "role": "group1.member4",
+        "part": null
+      }
+    ],
+    "hash": "0454728a32be1c18"
+  }
 }

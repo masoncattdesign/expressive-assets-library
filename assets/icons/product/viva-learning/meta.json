@@ -62,5 +62,76 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#084961",
+              "#1282a4"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#64d9e1",
+              "#1098b6"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#057093",
+              "#043346"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      }
+    ],
+    "hash": "e7686b057a747a72"
+  }
 }

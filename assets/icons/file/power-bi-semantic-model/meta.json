@@ -71,5 +71,142 @@
     "outline:40",
     "outline:48",
     "outline:96"
-  ]
+  ],
+  "roles": {
+    "from": "standard-256.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#ffffff",
+              "#ebebeb"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#bbbbbb",
+              "#888888"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#f9e589",
+              "#f6d751"
+            ],
+            "shapes": [
+              7
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#f6d751",
+              "#e6ad10"
+            ],
+            "shapes": [
+              6
+            ]
+          },
+          {
+            "id": "group2.member3",
+            "stops": [
+              "#e6ad10",
+              "#c87e0e"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#7751b8",
+              "#5a409c"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#000000"
+        ],
+        "shapes": [
+          5
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member3",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "d7ef049c76369dff"
+  }
 }

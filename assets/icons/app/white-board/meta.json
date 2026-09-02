@@ -80,5 +80,106 @@
     "standard:28",
     "standard:32",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-64.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#30e5d0",
+              "#0c34fb"
+            ],
+            "shapes": [
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#333333"
+            ],
+            "shapes": [
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#cccccc"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          1
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "d821b13d6578991a"
+  }
 }

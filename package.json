@@ -2,7 +2,7 @@
   "name": "expressive-assets",
   "version": "0.1.0",
   "private": true,
-  "description": "Expressive Assets \u2014 the icon and illustration library for Windows Design Systems.",
+  "description": "Expressive Assets — the icon and illustration library for Windows Design Systems.",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -31,6 +31,9 @@
     "gaps:3p": "node scripts/fill-icon-gaps.mjs --collection=third-party",
     "demo:record": "node scripts/record-demo.mjs",
     "figma:probe": "node scripts/figma-probe-plugindata.mjs",
-    "naming:report": "node scripts/naming-report.mjs"
+    "naming:report": "node scripts/naming-report.mjs",
+    "roles": "node scripts/derive-roles.mjs",
+    "roles:check": "node scripts/derive-roles.mjs --check",
+    "roles:report": "node scripts/derive-roles.mjs --dry --report"
   }
 }

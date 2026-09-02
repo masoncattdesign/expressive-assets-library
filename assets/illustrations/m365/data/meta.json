@@ -29,5 +29,94 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-512.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#fd6f03"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#3073fd"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#fec2a1"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#f5f5f5"
+        ],
+        "shapes": [
+          2,
+          3
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "b74369cf1f4f5087"
+  }
 }

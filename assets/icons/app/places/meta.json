@@ -80,5 +80,92 @@
     "standard:28",
     "standard:32",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-64.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#43efb1",
+              "#21c6b3",
+              "#1e8fcf"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#a194f4"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#d59dff",
+              "#0078d4",
+              "#0c59a4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          3
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "ed97a25c09dcf3d8"
+  }
 }

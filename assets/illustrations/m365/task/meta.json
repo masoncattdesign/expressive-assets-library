@@ -29,5 +29,116 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-512.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 3,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#c9e8f7"
+            ],
+            "shapes": [
+              4
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#d1e0be"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "group1.member3",
+            "stops": [
+              "#222e48"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#81b93a"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#fd6f03"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#f5f5f5"
+        ],
+        "shapes": [
+          5
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member3",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "83929634c2486afe"
+  }
 }

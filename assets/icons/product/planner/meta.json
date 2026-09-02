@@ -57,5 +57,126 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#db45e0",
+              "#a829ae",
+              "#8f28b3"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#db45e0",
+              "#6c0f71"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#3dcbff",
+              "#4a40d4"
+            ],
+            "shapes": [
+              5
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#3dcbff",
+              "#00479e"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#8752e0",
+              "#541278"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#3d0d59"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "dd9a173b16bffcb6"
+  }
 }

@@ -29,5 +29,216 @@
   "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Device illustration. This collection is devices only \u2014 console, desktop, laptop, phone, tablet \u2014 which is what it was always for, and now what it is called."
+  "notes": "Device illustration. This collection is devices only — console, desktop, laptop, phone, tablet — which is what it was always for, and now what it is called.",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#b8c2cc",
+              "#cad2d9"
+            ],
+            "shapes": [
+              0,
+              3,
+              4
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#a1aab3",
+              "#cad2d9"
+            ],
+            "shapes": [
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#dcdcdc",
+              "#838383",
+              "#767676"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#45494d",
+              "#5c6166"
+            ],
+            "shapes": [
+              5,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#5c6166",
+              "#ffffff"
+            ],
+            "shapes": [
+              12
+            ]
+          },
+          {
+            "id": "group4.member2",
+            "stops": [
+              "#1e2021",
+              "#45494d"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          20
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group4.member2",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 10,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 11,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 12,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 13,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 14,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 15,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 16,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 17,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 18,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 19,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 20,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "32c3816ab2656e31"
+  }
 }

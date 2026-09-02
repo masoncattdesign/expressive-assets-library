@@ -79,5 +79,68 @@
     "standard:28",
     "standard:32",
     "standard:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-64.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 2,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#e25a01",
+              "#ffd400"
+            ],
+            "shapes": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#cccccc",
+              "#ffffff"
+            ],
+            "shapes": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member1",
+        "part": null
+      }
+    ],
+    "hash": "39814c74186b9e75"
+  }
 }

@@ -65,5 +65,30 @@
     "outline:28",
     "outline:32",
     "outline:48"
-  ]
+  ],
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 0,
+    "groups": [],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#000000"
+        ],
+        "shapes": [
+          0
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "0042c3917fc5a648"
+  }
 }

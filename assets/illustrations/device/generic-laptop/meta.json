@@ -29,5 +29,116 @@
   "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Device illustration. This collection is devices only \u2014 console, desktop, laptop, phone, tablet \u2014 which is what it was always for, and now what it is called."
+  "notes": "Device illustration. This collection is devices only — console, desktop, laptop, phone, tablet — which is what it was always for, and now what it is called.",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 2,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#0669bc",
+              "#40e6e8"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#b8c2cc",
+              "#cad2d9"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#b8c2cc"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "group2.member3",
+            "stops": [
+              "#cad2d9",
+              "#a1aab3",
+              "#a1aab3",
+              "#8a9299"
+            ],
+            "shapes": [
+              2
+            ]
+          },
+          {
+            "id": "group2.member4",
+            "stops": [
+              "#1e2021"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          4
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member3",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group2.member4",
+        "part": null
+      }
+    ],
+    "hash": "e86e306c2ca454dc"
+  }
 }

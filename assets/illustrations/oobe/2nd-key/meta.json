@@ -29,5 +29,522 @@
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",
-  "updated": "2026-08-26"
+  "updated": "2026-08-26",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#525659",
+              "#464a4d"
+            ],
+            "shapes": [
+              0,
+              67,
+              68
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#e1e1e1",
+              "#eaeaea"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#1f1f1f"
+            ],
+            "shapes": [
+              21,
+              28,
+              31
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#6a6e73"
+            ],
+            "shapes": [
+              74,
+              75
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          53,
+          60,
+          63,
+          66
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 10,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 11,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 12,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 13,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 14,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 15,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 16,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 17,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 18,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 19,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 20,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 21,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 22,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 23,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 24,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 25,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 26,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 27,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 28,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 29,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 30,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 31,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 32,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 33,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 34,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 35,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 36,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 37,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 38,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 39,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 40,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 41,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 42,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 43,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 44,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 45,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 46,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 47,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 48,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 49,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 50,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 51,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 52,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 53,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 54,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 55,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 56,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 57,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 58,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 59,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 60,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 61,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 62,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 63,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 64,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 65,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 66,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 67,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 68,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 69,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 70,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 71,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 72,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 73,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 74,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 75,
+        "role": "group4.member1",
+        "part": null
+      },
+      {
+        "i": 76,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 77,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 78,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 79,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 80,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 81,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 82,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 83,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 84,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 85,
+        "role": null,
+        "part": null
+      }
+    ],
+    "hash": "d3b8d1db025f9b41"
+  }
 }

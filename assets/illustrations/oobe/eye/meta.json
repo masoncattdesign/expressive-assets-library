@@ -28,5 +28,51 @@
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",
-  "updated": "2026-08-26"
+  "updated": "2026-08-26",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 1,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#377feb",
+              "#3b31c4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#ffffff"
+        ],
+        "shapes": [
+          1
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "held.1",
+        "part": null
+      }
+    ],
+    "hash": "a1bc0af538a38833"
+  }
 }

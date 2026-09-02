@@ -29,5 +29,102 @@
   "owner": "@windows-design-systems",
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Device illustration. This collection is devices only \u2014 console, desktop, laptop, phone, tablet \u2014 which is what it was always for, and now what it is called."
+  "notes": "Device illustration. This collection is devices only — console, desktop, laptop, phone, tablet — which is what it was always for, and now what it is called.",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 2,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#2e3133",
+              "#5c6166"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#0669bc",
+              "#40e6e8"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#000000"
+        ],
+        "shapes": [
+          1,
+          2
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": null,
+        "part": null
+      }
+    ],
+    "hash": "7be2e027d02bb5a3"
+  }
 }

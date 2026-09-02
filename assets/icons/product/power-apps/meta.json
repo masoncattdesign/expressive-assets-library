@@ -58,5 +58,147 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent."
+  "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#e48cc7",
+              "#f7c4e2"
+            ],
+            "shapes": [
+              6
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#4c1e4c"
+            ],
+            "shapes": [
+              1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#e9a1cb",
+              "#d467b9",
+              "#bb35a4"
+            ],
+            "shapes": [
+              4
+            ]
+          },
+          {
+            "id": "group2.member2",
+            "stops": [
+              "#d467b9",
+              "#982f90",
+              "#742774"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#520b56",
+              "#742774"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#d467b9",
+              "#bb35a4"
+            ],
+            "shapes": [
+              7
+            ]
+          },
+          {
+            "id": "group4.member2",
+            "stops": [
+              "#bb35a4"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "group2.member2",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group4.member2",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group4.member1",
+        "part": null
+      }
+    ],
+    "hash": "b9d9a8a46127e508"
+  }
 }

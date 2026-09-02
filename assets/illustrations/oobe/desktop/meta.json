@@ -28,5 +28,159 @@
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",
-  "updated": "2026-08-26"
+  "updated": "2026-08-26",
+  "roles": {
+    "from": "standard-any.svg",
+    "derivedBy": "chromaticity/silhouette",
+    "k": 4,
+    "groups": [
+      {
+        "id": "group1",
+        "members": [
+          {
+            "id": "group1.member1",
+            "stops": [
+              "#a8b5bf",
+              "#bfcdd9",
+              "#b4c1cc",
+              "#b4c1cc",
+              "#b4c1cc",
+              "#bfcdd9",
+              "#a8b5bf"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "group1.member2",
+            "stops": [
+              "#99a5b0",
+              "#8897a4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group2",
+        "members": [
+          {
+            "id": "group2.member1",
+            "stops": [
+              "#e7e7e7",
+              "#f0f0f0"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group3",
+        "members": [
+          {
+            "id": "group3.member1",
+            "stops": [
+              "#ae7fe2",
+              "#8b8ce4",
+              "#9abbff",
+              "#c4d3fc"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "group4",
+        "members": [
+          {
+            "id": "group4.member1",
+            "stops": [
+              "#114a8b",
+              "#658ceb"
+            ],
+            "shapes": [
+              8
+            ]
+          },
+          {
+            "id": "group4.member2",
+            "stops": [
+              "#173a73",
+              "#144381",
+              "#0c59a4"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "held": [
+      {
+        "id": "held.1",
+        "stops": [
+          "#f2f2f2"
+        ],
+        "shapes": [
+          6
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "group1.member2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": null,
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "group1.member1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "group2.member1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "group3.member1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "held.1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "group4.member2",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "group4.member1",
+        "part": null
+      }
+    ],
+    "hash": "1f3878a9fd911e75"
+  }
 }

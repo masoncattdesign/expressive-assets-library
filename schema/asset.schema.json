@@ -23,7 +23,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Stable, globally unique identifier. Format: <collection>.<slug>. Never change this once published — every consumer references it, and a rename is a breaking change. Change `name` instead and add the old one to `aliases`.",
+      "description": "Stable, globally unique identifier. Format: <collection>.<slug>. Never change this once published \u2014 every consumer references it, and a rename is a breaking change. Change `name` instead and add the old one to `aliases`.",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "name": {
@@ -51,7 +51,7 @@
     },
     "description": {
       "type": "string",
-      "description": "One line: what the artwork depicts and when to reach for it. Doubles as the duplicate-detector — two assets with the same description are usually the same idea drawn twice.",
+      "description": "One line: what the artwork depicts and when to reach for it. Doubles as the duplicate-detector \u2014 two assets with the same description are usually the same idea drawn twice.",
       "maxLength": 280
     },
     "type": {
@@ -64,7 +64,7 @@
     },
     "collection": {
       "type": "string",
-      "description": "Sub-collection within the type. Extend this list as new collections are added — it is deliberately open to growth.",
+      "description": "Sub-collection within the type. Extend this list as new collections are added \u2014 it is deliberately open to growth.",
       "enum": [
         "system",
         "product",
@@ -93,7 +93,7 @@
     },
     "replacedBy": {
       "type": "string",
-      "description": "Asset id that supersedes this one. Required when status is deprecated — a deprecation with no migration target just strands consumers.",
+      "description": "Asset id that supersedes this one. Required when status is deprecated \u2014 a deprecation with no migration target just strands consumers.",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "themes": {
@@ -111,7 +111,7 @@
     },
     "sizes": {
       "type": "array",
-      "description": "Pixel sizes the artwork is designed to read correctly at — not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12.",
+      "description": "Pixel sizes the artwork is designed to read correctly at \u2014 not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12.",
       "minItems": 1,
       "uniqueItems": true,
       "items": {
@@ -141,11 +141,11 @@
     },
     "recolorable": {
       "type": "boolean",
-      "description": "Whether the artwork may be retinted to a Windows accent. Set false for trademarked brand marks that must ship in their own colors — the browser disables the accent picker for those, so nobody ships a magenta Excel icon."
+      "description": "Whether the artwork may be retinted to a Windows accent. Set false for trademarked brand marks that must ship in their own colors \u2014 the browser disables the accent picker for those, so nobody ships a magenta Excel icon."
     },
     "variants": {
       "type": "object",
-      "description": "Artwork paths, keyed by theme and then by the pixel size the drawing was made for. Windows product icons are REDRAWN per size — the 16px Excel icon is a different drawing from the 48px one, not a scaled copy — so each is stored separately. Artwork that is genuinely size-agnostic (a single scalable drawing) uses the one key \"any\". Top-level keys must match the themes array.",
+      "description": "Artwork paths, keyed by theme and then by the pixel size the drawing was made for. Windows product icons are REDRAWN per size \u2014 the 16px Excel icon is a different drawing from the 48px one, not a scaled copy \u2014 so each is stored separately. Artwork that is genuinely size-agnostic (a single scalable drawing) uses the one key \"any\". Top-level keys must match the themes array.",
       "minProperties": 1,
       "additionalProperties": {
         "type": "object",
@@ -180,7 +180,7 @@
     },
     "source": {
       "type": "object",
-      "description": "Upstream provenance for artwork the library did not draw. Required in practice for anything vendored from a third-party project — the license obligation travels with the file, not with the README, and an asset that cannot name where it came from cannot be audited later.",
+      "description": "Upstream provenance for artwork the library did not draw. Required in practice for anything vendored from a third-party project \u2014 the license obligation travels with the file, not with the README, and an asset that cannot name where it came from cannot be audited later.",
       "additionalProperties": false,
       "required": [
         "project",
@@ -232,6 +232,162 @@
         "pattern": "^(standard|outline|filled):(any|[0-9]{1,3})$"
       },
       "uniqueItems": true
+    },
+    "roles": {
+      "type": "object",
+      "description": "Derived color addresses, one per distinct fill. Frozen once written: `hash` covers the paint they were derived from, and scripts/derive-roles.mjs --check fails rather than renumbering when the artwork moves.",
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "derivedBy",
+        "k",
+        "groups",
+        "held",
+        "shapes",
+        "hash"
+      ],
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "The variant the roles were derived from, normally the largest Standard."
+        },
+        "derivedBy": {
+          "type": "string",
+          "description": "Clustering space and the criterion used to choose the group count."
+        },
+        "k": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4,
+          "description": "Number of color groups. 0 means every fill is held; under 2 means a two-color theme needs the part axis to bind to this asset."
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "members"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^group[0-9]+$"
+              },
+              "members": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "stops",
+                    "shapes"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^(group[0-9]+\\.member[0-9]+|held\\.[0-9]+)$"
+                    },
+                    "stops": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "pattern": "^#[0-9a-f]{6}$"
+                      },
+                      "description": "The fill this member is, in stop order. One entry is a flat fill; more is a gradient ramp."
+                    },
+                    "shapes": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "description": "Indices of the painted shapes carrying this fill, in document order."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "held": {
+          "type": "array",
+          "description": "Intentional white and black. Addressable, outside the color system, themed only when a theme asks.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "stops",
+              "shapes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^(group[0-9]+\\.member[0-9]+|held\\.[0-9]+)$"
+              },
+              "stops": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-f]{6}$"
+                },
+                "description": "The fill this member is, in stop order. One entry is a flat fill; more is a gradient ramp."
+              },
+              "shapes": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "description": "Indices of the painted shapes carrying this fill, in document order."
+              }
+            }
+          }
+        },
+        "shapes": {
+          "type": "array",
+          "description": "Both addresses for every painted shape. `part` is the structural name and stays null until it is harvested from Figma layer names.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "i",
+              "role",
+              "part"
+            ],
+            "properties": {
+              "i": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "role": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "part": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{16}$"
+        }
+      }
     }
   }
 }
