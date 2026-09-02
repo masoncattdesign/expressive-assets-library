@@ -4,46 +4,41 @@
  *   npm run build && node scripts/serve.mjs
  *   SITE=http://localhost:4173 OUT=./recording node scripts/record-demo.mjs
  *
- * WHY THIS LOOKS THE WAY IT DOES. Four attempts, and only the last diagnosis
- * was the real one. Recorded here so it is not rediscovered a fifth time.
+ * WHY IT LOOKS THE WAY IT DOES. Several attempts, and only the last diagnosis
+ * was right. Written down so it is not rediscovered.
  *
- *   1. There is no click animation, on purpose. A click is the exact moment
- *      the grid rebuilds, and anything moving through that stall reads as a
- *      glitch. The cursor arriving and stopping is the whole signal.
+ *   1. No click animation, on purpose. A click is the exact moment the grid
+ *      rebuilds, and anything moving through that pause reads as a glitch. The
+ *      cursor arriving and stopping is the whole signal, and a larger cursor
+ *      does the job better than any press effect did.
  *
- *   2. The stall was mostly NETWORK, not rasterization. The grid fetches a
- *      separate SVG per asset per style per size — that is the library's whole
- *      claim, artwork redrawn rather than scaled — so a cold style switch is
- *      ninety round trips, parses and DOM inserts in one frame. The warm-up
- *      below turns each switch into a cache read.
+ *   2. The pause was mostly NETWORK. The grid fetches a separate SVG per asset
+ *      per style per size — the library's whole claim is artwork redrawn rather
+ *      than scaled — so a cold style switch is ninety round trips, parses and
+ *      DOM inserts inside one frame. The warm-up below turns each switch into a
+ *      cache read, which took duplicate frames from 6.9% to about 3%.
  *
- *   3. No zoom in the page. Scaling the wrapper makes Chromium re-raster every
- *      card at the new scale, and with no GPU that measured worse than the
- *      repaints it was competing with: 12.2% duplicate frames against 6%. The
- *      push is added in ffmpeg instead, where it costs the renderer nothing —
- *      and because the crop rectangle changes every frame, a renderer stall no
- *      longer produces an identical frame at all.
+ *   3. No zoom, in the page or in post. In the page it was worse than the
+ *      thing it competed with: scaling the wrapper re-rasters every card at the
+ *      new scale and measured 12.2% duplicates. In post it works, but it has to
+ *      crop to do it, and cropping a 1440x900 capture throws away more frame
+ *      than the effect is worth.
  *
  *   4. Retime only by a factor that DIVIDES the source rate, and output that
- *      rate. The capture is 25fps; 1.25x into 20fps is exactly one source
- *      frame per output frame. Retiming onto 30 maps each source frame onto
- *      roughly 1.6 output frames, unevenly, which is its own kind of judder.
+ *      rate. The capture is 25fps; 1.25x into 20fps is exactly one source frame
+ *      per output frame. Retiming onto 30 maps each source frame onto roughly
+ *      1.6 output frames, unevenly, which is its own judder.
  *
- * Measure, do not trust. Zero duplicates is achievable and is the bar:
+ * Measure rather than trust. Zero duplicate frames is achievable and is the bar:
  *
  *   ffmpeg -i out.mp4 -map 0:v -f framemd5 -c rawvideo - | grep -v '^#' \
  *     | awk '{print $NF}' | uniq -c | sort -rn | head
  *
- *   ffmpeg -i raw.webm -vf "trim=8.0:21.7,setpts=PTS-STARTPTS" -an a.mp4
- *   ffmpeg -i raw.webm -vf "trim=27.3:33.6,setpts=PTS-STARTPTS" -an b.mp4
+ *   ffmpeg -i raw.webm -vf "trim=8.6:22.2,setpts=PTS-STARTPTS" -an a.mp4
+ *   ffmpeg -i raw.webm -vf "trim=28.2:34.2,setpts=PTS-STARTPTS" -an b.mp4
  *   ffmpeg -i a.mp4 -i b.mp4 -filter_complex \
- *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.3,setpts=PTS/1.25[v]" \
- *     -map "[v]" -r 20 -c:v libx264 -crf 18 -pix_fmt yuv420p nozoom.mp4
- *   D=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 nozoom.mp4)
- *   ffmpeg -i nozoom.mp4 -vf \
- *     "crop=w='floor(iw/(1+0.055*min(t/$D,1))/2)*2':h='floor(ih/(1+0.055*min(t/$D,1))/2)*2':\
- *      x='(iw-ow)*0.58':y='(ih-oh)*0.42',scale=1152:720:flags=lanczos" \
- *     -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
+ *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.2,setpts=PTS/1.25[v]" \
+ *     -map "[v]" -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
  *
  * No search anywhere in the sequence: filtering is the one moment the Gallery
  * can show a card whose artwork has not arrived, and a blank tile in a demo
@@ -57,7 +52,7 @@
  */
 import { chromium } from 'playwright';
 
-const W = 1152, H = 720;
+const W = 1440, H = 900;
 const CHROME = process.env.CHROME_PATH;
 const SITE = process.env.SITE || 'http://localhost:4173';
 const OUT = process.env.OUT || './recording';
