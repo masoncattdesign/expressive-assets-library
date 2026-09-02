@@ -1,0 +1,37 @@
+<svg aria-label="Media Player standard 16" role="img" width="16" height="16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 16px, not authored at this size -->
+<path d="M32.0001 63.9498C49.6456 63.9498 63.9501 49.6453 63.9501 31.9998C63.9501 14.3543 49.6456 0.0498047 32.0001 0.0498047C14.3546 0.0498047 0.0500488 14.3543 0.0500488 31.9998C0.0500488 49.6453 14.3546 63.9498 32.0001 63.9498Z" fill="url(#product-media-player-standard-64-paint0_linear_582222_10977)"/>
+<path d="M32 58.67C46.7294 58.67 58.67 46.7294 58.67 32C58.67 17.2705 46.7294 5.32996 32 5.32996C17.2705 5.32996 5.32996 17.2705 5.32996 32C5.32996 46.7294 17.2705 58.67 32 58.67Z" fill="url(#product-media-player-standard-64-paint1_linear_582222_10977)"/>
+<g filter="url(#product-media-player-standard-64-filter0_dd_582222_10977)">
+<path d="M26.43 17.6L45.28 30.59C46.24 31.25 46.24 32.75 45.28 33.41L26.43 46.4C25.38 47.12 24 46.32 24 44.99V19.02C24 17.69 25.38 16.89 26.43 17.61V17.6Z" fill="url(#product-media-player-standard-64-paint2_linear_582222_10977)"/>
+</g>
+<defs>
+<filter id="product-media-player-standard-64-filter0_dd_582222_10977" x="21.3333" y="16.0059" width="27.3333" height="34.6649" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_10977"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.266667"/>
+<feGaussianBlur stdDeviation="0.133333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_10977" result="effect2_dropShadow_582222_10977"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_10977" result="shape"/>
+</filter>
+<linearGradient id="product-media-player-standard-64-paint0_linear_582222_10977" x1="47.9801" y1="59.6698" x2="16.0201" y2="4.3298" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8661C5"/>
+<stop offset="0.5" stop-color="#CD7384"/>
+<stop offset="1" stop-color="#FF9349"/>
+</linearGradient>
+<linearGradient id="product-media-player-standard-64-paint1_linear_582222_10977" x1="45.34" y1="55.1" x2="18.66" y2="8.89995" gradientUnits="userSpaceOnUse">
+<stop stop-color="#212121"/>
+<stop offset="1" stop-color="#4D4D4D"/>
+</linearGradient>
+<linearGradient id="product-media-player-standard-64-paint2_linear_582222_10977" x1="41.43" y1="49.63" x2="25.45" y2="21.94" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

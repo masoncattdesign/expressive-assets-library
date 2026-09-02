@@ -1,0 +1,45 @@
+<svg aria-label="Weather standard 16" role="img" width="16" height="16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 16px, not authored at this size -->
+<path d="M32 60C47.464 60 60 47.464 60 32C60 16.536 47.464 4 32 4C16.536 4 4 16.536 4 32C4 47.464 16.536 60 32 60Z" fill="url(#product-weather-standard-64-paint0_linear_582222_11229)"/>
+<mask id="product-weather-standard-64-mask0_582222_11229" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="56" height="56">
+<path d="M32 60C47.464 60 60 47.464 60 32C60 16.536 47.464 4 32 4C16.536 4 4 16.536 4 32C4 47.464 16.536 60 32 60Z" fill="url(#product-weather-standard-64-paint1_linear_582222_11229)"/>
+</mask>
+<g mask="url(#product-weather-standard-64-mask0_582222_11229)">
+<g filter="url(#product-weather-standard-64-filter0_dd_582222_11229)">
+<path d="M29 43.8901C29 40.1301 31.9292 37.0501 35.6281 36.8001C36.8378 32.0701 41.1165 28.5801 46.2251 28.5801C50.044 28.5801 53.403 30.5401 55.3625 33.5001C60.1411 33.5601 64 37.4501 64 42.2501C64 44.1101 63.4202 45.8301 62.4304 47.2501C60.8509 49.5201 58.2217 51.0001 55.2525 51.0001H36.118C33.4087 51.0001 31.0594 49.4901 29.8597 47.2601C29.3199 46.2601 29.01 45.1101 29.01 43.8901H29Z" fill="url(#product-weather-standard-64-paint2_linear_582222_11229)"/>
+</g>
+</g>
+<path d="M29 43.8901C29 40.1301 31.9292 37.0501 35.6281 36.8001C36.8378 32.0701 41.1165 28.5801 46.2251 28.5801C50.044 28.5801 53.403 30.5401 55.3625 33.5001C60.1411 33.5601 64 37.4501 64 42.2501C64 44.1101 63.4202 45.8301 62.4304 47.2501C60.8509 49.5201 58.2217 51.0001 55.2525 51.0001H36.118C33.4087 51.0001 31.0594 49.4901 29.8597 47.2601C29.3199 46.2601 29.01 45.1101 29.01 43.8901H29Z" fill="url(#product-weather-standard-64-paint3_linear_582222_11229)"/>
+<defs>
+<filter id="product-weather-standard-64-filter0_dd_582222_11229" x="26.3333" y="27.2467" width="40.3333" height="27.7533" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11229"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.266667"/>
+<feGaussianBlur stdDeviation="0.133333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11229" result="effect2_dropShadow_582222_11229"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11229" result="shape"/>
+</filter>
+<linearGradient id="product-weather-standard-64-paint0_linear_582222_11229" x1="46" y1="56.25" x2="18" y2="7.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E25A01"/>
+<stop offset="1" stop-color="#FFD400"/>
+</linearGradient>
+<linearGradient id="product-weather-standard-64-paint1_linear_582222_11229" x1="46" y1="56.25" x2="18" y2="7.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E25A01"/>
+<stop offset="1" stop-color="#FFD400"/>
+</linearGradient>
+<linearGradient id="product-weather-standard-64-paint2_linear_582222_11229" x1="52.8032" y1="53.7701" x2="39.5113" y2="30.7634" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="product-weather-standard-64-paint3_linear_582222_11229" x1="52.8032" y1="53.7701" x2="39.5113" y2="30.7634" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

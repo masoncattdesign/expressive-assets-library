@@ -1,0 +1,27 @@
+<svg aria-label="Places standard 24" role="img" width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 24px, not authored at this size -->
+<g clip-path="url(#product-places-app-standard-64-clip0_582222_11060)">
+<path d="M55.0918 13C57.5719 17.0821 59 21.8745 59 27C58.9998 33.9154 56.3988 40.2232 52.123 45H52.1494L35.2471 62.6162C34.1732 63.735 32.6655 64.1734 31.25 63.9355V13H55.0918Z" fill="url(#product-places-app-standard-64-paint0_radial_582222_11060)"/>
+<path d="M32 -0.000488281C45.3251 -0.000488281 56.3937 9.65266 58.5986 22.3472C56.6236 17.1745 51.6165 13.5005 45.75 13.5005C38.1562 13.5005 32.0002 19.6558 32 27.2495V63.9995C30.8192 63.9995 29.6385 63.5385 28.7529 62.6157L11.8506 44.9995H11.8769C7.60108 40.2226 5 33.9151 5 26.9995C5 12.0878 17.0883 -0.000488281 32 -0.000488281Z" fill="url(#product-places-app-standard-64-paint1_radial_582222_11060)"/>
+<path d="M32 -0.000488281C45.3251 -0.000488281 56.3937 9.65266 58.5986 22.3472C56.6236 17.1745 51.6165 13.5005 45.75 13.5005C38.1562 13.5005 32.0002 19.6558 32 27.2495V63.9995C30.8192 63.9995 29.6385 63.5385 28.7529 62.6157L11.8506 44.9995H11.8769C7.60108 40.2226 5 33.9151 5 26.9995C5 12.0878 17.0883 -0.000488281 32 -0.000488281Z" fill="url(#product-places-app-standard-64-paint2_linear_582222_11060)"/>
+</g>
+<defs>
+<radialGradient id="product-places-app-standard-64-paint0_radial_582222_11060" cx="0" cy="0" r="1" gradientTransform="matrix(18.3525 -49.4359 27.0001 10.2315 32.0001 63.9983)" gradientUnits="userSpaceOnUse">
+<stop offset="0.124165" stop-color="#D59DFF"/>
+<stop offset="0.784303" stop-color="#0078D4"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</radialGradient>
+<radialGradient id="product-places-app-standard-64-paint1_radial_582222_11060" cx="0" cy="0" r="1" gradientTransform="matrix(46.6082 17.7778 -22.2266 59.5358 9.80235 14.2217)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#43EFB1"/>
+<stop offset="0.61125" stop-color="#21C6B3"/>
+<stop offset="1" stop-color="#1E8FCF"/>
+</radialGradient>
+<linearGradient id="product-places-app-standard-64-paint2_linear_582222_11060" x1="48.9675" y1="83.1106" x2="4.57817" y2="43.5843" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A194F4"/>
+<stop offset="1" stop-color="#975ECE" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="product-places-app-standard-64-clip0_582222_11060">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,13 @@
+<svg aria-label="Facebook Messenger standard 24" role="img" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 32px standard drawing shown at 24px, not authored at this size -->
+<path d="M16 28.9437C23.732 28.9437 30 22.9122 30 15.4719C30 8.03156 23.732 2 16 2C8.26801 2 2 8.03156 2 15.4719C2 19.1822 3.55873 22.5422 6.08043 24.9785C6.48596 25.3703 6.74654 25.8943 6.76404 26.4573L6.8441 29.032C6.86602 29.737 7.59398 30.1974 8.24221 29.9163L11.1942 28.636C11.6262 28.4486 12.1095 28.4247 12.5672 28.5358C13.6656 28.8022 14.8156 28.9437 16 28.9437Z" fill="url(#third-party-facebook-messenger-standard-32-paint0_radial_355643_85)"/>
+<path d="M7.59221 19.5499L11.7052 13.0262C12.3591 11.9871 13.7605 11.7319 14.7426 12.4656L18.017 14.9197C18.3178 15.143 18.7302 15.143 19.0287 14.9152L23.4447 11.5633C24.0326 11.1144 24.8028 11.823 24.4109 12.4497L20.2934 18.9689C19.6394 20.0079 18.238 20.2631 17.2559 19.5294L13.9838 17.0753C13.683 16.852 13.2706 16.852 12.9721 17.0799L8.55607 20.4318C7.96818 20.8807 7.198 20.1765 7.59221 19.5499Z" fill="white"/>
+<defs>
+<radialGradient id="third-party-facebook-messenger-standard-32-paint0_radial_355643_85" cx="0" cy="0" r="1" gradientTransform="matrix(16.4987 -29.0006 30.6585 17.4454 6.49963 32.0006)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0B92FF"/>
+<stop offset="0.508535" stop-color="#8F3EFF"/>
+<stop offset="0.848156" stop-color="#F8508A"/>
+<stop offset="1" stop-color="#FF7461"/>
+</radialGradient>
+</defs>
+</svg>

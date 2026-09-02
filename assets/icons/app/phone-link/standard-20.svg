@@ -1,0 +1,44 @@
+<svg aria-label="Phone Link standard 20" role="img" width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 20px, not authored at this size -->
+<rect x="4" y="8" width="56" height="42" rx="2" fill="url(#product-phone-link-standard-64-paint0_linear_582222_11030)"/>
+<path d="M0 48H64V50C64 51.1046 63.1046 52 62 52H2C0.895431 52 0 51.1046 0 50V48Z" fill="#184F85"/>
+<mask id="product-phone-link-standard-64-mask0_582222_11030" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="8" width="64" height="44">
+<path d="M58 8C59.1046 8 60 8.89543 60 10V48H64V50C64 51.1046 63.1046 52 62 52H2C0.895431 52 0 51.1046 0 50V48H4V10C4 8.89543 4.89543 8 6 8H58Z" fill="#184F85"/>
+</mask>
+<g mask="url(#product-phone-link-standard-64-mask0_582222_11030)">
+<g filter="url(#product-phone-link-standard-64-filter0_dd_582222_11030)">
+<rect x="14" y="18" width="26" height="46" rx="2" fill="url(#product-phone-link-standard-64-paint1_linear_582222_11030)"/>
+</g>
+</g>
+<rect x="14" y="50" width="26" height="8" fill="#0078D4"/>
+<rect x="14" y="38" width="26" height="12" fill="#1B9DE2"/>
+<rect x="14" y="24" width="26" height="14" fill="#35C1F1"/>
+<path d="M14 20C14 18.8954 14.8954 18 16 18H38C39.1046 18 40 18.8954 40 20V24H14V20Z" fill="#50E6FF"/>
+<path d="M14 58H40V62C40 63.1046 39.1046 64 38 64H16C14.8954 64 14 63.1046 14 62V58Z" fill="#184F85"/>
+<path d="M21 22C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20C20.4477 20 20 20.4477 20 21C20 21.5523 20.4477 22 21 22Z" fill="#0C63AD"/>
+<path d="M31 20H25C24.4477 20 24 20.4477 24 21C24 21.5523 24.4477 22 25 22H31C31.5523 22 32 21.5523 32 21C32 20.4477 31.5523 20 31 20Z" fill="#0C63AD"/>
+<defs>
+<filter id="product-phone-link-standard-64-filter0_dd_582222_11030" x="11.3333" y="15.3333" width="31.3333" height="51.3333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11030"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.133333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11030" result="effect2_dropShadow_582222_11030"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11030" result="shape"/>
+</filter>
+<linearGradient id="product-phone-link-standard-64-paint0_linear_582222_11030" x1="48.1604" y1="55.712" x2="18.042" y2="1.06144" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C63AD"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+<linearGradient id="product-phone-link-standard-64-paint1_linear_582222_11030" x1="34.503" y1="70.256" x2="-3.20851" y2="41.2483" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C63AD"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+</defs>
+</svg>

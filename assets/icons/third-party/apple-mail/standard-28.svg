@@ -1,0 +1,11 @@
+<svg aria-label="Apple Mail standard 28" role="img" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 32px standard drawing shown at 28px, not authored at this size -->
+<rect x="3" y="3" width="26" height="26" rx="6" fill="url(#third-party-apple-mail-standard-32-paint0_linear_355643_73)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7484 16.6533L13.7003 17.6052C14.9695 18.8744 17.0273 18.8744 18.2965 17.6052L19.2484 16.6532L24.3113 21.7162C24.0484 21.8588 23.7471 21.9399 23.4269 21.9399H8.56979C8.24962 21.9399 7.94837 21.8588 7.68542 21.7162L12.7484 16.6533ZM12.0918 15.9967L7.00502 21.0834C6.81995 20.7946 6.71265 20.4512 6.71265 20.0827V11.7256C6.71265 11.4054 6.79367 11.1042 6.93633 10.8412L12.0918 15.9967ZM7.56912 10.1608L14.3569 16.9486C15.2634 17.8551 16.7333 17.8551 17.6399 16.9486L24.4276 10.1608C24.1388 9.97575 23.7954 9.86844 23.4269 9.86844H8.56979C8.20132 9.86844 7.85792 9.97575 7.56912 10.1608ZM25.0604 10.8412L19.905 15.9966L24.9917 21.0834C25.1768 20.7946 25.2841 20.4512 25.2841 20.0827V11.7256C25.2841 11.4054 25.2031 11.1042 25.0604 10.8412Z" fill="white"/>
+<defs>
+<linearGradient id="third-party-apple-mail-standard-32-paint0_linear_355643_73" x1="16" y1="3" x2="16" y2="29" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1C72F3"/>
+<stop offset="1" stop-color="#1AC8FC"/>
+</linearGradient>
+</defs>
+</svg>

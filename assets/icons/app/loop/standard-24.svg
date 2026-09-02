@@ -1,0 +1,40 @@
+<svg aria-label="Loop standard 24" role="img" width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 24px, not authored at this size -->
+<g clip-path="url(#product-loop-app-standard-64-clip0_582222_10965)">
+<path d="M32 10C44.1502 10 54 19.8497 54 32C54 44.1502 44.1502 54 32 54H10V32C10 19.8497 19.8497 10 32 10Z" stroke="url(#product-loop-app-standard-64-paint0_linear_582222_10965)" stroke-width="20"/>
+<path d="M64 32C64 49.6731 49.6731 64 32 64H0V32H20V44H32C38.6274 44 44 38.6274 44 32H64Z" fill="url(#product-loop-app-standard-64-paint1_linear_582222_10965)"/>
+<path d="M64 32C64 49.6731 49.6731 64 32 64H0V32H20V44H32C38.6274 44 44 38.6274 44 32H64Z" fill="url(#product-loop-app-standard-64-paint2_radial_582222_10965)" fill-opacity="0.56"/>
+<path d="M64 32C64 49.6731 49.6731 64 32 64H0V32H20V44H32C38.6274 44 44 38.6274 44 32H64Z" fill="url(#product-loop-app-standard-64-paint3_radial_582222_10965)" fill-opacity="0.1"/>
+<path d="M32 0C40.8365 0 48.8361 3.58218 54.6269 9.37304L40.4853 23.5146C38.3138 21.3431 35.3137 20 32 20C25.3726 20 20 25.3726 20 32V44C20 55.0457 11.0457 64 0 64V32C0 14.3269 14.3269 0 32 0Z" fill="url(#product-loop-app-standard-64-paint4_linear_582222_10965)"/>
+<path d="M32 0C40.8365 0 48.8361 3.58218 54.6269 9.37304L40.4853 23.5146C38.3138 21.3431 35.3137 20 32 20C25.3726 20 20 25.3726 20 32V44C20 55.0457 11.0457 64 0 64V32C0 14.3269 14.3269 0 32 0Z" fill="url(#product-loop-app-standard-64-paint5_radial_582222_10965)"/>
+</g>
+<defs>
+<linearGradient id="product-loop-app-standard-64-paint0_linear_582222_10965" x1="36.84" y1="29.17" x2="26.2084" y2="64.6085" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9237E3"/>
+<stop offset="1" stop-color="#48E6F3"/>
+</linearGradient>
+<linearGradient id="product-loop-app-standard-64-paint1_linear_582222_10965" x1="20.8" y1="59.2" x2="48.96" y2="52.8" gradientUnits="userSpaceOnUse">
+<stop stop-color="#51E6FF"/>
+<stop offset="1" stop-color="#71D4FF" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="product-loop-app-standard-64-paint2_radial_582222_10965" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11.2 50.4) rotate(34.5085) scale(15.5332 27.2999)">
+<stop/>
+<stop offset="0.699824" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="product-loop-app-standard-64-paint3_radial_582222_10965" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.36 48) rotate(31.866) scale(27.8823 49.0037)">
+<stop offset="0.328125"/>
+<stop offset="0.604167" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="product-loop-app-standard-64-paint4_linear_582222_10965" x1="13.0999" y1="34.24" x2="29.4282" y2="11.2236" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6D05E8"/>
+<stop offset="1" stop-color="#AB5ADD" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="product-loop-app-standard-64-paint5_radial_582222_10965" cx="0" cy="0" r="1" gradientTransform="matrix(42.8143 -7.36 19.3208 112.737 -5.43166 19.84)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6D05E8"/>
+<stop offset="1" stop-color="#6D05E8" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="product-loop-app-standard-64-clip0_582222_10965">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

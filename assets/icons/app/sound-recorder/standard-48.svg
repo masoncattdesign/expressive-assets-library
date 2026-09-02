@@ -1,0 +1,60 @@
+<svg aria-label="Sound Recorder standard 48" role="img" width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 48px, not authored at this size -->
+<path d="M41.67 59H34V52H29V59H21.33C20.6 59 20 59.6 20 60.33V62.67C20 63.4 20.6 64 21.33 64H41.67C42.4 64 43 63.4 43 62.67V60.33C43 59.6 42.4 59 41.67 59Z" fill="url(#product-sound-recorder-standard-64-paint0_linear_582222_11146)"/>
+<path d="M42.3 0H20.7C19.21 0 18 1.2 18 2.69V32.25H45V2.69C45 1.21 43.79 0 42.3 0Z" fill="url(#product-sound-recorder-standard-64-paint1_linear_582222_11146)"/>
+<path d="M42.31 43H20.7C19.21 43 18.01 41.79 18.01 40.31V27H45.01V40.31C45.01 41.8 43.8 43 42.32 43H42.31Z" fill="url(#product-sound-recorder-standard-64-paint2_linear_582222_11146)"/>
+<mask id="product-sound-recorder-standard-64-mask0_582222_11146" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="18" y="0" width="28" height="64">
+<path d="M34 59H41.6699C42.3999 59 43 59.6001 43 60.3301V62.6699C43 63.3999 42.3999 64 41.6699 64H21.3301C20.6001 64 20 63.3999 20 62.6699V60.3301C20 59.6001 20.6001 59 21.3301 59H29V52H34V59ZM42.2998 0C43.7898 0 45 1.21043 45 2.69043V27H45.0098V40.3096C45.0098 41.7995 43.8002 42.9998 42.3203 43H20.7002C19.2102 43 18.0098 41.7896 18.0098 40.3096V32.25H18V2.69043C18 1.20043 19.2102 0 20.7002 0H42.2998Z" fill="url(#product-sound-recorder-standard-64-paint3_linear_582222_11146)"/>
+</mask>
+<g mask="url(#product-sound-recorder-standard-64-mask0_582222_11146)">
+<g filter="url(#product-sound-recorder-standard-64-filter0_dd_582222_11146)">
+<path d="M16.6699 23C17.3999 23 18 23.6001 18 24.3301V45C18 46.66 19.34 48 21 48H42C43.66 48 45 46.66 45 45V24.3301C45 23.6001 45.6001 23 46.3301 23H48.6699C49.3999 23 50 23.6001 50 24.3301V45C50 49.42 46.42 53 42 53H21C16.58 53 13 49.42 13 45V24.3301C13 23.6001 13.6001 23 14.3301 23H16.6699ZM31.5 31C33.7091 31 35.5 32.7909 35.5 35C35.5 37.2091 33.7091 39 31.5 39C29.2909 39 27.5 37.2091 27.5 35C27.5 32.7909 29.2909 31 31.5 31Z" fill="url(#product-sound-recorder-standard-64-paint4_linear_582222_11146)"/>
+</g>
+</g>
+<path d="M48.67 23H46.33C45.6 23 45 23.6 45 24.33V45C45 46.66 43.66 48 42 48H21C19.34 48 18 46.66 18 45V24.33C18 23.6 17.4 23 16.67 23H14.33C13.6 23 13 23.6 13 24.33V45C13 49.42 16.58 53 21 53H42C46.42 53 50 49.42 50 45V24.33C50 23.6 49.4 23 48.67 23Z" fill="url(#product-sound-recorder-standard-64-paint5_linear_582222_11146)"/>
+<path d="M31.5 39C33.7091 39 35.5 37.2091 35.5 35C35.5 32.7909 33.7091 31 31.5 31C29.2909 31 27.5 32.7909 27.5 35C27.5 37.2091 29.2909 39 31.5 39Z" fill="url(#product-sound-recorder-standard-64-paint6_linear_582222_11146)"/>
+<defs>
+<filter id="product-sound-recorder-standard-64-filter0_dd_582222_11146" x="10.3333" y="21.6667" width="42.3333" height="35.3333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11146"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.266667"/>
+<feGaussianBlur stdDeviation="0.133333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11146" result="effect2_dropShadow_582222_11146"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11146" result="shape"/>
+</filter>
+<linearGradient id="product-sound-recorder-standard-64-paint0_linear_582222_11146" x1="35.21" y1="67.93" x2="26.76" y2="53.29" gradientUnits="userSpaceOnUse">
+<stop stop-color="#626F7A"/>
+<stop offset="1" stop-color="#8B9299"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint1_linear_582222_11146" x1="41.43" y1="34.31" x2="21.21" y2="-0.71" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="0.99" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint2_linear_582222_11146" x1="38.27" y1="45.75" x2="25.09" y2="22.91" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint3_linear_582222_11146" x1="38.2698" y1="45.75" x2="25.0898" y2="22.9101" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint4_linear_582222_11146" x1="33.5" y1="38.46" x2="29.5" y2="31.54" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#EC6725"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint5_linear_582222_11146" x1="42.21" y1="54.12" x2="21.68" y2="18.55" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737A80"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="product-sound-recorder-standard-64-paint6_linear_582222_11146" x1="33.5" y1="38.46" x2="29.5" y2="31.54" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#EC6725"/>
+</linearGradient>
+</defs>
+</svg>

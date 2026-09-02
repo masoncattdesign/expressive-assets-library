@@ -9,9 +9,17 @@
   "collection": "app",
   "status": "published",
   "themes": [
-    "standard"
+    "standard",
+    "outline",
+    "filled"
   ],
   "sizes": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    48,
     64
   ],
   "colors": {
@@ -21,7 +29,29 @@
   "recolorable": false,
   "variants": {
     "standard": {
+      "16": "assets/icons/app/quick-assist/standard-16.svg",
+      "20": "assets/icons/app/quick-assist/standard-20.svg",
+      "24": "assets/icons/app/quick-assist/standard-24.svg",
+      "28": "assets/icons/app/quick-assist/standard-28.svg",
+      "32": "assets/icons/app/quick-assist/standard-32.svg",
+      "48": "assets/icons/app/quick-assist/standard-48.svg",
       "64": "assets/icons/app/quick-assist/standard-64.svg"
+    },
+    "outline": {
+      "16": "assets/icons/app/quick-assist/outline-16.svg",
+      "20": "assets/icons/app/quick-assist/outline-20.svg",
+      "24": "assets/icons/app/quick-assist/outline-24.svg",
+      "28": "assets/icons/app/quick-assist/outline-28.svg",
+      "32": "assets/icons/app/quick-assist/outline-32.svg",
+      "48": "assets/icons/app/quick-assist/outline-48.svg"
+    },
+    "filled": {
+      "16": "assets/icons/app/quick-assist/filled-16.svg",
+      "20": "assets/icons/app/quick-assist/filled-20.svg",
+      "24": "assets/icons/app/quick-assist/filled-24.svg",
+      "28": "assets/icons/app/quick-assist/filled-28.svg",
+      "32": "assets/icons/app/quick-assist/filled-32.svg",
+      "48": "assets/icons/app/quick-assist/filled-48.svg"
     }
   },
   "figma": {
@@ -30,5 +60,25 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-01",
-  "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in."
+  "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
+  "generated": [
+    "filled:16",
+    "filled:20",
+    "filled:24",
+    "filled:28",
+    "filled:32",
+    "filled:48",
+    "outline:16",
+    "outline:20",
+    "outline:24",
+    "outline:28",
+    "outline:32",
+    "outline:48",
+    "standard:16",
+    "standard:20",
+    "standard:24",
+    "standard:28",
+    "standard:32",
+    "standard:48"
+  ]
 }

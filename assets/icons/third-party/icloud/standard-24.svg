@@ -1,0 +1,46 @@
+<svg aria-label="iCloud standard 24" role="img" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 32px standard drawing shown at 24px, not authored at this size -->
+<path d="M26 14L26 14.0224C28.8032 14.275 31 16.631 31 19.5C31 22.5376 28.5376 25 25.5 25H7C3.68629 25 1 22.3137 1 19C1 16.3865 2.67094 14.1633 5.00278 13.3404C5.08681 10.9291 7.06813 9 9.5 9C10.1908 9 10.8453 9.15567 11.4303 9.43385C12.8755 7.35832 15.2791 6 18 6C22.4183 6 26 9.58172 26 14Z" fill="url(#third-party-icloud-standard-32-paint0_radial_266081_1795)"/>
+<circle cx="9.5" cy="13.5" r="4.5" fill="url(#third-party-icloud-standard-32-paint1_radial_266081_1795)"/>
+<circle cx="7" cy="19" r="6" fill="url(#third-party-icloud-standard-32-paint2_radial_266081_1795)"/>
+<path d="M20.4258 21.6256C20.1515 20.9717 20 20.2535 20 19.5C20 16.4624 22.4624 14 25.5 14C25.6685 14 25.8353 14.0076 26 14.0224C25.9902 17.5853 23.6514 20.6004 20.4258 21.6256Z" fill="url(#third-party-icloud-standard-32-paint3_linear_266081_1795)"/>
+<path d="M26 14.0225C25.9902 17.5855 23.6511 20.6008 20.4251 21.6258C21.2565 23.6078 23.2153 25 25.4993 25C28.5368 25 30.9993 22.5375 30.9993 19.5C30.9993 16.6312 28.8029 14.2754 26 14.0225Z" fill="url(#third-party-icloud-standard-32-paint4_radial_266081_1795)"/>
+<path d="M5.00278 13.3404C5.62755 13.12 6.29977 13 7 13C9.53076 13 11.6956 14.5668 12.5773 16.7834C11.7725 17.5379 10.6902 18 9.5 18C7.01472 18 5 15.9853 5 13.5C5 13.4466 5.00093 13.3934 5.00278 13.3404Z" fill="url(#third-party-icloud-standard-32-paint5_linear_266081_1795)"/>
+<path d="M10.0026 13.8037C11.1628 14.4753 12.0772 15.5244 12.5779 16.7829C13.4533 15.9619 14.0002 14.7948 14.0002 13.5C14.0002 11.7055 12.9499 10.1564 11.4305 9.43384C10.5637 10.6786 10.0417 12.1813 10.0026 13.8037Z" fill="url(#third-party-icloud-standard-32-paint6_linear_266081_1795)"/>
+<path d="M10.0024 13.8041C11.7945 14.8418 13 16.7801 13 19C13 19.395 12.9618 19.7811 12.889 20.1547C11.1238 18.6873 10 16.4749 10 14C10 13.9345 10.0008 13.8692 10.0024 13.8041Z" fill="url(#third-party-icloud-standard-32-paint7_linear_266081_1795)"/>
+<defs>
+<radialGradient id="third-party-icloud-standard-32-paint0_radial_266081_1795" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.85465 14.6189) rotate(6.15628) scale(29.4634 29.2971)">
+<stop offset="0.0428094" stop-color="#B4E7FC"/>
+<stop offset="0.365752" stop-color="#5CCBFC"/>
+<stop offset="0.950149" stop-color="#3E8AF5"/>
+</radialGradient>
+<radialGradient id="third-party-icloud-standard-32-paint1_radial_266081_1795" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.0336 15.3825) rotate(-90.9544) scale(6.86299 5.6643)">
+<stop offset="0.773397" stop-color="#70DCFC" stop-opacity="0"/>
+<stop offset="1" stop-color="#7ED6F0"/>
+</radialGradient>
+<radialGradient id="third-party-icloud-standard-32-paint2_radial_266081_1795" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.71141 21.51) rotate(-90.8736) scale(9.59179 7.91647)">
+<stop offset="0.773397" stop-color="#B3E6FB" stop-opacity="0"/>
+<stop offset="1" stop-color="#89DDFF"/>
+</radialGradient>
+<linearGradient id="third-party-icloud-standard-32-paint3_linear_266081_1795" x1="15.0581" y1="21.4687" x2="28.6593" y2="13.7958" gradientUnits="userSpaceOnUse">
+<stop offset="0.57" stop-color="#4397F3" stop-opacity="0"/>
+<stop offset="1" stop-color="#1C7EEA"/>
+</linearGradient>
+<radialGradient id="third-party-icloud-standard-32-paint4_radial_266081_1795" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.2777 13.2044) rotate(101.502) scale(6.35788 3.6565)">
+<stop stop-color="#A0D4FF"/>
+<stop offset="1" stop-color="#52AFFD" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="third-party-icloud-standard-32-paint5_linear_266081_1795" x1="14.169" y1="24.1642" x2="4.26464" y2="11.7518" gradientUnits="userSpaceOnUse">
+<stop offset="0.53181" stop-color="#73CFF6" stop-opacity="0"/>
+<stop offset="1" stop-color="#3BC0FA"/>
+</linearGradient>
+<linearGradient id="third-party-icloud-standard-32-paint6_linear_266081_1795" x1="11.7476" y1="9.92983" x2="12.8292" y2="15.5729" gradientUnits="userSpaceOnUse">
+<stop stop-color="#40B5FC"/>
+<stop offset="1" stop-color="#5CCBFB" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="third-party-icloud-standard-32-paint7_linear_266081_1795" x1="11.8774" y1="12.5656" x2="13.4538" y2="17.19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#47C2FE"/>
+<stop offset="1" stop-color="#59C2F9" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

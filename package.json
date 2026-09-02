@@ -25,6 +25,9 @@
     "figma:run:3p": "node scripts/import-figma.mjs --plan=figma-3p-plan.json",
     "figma:plan:appicons": "node scripts/build-appicons-plan.mjs",
     "figma:run:appicons": "node scripts/import-figma.mjs --plan=figma-appicons-plan.json",
-    "figma:plan:m365": "node scripts/build-m365-plan.mjs"
+    "figma:plan:m365": "node scripts/build-m365-plan.mjs",
+    "gaps:product": "node scripts/fill-icon-gaps.mjs --collection=product",
+    "gaps:app": "node scripts/fill-icon-gaps.mjs --collection=app",
+    "gaps:3p": "node scripts/fill-icon-gaps.mjs --collection=third-party"
   }
 }

@@ -1,0 +1,6 @@
+<svg aria-label="Google Slides standard 24" role="img" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 32px standard drawing shown at 24px, not authored at this size -->
+<path d="M5 4C5 2.89543 5.89543 2 7 2H20L22.1459 5.88483C22.323 6.20544 22.5848 6.47127 22.9026 6.65331L27 9V28C27 29.1046 26.1046 30 25 30H7C5.89543 30 5 29.1046 5 28V4Z" fill="#F8BF08"/>
+<path d="M20 2L27 9H20V2Z" fill="#F59307"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23 13H9V22H23V13ZM21 15H11V20H21V15Z" fill="white"/>
+</svg>

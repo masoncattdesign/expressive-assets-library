@@ -1,0 +1,14 @@
+<svg aria-label="Phone Link filled 20" role="img" width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: silhouette derived from the standard artwork, not an authored Filled drawing -->
+<rect x="4" y="8" width="56" height="42" rx="2" fill="currentColor"/>
+<path d="M0 48H64V50C64 51.1046 63.1046 52 62 52H2C0.895431 52 0 51.1046 0 50V48Z" fill="currentColor"/>
+<path d="M58 8C59.1046 8 60 8.89543 60 10V48H64V50C64 51.1046 63.1046 52 62 52H2C0.895431 52 0 51.1046 0 50V48H4V10C4 8.89543 4.89543 8 6 8H58Z" fill="currentColor"/>
+<rect x="14" y="18" width="26" height="46" rx="2" fill="currentColor"/>
+<rect x="14" y="50" width="26" height="8" fill="currentColor"/>
+<rect x="14" y="38" width="26" height="12" fill="currentColor"/>
+<rect x="14" y="24" width="26" height="14" fill="currentColor"/>
+<path d="M14 20C14 18.8954 14.8954 18 16 18H38C39.1046 18 40 18.8954 40 20V24H14V20Z" fill="var(--ea-knockout, #fff)"/>
+<path d="M14 58H40V62C40 63.1046 39.1046 64 38 64H16C14.8954 64 14 63.1046 14 62V58Z" fill="currentColor"/>
+<path d="M21 22C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20C20.4477 20 20 20.4477 20 21C20 21.5523 20.4477 22 21 22Z" fill="currentColor"/>
+<path d="M31 20H25C24.4477 20 24 20.4477 24 21C24 21.5523 24.4477 22 25 22H31C31.5523 22 32 21.5523 32 21C32 20.4477 31.5523 20 31 20Z" fill="currentColor"/>
+</svg>

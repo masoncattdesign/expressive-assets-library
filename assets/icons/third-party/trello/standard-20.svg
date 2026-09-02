@@ -1,0 +1,12 @@
+<svg aria-label="Trello standard 20" role="img" width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 32px standard drawing shown at 20px, not authored at this size -->
+<path d="M25 4H7C5.34315 4 4 5.34315 4 7V25C4 26.6569 5.34315 28 7 28H25C26.6569 28 28 26.6569 28 25V7C28 5.34315 26.6569 4 25 4Z" fill="url(#third-party-trello-standard-32-paint0_linear_10276_55)"/>
+<path d="M23.44 7.12012H19C18.2047 7.12012 17.56 7.76483 17.56 8.56012V16.1801C17.56 16.9754 18.2047 17.6201 19 17.6201H23.44C24.2353 17.6201 24.88 16.9754 24.88 16.1801V8.56012C24.88 7.76483 24.2353 7.12012 23.44 7.12012Z" fill="white"/>
+<path d="M13 7.12012H8.56C7.76471 7.12012 7.12 7.76483 7.12 8.56012V22.1801C7.12 22.9754 7.76471 23.6201 8.56 23.6201H13C13.7953 23.6201 14.44 22.9754 14.44 22.1801V8.56012C14.44 7.76483 13.7953 7.12012 13 7.12012Z" fill="white"/>
+<defs>
+<linearGradient id="third-party-trello-standard-32-paint0_linear_10276_55" x1="16" y1="4" x2="16" y2="28" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2684FF"/>
+<stop offset="1" stop-color="#0152CC"/>
+</linearGradient>
+</defs>
+</svg>

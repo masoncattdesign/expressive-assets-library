@@ -1,0 +1,106 @@
+<svg aria-label="Store Light Theme standard 20" role="img" width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 20px, not authored at this size -->
+<g clip-path="url(#product-store-light-theme-standard-64-clip0_582222_11182)">
+<g clip-path="url(#product-store-light-theme-standard-64-clip1_582222_11182)">
+<path d="M1 10.6667C1 9.1939 2.19391 8 3.66666 8H60.3333C61.8061 8 63 9.1939 63 10.6667V51C63 57.0751 58.0751 62 52 62H12C5.92487 62 1 57.0751 1 51V10.6667Z" fill="url(#product-store-light-theme-standard-64-paint0_linear_582222_11182)"/>
+<mask id="product-store-light-theme-standard-64-mask0_582222_11182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="8" width="62" height="54">
+<path d="M1 10.6667C1 9.1939 2.19391 8 3.66666 8H60.3333C61.8061 8 63 9.1939 63 10.6667V51C63 57.0751 58.0751 62 52 62H12C5.92487 62 1 57.0751 1 51V10.6667Z" fill="url(#product-store-light-theme-standard-64-paint1_linear_582222_11182)"/>
+</mask>
+<g mask="url(#product-store-light-theme-standard-64-mask0_582222_11182)">
+<g filter="url(#product-store-light-theme-standard-64-filter0_dd_582222_11182)">
+<path d="M17 10V2H47V10" stroke="url(#product-store-light-theme-standard-64-paint2_linear_582222_11182)" stroke-width="4" stroke-linecap="round"/>
+</g>
+</g>
+<g filter="url(#product-store-light-theme-standard-64-filter1_dd_582222_11182)">
+<path d="M31.0005 22.0005H19.0005V34.0005H31.0005V22.0005Z" fill="#F25022"/>
+<path d="M45 22H33V34H45V22Z" fill="#7FBA00"/>
+<path d="M45 36H33V48H45V36Z" fill="#FFB900"/>
+<path d="M31 36H19V48H31V36Z" fill="#00A4EF"/>
+</g>
+<path d="M17 10V4C17 2.89543 17.8954 2 19 2H45C46.1045 2 47 2.89543 47 4V10" stroke="url(#product-store-light-theme-standard-64-paint3_linear_582222_11182)" stroke-width="4" stroke-linecap="round"/>
+<rect x="19" width="26" height="4" fill="url(#product-store-light-theme-standard-64-paint4_linear_582222_11182)"/>
+<mask id="product-store-light-theme-standard-64-mask1_582222_11182" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="19" y="0" width="26" height="4">
+<rect x="19" width="26" height="4" fill="url(#product-store-light-theme-standard-64-paint5_linear_582222_11182)"/>
+</mask>
+<g mask="url(#product-store-light-theme-standard-64-mask1_582222_11182)">
+<g filter="url(#product-store-light-theme-standard-64-filter2_dd_582222_11182)">
+<rect x="13.2226" y="2.00073" width="5.77778" height="9.99999" fill="#C4C4C4"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="product-store-light-theme-standard-64-filter0_dd_582222_11182" x="11" y="-2.66667" width="42" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11182"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11182" result="effect2_dropShadow_582222_11182"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11182" result="shape"/>
+</filter>
+<filter id="product-store-light-theme-standard-64-filter1_dd_582222_11182" x="15" y="19.3333" width="34" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11182"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11182" result="effect2_dropShadow_582222_11182"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11182" result="shape"/>
+</filter>
+<filter id="product-store-light-theme-standard-64-filter2_dd_582222_11182" x="9.22265" y="-4.66666" width="45.5551" height="18.0007" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2.66667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_11182"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2.66667"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_582222_11182" result="effect2_dropShadow_582222_11182"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_582222_11182" result="shape"/>
+</filter>
+<linearGradient id="product-store-light-theme-standard-64-paint0_linear_582222_11182" x1="32" y1="8" x2="43.9162" y2="63.8664" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#243A5F"/>
+</linearGradient>
+<linearGradient id="product-store-light-theme-standard-64-paint1_linear_582222_11182" x1="32" y1="8" x2="43.9162" y2="63.8664" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<linearGradient id="product-store-light-theme-standard-64-paint2_linear_582222_11182" x1="32" y1="2" x2="32.5627" y2="10.6163" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="product-store-light-theme-standard-64-paint3_linear_582222_11182" x1="32" y1="2" x2="32.5627" y2="10.6163" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30DAFF"/>
+<stop offset="1" stop-color="#0094D4"/>
+</linearGradient>
+<linearGradient id="product-store-light-theme-standard-64-paint4_linear_582222_11182" x1="30.5555" y1="1.04661e-07" x2="30.5555" y2="4" gradientUnits="userSpaceOnUse">
+<stop stop-color="#22BCFF"/>
+<stop offset="1" stop-color="#0088F0"/>
+</linearGradient>
+<linearGradient id="product-store-light-theme-standard-64-paint5_linear_582222_11182" x1="30.5555" y1="1.04661e-07" x2="30.5555" y2="4" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<clipPath id="product-store-light-theme-standard-64-clip0_582222_11182">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+<clipPath id="product-store-light-theme-standard-64-clip1_582222_11182">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

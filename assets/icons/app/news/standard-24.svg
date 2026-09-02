@@ -1,0 +1,42 @@
+<svg aria-label="News standard 24" role="img" width="24" height="24" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- placeholder: the 64px standard drawing shown at 24px, not authored at this size -->
+<path d="M59.01 16V10.68C59.01 9.2 57.81 8 56.33 8H2.68002C1.20002 8 0 9.2 0 10.68V53.33C0 54.81 1.20002 56.01 2.68002 56.01H61.5V16H59H59.01Z" fill="url(#product-news-standard-64-paint0_linear_582222_10982)"/>
+<path d="M59.01 15H61.52C62.89 15 64.01 16.12 64.01 17.49V53.51C64.01 54.88 62.89 56 61.52 56H61.5C60.13 56 59.01 54.88 59.01 53.51V15Z" fill="#940E16"/>
+<path d="M59.01 15H61.52C62.89 15 64.01 16.12 64.01 17.49V53.51C64.01 54.88 62.89 56 61.52 56H61.5C60.13 56 59.01 54.88 59.01 53.51V15Z" fill="url(#product-news-standard-64-paint1_linear_582222_10982)" fill-opacity="0.2"/>
+<g filter="url(#product-news-standard-64-filter0_d_582222_10982)">
+<path d="M51.61 14H7.41C6.6368 14 6.01001 14.6268 6.01001 15.4V18.6C6.01001 19.3732 6.6368 20 7.41 20H51.61C52.3832 20 53.01 19.3732 53.01 18.6V15.4C53.01 14.6268 52.3832 14 51.61 14Z" fill="white"/>
+<path d="M25.7 26H7.32001C6.59651 26 6.01001 26.5865 6.01001 27.31V45.69C6.01001 46.4135 6.59651 47 7.32001 47H25.7C26.4235 47 27.01 46.4135 27.01 45.69V27.31C27.01 26.5865 26.4235 26 25.7 26Z" fill="url(#product-news-standard-64-paint2_linear_582222_10982)"/>
+<path d="M25.7 26H7.32001C6.59651 26 6.01001 26.5865 6.01001 27.31V45.69C6.01001 46.4135 6.59651 47 7.32001 47H25.7C26.4235 47 27.01 46.4135 27.01 45.69V27.31C27.01 26.5865 26.4235 26 25.7 26Z" fill="url(#product-news-standard-64-paint3_linear_582222_10982)"/>
+<path d="M33.29 26H51.73C52.44 26 53.01 26.57 53.01 27.28V31H32.01V27.28C32.01 26.57 32.58 26 33.29 26Z" fill="white"/>
+<path d="M53.01 31H32.01V36H53.01V31Z" fill="#FFB7BB"/>
+<path d="M32.01 36H53.01V39.72C53.01 40.43 52.44 41 51.73 41H33.29C32.58 41 32.01 40.43 32.01 39.72V36Z" fill="#F87E86"/>
+</g>
+<defs>
+<filter id="product-news-standard-64-filter0_d_582222_10982" x="3.34334" y="12.6667" width="52.3333" height="38.3333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.33333"/>
+<feGaussianBlur stdDeviation="1.33333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_582222_10982"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_582222_10982" result="shape"/>
+</filter>
+<linearGradient id="product-news-standard-64-paint0_linear_582222_10982" x1="-384.65" y1="15.53" x2="-393.15" y2="0.8" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E21C2C"/>
+<stop offset="0.5" stop-color="#F03442"/>
+<stop offset="1" stop-color="#F5535E"/>
+</linearGradient>
+<linearGradient id="product-news-standard-64-paint1_linear_582222_10982" x1="59.01" y1="35.5" x2="61.51" y2="35.5" gradientUnits="userSpaceOnUse">
+<stop offset="0.06"/>
+<stop offset="0.85" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="product-news-standard-64-paint2_linear_582222_10982" x1="-387.77" y1="15.45" x2="-392.57" y2="7.12999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="product-news-standard-64-paint3_linear_582222_10982" x1="32.134" y1="59.075" x2="16.9775" y2="27.5495" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

@@ -9,10 +9,16 @@
   "status": "published",
   "themes": [
     "standard",
+    "outline",
     "filled"
   ],
   "sizes": [
-    32
+    16,
+    20,
+    24,
+    28,
+    32,
+    48
   ],
   "colors": {
     "primary": "#FF2741",
@@ -21,10 +27,28 @@
   "recolorable": false,
   "variants": {
     "standard": {
-      "32": "assets/icons/third-party/xiaohongshu/standard-32.svg"
+      "16": "assets/icons/third-party/xiaohongshu/standard-16.svg",
+      "20": "assets/icons/third-party/xiaohongshu/standard-20.svg",
+      "24": "assets/icons/third-party/xiaohongshu/standard-24.svg",
+      "28": "assets/icons/third-party/xiaohongshu/standard-28.svg",
+      "32": "assets/icons/third-party/xiaohongshu/standard-32.svg",
+      "48": "assets/icons/third-party/xiaohongshu/standard-48.svg"
+    },
+    "outline": {
+      "16": "assets/icons/third-party/xiaohongshu/outline-16.svg",
+      "20": "assets/icons/third-party/xiaohongshu/outline-20.svg",
+      "24": "assets/icons/third-party/xiaohongshu/outline-24.svg",
+      "28": "assets/icons/third-party/xiaohongshu/outline-28.svg",
+      "32": "assets/icons/third-party/xiaohongshu/outline-32.svg",
+      "48": "assets/icons/third-party/xiaohongshu/outline-48.svg"
     },
     "filled": {
-      "32": "assets/icons/third-party/xiaohongshu/filled-32.svg"
+      "16": "assets/icons/third-party/xiaohongshu/filled-16.svg",
+      "20": "assets/icons/third-party/xiaohongshu/filled-20.svg",
+      "24": "assets/icons/third-party/xiaohongshu/filled-24.svg",
+      "28": "assets/icons/third-party/xiaohongshu/filled-28.svg",
+      "32": "assets/icons/third-party/xiaohongshu/filled-32.svg",
+      "48": "assets/icons/third-party/xiaohongshu/filled-48.svg"
     }
   },
   "figma": {
@@ -38,5 +62,23 @@
     "project": "Xingin Information Technology Co., Ltd.",
     "license": "trademark of the named holder, reproduced for interface use and not licensed for redistribution",
     "copyright": "The marks in this group are trademarks of Xingin Information Technology Co., Ltd."
-  }
+  },
+  "generated": [
+    "filled:16",
+    "filled:20",
+    "filled:24",
+    "filled:28",
+    "filled:48",
+    "outline:16",
+    "outline:20",
+    "outline:24",
+    "outline:28",
+    "outline:32",
+    "outline:48",
+    "standard:16",
+    "standard:20",
+    "standard:24",
+    "standard:28",
+    "standard:48"
+  ]
 }
