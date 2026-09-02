@@ -34,10 +34,19 @@ function node(type, extra = {}) {
     },
     setSharedPluginData(ns, k, v) { n._data[ns + ':' + k] = String(v); },
     getSharedPluginData(ns, k) { return n._data[ns + ':' + k] || ''; },
-    // Auto-layout sizing calls are no-ops here; what matters is that they exist,
-    // because a missing setter on a text node throws mid-page and leaves half
-    // a document behind.
-    set layoutSizingHorizontal(v) { n._sizing = v; },
+    // Figma throws if you size a node that has no auto-layout parent. Stubbing
+    // that as a harmless setter is exactly how a broken build shipped: the real
+    // call aborted the run and left an orphan text node on the page, which the
+    // next run read as somebody else's work and refused to overwrite.
+    set layoutSizingHorizontal(v) {
+      if (!n.parent || !n.parent.layoutMode || n.parent.layoutMode === 'NONE') {
+        throw new Error(
+          `layoutSizingHorizontal on a ${n.type} whose parent is ` +
+          `${n.parent ? n.parent.type + ' with layoutMode ' + (n.parent.layoutMode || 'unset') : 'nothing'}`
+        );
+      }
+      n._sizing = v;
+    },
     get layoutSizingHorizontal() { return n._sizing; },
     ...extra,
   };
@@ -59,10 +68,17 @@ const figma = {
   },
   async setCurrentPageAsync(p) { figma.currentPage = p; },
   createPage() { const p = node('PAGE'); pages.push(p); return p; },
-  createFrame() { return node('FRAME'); },
+  createFrame() {
+    const f = node('FRAME');
+    if (figma.currentPage) figma.currentPage.appendChild(f);
+    return f;
+  },
   createText() {
     const t = node('TEXT', { characters: '', fontSize: 12, height: 14 });
     t.fontName = { family: 'Inter', style: 'Regular' };
+    // Figma parents a new node to the current page. That is what turned a
+    // thrown sizing call into an orphan layer rather than nothing at all.
+    if (figma.currentPage) figma.currentPage.appendChild(t);
     return t;
   },
   createComponent() { return node('COMPONENT'); },
@@ -174,6 +190,17 @@ function runDocs() {
   });
 }
 
+/* A page must be left with nothing but the plugin's own root frame. An orphan
+   here is the fingerprint of a run that threw halfway. */
+function assertClean(pageName, label) {
+  const pg = pages.find((p) => p.name === pageName);
+  assert.ok(pg, `${label}: no ${pageName} page`);
+  assert.equal(pg.children.length, 1,
+    `${label}: ${pageName} has ${pg.children.length} top-level layers, expected 1 — ` +
+    `orphans: ${pg.children.map((c) => c.type + ' ' + c.name).join(', ')}`);
+  return pg;
+}
+
 const d1 = await runDocs();
 assert.equal(d1.type, 'docs-done', `docs failed: ${d1.message || ''}`);
 assert.equal(d1.pages.length, 2, 'expected an About and a Get Started');
@@ -182,8 +209,8 @@ for (const p of d1.pages) {
   assert.ok(p.blocks > 10, `${p.page} has only ${p.blocks} blocks`);
 }
 
-const aboutPage = pages.find((p) => p.name === 'About');
-assert.ok(aboutPage, 'no About page was made');
+const aboutPage = assertClean('About', 'first docs run');
+assertClean('Get Started', 'first docs run');
 const texts = aboutPage.findAll((n) => n.type === 'TEXT');
 assert.ok(texts.some((t) => t.characters.includes('3,234')), 'About never states the asset count');
 assert.ok(texts.some((t) => t.characters.includes('Mason Catt')), 'About has no owner');
@@ -196,6 +223,7 @@ const aboutSize = aboutPage.findAll(() => true).length;
 const d2 = await runDocs();
 assert.equal(d2.type, 'docs-done', 'second docs run failed');
 assert.equal(pages.filter((p) => p.name === 'About').length, 1, 'a second About page was made');
+assertClean('About', 'second docs run');
 assert.equal(
   pages.find((p) => p.name === 'About').findAll(() => true).length, aboutSize,
   'the About page grew on a second run — it is appending rather than rebuilding'

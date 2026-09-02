@@ -416,6 +416,10 @@ async function loadDocFonts() {
   };
 }
 
+/* Deliberately does NOT set layoutSizingHorizontal. Figma throws if you set it
+   on a node that has no auto-layout parent yet, and createText() parents to the
+   page, so setting it here aborted the run and left an orphan text node on the
+   page — which the next run then read as somebody else's work and refused. */
 function docText(chars, size, font, color, lineHeight) {
   const t = figma.createText();
   t.fontName = font;
@@ -424,8 +428,14 @@ function docText(chars, size, font, color, lineHeight) {
   t.fills = solid(color);
   t.lineHeight = { unit: 'PERCENT', value: lineHeight || 150 };
   t.textAutoResize = 'HEIGHT';
-  t.layoutSizingHorizontal = 'FILL';
   return t;
+}
+
+/** Append first, size second. The order is the whole lesson. */
+function fill(parent, node) {
+  parent.appendChild(node);
+  node.layoutSizingHorizontal = 'FILL';
+  return node;
 }
 
 function column(gap, padding) {
@@ -456,9 +466,7 @@ function docRow(fonts, k, v) {
   key.layoutSizingHorizontal = 'FIXED';
   key.resize(190, key.height);
 
-  const val = docText(v, 13, fonts.regular, DOC_MUTED);
-  row.appendChild(val);
-  val.layoutSizingHorizontal = 'FILL';
+  fill(row, docText(v, 13, fonts.regular, DOC_MUTED));
   return row;
 }
 
@@ -476,25 +484,28 @@ function docCard(fonts, title, body) {
   c.primaryAxisSizingMode = 'AUTO';
   c.counterAxisSizingMode = 'FIXED';
   c.resize(DOC_W, 10);
-  const h = docText(title, 13.5, fonts.bold, DOC_INK);
-  c.appendChild(h);
-  const p = docText(body, 12.5, fonts.regular, DOC_MUTED);
-  c.appendChild(p);
+  fill(c, docText(title, 13.5, fonts.bold, DOC_INK));
+  fill(c, docText(body, 12.5, fonts.regular, DOC_MUTED));
   return c;
 }
 
 /** Blocks in, page out. Rebuilt whole, so nothing stale survives. */
-async function buildDocPage(pageName, blocks, fonts) {
+async function buildDocPage(pageName, blocks, fonts, force) {
   const page = await findOrMakePage(pageName);
 
-  const board = page.children.filter(
-    (n) => n.getSharedPluginData(NS, 'doc') === pageName
-  );
-  const foreign = page.children.filter(
-    (n) => n.getSharedPluginData(NS, 'doc') !== pageName
-  );
-  if (foreign.length) return { page: pageName, refused: true, layers: foreign.length };
-  board.forEach((n) => n.remove());
+  const mine = page.children.filter((n) => n.getSharedPluginData(NS, 'doc') === pageName);
+  const foreign = page.children.filter((n) => n.getSharedPluginData(NS, 'doc') !== pageName);
+
+  if (foreign.length && !force) {
+    return {
+      page: pageName,
+      refused: true,
+      layers: foreign.length,
+      sample: foreign.slice(0, 4).map((n) => n.name),
+    };
+  }
+  mine.forEach((n) => n.remove());
+  if (force) foreign.forEach((n) => n.remove());
 
   const root = column(0, 56);
   root.name = pageName;
@@ -506,22 +517,13 @@ async function buildDocPage(pageName, blocks, fonts) {
 
   for (const b of blocks) {
     if (b.type === 'h1') {
-      const t = docText(b.text, 30, fonts.bold, DOC_INK, 120);
-      root.appendChild(t);
-      t.layoutSizingHorizontal = 'FILL';
+      fill(root, docText(b.text, 30, fonts.bold, DOC_INK, 120));
     } else if (b.type === 'h2') {
-      const t = docText(b.text, 17, fonts.bold, DOC_INK, 135);
-      root.appendChild(t);
-      t.layoutSizingHorizontal = 'FILL';
-      t.y = 0;
+      fill(root, docText(b.text, 17, fonts.bold, DOC_INK, 135));
     } else if (b.type === 'p') {
-      const t = docText(b.text, 13.5, fonts.regular, DOC_MUTED, 160);
-      root.appendChild(t);
-      t.layoutSizingHorizontal = 'FILL';
+      fill(root, docText(b.text, 13.5, fonts.regular, DOC_MUTED, 160));
     } else if (b.type === 'lede') {
-      const t = docText(b.text, 15, fonts.regular, DOC_MUTED, 160);
-      root.appendChild(t);
-      t.layoutSizingHorizontal = 'FILL';
+      fill(root, docText(b.text, 15, fonts.regular, DOC_MUTED, 160));
     } else if (b.type === 'row') {
       root.appendChild(docRow(fonts, b.k, b.v));
     } else if (b.type === 'card') {
@@ -593,7 +595,7 @@ async function syncDocs(payload) {
     }
   }
 
-  out.push(await buildDocPage('About', about, fonts));
+  out.push(await buildDocPage('About', about, fonts, payload.force));
 
   const started = [
     { type: 'h1', text: 'Get Started' },
@@ -651,6 +653,6 @@ async function syncDocs(payload) {
     'replaces artwork inside components that changed, and leaves everything else alone. It ' +
     'never deletes.' });
 
-  out.push(await buildDocPage('Get Started', started, fonts));
+  out.push(await buildDocPage('Get Started', started, fonts, payload.force));
   return out;
 }

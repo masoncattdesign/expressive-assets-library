@@ -183,6 +183,7 @@ $('docs').addEventListener('click', async () => {
       payload: {
         stats: { assets: manifest.total, drawings, generated, collections },
         changelog,
+        force: $('force').checked,
       },
     } }, '*');
   } catch (err) {
@@ -262,7 +263,9 @@ onmessage = (event) => {
     for (const p of msg.pages) {
       if (p.refused) {
         log('<span class="bad">Left "' + p.page + '" alone</span> — it has <b>' + p.layers +
-            '</b> layers on it that this plugin did not make.');
+            '</b> layers on it that this plugin did not make:');
+        (p.sample || []).forEach((n) => log('  ' + n));
+        log('  If those are leftovers from a failed run, tick the checkbox above and run again.');
       } else {
         log('<b>' + p.page + '</b> rewritten, ' + p.blocks + ' blocks');
       }
