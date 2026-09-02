@@ -29,6 +29,8 @@
     "gaps:product": "node scripts/fill-icon-gaps.mjs --collection=product",
     "gaps:app": "node scripts/fill-icon-gaps.mjs --collection=app",
     "gaps:3p": "node scripts/fill-icon-gaps.mjs --collection=third-party",
-    "demo:record": "node scripts/record-demo.mjs"
+    "demo:record": "node scripts/record-demo.mjs",
+    "figma:probe": "node scripts/figma-probe-plugindata.mjs",
+    "naming:report": "node scripts/naming-report.mjs"
   }
 }

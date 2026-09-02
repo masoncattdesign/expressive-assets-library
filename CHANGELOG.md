@@ -13,6 +13,10 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- `npm run naming:report` measures every id against Bridge's own naming rule
+  and prices both ways of conforming. `npm run figma:probe` checks whether the
+  REST API returns the plugin data the whole round trip depends on.
+
 - `CLAUDE.md` is the operating manual for anyone, or anything, working in this
   repo: the two rules the library rests on, the house style, what to run before
   a commit, and the traps that have already cost a day between them.

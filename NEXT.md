@@ -3,152 +3,161 @@
 The working list. Say **"start the list"** and we go through it in order.
 
 Written to be picked up cold, so it repeats things you already know. Each item
-says what it is, why it matters, and what it is waiting on. Anything that needs
-a decision from you is marked and collected again at the bottom.
+says what it is, why it matters, and what it is waiting on. Anything needing a
+decision from Mason is marked and collected again at the bottom.
 
-Cross off by deleting. Reorder freely.
+`CLAUDE.md` is the companion: that one says how to work in here, this one says
+what to work on.
 
 ---
 
 ## Where things stand
 
-3,234 assets, 14,114 drawings, all valid, all published. 980 drawings carry
-`generated`, meaning they were produced here rather than received.
+3,234 assets, 15,670 drawings, all valid, all published. 2,536 drawings carry
+`generated` — a sixth of the library was produced here rather than received,
+and says so.
 
-| Collection | Count | Sizes | Styles | Matrix |
-|---|---|---|---|---|
-| Product Icons | 90 | 16–48 (12 of them also 12) | Standard, Outline, Filled | 88% |
-| App Icons | 32 | 64 | Standard | 100% |
-| Third Party | 61 | 32 | Standard, Filled | 97% |
-| File Icons | 88 | 16–256 (8 of them also 64) | Standard, Outline | 91% |
-| System Icons | 2,891 | 20, 24 | Outline, Filled | 92% |
-| OOBE Illustrations | 27 | 128–362 | Standard | 100% |
-| M365 Illustrations | 40 | 512 | Standard | 100% |
-| Product Illustrations | 5 | 128–228 | Standard | 100% |
+| Collection | Count | Sizes | Styles |
+|---|---|---|---|
+| Product Icons | 90 | 12–48 | Standard, Outline, Filled |
+| App Icons | 32 | 16–64 | Standard, Outline, Filled |
+| Third Party | 61 | 16–48 | Standard, Outline, Filled |
+| File Icons | 88 | 16–256 | Standard, Outline |
+| System Icons | 2,891 | 20, 24 | Outline, Filled |
+| OOBE Illustrations | 27 | 128–362 | Standard |
+| M365 Illustrations | 40 | 512 | Standard |
+| Device Illustrations | 5 | 128–228 | Standard |
 
-"Matrix" is how full the style-by-size grid is for that collection. A collection
-at 100% may still be thin: App Icons is complete because it has one size and one
-style, not because it is finished.
-
-Tools are at 2.0. The Figma sync plugin writes; nothing reads back yet.
+Tools at 2.0. The Figma sync plugin writes components and two documentation
+pages; nothing reads back yet.
 
 ---
 
 ## The list
 
-### 1. Fill out App Icons
+### 1. Confirm the eleven unnamed App Icons sets
 
-32 Windows app tiles at 64px, Standard only. They need the six smaller sizes
-scaled down from 64, and Outline and Filled derived. Everything generated gets
-flagged, same as the product gaps.
+**Blocked on Mason, and it is the highest-value thing on this list.** All 576 of
+App Icons' six-size cells are generated, because the only artwork those tiles
+have is one drawing at 64. The authored replacements exist, at exactly
+16/20/24/28/32/48 in three styles, in the Additional App Icons section.
 
-Decided already: 64 joins the whole Product Icons group, so the existing 90 get
-a 64 scaled up from 48. That will look soft and the flag will say so.
+They cannot be imported because eleven of the sixteen component sets are
+literally named `App Name` in Figma, and every card's title text reads "App
+icon". `scripts/sources/appsizes-nodes.json` records all 288 node ids and my
+visual reading of each set. A wrong reading attaches the wrong drawing to the
+right name with nothing to catch it, so nothing is imported until the table is
+confirmed.
 
-Nothing blocking. Reuses `scripts/fill-product-gaps.mjs` and the derive logic in
-`scripts/rebuild-file-styles.mjs`.
+Three specific questions inside it: whether Store maps to `app.store-light-theme`
+or to the separate "Store both themes" set, whether Calendar is
+`product.calendar-taskbar` or `product.m365-taskbar-calendar`, and whether Edge
+should be replaced at all given it already has all six sizes.
 
-### 2. Even up Product Icons
+### 2. Prove the round trip is buildable
 
-12 of the 90 carry a 12px size the other 78 do not, which is the whole of that
-collection's 12% gap. Either 12 becomes a real size for all 90 or it comes off
-those 12. Worth a look before generating: a 12px icon is a different drawing,
-not a small one.
+```
+export FIGMA_TOKEN="figd_..."
+npm run figma:probe
+```
 
-**Needs a decision.**
+Reads one node and reports whether REST returns the `sharedPluginData` the sync
+plugin writes. Everything about the pull half rests on it and it has never been
+tested. Five minutes, and if it fails the design needs rethinking before
+anything else is built on top.
 
-### 3. Decide whether Illustrations get derived styles
+Then build the pull: hash matches, skip the cell and leave it `generated`; hash
+differs, import it and clear the flag, because somebody drew over it.
 
-M365 is 40 drawings at 512, Standard only. Outline and Filled were derived for
-the previous 28 at 160px and the results were mixed. At 512 the luminance
-approach has more to work with, but these are brand illustrations rather than
-spots.
+### 3. Re-sync Figma
 
-Plan: derive one, look at it together, then decide for all 40 and for OOBE and
-Product Illustrations too.
+The plugin has not run since File Icons changed shape and three collections
+appeared. Run `npm run test:plugin` first — it catches the layout regressions
+that cost three runs in Figma.
 
-**Needs a decision, after seeing one.**
-
-### 4. Even up File Icons and System Icons
-
-- **File Icons**: 8 of the 88 have a 64 the other 80 do not. 160 drawings.
-- **System Icons**: 385 have only a 20 and 25 have only a 24. 928 drawings.
-  These are Fluent's own gaps rather than ours, so the question is whether we
-  generate over them or leave the collection honest about what Fluent ships.
-
-**System Icons needs a decision.**
-
-### 5. Re-sync Figma
-
-The plugin has not run since File Icons changed shape and two collections
-appeared. Per collection:
-
-- **File Icons** — Filled is gone, 799 drawings deleted, Outline is what was
-  previously mislabeled. The page in Figma is stale.
+- **File Icons** — Filled is gone, 799 drawings deleted, Outline is what used
+  to be mislabelled. The page in Figma is stale.
 - **App Icons**, **Third Party** — never synced.
-- **System Icons** — 2,891 cards. Think about the board size before pressing it;
+- **System Icons** — 2,891 cards. Think about board size before pressing it;
   two styles at two sizes is a different card shape from the 3 × 6 one.
 
-The plugin's collection list in `plugin/ui.html` is hardcoded and still says
-product / file / system. It needs the two new ones.
+The two documentation pages are also worth a re-run now that they work.
 
-Run `npm run test:plugin` first. It catches the layout regressions that cost
-three runs in Figma yesterday.
+### 4. Settle the naming grammar
 
-### 6. Build the pull half of the round trip
+The analysis is done and the answer is narrower than we thought. Run
+`npm run naming:report` for the current numbers.
 
-The plugin writes to Figma. Nothing reads back. Every variant it writes carries
-a hash of the drawing in *shared* plugin data, which is the kind the REST API
-can read, so a pull can tell a cell nobody touched from a cell you redrew
-without comparing artwork.
+Bridge's rule, from `core/naming/normalize.ts` in the Bridge repo and described
+there as the single source of truth: **a segment is conjoined-lowercase with no
+internal separators.** `appTile` becomes `apptile`, `in-content` becomes
+`incontent`. Token ids join segments with `-` and become CSS custom properties;
+key ids join with `.` and are authoring-only.
 
-**First step is to prove that.** Fetch one node over REST with `FIGMA_TOKEN` set
-and confirm `sharedPluginData` comes back. The whole design rests on it and it
-has never been tested. If it does not work, the round trip needs rethinking
-before anything else is built on top.
+The reason is not taste. Because a segment never contains `-`, splitting a token
+id on `-` recovers its segments exactly, which is what lets Bridge import tokens
+back out of CSS. A hyphen inside a segment breaks that round trip.
 
-Then: hash matches, skip and stay `generated`. Hash differs, import and clear
-the flag, because the drawing is authored now.
+**2,737 of 3,234 ids (85%) would change.** Two options, both legal:
 
-See "The round trip" in the README. Pull targets live in `figma-sources.json`.
+- **A — conjoin**, matching Bridge's own `apptile`: `product.calendar-taskbar`
+  becomes `product.calendartaskbar`. Mechanical, and consistent with Bridge.
+- **B — split on the hyphen**: `product.calendar.taskbar`. More readable, but it
+  invents hierarchy that is not there, and produces nonsense on some names —
+  `product.copilot.for.sales` makes "for" a segment.
 
-### 7. Settle the naming grammar
+**A is the recommendation**, with one catch worth knowing: it collides on two
+pairs, and both are real.
 
-2,698 of 3,234 ids carry a hyphen inside a name segment, which Bridge's scheme
-does not allow. It grew by 33 yesterday and grows with every import.
+| | |
+|---|---|
+| `system.re-order` + `system.reorder` | different artwork, and Re Order has a 24 that Reorder does not |
+| `system.text-box-settings` + `system.textbox-settings` | different artwork |
 
-Published means the drawing is real, not that the id is final — that is written
-into About and the System Map — so this is not urgent, but it is the one thing
-that gets more expensive every day.
+Those are two genuinely distinct Fluent icons that Fluent named inconsistently.
+Conjoining would merge them, so they need a decision of their own before any
+rename runs.
 
-**Needs a decision**: the ids change, or the grammar does.
+**Needs a decision:** A or B, and what to do about those two pairs.
 
-### 8. Put the site behind a sign-in
+### 5. Even up the remaining collections
+
+- **System Icons**: 385 ship at 20 only and 25 at 24 only. These are Fluent's
+  gaps rather than ours, so the question is whether to generate over them or
+  leave the collection honest about what Fluent ships. **Needs a decision.**
+- **Illustrations**: Standard only. Whether derived styles make sense at 512px
+  is worth deciding by looking at one rather than in the abstract. **Needs a
+  decision, after seeing one.**
+- **Product Icons**: twelve of the ninety carry a 12px the other seventy-eight
+  do not. Either 12 becomes real for all ninety or it comes off those twelve. A
+  12px icon is a different drawing, not a small one. **Needs a decision.**
+
+### 6. Put the site behind a sign-in
 
 GitHub Pages has no access control of any kind. `DEPLOY.md` has the Azure Static
 Web Apps and Entra path written out, the workflow is in the repo and parked on
-`workflow_dispatch`, and the tenant id is still `REPLACE-WITH-YOUR-TENANT-ID`.
+`workflow_dispatch`, and the tenant id is still a placeholder.
 
-More pressing now than it was: 61 third-party brand marks are on that URL.
+More pressing than it was: sixty-one third-party brand marks are on that URL,
+and so is the demo video.
 
-### 9. Publishing bar
+### 7. What publishing should assert
 
 Everything is published on the basis that the artwork was received. There is no
 review step behind that, and `deprecated` has never been used on anything, so
-that path has never been walked. Worth deciding what publishing should actually
-assert before anyone outside relies on it.
+that path has never been walked.
 
 ---
 
-## Waiting on you
+## Waiting on Mason
 
-1. **12px on Product Icons** — real size for all 90, or off the 12 that have it.
-2. **Derived styles for Illustrations** — after we look at one.
-3. **System Icons gaps** — generate over Fluent's missing sizes, or stay honest.
-4. **Naming grammar** — ids change or the grammar does.
-5. **3P license review** — 61 marks are imported and public. If it lands badly,
-   pulling them is one gitignore line and one build exclusion, and git history
-   keeps them regardless.
+1. **The eleven App Icons names** — unblocks 576 cells of real artwork.
+2. **Naming: A or B**, and the two colliding Fluent pairs.
+3. **System Icons gaps** — generate over Fluent's, or stay honest.
+4. **Illustration styles** — after looking at one derived at 512.
+5. **12px on Product Icons** — real for all ninety, or off the twelve.
+6. **3P licence review** — sixty-one marks are imported and public. Pulling them
+   is one gitignore line and one build exclusion if it lands badly.
 
 ---
 
@@ -157,24 +166,21 @@ assert before anyone outside relies on it.
 Found while importing. None of it blocks us; all of it is cheaper to fix at the
 source than to keep working around.
 
-- **M365 Brand**: two frames are both called `Chat` and hold different drawings
-  (`582232:12654`, `582232:12849`). Imported as `m365.chat` and `m365.chat-2`.
-- **M365 Brand**: `Workflow` and `Workflows` are different illustrations one
-  letter apart. `Inbox` and `Inbox Empty` read like a state pair expressed as
-  two frames.
+- **Additional App Icons**: eleven of sixteen sets are named `App Name`, and
+  every card title reads "App icon". This is what blocks item 1.
+- **Additional App Icons**: sizes 16/20/24/32/48 exist under both
+  `UI margins=True` and `False` with different ids and different artwork. Only
+  the True ladder is recorded, since it is exactly the six we want.
+- **Additional App Icons**: Edge is missing Regular and Filled across the whole
+  False ladder.
+- **M365 Brand**: two frames are both called `Chat` and hold different drawings.
+  Imported as `m365.chat` and `m365.chat-2`.
+- **M365 Brand**: `Workflow` against `Workflows`, and `Inbox` against
+  `Inbox Empty`, are one letter and one word apart.
 - **App Icons**: `App36` exists twice with the same value and different node
   ids, which a component set should not permit. `App26` is hidden and parked
-  outside the frame. `Blank` is an empty tile. All four excluded on import.
-- **App Icons**: casing is inconsistent — `AdminCenter` and `FeedbackHub` beside
-  `Command Prompt` and `File Explorer`.
-- **3P Icons**: four naming schemes across 61 brands. Most are
-  `Size=32, Theme=Color`; five carry Figma's defaults (`Property 1=32`); Adobe
-  Indesign has the properties reversed; Adobe Photoshop has no Size property.
-- **3P Icons**: `Store DarkTheme` and `Store LightTheme` bake the theme into the
-  variant value rather than using a property. Imported as two assets, since the
-  library has no light/dark artwork axis and inventing one for a single icon is
-  a bad precedent.
-- **3P Icons**: `Theme=Regular` and `Theme=Filled` are used for the same role on
-  different brands.
-- **3P Icons**: four brands ship only one mark — Apple and MCP have no color
-  version, Content Credentials and Polly have no mono.
+  outside the frame. Both excluded on import.
+- **3P Icons**: four naming schemes across sixty-one brands, and
+  `Store DarkTheme` / `Store LightTheme` bake a theme into the variant value.
+- **Fluent, upstream**: `Re Order` against `Reorder`, and `Text Box Settings`
+  against `TextBox Settings` — four distinct icons, two names apart by a space.
