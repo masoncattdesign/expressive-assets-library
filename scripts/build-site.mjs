@@ -9,6 +9,7 @@
  *   _site/            <- docs/*
  *   _site/assets/     <- assets/
  *   _site/manifest.json
+ *   _site/CHANGELOG.md  <- for the Figma plugin's About page
  *   _site/sprite.json <- every SVG inlined, so the grid renders in one request
  *
  * _site/ is gitignored. GitHub Pages publishes it from the workflow.
@@ -29,6 +30,10 @@ async function main() {
   await cp(join(ROOT, 'docs'), OUT, { recursive: true });
   await cp(join(ROOT, 'assets'), join(OUT, 'assets'), { recursive: true });
   await cp(join(ROOT, 'manifest.json'), join(OUT, 'manifest.json'));
+  // The Figma plugin reads this to write the About page's "Recently" section.
+  // It lives at the repo root, so without this it is only reachable from the
+  // GitHub raw source and the published-site source silently omits the section.
+  await cp(join(ROOT, 'CHANGELOG.md'), join(OUT, 'CHANGELOG.md'));
 
   const manifest = JSON.parse(await readFile(join(ROOT, 'manifest.json'), 'utf8'));
 

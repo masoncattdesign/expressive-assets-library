@@ -352,6 +352,15 @@ async function sync(payload) {
 }
 
 figma.ui.onmessage = async (msg) => {
+  if (msg.type === 'docs') {
+    try {
+      const pages = await syncDocs(msg.payload);
+      figma.ui.postMessage({ type: 'docs-done', pages });
+    } catch (err) {
+      figma.ui.postMessage({ type: 'error', message: String(err && err.message ? err.message : err) });
+    }
+    return;
+  }
   if (msg.type !== 'sync') return;
   try {
     const result = await sync(msg.payload);
@@ -360,3 +369,288 @@ figma.ui.onmessage = async (msg) => {
     figma.ui.postMessage({ type: 'error', message: String(err && err.message ? err.message : err) });
   }
 };
+
+/* ==================================================================== */
+/* Documentation pages                                                  */
+/* ==================================================================== */
+
+/**
+ * Two pages that explain the library inside the file it fills.
+ *
+ * Someone who opens this Figma file sees several thousand components and no
+ * indication of where they came from, who owns them, or what changed last
+ * week. That belongs in the file rather than in a link nobody clicks.
+ *
+ * Both pages are written from the manifest and the changelog, not typed here,
+ * so they cannot drift. Both are rebuilt from scratch on each run — unlike the
+ * component pages, there is no identity to preserve in a paragraph, and a
+ * stale sentence is worse than a rewritten one.
+ */
+
+const DOC_W = 720;
+const DOC_INK = { r: 0.078, g: 0.09, b: 0.106 };
+const DOC_MUTED = { r: 0.44, g: 0.46, b: 0.49 };
+const DOC_RULE = { r: 0.894, g: 0.886, b: 0.867 };
+const DOC_SUNK = { r: 0.965, g: 0.961, b: 0.949 };
+
+async function loadDocFonts() {
+  const wanted = [
+    { family: 'Inter', style: 'Regular' },
+    { family: 'Inter', style: 'Medium' },
+    { family: 'Inter', style: 'Semi Bold' },
+  ];
+  const ok = [];
+  for (const f of wanted) {
+    try { await figma.loadFontAsync(f); ok.push(f.style); } catch (e) { /* not installed */ }
+  }
+  // Everything falls back to Regular, which the component pages already load,
+  // so a missing weight costs emphasis rather than the whole run.
+  return {
+    regular: { family: 'Inter', style: 'Regular' },
+    medium: { family: 'Inter', style: ok.indexOf('Medium') !== -1 ? 'Medium' : 'Regular' },
+    bold: {
+      family: 'Inter',
+      style: ok.indexOf('Semi Bold') !== -1 ? 'Semi Bold'
+        : ok.indexOf('Medium') !== -1 ? 'Medium' : 'Regular',
+    },
+  };
+}
+
+function docText(chars, size, font, color, lineHeight) {
+  const t = figma.createText();
+  t.fontName = font;
+  t.characters = String(chars);
+  t.fontSize = size;
+  t.fills = solid(color);
+  t.lineHeight = { unit: 'PERCENT', value: lineHeight || 150 };
+  t.textAutoResize = 'HEIGHT';
+  t.layoutSizingHorizontal = 'FILL';
+  return t;
+}
+
+function column(gap, padding) {
+  const f = figma.createFrame();
+  f.layoutMode = 'VERTICAL';
+  f.primaryAxisSizingMode = 'AUTO';
+  f.counterAxisSizingMode = 'AUTO';
+  f.itemSpacing = gap;
+  f.paddingTop = f.paddingBottom = f.paddingLeft = f.paddingRight = padding || 0;
+  f.fills = [];
+  f.clipsContent = false;
+  return f;
+}
+
+/** A label/value row, which is most of what these pages are. */
+function docRow(fonts, k, v) {
+  const row = figma.createFrame();
+  row.layoutMode = 'HORIZONTAL';
+  row.primaryAxisSizingMode = 'FIXED';
+  row.counterAxisSizingMode = 'AUTO';
+  row.itemSpacing = 20;
+  row.paddingTop = row.paddingBottom = 10;
+  row.fills = [];
+  row.resize(DOC_W, 10);
+
+  const key = docText(k, 13, fonts.medium, DOC_INK);
+  row.appendChild(key);
+  key.layoutSizingHorizontal = 'FIXED';
+  key.resize(190, key.height);
+
+  const val = docText(v, 13, fonts.regular, DOC_MUTED);
+  row.appendChild(val);
+  val.layoutSizingHorizontal = 'FILL';
+  return row;
+}
+
+function docRule() {
+  const r = figma.createFrame();
+  r.resize(DOC_W, 1);
+  r.fills = solid(DOC_RULE);
+  return r;
+}
+
+function docCard(fonts, title, body) {
+  const c = column(6, 18);
+  c.fills = solid(DOC_SUNK);
+  c.cornerRadius = 10;
+  c.primaryAxisSizingMode = 'AUTO';
+  c.counterAxisSizingMode = 'FIXED';
+  c.resize(DOC_W, 10);
+  const h = docText(title, 13.5, fonts.bold, DOC_INK);
+  c.appendChild(h);
+  const p = docText(body, 12.5, fonts.regular, DOC_MUTED);
+  c.appendChild(p);
+  return c;
+}
+
+/** Blocks in, page out. Rebuilt whole, so nothing stale survives. */
+async function buildDocPage(pageName, blocks, fonts) {
+  const page = await findOrMakePage(pageName);
+
+  const board = page.children.filter(
+    (n) => n.getSharedPluginData(NS, 'doc') === pageName
+  );
+  const foreign = page.children.filter(
+    (n) => n.getSharedPluginData(NS, 'doc') !== pageName
+  );
+  if (foreign.length) return { page: pageName, refused: true, layers: foreign.length };
+  board.forEach((n) => n.remove());
+
+  const root = column(0, 56);
+  root.name = pageName;
+  root.fills = solid(PAPER);
+  root.counterAxisSizingMode = 'FIXED';
+  root.resize(DOC_W + 112, 10);
+  root.setSharedPluginData(NS, 'doc', pageName);
+  page.appendChild(root);
+
+  for (const b of blocks) {
+    if (b.type === 'h1') {
+      const t = docText(b.text, 30, fonts.bold, DOC_INK, 120);
+      root.appendChild(t);
+      t.layoutSizingHorizontal = 'FILL';
+    } else if (b.type === 'h2') {
+      const t = docText(b.text, 17, fonts.bold, DOC_INK, 135);
+      root.appendChild(t);
+      t.layoutSizingHorizontal = 'FILL';
+      t.y = 0;
+    } else if (b.type === 'p') {
+      const t = docText(b.text, 13.5, fonts.regular, DOC_MUTED, 160);
+      root.appendChild(t);
+      t.layoutSizingHorizontal = 'FILL';
+    } else if (b.type === 'lede') {
+      const t = docText(b.text, 15, fonts.regular, DOC_MUTED, 160);
+      root.appendChild(t);
+      t.layoutSizingHorizontal = 'FILL';
+    } else if (b.type === 'row') {
+      root.appendChild(docRow(fonts, b.k, b.v));
+    } else if (b.type === 'card') {
+      root.appendChild(docCard(fonts, b.title, b.body));
+    } else if (b.type === 'rule') {
+      root.appendChild(docRule());
+    } else if (b.type === 'space') {
+      const s = figma.createFrame();
+      s.resize(DOC_W, b.size || 18);
+      s.fills = [];
+      root.appendChild(s);
+    }
+  }
+
+  root.itemSpacing = 12;
+  return { page: pageName, blocks: blocks.length };
+}
+
+/** Compose both pages from the numbers and the changelog the UI fetched. */
+async function syncDocs(payload) {
+  const fonts = await loadDocFonts();
+  const s = payload.stats;
+  const out = [];
+
+  const about = [
+    { type: 'h1', text: 'Expressive Assets' },
+    { type: 'lede', text:
+      'The icon and illustration library for Windows Design Systems. Artwork is designed in ' +
+      'Figma, imported through a reviewed plan, and stored as flat SVG with metadata beside it. ' +
+      'A build step turns that tree into one file, manifest.json, and every tool reads only that.' },
+    { type: 'space', size: 6 },
+    { type: 'rule' },
+    { type: 'h2', text: 'What is in it' },
+  ];
+  for (const c of s.collections) {
+    about.push({ type: 'row', k: c.label, v:
+      c.count.toLocaleString() + ' assets  ·  ' + c.sizes + '  ·  ' + c.styles });
+  }
+  about.push({ type: 'row', k: 'Total', v:
+    s.assets.toLocaleString() + ' assets, ' + s.drawings.toLocaleString() + ' drawings' });
+  about.push({ type: 'card', title: 'Artwork is redrawn at every size, never scaled',
+    body: 'Which is why the unit that matters here is the drawing rather than the icon. ' +
+      s.generated.toLocaleString() + ' of those drawings were produced here rather than ' +
+      'received, and each one says so in its metadata.' });
+
+  about.push({ type: 'space', size: 6 });
+  about.push({ type: 'rule' });
+  about.push({ type: 'h2', text: 'This page' });
+  about.push({ type: 'p', text:
+    'Written by the Expressive Assets Sync plugin from the library itself, so it cannot drift ' +
+    'from what the file holds. Rebuilt on every run. Edits made here will not survive the next ' +
+    'one — change the library instead.' });
+
+  about.push({ type: 'space', size: 6 });
+  about.push({ type: 'rule' });
+  about.push({ type: 'h2', text: 'Owner' });
+  about.push({ type: 'row', k: 'Mason Catt', v: 'Senior UX/UI Designer, Windows Design Systems' });
+  about.push({ type: 'row', k: 'Source', v: 'github.com/masoncattdesign/expressive-assets-library' });
+  about.push({ type: 'row', k: 'Gallery', v: 'masoncattdesign.github.io/expressive-assets-library' });
+  about.push({ type: 'row', k: 'Issues', v: 'Open one on the repo for a missing asset or a wrong drawing' });
+
+  if (payload.changelog && payload.changelog.length) {
+    about.push({ type: 'space', size: 6 });
+    about.push({ type: 'rule' });
+    about.push({ type: 'h2', text: 'Recently' });
+    for (const entry of payload.changelog) {
+      about.push({ type: 'h2', text: entry.version });
+      for (const line of entry.lines) about.push({ type: 'p', text: '·  ' + line });
+    }
+  }
+
+  out.push(await buildDocPage('About', about, fonts));
+
+  const started = [
+    { type: 'h1', text: 'Get Started' },
+    { type: 'lede', text:
+      'What is in this file, how it is organized, and how to use the components without ' +
+      'fighting them.' },
+    { type: 'space', size: 6 },
+    { type: 'rule' },
+    { type: 'h2', text: 'How this file is organized' },
+    { type: 'p', text:
+      'One page per collection. Each page holds one component set per icon, and every set is ' +
+      'named for the icon rather than for a style or a size.' },
+  ];
+  for (const c of s.collections) {
+    started.push({ type: 'row', k: c.label, v: c.count.toLocaleString() + ' component sets' });
+  }
+
+  started.push({ type: 'space', size: 6 });
+  started.push({ type: 'rule' });
+  started.push({ type: 'h2', text: 'Using an icon' });
+  started.push({ type: 'card', title: '1 · Drag the set, not a variant',
+    body: 'Every icon is one component set with Style and Size as properties. Place the set and ' +
+      'switch both in the properties panel. You never have to hunt the grid for the right cell.' });
+  started.push({ type: 'card', title: '2 · Leave the instance attached',
+    body: 'The plugin replaces artwork inside components rather than rebuilding them, so an ' +
+      'instance you placed today picks up a redrawn icon tomorrow. Detaching opts out of that ' +
+      'for good.' });
+  started.push({ type: 'card', title: '3 · A variant is drawn at its own size',
+    body: 'Size 16 is a different drawing from size 48, not a smaller copy. Scaling a 48 down to ' +
+      '16 throws away the drawing that exists for 16.' });
+
+  started.push({ type: 'space', size: 6 });
+  started.push({ type: 'rule' });
+  started.push({ type: 'h2', text: 'Styles' });
+  started.push({ type: 'row', k: 'Standard', v: 'Brand color, as the artwork ships. Not recolorable.' });
+  started.push({ type: 'row', k: 'Outline', v: 'Monochrome, drawn in currentColor, takes an accent.' });
+  started.push({ type: 'row', k: 'Filled', v: 'Monochrome and solid, the inverse of Outline.' });
+  started.push({ type: 'p', text:
+    'Not every collection has all three. System Icons are Outline and Filled only, because a ' +
+    'system icon is a monochrome glyph and a Standard would be inventing one.' });
+
+  started.push({ type: 'space', size: 6 });
+  started.push({ type: 'rule' });
+  started.push({ type: 'h2', text: 'Flagged variants' });
+  started.push({ type: 'card', title: 'A cream background means the drawing was generated here',
+    body: s.generated.toLocaleString() + ' of ' + s.drawings.toLocaleString() + ' drawings were ' +
+      'produced to complete a style-by-size grid rather than received as artwork. They are usable ' +
+      'and they are flagged, so a stand-in is never mistaken for a drawing somebody made.' });
+
+  started.push({ type: 'space', size: 6 });
+  started.push({ type: 'rule' });
+  started.push({ type: 'h2', text: 'Getting it updated' });
+  started.push({ type: 'p', text:
+    'Run Plugins › Expressive Assets Sync and pick a collection. It adds what is missing, ' +
+    'replaces artwork inside components that changed, and leaves everything else alone. It ' +
+    'never deletes.' });
+
+  out.push(await buildDocPage('Get Started', started, fonts));
+  return out;
+}

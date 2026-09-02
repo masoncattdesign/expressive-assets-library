@@ -34,6 +34,11 @@ function node(type, extra = {}) {
     },
     setSharedPluginData(ns, k, v) { n._data[ns + ':' + k] = String(v); },
     getSharedPluginData(ns, k) { return n._data[ns + ':' + k] || ''; },
+    // Auto-layout sizing calls are no-ops here; what matters is that they exist,
+    // because a missing setter on a text node throws mid-page and leaves half
+    // a document behind.
+    set layoutSizingHorizontal(v) { n._sizing = v; },
+    get layoutSizingHorizontal() { return n._sizing; },
     ...extra,
   };
   return n;
@@ -47,11 +52,19 @@ const figma = {
   ui: { onmessage: null, postMessage() {} },
   showUI() {},
   async loadAllPagesAsync() {},
-  async loadFontAsync() {},
+  async loadFontAsync(f) {
+    // Only Regular is installed in this stub, which is the interesting case:
+    // the page has to fall back rather than throw.
+    if (f && f.style !== 'Regular') throw new Error('font not available: ' + f.style);
+  },
   async setCurrentPageAsync(p) { figma.currentPage = p; },
   createPage() { const p = node('PAGE'); pages.push(p); return p; },
   createFrame() { return node('FRAME'); },
-  createText() { return node('TEXT', { characters: '', fontSize: 12, height: 14 }); },
+  createText() {
+    const t = node('TEXT', { characters: '', fontSize: 12, height: 14 });
+    t.fontName = { family: 'Inter', style: 'Regular' };
+    return t;
+  },
   createComponent() { return node('COMPONENT'); },
   createNodeFromSvg(svg) { return node('FRAME', { _svg: svg }); },
   combineAsVariants(list, parent) {
@@ -141,4 +154,62 @@ const c = check('third run', third);
 assert.equal(c.r.result.replaced, 1, 'changed artwork should replace exactly one variant');
 assert.equal(c.board.findAll((n) => n.type === 'COMPONENT').length, before, 'replacing must not add components');
 
-console.log('✓ sync builds, re-lays out, and replaces in place — 3 runs, all assertions passed');
+/* --- Documentation pages ------------------------------------------- */
+
+const stats = {
+  assets: 3234,
+  drawings: 14114,
+  generated: 980,
+  collections: [
+    { label: 'Product Icons', count: 90, sizes: '16–48', styles: 'standard, outline, filled' },
+    { label: 'System Icons', count: 2891, sizes: '20, 24', styles: 'outline, filled' },
+  ],
+};
+const changelog = [{ version: '2.0 — 1 September 2026', lines: ['Contract break.', 'Sidebar splits.'] }];
+
+function runDocs() {
+  return new Promise((resolve) => {
+    figma.ui.postMessage = (m) => resolve(m);
+    figma.ui.onmessage({ type: 'docs', payload: { stats, changelog } });
+  });
+}
+
+const d1 = await runDocs();
+assert.equal(d1.type, 'docs-done', `docs failed: ${d1.message || ''}`);
+assert.equal(d1.pages.length, 2, 'expected an About and a Get Started');
+for (const p of d1.pages) {
+  assert.ok(!p.refused, `${p.page} was refused on an empty file`);
+  assert.ok(p.blocks > 10, `${p.page} has only ${p.blocks} blocks`);
+}
+
+const aboutPage = pages.find((p) => p.name === 'About');
+assert.ok(aboutPage, 'no About page was made');
+const texts = aboutPage.findAll((n) => n.type === 'TEXT');
+assert.ok(texts.some((t) => t.characters.includes('3,234')), 'About never states the asset count');
+assert.ok(texts.some((t) => t.characters.includes('Mason Catt')), 'About has no owner');
+assert.ok(texts.some((t) => t.characters.includes('2.0')), 'About omitted the changelog');
+assert.ok(texts.every((t) => t.fontName.style === 'Regular'),
+  'a weight was used that this stub never installed — the fallback did not hold');
+
+/* Rebuilt whole, not appended to. */
+const aboutSize = aboutPage.findAll(() => true).length;
+const d2 = await runDocs();
+assert.equal(d2.type, 'docs-done', 'second docs run failed');
+assert.equal(pages.filter((p) => p.name === 'About').length, 1, 'a second About page was made');
+assert.equal(
+  pages.find((p) => p.name === 'About').findAll(() => true).length, aboutSize,
+  'the About page grew on a second run — it is appending rather than rebuilding'
+);
+
+/* Somebody else's page is left alone. */
+const gs = pages.find((p) => p.name === 'Get Started');
+const mine = figma.createFrame();
+mine.name = 'My notes';
+gs.appendChild(mine);
+const d3 = await runDocs();
+assert.ok(d3.pages.some((p) => p.page === 'Get Started' && p.refused),
+  'the plugin overwrote a page holding work it did not make');
+assert.ok(gs.children.includes(mine), 'it removed a layer it did not make');
+
+console.log('✓ sync builds, re-lays out, and replaces in place — 3 runs');
+console.log('✓ docs pages build, rebuild whole, fall back on fonts, and refuse a page with other work');

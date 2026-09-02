@@ -19,6 +19,15 @@
     background: var(--figma-color-bg-brand); color: var(--figma-color-text-onbrand); cursor: pointer;
   }
   button:disabled { opacity: .5; cursor: default; }
+  button.secondary {
+    background: transparent; color: var(--figma-color-text);
+    border: 1px solid var(--figma-color-border); font-weight: 500;
+  }
+  .hr { height: 1px; background: var(--figma-color-border); margin: 18px 0 12px; }
+  .aside {
+    margin: 0 0 10px; font-size: 11px; line-height: 1.55;
+    color: var(--figma-color-text-secondary);
+  }
   #log {
     margin-top: 14px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px;
     line-height: 1.6; white-space: pre-wrap; color: var(--figma-color-text-secondary);
@@ -41,7 +50,9 @@
 <label for="collection">Collection</label>
 <select id="collection">
   <option value="product">Product Icons</option>
+  <option value="app">App Icons</option>
   <option value="file">File Icons</option>
+  <option value="third-party">Third Party</option>
   <option value="system">System Icons</option>
 </select>
 
@@ -56,6 +67,12 @@
 </div>
 
 <button id="go">Sync</button>
+
+<div class="hr"></div>
+<p class="aside">About and Get Started are written from the library and the changelog, so they
+cannot drift from what this file holds. Both are rebuilt whole on each run.</p>
+<button id="docs" class="secondary">Update the documentation pages</button>
+
 <div id="log"></div>
 
 <script>
@@ -64,7 +81,8 @@ const log = (html) => { $('log').innerHTML += html + '\n'; $('log').scrollTop = 
 
 const SIZES = [16, 20, 24, 28, 32, 48];
 const STYLES = ['standard', 'outline', 'filled'];
-const LABEL = { product: 'Product Icons', file: 'File Icons', system: 'System Icons' };
+const LABEL = { product: 'Product Icons', app: 'App Icons', file: 'File Icons',
+                'third-party': 'Third Party', system: 'System Icons' };
 
 /** Fetch with a small amount of concurrency. One at a time is slow across
  *  1,600 files; all at once trips rate limiting and the browser's own queue. */
@@ -80,6 +98,98 @@ async function pool(items, limit, worker) {
   await Promise.all(runners);
   return out;
 }
+
+/* The top three releases, as headings and their bullet lines. Enough to say
+   what moved lately without pasting a changelog into a design file. */
+function readChangelog(md) {
+  const out = [];
+  const lines = md.split('\n');
+  let cur = null;
+  for (const raw of lines) {
+    const line = raw.trim();
+    const head = /^## (.+)$/.exec(line);
+    if (head) {
+      if (/^not yet done$/i.test(head[1])) break;
+      if (cur) out.push(cur);
+      if (out.length >= 3) { cur = null; break; }
+      cur = { version: head[1], lines: [] };
+      continue;
+    }
+    if (!cur) continue;
+    const bullet = /^[-*] (.+)$/.exec(line);
+    if (bullet && cur.lines.length < 5) {
+      cur.lines.push(bullet[1].replace(/\*\*/g, '').replace(/`/g, ''));
+    }
+  }
+  if (cur) out.push(cur);
+  return out.slice(0, 3);
+}
+
+$('docs').addEventListener('click', async () => {
+  const base = $('src').value.replace(/\/$/, '');
+  $('docs').disabled = true;
+  $('log').innerHTML = '';
+  try {
+    log('Reading manifest…');
+    const res = await fetch(base + '/manifest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('manifest.json returned ' + res.status);
+    const manifest = await res.json();
+
+    let drawings = 0, generated = 0;
+    const byCollection = {};
+    for (const a of manifest.assets) {
+      const key = a.type + '/' + a.collection;
+      const c = byCollection[key] = byCollection[key] ||
+        { count: 0, sizes: {}, styles: {} };
+      c.count++;
+      generated += (a.generated || []).length;
+      for (const style of Object.keys(a.variants || {})) {
+        c.styles[style] = 1;
+        for (const size of Object.keys(a.variants[style])) {
+          drawings++;
+          c.sizes[size] = 1;
+        }
+      }
+    }
+
+    const collections = [];
+    for (const g of manifest.groups) {
+      for (const c of g.collections) {
+        const stat = byCollection[g.type + '/' + c.id];
+        if (!stat) continue;
+        const sizes = Object.keys(stat.sizes).sort((x, y) => Number(x) - Number(y));
+        collections.push({
+          label: c.label,
+          count: stat.count,
+          sizes: sizes.length > 2
+            ? sizes[0] + '–' + sizes[sizes.length - 1]
+            : sizes.join(', '),
+          styles: Object.keys(stat.styles).join(', '),
+        });
+      }
+    }
+
+    log('Reading changelog…');
+    let changelog = [];
+    try {
+      const c = await fetch(base + '/CHANGELOG.md', { cache: 'no-store' });
+      if (c.ok) changelog = readChangelog(await c.text());
+    } catch (e) { /* the site does not serve it; the page just omits the section */ }
+    if (!changelog.length) log('  none found — About will omit that section');
+
+    log('Writing About and Get Started…');
+    parent.postMessage({ pluginMessage: {
+      type: 'docs',
+      payload: {
+        stats: { assets: manifest.total, drawings, generated, collections },
+        changelog,
+      },
+    } }, '*');
+  } catch (err) {
+    log('<span class="bad">' + err.message + '</span>');
+    $('docs').disabled = false;
+  }
+});
 
 $('go').addEventListener('click', async () => {
   const base = $('src').value.replace(/\/$/, '');
@@ -148,6 +258,17 @@ onmessage = (event) => {
   const msg = event.data.pluginMessage;
   if (!msg) return;
   if (msg.type === 'error') { log('<span class="bad">' + msg.message + '</span>'); }
+  if (msg.type === 'docs-done') {
+    for (const p of msg.pages) {
+      if (p.refused) {
+        log('<span class="bad">Left "' + p.page + '" alone</span> — it has <b>' + p.layers +
+            '</b> layers on it that this plugin did not make.');
+      } else {
+        log('<b>' + p.page + '</b> rewritten, ' + p.blocks + ' blocks');
+      }
+    }
+    $('docs').disabled = false;
+  }
   if (msg.type === 'done') {
     const r = msg.result;
     if (r.refused) {
@@ -166,5 +287,6 @@ onmessage = (event) => {
     log('\nRun it again: nothing should be created or replaced, and the cards get laid out the same way.');
   }
   $('go').disabled = false;
+  $('docs').disabled = false;
 };
 </script>
