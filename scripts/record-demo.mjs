@@ -4,16 +4,34 @@
  *   npm run build && node scripts/serve.mjs
  *   SITE=http://localhost:4173 OUT=./recording node scripts/record-demo.mjs
  *
- * It prints wall-clock marks into the raw capture; those are the trim points.
- * Keep the speed-up modest — past about 1.35x the cursor starts to read as
- * jumpy no matter how smooth the source was.
+ * No search anywhere in the sequence, deliberately. Filtering the grid is the
+ * one moment the Gallery can show a card whose artwork has not been fetched
+ * yet, and a blank tile in a demo reads as a missing asset.
  *
- *   ffmpeg -i raw.webm -vf "trim=3.0:17.6,setpts=PTS-STARTPTS" -an a.mp4
- *   ffmpeg -i raw.webm -vf "trim=23.0:28.7,setpts=PTS-STARTPTS" -an b.mp4
+ * The point of the Gallery half is that style and accent are properties of the
+ * whole library rather than of the icon you happen to have open, so every card
+ * on screen redraws at once. Opening one icon is just what gives the control
+ * something to point at.
+ *
+ * FRAME PACING, which is the part that took three attempts. The capture is a
+ * clean 25fps. Speeding it up and then asking for 30fps maps each source frame
+ * onto roughly 1.6 output frames, unevenly, and the result reads as a cursor
+ * that skips — even though nothing in the source stutters. Retime by a factor
+ * that divides the source rate and output THAT rate, so every source frame
+ * lands on exactly one output frame:
+ *
+ *   1.25x -> 20fps      exact, what this uses
+ *   1.00x -> 25fps      exact, if you would rather not retime at all
+ *
+ * Verify it rather than trusting it — every delta should be identical:
+ *
+ *   ffprobe -select_streams v -show_entries frame=pts_time -of csv=p=0 out.mp4
+ *
+ *   ffmpeg -i raw.webm -vf "trim=3.05:16.95,setpts=PTS-STARTPTS" -an a.mp4
+ *   ffmpeg -i raw.webm -vf "trim=22.6:28.05,setpts=PTS-STARTPTS" -an b.mp4
  *   ffmpeg -i a.mp4 -i b.mp4 -filter_complex \
- *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=14.2,\
- *      setpts=PTS/1.33,fps=30,format=yuv420p[v]" \
- *     -map "[v]" -c:v libx264 -preset slow -crf 19 out.mp4
+ *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.5,setpts=PTS/1.25[v]" \
+ *     -map "[v]" -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
  *
  * Everything the viewer sees is drawn in the page — cursor, click pulse, zoom —
  * so the browser's own compositor animates it and the capture stays smooth.
@@ -25,8 +43,8 @@ import { chromium } from 'playwright';
 
 const W = 1440, H = 900;
 const CHROME = process.env.CHROME_PATH;
-const SITE = process.env.SITE || 'http://localhost:4173';
 const OUT = process.env.OUT || './recording';
+const SITE = process.env.SITE || 'http://localhost:4173';
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const OVERLAY = `
@@ -165,66 +183,58 @@ async function click(sel, i = 0, settle = 700, keepHalo = null) {
 }
 
 mark('start');
-await p.goto('${SITE}/index.html');
-await p.waitForTimeout(2400);
+await p.goto(`${SITE}/index.html`);
+await p.waitForTimeout(2600);
 await overlay();
-
 mark('gallery-ready');
-/* 1 — the library, at rest */
-await move(W * 0.30, H * 0.42, 700);
+
+/* 1 — the library as it sits. No search: every card on screen is real, and
+       the grid is what will change in a moment. */
+await move(W * 0.24, H * 0.30, 620);
+await wait(160);
+
+/* 2 — open the first icon, so the style control has something to point at */
+await click('.card', 0, 520);
+
+/* 3 — the style is a property of the whole library, not of one icon.
+       Switching it here redraws every card on screen. */
+await halo('.panel .segment');
+await wait(200);
+await click('.panel .segment button', 1, 820, '.panel .segment');
+await click('.panel .segment button', 2, 870, '.panel .segment');
+await halo(null);
+await wait(80);
+
+/* 4 — and with a monochrome style up, the accent moves the whole grid too */
+await halo('.accents');
+await wait(180);
+await click('.accents button', 3, 560, '.accents');
+await click('.accents button', 5, 560, '.accents');
+await click('.accents button', 7, 620, '.accents');
+await halo(null);
 await wait(120);
 
-/* 2 — open one icon */
-await p.fill('#search', 'word');
-await wait(650);
-await overlay();
-const wordCard = p.locator('.card', { has: p.locator('.name', { hasText: /^Word$/ }) }).first();
-const wb = await wordCard.boundingBox();
-await move(wb.x + wb.width / 2, wb.y + wb.height / 2, 620);
-await tap();
-await wordCard.click();
-await wait(820);
-
-mark('panel-open');
-/* 3 — the styles: one drawing per style, not a filter */
-await zoom(1.32, W, H * 0.40, 780);
-
-await halo('.panel .segment');
-await wait(220);
-await click('.panel .segment button', 1, 620, '.panel .segment');
-await click('.panel .segment button', 2, 620, '.panel .segment');
-await halo(null);
-
-mark('styles-done');
-/* 4 — the accent: a monochrome style takes a Windows accent */
-await click('.panel .segment button', 1, 380);
-await halo('.accents');
-await click('.accents button', 3, 520, '.accents');
-await click('.accents button', 5, 620, '.accents');
-await halo(null);
-
-mark('accents-done');
-/* 5 — the same library, on the other ground */
-await zoom(1, W / 2, H / 2, 700);
-await click('.theme-switch button[data-mode="dark"]', 0, 760);
-
+/* 5 — the same library on the other ground */
+await click('.theme-switch button[data-mode="dark"]', 0, 820);
 mark('dark-done');
-/* 6 — and a style applied across a whole set at once */
-await click('.app-menu-btn', 0, 420);
-await click('.app-menu-pop a[href="customizer.html"]', 0, 200);
-await p.waitForTimeout(2600);
-mark('customizer-ready');
-await overlay();
-await move(W * 0.13, H * 0.55, 620);
-await p.evaluate(() => window.__z(1.0));
-await halo('.mode-card[data-mode="flat"]');
-await click('.mode-card[data-mode="flat"]', 0, 1050);
-await halo('.mode-card[data-mode="outline"]');
-await click('.mode-card[data-mode="outline"]', 0, 1150);
-await halo(null);
-await move(W * 0.55, H * 0.45, 700);
-await wait(500);
 
+/* 6 — through to the Customizer */
+await click('.app-menu-btn', 0, 400);
+await click('.app-menu-pop a[href="customizer.html"]', 0, 200);
+await p.waitForTimeout(2800);
+await overlay();
+mark('customizer-ready');
+
+/* 7 — one click, and a whole set is re-themed */
+await move(W * 0.13, H * 0.52, 620);
+await halo('.mode-card[data-mode="flat"]');
+await wait(200);
+await click('.mode-card[data-mode="flat"]', 0, 900);
+await halo('.mode-card[data-mode="outline"]');
+await click('.mode-card[data-mode="outline"]', 0, 1000);
+await halo(null);
+await move(W * 0.52, H * 0.46, 620);
+await wait(320);
 mark('end');
 console.log(marks.map((m) => m.join(' ')).join('\n'));
 console.log('errors:', errs.slice(0, 3));
