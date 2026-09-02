@@ -13,6 +13,10 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- `scripts/record-demo.mjs` records a short screen capture of the theming
+  story: cursor, click pulses and highlights are drawn in the page, so the
+  browser's own compositor animates them and the capture stays smooth.
+
 **Assets.** 61 third-party brand marks imported (32px, not recolorable, every
 one attributed in THIRD-PARTY-NOTICES.md). 32 Windows app tiles imported into
 their own `app` collection at 64px. M365 Illustrations replaced: the previous 28
