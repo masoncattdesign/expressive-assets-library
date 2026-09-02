@@ -62,6 +62,11 @@
 </div>
 
 <div class="row">
+  <input type="checkbox" id="edits" checked>
+  <label for="edits">Check whether anything was redrawn in Figma</label>
+</div>
+
+<div class="row">
   <input type="checkbox" id="force">
   <label for="force">Write into a page that already has other work on it</label>
 </div>
@@ -244,6 +249,7 @@ $('go').addEventListener('click', async () => {
         drawings,
         pageName: LABEL[collection],
         force: $('force').checked,
+        checkEdits: $('edits').checked,
       },
     } }, '*');
   } catch (err) {
@@ -286,6 +292,11 @@ onmessage = (event) => {
     if (r.sets) log('<b>' + r.sets + '</b> component sets created');
     log('\n<b>' + r.created + '</b> variants created, <b>' + r.replaced + '</b> replaced, <b>' + r.unchanged + '</b> unchanged');
     log('<b>' + r.laid + '</b> cards laid out');
+    if (r.baselined) log('<b>' + r.baselined + '</b> variants baselined for edit detection');
+    if (r.edited) {
+      log('<b>' + r.edited + '</b> <span class="bad">redrawn in Figma</span> — marked, not overwritten');
+      log('  Pull those back into the library before the next sync.');
+    }
     if (r.missing) log('<b>' + r.missing + '</b> not in the library');
     log('\nRun it again: nothing should be created or replaced, and the cards get laid out the same way.');
   }

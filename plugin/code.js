@@ -58,6 +58,32 @@ function paint(svg) {
 }
 
 /** FNV-1a. Short, stable, enough to answer "is this the same drawing". */
+/**
+ * Two hashes, and the difference between them is the whole round trip.
+ *
+ * `hash` is of the SVG the library sent. It answers "has the library changed
+ * since we last wrote this cell", which is what decides whether to replace the
+ * artwork inside the component.
+ *
+ * `render` is of what Figma exports for that node immediately after we wrote
+ * it. It answers the opposite question — "has somebody redrawn this in Figma"
+ * — and the library hash cannot answer it, because the library hash of an
+ * untouched cell is identical whether or not a designer has since edited the
+ * drawing. Comparing a fresh export against the export we recorded is the only
+ * way to see an edit from the outside.
+ *
+ * Serialization is stable for unchanged geometry, so an untouched variant
+ * re-exports byte for byte. A changed one does not.
+ */
+async function renderHash(node) {
+  try {
+    const bytes = await node.exportAsync({ format: 'SVG' });
+    return hash(new TextDecoder().decode(bytes));
+  } catch (e) {
+    return '';
+  }
+}
+
 function hash(str) {
   let h = 0x811c9dc5;
   for (let i = 0; i < str.length; i++) {
@@ -231,6 +257,7 @@ function dressCard(card, set, asset, generatedCount) {
 
 async function sync(payload) {
   const { assets, drawings, pageName, force } = payload;
+  const checkEdits = payload.checkEdits !== false;
   await figma.loadFontAsync({ family: 'Inter', style: 'Regular' });
 
   const page = await findOrMakePage(pageName);
@@ -249,7 +276,8 @@ async function sync(payload) {
   const board = findOrMakeBoard(page, pageName, assets.length);
   const removedOld = clearOldLayout(board);
 
-  const report = { sets: 0, created: 0, replaced: 0, unchanged: 0, missing: 0, laid: 0, removedOld };
+  const report = { sets: 0, created: 0, replaced: 0, unchanged: 0, missing: 0, laid: 0,
+                 baselined: 0, edited: 0, removedOld };
 
   // Existing sets, by the asset id stamped on them rather than by display name,
   // so renaming an icon in the library does not orphan its component.
@@ -277,11 +305,28 @@ async function sync(payload) {
         if (existing) {
           if (existing.getSharedPluginData(NS, 'hash') === stamp) {
             report.unchanged++;
+            if (checkEdits) {
+              // The library has not moved, so anything different in the export
+              // was drawn by a person. Mark it and leave the artwork alone —
+              // the pull collects these, and overwriting one here would throw
+              // away the very work we are trying to find.
+              const before = existing.getSharedPluginData(NS, 'render');
+              const now = await renderHash(existing);
+              if (!before) {
+                existing.setSharedPluginData(NS, 'render', now);
+                report.baselined++;
+              } else if (now && now !== before) {
+                existing.setSharedPluginData(NS, 'edited', '1');
+                report.edited++;
+              }
+            }
             continue;
           }
           // In place, so every instance already placed updates with it.
           swapArtwork(existing, svg);
           existing.setSharedPluginData(NS, 'hash', stamp);
+          existing.setSharedPluginData(NS, 'render', await renderHash(existing));
+          existing.setSharedPluginData(NS, 'edited', '');
           existing.fills = flagged ? solid(FLAG) : [];
           report.replaced++;
           continue;
@@ -331,6 +376,15 @@ async function sync(payload) {
     set.fills = [];
     set.strokes = [];
     set.resize(gridW, gridH);
+
+    // A new component can only be exported once it has a parent, so its render
+    // baseline is taken here rather than at creation.
+    if (checkEdits) {
+      for (const c of fresh) {
+        c.setSharedPluginData(NS, 'render', await renderHash(c));
+        report.baselined++;
+      }
+    }
 
     // Every variant to its computed cell, including ones that already existed.
     STYLES.forEach((style, col) => {

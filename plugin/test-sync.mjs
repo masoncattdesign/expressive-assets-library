@@ -32,6 +32,11 @@ function node(type, extra = {}) {
       (function walk(x) { x.children.forEach((c) => { if (fn(c)) out.push(c); walk(c); }); })(n);
       return out;
     },
+    async exportAsync() {
+      const parts = [];
+      (function walk(x) { if (x._svg) parts.push(x._svg); (x.children || []).forEach(walk); })(n);
+      return new TextEncoder().encode(n.name + '|' + parts.join(''));
+    },
     setSharedPluginData(ns, k, v) { n._data[ns + ':' + k] = String(v); },
     getSharedPluginData(ns, k) { return n._data[ns + ':' + k] || ''; },
     // Figma throws if you size a node that has no auto-layout parent. Stubbing
@@ -239,5 +244,43 @@ assert.ok(d3.pages.some((p) => p.page === 'Get Started' && p.refused),
   'the plugin overwrote a page holding work it did not make');
 assert.ok(gs.children.includes(mine), 'it removed a layer it did not make');
 
+/* --- Detecting an edit made in Figma -------------------------------- */
+
+/* The library hash cannot see this: it is identical whether or not somebody
+   has redrawn the artwork, because it describes what we sent rather than what
+   is there now. Only the render baseline catches it. */
+const NSX = 'expressiveassets';
+const wordSet = pages
+  .flatMap((p) => p.findAll((n) => n.type === 'COMPONENT_SET'))
+  .find((n) => n.getSharedPluginData(NSX, 'id') === 'product.word');
+assert.ok(wordSet, 'no component set for product.word');
+
+const victim = wordSet.children.find((c) => c.name === 'Style=Outline, Size=24');
+assert.ok(victim, 'no Outline/24 variant to edit');
+assert.ok(victim.getSharedPluginData(NSX, 'render'), 'no render baseline was recorded');
+
+/* A run with nothing changed anywhere must report no edits. */
+const quiet = await run();
+assert.equal(quiet.result.edited, 0, 'reported an edit when nothing was touched');
+
+/* Now redraw it, the way a person would. */
+victim.children[0]._svg = '<svg viewBox="0 0 24 24"><path d="M1 1h9v9z"/></svg>';
+
+const after = await run();
+assert.equal(after.result.edited, 1, `expected exactly one edit, got ${after.result.edited}`);
+assert.equal(victim.getSharedPluginData(NSX, 'edited'), '1', 'the edited variant was not marked');
+assert.equal(after.result.replaced, 0, 'it overwrote artwork somebody drew');
+assert.equal(
+  victim.children[0]._svg, '<svg viewBox="0 0 24 24"><path d="M1 1h9v9z"/></svg>',
+  'the edit was clobbered — the whole point is to preserve it'
+);
+
+/* And the library moving must clear the mark, since we just overwrote it. */
+drawings['product.word|outline|24'] = '<svg viewBox="0 0 24 24"><rect width="7" height="7"/></svg>';
+const relib = await run();
+assert.equal(relib.result.replaced, 1, 'a changed library drawing was not written');
+assert.equal(victim.getSharedPluginData(NSX, 'edited'), '', 'the edited mark survived an overwrite');
+
 console.log('✓ sync builds, re-lays out, and replaces in place — 3 runs');
+console.log('✓ an edit made in Figma is detected, marked, and not overwritten');
 console.log('✓ docs pages build, rebuild whole, fall back on fonts, and refuse a page with other work');
