@@ -4,34 +4,44 @@
  *   npm run build && node scripts/serve.mjs
  *   SITE=http://localhost:4173 OUT=./recording node scripts/record-demo.mjs
  *
- * No search anywhere in the sequence, deliberately. Filtering the grid is the
- * one moment the Gallery can show a card whose artwork has not been fetched
- * yet, and a blank tile in a demo reads as a missing asset.
+ * SMOOTHNESS. Three separate things caused a capture that read as skipping,
+ * and only the third one was real:
  *
- * The point of the Gallery half is that style and accent are properties of the
- * whole library rather than of the icon you happen to have open, so every card
- * on screen redraws at once. Opening one icon is just what gives the control
- * something to point at.
+ *   1. The highlight moved by left/top/width/height, none of which were in its
+ *      transition list, so every reposition was an instant jump.
  *
- * FRAME PACING, which is the part that took three attempts. The capture is a
- * clean 25fps. Speeding it up and then asking for 30fps maps each source frame
- * onto roughly 1.6 output frames, unevenly, and the result reads as a cursor
- * that skips — even though nothing in the source stutters. Retime by a factor
- * that divides the source rate and output THAT rate, so every source frame
- * lands on exactly one output frame:
+ *   2. The finished cut was sped up and then asked for 30fps. The capture is a
+ *      clean 25fps; retiming it onto 30 maps each source frame onto roughly 1.6
+ *      output frames, unevenly. Retime by a factor that DIVIDES the source rate
+ *      and output that rate — 1.25x into 20fps is exactly one frame per frame.
  *
- *   1.25x -> 20fps      exact, what this uses
- *   1.00x -> 25fps      exact, if you would rather not retime at all
+ *   3. The renderer itself stalled. There is no GPU here, so re-rastering
+ *      ninety gradient-heavy SVG cards after a style or accent change froze the
+ *      capture for up to a third of a second. Measured at 6.9% duplicate frames
+ *      with seven stalls of four frames or more. Two things fixed it: a smaller
+ *      stage, since the cost is proportional to how many cards must be redrawn,
+ *      and holding the cursor still until each repaint has finished. A frozen
+ *      frame with nothing moving is invisible; the same freeze under a moving
+ *      cursor is what reads as a skip. It now measures 0.8% and no stalls.
  *
- * Verify it rather than trusting it — every delta should be identical:
+ * Measure it, do not trust it. Every run, before encoding:
  *
- *   ffprobe -select_streams v -show_entries frame=pts_time -of csv=p=0 out.mp4
+ *   ffmpeg -i raw.webm -map 0:v -f framemd5 -c rawvideo - | grep -v '^#' \
+ *     | awk '{print $NF}' | uniq -c | sort -rn | head
  *
- *   ffmpeg -i raw.webm -vf "trim=3.05:16.95,setpts=PTS-STARTPTS" -an a.mp4
- *   ffmpeg -i raw.webm -vf "trim=22.6:28.05,setpts=PTS-STARTPTS" -an b.mp4
+ * Then cut, retime and encode:
+ *
+ *   ffmpeg -i raw.webm -vf "trim=3.2:17.2,setpts=PTS-STARTPTS" -an a.mp4
+ *   ffmpeg -i raw.webm -vf "trim=22.8:28.2,setpts=PTS-STARTPTS" -an b.mp4
  *   ffmpeg -i a.mp4 -i b.mp4 -filter_complex \
- *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.5,setpts=PTS/1.25[v]" \
+ *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.6,setpts=PTS/1.25[v]" \
  *     -map "[v]" -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
+ *
+ * No search anywhere in the sequence, deliberately. Filtering is the one moment
+ * the Gallery can show a card whose artwork has not been fetched yet, and a
+ * blank tile in a demo reads as a missing asset. Without it, switching style or
+ * accent redraws every card on screen, which is the actual claim: these are
+ * properties of the library, not of the icon you happen to have open.
  *
  * Everything the viewer sees is drawn in the page — cursor, click pulse, zoom —
  * so the browser's own compositor animates it and the capture stays smooth.
@@ -41,10 +51,10 @@
  */
 import { chromium } from 'playwright';
 
-const W = 1440, H = 900;
+const W = 1280, H = 800;
 const CHROME = process.env.CHROME_PATH;
-const OUT = process.env.OUT || './recording';
 const SITE = process.env.SITE || 'http://localhost:4173';
+const OUT = process.env.OUT || './recording';
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const OVERLAY = `
@@ -144,7 +154,15 @@ const OVERLAY = `
 })();
 `;
 
-const b = await chromium.launch(CHROME ? { executablePath: CHROME } : {});
+const b = await chromium.launch({
+  ...(CHROME ? { executablePath: CHROME } : {}),
+  args: [
+    '--num-raster-threads=4',
+    '--enable-zero-copy',
+    '--disable-lcd-text',
+    '--force-device-scale-factor=1',
+  ],
+});
 const ctx = await b.newContext({
   viewport: { width: W, height: H },
   deviceScaleFactor: 1,
@@ -200,22 +218,27 @@ await click('.card', 0, 520);
        Switching it here redraws every card on screen. */
 await halo('.panel .segment');
 await wait(200);
-await click('.panel .segment button', 1, 820, '.panel .segment');
-await click('.panel .segment button', 2, 870, '.panel .segment');
+await click('.panel .segment button', 1, 1000, '.panel .segment');
+await wait(220);
+await click('.panel .segment button', 2, 1000, '.panel .segment');
+await wait(220);
 await halo(null);
 await wait(80);
 
 /* 4 — and with a monochrome style up, the accent moves the whole grid too */
 await halo('.accents');
 await wait(180);
-await click('.accents button', 3, 560, '.accents');
-await click('.accents button', 5, 560, '.accents');
-await click('.accents button', 7, 620, '.accents');
+await click('.accents button', 3, 850, '.accents');
+await wait(200);
+await click('.accents button', 5, 850, '.accents');
+await wait(200);
+
 await halo(null);
 await wait(120);
 
 /* 5 — the same library on the other ground */
-await click('.theme-switch button[data-mode="dark"]', 0, 820);
+await click('.theme-switch button[data-mode="dark"]', 0, 1050);
+await wait(260);
 mark('dark-done');
 
 /* 6 — through to the Customizer */
@@ -230,8 +253,8 @@ await move(W * 0.13, H * 0.52, 620);
 await halo('.mode-card[data-mode="flat"]');
 await wait(200);
 await click('.mode-card[data-mode="flat"]', 0, 900);
-await halo('.mode-card[data-mode="outline"]');
-await click('.mode-card[data-mode="outline"]', 0, 1000);
+await halo('.mode-card[data-mode="soft"]');
+await click('.mode-card[data-mode="soft"]', 0, 1200);
 await halo(null);
 await move(W * 0.52, H * 0.46, 620);
 await wait(320);
