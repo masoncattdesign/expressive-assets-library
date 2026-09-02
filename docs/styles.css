@@ -10,8 +10,8 @@
    darkening a border, which is too quiet to rely on, so focus keeps a ring —
    in ink rather than blue.
 
-   Colour is not banished, it is reassigned. Bridge's own Theme Generation
-   screen is ink chrome wrapped around a panel of saturated swatches: colour
+   Color is not banished, it is reassigned. Bridge's own Theme Generation
+   screen is ink chrome wrapped around a panel of saturated swatches: color
    belongs to the subject, ink to the frame. Here the subject is artwork. */
 
 :root {
@@ -60,7 +60,7 @@
 
 /* The same values again for an explicit dark choice, so the toggle wins over a
    light OS. Bare :root above is the complete light palette; nothing here
-   defines a colour that is not also defined there. */
+   defines a color that is not also defined there. */
 :root[data-theme="dark"] {
     --bg: #131416;
     --surface: #1B1C1F;
@@ -166,13 +166,19 @@ body {
 
 .main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
 
+/* The theme control and the menu sit hard right on every page. Here the
+   toolbar also holds search and filters, so a spacer takes the slack instead
+   of the search field taking it — otherwise the controls drift with whatever
+   the filters happen to be wide enough to push. */
+.toolbar-end { flex: 1; min-width: 16px; }
+
 .toolbar {
   display: flex; align-items: center; gap: 12px;
   padding: 14px 20px; border-bottom: 1px solid var(--line);
   background: var(--surface); flex: none; flex-wrap: wrap;
 }
 
-.search { position: relative; flex: 1 1 240px; min-width: 180px; max-width: 560px; }
+.search { position: relative; flex: 0 1 420px; min-width: 180px; }
 .search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; color: var(--text-3); }
 .search input {
   width: 100%; padding: 10px 12px 10px 38px;
@@ -345,7 +351,7 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 
 /* Flat, and round. The swatches were beveled gradient tiles, which is the one
    thing Bridge's surface treatment does not do — it has no gloss and no
-   shadow. The two colours still have to show, since an accent is a pair, so
+   shadow. The two colors still have to show, since an accent is a pair, so
    they meet on a hard diagonal rather than blending into a sheen. */
 .accents { display: flex; flex-wrap: wrap; gap: 7px; }
 .accents button {

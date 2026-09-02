@@ -1,22 +1,22 @@
 /**
- * Make full-colour illustrations recolorable without changing how they ship.
+ * Make full-color illustrations recolorable without changing how they ship.
  *
- * The M365 set uses a small, role-structured palette: six colours cover 93% of
+ * The M365 set uses a small, role-structured palette: six colors cover 93% of
  * every paint in the collection. Each becomes a CSS custom property with the
  * shipped hex as its fallback — `fill="var(--ea-primary, #8B52F4)"` — so an
  * untouched page renders exactly the artwork Figma exported, and a host that
- * sets the properties gets a recoloured one. No style block, so there is no
+ * sets the properties gets a recolored one. No style block, so there is no
  * document-level stylesheet to leak between inlined SVGs.
  *
- * WHAT IS DELIBERATELY LEFT LITERAL. Only those six are tokenised. Everything
+ * WHAT IS DELIBERATELY LEFT LITERAL. Only those six are tokenized. Everything
  * else keeps its hex, and that is not laziness — it is the whole point:
  *
- *   - The nine M365 logo colours inside m365-folder are Microsoft brand marks.
- *     A recolour that turned the M365 logo purple would be wrong.
- *   - The orange in `warning` is semantic. A warning that recolours to green
+ *   - The nine M365 logo colors inside m365-folder are Microsoft brand marks.
+ *     A recolor that turned the M365 logo purple would be wrong.
+ *   - The orange in `warning` is semantic. A warning that recolors to green
  *     is worse than one that ignores the accent.
  *
- * Because the rule is per-colour rather than per-asset, both fall out for free.
+ * Because the rule is per-color rather than per-asset, both fall out for free.
  *
  *   node scripts/tokenize-illustrations.mjs --collection=m365 [--dry-run]
  */
@@ -31,9 +31,9 @@ const arg = (n) => args.filter((a) => a.startsWith(`--${n}=`)).pop()?.split('=')
 const COLLECTION = arg('collection') || 'm365';
 const DRY = args.includes('--dry-run');
 
-/** Shipped colour -> role. Ink and surface are structural: they get a named
+/** Shipped color -> role. Ink and surface are structural: they get a named
  *  hook so a host CAN reach them, but the accent picker leaves them alone —
- *  recolouring the linework and the paper turns a drawing into a smear. */
+ *  recoloring the linework and the paper turns a drawing into a smear. */
 const ROLES = [
   ['#182047', '--ea-ink'],
   ['#8B52F4', '--ea-primary'],
@@ -83,8 +83,8 @@ async function main() {
     assets++;
   }
 
-  console.log(`\n${DRY ? 'Would tokenise' : 'Tokenised'} ${assets} assets — ${files} Standard drawings.`);
-  if (untouched.length) console.log(`\nNo core-palette colours found in: ${untouched.join(', ')}`);
+  console.log(`\n${DRY ? 'Would tokenize' : 'Tokenized'} ${assets} assets — ${files} Standard drawings.`);
+  if (untouched.length) console.log(`\nNo core-palette colors found in: ${untouched.join(', ')}`);
   console.log('\n  Untinted output is byte-for-byte the shipped artwork: every');
   console.log('  token carries its original hex as the fallback.\n');
 }

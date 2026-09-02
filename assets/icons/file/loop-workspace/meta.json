@@ -58,7 +58,7 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Standard is the shipped artwork and keeps its baked colours. Outline is derived from it by luminance: paper knocks out, ink is the body, drawn in currentColor so it takes an accent. There is no Filled — none exists upstream, and a solid plate with the marks cut out of it is not a style a file icon needs.",
+  "notes": "Imported from Figma. Standard is the shipped artwork and keeps its baked colors. Outline is derived from it by luminance: paper knocks out, ink is the body, drawn in currentColor so it takes an accent. There is no Filled — none exists upstream, and a solid plate with the marks cut out of it is not a style a file icon needs.",
   "generated": [
     "outline:16",
     "outline:20",

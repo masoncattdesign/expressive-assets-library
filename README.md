@@ -40,7 +40,7 @@ Each asset is a folder:
 
 ```
 assets/icons/system/settings/
-  standard-any.svg   Standard — full colour, one scalable drawing
+  standard-any.svg   Standard — full color, one scalable drawing
   outline-20.svg     Outline  — monochrome, drawn for 20px
   outline-24.svg     Outline  — drawn for 24px, a different drawing
   filled-20.svg      Filled   — monochrome, the solid weight
@@ -71,10 +71,10 @@ text to make the thing findable, one lifecycle axis, and a trail back to source.
 | `themes` | Which of `standard` / `outline` / `filled` exist on disk |
 | `sizes` | Pixel sizes the geometry is *legible* at, not what it can scale to |
 | `colors` | `primary` / `secondary` baked into the Standard variant |
-| `recolorable` | False for brand marks — the browser greys out the accent picker |
+| `recolorable` | False for brand marks — the browser grays out the accent picker |
 | `variants` | Theme → size → SVG path. Windows artwork is redrawn per size, so each drawing is kept |
 | `figma` | `fileKey` + `nodeId` — traces an asset back to the component that made it |
-| `source` | Upstream project, licence and copyright for vendored artwork |
+| `source` | Upstream project, license and copyright for vendored artwork |
 | `version`, `updated`, `owner` | Provenance |
 
 Two earlier fields are gone on purpose. `status` and `build` were two lifecycle
@@ -82,7 +82,7 @@ axes doing one job, and nobody could say what `active` + `alpha` meant together.
 `family` overlapped `collection`, and where it carried real information that
 information was the product — so it became `product`.
 
-**Theme naming.** `standard` is the full-colour base; `outline` and `filled` are
+**Theme naming.** `standard` is the full-color base; `outline` and `filled` are
 its monochrome reductions. Keys and labels match deliberately, and `filled`
 matches what the upstream sources already call it — Fluent ships `filled`, and
 the Figma style axis is spelled `Filled` — so the importers no longer translate
@@ -105,7 +105,7 @@ only look through. The other two make something.
 
 The risk in this set is that *customize* and *build* both colloquially mean
 "make it mine", so the boundary has to stay sharp in the product itself:
-Customizer never adds or removes a shape, and Builder never recolours one.
+Customizer never adds or removes a shape, and Builder never recolors one.
 
 **Builder does not exist yet**, and the library is not ready for it. Composing
 from parts requires assets to HAVE parts, and every asset here is a flat SVG
@@ -117,7 +117,7 @@ should look like that rather than being invented separately.
 
 **Customizer** (`docs/customizer.html`) is the sibling tool: Gallery shows the
 library, Customizer restyles a piece of it. It takes an asset and re-renders it through one
-of seven themable pipelines driven by a single seed colour, reading the source
+of seven themable pipelines driven by a single seed color, reading the source
 shapes, bucketing them by luminance, and re-filling.
 
 Gallery's detail panel has an **Open in Customizer** button that deep-links the
@@ -133,21 +133,21 @@ pipelines bucket by luminance and read better with more shapes to work from.
 
 Two constraints are deliberate.
 
-**Standard artwork only.** Customizer works by reading source colours. Outline and
+**Standard artwork only.** Customizer works by reading source colors. Outline and
 Filled are drawn in `currentColor` and have none, so they are not offered.
-Recolouring those is Gallery's accent picker, which is the right tool for it.
-That leaves roughly 210 full-colour assets: the file icons, the product icons,
+Recoloring those is Gallery's accent picker, which is the right tool for it.
+That leaves roughly 210 full-color assets: the file icons, the product icons,
 and the illustrations.
 
 **It still opens with a double-click.** `fetch` is blocked on `file://`, so a
 failed manifest load is a normal state rather than an error. The built-in sample
 icons stay, the library row simply never appears, and the page says so.
 
-One interop note. Tokenised artwork carries its tint hooks inline as
-`var(--ea-primary, #8B52F4)`, and every colour reader in Customizer handles `#hex`
+One interop note. Tokenized artwork carries its tint hooks inline as
+`var(--ea-primary, #8B52F4)`, and every color reader in Customizer handles `#hex`
 and `rgb()` only. `resolveColorVars()` collapses each token to its fallback on
 the way in. Without it the M365 illustrations, the one set authored to be
-recoloured, would be the set that failed.
+recolored, would be the set that failed.
 
 ## Using the library
 
@@ -161,7 +161,7 @@ const { assets } = await fetch('https://masoncattdesign.github.io/expressive-ass
 const shippable = assets.filter((a) => a.status === 'published');
 const settings = assets.find((a) => a.id === 'system.settings');
 // settings.variants.outline[24] -> "assets/icons/system/settings/outline-24.svg"
-// settings.variants.standard.any -> the one scalable full-colour drawing
+// settings.variants.standard.any -> the one scalable full-color drawing
 ```
 
 `manifest.json` is 4.6 MB uncompressed and ~185 KB gzipped, which is what
@@ -263,7 +263,7 @@ Two things it does to the artwork:
 
 - **`#212121` becomes `currentColor`**, so every system icon takes a Windows
   accent instead of being locked to near-black.
-- **Standard is synthesised.** Fluent has no full-colour system icon, so the
+- **Standard is synthesised.** Fluent has no full-color system icon, so the
   importer insets the filled glyph in the gradient tile. That artwork is drawn
   here, not shipped by Microsoft — every affected asset says so in its `notes`,
   and `THIRD-PARTY-NOTICES.md` says it again. Artwork that looks official and
@@ -274,11 +274,11 @@ list rather than a restatement of the name — that plus their descriptions took
 the library from 12% to 84% description coverage.
 
 Attribution travels with the artwork: each asset carries a `source` block naming
-the project, licence, copyright and upstream URL, and the browser shows it in
+the project, license, copyright and upstream URL, and the browser shows it in
 the detail panel where someone is about to copy the file.
 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) is generated from those blocks
 by `npm run notices`, so it cannot drift from what the repo actually contains —
-a notices file maintained by hand is a licence problem waiting to happen.
+a notices file maintained by hand is a license problem waiting to happen.
 
 ## Importing a folder of illustrations
 
@@ -293,7 +293,7 @@ script. Add the collection to the schema enum and to `GROUPS` first.
 
 Illustrations are not icons, and the importer treats them differently. They get
 one theme (`standard`) because they are scenes, not glyphs with monochrome
-reductions. They are marked non-recolorable, because the colour *is* the
+reductions. They are marked non-recolorable, because the color *is* the
 artwork. Their palette is read out of their own gradients rather than invented.
 And the browser gives them a larger thumbnail — a 360px scene in a 40px box is
 a smudge you cannot tell from the next one.
@@ -379,7 +379,7 @@ The survey reports every page, every variant property and its values, how many
 component sets carry descriptions, and a sample of names — then drafts a
 `figma.config.json` from what it saw. That file is the mapping from your Figma
 page names to collections, and it is committed, because how the library is
-organised is a reviewable decision.
+organized is a reviewable decision.
 
 Three things the importer deliberately does not do:
 
@@ -391,8 +391,8 @@ Three things the importer deliberately does not do:
 - **It marks imported artwork `recolorable: false`.** SVGs exported from Figma
   have their colors hard-coded and none of the `--ea-primary` hooks the
   generated set uses, so the accent picker could not actually retint them. The
-  browser greys the picker out with a reason rather than appearing to work.
-  Flip these to `true` once artwork has been through a tokenising pass.
+  browser grays the picker out with a reason rather than appearing to work.
+  Flip these to `true` once artwork has been through a tokenizing pass.
 
 Your token never enters the repo — the script reads it from the environment and
 `figma-survey.json` / `figma-import-report.json` are gitignored.

@@ -47,7 +47,7 @@ const TYPE = arg('type') || (['windows', 'fluent'].includes(COLLECTION) ? 'illus
 const DRY = has('--dry-run');
 
 /* Figma's theme names on the left, this library's on the right. Figma calls
-   the full-colour base "Color"; here it is "standard", because it is the base
+   the full-color base "Color"; here it is "standard", because it is the base
    the other two reduce from. */
 const THEME_MAP = { Color: 'standard', Regular: 'outline', Filled: 'filled' };
 
@@ -65,8 +65,8 @@ const exists = (p) => stat(p).then(() => true, () => false);
  * Real exports are messier than the convention suggests. Seen in the wild:
  * Figma's collision suffixes ("Color-4"), a stray leading space
  * ("Theme= Filled"), and theme names outside the library's three
- * ("Theme=Flat"). The first two are noise and get normalised; the third is
- * information, so it comes back labelled rather than silently dropped.
+ * ("Theme=Flat"). The first two are noise and get normalized; the third is
+ * information, so it comes back labeled rather than silently dropped.
  */
 function parseVariantFile(filename) {
   const name = basename(filename, '.svg');

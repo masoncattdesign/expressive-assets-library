@@ -24,7 +24,7 @@
 /** Point this at the repo — drives the "Add Assets" and "View source" links. */
 const REPO = 'https://github.com/masoncattdesign/expressive-assets-library';
 
-/** The three themes. Standard is the full-colour base; outline and filled are its
+/** The three themes. Standard is the full-color base; outline and filled are its
  *  monochrome reductions. Keys and labels deliberately match — an earlier split
  *  had "regular" meaning Outline here and the full-weight base in Fluent, which
  *  is exactly the kind of collision that costs someone an afternoon. */
@@ -36,10 +36,10 @@ const THEMES = [
 
 /**
  * Asset families. The library holds three shapes of thing, and they do not want
- * the same panel. A System icon is monochrome line work with no brand colour of
- * its own. A Product icon (app and file icons both, for now) ships full-colour
+ * the same panel. A System icon is monochrome line work with no brand color of
+ * its own. A Product icon (app and file icons both, for now) ships full-color
  * Standard artwork that cannot be retinted. An Illustration is a scene built
- * from colour roles.
+ * from color roles.
  *
  * Family decides which styles are offered, which one opens by default, and
  * whether a Colors section says anything true. System icons have no Standard,
@@ -76,7 +76,7 @@ function familyOf(asset) {
 }
 
 /** The styles this asset actually offers, in family order. A style the artwork
- *  never had is left out rather than shown disabled, because a greyed-out
+ *  never had is left out rather than shown disabled, because a grayed-out
  *  button still claims the style exists somewhere. */
 function stylesFor(asset) {
   const family = FAMILIES[familyOf(asset)];
@@ -120,6 +120,8 @@ const STATUS_LABEL = { draft: 'Draft', published: 'Published', deprecated: 'Depr
  * with `node scripts/inline-nav-icons.mjs` after changing the picks there. */
 /* The sidebar marks are assets, not drawings kept in this file. Regenerate
  * with `node scripts/inline-nav-icons.mjs` after changing the picks there. */
+/* The sidebar marks are assets, not drawings kept in this file. Regenerate
+ * with `node scripts/inline-nav-icons.mjs` after changing the picks there. */
 const NAV_ICONS = {
   'all': '<path d="M8.75 13C9.99264 13 11 14.0074 11 15.25V18.75C11 19.9926 9.99264 21 8.75 21H5.25C4.00736 21 3 19.9926 3 18.75V15.25C3 14.0074 4.00736 13 5.25 13H8.75ZM18.75 13C19.9926 13 21 14.0074 21 15.25V18.75C21 19.9926 19.9926 21 18.75 21H15.25C14.0074 21 13 19.9926 13 18.75V15.25C13 14.0074 14.0074 13 15.25 13H18.75ZM8.75 3C9.99264 3 11 4.00736 11 5.25V8.75C11 9.99264 9.99264 11 8.75 11H5.25C4.00736 11 3 9.99264 3 8.75V5.25C3 4.00736 4.00736 3 5.25 3H8.75ZM18.75 3C19.9926 3 21 4.00736 21 5.25V8.75C21 9.99264 19.9926 11 18.75 11H15.25C14.0074 11 13 9.99264 13 8.75V5.25C13 4.00736 14.0074 3 15.25 3H18.75Z"/>', // system.grid filled — Everything, evenly
   'product-icons': '<path d="M18.4923 2.33034L21.671 5.50911C22.5497 6.38779 22.5497 7.81241 21.671 8.69109L19.0866 11.275C20.1696 11.4375 21 12.3718 21 13.5V18.75C21 19.9926 19.9926 21 18.75 21H5.25C4.00736 21 3 19.9926 3 18.75V5.25001C3 4.00736 4.00736 3.00001 5.25 3.00001H10.5C11.6289 3.00001 12.5637 3.83146 12.7253 4.91541L15.3103 2.33034C16.189 1.45166 17.6136 1.45166 18.4923 2.33034ZM4.5 18.75C4.5 19.1642 4.83579 19.5 5.25 19.5L11.249 19.4993L11.25 12.75L4.5 12.7493V18.75ZM12.749 19.4993L18.75 19.5C19.1642 19.5 19.5 19.1642 19.5 18.75V13.5C19.5 13.0858 19.1642 12.75 18.75 12.75L12.749 12.7493V19.4993ZM10.5 4.50001H5.25C4.83579 4.50001 4.5 4.83579 4.5 5.25001V11.2493H11.25V5.25001C11.25 4.83579 10.9142 4.50001 10.5 4.50001ZM12.75 9.30933V11.25L14.69 11.2493L12.75 9.30933Z"/>', // system.apps filled — A group of app tiles
@@ -132,7 +134,7 @@ const NAV_ICONS = {
   'illustrations': '<path d="M11.5582 13.6469L11.4746 13.7179L4.54692 20.5186C5.04216 20.8239 5.62551 21 6.25 21H17.75C18.3745 21 18.9578 20.8239 19.4531 20.5186L12.5254 13.7179L12.432 13.6399C12.1705 13.4552 11.8174 13.4576 11.5582 13.6469ZM21 6.25C21 4.45507 19.5449 3 17.75 3H6.25C4.45507 3 3 4.45507 3 6.25V17.75C3 18.3771 3.17758 18.9626 3.4852 19.4592L10.4238 12.6475L10.5592 12.5248C11.3941 11.8273 12.615 11.8293 13.4477 12.5306L13.5762 12.6475L20.5148 19.4592C20.8224 18.9626 21 18.3771 21 17.75V6.25ZM15.25 10.75C14.1454 10.75 13.25 9.85457 13.25 8.75C13.25 7.64543 14.1454 6.75 15.25 6.75C16.3546 6.75 17.25 7.64543 17.25 8.75C17.25 9.85457 16.3546 10.75 15.25 10.75Z"/>', // system.image filled — A picture
   'illustrations:oobe': '<path d="M13.0572 7.43077C14.0335 6.45446 15.6164 6.45446 16.5927 7.43077C17.569 8.40708 17.569 9.98999 16.5927 10.9663C15.6164 11.9426 14.0335 11.9426 13.0572 10.9663C12.0809 9.98999 12.0809 8.40708 13.0572 7.43077ZM15.532 8.49143C15.1415 8.10091 14.5084 8.1009 14.1178 8.49143C13.7273 8.88195 13.7273 9.51512 14.1178 9.90564C14.5084 10.2962 15.1415 10.2962 15.532 9.90564C15.9226 9.51512 15.9226 8.88195 15.532 8.49143ZM21.5086 4.32216C21.2398 3.45736 20.5625 2.78032 19.6976 2.5119L19.0355 2.30643C16.642 1.5636 14.034 2.20802 12.2618 3.98013L11.266 4.97601C9.89622 3.94737 7.94316 4.05621 6.69685 5.30253L5.45432 6.54506C5.16142 6.83795 5.16142 7.31283 5.45432 7.60572L7.04529 9.19669L6.86548 9.3765C6.18206 10.0599 6.18206 11.168 6.86548 11.8514L7.36083 12.3467L5.96527 13.1427C5.76212 13.2585 5.62465 13.4625 5.59352 13.6943C5.56238 13.9261 5.64115 14.1591 5.80651 14.3245L9.69562 18.2136C9.86086 18.3788 10.0937 18.4576 10.3253 18.4267C10.557 18.3957 10.7609 18.2585 10.877 18.0557L11.6749 16.6608L12.1721 17.1579C12.8555 17.8414 13.9635 17.8414 14.6469 17.1579L14.8237 16.9812L16.4133 18.5708C16.7062 18.8636 17.1811 18.8636 17.474 18.5708L18.7165 17.3282C19.9623 16.0824 20.0716 14.1303 19.0442 12.7607L20.0421 11.7627C21.8149 9.98994 22.4591 7.38062 21.715 4.98647L21.5086 4.32216ZM19.253 3.94449C19.6461 4.0665 19.954 4.37425 20.0762 4.76734L20.2826 5.43165C20.8613 7.29377 20.3603 9.32324 18.9815 10.7021L13.5863 16.0973C13.4886 16.1949 13.3303 16.1949 13.2327 16.0973L7.92614 10.7907C7.82851 10.6931 7.82851 10.5348 7.92614 10.4372L13.3225 5.04079C14.7008 3.66249 16.7293 3.16127 18.5909 3.73902L19.253 3.94449ZM17.9641 13.8408C18.4166 14.6065 18.3139 15.6095 17.6558 16.2676L16.9436 16.9798L15.8844 15.9205L17.9641 13.8408ZM7.75751 6.36319C8.41602 5.70468 9.42005 5.60227 10.186 6.05596L8.10595 8.13603L7.04531 7.07539L7.75751 6.36319ZM10.5756 15.5615L10.0623 16.4589L7.56209 13.9588L8.46047 13.4464L10.5756 15.5615ZM6.68987 18.3942C6.98276 18.1013 6.98276 17.6264 6.68987 17.3335C6.39697 17.0406 5.9221 17.0406 5.62921 17.3335L3.15433 19.8084C2.86144 20.1013 2.86144 20.5762 3.15433 20.8691C3.44723 21.162 3.9221 21.162 4.21499 20.8691L6.68987 18.3942ZM4.74529 15.389C5.03818 15.6819 5.03818 16.1568 4.74529 16.4497L3.68463 17.5103C3.39173 17.8032 2.91686 17.8032 2.62397 17.5103C2.33107 17.2174 2.33107 16.7425 2.62397 16.4497L3.68463 15.389C3.97752 15.0961 4.45239 15.0961 4.74529 15.389ZM8.63238 20.3408C8.92528 20.0479 8.92528 19.5731 8.63239 19.2802C8.33951 18.9873 7.86463 18.9873 7.57173 19.2802L6.51313 20.3387C6.22023 20.6316 6.22023 21.1065 6.51312 21.3994C6.80601 21.6923 7.28088 21.6923 7.57378 21.3994L8.63238 20.3408Z"/>', // system.rocket outline — First run
   'illustrations:m365': '<path d="M13.75 2C14.9926 2 16 3.00736 16 4.25V6H18.75C20.5449 6 22 7.45507 22 9.25V17.75C22 19.5449 20.5449 21 18.75 21H5.25C3.45507 21 2 19.5449 2 17.75V9.25C2 7.45507 3.45507 6 5.25 6H8V4.25C8 3.00736 9.00736 2 10.25 2H13.75ZM20.5 13.4873C19.9947 13.811 19.3947 14 18.75 14H14C14 14.5523 13.5523 15 13 15H11C10.4477 15 10 14.5523 10 14H5.25C4.60533 14 4.00532 13.811 3.5 13.4873V17.75C3.5 18.7165 4.2835 19.5 5.25 19.5H18.75C19.7165 19.5 20.5 18.7165 20.5 17.75V13.4873ZM5.25 7.5C4.2835 7.5 3.5 8.2835 3.5 9.25V10.75C3.5 11.7165 4.2835 12.5 5.25 12.5H10V12C10 11.4477 10.4477 11 11 11H13C13.5523 11 14 11.4477 14 12V12.5H18.75C19.7165 12.5 20.5 11.7165 20.5 10.75V9.25C20.5 8.2835 19.7165 7.5 18.75 7.5H5.25ZM10.25 3.5C9.83579 3.5 9.5 3.83579 9.5 4.25V6H14.5V4.25C14.5 3.83579 14.1642 3.5 13.75 3.5H10.25Z"/>', // system.briefcase outline — Work
-  'illustrations:product': '<path d="M17.75 3C19.5449 3 21 4.45507 21 6.25V17.75C21 19.5449 19.5449 21 17.75 21H6.25C4.45507 21 3 19.5449 3 17.75V6.25C3 4.45507 4.45507 3 6.25 3H17.75ZM18.3305 19.4014L12.5247 13.7148C12.2596 13.4553 11.8501 13.4316 11.5588 13.644L11.4752 13.7148L5.66845 19.4011C5.8504 19.4651 6.04613 19.5 6.25 19.5H17.75C17.9535 19.5 18.1489 19.4653 18.3305 19.4014L12.5247 13.7148L18.3305 19.4014ZM17.75 4.5H6.25C5.2835 4.5 4.5 5.2835 4.5 6.25V17.75C4.5 17.9584 4.53643 18.1583 4.60326 18.3437L10.4258 12.643C11.2589 11.8273 12.5675 11.7885 13.4458 12.5266L13.5742 12.6431L19.3964 18.3447C19.4634 18.159 19.5 17.9588 19.5 17.75V6.25C19.5 5.2835 18.7165 4.5 17.75 4.5ZM15.2521 6.5C16.4959 6.5 17.5042 7.50831 17.5042 8.75212C17.5042 9.99592 16.4959 11.0042 15.2521 11.0042C14.0083 11.0042 13 9.99592 13 8.75212C13 7.50831 14.0083 6.5 15.2521 6.5ZM15.2521 8C14.8367 8 14.5 8.33673 14.5 8.75212C14.5 9.1675 14.8367 9.50423 15.2521 9.50423C15.6675 9.50423 16.0042 9.1675 16.0042 8.75212C16.0042 8.33673 15.6675 8 15.2521 8Z"/>', // system.image outline — A picture, one level down
+  'illustrations:device': '<path d="M8.25444 8.99986C9.22093 8.99986 10.0044 9.78336 10.0044 10.7499V20.25C10.0044 21.2165 9.22093 22 8.25444 22H3.75C2.7835 22 2 21.2165 2 20.25V10.7499C2 9.78336 2.7835 8.99986 3.75 8.99986H8.25444ZM8.25444 10.4999H3.75C3.61193 10.4999 3.5 10.6118 3.5 10.7499V20.25C3.5 20.3881 3.61193 20.5 3.75 20.5H8.25444C8.39251 20.5 8.50444 20.3881 8.50444 20.25V10.7499C8.50444 10.6118 8.39251 10.4999 8.25444 10.4999ZM6.24937 18C6.66359 18 6.99937 18.3358 6.99937 18.75C6.99937 19.1297 6.71722 19.4435 6.35114 19.4932L6.24937 19.5H5.74937C5.33516 19.5 4.99937 19.1642 4.99937 18.75C4.99937 18.3703 5.28153 18.0565 5.6476 18.0068L5.74937 18H6.24937ZM19.7494 2C20.9402 2 21.915 2.92516 21.9942 4.09595L21.9994 4.25V13.25C21.9994 14.4409 21.0742 15.4156 19.9034 15.4948L19.7494 15.5H16.0034V17.5H17.2494C17.6636 17.5 17.9994 17.8358 17.9994 18.25C17.9994 18.6297 17.7172 18.9435 17.3511 18.9932L17.2494 19H10.9994V17.5H14.5034V15.5H10.9994V14H19.7494C20.1291 14 20.4429 13.7178 20.4925 13.3518L20.4994 13.25V4.25C20.4994 3.83579 20.1636 3.5 19.7494 3.5H6.24937C5.86968 3.5 5.55588 3.78215 5.50622 4.14823L5.49937 4.25V8H3.99937V4.25C3.99937 3.05914 4.92454 2.08436 6.09533 2.00519L6.24937 2H19.7494Z"/>', // system.phone-desktop outline — Devices, which is all this collection is
 };
 
 /* ------------------------------------------------------------------ */
@@ -239,7 +241,7 @@ const HEX = '#[0-9A-Fa-f]{6}';
  * currentColor, which tints by setting `color` on the root.
  */
 /** Mix a hex toward white. The illustration palette pairs every hue with a much
- *  lighter companion — purple with lavender, coral with periwinkle. Recolouring
+ *  lighter companion — purple with lavender, coral with periwinkle. Recoloring
  *  the hue and leaving its companion behind pulls the drawing in two, so the
  *  companions move with it. */
 function lighten(hex, toward) {
@@ -292,12 +294,12 @@ function colorsFor(asset, accentId = state.accent, theme = themeFor(asset)) {
   const canTint = isTintable(asset, theme);
   const chosen = canTint && accent.primary ? accent : null;
   return {
-    // What the metadata panel reports: the asset's own colours unless an accent
+    // What the metadata panel reports: the asset's own colors unless an accent
     // is overriding them.
     primary: (chosen && chosen.primary) || asset.colors.primary,
     secondary: (chosen && chosen.secondary) || asset.colors.secondary,
     // What actually gets painted onto currentColor and the --ea-* hooks. Null
-    // means "leave it alone". A monochrome glyph has no colour of its own — the
+    // means "leave it alone". A monochrome glyph has no color of its own — the
     // hex in `colors` was extracted from the FULL-COLOUR variant at import, so
     // painting Outline with it turned every system icon Fluent blue and every
     // file icon PDF red. Untinted, these inherit the surface: near-white on
@@ -720,7 +722,7 @@ function renderPanel() {
   });
   panel.append(slider);
 
-  /* Colors. A System icon has no brand colour of its own — the pair stored on
+  /* Colors. A System icon has no brand color of its own — the pair stored on
      it is a library-wide default — so showing swatches would be inventing
      information. That family gets a sentence under Color instead. */
   if (family.brandColors) {
@@ -754,7 +756,7 @@ function renderPanel() {
     for (const accent of ACCENTS) {
       // "Asset default" means different things per family: a brand pair for a
       // product icon, the surrounding surface for a monochrome system icon. The
-      // swatch has to say which, or it reads as a colour the icon does not have.
+      // swatch has to say which, or it reads as a color the icon does not have.
       const followsSurface = accent.id === 'default' && !family.brandColors;
       const label = followsSurface ? 'Follow the surface' : accent.label;
       const btn = el('button', {
@@ -870,7 +872,7 @@ function renderPanel() {
   // Customizer is the sibling tool: Gallery shows the library, Customizer
   // restyles a piece of it. Deep-linked by asset id rather than file path so
   // the link survives a re-import that changes which sizes exist. Standard
-  // only: it reads source colour, which Outline and Filled do not carry.
+  // only: it reads source color, which Outline and Filled do not carry.
   const customize = el('a', {
     className: 'btn',
     href: `customizer.html?asset=${encodeURIComponent(asset.id)}`,
@@ -996,7 +998,7 @@ async function boot() {
   renderGrid();
 
   // Open the first asset in library order, so the panel matches whatever the
-  // sidebar puts first rather than a hard-coded favourite.
+  // sidebar puts first rather than a hard-coded favorite.
   const [first] = state.manifest.assets;
   if (first) openPanel(first.id);
 }

@@ -39,7 +39,7 @@ for (const entry of (await readdir(DIR, { withFileTypes: true })).filter((e) => 
     else delete meta.generated;
   }
   meta.notes =
-    'Imported from Figma. Standard is the shipped artwork and keeps its baked colours. ' +
+    'Imported from Figma. Standard is the shipped artwork and keeps its baked colors. ' +
     'Outline is derived from it by luminance: paper knocks out, ink is the body, drawn in ' +
     'currentColor so it takes an accent. There is no Filled — none exists upstream, and a ' +
     'solid plate with the marks cut out of it is not a style a file icon needs.';

@@ -63,7 +63,7 @@ export const GROUPS = [
     collections: [
       { id: 'oobe', label: 'OOBE Illustrations' },
       { id: 'm365', label: 'M365 Illustrations' },
-      { id: 'product', label: 'Product Illustrations' },
+      { id: 'device', label: 'Device Illustrations' },
     ],
   },
 ];

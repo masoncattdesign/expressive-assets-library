@@ -84,7 +84,7 @@ The plugin has not run since File Icons changed shape and two collections
 appeared. Per collection:
 
 - **File Icons** — Filled is gone, 799 drawings deleted, Outline is what was
-  previously mislabelled. The page in Figma is stale.
+  previously mislabeled. The page in Figma is stale.
 - **App Icons**, **Third Party** — never synced.
 - **System Icons** — 2,891 cards. Think about the board size before pressing it;
   two styles at two sizes is a different card shape from the 3 × 6 one.
@@ -146,7 +146,7 @@ assert before anyone outside relies on it.
 2. **Derived styles for Illustrations** — after we look at one.
 3. **System Icons gaps** — generate over Fluent's missing sizes, or stay honest.
 4. **Naming grammar** — ids change or the grammar does.
-5. **3P licence review** — 61 marks are imported and public. If it lands badly,
+5. **3P license review** — 61 marks are imported and public. If it lands badly,
    pulling them is one gitignore line and one build exclusion, and git history
    keeps them regardless.
 
@@ -176,5 +176,5 @@ source than to keep working around.
   a bad precedent.
 - **3P Icons**: `Theme=Regular` and `Theme=Filled` are used for the same role on
   different brands.
-- **3P Icons**: four brands ship only one mark — Apple and MCP have no colour
+- **3P Icons**: four brands ship only one mark — Apple and MCP have no color
   version, Content Credentials and Polly have no mono.

@@ -1,12 +1,12 @@
 {
-  "id": "product.generic-desktop",
+  "id": "device.generic-desktop",
   "name": "Generic Desktop",
   "keywords": [
     "generic",
     "desktop"
   ],
   "type": "illustration",
-  "collection": "product",
+  "collection": "device",
   "status": "published",
   "themes": [
     "standard"
@@ -23,10 +23,11 @@
   "recolorable": false,
   "variants": {
     "standard": {
-      "any": "assets/illustrations/product/generic-desktop/standard-any.svg"
+      "any": "assets/illustrations/device/generic-desktop/standard-any.svg"
     }
   },
   "owner": "@windows-design-systems",
   "version": "1.0.0",
-  "updated": "2026-09-01"
+  "updated": "2026-09-01",
+  "notes": "Device illustration. This collection is devices only \u2014 console, desktop, laptop, phone, tablet \u2014 which is what it was always for, and now what it is called."
 }

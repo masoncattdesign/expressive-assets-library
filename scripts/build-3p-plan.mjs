@@ -96,7 +96,7 @@ for (const [name, themes] of Object.entries(map)) {
   }
 
   if (!renders.standard) notes.push(`${name}: no Standard — only a monochrome mark exists`);
-  if (!renders.filled) notes.push(`${name}: no Filled — only a colour mark exists`);
+  if (!renders.filled) notes.push(`${name}: no Filled — only a color mark exists`);
 
   assets.push({
     id: `third-party.${slug(name)}`,

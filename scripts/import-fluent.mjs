@@ -21,7 +21,7 @@
  *    library that also has to hold your own work.
  *  - Rewrites #212121 to currentColor, so every icon takes a Windows accent.
  *  - SYNTHESISES a Standard variant: the filled glyph, white, inside the
- *    gradient tile. Fluent has no full-colour system icon, so this is drawn
+ *    gradient tile. Fluent has no full-color system icon, so this is drawn
  *    here, not shipped by Microsoft — every synthesised asset says so in its
  *    notes, because artwork that looks official and isn't is worse than none.
  *  - Derives keywords from Fluent's `metaphor` metadata, which is a real
@@ -49,7 +49,7 @@ const DRY = has('--dry-run');
 const STYLE_MAP = { regular: 'outline', filled: 'filled' };
 
 /* System icons are one family, so they share one gradient rather than each
-   inventing a brand colour. These are the same tokens the placeholder system
+   inventing a brand color. These are the same tokens the placeholder system
    icons used, so the collection stays visually coherent. */
 const TILE = { primary: '#0078D4', secondary: '#8764B8' };
 

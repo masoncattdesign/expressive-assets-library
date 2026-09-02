@@ -13,7 +13,7 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
-**Assets.** 61 third-party brand marks imported (32px, not recolourable, every
+**Assets.** 61 third-party brand marks imported (32px, not recolorable, every
 one attributed in THIRD-PARTY-NOTICES.md). 32 Windows app tiles imported into
 their own `app` collection at 64px. M365 Illustrations replaced: the previous 28
 at 160px are gone, 40 new ones at 512px are in. Everything received is now
@@ -21,11 +21,11 @@ at 160px are gone, 40 new ones at 512px are in. Everything received is now
 
 **Structure.** File Icons become their own top-level group, and lose Filled: it
 was derived rather than drawn, 799 drawings deleted, and nothing upstream has
-one. The `product` collection is labelled Product Icons again, matching Fluent
+one. The `product` collection is labeled Product Icons again, matching Fluent
 and Windows, with App Icons as a sibling rather than a suffix on seven ids.
 Schema learns `app`, `third-party` and `wip`.
 
-**Tools.** Accent swatches go flat, two colours meeting on a hard edge instead
+**Tools.** Accent swatches go flat, two colors meeting on a hard edge instead
 of blending into a bevel. The Gallery sidebar marks are System Icons from the
 library rather than shapes drawn in `app.js`, named by id in
 `scripts/inline-nav-icons.mjs`.
@@ -62,7 +62,7 @@ Also in this release:
   Filled added, with white areas cut as real holes via an SVG mask rather than
   painted over.
 - Figma sync plugin: one component set per icon with Style and Size as variant
-  properties, laid out by hand into a labelled card. Fixed a bug where a sync
+  properties, laid out by hand into a labeled card. Fixed a bug where a sync
   that changed no artwork also changed no layout.
 
 ## 1.2 — 1 September 2026

@@ -1,19 +1,19 @@
 /**
- * Derive the Filled theme from full-colour Figma exports.
+ * Derive the Filled theme from full-color Figma exports.
  *
  * Windows file icons arrive from Figma as one theme: a gradient-filled page
  * with a mark on it. There is no Filled artwork upstream, and a monochrome
  * reduction is a mechanical question rather than a design one — WHICH of the
  * shapes is the body and which is a detail sitting on it.
  *
- * The rule: resolve every fill to a representative colour (a gradient becomes
+ * The rule: resolve every fill to a representative color (a gradient becomes
  * the average of its stops), then anything light enough to read as paper
  * becomes a knockout and everything else becomes the body. That reproduces the
  * knockout convention the rest of the library already uses, so a Filled file
  * icon tints exactly like a Filled system icon.
  *
  * What this is NOT: an Outline derivation. These exports carry no interior
- * line work — the detail exists only as filled shapes against a coloured
+ * line work — the detail exists only as filled shapes against a colored
  * ground — so stripping fills leaves nothing but the page silhouette. Every
  * icon would collapse to the same rounded rectangle. Outline has to be drawn
  * or sourced; it cannot be recovered from here.
@@ -61,7 +61,7 @@ function gradientAverage(svg, id) {
 /**
  * Keep the parts of <defs> that geometry still points at.
  *
- * Gradients die with the colour, but clipPaths and masks are structural — the
+ * Gradients die with the color, but clipPaths and masks are structural — the
  * body references them by id, and a reference into a block that no longer
  * exists is not a no-op: the element either vanishes or silently renders
  * unclipped, depending on the browser. Fourteen file icons hit exactly that.

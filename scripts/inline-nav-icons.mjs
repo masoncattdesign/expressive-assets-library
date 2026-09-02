@@ -33,14 +33,14 @@ const PICKS = [
   ['illustrations',             'system.image',        'filled',  'A picture'],
   ['illustrations:oobe',        'system.rocket',       'outline', 'First run'],
   ['illustrations:m365',        'system.briefcase',    'outline', 'Work'],
-  ['illustrations:product',     'system.image',        'outline', 'A picture, one level down'],
+  ['illustrations:device',      'system.phone-desktop', 'outline', 'Devices, which is all this collection is'],
 ];
 
 const manifest = JSON.parse(await readFile(join(ROOT, 'manifest.json'), 'utf8'));
 const byId = new Map(manifest.assets.map((a) => [a.id, a]));
 
 /** The inner markup of a 24px drawing, with its own fills dropped so the nav's
- *  `fill="currentColor"` on the wrapper is what decides the colour. */
+ *  `fill="currentColor"` on the wrapper is what decides the color. */
 async function inner(assetId, theme) {
   const asset = byId.get(assetId);
   if (!asset) throw new Error(`${assetId} is not in the manifest`);

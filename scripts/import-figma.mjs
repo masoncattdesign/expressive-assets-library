@@ -300,7 +300,7 @@ async function importAssets() {
 
     const themes = Object.keys(byTheme);
     if (!themes.length) {
-      skipped.push({ name: set.name, scope, why: 'no recognisable theme variants' });
+      skipped.push({ name: set.name, scope, why: 'no recognizable theme variants' });
       continue;
     }
 
@@ -413,7 +413,7 @@ async function importAssets() {
 
     const notes = [];
     if (asset.retired) notes.push('Marked retired in Figma. Set status to deprecated and add replacedBy once a replacement is agreed.');
-    notes.push('Imported from Figma. Colours are baked in, so the accent picker is off until the artwork is tokenised.');
+    notes.push('Imported from Figma. Colors are baked in, so the accent picker is off until the artwork is tokenized.');
 
     const meta = {
       id: asset.id,
@@ -426,7 +426,7 @@ async function importAssets() {
       themes: Object.keys(variants),
       sizes: asset.sizes,
       colors: extractColors(sample),
-      // Figma renders colours literally — none of the --ea-primary or
+      // Figma renders colors literally — none of the --ea-primary or
       // currentColor hooks the generated set uses. The browser detects this at
       // runtime anyway; saying it here keeps the data honest.
       recolorable: false,
@@ -590,7 +590,7 @@ async function runPlan() {
           sizes: asset.sizes,
           colors: extractColors(sample),
           // isTintable() asks each theme's source for tint hooks. Standard is
-          // baked brand colour and has none, so opening this up costs nothing
+          // baked brand color and has none, so opening this up costs nothing
           // there while letting the currentColor themes take an accent.
           recolorable: Object.keys(variants).some((t) => t !== 'standard'),
           variants,
@@ -598,8 +598,8 @@ async function runPlan() {
           version: '1.0.0',
           updated: today,
           notes: Object.keys(variants).some((t) => t !== 'standard')
-            ? 'Imported from Figma. Standard keeps its baked brand colours and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.'
-            : 'Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.',
+            ? 'Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.'
+            : 'Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.',
         },
         null,
         2

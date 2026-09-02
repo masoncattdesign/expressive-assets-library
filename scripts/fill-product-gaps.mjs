@@ -76,7 +76,7 @@ function solids(svg) {
     .filter((t) => !/fill="none"/.test(t));
 }
 
-/** A shape's colour, resolving a gradient to the mean of its stops. Enough to
+/** A shape's color, resolving a gradient to the mean of its stops. Enough to
  *  ask "is this the body or a mark sitting on it", which is all Filled needs. */
 function colorOf(svg, tag) {
   const f = tag.match(/fill="([^"]+)"/);

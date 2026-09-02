@@ -11,12 +11,12 @@
  *
  * Illustrations are not icons, and this treats them differently:
  *
- *  - ONE theme. They are full-colour scenes, not glyphs with monochrome
+ *  - ONE theme. They are full-color scenes, not glyphs with monochrome
  *    reductions. `themes: ["standard"]` and nothing else. The browser already
- *    greys out styles an asset was not authored for.
- *  - NOT recolorable. The colour is the artwork. The accent picker is disabled
+ *    grays out styles an asset was not authored for.
+ *  - NOT recolorable. The color is the artwork. The accent picker is disabled
  *    and says why, rather than pretending to work.
- *  - Colours are read out of the file's own gradients, not invented.
+ *  - Colors are read out of the file's own gradients, not invented.
  *
  * It also reports embedded rasters. An SVG with a bitmap inside does not scale
  * like vector artwork, and that is worth knowing before someone puts it on a
@@ -162,7 +162,7 @@ async function main() {
       themes: ['standard'],
       sizes: sizesFor(item.authored),
       colors: extractColors(item.svg),
-      // The colour IS the artwork. Nothing here has tint hooks, and the browser
+      // The color IS the artwork. Nothing here has tint hooks, and the browser
       // reads that back at runtime anyway — this just states it in the data.
       recolorable: false,
       variants: { standard: { any: rel } },

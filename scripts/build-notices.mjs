@@ -4,7 +4,7 @@
  *
  * Derived rather than hand-written on purpose. A notices file maintained by
  * hand goes stale the first time someone imports a set and forgets — and a
- * stale attribution file is a licence problem, not a documentation one. This
+ * stale attribution file is a license problem, not a documentation one. This
  * reads what is actually in assets/, so it cannot disagree with reality.
  *
  * Run: npm run notices  (and it is part of `npm run build`)
@@ -20,7 +20,7 @@ async function main() {
   const assets = await collectAssets();
   const vendored = assets.filter((a) => a.source);
 
-  /* Group by project, keeping the licence and copyright, and noting which
+  /* Group by project, keeping the license and copyright, and noting which
      collections it turns up in — that is what an auditor actually needs. */
   const byProject = new Map();
   for (const asset of vendored) {
@@ -76,7 +76,7 @@ async function main() {
 
   lines.push('---');
   lines.push('');
-  lines.push('Each asset carries its own `source` block naming the project, licence,');
+  lines.push('Each asset carries its own `source` block naming the project, license,');
   lines.push('copyright and a link to the original file. The browser shows it in the detail');
   lines.push('panel, so the attribution is in front of whoever is about to copy the artwork.');
   lines.push('');

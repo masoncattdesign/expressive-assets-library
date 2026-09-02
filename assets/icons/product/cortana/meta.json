@@ -57,7 +57,7 @@
   },
   "version": "1.0.0",
   "updated": "2026-08-28",
-  "notes": "Imported from Figma. Colours are baked in, so the accent picker stays off until the artwork is tokenised.",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
   "generated": [
     "filled:16",
     "filled:20",

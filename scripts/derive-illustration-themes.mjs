@@ -9,11 +9,11 @@
  * contour is real line work — stroking them produces a drawing rather than a
  * silhouette.
  *
- * OUTLINE — stroke every shape, and fill it with the knockout colour rather
+ * OUTLINE — stroke every shape, and fill it with the knockout color rather
  * than leaving it transparent. The opaque fill is the part that matters: solid
  * artwork occludes what sits behind it for free, and a naive stroke pass throws
  * that away, so you see the hidden half of every overlapping shape. Filling in
- * the page colour buys the occlusion back.
+ * the page color buys the occlusion back.
  *
  * FILLED — everything is the body except near-white detail, which knocks out.
  * A luminance split placed lower (the file-icon rule) reads more interior
@@ -22,7 +22,7 @@
  * detail, so the threshold sits high deliberately.
  *
  * The limit, stated plainly: one threshold cannot serve both roles, because
- * this palette uses the same colour for both. #CCD5F3 is the checkmark inside
+ * this palette uses the same color for both. #CCD5F3 is the checkmark inside
  * the shield AND the whole body of the bell. Any global rule flattens one or
  * drops the other. Assets where that costs something are flagged REVIEW.
  *
@@ -41,7 +41,7 @@ const DRY = args.includes('--dry-run');
 const FORCE = args.includes('--force');
 
 const KNOCKOUT = 'var(--ea-knockout, #fff)';
-/** Above this a colour reads as paper rather than as part of the drawing. */
+/** Above this a color reads as paper rather than as part of the drawing. */
 const PAPER = 0.92;
 /** At a 160 viewBox this lands near 2px on a 96px card — heavy enough to hold
  *  together when the illustration is scaled down, light enough not to fill in. */
@@ -117,7 +117,7 @@ async function main() {
     meta.themes = [...new Set([...meta.themes, 'outline', 'filled'])].sort();
     meta.variants = { ...meta.variants, ...added };
     meta.notes =
-      'Standard is the shipped Figma artwork. Outline and Filled are derived here — Outline strokes each shape and fills it with the knockout colour so overlapping shapes still occlude; Filled treats everything but near-white detail as the body. Both are drawn in currentColor and take an accent.';
+      'Standard is the shipped Figma artwork. Outline and Filled are derived here — Outline strokes each shape and fills it with the knockout color so overlapping shapes still occlude; Filled treats everything but near-white detail as the body. Both are drawn in currentColor and take an accent.';
     meta.updated = new Date().toISOString().slice(0, 10);
     if (!DRY) await writeFile(join(ROOT, rel), JSON.stringify(meta, null, 2) + '\n', 'utf8');
     assets++;

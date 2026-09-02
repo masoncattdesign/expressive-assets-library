@@ -137,7 +137,7 @@ function clearOldLayout(board) {
 
    Component sets accept manually positioned variants, so the grid is
    computed instead: three columns of styles, six rows of sizes, every cell
-   the same square with the artwork centred in it. Uniform cells are what
+   the same square with the artwork centered in it. Uniform cells are what
    make the labels alignable, and centring in a constant square is also the
    honest way to show a 16 next to a 48 — you see the size difference against
    something fixed. */

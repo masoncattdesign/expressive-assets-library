@@ -1,8 +1,8 @@
 /**
- * Finish the third-party import: attribution, recolour, status, notes.
+ * Finish the third-party import: attribution, recolor, status, notes.
  *
  * The importer writes the same meta for every icon collection, which for brand
- * marks is wrong in three ways. They are not ours to recolour. They carry a
+ * marks is wrong in three ways. They are not ours to recolor. They carry a
  * trademark obligation that has to travel with the file rather than sit in a
  * README. And the boilerplate note describes an Outline style this collection
  * does not have.
@@ -44,9 +44,9 @@ for (const entry of plan.assets) {
   meta.notes =
     `${entry.name} brand mark, imported from the 3P Icons page at 32px, the only size the file holds. ` +
     (styles.length > 1
-      ? 'Standard is the colour mark and Filled the monochrome one, both as the owner draws them. '
+      ? 'Standard is the color mark and Filled the monochrome one, both as the owner draws them. '
       : `Only one mark exists upstream (${styles[0]}), so this asset has no counterpart style. `) +
-    'Not recolourable: altering a third-party mark is what their brand guidelines forbid.';
+    'Not recolorable: altering a third-party mark is what their brand guidelines forbid.';
 
   await writeFile(path, JSON.stringify(meta, null, 2) + '\n', 'utf8');
   n++;

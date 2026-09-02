@@ -53,9 +53,9 @@
     cannot support it, and nothing would be able to verify it.</p>
     <p>Product icons are genuinely assembled: 90% have three or more shapes, and they carry
     gradients, masks and groups. They are also the set where anatomy pays off twice. They sit
-    inside the roughly 210 full-colour assets Customizer can actually work on, and they map to
+    inside the roughly 210 full-color assets Customizer can actually work on, and they map to
     Bridge's <code>kind: app</code>. System icons would have served neither: Customizer excludes
-    them, and they already recolour through <code>currentColor</code>.</p>
+    them, and they already recolor through <code>currentColor</code>.</p>
   </section>
 
   <section>
@@ -760,10 +760,10 @@
     own. They do not: they belong to the plate with the bodies beneath them, and the ramp confirms
     it, all four shapes inside one narrow band from 0.322 to 0.561. Changing the plate's hue has to
     move all four or the figures come apart. Whether shapes touch is irrelevant; whether they
-    recolour together is the whole test.</p>
+    recolor together is the whole test.</p>
     <div class="parts">
       <div class="part p1"><span class="k">plate</span><h3>The foundation</h3>
-        <p>What everything else sits on and takes its colour from. Word's document, Teams' rounded square, Microsoft's four tiles. Usually several shapes deep, and the part that carries the tonal ramp.</p></div>
+        <p>What everything else sits on and takes its color from. Word's document, Teams' rounded square, Microsoft's four tiles. Usually several shapes deep, and the part that carries the tonal ramp.</p></div>
       <div class="part p2"><span class="k">glyph</span><h3>The mark itself</h3>
         <p>The letterform or symbol that identifies the product. The W, the X, the Copilot ribbon. What survives if you throw everything else away.</p></div>
       <div class="part p3"><span class="k">badge</span><h3>A secondary mark</h3>
@@ -799,7 +799,7 @@
   <section>
     <h2>The second layer, and why it is smaller than it looks</h2>
     <p>A plate is not one shape. Word's is built from several at different depths, and a
-    recolour that flattens them loses the form. So the obvious move is a second layer of anatomy
+    recolor that flattens them loses the form. So the obvious move is a second layer of anatomy
     naming those depths. The measurement argues against it.</p>
     <p>Here is every painted shape in Word, by luminance:</p>
     <pre>Word        0.097  0.269  0.285  0.499  0.571  0.589  0.730  0.789  1.000
@@ -820,15 +820,15 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     of individual shape.</p>
     <h3 style="margin-top:8px">What luminance cannot tell you</h3>
     <p>Only one thing, but it matters. Luminance says a shape is dark. It does not say <em>why</em>.
-    Word's 0.097 shape either wants to become dark green under a green recolour, or it wants to
-    stay near-neutral because it is a shadow rather than a colour. That is a judgement. So the
+    Word's 0.097 shape either wants to become dark green under a green recolor, or it wants to
+    stay near-neutral because it is a shadow rather than a color. That is a judgement. So the
     second layer records exceptions, not depths:</p>
     <div class="parts">
       <div class="part p1"><span class="k">ramp</span><h3>The default</h3>
         <p>Follows its part's hue, at its measured position in the ramp. Never annotated, because it is what happens when nothing is said.</p></div>
       <div class="part p2"><span class="k">shade</span><h3>Stays neutral</h3>
-        <p>Shadows, folds and contact shadows that read as light rather than as colour. Follows lightness, not hue.</p></div>
-      <div class="part p3"><span class="k">hold</span><h3>Keeps its literal colour</h3>
+        <p>Shadows, folds and contact shadows that read as light rather than as color. Follows lightness, not hue.</p></div>
+      <div class="part p3"><span class="k">hold</span><h3>Keeps its literal color</h3>
         <p>Brand-locked and semantic shapes. The M365 logo tiles, a warning orange. Already proven necessary by the illustration work.</p></div>
     </div>
     <p>Because <code>ramp</code> is the default, most shapes carry no tone annotation at all. The
@@ -897,7 +897,7 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     <p>Right now its pipelines infer structure by bucketing shapes on luminance, because that is
     the only signal available. That inference is what makes Shield lose its checkmark and Data
     flatten into a blob: one threshold has to serve both "this light shape is a detail" and "this
-    light shape is the subject", and it cannot. With parts declared, "recolour the plate, leave
+    light shape is the subject", and it cannot. With parts declared, "recolor the plate, leave
     the glyph, drop the accent at small sizes" becomes an instruction rather than a guess.</p>
     <p>For Bridge, the payoff is that <code>anatomy</code> is already its vocabulary. Its icon
     schema carries an anatomy block of named parts today. Matching that shape now is cheaper than

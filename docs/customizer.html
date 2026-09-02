@@ -69,7 +69,7 @@
 .preview-pane.dark-bg{background:#1a1a1f;--ea-knockout:#1a1a1f}
 .preview-pane.light-bg{background:#EFEFED;--ea-knockout:#EFEFED}
 .preview-grid-wrap{display:flex;flex-direction:column;gap:0;width:100%;max-width:680px;padding:32px}
-/* These controls sit on the canvas now, so they take their colours from the
+/* These controls sit on the canvas now, so they take their colors from the
    canvas rather than from the toolbar they came out of. Both grounds get an
    explicit pair: a control tuned for the light chrome disappears on #1a1a1f. */
 .canvas-tools{margin-left:auto;display:flex;align-items:center;gap:8px}
@@ -764,7 +764,7 @@ function applyDichromic(svgStr, shadow, highlight, lightColor, angle, intensity,
       if(!hex||hex==='none'||hex.startsWith('url'))return 0.5;
       try{const r=parseInt(hex.slice(1,3),16)/255,g=parseInt(hex.slice(3,5),16)/255,b=parseInt(hex.slice(5,7),16)/255;return 0.2126*r+0.7152*g+0.0722*b;}catch(e){return 0.5;}
     };
-    const colorName=(c)=>{const m={white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',grey:'#808080'};return m[c?.toLowerCase()?.trim()]||c;};
+    const colorName=(c)=>{const m={white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',gray:'#808080'};return m[c?.toLowerCase()?.trim()]||c;};
     const gradLumCache={};
     defs.querySelectorAll('linearGradient,radialGradient').forEach(grad=>{
       const stops=Array.from(grad.querySelectorAll('stop'));
@@ -928,7 +928,7 @@ function applyTinted(svgStr, seedHex, opacity=85, brightness=100, contrast=110, 
     filt.setAttribute('id', filtId);
     filt.setAttribute('x','0%'); filt.setAttribute('y','0%');
     filt.setAttribute('width','100%'); filt.setAttribute('height','100%');
-    // Desaturate to greyscale first, then apply brightness/contrast
+    // Desaturate to grayscale first, then apply brightness/contrast
     const sat = saturation / 100;
     const bri = brightness / 100;
     const con = contrast / 100;
@@ -1316,7 +1316,7 @@ function applyOutline(svgStr, seedHex, strokeW, bgMode='dark', duo=false, perSha
     // capture each shape's representative hue BEFORE we strip gradients.
     const shapeHueMap = new WeakMap();
     if (perShape) {
-      const colorName = (c) => ({white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',grey:'#808080'}[c?.toLowerCase()?.trim()] || c);
+      const colorName = (c) => ({white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',gray:'#808080'}[c?.toLowerCase()?.trim()] || c);
       // For each gradient, pick the most-saturated stop in the middle 60% of
       // its offset range as the "representative" hex. Mid-range stops carry the
       // gradient's identity; saturated picks land on the most vivid color.
@@ -1679,7 +1679,7 @@ function generateFlatPalette(seedHex, satMult=1.3, duo=false, bgMode='dark', sec
   };
 }
 
-// Get dominant hue from an SVG string — weighted median, ignores near-grey and outlier colors
+// Get dominant hue from an SVG string — weighted median, ignores near-gray and outlier colors
 function getDominantHue(svgStr) {
   try {
     const stops=[...svgStr.matchAll(/stop-color="(#[0-9a-fA-F]{6})"/g)].map(m=>m[1]);
@@ -1690,7 +1690,7 @@ function getDominantHue(svgStr) {
     const hslList=all.map(hex=>{
       const[h,s,l]=hexToHsl(hex);
       return{h,s,l};
-    }).filter(x=>x.s>20); // skip near-greys
+    }).filter(x=>x.s>20); // skip near-grays
     if(!hslList.length)return '#0078D4';
     // Find the hue cluster with most weight (handles multi-hue icons like Copilot)
     // Sort by hue and find the largest cluster within 60° arc
@@ -1817,7 +1817,7 @@ function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0){
       } catch(e){ return null; }
     };
     const colorName = (c) => {
-      const m = {white:'#ffffff', black:'#000000', red:'#ff0000', green:'#008000', blue:'#0000ff', gray:'#808080', grey:'#808080'};
+      const m = {white:'#ffffff', black:'#000000', red:'#ff0000', green:'#008000', blue:'#0000ff', gray:'#808080', gray:'#808080'};
       return m[c?.toLowerCase()?.trim()] || c;
     };
 
@@ -1913,7 +1913,7 @@ function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0){
     // icon's distribution — so a mid-luminance shape (like Alarms' arch
     // outer at lum 0.41) would land in fillD only if it happened to be the
     // darkest non-black shape in its icon. But its actual color is medium-
-    // dark grey, and the reference treats it as structural dark.
+    // dark gray, and the reference treats it as structural dark.
     //
     // Absolute thresholds tied to source luminance values:
     //   lum < 0.45  → fillD  (structural dark — Alarms arch outer @ 0.41,
@@ -2069,7 +2069,7 @@ function applyFlat(svgStr, pal, gradients, perShape=false, duo=false, texture='n
     if(!svg)return svgStr;
     let vw=80,vh=80;const vb=svg.getAttribute('viewBox');if(vb){const p=vb.trim().split(/[\s,]+/).map(Number);if(p.length===4){vw=p[2];vh=p[3];}}
     const getLum=(hex)=>{if(!hex||hex==='none'||hex.startsWith('url'))return null;try{const r=parseInt(hex.slice(1,3),16)/255,g=parseInt(hex.slice(3,5),16)/255,b=parseInt(hex.slice(5,7),16)/255;return 0.2126*r+0.7152*g+0.0722*b;}catch(e){return null;}};
-    const colorName=(c)=>{const m={white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',grey:'#808080'};return m[c?.toLowerCase()?.trim()]||c;};
+    const colorName=(c)=>{const m={white:'#ffffff',black:'#000000',red:'#ff0000',green:'#008000',blue:'#0000ff',gray:'#808080',gray:'#808080'};return m[c?.toLowerCase()?.trim()]||c;};
     const effectiveFill=(el)=>{let cur=el;while(cur&&cur!==svg.parentNode){const sty=(cur.getAttribute&&cur.getAttribute('style'))||'';const m=sty.match(/fill\s*:\s*([^;]+)/i);if(m)return m[1].trim();const f=cur.getAttribute&&cur.getAttribute('fill');if(f!=null)return f;cur=cur.parentElement;}return'black';};
     const allShapes=Array.from(svg.querySelectorAll('path,rect,circle,ellipse,polygon,polyline')).filter(el=>{let node=el.parentElement;while(node&&node!==svg){if(node.tagName==='mask'||node.tagName==='defs')return false;node=node.parentElement;}return true;});
     // Capture each shape's bounding box (rough) for quadrant detection later.
@@ -2117,7 +2117,7 @@ function applyFlat(svgStr, pal, gradients, perShape=false, duo=false, texture='n
     });
     const resolveLum=(fill)=>{if(!fill||fill==='none')return null;if(!fill.startsWith('url')){const hex=colorName(fill);return getLum(hex);}const id=fill.replace(/url\(#([^)]+)\)/,'$1');return id in gradLumCache?gradLumCache[id]:null;};
     // Per-shape hue map: for rainbow icons (Copilot) in Original mode, we want
-    // each shape coloured from its OWN dominant hue rather than the icon-wide
+    // each shape colored from its OWN dominant hue rather than the icon-wide
     // seed. Capture each shape's representative hex BEFORE we strip gradients.
     // For each gradient: pick most-saturated stop in middle 60% of offset range.
     const shapeHueMap = new WeakMap();
@@ -2199,7 +2199,7 @@ function applyFlat(svgStr, pal, gradients, perShape=false, duo=false, texture='n
     //
     // IMPORTANT: the contrast rule only fires when the previous shape has a
     // DIFFERENT source signature. If two consecutive shapes were the same color
-    // in the source (e.g. Store's grey grid squares, repeated identical paths),
+    // in the source (e.g. Store's gray grid squares, repeated identical paths),
     // they were drawn as a deliberate set and should keep matching tones.
     // Locked shapes pass through unchanged even if they collide; their meaning
     // outranks the contrast rule.
@@ -3135,18 +3135,18 @@ function updateM365Toggle(){
       sample icons stay and the library row simply never appears.
 
    2. Only the STANDARD theme is offered. Outline and Filled are drawn in
-      currentColor, and this pipeline works by reading source colours and
+      currentColor, and this pipeline works by reading source colors and
       re-filling by luminance; there is nothing there to read. Those variants
-      already recolour in Gallery through the accent picker, which is the
+      already recolor in Gallery through the accent picker, which is the
       right tool for them.
    ====================================================================== */
 
 const LIB = { assets: [], byId: new Map(), available: false, chosen: [] };
 
 /* Imported artwork carries its tint hooks inline as `var(--ea-role, #hex)`.
-   Every colour reader here handles #hex and rgb() only, so the fallback is
+   Every color reader here handles #hex and rgb() only, so the fallback is
    resolved on the way in. Without this the M365 illustrations — the one set
-   authored to be recoloured — would be the set that fails. */
+   authored to be recolored — would be the set that fails. */
 function resolveColorVars(svgStr){
   return svgStr.replace(/var\(\s*--[a-z0-9-]+\s*,\s*(#[0-9a-f]{3,8})\s*\)/gi, '$1');
 }
@@ -3171,7 +3171,7 @@ async function loadLibrary(){
     search.placeholder = `Search ${LIB.assets.length.toLocaleString()} assets…`;
     search.addEventListener('input', () => libSearch(search.value));
     note.hidden = false;
-    note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source colour for these pipelines to read — recolour those in Gallery instead.';
+    note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source color for these pipelines to read — recolor those in Gallery instead.';
   }else{
     note.hidden = false;
     note.textContent = 'Library not loaded. Open this page from the published site (or any local server) to pull assets from Expressive Assets; opened straight from disk, browsers block the fetch and only the sample icons above are available.';
@@ -3249,7 +3249,7 @@ renderIcons();
    ----------------------------------------------------------------------
    The canvas used to be two fixed rows of built-in artwork: Microsoft 365
    above, Windows apps below, with a toggle for whether the M365 row took the
-   recolour. That split was about where the sample art came from, which is not
+   recolor. That split was about where the sample art came from, which is not
    a distinction anyone tuning a style cares about.
 
    Now it is ONE set of twelve, pulled from the library like everything else,
@@ -3440,7 +3440,7 @@ async function loadLibrary() {
   search.placeholder = 'Search ' + LIB.assets.length.toLocaleString() + ' assets by name';
   search.addEventListener('input', () => libSearch(search.value));
   note.hidden = false;
-  note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source colour for these pipelines to read. Recolour those in Gallery instead.';
+  note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source color for these pipelines to read. Recolor those in Gallery instead.';
 
   // Gallery deep-links here as customizer.html?asset=<id>, which opens the set
   // on what you clicked rather than on the default twelve.

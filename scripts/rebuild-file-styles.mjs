@@ -15,7 +15,7 @@
  *             and the marks knock out of it, which is a solid plate carrying
  *             cut-out detail — the convention the system icons already use.
  *
- * Inverting the RULE rather than swapping colours in the outline files matters:
+ * Inverting the RULE rather than swapping colors in the outline files matters:
  * a swap would depend on shape order, and the first path being the silhouette
  * is a habit of this exporter rather than a guarantee. Classifying each shape
  * against the same luminance threshold gives the same answer whatever order
@@ -91,10 +91,10 @@ const TILE = 0.06;
 /**
  * Filled: a solid plate with real holes cut through it.
  *
- * The first attempt painted knockouts as an opaque colour, which is not a
+ * The first attempt painted knockouts as an opaque color, which is not a
  * knockout at all. Two things gave it away. A shape carrying fill-opacity let
- * the ink beneath bleed through, so the PowerPoint tile came out grey instead
- * of clear. And on any surface that was not exactly the knockout colour, the
+ * the ink beneath bleed through, so the PowerPoint tile came out gray instead
+ * of clear. And on any surface that was not exactly the knockout color, the
  * holes were visible as pale shapes rather than as background.
  *
  * So the holes are a mask now. Every shape is painted currentColor inside a
@@ -132,7 +132,7 @@ function deriveFilled(svg, name, size) {
     if (g) rgb = gradientAverage(svg, g[1]);
     const isBody = !rgb || luminance(rgb) > PAPER;
 
-    // Opacity is what turned a knockout grey. Strip every trace of it: the
+    // Opacity is what turned a knockout gray. Strip every trace of it: the
     // mask decides what is visible now, so a shape is either fully painted or
     // fully absent.
     const bare = tag.replace(/\s(fill|fill-opacity|opacity|stroke[a-z-]*)="[^"]*"/g, '');

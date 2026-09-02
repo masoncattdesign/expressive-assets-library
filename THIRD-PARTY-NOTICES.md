@@ -265,6 +265,6 @@ Used under **trademark of the named holder, reproduced for interface use and not
 
 ---
 
-Each asset carries its own `source` block naming the project, licence,
+Each asset carries its own `source` block naming the project, license,
 copyright and a link to the original file. The browser shows it in the detail
 panel, so the attribution is in front of whoever is about to copy the artwork.
