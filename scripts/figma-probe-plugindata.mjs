@@ -23,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const NS = 'expressiveassets';
 const TOKEN = process.env.FIGMA_TOKEN;
+const DEPTH = Number(process.env.DEPTH || 6);
 
 if (!TOKEN) {
   console.error('Set FIGMA_TOKEN in your environment first. Never pass it as an argument.');
@@ -86,7 +87,7 @@ if (shallow.ok) {
 /* 3 — the actual question ------------------------------------------- */
 step(3, 'Node readable with plugin_data=shared');
 const withData = await api(
-  `/files/${fileKey}/nodes?ids=${encodeURIComponent(nodeId)}&plugin_data=shared&depth=3`
+  `/files/${fileKey}/nodes?ids=${encodeURIComponent(nodeId)}&plugin_data=shared&depth=${DEPTH}`
 );
 if (!withData.ok) {
   console.log(`${withData.status} ${withData.statusText}`);
@@ -102,32 +103,56 @@ if (!root) {
   process.exit(2);
 }
 
-let found = null;
+/* Finding ANY stamp is not the question. A component set carries only the asset
+   id; the thing the pull actually needs is the per-variant hash, which lives one
+   level further down. Stopping at the first node with data would report success
+   without having tested that. */
 let scanned = 0;
+let withAny = 0;
+let carrier = null;
+const keysSeen = new Set();
+
 (function walk(n) {
-  if (found) return;
   scanned++;
   const shared = n.sharedPluginData && n.sharedPluginData[NS];
-  if (shared && Object.keys(shared).length) { found = { node: n, shared }; return; }
+  if (shared) {
+    const keys = Object.keys(shared);
+    if (keys.length) {
+      withAny++;
+      keys.forEach((k) => keysSeen.add(k));
+      if (!carrier && shared.hash) carrier = { node: n, shared };
+    }
+  }
   (n.children || []).forEach(walk);
 })(root);
 
-console.log(`\nScanned ${scanned} nodes under "${root.name}".\n`);
+console.log(`\nScanned ${scanned} nodes under "${root.name}".`);
+console.log(`${withAny} carry data under "${NS}" — keys seen: ${[...keysSeen].join(', ') || 'none'}\n`);
 
-if (!found) {
+if (!withAny) {
   console.log('✗ Nothing under the "' + NS + '" namespace came back.');
-  console.log('  The call succeeded, so this is not a permissions problem. Either');
-  console.log('  the plugin has not run on this node since it started stamping,');
-  console.log('  or depth=3 did not reach the variants. Re-run the plugin, then');
-  console.log('  raise depth, before concluding the design is wrong.');
+  console.log('  The call succeeded, so this is not permissions. Either the plugin');
+  console.log('  has not run since it started stamping, or the depth did not reach');
+  console.log('  far enough. Re-run the plugin, then raise depth, before concluding');
+  console.log('  the design is wrong.');
   process.exit(3);
 }
 
-console.log('✓ REST returns the plugin data. The round trip is buildable.\n');
-console.log(`  on: ${found.node.name} (${found.node.id}, ${found.node.type})`);
-for (const [k, v] of Object.entries(found.shared)) {
+if (!carrier) {
+  console.log('~ Plugin data comes back, but no node carrying a hash was reached.');
+  console.log('  The asset id sits on the component set and the hash sits on each');
+  console.log('  variant inside it, so this is almost certainly a depth limit and');
+  console.log('  not a missing stamp. Raise depth and run again — the pull needs');
+  console.log('  the hash specifically, since that is what tells a cell nobody');
+  console.log('  touched from one somebody redrew.');
+  process.exit(3);
+}
+
+console.log('✓ REST returns the per-variant stamp. The round trip is buildable.\n');
+console.log(`  on: ${carrier.node.name} (${carrier.node.id}, ${carrier.node.type})`);
+for (const [k, v] of Object.entries(carrier.shared)) {
   console.log(`    ${NS}:${k} = ${String(v).slice(0, 60)}`);
 }
-console.log('\nWhich means a pull can compare the stored hash against the drawing');
-console.log('the library last wrote, and tell a cell nobody touched from one');
-console.log('somebody redrew, without comparing any artwork.');
+console.log('\nWhich means a pull can compare that hash against the drawing the');
+console.log('library last wrote, and tell a cell nobody touched from one somebody');
+console.log('redrew, without comparing any artwork.');
