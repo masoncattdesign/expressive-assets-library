@@ -464,3 +464,91 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
   font-family: var(--mono); font-size: 11.5px; color: var(--ink-2);
   border: 1px solid var(--rule); border-radius: var(--pill); padding: 4px 12px;
 }
+
+/* --- The work hub ----------------------------------------------------
+   work.html is a different shape from the other documents: it is a set of
+   cards rather than a reading column, because the point is to see everything
+   at once and pick one. It still uses the same tokens, so it reads as part of
+   the same set rather than a landing page bolted on.
+
+   Each card carries a drawn thumbnail rather than a screenshot. A screenshot
+   goes stale the day the tool changes and has to be recaptured in two themes;
+   a small drawing built from the same tokens follows the theme for free and
+   only lies if the project itself changes shape. */
+
+/* Fixed tracks rather than auto-fit. Auto-fit stretches a lone card across
+   the full row, so the sections with one project in them read as a banner
+   while the three-card sections read as cards. Same track everywhere means a
+   card is the same size whatever band it is in, and a short band just leaves
+   the rest of the row empty, which is the honest picture. */
+.hub { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .hub { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .hub { grid-template-columns: 1fr; } }
+.hub-card {
+  display: flex; flex-direction: column; gap: 0; text-decoration: none;
+  border: 1px solid var(--rule); border-radius: 14px; background: var(--surface);
+  overflow: hidden; transition: border-color .12s, box-shadow .12s, transform .12s;
+}
+a.hub-card:hover { border-color: var(--accent-ring); box-shadow: var(--shadow); transform: translateY(-1px); }
+a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hub-card.idle { background: var(--paper); }
+
+.hub-thumb {
+  height: 116px; background: var(--sunk); border-bottom: 1px solid var(--rule);
+  display: grid; place-items: center; padding: 14px; overflow: hidden;
+}
+.hub-thumb svg { display: block; width: 100%; height: 100%; min-width: 0; }
+.hub-body { padding: 15px 17px 18px; display: flex; flex-direction: column; gap: 7px; }
+.hub-head { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.hub-head strong { font-family: var(--display); font-size: 15.5px; color: var(--ink); }
+.hub-body p { font-size: 13.8px; line-height: 1.52; color: var(--ink-2); margin: 0; max-width: none; }
+.hub-where {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-3); margin-top: 2px;
+}
+
+/* Status is deliberately one word. Six projects with a sentence of status each
+   is a page nobody scans, and the sentence belongs in the update anyway. */
+.st {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em;
+  text-transform: uppercase; font-weight: 500; padding: 3px 8px;
+  border-radius: 20px; white-space: nowrap; flex: none;
+}
+.st-live   { background: var(--p-accent-bg);    color: var(--p-accent); }
+.st-build  { background: var(--p-glyph-bg);     color: var(--p-glyph); }
+.st-next   { background: var(--p-container-bg); color: var(--p-container); }
+.st-figma  { background: var(--p-badge-bg);     color: var(--p-badge); }
+.st-idle   { background: var(--rule-soft);      color: var(--ink-3); }
+
+.band {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  margin-bottom: -4px;
+}
+.band h2 { flex: none; }
+.band .band-n { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+
+/* --- Updates ---------------------------------------------------------
+   Grouped by date, newest first, and written to be read by someone who was
+   not in the room. The left rail carries the date so a scan down the page is
+   a scan down time rather than down headings. */
+
+.log { display: flex; flex-direction: column; gap: 0; }
+.entry {
+  display: grid; grid-template-columns: 148px 1fr; gap: 26px;
+  padding: 26px 0; border-top: 1px solid var(--rule);
+}
+.entry:first-child { border-top: 0; padding-top: 4px; }
+@media (max-width: 680px) { .entry { grid-template-columns: 1fr; gap: 10px; } }
+.entry-when { display: flex; flex-direction: column; gap: 6px; }
+.entry-date { font-family: var(--mono); font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.entry-tag {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--ink-3); align-self: flex-start;
+}
+.entry-body { display: flex; flex-direction: column; gap: 10px; }
+.entry-body h3 { font-size: 17px; }
+.entry-body p { font-size: 15px; color: var(--ink-2); max-width: 66ch; }
+.entry-body ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 7px; }
+.entry-body li { font-size: 14.5px; color: var(--ink-2); max-width: 64ch; }
+.entry-who { font-size: 13.5px; color: var(--ink-3); }
+.entry-who b { color: var(--ink-2); font-weight: 500; }

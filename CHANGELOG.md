@@ -13,6 +13,18 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- A work page at `docs/work.html` collects every project with its real status
+  and draws how they feed each other, and `docs/updates.html` is the running
+  log to send rather than a screenshot. Six things were reachable only by
+  knowing the right URL, which made the whole body of work look smaller than it
+  is; it also had nowhere to say that the Component Library and the Marketing
+  Compendiums are real work with no manifest, no build and no URL.
+
+- The BentoOS icon personalization prototype is served from the site at
+  `docs/bentos.html` and listed in the page menu beside the Gallery and the
+  Customizer. It is self-contained and does not load `chrome.js`, so it appears
+  in the menu without showing one.
+
 - `npm run naming:report` measures every id against Bridge's own naming rule
   and prices both ways of conforming. `npm run figma:probe` checks whether the
   REST API returns the plugin data the whole round trip depends on.

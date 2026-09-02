@@ -87,15 +87,22 @@
 
   /* --- App menu ------------------------------------------------------- */
 
-  /* Six pages, and until now the only way between them was whichever links a
-     given page happened to carry. One list, in one place on every page, is
-     what makes them feel like one thing. */
+  /* Every page, in one list, in one place. Until this existed the only way
+     between two pages was whichever links one of them happened to carry.
+
+     Ordering is by what someone is here to do: the three tools first, then the
+     documents, with the work page at the head of them because it is the way
+     into everything else. BentoOS is a self-contained prototype and does not
+     load this file, so it appears in the menu but does not show one. */
   var PAGES = [
     { group: 'Tools', items: [
       { href: 'index.html', label: 'Gallery' },
       { href: 'customizer.html', label: 'Customizer' },
+      { href: 'bentos.html', label: 'BentoOS' },
     ] },
     { group: 'Project', items: [
+      { href: 'work.html', label: 'Work' },
+      { href: 'updates.html', label: 'Updates' },
       { href: 'about.html', label: 'About' },
       { href: 'system-map.html', label: 'System Map' },
       { href: 'asset-anatomy.html', label: 'Asset Anatomy' },
