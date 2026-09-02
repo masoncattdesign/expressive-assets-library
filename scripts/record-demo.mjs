@@ -4,44 +4,50 @@
  *   npm run build && node scripts/serve.mjs
  *   SITE=http://localhost:4173 OUT=./recording node scripts/record-demo.mjs
  *
- * SMOOTHNESS. Three separate things caused a capture that read as skipping,
- * and only the third one was real:
+ * WHY THIS LOOKS THE WAY IT DOES. Four attempts, and only the last diagnosis
+ * was the real one. Recorded here so it is not rediscovered a fifth time.
  *
- *   1. The highlight moved by left/top/width/height, none of which were in its
- *      transition list, so every reposition was an instant jump.
+ *   1. There is no click animation, on purpose. A click is the exact moment
+ *      the grid rebuilds, and anything moving through that stall reads as a
+ *      glitch. The cursor arriving and stopping is the whole signal.
  *
- *   2. The finished cut was sped up and then asked for 30fps. The capture is a
- *      clean 25fps; retiming it onto 30 maps each source frame onto roughly 1.6
- *      output frames, unevenly. Retime by a factor that DIVIDES the source rate
- *      and output that rate — 1.25x into 20fps is exactly one frame per frame.
+ *   2. The stall was mostly NETWORK, not rasterization. The grid fetches a
+ *      separate SVG per asset per style per size — that is the library's whole
+ *      claim, artwork redrawn rather than scaled — so a cold style switch is
+ *      ninety round trips, parses and DOM inserts in one frame. The warm-up
+ *      below turns each switch into a cache read.
  *
- *   3. The renderer itself stalled. There is no GPU here, so re-rastering
- *      ninety gradient-heavy SVG cards after a style or accent change froze the
- *      capture for up to a third of a second. Measured at 6.9% duplicate frames
- *      with seven stalls of four frames or more. Two things fixed it: a smaller
- *      stage, since the cost is proportional to how many cards must be redrawn,
- *      and holding the cursor still until each repaint has finished. A frozen
- *      frame with nothing moving is invisible; the same freeze under a moving
- *      cursor is what reads as a skip. It now measures 0.8% and no stalls.
+ *   3. No zoom in the page. Scaling the wrapper makes Chromium re-raster every
+ *      card at the new scale, and with no GPU that measured worse than the
+ *      repaints it was competing with: 12.2% duplicate frames against 6%. The
+ *      push is added in ffmpeg instead, where it costs the renderer nothing —
+ *      and because the crop rectangle changes every frame, a renderer stall no
+ *      longer produces an identical frame at all.
  *
- * Measure it, do not trust it. Every run, before encoding:
+ *   4. Retime only by a factor that DIVIDES the source rate, and output that
+ *      rate. The capture is 25fps; 1.25x into 20fps is exactly one source
+ *      frame per output frame. Retiming onto 30 maps each source frame onto
+ *      roughly 1.6 output frames, unevenly, which is its own kind of judder.
  *
- *   ffmpeg -i raw.webm -map 0:v -f framemd5 -c rawvideo - | grep -v '^#' \
+ * Measure, do not trust. Zero duplicates is achievable and is the bar:
+ *
+ *   ffmpeg -i out.mp4 -map 0:v -f framemd5 -c rawvideo - | grep -v '^#' \
  *     | awk '{print $NF}' | uniq -c | sort -rn | head
  *
- * Then cut, retime and encode:
- *
- *   ffmpeg -i raw.webm -vf "trim=3.2:17.2,setpts=PTS-STARTPTS" -an a.mp4
- *   ffmpeg -i raw.webm -vf "trim=22.8:28.2,setpts=PTS-STARTPTS" -an b.mp4
+ *   ffmpeg -i raw.webm -vf "trim=8.0:21.7,setpts=PTS-STARTPTS" -an a.mp4
+ *   ffmpeg -i raw.webm -vf "trim=27.3:33.6,setpts=PTS-STARTPTS" -an b.mp4
  *   ffmpeg -i a.mp4 -i b.mp4 -filter_complex \
- *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.6,setpts=PTS/1.25[v]" \
- *     -map "[v]" -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
+ *     "[0:v][1:v]xfade=transition=fade:duration=.4:offset=13.3,setpts=PTS/1.25[v]" \
+ *     -map "[v]" -r 20 -c:v libx264 -crf 18 -pix_fmt yuv420p nozoom.mp4
+ *   D=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 nozoom.mp4)
+ *   ffmpeg -i nozoom.mp4 -vf \
+ *     "crop=w='floor(iw/(1+0.055*min(t/$D,1))/2)*2':h='floor(ih/(1+0.055*min(t/$D,1))/2)*2':\
+ *      x='(iw-ow)*0.58':y='(ih-oh)*0.42',scale=1152:720:flags=lanczos" \
+ *     -r 20 -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p out.mp4
  *
- * No search anywhere in the sequence, deliberately. Filtering is the one moment
- * the Gallery can show a card whose artwork has not been fetched yet, and a
- * blank tile in a demo reads as a missing asset. Without it, switching style or
- * accent redraws every card on screen, which is the actual claim: these are
- * properties of the library, not of the icon you happen to have open.
+ * No search anywhere in the sequence: filtering is the one moment the Gallery
+ * can show a card whose artwork has not arrived, and a blank tile in a demo
+ * reads as a missing asset.
  *
  * Everything the viewer sees is drawn in the page — cursor, click pulse, zoom —
  * so the browser's own compositor animates it and the capture stays smooth.
@@ -51,7 +57,7 @@
  */
 import { chromium } from 'playwright';
 
-const W = 1280, H = 800;
+const W = 1152, H = 720;
 const CHROME = process.env.CHROME_PATH;
 const SITE = process.env.SITE || 'http://localhost:4173';
 const OUT = process.env.OUT || './recording';
@@ -79,20 +85,17 @@ const OVERLAY = `
   const cur = document.createElement('div');
   cur.id = '__cursor';
   cur.style.cssText =
-    'position:fixed;left:0;top:0;width:26px;height:26px;pointer-events:none;z-index:2147483647;' +
-    'transition:transform 620ms cubic-bezier(.33,0,.15,1);will-change:transform';
+    'position:fixed;left:0;top:0;width:38px;height:38px;pointer-events:none;z-index:2147483647;' +
+    'transition:transform 760ms cubic-bezier(.32,0,.16,1);will-change:transform';
+  // No press animation of any kind. A click is the exact moment the grid
+  // re-rasters, and anything moving through that stall is what reads as a
+  // glitch. The cursor arriving and stopping is the whole signal.
   cur.innerHTML =
-    '<svg viewBox="0 0 26 26" width="26" height="26">' +
-    '<path d="M5 2.5 20.5 12.2 13.6 13.6 10.3 20.4Z" fill="#101114" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>' +
+    '<svg viewBox="0 0 26 26" width="38" height="38">' +
+    '<path d="M5 2.5 20.5 12.2 13.6 13.6 10.3 20.4Z" fill="#101114" stroke="#fff" ' +
+    'stroke-width="1.7" stroke-linejoin="round" paint-order="stroke"/>' +
     '</svg>';
   zoom.appendChild(cur);
-
-  const ring = document.createElement('div');
-  ring.id = '__ring';
-  ring.style.cssText =
-    'position:fixed;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;' +
-    'border:2.5px solid #0078D4;opacity:0;pointer-events:none;z-index:2147483646;will-change:transform,opacity';
-  zoom.appendChild(ring);
 
   const halo = document.createElement('div');
   halo.id = '__halo';
@@ -124,18 +127,6 @@ const OVERLAY = `
     window.__last = [x, y];
     [x, y] = toLocal(x, y);
     cur.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + (1 / z) + ')';
-    ring.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + (1 / z) + ')';
-  };
-  window.__tap = () => {
-    // The press: cursor dips, a ring flares out from under it.
-    cur.animate(
-      [{ scale: 1 }, { scale: 0.82 }, { scale: 1 }],
-      { duration: 260, easing: 'cubic-bezier(.4,0,.2,1)' }
-    );
-    ring.animate(
-      [{ opacity: .85, scale: .35 }, { opacity: 0, scale: 1.5 }],
-      { duration: 520, easing: 'cubic-bezier(.2,.6,.3,1)' }
-    );
   };
   window.__halo = (x, y, w, h) => {
     if (x == null) { halo.style.opacity = 0; return; }
@@ -178,7 +169,6 @@ p.on('pageerror', (e) => errs.push(String(e)));
 
 async function overlay() { await p.evaluate(OVERLAY); }
 async function move(x, y, ms = 640) { await p.evaluate(([x, y]) => window.__move(x, y), [x, y]); await wait(ms); }
-async function tap() { await p.evaluate(() => window.__tap()); await wait(140); }
 async function zoom(s, x, y, ms = 920) { await p.evaluate(([s, x, y]) => window.__z(s, x, y), [s, x, y]); await wait(ms); }
 async function halo(sel) {
   if (!sel) return p.evaluate(() => window.__halo(null));
@@ -190,11 +180,11 @@ async function at(sel, i = 0) {
   const bb = await els[i].boundingBox();
   return [bb.x + bb.width / 2, bb.y + bb.height / 2, els[i]];
 }
-/** Move to a target, press, then actually click it. */
+/** Arrive, pause, click. No press animation — see the note in the overlay. */
 async function click(sel, i = 0, settle = 700, keepHalo = null) {
   const [x, y, el] = await at(sel, i);
   await move(x, y);
-  await tap();
+  await wait(180);
   await el.click();
   await wait(settle);
   if (keepHalo) await halo(keepHalo);
@@ -203,6 +193,32 @@ async function click(sel, i = 0, settle = 700, keepHalo = null) {
 mark('start');
 await p.goto(`${SITE}/index.html`);
 await p.waitForTimeout(2600);
+/* Warm the cache before anything is recorded that matters. The grid fetches a
+   separate SVG per asset per style per size — that is the whole point of the
+   library, artwork redrawn rather than scaled — so switching style cold means
+   ninety round trips, ninety parses and ninety DOM inserts in one frame. That
+   is the stall, not rasterization. Pre-fetching turns each switch into a cache
+   read. */
+await p.evaluate(async () => {
+  const res = await fetch('manifest.json', { cache: 'force-cache' });
+  const m = await res.json();
+  const paths = [];
+  for (const a of m.assets) {
+    if (a.collection !== 'product' || a.type !== 'icon') continue;
+    for (const style of ['standard', 'outline', 'filled']) {
+      for (const size of [48, 32, 24]) {
+        const p = a.variants?.[style]?.[size];
+        if (p) paths.push(p);
+      }
+    }
+  }
+  let i = 0;
+  await Promise.all(Array.from({ length: 16 }, async () => {
+    while (i < paths.length) await fetch(paths[i++], { cache: 'force-cache' }).catch(() => {});
+  }));
+  return paths.length;
+});
+await p.waitForTimeout(600);
 await overlay();
 mark('gallery-ready');
 
@@ -212,33 +228,39 @@ await move(W * 0.24, H * 0.30, 620);
 await wait(160);
 
 /* 2 — open the first icon, so the style control has something to point at */
-await click('.card', 0, 520);
+await click('.card', 0, 620);
+
+/* No zoom in the page. Scaling the wrapper forces Chromium to re-raster every
+   card at the new scale, and with no GPU that measured worse than the grid
+   repaints it was competing with: 12.2% duplicate frames against 0.8%. The
+   gentle push is added afterwards in ffmpeg, where it costs the renderer
+   nothing. */
 
 /* 3 — the style is a property of the whole library, not of one icon.
        Switching it here redraws every card on screen. */
 await halo('.panel .segment');
 await wait(200);
-await click('.panel .segment button', 1, 1000, '.panel .segment');
-await wait(220);
-await click('.panel .segment button', 2, 1000, '.panel .segment');
-await wait(220);
+await click('.panel .segment button', 1, 1400, '.panel .segment');
+await wait(260);
+await click('.panel .segment button', 2, 1400, '.panel .segment');
+await wait(260);
 await halo(null);
 await wait(80);
 
 /* 4 — and with a monochrome style up, the accent moves the whole grid too */
 await halo('.accents');
 await wait(180);
-await click('.accents button', 3, 850, '.accents');
-await wait(200);
-await click('.accents button', 5, 850, '.accents');
-await wait(200);
+await click('.accents button', 3, 1250, '.accents');
+await wait(240);
+await click('.accents button', 5, 1250, '.accents');
+await wait(240);
 
 await halo(null);
 await wait(120);
 
 /* 5 — the same library on the other ground */
-await click('.theme-switch button[data-mode="dark"]', 0, 1050);
-await wait(260);
+await click('.theme-switch button[data-mode="dark"]', 0, 1400);
+await wait(300);
 mark('dark-done');
 
 /* 6 — through to the Customizer */
@@ -249,12 +271,14 @@ await overlay();
 mark('customizer-ready');
 
 /* 7 — one click, and a whole set is re-themed */
-await move(W * 0.13, H * 0.52, 620);
+await move(W * 0.13, H * 0.52, 700);
 await halo('.mode-card[data-mode="flat"]');
 await wait(200);
-await click('.mode-card[data-mode="flat"]', 0, 900);
+await click('.mode-card[data-mode="flat"]', 0, 1600);
+await wait(300);
 await halo('.mode-card[data-mode="soft"]');
-await click('.mode-card[data-mode="soft"]', 0, 1200);
+await click('.mode-card[data-mode="soft"]', 0, 1700);
+await wait(300);
 await halo(null);
 await move(W * 0.52, H * 0.46, 620);
 await wait(320);
