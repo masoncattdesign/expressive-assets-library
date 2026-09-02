@@ -13,6 +13,10 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- `CLAUDE.md` is the operating manual for anyone, or anything, working in this
+  repo: the two rules the library rests on, the house style, what to run before
+  a commit, and the traps that have already cost a day between them.
+
 - A 15 second screen recording of the theming story lives at
   `docs/media/expressive-assets-theming.mp4`, so the published site serves it
   as a direct link rather than it living in someone's downloads folder.

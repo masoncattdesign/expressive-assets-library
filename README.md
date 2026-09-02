@@ -202,7 +202,8 @@ locally.
 
 Anything that changes the tools or the manifest shape gets a line in
 [CHANGELOG.md](CHANGELOG.md), and the rules for which number moves are in
-[VERSIONING.md](VERSIONING.md). What is not done yet is in [NEXT.md](NEXT.md).
+[VERSIONING.md](VERSIONING.md). What is not done yet is in [NEXT.md](NEXT.md),
+and [CLAUDE.md](CLAUDE.md) is the operating manual for working in here.
 
 ## Gallery
 
