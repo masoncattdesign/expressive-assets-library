@@ -36,7 +36,7 @@
     how many part names the other seventy-eight will need.</p>
     <div class="meta">
       <span>Revision 2 &middot; 1 September 2026</span><span>90 product icons in scope</span>
-      <span>Median 6 shapes, range 1&ndash;36</span><span>Two axes: part and tone</span><span>plate · glyph · badge · accent</span><span>Draft for review</span>
+      <span>Median 6 shapes, range 1&ndash;36</span><span>Two axes: part and tone</span><span>base? · glyph · emblem · accent</span><span>Draft for review</span>
     </div>
     <p style="font-size:16px;line-height:1.55;color:var(--ink-2);max-width:64ch;margin:0">
       <strong>What is new in this revision.</strong> The pilot twelve are now the Customizer's
@@ -117,7 +117,7 @@
 </div>
     <figcaption>
       <span class="nm">Word</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>9</b> shapes · <b>8</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -181,7 +181,7 @@
 </div>
     <figcaption>
       <span class="nm">Excel</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>11</b> shapes · <b>10</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -246,7 +246,7 @@
 </div>
     <figcaption>
       <span class="nm">PowerPoint</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>11</b> shapes · <b>10</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -289,7 +289,7 @@
 </div>
     <figcaption>
       <span class="nm">OneNote</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>7</b> shapes · <b>6</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -365,7 +365,7 @@
 </div>
     <figcaption>
       <span class="nm">Teams</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>13</b> shapes · <b>12</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -521,7 +521,7 @@
 </div>
     <figcaption>
       <span class="nm">SharePoint</span>
-      <span class="fam fam-plate">Plate + glyph</span>
+      <span class="fam fam-base">Plate + glyph</span>
       <span class="counts"><b>12</b> shapes · <b>11</b> grads · <b>1</b> white</span>
     </figcaption>
   </figure>
@@ -758,16 +758,16 @@
     <p><strong>A part is a set of shapes that share a ramp, not a contiguous region.</strong> This
     is the definition that makes four names sufficient, and it came out of Teams. The two head
     circles sit visually apart from everything else and look at first like they need a name of their
-    own. They do not: they belong to the plate with the bodies beneath them, and the ramp confirms
-    it, all four shapes inside one narrow band from 0.322 to 0.561. Changing the plate's hue has to
+    own. They do not: they belong to the base with the bodies beneath them, and the ramp confirms
+    it, all four shapes inside one narrow band from 0.322 to 0.561. Changing the base's hue has to
     move all four or the figures come apart. Whether shapes touch is irrelevant; whether they
     recolor together is the whole test.</p>
     <div class="parts">
-      <div class="part p1"><span class="k">plate</span><h3>The foundation</h3>
+      <div class="part p1"><span class="k">base</span><h3>The foundation</h3>
         <p>What everything else sits on and takes its color from. Word's document, Teams' rounded square, Microsoft's four tiles. Usually several shapes deep, and the part that carries the tonal ramp.</p></div>
       <div class="part p2"><span class="k">glyph</span><h3>The mark itself</h3>
         <p>The letterform or symbol that identifies the product. The W, the X, the Copilot ribbon. What survives if you throw everything else away.</p></div>
-      <div class="part p3"><span class="k">badge</span><h3>A secondary mark</h3>
+      <div class="part p3"><span class="k">emblem</span><h3>A secondary mark</h3>
         <p>Something applied on top that modifies meaning rather than carrying it: the taskbar magnifier, a status dot, an overlay.</p></div>
       <div class="part p4"><span class="k">accent</span><h3>Depth and articulation</h3>
         <p>Folds, highlights, shadow plates, the page edge on OneNote. Present for form, not for meaning. The part most likely to be dropped at 16px.</p></div>
@@ -779,17 +779,17 @@
     be left with. <code>glyph</code> is also the more precise word for a letterform, which is what
     this part is in nine of the twelve.</p>
 
-    <p><strong>Why <code>plate</code> and not <code>container</code>.</strong> Bridge already has
+    <p><strong>Why <code>base</code> and not <code>container</code>.</strong> Bridge already has
     a role called <code>container</code>: its <code>schemas/</code> directory holds exactly four,
     <code>container</code>, <code>control</code>, <code>element</code> and <code>page</code>.
     Reusing it here would give one word two meanings across two systems that are meant to
     interoperate, which is the same collision this library has already had to unpick twice.
-    <code>plate</code> is not a coinage either: Bridge uses it 135 times already
-    (<code>backplate</code> 63, <code>stackedplate</code> 46, <code>plate</code> 24), and it is the
+    <code>base</code> is not a coinage either: Bridge uses it 135 times already
+    (<code>backplate</code> 63, <code>stackedplate</code> 46, <code>base</code> 24), and it is the
     word the icon work has been using in conversation all along. <code>base</code> was the other
     candidate, but it is overloaded in every token vocabulary going.</p>
 
-    <p><strong>One measurement already supports this.</strong> Every plate-and-letterform icon in the
+    <p><strong>One measurement already supports this.</strong> Every base-and-letterform icon in the
     library has exactly one white fill, and in every case it is the letterform. Word, Excel,
     PowerPoint, OneNote, Visio, SharePoint, Teams, Outlook and Power BI all show
     <code>white&nbsp;&times;&nbsp;1</code>. That means <code>glyph</code> is not purely an authoring
@@ -799,7 +799,7 @@
 
   <section>
     <h2>The second layer, and why it is smaller than it looks</h2>
-    <p>A plate is not one shape. Word's is built from several at different depths, and a
+    <p>A base is not one shape. Word's is built from several at different depths, and a
     recolor that flattens them loses the form. So the obvious move is a second layer of anatomy
     naming those depths. The measurement argues against it.</p>
     <p>Here is every painted shape in Word, by luminance:</p>
@@ -811,7 +811,7 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     four named depths, and the steps are not evenly spaced. That uneven spacing is the depth cue.
     Naming steps would quantise it and throw the cue away.</p>
     <p><strong>Tone is derivable. Membership is not.</strong> Any tool can read that a shape sits
-    at 0.269. What no tool can read is that shapes 0, 3 and 6 are all the plate and therefore
+    at 0.269. What no tool can read is that shapes 0, 3 and 6 are all the base and therefore
     belong to one ramp. That is exactly what <code>data-part</code> supplies, and once the grouping
     is known, "map this part's existing ramp onto the new hue, preserving relative spacing" is
     computable. Storing the tone as well would be recording a number the file already contains,
@@ -841,10 +841,10 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     <p>This is the one thing I would not compromise on. Anatomy belongs <strong>in the SVG</strong>,
     as an attribute on each shape, and not in <code>meta.json</code> as an index into the SVG.</p>
     <pre class="bad"><span class="g">// Breaks silently. Shape order is not stable.</span>
-<span class="b">"anatomy"</span>: { <span class="b">"plate"</span>: { <span class="b">"shapes"</span>: [0, 3, 6] } }</pre>
+<span class="b">"anatomy"</span>: { <span class="b">"base"</span>: { <span class="b">"shapes"</span>: [0, 3, 6] } }</pre>
     <pre class="good"><span class="g">&lt;!-- Travels with the artwork, survives a re-render. --&gt;</span>
-&lt;path <span class="b">data-part</span>=<span class="b">"plate"</span> d="M2 4C2 2.9..." fill="url(#g0)"/&gt;
-&lt;path <span class="b">data-part</span>=<span class="b">"plate"</span> <span class="b">data-tone</span>=<span class="b">"shade"</span> d="M9 4v7..." fill="url(#g3)"/&gt;
+&lt;path <span class="b">data-part</span>=<span class="b">"base"</span> d="M2 4C2 2.9..." fill="url(#g0)"/&gt;
+&lt;path <span class="b">data-part</span>=<span class="b">"base"</span> <span class="b">data-tone</span>=<span class="b">"shade"</span> d="M9 4v7..." fill="url(#g3)"/&gt;
 &lt;path <span class="b">data-part</span>=<span class="b">"glyph"</span> d="M12 18h4l2..." fill="white"/&gt;
 
 <span class="g">// Two shapes, one part, one ramp. Only the exception is annotated.</span></pre>
@@ -861,23 +861,23 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     the file, which is what makes anatomy a feature rather than a filing system. The address is
     the asset id with the part appended, and each address can carry a fill, a stroke or an
     effect:</p>
-    <pre><span class="b">windows.producticon.edge.plate</span>     <span class="g">fill &middot; stroke &middot; effect</span>
+    <pre><span class="b">windows.producticon.edge.base</span>     <span class="g">fill &middot; stroke &middot; effect</span>
 <span class="b">windows.producticon.word.glyph</span>     <span class="g">fill &middot; stroke &middot; effect</span>
-<span class="b">windows.producticon.teams.plate</span>    <span class="g">fill &middot; stroke &middot; effect</span>
+<span class="b">windows.producticon.teams.base</span>    <span class="g">fill &middot; stroke &middot; effect</span>
 
-<span class="g">// One address per part, not per shape. The plate is four shapes in Teams
+<span class="g">// One address per part, not per shape. The base is four shapes in Teams
 // and the address moves all four, which is the point of a shared ramp.</span></pre>
 
     <p><strong>The stroke question was the wrong way round.</strong> The review asked whether we
     could target an icon and modify its stroke. These icons have no strokes. Every one of the
     twelve is filled shapes and nothing else, which is why the question had no target and the
     honest first answer was no. What is actually wanted is the ability to <em>author</em> a
-    stroke: put a two pixel outline on the plate of every product icon and leave the glyph
+    stroke: put a two pixel outline on the base of every product icon and leave the glyph
     alone. That is a different feature, and it is precisely the one this document unlocks,
     because a stroke has to be applied to something that has a name.</p>
 
     <p>This has been proved on real artwork rather than argued. Marking the shapes of one part
-    with <code>data-part</code> and stroking that selection produces a clean outline on the plate
+    with <code>data-part</code> and stroking that selection produces a clean outline on the base
     with the letterform untouched, at every size, with no change to the source drawing. Without
     part names the same instruction has to guess at a selection by luminance, which is what makes
     the current pipelines lose a checkmark or flatten a subject into a blob.</p>
@@ -898,7 +898,7 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
     <p>Right now its pipelines infer structure by bucketing shapes on luminance, because that is
     the only signal available. That inference is what makes Shield lose its checkmark and Data
     flatten into a blob: one threshold has to serve both "this light shape is a detail" and "this
-    light shape is the subject", and it cannot. With parts declared, "recolor the plate, leave
+    light shape is the subject", and it cannot. With parts declared, "recolor the base, leave
     the glyph, drop the accent at small sizes" becomes an instruction rather than a guess.</p>
     <p>For Bridge, the payoff is that <code>anatomy</code> is already its vocabulary. Its icon
     schema carries an anatomy block of named parts today. Matching that shape now is cheaper than
@@ -908,9 +908,9 @@ Outlook     0.187  0.247  0.266  0.353  0.359  0.383  0.446  0.631 ... 1.000</pr
   <section>
     <h2>What the session needs to decide</h2>
     <ol class="q">
-      <li><div><h3>Is four enough?</h3><p>Teams already tested it and four held, once a part was defined as a shared ramp rather than a region. Outlook is the remaining candidate: an envelope that is arguably plate and glyph at once. If it needs a fifth name, better to find out on twelve than on ninety.</p></div></li>
+      <li><div><h3>Is four enough?</h3><p>Teams already tested it and four held, once a part was defined as a shared ramp rather than a region. Outlook is the remaining candidate: an envelope that is arguably base and glyph at once. If it needs a fifth name, better to find out on twelve than on ninety.</p></div></li>
       <li><div><h3>Is a shape always exactly one part?</h3><p>Gradients and masks mean a single visual element is sometimes several paths. Does <code>data-part</code> go on each, or does a wrapping group own it?</p></div></li>
-      <li><div><h3>What happens to the degenerate case?</h3><p>GitHub is one merged path carrying plate and glyph together. Is it <code>glyph</code>, is it unannotated, or does the vocabulary need a name for "indivisible"?</p></div></li>
+      <li><div><h3>What happens to the degenerate case?</h3><p>GitHub is one merged path carrying base and glyph together. Is it <code>glyph</code>, is it unannotated, or does the vocabulary need a name for "indivisible"?</p></div></li>
       <li><div><h3>Is <code>shade</code> a judgement or a measurement?</h3><p>If a shadow is reliably the darkest shape in its part, it may be detectable rather than authored. Worth testing on the twelve before committing anyone to annotating it by hand.</p></div></li>
       <li><div><h3>Does anatomy vary by size?</h3><p>These are redrawn per size, not scaled. The 16px Word may legitimately have fewer parts than the 48px. Is anatomy per asset, or per drawing?</p></div></li>
       <li><div><h3>Who owns it when Figma re-exports?</h3><p>Annotations added by hand will be overwritten by the next import unless the importer preserves them or the parts are declared upstream in Figma. This needs an answer before annotation starts, not after.</p></div></li>

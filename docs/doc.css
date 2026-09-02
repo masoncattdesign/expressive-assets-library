@@ -22,10 +22,10 @@
   --signal-soft: #FBECEA;
 
   /* The four anatomy parts. Distinct hues rather than one accent, because a
-     reader is meant to tell plate from glyph at a glance. */
+     reader is meant to tell base from glyph at a glance. */
   --p-container: #2563A8; --p-container-bg: #E7EFF9;
   --p-glyph: #B0521E;     --p-glyph-bg: #FBEDE3;
-  --p-badge: #6B3FA0;     --p-badge-bg: #F0E9F8;
+  --p-emblem: #6B3FA0;     --p-emblem-bg: #F0E9F8;
   --p-accent: #1F7A54;    --p-accent-bg: #E5F2EB;
 
   --display: "Segoe UI", -apple-system, Roboto, BlinkMacSystemFont, system-ui, sans-serif;
@@ -44,7 +44,7 @@
     --signal: #F08D82; --signal-soft: #2E1C1A;
     --p-container: #7FB0E8; --p-container-bg: #152232;
     --p-glyph: #E5A075;     --p-glyph-bg: #2B1D14;
-    --p-badge: #B99AE0;     --p-badge-bg: #211A2E;
+    --p-emblem: #B99AE0;     --p-emblem-bg: #211A2E;
     --p-accent: #79C9A0;    --p-accent-bg: #13241C;
     --shadow: none;
   }
@@ -57,7 +57,7 @@
   --signal: #F08D82; --signal-soft: #2E1C1A;
   --p-container: #7FB0E8; --p-container-bg: #152232;
   --p-glyph: #E5A075;     --p-glyph-bg: #2B1D14;
-  --p-badge: #B99AE0;     --p-badge-bg: #211A2E;
+  --p-emblem: #B99AE0;     --p-emblem-bg: #211A2E;
   --p-accent: #79C9A0;    --p-accent-bg: #13241C;
   --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 26px -18px rgba(0, 0, 0, .8);
 }
@@ -196,8 +196,8 @@ figcaption { font-size: 14px; color: var(--ink-3); margin-top: 12px; max-width: 
   font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
   padding: 2px 7px; border-radius: 20px; align-self: flex-start;
 }
-.fam-plate { background: var(--p-container-bg); color: var(--p-container); }
-.fam-hybrid { background: var(--p-badge-bg); color: var(--p-badge); }
+.fam-base { background: var(--p-container-bg); color: var(--p-container); }
+.fam-hybrid { background: var(--p-emblem-bg); color: var(--p-emblem); }
 .fam-mark { background: var(--p-glyph-bg); color: var(--p-glyph); }
 .fam-tile { background: var(--p-accent-bg); color: var(--p-accent); }
 .fam-stress, .fam-degenerate { background: var(--rule-soft); color: var(--ink-3); }
@@ -212,7 +212,7 @@ figcaption { font-size: 14px; color: var(--ink-3); margin-top: 12px; max-width: 
 .part .k { font-family: var(--mono); font-size: 13px; color: var(--pc, var(--accent)); font-weight: 500; }
 .part p { font-size: 14px; color: var(--ink-2); }
 .p1 { --pc: var(--p-container); } .p2 { --pc: var(--p-glyph); }
-.p3 { --pc: var(--p-badge); }     .p4 { --pc: var(--p-accent); }
+.p3 { --pc: var(--p-emblem); }     .p4 { --pc: var(--p-accent); }
 
 ol.q { list-style: none; counter-reset: q; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
 ol.q li { counter-increment: q; display: grid; grid-template-columns: 30px 1fr; gap: 14px; align-items: start; }
@@ -315,9 +315,9 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 .anat figcaption { display: flex; flex-direction: column; align-items: center; gap: 3px; margin: 0; text-align: center; }
 .anat-name { font-family: var(--mono); font-size: 12.5px; font-weight: 500; color: var(--ink); }
 .anat-sub { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); }
-.k-plate { color: var(--p-container); }
+.k-base { color: var(--p-container); }
 .k-glyph { color: var(--p-glyph); }
-.k-badge { color: var(--p-badge); }
+.k-emblem { color: var(--p-emblem); }
 .k-accent { color: var(--p-accent); }
 
 .duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
@@ -518,7 +518,7 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px
 .st-live   { background: var(--p-accent-bg);    color: var(--p-accent); }
 .st-build  { background: var(--p-glyph-bg);     color: var(--p-glyph); }
 .st-next   { background: var(--p-container-bg); color: var(--p-container); }
-.st-figma  { background: var(--p-badge-bg);     color: var(--p-badge); }
+.st-figma  { background: var(--p-emblem-bg);     color: var(--p-emblem); }
 .st-idle   { background: var(--rule-soft);      color: var(--ink-3); }
 
 .band {
@@ -563,3 +563,13 @@ a.hub-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px
   font-family: var(--mono); font-size: 9px; font-weight: 500;
   display: grid; place-items: center;
 }
+
+/* color roles table */
+.roles-table { width: auto; min-width: 520px; border-collapse: collapse; margin: 18px 0; font-size: 13px; }
+.roles-table th { text-align: left; font-weight: 500; color: var(--text-3); font-size: 11px;
+  letter-spacing: .06em; text-transform: uppercase; padding: 0 12px 8px 0; border-bottom: 1px solid var(--line); }
+.roles-table td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+.roles-table td:nth-child(2) { width: 84px; white-space: nowrap; }
+.roles-table td:nth-child(3) { font-family: var(--mono); color: var(--text-2); font-size: 12px; }
+.roles-table td:last-child { color: var(--text-3); }
+.roles-table code { font-size: 12px; }

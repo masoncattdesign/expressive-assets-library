@@ -34,10 +34,12 @@
     <p class="eyebrow">Expressive Assets &middot; Windows Design Systems</p>
     <h1>Asset Anatomy</h1>
     <p class="stand">Every icon in the library is one flat drawing. Anatomy is the layer that gives
-    the pieces inside it names, so a tool can change the plate of an icon without guessing which
-    shapes the plate is.</p>
+    the pieces inside it names, so a tool can change the base of an icon without guessing which
+    shapes the base is. Every shape now carries two names: what it <em>is</em>, and what
+    <em>color</em> it takes. They are derived differently and they are useful for different
+    jobs.</p>
     <div class="meta">
-      <span>1 September 2026</span><span>4 parts, 3 tones</span>
+      <span>2 September 2026</span><span>2 axes &middot; 4 parts &middot; 4 color groups</span>
       <span>12 of 90 product icons annotated</span><span>Working draft</span>
     </div>
   </header>
@@ -94,97 +96,97 @@
 </svg>
 </div><figcaption><span class="anat-name">Whole</span><span class="anat-sub">9 shapes</span></figcaption></figure>
 <figure class="anat"><div class="anat-art"><svg role="img" width="104" height="104" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#word-plate-paint0_radial_365340_3485)"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-plate-paint1_linear_365340_3485)"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-plate-paint2_radial_365340_3485)" fill-opacity="0.6"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-plate-paint3_radial_365340_3485)" fill-opacity="0.1"/>
-<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-plate-paint4_linear_365340_3485)"/>
-<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-plate-paint5_radial_365340_3485)" fill-opacity="0.8"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-plate-paint6_radial_365340_3485)" opacity="0.07"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-plate-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.07"/>
+<path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#word-base-paint0_radial_365340_3485)"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-base-paint1_linear_365340_3485)"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-base-paint2_radial_365340_3485)" fill-opacity="0.6"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-base-paint3_radial_365340_3485)" fill-opacity="0.1"/>
+<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-base-paint4_linear_365340_3485)"/>
+<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-base-paint5_radial_365340_3485)" fill-opacity="0.8"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-base-paint6_radial_365340_3485)" opacity="0.07"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-base-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.07"/>
 <path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.07"/>
 <defs>
-<radialGradient id="word-plate-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
+<radialGradient id="word-base-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
 <stop offset="0.180414" stop-color="#1657F4"/>
 <stop offset="0.574542" stop-color="#0036C4"/>
 </radialGradient>
-<linearGradient id="word-plate-paint1_linear_365340_3485" x1="9" y1="25" x2="31.9747" y2="25" gradientUnits="userSpaceOnUse">
+<linearGradient id="word-base-paint1_linear_365340_3485" x1="9" y1="25" x2="31.9747" y2="25" gradientUnits="userSpaceOnUse">
 <stop stop-color="#66C0FF"/>
 <stop offset="0.25606" stop-color="#0094F0"/>
 </linearGradient>
-<radialGradient id="word-plate-paint2_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-20.2305 21.2842 -44.4679 -58.1885 39 14.7158)" gradientUnits="userSpaceOnUse">
+<radialGradient id="word-base-paint2_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-20.2305 21.2842 -44.4679 -58.1885 39 14.7158)" gradientUnits="userSpaceOnUse">
 <stop offset="0.140259" stop-color="#D471FF"/>
 <stop offset="0.830508" stop-color="#509DF5" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="word-plate-paint3_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.6111 29.2308) rotate(90) scale(18.6154 101.647)">
+<radialGradient id="word-base-paint3_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.6111 29.2308) rotate(90) scale(18.6154 101.647)">
 <stop offset="0.283333" stop-color="#4F006F" stop-opacity="0"/>
 <stop offset="1" stop-color="#4F006F"/>
 </radialGradient>
-<linearGradient id="word-plate-paint4_linear_365340_3485" x1="9" y1="15" x2="38.9918" y2="15.4954" gradientUnits="userSpaceOnUse">
+<linearGradient id="word-base-paint4_linear_365340_3485" x1="9" y1="15" x2="38.9918" y2="15.4954" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9DEAFF"/>
 <stop offset="0.201276" stop-color="#3BD5FF"/>
 </linearGradient>
-<radialGradient id="word-plate-paint5_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-28.722 6.70755 -17.9979 -68.3411 39 6.58563)" gradientUnits="userSpaceOnUse">
+<radialGradient id="word-base-paint5_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-28.722 6.70755 -17.9979 -68.3411 39 6.58563)" gradientUnits="userSpaceOnUse">
 <stop offset="0.0606583" stop-color="#E4A7FE"/>
 <stop offset="0.538869" stop-color="#E4A7FE" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="word-plate-paint6_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
+<radialGradient id="word-base-paint6_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
 <stop offset="0.0811439" stop-color="#367AF2"/>
 <stop offset="0.871875" stop-color="#001A8F"/>
 </radialGradient>
-<radialGradient id="word-plate-paint7_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 12.765)">
+<radialGradient id="word-base-paint7_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 12.765)">
 <stop offset="0.586954" stop-color="#2763E5" stop-opacity="0"/>
 <stop offset="0.973806" stop-color="#58AAFE"/>
 </radialGradient>
 </defs>
 </svg>
-</div><figcaption><span class="anat-name k-plate">plate</span><span class="anat-sub">6 of 9 shapes</span></figcaption></figure>
+</div><figcaption><span class="anat-name k-base">base</span><span class="anat-sub">6 of 9 shapes</span></figcaption></figure>
 <figure class="anat"><div class="anat-art"><svg role="img" width="104" height="104" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#word-badge-paint0_radial_365340_3485)" opacity="0.07"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-badge-paint1_linear_365340_3485)" opacity="0.07"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-badge-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.07"/>
-<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-badge-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.07"/>
-<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-badge-paint4_linear_365340_3485)" opacity="0.07"/>
-<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-badge-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.07"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-badge-paint6_radial_365340_3485)"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-badge-paint7_radial_365340_3485)" fill-opacity="0.65"/>
+<path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#word-emblem-paint0_radial_365340_3485)" opacity="0.07"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-emblem-paint1_linear_365340_3485)" opacity="0.07"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-emblem-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.07"/>
+<path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-emblem-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.07"/>
+<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-emblem-paint4_linear_365340_3485)" opacity="0.07"/>
+<path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#word-emblem-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.07"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-emblem-paint6_radial_365340_3485)"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#word-emblem-paint7_radial_365340_3485)" fill-opacity="0.65"/>
 <path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.07"/>
 <defs>
-<radialGradient id="word-badge-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
+<radialGradient id="word-emblem-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
 <stop offset="0.180414" stop-color="#1657F4"/>
 <stop offset="0.574542" stop-color="#0036C4"/>
 </radialGradient>
-<linearGradient id="word-badge-paint1_linear_365340_3485" x1="9" y1="25" x2="31.9747" y2="25" gradientUnits="userSpaceOnUse">
+<linearGradient id="word-emblem-paint1_linear_365340_3485" x1="9" y1="25" x2="31.9747" y2="25" gradientUnits="userSpaceOnUse">
 <stop stop-color="#66C0FF"/>
 <stop offset="0.25606" stop-color="#0094F0"/>
 </linearGradient>
-<radialGradient id="word-badge-paint2_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-20.2305 21.2842 -44.4679 -58.1885 39 14.7158)" gradientUnits="userSpaceOnUse">
+<radialGradient id="word-emblem-paint2_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-20.2305 21.2842 -44.4679 -58.1885 39 14.7158)" gradientUnits="userSpaceOnUse">
 <stop offset="0.140259" stop-color="#D471FF"/>
 <stop offset="0.830508" stop-color="#509DF5" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="word-badge-paint3_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.6111 29.2308) rotate(90) scale(18.6154 101.647)">
+<radialGradient id="word-emblem-paint3_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.6111 29.2308) rotate(90) scale(18.6154 101.647)">
 <stop offset="0.283333" stop-color="#4F006F" stop-opacity="0"/>
 <stop offset="1" stop-color="#4F006F"/>
 </radialGradient>
-<linearGradient id="word-badge-paint4_linear_365340_3485" x1="9" y1="15" x2="38.9918" y2="15.4954" gradientUnits="userSpaceOnUse">
+<linearGradient id="word-emblem-paint4_linear_365340_3485" x1="9" y1="15" x2="38.9918" y2="15.4954" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9DEAFF"/>
 <stop offset="0.201276" stop-color="#3BD5FF"/>
 </linearGradient>
-<radialGradient id="word-badge-paint5_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-28.722 6.70755 -17.9979 -68.3411 39 6.58563)" gradientUnits="userSpaceOnUse">
+<radialGradient id="word-emblem-paint5_radial_365340_3485" cx="0" cy="0" r="1" gradientTransform="matrix(-28.722 6.70755 -17.9979 -68.3411 39 6.58563)" gradientUnits="userSpaceOnUse">
 <stop offset="0.0606583" stop-color="#E4A7FE"/>
 <stop offset="0.538869" stop-color="#E4A7FE" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="word-badge-paint6_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
+<radialGradient id="word-emblem-paint6_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
 <stop offset="0.0811439" stop-color="#367AF2"/>
 <stop offset="0.871875" stop-color="#001A8F"/>
 </radialGradient>
-<radialGradient id="word-badge-paint7_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 12.765)">
+<radialGradient id="word-emblem-paint7_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 12.765)">
 <stop offset="0.586954" stop-color="#2763E5" stop-opacity="0"/>
 <stop offset="0.973806" stop-color="#58AAFE"/>
 </radialGradient>
 </defs>
 </svg>
-</div><figcaption><span class="anat-name k-badge">badge</span><span class="anat-sub">2 of 9 shapes</span></figcaption></figure>
+</div><figcaption><span class="anat-name k-emblem">emblem</span><span class="anat-sub">2 of 9 shapes</span></figcaption></figure>
 <figure class="anat"><div class="anat-art"><svg role="img" width="104" height="104" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#word-glyph-paint0_radial_365340_3485)" opacity="0.07"/>
 <path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#word-glyph-paint1_linear_365340_3485)" opacity="0.07"/>
@@ -312,97 +314,104 @@
 </defs>
 </svg><figcaption>Thirteen shapes. The heads read as separate objects.</figcaption></figure>
       <figure><svg role="img" width="132" height="132" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.9999 20H33.9999C37.3136 20 39.9999 22.6863 39.9999 26V36C39.9999 39.3137 37.3136 42 33.9999 42C30.6862 42 27.9999 39.3137 27.9999 36V26C27.9999 22.6863 25.3136 20 21.9999 20Z" fill="url(#tm-plate-paint0_radial_342916_3401)"/>
-<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-plate-paint1_radial_342916_3401)"/>
-<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-plate-paint2_linear_342916_3401)" fill-opacity="0.7"/>
-<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-plate-paint3_radial_342916_3401)" fill-opacity="0.7"/>
-<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-plate-paint4_radial_342916_3401)"/>
-<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-plate-paint5_radial_342916_3401)" fill-opacity="0.46"/>
-<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-plate-paint6_radial_342916_3401)" fill-opacity="0.4"/>
-<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-plate-paint7_radial_342916_3401)"/>
-<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-plate-paint8_radial_342916_3401)" fill-opacity="0.6"/>
-<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-plate-paint9_radial_342916_3401)" fill-opacity="0.5"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#tm-plate-paint10_radial_342916_3401)" opacity="0.07"/>
-<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#tm-plate-paint11_radial_342916_3401)" fill-opacity="0.7" opacity="0.07"/>
+<path d="M21.9999 20H33.9999C37.3136 20 39.9999 22.6863 39.9999 26V36C39.9999 39.3137 37.3136 42 33.9999 42C30.6862 42 27.9999 39.3137 27.9999 36V26C27.9999 22.6863 25.3136 20 21.9999 20Z" fill="url(#tm-base-paint0_radial_342916_3401)"/>
+<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-base-paint1_radial_342916_3401)"/>
+<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-base-paint2_linear_342916_3401)" fill-opacity="0.7"/>
+<path d="M7.99989 24C7.99989 20.6863 10.6862 18 13.9999 18H21.9999C25.3136 18 27.9999 20.6863 27.9999 24V36C27.9999 39.3137 30.6862 42 33.9999 42L17.9999 41.9999C12.477 41.9999 7.99989 37.5228 7.99989 31.9999V24Z" fill="url(#tm-base-paint3_radial_342916_3401)" fill-opacity="0.7"/>
+<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-base-paint4_radial_342916_3401)"/>
+<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-base-paint5_radial_342916_3401)" fill-opacity="0.46"/>
+<path d="M32.9999 18C35.7613 18 37.9999 15.7614 37.9999 13C37.9999 10.2386 35.7613 8 32.9999 8C30.2385 8 27.9999 10.2386 27.9999 13C27.9999 15.7614 30.2385 18 32.9999 18Z" fill="url(#tm-base-paint6_radial_342916_3401)" fill-opacity="0.4"/>
+<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-base-paint7_radial_342916_3401)"/>
+<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-base-paint8_radial_342916_3401)" fill-opacity="0.6"/>
+<path d="M17.9999 16C21.3136 16 23.9999 13.3137 23.9999 10C23.9999 6.68629 21.3136 4 17.9999 4C14.6862 4 11.9999 6.68629 11.9999 10C11.9999 13.3137 14.6862 16 17.9999 16Z" fill="url(#tm-base-paint9_radial_342916_3401)" fill-opacity="0.5"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#tm-base-paint10_radial_342916_3401)" opacity="0.07"/>
+<rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#tm-base-paint11_radial_342916_3401)" fill-opacity="0.7" opacity="0.07"/>
 <path d="M15.4791 28.1055H13.032V35.5716H10.9672V28.1055H8.52008V26.4287H15.4791V28.1055Z" fill="white" opacity="0.07"/>
 <defs>
-<radialGradient id="tm-plate-paint0_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(39.7967 22.1739) scale(13.4784 33.2694)">
+<radialGradient id="tm-base-paint0_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(39.7967 22.1739) scale(13.4784 33.2694)">
 <stop stop-color="#A98AFF"/>
 <stop offset="0.14" stop-color="#8C75FF"/>
 <stop offset="0.565" stop-color="#5F50E2"/>
 <stop offset="0.9" stop-color="#3C2CB8"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint1_radial_342916_3401" cx="0" cy="0" r="1" gradientTransform="matrix(12.1875 30.4 -30.875 12 8.81239 16.4)" gradientUnits="userSpaceOnUse">
+<radialGradient id="tm-base-paint1_radial_342916_3401" cx="0" cy="0" r="1" gradientTransform="matrix(12.1875 30.4 -30.875 12 8.81239 16.4)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#85C2FF"/>
 <stop offset="0.69" stop-color="#7588FF"/>
 <stop offset="1" stop-color="#6459FE"/>
 </radialGradient>
-<linearGradient id="tm-plate-paint2_linear_342916_3401" x1="20.5936" y1="18" x2="20.5936" y2="42" gradientUnits="userSpaceOnUse">
+<linearGradient id="tm-base-paint2_linear_342916_3401" x1="20.5936" y1="18" x2="20.5936" y2="42" gradientUnits="userSpaceOnUse">
 <stop offset="0.801159" stop-color="#6864F6" stop-opacity="0"/>
 <stop offset="1" stop-color="#5149DE"/>
 </linearGradient>
-<radialGradient id="tm-plate-paint3_radial_342916_3401" cx="0" cy="0" r="1" gradientTransform="matrix(-7.60976 17.6478 -14.9348 -4.32656 27.4999 17.2)" gradientUnits="userSpaceOnUse">
+<radialGradient id="tm-base-paint3_radial_342916_3401" cx="0" cy="0" r="1" gradientTransform="matrix(-7.60976 17.6478 -14.9348 -4.32656 27.4999 17.2)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#BD96FF"/>
 <stop offset="0.686685" stop-color="#BD96FF" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint4_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32.9999 11.5714) rotate(-90) scale(10 12.6216)">
+<radialGradient id="tm-base-paint4_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32.9999 11.5714) rotate(-90) scale(10 12.6216)">
 <stop offset="0.268201" stop-color="#6868F7"/>
 <stop offset="1" stop-color="#3923B1"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint5_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28.8676 10.544) rotate(40.0516) scale(7.14629 10.3363)">
+<radialGradient id="tm-base-paint5_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28.8676 10.544) rotate(40.0516) scale(7.14629 10.3363)">
 <stop offset="0.270711" stop-color="#A1D3FF"/>
 <stop offset="0.813393" stop-color="#A1D3FF" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint6_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.9821 10.3686) rotate(-41.6581) scale(8.51275 20.8824)">
+<radialGradient id="tm-base-paint6_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.9821 10.3686) rotate(-41.6581) scale(8.51275 20.8824)">
 <stop stop-color="#E3ACFD"/>
 <stop offset="0.816041" stop-color="#9FA2FF" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint7_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9999 8.28571) rotate(-90) scale(12 15.146)">
+<radialGradient id="tm-base-paint7_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9999 8.28571) rotate(-90) scale(12 15.146)">
 <stop offset="0.268201" stop-color="#8282FF"/>
 <stop offset="1" stop-color="#3923B1"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint8_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.0411 7.05284) rotate(40.0516) scale(8.57554 12.4035)">
+<radialGradient id="tm-base-paint8_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.0411 7.05284) rotate(40.0516) scale(8.57554 12.4035)">
 <stop offset="0.270711" stop-color="#A1D3FF"/>
 <stop offset="0.813393" stop-color="#A1D3FF" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint9_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.7786 6.8423) rotate(-41.6581) scale(10.2153 25.0589)">
+<radialGradient id="tm-base-paint9_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.7786 6.8423) rotate(-41.6581) scale(10.2153 25.0589)">
 <stop stop-color="#E3ACFD"/>
 <stop offset="0.816041" stop-color="#9FA2FF" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint10_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
+<radialGradient id="tm-base-paint10_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 23) rotate(45) scale(22.6274)">
 <stop offset="0.046875" stop-color="#688EFF"/>
 <stop offset="0.946875" stop-color="#230F94"/>
 </radialGradient>
-<radialGradient id="tm-plate-paint11_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 13.0702)">
+<radialGradient id="tm-base-paint11_radial_342916_3401" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 32.6) rotate(90) scale(11.2 13.0702)">
 <stop offset="0.570647" stop-color="#6965F6" stop-opacity="0"/>
 <stop offset="1" stop-color="#8F8FFF"/>
 </radialGradient>
 </defs>
-</svg><figcaption>The plate is ten of them, heads included.</figcaption></figure>
+</svg><figcaption>The base is ten of them, heads included.</figcaption></figure>
     </div>
-    <p>The color says so. The plate&rsquo;s ten shapes run from 0.323 to 0.798 in luminance, and
+    <p>The color says so. The base&rsquo;s ten shapes run from 0.323 to 0.798 in luminance, and
     the heads sit inside that band rather than beside it. Two pairs repeat exactly, 0.798 and
     0.701 appearing twice, because each head is built from the same three-layer recipe as the
     bodies below it.</p>
-    <div class="ramp"><span class="ramp-chip" style="background:#5046D4" title="luminance 0.323"></span><span class="ramp-chip" style="background:#5E52D8" title="luminance 0.370"></span><span class="ramp-chip" style="background:#5C56EA" title="luminance 0.384"></span><span class="ramp-chip" style="background:#745FE6" title="luminance 0.428"></span><span class="ramp-chip" style="background:#758CFF" title="luminance 0.562"></span><span class="ramp-chip" style="background:#BD96FF" title="luminance 0.650"></span><span class="ramp-chip" style="background:#C1A7FE" title="luminance 0.701"></span><span class="ramp-chip" style="background:#C1A7FE" title="luminance 0.701"></span><span class="ramp-chip" style="background:#A1D3FF" title="luminance 0.798"></span><span class="ramp-chip" style="background:#A1D3FF" title="luminance 0.798"></span><span class="ramp-note">plate, 10 shapes, sorted by luminance</span></div>
+    <div class="ramp"><span class="ramp-chip" style="background:#5046D4" title="luminance 0.323"></span><span class="ramp-chip" style="background:#5E52D8" title="luminance 0.370"></span><span class="ramp-chip" style="background:#5C56EA" title="luminance 0.384"></span><span class="ramp-chip" style="background:#745FE6" title="luminance 0.428"></span><span class="ramp-chip" style="background:#758CFF" title="luminance 0.562"></span><span class="ramp-chip" style="background:#BD96FF" title="luminance 0.650"></span><span class="ramp-chip" style="background:#C1A7FE" title="luminance 0.701"></span><span class="ramp-chip" style="background:#C1A7FE" title="luminance 0.701"></span><span class="ramp-chip" style="background:#A1D3FF" title="luminance 0.798"></span><span class="ramp-chip" style="background:#A1D3FF" title="luminance 0.798"></span><span class="ramp-note">base, 10 shapes, sorted by luminance</span></div>
     <p>So the test is not whether shapes touch. It is whether they have to move together when the
-    hue changes. Recolor the plate and all ten move, or the figures come apart.</p>
+    hue changes. Recolor the base and all ten move, or the figures come apart.</p>
   </section>
 
   <section>
     <h2>The vocabulary</h2>
     <p>Four part names, deliberately few. Every name added is a question every future asset has to
     answer, so the aim is to prove four is too few rather than to look for a fifth.</p>
+    <p class="fig-note"><strong>Reviewed 2 September.</strong> <code>glyph</code> is settled.
+    <code>badge</code> is retired in favor of <code>emblem</code>: Windows and Fluent already use
+    badge for the status overlay the shell applies, and one word could not mean both a transient
+    count and a permanent part of the drawing. The first name is still open, marked below.</p>
     <div class="parts">
-      <div class="part p1"><span class="k">plate</span><h3>The foundation</h3>
+      <div class="part p1"><span class="k">base?</span><h3>The foundation</h3>
         <p>What everything else sits on and takes its color from. Usually several shapes deep, and
-        the part that carries the tonal ramp.</p></div>
+        the part that carries the tonal ramp. <strong>The name is not settled:</strong> base, plate,
+        surface and main shape are all live. Unlike the other three, this one describes a position
+        rather than a thing, which is why it keeps resisting a name.</p></div>
       <div class="part p2"><span class="k">glyph</span><h3>The mark itself</h3>
         <p>The letterform or symbol that identifies the product. What survives if you throw
         everything else away.</p></div>
-      <div class="part p3"><span class="k">badge</span><h3>A secondary mark</h3>
-        <p>Applied on top, modifying meaning rather than carrying it: a taskbar tile, a status dot,
-        an overlay.</p></div>
+      <div class="part p3"><span class="k">emblem</span><h3>A secondary mark</h3>
+        <p>Applied on top, modifying meaning rather than carrying it: a taskbar tile, a corner mark,
+        the small square a letterform sits on. Permanent, and drawn into the artwork. Not to be
+        confused with a shell badge, which is applied at runtime and is not ours.</p></div>
       <div class="part p4"><span class="k">accent</span><h3>Depth and articulation</h3>
         <p>Folds, highlights, shadow plates, a page edge. Present for form, not for meaning, and the
         first thing dropped at 16px.</p></div>
@@ -415,6 +424,63 @@
   </section>
 
   <section>
+    <h2>The second axis: color roles</h2>
+    <p>A part says what a shape <em>is</em>. That has to come from a person, and 345 assets is a lot
+    of people-hours. A color role says what color a shape <em>takes</em>, and that can be read
+    straight out of the artwork. Every painted shape carries one of each, so a theme can select on
+    either, or on both together.</p>
+
+    <p>Roles are derived by <code>scripts/derive-roles.mjs</code>, deterministically and with no
+    model in the loop, so the same drawing always produces the same addresses. Four decisions shape
+    the output:</p>
+
+    <div class="parts">
+      <div class="part p1"><span class="k">the unit is a fill</span><h3>Not a color stop</h3>
+        <p>A three-stop gradient is one member that owns its stops, not three members. The first
+        version deduplicated stops and produced ramps eleven members deep that nobody could address.
+        Fills collapse 5,725 stops to 1,635 across the library.</p></div>
+      <div class="part p2"><span class="k">grouped by chromaticity</span><h3>Not by full distance</h3>
+        <p>Lightness has by far the widest range, so clustering on full color distance sorts an icon
+        into light shapes and dark shapes rather than into families. Grouping on hue and chroma, and
+        reserving lightness for the member number, keeps the two numbers independent.</p></div>
+      <div class="part p3"><span class="k">two to four groups</span><h3>A floor, not a target</h3>
+        <p>Two is the minimum so a two-color theme always has something to bind to. Four is the
+        ceiling so the addresses stay speakable. 91% of colored assets land at four members or fewer
+        in their deepest group.</p></div>
+      <div class="part p4"><span class="k">held</span><h3>Intentional white and black</h3>
+        <p>A white letterform is meant to stay white in most themes, but not all. Held parts are
+        addressable and sit outside the color system; whether a theme touches them is that
+        theme&rsquo;s choice. 182 of 345 colored assets have at least one.</p></div>
+    </div>
+
+    <h3>Word, derived</h3>
+    <p>Nine painted shapes, seventeen paint stops, seven distinct fills. Each member below is exactly
+    one shape, which is the interesting part: the color axis nearly recovers the structural partition
+    without being told what a base or an emblem is.</p>
+    <table class="roles-table">
+      <thead><tr><th>address</th><th></th><th>fill</th><th>covers</th></tr></thead>
+      <tbody><tr><td><code>group1.member1</code></td><td><span class="ramp-chip" style="background:#1657f4" title="#1657f4"></span><span class="ramp-chip" style="background:#0036c4" title="#0036c4"></span></td><td>#1657f4 &rarr; #0036c4</td><td>shape 0</td></tr><tr><td><code>group1.member2</code></td><td><span class="ramp-chip" style="background:#367af2" title="#367af2"></span><span class="ramp-chip" style="background:#001a8f" title="#001a8f"></span></td><td>#367af2 &rarr; #001a8f</td><td>shape 6</td></tr><tr><td><code>group2.member1</code></td><td><span class="ramp-chip" style="background:#58aafe" title="#58aafe"></span></td><td>#58aafe</td><td>shape 7</td></tr><tr><td><code>group2.member2</code></td><td><span class="ramp-chip" style="background:#66c0ff" title="#66c0ff"></span><span class="ramp-chip" style="background:#0094f0" title="#0094f0"></span></td><td>#66c0ff &rarr; #0094f0</td><td>shape 1</td></tr><tr><td><code>group3.member1</code></td><td><span class="ramp-chip" style="background:#e4a7fe" title="#e4a7fe"></span></td><td>#e4a7fe</td><td>shape 5</td></tr><tr><td><code>group3.member2</code></td><td><span class="ramp-chip" style="background:#d471ff" title="#d471ff"></span></td><td>#d471ff</td><td>shape 2</td></tr><tr><td><code>group3.member3</code></td><td><span class="ramp-chip" style="background:#4f006f" title="#4f006f"></span></td><td>#4f006f</td><td>shape 3</td></tr><tr><td><code>group4.member1</code></td><td><span class="ramp-chip" style="background:#9deaff" title="#9deaff"></span><span class="ramp-chip" style="background:#3bd5ff" title="#3bd5ff"></span></td><td>#9deaff &rarr; #3bd5ff</td><td>shape 4</td></tr><tr><td><code>held.1</code></td><td><span class="ramp-chip" style="background:#ffffff" title="#ffffff"></span></td><td>#ffffff</td><td>shape 8</td></tr></tbody>
+    </table>
+    <p class="fig-note">Group and member numbers are <strong>frozen</strong> once written. Derived
+    indices are unstable by nature: add a darker stop on a redraw and member 2 quietly becomes
+    member 3, and anything bound downstream now points somewhere else. Each mapping is stored with a
+    hash of the paint it came from, and <code>npm run roles:check</code> fails loudly on drift rather
+    than renumbering behind you.</p>
+
+    <h3>Where this does not reach</h3>
+    <p><strong>47 of the 345 colored assets cannot reach two groups on color alone.</strong> Once
+    white and black are held out they have fewer than two distinct fills, so there is nothing for a
+    two-color theme to bind to. GitHub is one flat black path; Skype and LinkedIn are single-hue
+    marks. These are the assets that make the part axis necessary rather than merely useful, and
+    they are the reason both axes are being built rather than one.</p>
+    <p class="fig-note">Still open: how many groups to cut at. Choosing the largest gap in the merge
+    tree always answers two, because the final merge into one cluster is always the biggest jump.
+    Silhouette answers three or four and will split two shades of one hue apart, as it does with
+    Word&rsquo;s two purple blooms above. Neither is right everywhere, so the criterion is a flag
+    rather than a constant until there is enough output to judge it on.</p>
+  </section>
+
+  <section>
     <h2>How it is written down</h2>
     <p>In the SVG, as an attribute on each shape. Not in <code>meta.json</code> as a list of shape
     numbers, because shape order is decided by whatever exported the file, and the next Figma
@@ -422,7 +488,7 @@
     <p>Here is Word, one shape at a time, grouped under the part each one belongs to. Nine shapes,
     three parts. Nothing in the file says so until the attribute does.</p>
 <!-- generated:written -->
-<div class="shapes"><div class="sgroup" style="--pc:var(--p-container);--pcb:var(--p-container-bg)"><div class="sgroup-head"><code>data-part="plate"</code><span class="sgroup-n">6 shapes</span></div><div class="chips"><figure class="chip"><svg role="img" aria-hidden="true" width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#w0-product-word-standard-48-paint0_radial_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint1_linear_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w0-product-word-standard-48-paint4_linear_365340_3485)" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w0-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w0-product-word-standard-48-paint6_radial_365340_3485)" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w0-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
+<div class="shapes"><div class="sgroup" style="--pc:var(--p-container);--pcb:var(--p-container-bg)"><div class="sgroup-head"><code>data-part="base"</code><span class="sgroup-n">6 shapes</span></div><div class="chips"><figure class="chip"><svg role="img" aria-hidden="true" width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#w0-product-word-standard-48-paint0_radial_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint1_linear_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w0-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w0-product-word-standard-48-paint4_linear_365340_3485)" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w0-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w0-product-word-standard-48-paint6_radial_365340_3485)" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w0-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
 <radialGradient id="w0-product-word-standard-48-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
 <stop offset="0.180414" stop-color="#1657F4"/>
 <stop offset="0.574542" stop-color="#0036C4"/>
@@ -620,7 +686,7 @@
 <stop offset="0.586954" stop-color="#2763E5" stop-opacity="0"/>
 <stop offset="0.973806" stop-color="#58AAFE"/>
 </radialGradient>
-</defs></svg><figcaption>6</figcaption></figure></div><p class="sgroup-say">The document</p></div><div class="sgroup" style="--pc:var(--p-badge);--pcb:var(--p-badge-bg)"><div class="sgroup-head"><code>data-part="badge"</code><span class="sgroup-n">2 shapes</span></div><div class="chips"><figure class="chip"><svg role="img" aria-hidden="true" width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#w6-product-word-standard-48-paint0_radial_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint1_linear_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w6-product-word-standard-48-paint4_linear_365340_3485)" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w6-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w6-product-word-standard-48-paint6_radial_365340_3485)"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w6-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
+</defs></svg><figcaption>6</figcaption></figure></div><p class="sgroup-say">The document</p></div><div class="sgroup" style="--pc:var(--p-emblem);--pcb:var(--p-emblem-bg)"><div class="sgroup-head"><code>data-part="emblem"</code><span class="sgroup-n">2 shapes</span></div><div class="chips"><figure class="chip"><svg role="img" aria-hidden="true" width="46" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#w6-product-word-standard-48-paint0_radial_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint1_linear_365340_3485)" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6" opacity="0.055"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#w6-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w6-product-word-standard-48-paint4_linear_365340_3485)" opacity="0.055"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#w6-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w6-product-word-standard-48-paint6_radial_365340_3485)"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#w6-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
 <radialGradient id="w6-product-word-standard-48-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
 <stop offset="0.180414" stop-color="#1657F4"/>
 <stop offset="0.574542" stop-color="#0036C4"/>
@@ -722,9 +788,9 @@
 </defs></svg><figcaption>9</figcaption></figure></div><p class="sgroup-say">The letterform</p></div></div><p class="fig-note">Every shape carries the attribute; nothing carries a shape number. Shape order is decided by whatever exported the file, so the next re-export from Figma would silently invalidate an index. A name survives it.</p>
 <!-- /generated:written -->
     <pre><span class="g">&lt;!-- Travels with the artwork, survives a re-render. --&gt;</span>
-&lt;path <span class="b">data-part</span>=<span class="b">"plate"</span> d="M9 33.09L23 16..." fill="url(#g0)"/&gt;
-&lt;path <span class="b">data-part</span>=<span class="b">"plate"</span> d="M9 21.04C9 18.55..." fill="url(#g1)"/&gt;
-&lt;rect <span class="b">data-part</span>=<span class="b">"badge"</span> x="4" y="23" width="16"... /&gt;
+&lt;path <span class="b">data-part</span>=<span class="b">"base"</span> d="M9 33.09L23 16..." fill="url(#g0)"/&gt;
+&lt;path <span class="b">data-part</span>=<span class="b">"base"</span> d="M9 21.04C9 18.55..." fill="url(#g1)"/&gt;
+&lt;rect <span class="b">data-part</span>=<span class="b">"emblem"</span> x="4" y="23" width="16"... /&gt;
 &lt;path <span class="b">data-part</span>=<span class="b">"glyph"</span> d="M17.49 26.43..." fill="white"/&gt;
 
 <span class="g">// Six shapes, one part, one ramp. The file is still a valid standalone SVG,
@@ -736,7 +802,7 @@
     <p>Names are only useful if something outside the file can point at one. The address is the
     asset id with the part appended, and each address takes a fill, a stroke or an effect.</p>
 <!-- generated:address -->
-<div class="addr-fig"><div class="addr-parse"><span class="addr-seg"><code>windows</code><span>namespace</span></span><span class="addr-seg"><code><i>.</i>producticon</code><span>family</span></span><span class="addr-seg"><code><i>.</i>word</code><span>asset</span></span><span class="addr-seg on"><code><i>.</i>plate</code><span>part</span></span></div><div class="addr-reach"><figure class="reach"><div class="reach-art"><svg role="img" aria-hidden="true" width="96" height="96" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#addr-product-word-standard-48-paint0_radial_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint1_linear_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#addr-product-word-standard-48-paint4_linear_365340_3485)"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#addr-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#addr-product-word-standard-48-paint6_radial_365340_3485)" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#addr-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
+<div class="addr-fig"><div class="addr-parse"><span class="addr-seg"><code>windows</code><span>namespace</span></span><span class="addr-seg"><code><i>.</i>producticon</code><span>family</span></span><span class="addr-seg"><code><i>.</i>word</code><span>asset</span></span><span class="addr-seg on"><code><i>.</i>base</code><span>part</span></span></div><div class="addr-reach"><figure class="reach"><div class="reach-art"><svg role="img" aria-hidden="true" width="96" height="96" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 33.0901L23 16L39 27.1052V38.5C39 40.433 37.433 42 35.5 42H15C11.6863 42 9 39.3137 9 36V33.0901Z" fill="url(#addr-product-word-standard-48-paint0_radial_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint1_linear_365340_3485)"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint2_radial_365340_3485)" fill-opacity="0.6"/><path d="M9 21.0385C9 18.5532 11.0147 16.5385 13.5 16.5385H33.8889L39 14V26.5C39 28.433 37.433 30 35.5 30H15C11.6863 30 9 32.6863 9 36V21.0385Z" fill="url(#addr-product-word-standard-48-paint3_radial_365340_3485)" fill-opacity="0.1"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#addr-product-word-standard-48-paint4_linear_365340_3485)"/><path d="M9 12C9 8.68629 11.6863 6 15 6H35.5C37.433 6 39 7.567 39 9.5V14.5C39 16.433 37.433 18 35.5 18H15C11.6863 18 9 20.6863 9 24V12Z" fill="url(#addr-product-word-standard-48-paint5_radial_365340_3485)" fill-opacity="0.8"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#addr-product-word-standard-48-paint6_radial_365340_3485)" opacity="0.055"/><rect x="4" y="23" width="16" height="16" rx="3.25" fill="url(#addr-product-word-standard-48-paint7_radial_365340_3485)" fill-opacity="0.65" opacity="0.055"/><path d="M17.486 26.4287L15.5167 35.5705L13.1628 35.5716L12.0002 30.0859L10.7833 35.5716H8.40687L6.51453 26.4298H8.45548L9.6231 32.463L10.7833 26.4298H13.1628L14.3774 32.463L15.5167 26.4298L17.486 26.4287Z" fill="white" opacity="0.055"/><defs>
 <radialGradient id="addr-product-word-standard-48-paint0_radial_365340_3485" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.1254 41.9993) scale(47.5733 20.1494)">
 <stop offset="0.180414" stop-color="#1657F4"/>
 <stop offset="0.574542" stop-color="#0036C4"/>
@@ -769,7 +835,7 @@
 <stop offset="0.586954" stop-color="#2763E5" stop-opacity="0"/>
 <stop offset="0.973806" stop-color="#58AAFE"/>
 </radialGradient>
-</defs></svg></div><figcaption>lit: the 6 shapes this address moves</figcaption></figure><div class="reach-say"><p><strong>One address, six shapes.</strong> Not one per shape &mdash; that is the whole point of a part. The tile and the letterform are untouched, because they are addressed separately.</p><div class="ops"><span>fill</span><span>stroke</span><span>effect</span></div><p class="fig-note">These icons have no strokes at all, so there is nothing to modify. What the address makes possible is <em>authoring</em> one: put a two pixel outline on the plate of every product icon and leave the glyph alone.</p></div></div></div>
+</defs></svg></div><figcaption>lit: the 6 shapes this address moves</figcaption></figure><div class="reach-say"><p><strong>One address, six shapes.</strong> Not one per shape &mdash; that is the whole point of a part. The tile and the letterform are untouched, because they are addressed separately.</p><div class="ops"><span>fill</span><span>stroke</span><span>effect</span></div><p class="fig-note">These icons have no strokes at all, so there is nothing to modify. What the address makes possible is <em>authoring</em> one: put a two pixel outline on the base of every product icon and leave the glyph alone.</p></div></div></div>
 <!-- /generated:address -->
   </section>
 
@@ -783,7 +849,7 @@
         <span>Its style pipelines infer structure by bucketing shapes on luminance, because that is
         the only signal in the file. One threshold has to serve both &ldquo;this light shape is a
         detail&rdquo; and &ldquo;this light shape is the subject&rdquo;, and it cannot. That is why
-        Shield loses its checkmark. With parts declared, recolor the plate and leave the glyph
+        Shield loses its checkmark. With parts declared, recolor the base and leave the glyph
         becomes an instruction rather than a guess.</span>
       </a>
       <div class="card-link">
@@ -810,7 +876,7 @@
       pilot group, which is also the Customizer&rsquo;s default set, so a change shows up in the
       tool the same day.</p></li>
       <li><span class="dot todo">&middot;</span><p><strong>The other seventy-eight.</strong> Partly
-      detectable rather than fully manual: every plate-and-letterform icon in the library has
+      detectable rather than fully manual: every base-and-letterform icon in the library has
       exactly one white fill, and in every case it is the letterform.</p></li>
       <li><span class="dot todo">&middot;</span><p><strong>Customizer reading parts.</strong> The
       pipelines still bucket on luminance. Nothing consumes <code>data-part</code> yet.</p></li>

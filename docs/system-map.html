@@ -239,12 +239,12 @@
   <section>
     <div class="col">
       <h2>Anatomy, the layer being added now<span class="chip todo">In progress</span></h2>
-      <p>Today the smallest addressable thing is a whole asset. Anatomy makes the parts inside an asset addressable, which is what lets someone say "put a two pixel stroke on the plate of every product icon" and have it mean something. A part is a set of shapes that share a color ramp, not a contiguous region, which is why the two head circles in the Teams icon belong to the plate below them. This work is about <em>icons</em>: it feeds the Customizer and the naming grammar, not the Builder.</p>
+      <p>Today the smallest addressable thing is a whole asset. Anatomy makes the parts inside an asset addressable, which is what lets someone say "put a two pixel stroke on the base of every product icon" and have it mean something. A part is a set of shapes that share a color ramp, not a contiguous region, which is why the two head circles in the Teams icon belong to the base below them. This work is about <em>icons</em>: it feeds the Customizer and the naming grammar, not the Builder.</p>
     </div>
 
     <figure>
       <div class="figframe">
-        <svg viewBox="0 0 980 180" role="img" aria-label="Anatomy diagram: an icon is separated into plate, glyph and badge parts; each part gets an address of the form system dot family dot asset dot part, and each address can carry a fill, a stroke and an effect.">
+        <svg viewBox="0 0 980 180" role="img" aria-label="Anatomy diagram: an icon is separated into base, glyph and emblem parts; each part gets an address of the form system dot family dot asset dot part, and each address can carry a fill, a stroke and an effect.">
           <defs>
             <marker id="ea-arrow-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
               <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
@@ -265,9 +265,9 @@
           </g>
 
           <g font-family="Archivo, sans-serif" font-size="13.5" font-weight="600" fill="currentColor">
-            <text x="258" y="41">badge</text>
+            <text x="258" y="41">emblem</text>
             <text x="258" y="86">glyph</text>
-            <text x="258" y="131">plate</text>
+            <text x="258" y="131">base</text>
           </g>
           <g font-family="'IBM Plex Mono', monospace" font-size="10.5" fill="currentColor" opacity=".62">
             <text x="322" y="41">status, optional</text>
@@ -278,7 +278,7 @@
           <path d="M 528 22 L 546 22 L 546 78 L 564 82 L 546 86 L 546 142 L 528 142" fill="none" stroke="currentColor" stroke-width="1.25" opacity=".5"/>
 
           <rect x="586" y="58" width="360" height="48" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
-          <text x="766" y="80" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle" fill="var(--accent)">windows.producticon.teams.plate</text>
+          <text x="766" y="80" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle" fill="var(--accent)">windows.producticon.teams.base</text>
           <text x="766" y="97" font-family="'IBM Plex Mono', monospace" font-size="10" text-anchor="middle" fill="var(--accent)" opacity=".75">one address per part</text>
 
           <g stroke="currentColor" stroke-width="1.25" marker-end="url(#ea-arrow-b)">

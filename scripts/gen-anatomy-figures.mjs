@@ -28,8 +28,8 @@ const SOURCE = 'assets/icons/product/word/standard-48.svg';
    letterform. Read off the artwork, and the reason the figure is worth drawing:
    nothing in the file says this. */
 const PARTS = [
-  { key: 'plate', token: 'p-container', label: 'The document', shapes: [0, 1, 2, 3, 4, 5] },
-  { key: 'badge', token: 'p-badge', label: 'The tile it sits on', shapes: [6, 7] },
+  { key: 'base', token: 'p-container', label: 'The document', shapes: [0, 1, 2, 3, 4, 5] },
+  { key: 'emblem', token: 'p-emblem', label: 'The tile it sits on', shapes: [6, 7] },
   { key: 'glyph', token: 'p-glyph', label: 'The letterform', shapes: [8] },
 ];
 
@@ -91,7 +91,7 @@ const SEGMENTS = [
   ['windows', 'namespace'],
   ['producticon', 'family'],
   ['word', 'asset'],
-  ['plate', 'part'],
+  ['base', 'part'],
 ];
 
 /* The separator lives inside the segment it precedes. A dot as its own flex
@@ -103,19 +103,19 @@ const parse = SEGMENTS.map(
     `<code>${i ? '<i>.</i>' : ''}${v}</code><span>${l}</span></span>`
 ).join('');
 
-const plate = PARTS[0].shapes;
+const base = PARTS[0].shapes;
 const figureTwo =
   `<div class="addr-fig">` +
   `<div class="addr-parse">${parse}</div>` +
   `<div class="addr-reach">` +
-  `<figure class="reach"><div class="reach-art">${draw(plate, 'addr', 96)}</div>` +
-  `<figcaption>lit: the ${plate.length} shapes this address moves</figcaption></figure>` +
+  `<figure class="reach"><div class="reach-art">${draw(base, 'addr', 96)}</div>` +
+  `<figcaption>lit: the ${base.length} shapes this address moves</figcaption></figure>` +
   `<div class="reach-say"><p><strong>One address, six shapes.</strong> Not one per shape &mdash; ` +
   `that is the whole point of a part. The tile and the letterform are untouched, because they are ` +
   `addressed separately.</p>` +
   `<div class="ops"><span>fill</span><span>stroke</span><span>effect</span></div>` +
   `<p class="fig-note">These icons have no strokes at all, so there is nothing to modify. What the ` +
-  `address makes possible is <em>authoring</em> one: put a two pixel outline on the plate of every ` +
+  `address makes possible is <em>authoring</em> one: put a two pixel outline on the base of every ` +
   `product icon and leave the glyph alone.</p></div>` +
   `</div></div>`;
 
