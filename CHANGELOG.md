@@ -11,6 +11,31 @@ own schedule; this file tracks the tools and the contract.
 
 ---
 
+## Unreleased
+
+**Assets.** 61 third-party brand marks imported (32px, not recolourable, every
+one attributed in THIRD-PARTY-NOTICES.md). 32 Windows app tiles imported into
+their own `app` collection at 64px. M365 Illustrations replaced: the previous 28
+at 160px are gone, 40 new ones at 512px are in. Everything received is now
+`published` — 3,234 assets, 14,114 drawings, 980 of them flagged `generated`.
+
+**Structure.** File Icons become their own top-level group, and lose Filled: it
+was derived rather than drawn, 799 drawings deleted, and nothing upstream has
+one. The `product` collection is labelled Product Icons again, matching Fluent
+and Windows, with App Icons as a sibling rather than a suffix on seven ids.
+Schema learns `app`, `third-party` and `wip`.
+
+**Tools.** Accent swatches go flat, two colours meeting on a hard edge instead
+of blending into a bevel. The Gallery sidebar marks are System Icons from the
+library rather than shapes drawn in `app.js`, named by id in
+`scripts/inline-nav-icons.mjs`.
+
+**Figma sync.** Fixed a bug where a sync that created nothing also laid out
+nothing, so the card layout never once ran on a real file. The plugin now runs
+in Node against a fake Figma (`npm run test:plugin`), and both shipped bugs were
+reintroduced to confirm the harness fails on them. `figma-sources.json` records
+where each collection is pulled from; the pull half is still to build.
+
 ## 2.0 — 1 September 2026
 
 **Contract break.** A consumer reading `manifest.json` has to change.
@@ -39,48 +64,6 @@ Also in this release:
 - Figma sync plugin: one component set per icon with Style and Size as variant
   properties, laid out by hand into a labelled card. Fixed a bug where a sync
   that changed no artwork also changed no layout.
-
-## Unreleased
-
-- **M365 Illustrations replaced.** The previous 28 (160px, with Outline and
-  Filled derived here) are gone; 40 new ones at 512px, Standard only, are in. Ids come from a recorded node map rather than frame
-  names, because two frames are both called `Chat` and hold different drawings.
-
-- File Icons become their own top-level group, out of Product Icons. A file
-  icon is a plate carrying a label, drawn at nine sizes, which is a different
-  object from an app mark and customises differently.
-- **Filled removed from File Icons**, 799 drawings deleted. It was never
-  authored: it was derived from Standard as an inverse of Outline to square a
-  matrix that did not need squaring, and nothing upstream has one.
-
-- **Third-party icons imported.** 61 brand marks, 118 drawings, one size (32).
-  Not recolourable, since altering a third-party mark is the thing brand
-  guidelines exist to prevent. Every one names a holder in
-  THIRD-PARTY-NOTICES.md; attribution is best effort and wants confirming.
-  Outline and the missing sizes are still to derive.
-- Customizer: canvas controls moved onto the canvas, sidebar nav removed in
-  favour of the toolbar menu, "Icon style" renamed "Asset style", and the style
-  cards rebuilt around their preview and drawn from the current asset set.
-
-- `figma-sources.json` records where each collection is pulled from. Product
-  Icons now pull from the sync board the plugin writes (node `582216:23014`),
-  not the original authoring page, so edits made to the generated components
-  come back. See "The round trip" in the README.
-- `npm run test:plugin` runs the sync plugin against a fake Figma in Node.
-- Accent swatches are flat circles with a hard two-tone split, replacing the
-  beveled gradient tiles. Bridge has no gloss and no shadow, and the pair still
-  has to read, so the two colours meet on an edge rather than blending.
-- **App Icons is its own collection.** The 32 Windows app tiles moved out of
-  `product` into `app`, which drops the `-app` suffix seven of them needed to
-  avoid colliding. The collision was the library pointing out that an app tile
-  and a product mark are different objects. Smaller sizes and derived styles
-  are still to generate.
-- The `product` collection is labelled **Product Icons** again, matching what
-  Fluent and Windows call these. It sits inside a group of the same name,
-  which is repetitive and correct.
-- The Gallery sidebar marks are System Icons from the library rather than
-  shapes drawn by hand in `app.js`. `scripts/inline-nav-icons.mjs` names each
-  pick by asset id and regenerates the block, so swapping one is a line edit.
 
 ## 1.2 — 1 September 2026
 
@@ -113,26 +96,4 @@ First working library and tools.
 
 ## Not yet done
 
-Carried between sessions so it does not get lost.
-
-- **Naming grammar.** 2,665 of 3,129 ids carry a hyphen inside a name segment,
-  which Bridge's scheme does not allow. Either the ids change or the grammar
-  does, and the rename gets more expensive the longer it waits.
-- **Access control.** The site is on GitHub Pages, which has none. `DEPLOY.md`
-  has the Azure Static Web Apps and Entra path; the tenant id is still a
-  placeholder.
-- **Matrix gaps** for System Icons and Illustrations, the way Product Icons
-  were filled.
-- **The pull half of the round trip.** The plugin writes to Figma; nothing
-  reads that page back yet. First step is proving the REST API returns
-  `sharedPluginData`, which the whole design depends on.
-- **Figma sync policy.** On a conflict: overwrite, skip, or flag for review.
-- **3P licence review.** The 61 marks are now imported and public. The review
-  has not happened. If it lands badly the collection has to come out of the
-  repo and the site, which is one gitignore line and one build exclusion, but
-  the git history keeps them either way.
-- **Outline and sizes for third-party.** Only 32px exists upstream, and Outline
-  does not exist at all.
-- **Publishing bar.** Everything is published on the basis that the artwork was
-  received. There is no review step behind that, and `deprecated` has never
-  been used.
+See [NEXT.md](NEXT.md). One list, kept in one place.
