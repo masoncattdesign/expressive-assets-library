@@ -469,3 +469,9 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 .app-menu-pop a { display: flex; align-items: center; gap: 6px; }
 .app-menu-pop a .out { margin-left: auto; font-size: 10px; color: var(--ink-3); line-height: 0; }
 .app-menu-pop a.on .out { color: var(--paper); opacity: .7; }
+
+/* The eyebrow is a path rather than a label: broadest first, this page last.
+   Ancestors recede so the crumb reads as one line with an end, rather than
+   as several titles of equal weight. */
+.eyebrow { color: var(--ink-3); }
+.eyebrow b { color: var(--accent); font-weight: 500; }
