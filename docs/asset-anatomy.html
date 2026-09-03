@@ -39,7 +39,7 @@
     <em>color</em> it takes. They are derived differently and they are useful for different
     jobs.</p>
     <div class="meta">
-      <span>2 September 2026</span><span>2 axes &middot; 4 parts &middot; 4 color groups</span>
+      <span>2 September 2026</span><span>parts for people &middot; 2 color addresses &middot; 3 September</span>
       <span>12 of 90 product icons annotated</span><span>Working draft</span>
     </div>
   </header>
@@ -424,60 +424,74 @@
   </section>
 
   <section>
-    <h2>The second axis: color roles</h2>
-    <p>A part says what a shape <em>is</em>. That has to come from a person, and 345 assets is a lot
-    of people-hours. A color role says what color a shape <em>takes</em>, and that can be read
-    straight out of the artwork. Every painted shape carries one of each, so a theme can select on
-    either, or on both together.</p>
-
-    <p>Roles are derived by <code>scripts/derive-roles.mjs</code>, deterministically and with no
-    model in the loop, so the same drawing always produces the same addresses. Four decisions shape
-    the output:</p>
+    <h2>The second layer: color addresses</h2>
+    <p>Parts name what a shape <em>is</em>. That is vocabulary for people, and it has to come from
+    people. Theming needs something else: an address every shape can be given automatically, from
+    the artwork, for all 345 colored assets. There are two, and both are about color.</p>
 
     <div class="parts">
-      <div class="part p1"><span class="k">the unit is a fill</span><h3>Not a color stop</h3>
-        <p>A three-stop gradient is one member that owns its stops, not three members. The first
-        version deduplicated stops and produced ramps eleven members deep that nobody could address.
-        Fills collapse 5,725 stops to 1,635 across the library.</p></div>
-      <div class="part p2"><span class="k">grouped by chromaticity</span><h3>Not by full distance</h3>
-        <p>Lightness has by far the widest range, so clustering on full color distance sorts an icon
-        into light shapes and dark shapes rather than into families. Grouping on hue and chroma, and
-        reserving lightness for the member number, keeps the two numbers independent.</p></div>
-      <div class="part p3"><span class="k">two to four groups</span><h3>A floor, not a target</h3>
-        <p>Two is the minimum so a two-color theme always has something to bind to. Four is the
-        ceiling so the addresses stay speakable. 91% of colored assets land at four members or fewer
-        in their deepest group.</p></div>
-      <div class="part p4"><span class="k">held</span><h3>Intentional white and black</h3>
-        <p>A white letterform is meant to stay white in most themes, but not all. Held parts are
-        addressable and sit outside the color system; whether a theme touches them is that
-        theme&rsquo;s choice. 182 of 345 colored assets have at least one.</p></div>
+      <div class="part p1"><span class="k">color1.part1</span><h3>Relative</h3>
+        <p>Within this one icon, which fills belong together and how far apart the groups sit. It
+        means nothing outside the asset: <code>color1</code> is blue in one icon and green in the
+        next. What it carries is separation.</p></div>
+      <div class="part p2"><span class="k">blue.part1</span><h3>Absolute</h3>
+        <p>What color this is, in terms the whole library shares. The same fill answers to the same
+        name in every asset, so a theme can select every green without opening each file. Twelve
+        OKLCH hue bands rather than seven, since ROYGBIV has no word for teal or azure and this
+        library is mostly blue. 47 names cover all 1,726 fills.</p></div>
+      <div class="part p3"><span class="k">basecolor</span><h3>Marked, not removed</h3>
+        <p>Intentional white and black sit in the numbering like any other group, carrying a marker
+        rather than being kept in a separate list, so a theme filters instead of remembering two
+        collections. 182 of 345 assets have at least one.</p></div>
+      <div class="part p4"><span class="k">part: null</span><h3>Still a slot</h3>
+        <p>Neither address is structural. The part name stays an annotation, useful for talking
+        about an icon and for documentation, and nothing in the theming path waits on it.</p></div>
     </div>
 
+    <h3>The order is the argument</h3>
+    <p>Groups are ranked by how <strong>distinct</strong> each one is from the others, not by how
+    much of the icon it covers. That is the whole design, and the reason is what happens downstream:
+    a theme walks the list handing out its accents in order and folds whatever is left into the last
+    one. Order by distinctness and the group that stands furthest apart takes the first accent and
+    keeps its separation, while groups that were already similar collapse together at the tail,
+    which is what the artwork was saying about them in the first place.</p>
+
+    <p class="fig-note"><strong>The consequence is asymmetric.</strong> Cutting too fine is safe,
+    because surplus groups merge back at the end. Cutting too coarse is not, because a theme cannot
+    split what was already merged. When in doubt, cut higher.</p>
+
     <h3>Word, derived</h3>
-    <p>Nine painted shapes, seventeen paint stops, seven distinct fills. Each member below is exactly
-    one shape, which is the interesting part: the color axis nearly recovers the structural partition
-    without being told what a base or an emblem is.</p>
+    <p>Nine painted shapes, seventeen paint stops, seven distinct fills. Word is a blue icon with a
+    purple bloom, and the bloom is the thing that stands apart, so it leads. A two-accent theme puts
+    its first color on the purple and merges every blue into the second.</p>
     <table class="roles-table">
       <thead><tr><th>address</th><th></th><th>fill</th><th>covers</th></tr></thead>
-      <tbody><tr><td><code>group1.member1</code></td><td><span class="ramp-chip" style="background:#1657f4" title="#1657f4"></span><span class="ramp-chip" style="background:#0036c4" title="#0036c4"></span></td><td>#1657f4 &rarr; #0036c4</td><td>shape 0</td></tr><tr><td><code>group1.member2</code></td><td><span class="ramp-chip" style="background:#367af2" title="#367af2"></span><span class="ramp-chip" style="background:#001a8f" title="#001a8f"></span></td><td>#367af2 &rarr; #001a8f</td><td>shape 6</td></tr><tr><td><code>group2.member1</code></td><td><span class="ramp-chip" style="background:#58aafe" title="#58aafe"></span></td><td>#58aafe</td><td>shape 7</td></tr><tr><td><code>group2.member2</code></td><td><span class="ramp-chip" style="background:#66c0ff" title="#66c0ff"></span><span class="ramp-chip" style="background:#0094f0" title="#0094f0"></span></td><td>#66c0ff &rarr; #0094f0</td><td>shape 1</td></tr><tr><td><code>group3.member1</code></td><td><span class="ramp-chip" style="background:#e4a7fe" title="#e4a7fe"></span></td><td>#e4a7fe</td><td>shape 5</td></tr><tr><td><code>group3.member2</code></td><td><span class="ramp-chip" style="background:#d471ff" title="#d471ff"></span></td><td>#d471ff</td><td>shape 2</td></tr><tr><td><code>group3.member3</code></td><td><span class="ramp-chip" style="background:#4f006f" title="#4f006f"></span></td><td>#4f006f</td><td>shape 3</td></tr><tr><td><code>group4.member1</code></td><td><span class="ramp-chip" style="background:#9deaff" title="#9deaff"></span><span class="ramp-chip" style="background:#3bd5ff" title="#3bd5ff"></span></td><td>#9deaff &rarr; #3bd5ff</td><td>shape 4</td></tr><tr><td><code>held.1</code></td><td><span class="ramp-chip" style="background:#ffffff" title="#ffffff"></span></td><td>#ffffff</td><td>shape 8</td></tr></tbody>
+      <tbody><tr><td><code>color1.part1</code></td><td><span class="ramp-chip" style="background:#e4a7fe" title="#e4a7fe"></span></td><td>#e4a7fe</td><td>shape 5</td></tr><tr><td><code>color1.part2</code></td><td><span class="ramp-chip" style="background:#d471ff" title="#d471ff"></span></td><td>#d471ff</td><td>shape 2</td></tr><tr><td><code>color1.part3</code></td><td><span class="ramp-chip" style="background:#4f006f" title="#4f006f"></span></td><td>#4f006f</td><td>shape 3</td></tr><tr><td><code>color2.part1</code></td><td><span class="ramp-chip" style="background:#9deaff" title="#9deaff"></span><span class="ramp-chip" style="background:#3bd5ff" title="#3bd5ff"></span></td><td>#9deaff &rarr; #3bd5ff</td><td>shape 4</td></tr><tr><td><code>color3.part1</code></td><td><span class="ramp-chip" style="background:#1657f4" title="#1657f4"></span><span class="ramp-chip" style="background:#0036c4" title="#0036c4"></span></td><td>#1657f4 &rarr; #0036c4</td><td>shape 0</td></tr><tr><td><code>color3.part2</code></td><td><span class="ramp-chip" style="background:#367af2" title="#367af2"></span><span class="ramp-chip" style="background:#001a8f" title="#001a8f"></span></td><td>#367af2 &rarr; #001a8f</td><td>shape 6</td></tr><tr><td><code>color4.part1</code></td><td><span class="ramp-chip" style="background:#58aafe" title="#58aafe"></span></td><td>#58aafe</td><td>shape 7</td></tr><tr><td><code>color4.part2</code></td><td><span class="ramp-chip" style="background:#66c0ff" title="#66c0ff"></span><span class="ramp-chip" style="background:#0094f0" title="#0094f0"></span></td><td>#66c0ff &rarr; #0094f0</td><td>shape 1</td></tr><tr><td><code>color5.basecolor.part1</code></td><td><span class="ramp-chip" style="background:#ffffff" title="#ffffff"></span></td><td>#ffffff</td><td>shape 8</td></tr></tbody>
     </table>
-    <p class="fig-note">Group and member numbers are <strong>frozen</strong> once written. Derived
-    indices are unstable by nature: add a darker stop on a redraw and member 2 quietly becomes
-    member 3, and anything bound downstream now points somewhere else. Each mapping is stored with a
-    hash of the paint it came from, and <code>npm run roles:check</code> fails loudly on drift rather
-    than renumbering behind you.</p>
+    <p class="fig-note">Numbers are <strong>frozen</strong> once written. Derived indices are
+    unstable by nature: add a darker stop on a redraw and part 2 quietly becomes part 3, and
+    anything bound downstream now points somewhere else. Each mapping stores a hash of the paint it
+    came from, and <code>npm run roles:check</code> fails loudly on drift rather than renumbering
+    behind you.</p>
+
+    <h3>What the Customizer does with it</h3>
+    <p>Every other pipeline in the <a href="customizer.html">Customizer</a> infers structure by
+    bucketing shapes on luminance, because for years the drawing was the only input. One threshold
+    has to serve both &ldquo;this light shape is a detail&rdquo; and &ldquo;this light shape is the
+    subject&rdquo;, and it cannot. That is why Shield loses its checkmark. The Roles mode reads the
+    declared answer instead, and its accent count is a slider, so you can watch the fold happen:
+    Word at four accents takes four separate hues and comes apart, and at two it holds together as
+    one icon with an accent, which is what it was drawn as.</p>
 
     <h3>Where this does not reach</h3>
     <p><strong>47 of the 345 colored assets cannot reach two groups on color alone.</strong> Once
-    white and black are held out they have fewer than two distinct fills, so there is nothing for a
-    two-color theme to bind to. GitHub is one flat black path; Skype and LinkedIn are single-hue
-    marks. These are the assets that make the part axis necessary rather than merely useful, and
-    they are the reason both axes are being built rather than one.</p>
-    <p class="fig-note">Still open: how many groups to cut at. Choosing the largest gap in the merge
-    tree always answers two, because the final merge into one cluster is always the biggest jump.
-    Silhouette answers three or four and will split two shades of one hue apart, as it does with
-    Word&rsquo;s two purple blooms above. Neither is right everywhere, so the criterion is a flag
-    rather than a constant until there is enough output to judge it on.</p>
+    white and black are marked they have fewer than two distinct fills. GitHub is one flat black
+    path; Skype and LinkedIn are single-hue marks. A theme with two accents has one target on
+    these, which is not a failure so much as the honest answer: there is nothing in the drawing to
+    separate.</p>
+    <p class="fig-note">Still open: which criterion picks the group count, and whether the first
+    accent should go to the most distinct group or the largest one. Word separates those two, since
+    its bloom is the most distinct thing in it and also one of the smallest.</p>
   </section>
 
   <section>
