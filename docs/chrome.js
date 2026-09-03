@@ -90,24 +90,24 @@
   /* Every page, in one list, in one place. Until this existed the only way
      between two pages was whichever links one of them happened to carry.
 
-     Ordering is by what someone is here to do: the three tools first, then the
-     documents, with the work page at the head of them because it is the way
-     into everything else. BentoOS is a self-contained prototype and does not
-     load this file, so it appears in the menu but does not show one. */
+     Ordering is by what someone is here to do: the tools first, then the
+     documents, then the pages that live on Mason's work site. Those last are a
+     different origin, so they open in a new tab and are marked. */
   var PAGES = [
-    { group: 'Work', items: [
-      { href: 'work.html', label: 'All work' },
-      { href: 'updates.html', label: 'Updates' },
-    ] },
     { group: 'Tools', items: [
       { href: 'index.html', label: 'Gallery' },
       { href: 'customizer.html', label: 'Customizer' },
-      { href: 'bentos.html', label: 'BentoOS' },
     ] },
-    { group: 'Expressive Assets', items: [
+    { group: 'Project', items: [
       { href: 'about.html', label: 'About' },
       { href: 'system-map.html', label: 'System Map' },
       { href: 'asset-anatomy.html', label: 'Asset Anatomy' },
+    ] },
+    /* Mason's work site is a different origin. It is here because this library
+       is one entry on it, and marked because the click leaves. */
+    { group: 'Elsewhere', items: [
+      { href: 'https://masoncattdesign.github.io/work/', label: 'Work', out: true },
+      { href: 'https://masoncattdesign.github.io/work/bentos.html', label: 'BentoOS', out: true },
     ] },
   ];
 
@@ -148,7 +148,15 @@
           var a = document.createElement('a');
           a.href = item.href;
           a.textContent = item.label;
-          if (item.href === current) {
+          if (item.out) {
+            a.target = '_blank';
+            a.rel = 'noopener';
+            var m = document.createElement('span');
+            m.className = 'out';
+            m.textContent = '↗';
+            m.setAttribute('aria-hidden', 'true');
+            a.appendChild(m);
+          } else if (item.href === current) {
             a.className = 'on';
             a.setAttribute('aria-current', 'page');
           }

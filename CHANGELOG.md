@@ -13,12 +13,13 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
-- `docs/work.html` is Mason's work page rather than another library document:
-  everything in flight, banded by focus rather than by build status, with the
-  Component Library and the Marketing Compendiums linked straight through to
-  their Figma files. It carries his own brand mark and its own two-tab bar, and
-  the library's documents reach it from a muted link in the right-hand slot.
-  `docs/updates.html` is the running log to send.
+- The work page, the update log and the BentoOS prototype have left this repo
+  for `masoncattdesign.github.io/work`. They were briefly here, which was a
+  mistake: sharing this site's URL and navigation bar made a comprehensive view
+  of Mason's work read as one more page about icons, and this library is one
+  entry on that page rather than the thing it is part of. The documents link out
+  to it from the right-hand slot in the bar, and the page menu grows an
+  Elsewhere group whose links are marked because they leave.
 
 - The BentoOS icon personalization prototype is served from the site at
   `docs/bentos.html` and listed in the page menu beside the Gallery and the
