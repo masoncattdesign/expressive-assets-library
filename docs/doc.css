@@ -472,6 +472,16 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 
 /* The eyebrow is a path rather than a label: broadest first, this page last.
    Ancestors recede so the crumb reads as one line with an end, rather than
-   as several titles of equal weight. */
-.eyebrow { color: var(--ink-3); }
+   as several titles of equal weight.
+
+   max-width is reset because `p` carries a 66ch reading measure meant for body
+   prose at 16px. Applied to an 11.5px mono eyebrow that is only ~457px, so the
+   crumb wrapped at half the column width and broke "System Map" across two
+   lines while 400px of empty column sat beside it. A path is not prose and
+   does not want a measure.
+
+   Each crumb is nowrap so that when the line genuinely runs out of room it
+   breaks between names rather than through one. */
+.eyebrow { color: var(--ink-3); max-width: none; }
+.eyebrow span, .eyebrow b { white-space: nowrap; }
 .eyebrow b { color: var(--accent); font-weight: 500; }
