@@ -27,6 +27,9 @@ jobs:
       - name: Validate before publishing
         run: npm run validate
 
+      - name: Confirm the documents state the current counts
+        run: npm run stats:check
+
       - name: Assemble _site
         run: node scripts/build-site.mjs
 

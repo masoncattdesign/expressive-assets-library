@@ -18,5 +18,10 @@ jobs:
       - name: Validate metadata, artwork, and manifest
         run: npm run validate
 
+      # A document that states a stale count is wrong in the way that is
+      # hardest to notice, because it still looks finished.
+      - name: Confirm the documents state the current counts
+        run: npm run stats:check
+
       - name: Confirm the site assembles
         run: node scripts/build-site.mjs

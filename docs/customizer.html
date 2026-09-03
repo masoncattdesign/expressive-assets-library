@@ -271,6 +271,14 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
         <span class="mode-desc">Pastel illustration palette with airy gradients</span>
       </span>
     </button>
+    <button type="button" class="mode-card" data-mode="roles" onclick="setMode('roles')" aria-pressed="false">
+      <span class="mode-check"></span>
+      <span class="mode-thumb" id="thumb-roles"></span>
+      <span class="mode-text">
+        <span class="mode-name">Roles</span>
+        <span class="mode-desc">Themes the declared color groups instead of guessing</span>
+      </span>
+    </button>
     <button type="button" class="mode-card" data-mode="dichromic" onclick="setMode('dichromic')" aria-pressed="false">
       <span class="mode-check"></span>
       <span class="mode-thumb" id="thumb-dichromic"></span>
@@ -440,6 +448,17 @@ const state = {
   softSeed: '#5B7AE8',         // a soft blue default that fits the aesthetic
   softIntensity: 50,           // 0..100 — pale-and-airy → richer-but-still-soft
   softSecHue: 0,               // accent hue offset; 0 = default warm complement (+150°)
+  // ── Roles mode ──
+  // Every other pipeline on this page infers structure from luminance, because
+  // the SVG is the only thing it has. Assets now carry declared color roles, so
+  // this mode reads them instead of guessing. Groups are ordered most distinct
+  // first; a theme hands out its accents in that order and folds the rest into
+  // the last one, so dropping the accent count merges the already-similar
+  // groups and keeps the separation the artwork had.
+  rolesSeed: '#0078D4',
+  rolesAccents: 2,             // 2..4 — how many accents the theme carries
+  rolesSpread: 46,             // degrees between accent hues
+  rolesBase: false,            // theme the intentional white/black too
 };
 
 const DEFAULTS = {
@@ -450,6 +469,7 @@ const DEFAULTS = {
   flatSeed: '#0078D4', flatGradients: false, flatGradIntensity: 50, flatMode: 'duo', flatSaturation: 130, flatSecHue: 0, flatTexture: 'none',
   acrylicSeed: '#0078D4', acrylicOffset: 0, acrylicFrost: 32, acrylicSecHue: 0,
   softSeed: '#5B7AE8', softIntensity: 50, softSecHue: 0,
+  rolesSeed: '#0078D4', rolesAccents: 2, rolesSpread: 46, rolesBase: false,
 };
 
 const RESET_KEYS = {
@@ -459,6 +479,7 @@ const RESET_KEYS = {
   flat:     ['flatSeed','flatGradients','flatGradIntensity','flatMode','flatSaturation','flatSecHue','flatTexture'],
   acrylic:  ['acrylicSeed','acrylicOffset','acrylicFrost','acrylicSecHue'],
   soft:     ['softSeed','softIntensity','softSecHue'],
+  roles:    ['rolesSeed','rolesAccents','rolesSpread','rolesBase'],
 };
 
 function resetMode() {
@@ -1645,6 +1666,126 @@ function applyOutline(svgStr, seedHex, strokeW, bgMode='dark', duo=false, perSha
 // ═══════════════════════════════════════════════════════
 // FLAT TRANSFORM (4-role palette)
 // ═══════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════
+   ROLES — theme what the asset declares, not what luminance suggests
+
+   Every other pipeline here reads the drawing and infers which shapes belong
+   together, because for years the SVG was the only input. One luminance
+   threshold has to serve both "this light shape is a detail" and "this light
+   shape is the subject", and it cannot, which is why Shield loses its
+   checkmark.
+
+   Assets now carry the answer. `roles.groups` lists the fills grouped by how
+   similar they are, ordered by how far each group sits from the others, with
+   intentional white and black marked `basecolor`. This mode reads that.
+
+   Matching is by FILL, not by shape index: a member's stop list is its
+   signature, so the mapping survives the SVG being reordered, re-exported, or
+   parsed by a different tool than the one that derived it.
+   ═══════════════════════════════════════════════════════ */
+function rolesIndex(asset) {
+  if (!asset || !asset.roles || !Array.isArray(asset.roles.groups)) return null;
+  const map = new Map();
+  let themable = 0;
+  for (const g of asset.roles.groups) {
+    const gi = g.basecolor ? -1 : themable++;
+    for (const m of g.members) map.set(m.stops.join('>').toLowerCase(), { g: gi, base: !!g.basecolor });
+  }
+  return { map, count: themable };
+}
+
+/** Accents fan out from the seed. Accent 1 goes to the most distinct group. */
+function rolesAccentHues(seedHex, n, spread) {
+  try {
+    const [, , H] = hexToOklch(seedHex);
+    return Array.from({ length: n }, (_, i) => (H + i * spread) % 360);
+  } catch (e) { return Array.from({ length: n }, () => 250); }
+}
+
+/** Keep the fill's own lightness, adopt the accent's hue. That preserves the
+ *  shading a gradient was drawn with while changing what color it is. */
+function rolesRecolor(hex, hue) {
+  try {
+    const [L, C] = hexToOklch(hex);
+    if (C < 0.02) return hex;                 // a neutral inside a themed group stays neutral
+    return oklchToHex(L, C, hue);             // keep its own lightness and chroma
+  } catch (e) { return hex; }
+}
+
+function applyRoles(svgStr, asset, seedHex, accents, spread, themeBase) {
+  const idx = rolesIndex(asset);
+  if (!idx || !idx.count) return svgStr;      // no declared roles: show it untouched
+  try {
+    const doc = new DOMParser().parseFromString(svgStr, 'image/svg+xml');
+    const svg = doc.querySelector('svg');
+    if (!svg) return svgStr;
+
+    const n = Math.max(1, Math.min(accents, idx.count));
+    const hues = rolesAccentHues(seedHex, n, spread);
+    /* The fold. A group past the last accent takes the last accent, which is
+       why cutting too fine is safe and cutting too coarse is not. */
+    const hueFor = (g) => hues[Math.min(g, n - 1)];
+
+    const norm = (c) => {
+      const v = String(c || '').trim().toLowerCase();
+      if (v === 'white') return '#ffffff';
+      if (v === 'black') return '#000000';
+      if (v.length === 4 && v[0] === '#') return '#' + [...v.slice(1)].map((x) => x + x).join('');
+      return v.slice(0, 7);
+    };
+    const num = (v, d) => { const f = parseFloat(v); return Number.isFinite(f) ? f : d; };
+
+    /* The signature has to be built the way the derivation built it, or nothing
+       matches. Two details do the damage if missed:
+
+       Stops the derivation judged invisible were never stored, so a live
+       gradient carrying its fade-out anchors has more stops than its member
+       does. Visibility depends on the REFERENCING element's fill-opacity, not
+       on the gradient alone, so signatures are resolved per element rather than
+       per gradient definition.
+
+       Every stop is then recolored, the invisible ones included, so a bloom
+       fades toward the new hue rather than the old one. */
+    const GHOST = 0.05;
+    const grads = new Map();
+    for (const g of doc.querySelectorAll('linearGradient, radialGradient'))
+      if (g.id) grads.set(g.id, g);
+
+    const repaint = (stops, hue) => stops.forEach((st) => {
+      const c = norm(st.getAttribute('stop-color') || '#000000');
+      st.setAttribute('stop-color', rolesRecolor(c, hue));
+    });
+
+    let touched = 0;
+    for (const el of doc.querySelectorAll('path, rect, circle, ellipse, polygon')) {
+      const f = el.getAttribute('fill');
+      if (!f || f === 'none') continue;
+      const fo = num(el.getAttribute('fill-opacity'), 1);
+
+      const ref = f.match(/^url\(#(.+)\)$/);
+      if (ref) {
+        const grad = grads.get(ref[1]);
+        if (!grad) continue;
+        const stops = [...grad.querySelectorAll('stop')];
+        if (!stops.length) continue;
+        const visible = stops.filter((st) => num(st.getAttribute('stop-opacity'), 1) * fo > GHOST);
+        const hit = idx.map.get(visible.map((st) => norm(st.getAttribute('stop-color') || '#000000')).join('>'));
+        if (!hit || (hit.base && !themeBase)) continue;
+        repaint(stops, hit.base ? hues[n - 1] : hueFor(hit.g));
+        touched++;
+      } else {
+        if (fo <= GHOST) continue;
+        const hit = idx.map.get(norm(f));
+        if (!hit || (hit.base && !themeBase)) continue;
+        el.setAttribute('fill', rolesRecolor(norm(f), hit.base ? hues[n - 1] : hueFor(hit.g)));
+        touched++;
+      }
+    }
+    if (!touched) return svgStr;
+    return new XMLSerializer().serializeToString(doc);
+  } catch (e) { return svgStr; }
+}
+
 function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
 function hsl(h,s,l){return`hsl(${Math.round(h)},${Math.round(s)}%,${Math.round(l)}%)`;}
 
@@ -2570,8 +2711,11 @@ function applyAcrylic(svgStr, seedHex, bgMode='dark', offsetPct=8, frost=32, sec
   }
 }
 
-function transformSvg(svgStr,iconName,forceOriginal){
+function transformSvg(svgStr,iconName,forceOriginal,asset){
   if(state.mode==='default')return svgStr;
+  if(state.mode==='roles'){
+    return applyRoles(svgStr,asset,state.rolesSeed,state.rolesAccents,state.rolesSpread,state.rolesBase);
+  }
   // Copilot is rainbow by design — in any Original sub-mode, single-hue
   // treatment loses its multi-color identity. For Tinted we pass through
   // unchanged (the tint pipeline doesn't have a clean per-shape variant).
@@ -2630,19 +2774,20 @@ function transformSvg(svgStr,iconName,forceOriginal){
   return svgStr;
 }
 
-async function renderIconCell(name,svgStr,forceOriginal){
+async function renderIconCell(name,svgStr,forceOriginal,asset){
   const cell=document.createElement('div');cell.className='icon-cell';
-  const transformed=transformSvg(svgStr,name,forceOriginal);
+  const transformed=transformSvg(svgStr,name,forceOriginal,asset);
   cell.innerHTML=transformed+`<div class="icon-label">${name}</div>`;
   const svg=cell.querySelector('svg');if(svg){svg.setAttribute('width','64');svg.setAttribute('height','64');}
   // Right-click → download this icon's current SVG. Source preserved on the
   // cell so the export pipeline re-runs transformSvg from the unmodified input.
   cell._origSvg=svgStr;
   cell._iconName=name;
+  cell._asset=asset||null;
   cell.title='Right-click to download SVG';
   cell.addEventListener('contextmenu',(e)=>{
     e.preventDefault();
-    exportSingleSvg(name,svgStr);
+    exportSingleSvg(name,svgStr,asset);
   });
   return cell;
 }
@@ -2683,6 +2828,18 @@ async function renderThumbs(){
   const outlineThumb=document.getElementById('thumb-outline');if(outlineThumb){outlineThumb.innerHTML='';samples.forEach(s=>{const t=applyOutline(s,'#0078D4',50,'dark',true);const el=makeSvgThumb(t);if(el)outlineThumb.appendChild(el);});}
   const flatThumb=document.getElementById('thumb-flat');if(flatThumb){flatThumb.innerHTML='';const pal=generateFlatPalette('#0078D4',1.3,true);samples.forEach(s=>{const t=applyFlat(s,pal,false);const el=makeSvgThumb(t);if(el)flatThumb.appendChild(el);});}
   const acrylicThumb=document.getElementById('thumb-acrylic');if(acrylicThumb){acrylicThumb.innerHTML='';samples.forEach(s=>{const t=applyAcrylic(s,'#0078D4','dark',8,32,0);const el=makeSvgThumb(t);if(el)acrylicThumb.appendChild(el);});}
+  const rolesThumb=document.getElementById('thumb-roles');
+  if(rolesThumb){
+    rolesThumb.innerHTML='';
+    // The thumb draws from whatever is on the canvas, so it shows the real
+    // pipeline when the set carries roles and the untouched artwork when not.
+    const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles);
+    const src=withRoles.length?withRoles.slice(0,3):[];
+    (src.length?src:samples.map(sv=>({svg:sv,roles:null}))).forEach(a=>{
+      const t=a.roles?applyRoles(a.svg,a,'#0078D4',2,46,false):a.svg;
+      const el=makeSvgThumb(t);if(el)rolesThumb.appendChild(el);
+    });
+  }
   const softThumb=document.getElementById('thumb-soft');if(softThumb){softThumb.innerHTML='';samples.forEach(s=>{const t=applySoft(s,'#5B7AE8',50,0);const el=makeSvgThumb(t);if(el)softThumb.appendChild(el);});}
 }
 
@@ -2894,6 +3051,54 @@ function renderControls(){
     wireSlider('soft-sechue','v-soft-sechue','softSecHue','°');
     wireSlider('soft-intensity','v-soft-intensity','softIntensity','');
   }
+  if(state.mode==='roles'){
+    const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles&&a.roles.groups);
+    const counts=withRoles.map(a=>a.roles.groups.filter(g=>!g.basecolor).length);
+    const maxG=counts.length?Math.max(...counts):0;
+    const folded=counts.filter(c=>c>state.rolesAccents).length;
+    const segBtn=(n)=>{const on=state.rolesAccents===n;
+      return `<button type="button" onclick="setRolesAccents(${n})" style="flex:1;padding:6px 0;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${n}</button>`;};
+    panel.innerHTML=`
+      <div class="ctrl-label" style="display:flex;align-items:center">Roles <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
+      <div class="ctrl-section" id="roles-preset-section"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Seed color</div>
+        <div class="ctrl-row"><input type="color" id="roles-seed-c" value="${state.rolesSeed}"><input class="hex-in" id="roles-seed-h" value="${state.rolesSeed}" maxlength="7"></div>
+        <div class="seed-derived" id="roles-derived"></div>
+      </div>
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Accents in the theme</div>
+        <div style="display:flex;gap:6px;margin-bottom:8px">${segBtn(2)}${segBtn(3)}${segBtn(4)}</div>
+        <div class="slider-row"><span class="slabel">Hue step</span><input type="range" id="roles-spread" min="12" max="120" value="${state.rolesSpread}" step="1"><span class="sval" id="v-roles-spread">${state.rolesSpread}°</span></div>
+        <div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.rolesBase?' on':''}" id="tog-rolesBase" onclick="toggleRoles('rolesBase')"></span></div>
+      </div>
+      <div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:6px 0;line-height:1.5">
+        ${withRoles.length?
+          `${withRoles.length} of ${SET.length} on the canvas carry declared roles, up to ${maxG} groups.
+           ${folded?`${folded} have more groups than accents, so their least distinct groups share the last accent.`:'Every group has its own accent right now.'}
+           Accent 1 lands on the most distinct group in each icon, which is why the same seed reads differently per asset.`
+          :'Nothing on the canvas carries roles yet. Run npm run roles, or pick assets from the library.'}
+      </div>`;
+    document.getElementById('roles-preset-section').appendChild(renderPresets('rolesSeed','roles-seed-c','roles-seed-h'));
+    wireSeed('roles-seed','rolesSeed');updateRolesDerived();
+    wireSlider('roles-spread','v-roles-spread','rolesSpread','°');
+  }
+}
+
+function setRolesAccents(n){state.rolesAccents=n;renderControls();renderIcons();}
+function toggleRoles(key){state[key]=!state[key];const t=document.getElementById('tog-'+key);if(t)t.classList.toggle('on',state[key]);renderIcons();}
+function updateRolesDerived(){
+  const el=document.getElementById('roles-derived');if(!el)return;
+  const n=state.rolesAccents;
+  const hues=rolesAccentHues(state.rolesSeed,n,state.rolesSpread);
+  let sw='';
+  hues.forEach((h,i)=>{
+    let hex=state.rolesSeed;
+    try{const[L,C]=hexToOklch(state.rolesSeed);hex=oklchToHex(L,C,h);}catch(e){}
+    sw+=`<span title="accent ${i+1}" style="display:inline-block;width:22px;height:14px;border-radius:3px;background:${hex};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);margin-right:4px"></span>`;
+  });
+  el.innerHTML=sw+`<span style="font-size:11px;color:var(--text3);margin-left:4px">accent 1 &rarr; ${n}</span>`;
 }
 
 function wireSeed(prefix,stateKey){
@@ -2903,7 +3108,7 @@ function wireSeed(prefix,stateKey){
   hEl.addEventListener('input',()=>{if(/^#[0-9a-fA-F]{6}$/.test(hEl.value)){state[stateKey]=hEl.value;cEl.value=hEl.value;syncPresetActive(stateKey);onSeedUpdate();}});
 }
 function onSeedUpdate(){updateAllDerived();renderIcons();}
-function updateAllDerived(){updateTintDerived();updateDichDerived();updateOutlineDerived();updateFlatDerived();updateAcrylicDerived();updateSoftDerived();}
+function updateAllDerived(){updateTintDerived();updateDichDerived();updateOutlineDerived();updateFlatDerived();updateAcrylicDerived();updateSoftDerived();updateRolesDerived();}
 
 function updateTintDerived(){
   const el=document.getElementById('tint-derived');if(!el)return;
@@ -3009,6 +3214,7 @@ function currentExportConfig(){
   else if(state.mode==='flat'){cfg.seed=state.flatMode==='original'?null:state.flatSeed;cfg.modeOption=state.flatMode;}
   else if(state.mode==='acrylic'){cfg.seed=state.acrylicSeed;}
   else if(state.mode==='soft'){cfg.seed=state.softSeed;}
+  else if(state.mode==='roles'){cfg.seed=state.rolesSeed;cfg.modeOption=state.rolesAccents+'accent';}
   return cfg;
 }
 // Match a hex to a preset name. Case-insensitive. Returns hex sans '#' if no match.
@@ -3044,10 +3250,10 @@ function downloadFile(filename,content,mime='image/svg+xml'){
   setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},0);
 }
 // Re-run the transform pipeline for one icon and return its current SVG markup.
-async function exportSingleSvg(iconName,svgSrc){
+async function exportSingleSvg(iconName,svgSrc,asset){
   const isM365=iconName in SVG_M365_ORDERED;
   const force=isM365&&state.m365Recolor==='off';
-  const transformed=transformSvg(svgSrc,iconName,force);
+  const transformed=transformSvg(svgSrc,iconName,force,asset);
   const cfg=currentExportConfig();
   const filename=buildExportFilename(iconName,cfg);
   downloadFile(filename,svgForExport(transformed));
@@ -3280,7 +3486,8 @@ async function fetchAsset(id) {
   try {
     const res = await fetch(path, { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    return { id, name: asset.name, svg: resolveColorVars(await res.text()) };
+    // roles ride along so the Roles pipeline has the declared answer
+    return { id, name: asset.name, svg: resolveColorVars(await res.text()), roles: asset.roles || null };
   } catch (err) {
     return null;
   }
@@ -3325,7 +3532,7 @@ async function renderIcons() {
   if (!row || !Array.isArray(SET)) return;
   const token = (_setToken = (_setToken || 0) + 1);
   const cells = await Promise.all(SET.map(async (a, i) => {
-    const cell = await renderIconCell(a.name, a.svg, false);
+    const cell = await renderIconCell(a.name, a.svg, false, a);
     cell.classList.toggle('picking', i === picking);
     cell.title = 'Click to swap, right-click to download the SVG';
     cell.addEventListener('click', () => selectSlot(i));

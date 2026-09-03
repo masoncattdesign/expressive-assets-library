@@ -13,6 +13,14 @@ own schedule; this file tracks the tools and the contract.
 
 ## Unreleased
 
+- `npm run stats` writes the library's own counts into About and the System Map
+  from `manifest.json`. Both pages had drifted: they claimed 3,129 assets in 6
+  collections when the library held 3,234 in 8, About said File Icons ship
+  Filled after Filled was deleted, and one System Map tile read "0 published" on
+  a page whose own paragraph said everything is published. The pages now carry
+  marks instead of numbers. `npm run stats:check` is the read-only form and runs
+  in CI, so a document that states a stale count cannot publish.
+
 - The work page, the update log and the BentoOS prototype have left this repo
   for `masoncattdesign.github.io/work`. They were briefly here, which was a
   mistake: sharing this site's URL and navigation bar made a comprehensive view

@@ -40,8 +40,14 @@ quietly pass a scaled or derived drawing off as authored.
 ## Before every commit
 
 ```
-npm run manifest && npm run validate
+npm run manifest && npm run stats && npm run validate
 ```
+
+`stats` writes the library's counts into About and the System Map from
+`manifest.json`. Those pages carry marks rather than numbers, so a count is
+never typed and never has to be remembered. `npm run stats:check` is the same
+thing read-only and is what CI runs; if it fails, run `stats` and commit the
+result rather than editing the number by hand.
 
 Validation must end `✓ N assets valid; manifest.json is current.` If a script
 changed the asset tree, `npm run notices` too.
