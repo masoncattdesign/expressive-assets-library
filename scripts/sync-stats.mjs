@@ -22,6 +22,10 @@
  * what a collection is for cannot be derived, and a new collection should have
  * to be described by a person before it appears there.
  *
+ * The `head` and `date` marks are written but not verified. Both name the state
+ * before the commit that carries them, so checking them would fail every push
+ * on a build where nothing was actually wrong.
+ *
  * Run: npm run stats          write the numbers
  *      npm run stats:check    exit 1 if any are stale, and say which
  */
@@ -112,13 +116,31 @@ const blocks = {
 const unknown = [];
 const stale = [];
 
+/* Two of these marks cannot be verified against HEAD, and checking them fails
+   every push by construction.
+
+   `head` records the commit a page was generated at. `npm run stats` reads it
+   before the commit that carries the result exists, so the page always names
+   the commit before its own. In CI, HEAD is that carrying commit, so the value
+   is one behind and --check fails. Nothing is wrong; the mark is a provenance
+   stamp, not a claim about the library.
+
+   `date` and `date-short` are the same shape of problem in slower motion:
+   a page generated yesterday is stale by midnight, on a build that changed
+   nothing.
+
+   So these are WRITTEN by `npm run stats` and not verified by `--check`.
+   The counts are what can meaningfully go stale, and those are still checked. */
+const UNVERIFIED = new Set(['head', 'date', 'date-short']);
+
 function fill(html, file) {
   // <span data-stat="assets">…</span>
   html = html.replace(
     /(<(\w+)(?=[\s>])[^>]*\bdata-stat="([^"]+)"[^>]*>)([\s\S]*?)(<\/\2>)/g,
     (whole, open, tag, key, inner, close) => {
       if (!(key in stats)) { unknown.push(`${file}: data-stat="${key}"`); return whole; }
-      if (inner !== stats[key]) stale.push(`${file}: ${key} is "${inner}", should be "${stats[key]}"`);
+      if (inner !== stats[key] && !UNVERIFIED.has(key))
+        stale.push(`${file}: ${key} is "${inner}", should be "${stats[key]}"`);
       return open + stats[key] + close;
     }
   );
