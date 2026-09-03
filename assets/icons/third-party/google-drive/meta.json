@@ -84,14 +84,64 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#3e82f7"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.306
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#fdd04a"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.254
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#2eb571"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.218
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#3e82f7"
             ],
@@ -102,10 +152,10 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "light-yellow",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "light-yellow.part1",
             "stops": [
               "#fdd04a"
             ],
@@ -116,10 +166,10 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "teal",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "teal.part1",
             "stops": [
               "#2eb571"
             ],
@@ -130,21 +180,23 @@
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group3.member1",
+        "role": "color3.part1",
+        "archetype": "teal.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       }
     ],

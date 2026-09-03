@@ -242,7 +242,7 @@
         "derivedBy",
         "k",
         "groups",
-        "held",
+        "archetypes",
         "shapes",
         "hash"
       ],
@@ -263,17 +263,27 @@
         },
         "groups": {
           "type": "array",
+          "description": "The relative address. Groups are ordered most distinct first, so a theme handing out colors in order keeps the separation the artwork had and folds the already-similar groups together at the tail.",
           "items": {
             "type": "object",
             "additionalProperties": false,
             "required": [
               "id",
+              "basecolor",
               "members"
             ],
             "properties": {
               "id": {
                 "type": "string",
-                "pattern": "^group[0-9]+$"
+                "pattern": "^color[0-9]+$"
+              },
+              "basecolor": {
+                "type": "boolean",
+                "description": "Intentional white or black. Addressable, but not themed unless a theme asks for it."
+              },
+              "spread": {
+                "type": "number",
+                "description": "Mean chromaticity distance from this group to every other. Absent on a basecolor group."
               },
               "members": {
                 "type": "array",
@@ -289,7 +299,7 @@
                   "properties": {
                     "id": {
                       "type": "string",
-                      "pattern": "^(group[0-9]+\\.member[0-9]+|held\\.[0-9]+)$"
+                      "pattern": "^color[0-9]+\\.(basecolor\\.)?part[0-9]+$"
                     },
                     "stops": {
                       "type": "array",
@@ -315,52 +325,16 @@
             }
           }
         },
-        "held": {
-          "type": "array",
-          "description": "Intentional white and black. Addressable, outside the color system, themed only when a theme asks.",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "id",
-              "stops",
-              "shapes"
-            ],
-            "properties": {
-              "id": {
-                "type": "string",
-                "pattern": "^(group[0-9]+\\.member[0-9]+|held\\.[0-9]+)$"
-              },
-              "stops": {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                  "type": "string",
-                  "pattern": "^#[0-9a-f]{6}$"
-                },
-                "description": "The fill this member is, in stop order. One entry is a flat fill; more is a gradient ramp."
-              },
-              "shapes": {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                  "type": "integer",
-                  "minimum": 0
-                },
-                "description": "Indices of the painted shapes carrying this fill, in document order."
-              }
-            }
-          }
-        },
         "shapes": {
           "type": "array",
-          "description": "Both addresses for every painted shape. `part` is the structural name and stays null until it is harvested from Figma layer names.",
+          "description": "Both addresses for every painted shape. `part` is a structural name, is not part of either scheme, and stays null.",
           "items": {
             "type": "object",
             "additionalProperties": false,
             "required": [
               "i",
               "role",
+              "archetype",
               "part"
             ],
             "properties": {
@@ -369,6 +343,12 @@
                 "minimum": 0
               },
               "role": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "archetype": {
                 "type": [
                   "string",
                   "null"
@@ -386,6 +366,61 @@
         "hash": {
           "type": "string",
           "pattern": "^[0-9a-f]{16}$"
+        },
+        "archetypes": {
+          "type": "array",
+          "description": "The absolute address. The same fill answers to the same name in every asset in the library, so a theme can select every green without opening each file.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "members"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^(light-|deep-|muted-|muted-deep-)?[a-z]+$"
+              },
+              "members": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "stops",
+                    "shapes"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z-]+\\.part[0-9]+$"
+                    },
+                    "stops": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "pattern": "^#[0-9a-f]{6}$"
+                      },
+                      "description": "The fill this member is, in stop order. One entry is a flat fill; more is a gradient ramp."
+                    },
+                    "shapes": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "description": "Indices of the painted shapes carrying this fill, in document order."
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

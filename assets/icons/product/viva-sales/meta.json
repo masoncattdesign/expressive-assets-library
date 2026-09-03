@@ -65,29 +65,15 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
-            "stops": [
-              "#53c99e",
-              "#108057"
-            ],
-            "shapes": [
-              0
-            ]
-          }
-        ]
-      },
-      {
-        "id": "group2",
-        "members": [
-          {
-            "id": "group2.member1",
+            "id": "color1.part1",
             "stops": [
               "#118f61",
               "#074b32"
@@ -96,13 +82,15 @@
               1
             ]
           }
-        ]
+        ],
+        "spread": 0.025
       },
       {
-        "id": "group3",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group3.member1",
+            "id": "color2.part1",
             "stops": [
               "#6ae4b7",
               "#4eca9d",
@@ -112,24 +100,82 @@
               2
             ]
           }
+        ],
+        "spread": 0.022
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#53c99e",
+              "#108057"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.016
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "teal",
+        "members": [
+          {
+            "id": "teal.part1",
+            "stops": [
+              "#6ae4b7",
+              "#4eca9d",
+              "#27b17f"
+            ],
+            "shapes": [
+              2
+            ]
+          },
+          {
+            "id": "teal.part2",
+            "stops": [
+              "#53c99e",
+              "#108057"
+            ],
+            "shapes": [
+              0
+            ]
+          },
+          {
+            "id": "teal.part3",
+            "stops": [
+              "#118f61",
+              "#074b32"
+            ],
+            "shapes": [
+              1
+            ]
+          }
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "teal.part2",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "teal.part3",
         "part": null
       },
       {
         "i": 2,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "teal.part1",
         "part": null
       }
     ],

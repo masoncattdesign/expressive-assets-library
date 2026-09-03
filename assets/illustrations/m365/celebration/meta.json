@@ -32,14 +32,107 @@
   "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
   "roles": {
     "from": "standard-512.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#3073fd"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.3
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#fec235"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "color2.part2",
+            "stops": [
+              "#81b93a"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.292
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#d3b6f8"
+            ],
+            "shapes": [
+              2,
+              6
+            ]
+          },
+          {
+            "id": "color3.part2",
+            "stops": [
+              "#fd99c0"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "color3.part3",
+            "stops": [
+              "#fc2c80"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ],
+        "spread": 0.264
+      },
+      {
+        "id": "color4",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color4.basecolor.part1",
+            "stops": [
+              "#f5f5f5"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#3073fd"
             ],
@@ -50,10 +143,24 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "green",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "green.part1",
+            "stops": [
+              "#81b93a"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-magenta",
+        "members": [
+          {
+            "id": "light-magenta.part1",
             "stops": [
               "#d3b6f8"
             ],
@@ -61,9 +168,28 @@
               2,
               6
             ]
-          },
+          }
+        ]
+      },
+      {
+        "id": "light-yellow",
+        "members": [
           {
-            "id": "group2.member2",
+            "id": "light-yellow.part1",
+            "stops": [
+              "#fec235"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "members": [
+          {
+            "id": "red.part1",
             "stops": [
               "#fd99c0"
             ],
@@ -72,7 +198,7 @@
             ]
           },
           {
-            "id": "group2.member3",
+            "id": "red.part2",
             "stops": [
               "#fc2c80"
             ],
@@ -83,79 +209,67 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "white",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "white.part1",
             "stops": [
-              "#fec235"
+              "#f5f5f5"
             ],
             "shapes": [
-              3
-            ]
-          },
-          {
-            "id": "group3.member2",
-            "stops": [
-              "#81b93a"
-            ],
-            "shapes": [
-              4
+              5
             ]
           }
-        ]
-      }
-    ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#f5f5f5"
-        ],
-        "shapes": [
-          5
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member2",
+        "role": "color3.part2",
+        "archetype": "red.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color3.part1",
+        "archetype": "light-magenta.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group3.member2",
+        "role": "color2.part2",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.1",
+        "role": "color4.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group2.member1",
+        "role": "color3.part1",
+        "archetype": "light-magenta.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "group2.member3",
+        "role": "color3.part3",
+        "archetype": "red.part2",
         "part": null
       }
     ],

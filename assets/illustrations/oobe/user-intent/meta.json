@@ -32,14 +32,114 @@
   "updated": "2026-08-26",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#3a3a3a",
+              "#797673"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ],
+        "spread": 0.137
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#5b34d3",
+              "#e979a5"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "color2.part2",
+            "stops": [
+              "#5b34d3",
+              "#bd5788"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.132
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#173a73",
+              "#114a8b"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.096
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#ae7fe2",
+              "#8b8ce4",
+              "#31ace9",
+              "#28afea"
+            ],
+            "shapes": [
+              0,
+              6
+            ]
+          }
+        ],
+        "spread": 0.091
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#f4f3f3"
+            ],
+            "shapes": [
+              5,
+              7,
+              9
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#ae7fe2",
               "#8b8ce4",
@@ -54,10 +154,25 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "deep-blue",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "deep-blue.part1",
+            "stops": [
+              "#173a73",
+              "#114a8b"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gray",
+        "members": [
+          {
+            "id": "gray.part1",
             "stops": [
               "#3a3a3a",
               "#797673"
@@ -69,10 +184,10 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "magenta",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "magenta.part1",
             "stops": [
               "#5b34d3",
               "#e979a5"
@@ -82,7 +197,7 @@
             ]
           },
           {
-            "id": "group3.member2",
+            "id": "magenta.part2",
             "stops": [
               "#5b34d3",
               "#bd5788"
@@ -94,153 +209,165 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "white",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "white.part1",
             "stops": [
-              "#173a73",
-              "#114a8b"
+              "#f4f3f3"
             ],
             "shapes": [
-              2
+              5,
+              7,
+              9
             ]
           }
-        ]
-      }
-    ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#f4f3f3"
-        ],
-        "shapes": [
-          5,
-          7,
-          9
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color4.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 2,
-        "role": "group4.member1",
+        "role": "color3.part1",
+        "archetype": "deep-blue.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "magenta.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group3.member2",
+        "role": "color2.part2",
+        "archetype": "magenta.part2",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group1.member1",
+        "role": "color4.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 8,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 9,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 10,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 11,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 12,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 13,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 14,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 15,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 16,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 17,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 18,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 19,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 20,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 21,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 22,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 23,
         "role": null,
+        "archetype": null,
         "part": null
       }
     ],

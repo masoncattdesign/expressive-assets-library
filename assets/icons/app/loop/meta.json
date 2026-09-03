@@ -83,14 +83,103 @@
   ],
   "roles": {
     "from": "standard-64.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 2,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#6d05e8"
+            ],
+            "shapes": [
+              3,
+              4
+            ]
+          }
+        ],
+        "spread": 0.28
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#51e6ff"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.28
+      },
+      {
+        "id": "color3",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color3.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              5
+            ]
+          },
+          {
+            "id": "color3.basecolor.part2",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-azure",
+        "members": [
+          {
+            "id": "light-azure.part1",
+            "stops": [
+              "#51e6ff"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "violet",
+        "members": [
+          {
+            "id": "violet.part1",
             "stops": [
               "#6d05e8"
             ],
@@ -102,70 +191,55 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "white",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "white.part1",
             "stops": [
-              "#51e6ff"
+              "#ffffff"
             ],
             "shapes": [
-              0
+              5
             ]
           }
-        ]
-      }
-    ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          5
-        ]
-      },
-      {
-        "id": "held.2",
-        "stops": [
-          "#000000"
-        ],
-        "shapes": [
-          1,
-          2
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-azure.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "violet.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "violet.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

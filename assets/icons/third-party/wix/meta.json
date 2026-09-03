@@ -83,24 +83,46 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 0,
-    "groups": [],
-    "held": [
+    "groups": [
       {
-        "id": "held.1",
-        "stops": [
-          "#000000"
-        ],
-        "shapes": [
-          0
+        "id": "color1",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color1.basecolor.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              0
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "held.1",
+        "role": "color1.basecolor.part1",
+        "archetype": "black.part1",
         "part": null
       }
     ],

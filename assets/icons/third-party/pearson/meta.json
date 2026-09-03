@@ -83,14 +83,32 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 1,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#0d004d"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "deep-blue",
+        "members": [
+          {
+            "id": "deep-blue.part1",
             "stops": [
               "#0d004d"
             ],
@@ -101,3581 +119,4295 @@
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "deep-blue.part1",
         "part": null
       },
       {
         "i": 1,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 2,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 3,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 4,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 5,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 6,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 7,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 8,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 9,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 10,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 11,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 12,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 13,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 14,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 15,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 16,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 17,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 18,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 19,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 20,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 21,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 22,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 23,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 24,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 25,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 26,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 27,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 28,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 29,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 30,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 31,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 32,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 33,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 34,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 35,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 36,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 37,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 38,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 39,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 40,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 41,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 42,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 43,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 44,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 45,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 46,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 47,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 48,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 49,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 50,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 51,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 52,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 53,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 54,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 55,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 56,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 57,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 58,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 59,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 60,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 61,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 62,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 63,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 64,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 65,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 66,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 67,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 68,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 69,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 70,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 71,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 72,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 73,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 74,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 75,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 76,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 77,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 78,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 79,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 80,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 81,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 82,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 83,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 84,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 85,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 86,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 87,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 88,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 89,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 90,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 91,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 92,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 93,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 94,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 95,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 96,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 97,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 98,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 99,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 100,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 101,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 102,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 103,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 104,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 105,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 106,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 107,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 108,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 109,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 110,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 111,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 112,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 113,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 114,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 115,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 116,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 117,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 118,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 119,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 120,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 121,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 122,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 123,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 124,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 125,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 126,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 127,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 128,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 129,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 130,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 131,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 132,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 133,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 134,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 135,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 136,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 137,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 138,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 139,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 140,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 141,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 142,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 143,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 144,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 145,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 146,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 147,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 148,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 149,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 150,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 151,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 152,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 153,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 154,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 155,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 156,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 157,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 158,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 159,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 160,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 161,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 162,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 163,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 164,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 165,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 166,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 167,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 168,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 169,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 170,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 171,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 172,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 173,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 174,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 175,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 176,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 177,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 178,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 179,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 180,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 181,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 182,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 183,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 184,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 185,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 186,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 187,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 188,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 189,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 190,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 191,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 192,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 193,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 194,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 195,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 196,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 197,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 198,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 199,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 200,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 201,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 202,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 203,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 204,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 205,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 206,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 207,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 208,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 209,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 210,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 211,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 212,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 213,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 214,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 215,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 216,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 217,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 218,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 219,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 220,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 221,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 222,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 223,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 224,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 225,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 226,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 227,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 228,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 229,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 230,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 231,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 232,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 233,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 234,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 235,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 236,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 237,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 238,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 239,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 240,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 241,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 242,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 243,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 244,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 245,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 246,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 247,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 248,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 249,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 250,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 251,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 252,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 253,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 254,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 255,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 256,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 257,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 258,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 259,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 260,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 261,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 262,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 263,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 264,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 265,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 266,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 267,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 268,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 269,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 270,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 271,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 272,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 273,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 274,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 275,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 276,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 277,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 278,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 279,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 280,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 281,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 282,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 283,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 284,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 285,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 286,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 287,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 288,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 289,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 290,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 291,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 292,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 293,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 294,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 295,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 296,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 297,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 298,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 299,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 300,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 301,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 302,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 303,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 304,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 305,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 306,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 307,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 308,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 309,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 310,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 311,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 312,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 313,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 314,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 315,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 316,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 317,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 318,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 319,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 320,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 321,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 322,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 323,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 324,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 325,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 326,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 327,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 328,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 329,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 330,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 331,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 332,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 333,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 334,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 335,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 336,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 337,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 338,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 339,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 340,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 341,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 342,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 343,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 344,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 345,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 346,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 347,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 348,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 349,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 350,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 351,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 352,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 353,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 354,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 355,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 356,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 357,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 358,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 359,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 360,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 361,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 362,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 363,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 364,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 365,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 366,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 367,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 368,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 369,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 370,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 371,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 372,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 373,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 374,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 375,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 376,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 377,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 378,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 379,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 380,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 381,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 382,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 383,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 384,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 385,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 386,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 387,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 388,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 389,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 390,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 391,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 392,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 393,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 394,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 395,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 396,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 397,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 398,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 399,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 400,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 401,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 402,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 403,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 404,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 405,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 406,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 407,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 408,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 409,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 410,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 411,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 412,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 413,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 414,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 415,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 416,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 417,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 418,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 419,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 420,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 421,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 422,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 423,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 424,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 425,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 426,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 427,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 428,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 429,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 430,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 431,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 432,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 433,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 434,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 435,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 436,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 437,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 438,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 439,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 440,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 441,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 442,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 443,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 444,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 445,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 446,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 447,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 448,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 449,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 450,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 451,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 452,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 453,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 454,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 455,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 456,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 457,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 458,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 459,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 460,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 461,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 462,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 463,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 464,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 465,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 466,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 467,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 468,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 469,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 470,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 471,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 472,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 473,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 474,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 475,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 476,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 477,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 478,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 479,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 480,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 481,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 482,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 483,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 484,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 485,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 486,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 487,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 488,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 489,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 490,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 491,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 492,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 493,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 494,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 495,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 496,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 497,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 498,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 499,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 500,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 501,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 502,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 503,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 504,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 505,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 506,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 507,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 508,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 509,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 510,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 511,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 512,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 513,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 514,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 515,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 516,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 517,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 518,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 519,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 520,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 521,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 522,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 523,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 524,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 525,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 526,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 527,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 528,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 529,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 530,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 531,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 532,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 533,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 534,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 535,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 536,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 537,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 538,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 539,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 540,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 541,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 542,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 543,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 544,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 545,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 546,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 547,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 548,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 549,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 550,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 551,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 552,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 553,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 554,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 555,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 556,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 557,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 558,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 559,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 560,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 561,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 562,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 563,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 564,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 565,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 566,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 567,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 568,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 569,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 570,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 571,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 572,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 573,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 574,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 575,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 576,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 577,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 578,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 579,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 580,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 581,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 582,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 583,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 584,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 585,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 586,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 587,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 588,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 589,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 590,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 591,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 592,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 593,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 594,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 595,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 596,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 597,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 598,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 599,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 600,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 601,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 602,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 603,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 604,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 605,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 606,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 607,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 608,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 609,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 610,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 611,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 612,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 613,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 614,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 615,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 616,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 617,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 618,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 619,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 620,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 621,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 622,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 623,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 624,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 625,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 626,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 627,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 628,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 629,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 630,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 631,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 632,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 633,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 634,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 635,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 636,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 637,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 638,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 639,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 640,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 641,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 642,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 643,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 644,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 645,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 646,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 647,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 648,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 649,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 650,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 651,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 652,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 653,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 654,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 655,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 656,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 657,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 658,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 659,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 660,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 661,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 662,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 663,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 664,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 665,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 666,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 667,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 668,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 669,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 670,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 671,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 672,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 673,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 674,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 675,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 676,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 677,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 678,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 679,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 680,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 681,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 682,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 683,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 684,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 685,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 686,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 687,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 688,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 689,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 690,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 691,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 692,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 693,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 694,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 695,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 696,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 697,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 698,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 699,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 700,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 701,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 702,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 703,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 704,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 705,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 706,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 707,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 708,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 709,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 710,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 711,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 712,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 713,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 714,
         "role": null,
+        "archetype": null,
         "part": null
       }
     ],

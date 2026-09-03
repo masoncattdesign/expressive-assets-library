@@ -32,28 +32,31 @@
   "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
   "roles": {
     "from": "standard-512.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
             "stops": [
-              "#c9e8f7"
+              "#fd6f03"
             ],
             "shapes": [
-              1
+              5
             ]
           }
-        ]
+        ],
+        "spread": 0.288
       },
       {
-        "id": "group2",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color2.part1",
             "stops": [
               "#3073fd"
             ],
@@ -61,13 +64,64 @@
               2
             ]
           }
-        ]
+        ],
+        "spread": 0.249
       },
       {
-        "id": "group3",
+        "id": "color3",
+        "basecolor": false,
         "members": [
           {
-            "id": "group3.member1",
+            "id": "color3.part1",
+            "stops": [
+              "#c9e8f7"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.15
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#222e48"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.144
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#f5f5f5"
+            ],
+            "shapes": [
+              0,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "amber",
+        "members": [
+          {
+            "id": "amber.part1",
             "stops": [
               "#fd6f03"
             ],
@@ -78,10 +132,24 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "blue",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "blue.part1",
+            "stops": [
+              "#3073fd"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "muted-deep-blue",
+        "members": [
+          {
+            "id": "muted-deep-blue.part1",
             "stops": [
               "#222e48"
             ],
@@ -90,49 +158,67 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#f5f5f5"
-        ],
-        "shapes": [
-          0,
-          3
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#f5f5f5"
+            ],
+            "shapes": [
+              0,
+              3
+            ]
+          },
+          {
+            "id": "white.part2",
+            "stops": [
+              "#c9e8f7"
+            ],
+            "shapes": [
+              1
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group4.member1",
+        "role": "color4.part1",
+        "archetype": "muted-deep-blue.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "group3.member1",
+        "role": "color1.part1",
+        "archetype": "amber.part1",
         "part": null
       }
     ],

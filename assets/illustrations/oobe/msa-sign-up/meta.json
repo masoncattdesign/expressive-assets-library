@@ -34,14 +34,67 @@
   "notes": "Contains 2 embedded raster images. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it.",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#66eb6e"
+            ],
+            "shapes": [
+              6
+            ]
+          },
+          {
+            "id": "color1.part2",
+            "stops": [
+              "#107c10"
+            ],
+            "shapes": [
+              12
+            ]
+          }
+        ],
+        "spread": 0.238
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#f8adfa"
+            ],
+            "shapes": [
+              32
+            ]
+          },
+          {
+            "id": "color2.part2",
+            "stops": [
+              "#8c48ff",
+              "#f2598a",
+              "#ffb152"
+            ],
+            "shapes": [
+              31
+            ]
+          }
+        ],
+        "spread": 0.215
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#50e6ff",
               "#43d4f8",
@@ -52,7 +105,7 @@
             ]
           },
           {
-            "id": "group1.member2",
+            "id": "color3.part2",
             "stops": [
               "#3dcbff"
             ],
@@ -61,7 +114,7 @@
             ]
           },
           {
-            "id": "group1.member3",
+            "id": "color3.part3",
             "stops": [
               "#35c1f1",
               "#34c1ed",
@@ -74,7 +127,7 @@
             ]
           },
           {
-            "id": "group1.member4",
+            "id": "color3.part4",
             "stops": [
               "#1b9de2",
               "#1595df",
@@ -86,7 +139,7 @@
             ]
           },
           {
-            "id": "group1.member5",
+            "id": "color3.part5",
             "stops": [
               "#1784d9",
               "#107ad5",
@@ -97,7 +150,7 @@
             ]
           },
           {
-            "id": "group1.member6",
+            "id": "color3.part6",
             "stops": [
               "#0078d4",
               "#114a8b"
@@ -107,7 +160,7 @@
             ]
           },
           {
-            "id": "group1.member7",
+            "id": "color3.part7",
             "stops": [
               "#0c59a4",
               "#114a8b"
@@ -117,7 +170,210 @@
             ]
           },
           {
-            "id": "group1.member8",
+            "id": "color3.part8",
+            "stops": [
+              "#0669bc",
+              "#243a5f"
+            ],
+            "shapes": [
+              17
+            ]
+          }
+        ],
+        "spread": 0.207
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#0d91e1",
+              "#52b471",
+              "#98bd42",
+              "#ffc800"
+            ],
+            "shapes": [
+              29
+            ]
+          }
+        ],
+        "spread": 0.166
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              0,
+              7,
+              9,
+              11,
+              16,
+              26,
+              35,
+              44,
+              45,
+              49,
+              50,
+              51,
+              52,
+              53
+            ]
+          },
+          {
+            "id": "color5.basecolor.part2",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              33,
+              41
+            ]
+          },
+          {
+            "id": "color5.basecolor.part3",
+            "stops": [
+              "#000000",
+              "#000000"
+            ],
+            "shapes": [
+              2,
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
+            "stops": [
+              "#50e6ff",
+              "#43d4f8",
+              "#28afea"
+            ],
+            "shapes": [
+              40
+            ]
+          },
+          {
+            "id": "azure.part2",
+            "stops": [
+              "#3dcbff"
+            ],
+            "shapes": [
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              33,
+              41
+            ]
+          },
+          {
+            "id": "black.part2",
+            "stops": [
+              "#000000",
+              "#000000"
+            ],
+            "shapes": [
+              2,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#1b9de2",
+              "#1595df",
+              "#0680d7",
+              "#0078d4"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#1784d9",
+              "#107ad5",
+              "#0a63c9"
+            ],
+            "shapes": [
+              42
+            ]
+          },
+          {
+            "id": "blue.part3",
+            "stops": [
+              "#0078d4",
+              "#114a8b"
+            ],
+            "shapes": [
+              18
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cyan",
+        "members": [
+          {
+            "id": "cyan.part1",
+            "stops": [
+              "#35c1f1",
+              "#34c1ed",
+              "#2fc2df",
+              "#2bc3d2",
+              "#36c752"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deep-blue",
+        "members": [
+          {
+            "id": "deep-blue.part1",
+            "stops": [
+              "#0c59a4",
+              "#114a8b"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "deep-blue.part2",
             "stops": [
               "#0669bc",
               "#243a5f"
@@ -129,19 +385,69 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "green",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "green.part1",
+            "stops": [
+              "#107c10"
+            ],
+            "shapes": [
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-green",
+        "members": [
+          {
+            "id": "light-green.part1",
+            "stops": [
+              "#66eb6e"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-magenta",
+        "members": [
+          {
+            "id": "light-magenta.part1",
             "stops": [
               "#f8adfa"
             ],
             "shapes": [
               32
             ]
-          },
+          }
+        ]
+      },
+      {
+        "id": "muted-green",
+        "members": [
           {
-            "id": "group2.member2",
+            "id": "muted-green.part1",
+            "stops": [
+              "#0d91e1",
+              "#52b471",
+              "#98bd42",
+              "#ffc800"
+            ],
+            "shapes": [
+              29
+            ]
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "members": [
+          {
+            "id": "red.part1",
             "stops": [
               "#8c48ff",
               "#f2598a",
@@ -154,360 +460,356 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "white",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "white.part1",
             "stops": [
-              "#66eb6e"
+              "#ffffff"
             ],
             "shapes": [
-              6
-            ]
-          },
-          {
-            "id": "group3.member2",
-            "stops": [
-              "#107c10"
-            ],
-            "shapes": [
-              12
-            ]
-          }
-        ]
-      },
-      {
-        "id": "group4",
-        "members": [
-          {
-            "id": "group4.member1",
-            "stops": [
-              "#0d91e1",
-              "#52b471",
-              "#98bd42",
-              "#ffc800"
-            ],
-            "shapes": [
-              29
+              0,
+              7,
+              9,
+              11,
+              16,
+              26,
+              35,
+              44,
+              45,
+              49,
+              50,
+              51,
+              52,
+              53
             ]
           }
-        ]
-      }
-    ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          0,
-          7,
-          9,
-          11,
-          16,
-          26,
-          35,
-          44,
-          45,
-          49,
-          50,
-          51,
-          52,
-          53
-        ]
-      },
-      {
-        "id": "held.2",
-        "stops": [
-          "#000000"
-        ],
-        "shapes": [
-          33,
-          41
-        ]
-      },
-      {
-        "id": "held.3",
-        "stops": [
-          "#000000",
-          "#000000"
-        ],
-        "shapes": [
-          2,
-          4
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member7",
+        "role": "color3.part7",
+        "archetype": "deep-blue.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.3",
+        "role": "color5.basecolor.part3",
+        "archetype": "black.part2",
         "part": null
       },
       {
         "i": 3,
-        "role": "group1.member4",
+        "role": "color3.part4",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "held.3",
+        "role": "color5.basecolor.part3",
+        "archetype": "black.part2",
         "part": null
       },
       {
         "i": 5,
-        "role": "group1.member3",
+        "role": "color3.part3",
+        "archetype": "cyan.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group3.member1",
+        "role": "color1.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 8,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 9,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 10,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 11,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 12,
-        "role": "group3.member2",
+        "role": "color1.part2",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 13,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 14,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 15,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 16,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 17,
-        "role": "group1.member8",
+        "role": "color3.part8",
+        "archetype": "deep-blue.part2",
         "part": null
       },
       {
         "i": 18,
-        "role": "group1.member6",
+        "role": "color3.part6",
+        "archetype": "blue.part3",
         "part": null
       },
       {
         "i": 19,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 20,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 21,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 22,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 23,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 24,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 25,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 26,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 27,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 28,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 29,
-        "role": "group4.member1",
+        "role": "color4.part1",
+        "archetype": "muted-green.part1",
         "part": null
       },
       {
         "i": 30,
-        "role": "group1.member2",
+        "role": "color3.part2",
+        "archetype": "azure.part2",
         "part": null
       },
       {
         "i": 31,
-        "role": "group2.member2",
+        "role": "color2.part2",
+        "archetype": "red.part1",
         "part": null
       },
       {
         "i": 32,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-magenta.part1",
         "part": null
       },
       {
         "i": 33,
-        "role": "held.2",
+        "role": "color5.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 34,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 35,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 36,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 37,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 38,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 39,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 40,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "azure.part1",
         "part": null
       },
       {
         "i": 41,
-        "role": "held.2",
+        "role": "color5.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 42,
-        "role": "group1.member5",
+        "role": "color3.part5",
+        "archetype": "blue.part2",
         "part": null
       },
       {
         "i": 43,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 44,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 45,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 46,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 47,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 48,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 49,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 50,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 51,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 52,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 53,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

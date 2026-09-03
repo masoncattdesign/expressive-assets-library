@@ -61,14 +61,47 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#2bdabe"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.19
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#b03111"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ],
+        "spread": 0.187
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#1ec8b0",
               "#21a095",
@@ -78,27 +111,15 @@
               0
             ]
           }
-        ]
+        ],
+        "spread": 0.174
       },
       {
-        "id": "group2",
+        "id": "color4",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
-            "stops": [
-              "#2bdabe"
-            ],
-            "shapes": [
-              1
-            ]
-          }
-        ]
-      },
-      {
-        "id": "group3",
-        "members": [
-          {
-            "id": "group3.member1",
+            "id": "color4.part1",
             "stops": [
               "#ffd394",
               "#ffb357"
@@ -109,7 +130,41 @@
             ]
           },
           {
-            "id": "group3.member2",
+            "id": "color4.part2",
+            "stops": [
+              "#ffd394",
+              "#ffb357",
+              "#e67505"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.17
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "amber",
+        "members": [
+          {
+            "id": "amber.part1",
             "stops": [
               "#ffd394",
               "#ffb357",
@@ -122,10 +177,51 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "cyan",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "cyan.part1",
+            "stops": [
+              "#2bdabe"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "cyan.part2",
+            "stops": [
+              "#1ec8b0",
+              "#21a095",
+              "#1a7f7c"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-amber",
+        "members": [
+          {
+            "id": "light-amber.part1",
+            "stops": [
+              "#ffd394",
+              "#ffb357"
+            ],
+            "shapes": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "members": [
+          {
+            "id": "orange.part1",
             "stops": [
               "#b03111"
             ],
@@ -134,53 +230,63 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          6
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "cyan.part2",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "cyan.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group3.member1",
+        "role": "color4.part1",
+        "archetype": "light-amber.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group3.member1",
+        "role": "color4.part1",
+        "archetype": "light-amber.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group3.member2",
+        "role": "color4.part2",
+        "archetype": "amber.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "group4.member1",
+        "role": "color2.part1",
+        "archetype": "orange.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

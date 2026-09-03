@@ -32,14 +32,92 @@
   "updated": "2026-08-26",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 2,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#737373",
+              "#969695",
+              "#bfbdbc",
+              "#d8d6d4",
+              "#e1dfdd"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.002
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#bababa"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.002
+      },
+      {
+        "id": "color3",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color3.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              36,
+              45,
+              46,
+              47
+            ]
+          },
+          {
+            "id": "color3.basecolor.part2",
+            "stops": [
+              "#f0f0f0"
+            ],
+            "shapes": [
+              2,
+              3,
+              4,
+              5,
+              15
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "gray",
+        "members": [
+          {
+            "id": "gray.part1",
+            "stops": [
+              "#bababa"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "gray.part2",
             "stops": [
               "#737373",
               "#969695",
@@ -54,286 +132,323 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "white",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "white.part1",
             "stops": [
-              "#bababa"
+              "#ffffff"
             ],
             "shapes": [
-              1
+              36,
+              45,
+              46,
+              47
+            ]
+          },
+          {
+            "id": "white.part2",
+            "stops": [
+              "#f0f0f0"
+            ],
+            "shapes": [
+              2,
+              3,
+              4,
+              5,
+              15
             ]
           }
-        ]
-      }
-    ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          36,
-          45,
-          46,
-          47
-        ]
-      },
-      {
-        "id": "held.2",
-        "stops": [
-          "#f0f0f0"
-        ],
-        "shapes": [
-          2,
-          3,
-          4,
-          5,
-          15
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "gray.part2",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 3,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 4,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 6,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 7,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 8,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 9,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 10,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 11,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 12,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 13,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 14,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 15,
-        "role": "held.2",
+        "role": "color3.basecolor.part2",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 16,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 17,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 18,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 19,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 20,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 21,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 22,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 23,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 24,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 25,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 26,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 27,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 28,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 29,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 30,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 31,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 32,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 33,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 34,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 35,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 36,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 37,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 38,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 39,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 40,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 41,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 42,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 43,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 44,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 45,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 46,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 47,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

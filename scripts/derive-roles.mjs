@@ -81,6 +81,8 @@ const KMODE = arg('k', 'silhouette');
 const DRY = has('dry');
 const CHECK = has('check');
 const REPORT = has('report');
+const ORDER = arg('order', 'distinct');   // distinct | weight
+const BASEFIRST = has('basecolor-first'); // Ada numbered the held group color1
 
 // Tuning. Every one of these is a judgement call, so they live together.
 const GHOST_ALPHA = 0.05;   // a stop at or under this alpha is not visible paint
@@ -115,6 +117,37 @@ function oklab(h) {
     0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s,
   ];
 }
+/* The second address: an ABSOLUTE color name, from a fixed vocabulary shared by
+   the whole library. Unlike the first address, which only says how a fill sits
+   relative to the other fills in its own icon, this one means the same thing
+   everywhere: every forest green in 3,234 assets answers to `green` and every
+   sky blue to `cyan`. That is what lets a theme say "all the greens" without
+   opening each file.
+
+   Twelve hue bands rather than seven, because ROYGBIV has no word for teal or
+   azure and this library is mostly blue. Boundaries are OKLCH hue angles, so
+   they track perceived hue rather than the RGB wheel. A lightness qualifier
+   carries the difference between forest green and lime; a chroma qualifier
+   catches the browns and the dusty shades, which are just dark or desaturated
+   oranges and have no hue of their own. */
+const HUE_BANDS = [
+  [16, 'red'], [44, 'orange'], [74, 'amber'], [100, 'yellow'], [124, 'lime'],
+  [152, 'green'], [178, 'teal'], [204, 'cyan'], [240, 'azure'], [275, 'blue'],
+  [300, 'violet'], [340, 'magenta'], [360, 'red'],
+];
+function archetypeOf(lab) {
+  const [L, a, b] = lab;
+  const C = Math.hypot(a, b);
+  if (C < HELD_CHROMA) return L > 0.90 ? 'white' : L < 0.20 ? 'black' : 'gray';
+  const h = ((Math.atan2(b, a) * 180) / Math.PI + 360) % 360;
+  const band = HUE_BANDS.find(([edge]) => h < edge)?.[1] ?? 'red';
+  let q = '';
+  if (L >= 0.82) q = 'light-';
+  else if (L <= 0.45) q = 'deep-';
+  if (C < 0.09) q = q === 'deep-' ? 'muted-deep-' : 'muted-';
+  return q + band;
+}
+
 const dFull = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
 const dChroma = (a, b) => Math.hypot(a[1] - b[1], a[2] - b[2]);
 
@@ -301,30 +334,85 @@ export function derive(paints, kmode = KMODE) {
     chosen = opts.sort((a, b) => b.score - a.score || a.k - b.k)[0];
   }
 
-  const groups = chosen.snap
-    .map((ms) => ({ w: ms.reduce((n, m) => n + m.w, 0), members: [...ms].sort((a, b) => b.lab[0] - a.lab[0]) }))
-    .sort((a, b) => b.w - a.w);
+  /* ORDERING. This is the part that carries the design intent, and it is not
+     ranking by size.
 
-  const shapeRole = {};
-  const out = { k: groups.length, groups: [], held: [], floorMissed: pool.length < K_MIN };
-  groups.forEach((g, gi) => {
-    const grp = { id: `group${gi + 1}`, members: [] };
+     A theme walks this list and hands out its colors in order, folding whatever
+     is left into the last one. So the list has to be ordered by how DISTINCT a
+     group is from the others: the group that stands furthest apart takes the
+     first color and keeps its separation, and groups that were already similar
+     to each other fall to the end and collapse together, which is what the
+     original artwork was saying about them anyway.
+
+     The consequence is worth stating plainly: cutting too FINE is now safe,
+     because surplus groups merge back at the tail. Cutting too COARSE is not,
+     because a theme cannot split what was already merged. When in doubt, cut
+     higher. */
+  const spread = (g, all) => {
+    const others = all.filter((x) => x !== g);
+    if (!others.length) return 0;
+    let sum = 0, n = 0;
+    for (const o of others)
+      for (const x of g) for (const y of o) { sum += dChroma(x.lab, y.lab); n++; }
+    return sum / n;
+  };
+
+  const snaps = chosen.snap.map((ms) => [...ms].sort((a, b) => b.lab[0] - a.lab[0]));
+  const ranked = snaps
+    .map((ms) => ({
+      members: ms,
+      w: ms.reduce((n, m) => n + m.w, 0),
+      spread: spread(ms, snaps),
+    }))
+    .sort((a, b) => (ORDER === 'weight' ? b.w - a.w : b.spread - a.spread));
+
+  // Held fills are a group like any other, marked rather than segregated, so a
+  // theme filters on the marker instead of remembering a second list.
+  const heldGroup = held.length ? [{ members: held, w: 0, spread: 0, basecolor: true }] : [];
+  const ordered = BASEFIRST ? heldGroup.concat(ranked) : ranked.concat(heldGroup);
+
+  const shapeRole = {}, shapeArch = {};
+  const out = { k: ranked.length, groups: [], archetypes: [], floorMissed: pool.length < K_MIN };
+
+  ordered.forEach((g, gi) => {
+    const gid = `color${gi + 1}`;
+    const grp = { id: gid, basecolor: !!g.basecolor, members: [] };
+    if (!g.basecolor) grp.spread = Math.round(g.spread * 1000) / 1000;
     g.members.forEach((m, mi) => {
-      const id = `group${gi + 1}.member${mi + 1}`;
+      const id = g.basecolor ? `${gid}.basecolor.part${mi + 1}` : `${gid}.part${mi + 1}`;
       grp.members.push({ id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) });
       for (const s of m.shapes) shapeRole[s] = id;
     });
     out.groups.push(grp);
   });
-  held.forEach((m, i) => {
-    const id = `held.${i + 1}`;
-    out.held.push({ id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) });
-    for (const s of m.shapes) shapeRole[s] = id;
-  });
 
-  // Every painted shape gets both addresses. `part` stays null until the Figma
-  // layer names are harvested; the slot exists now so nothing has to move later.
-  out.shapes = paints.map((p) => ({ i: p.shape, role: shapeRole[p.shape] ?? null, part: null }));
+  // The second address, over the same members. Same shape, different question.
+  const byArch = new Map();
+  for (const g of ordered) for (const m of g.members) {
+    const name = archetypeOf(m.lab);
+    (byArch.get(name) ?? byArch.set(name, []).get(name)).push(m);
+  }
+  for (const [name, ms] of [...byArch].sort((a, b) => a[0].localeCompare(b[0]))) {
+    ms.sort((a, b) => b.lab[0] - a.lab[0]);
+    const grp = { id: name, members: [] };
+    ms.forEach((m, mi) => {
+      const id = `${name}.part${mi + 1}`;
+      grp.members.push({ id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) });
+      for (const s of m.shapes) shapeArch[s] = id;
+    });
+    out.archetypes.push(grp);
+  }
+
+  /* Two addresses per shape, which is the whole proposal. `role` says how this
+     shape sits relative to the rest of THIS icon; `archetype` says what color it
+     is in terms the whole library shares. `part` is a structural name and is not
+     part of either scheme -- the slot stays for annotation, unfilled. */
+  out.shapes = paints.map((p) => ({
+    i: p.shape,
+    role: shapeRole[p.shape] ?? null,
+    archetype: shapeArch[p.shape] ?? null,
+    part: null,
+  }));
   out.stops = literal.reduce((n, p) => n + p.stops.length, 0);
   out.fills = members.length;
   return out;
@@ -378,16 +466,16 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
     const hash = paintHash(paints);
     const next = {
       from,
-      derivedBy: `chromaticity/${KMODE}`,
+      derivedBy: `chromaticity/${KMODE}, ordered by ${ORDER}`,
       k: roles.k,
       groups: roles.groups,
-      held: roles.held,
+      archetypes: roles.archetypes,
       shapes: roles.shapes,
       hash,
     };
 
     tally.k[roles.k] = (tally.k[roles.k] || 0) + 1;
-    const depth = Math.max(0, ...roles.groups.map((g) => g.members.length));
+    const depth = Math.max(0, ...roles.groups.filter((g) => !g.basecolor).map((g) => g.members.length));
     tally.depth[depth] = (tally.depth[depth] || 0) + 1;
     if (roles.floorMissed) tally.floorMissed.push(meta.id);
 
@@ -411,7 +499,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
   /* ----------------------------------------------------------------- report */
 
   const pad = (n) => String(n).padStart(5);
-  console.log(`\nderive-roles  ${KMODE}${ONLY ? `  collection=${ONLY}` : ''}${DRY ? '  (dry)' : ''}${CHECK ? '  (check)' : ''}`);
+  console.log(`\nderive-roles  ${KMODE}, ordered by ${ORDER}${ONLY ? `  collection=${ONLY}` : ''}${DRY ? '  (dry)' : ''}${CHECK ? '  (check)' : ''}`);
   console.log(`  ${pad(tally.seen)} assets seen`);
   console.log(`  ${pad(tally.colored)} carry literal color`);
   console.log(`  ${pad(tally.written)} written   ${pad(tally.unchanged)} unchanged`);
@@ -420,7 +508,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
 
   if (tally.floorMissed.length) {
     console.log(`\n  ${tally.floorMissed.length} cannot reach two groups on color alone.`);
-    console.log(`  These need a part before a two-color theme can bind to them:`);
+    console.log(`  A theme with two accents has only one target on these:`);
     console.log(`    ` + tally.floorMissed.slice(0, 12).join(', ') + (tally.floorMissed.length > 12 ? ', ...' : ''));
   }
 
@@ -437,11 +525,13 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
     for (const file of all) {
       const m = JSON.parse(readFileSync(file, 'utf8'));
       if (!m.roles) continue;
+      const arch = {};
+      for (const a of m.roles.archetypes) for (const am of a.members)
+        for (const sh of am.shapes) arch[sh] = am.id;
       for (const g of m.roles.groups) for (const mm of g.members)
-        rows.push([m.id, mm.id, mm.stops.join('>'), mm.shapes.join('|')].join('\t'));
-      for (const h of m.roles.held) rows.push([m.id, h.id, h.stops.join('>'), h.shapes.join('|')].join('\t'));
+        rows.push([m.id, mm.id, arch[mm.shapes[0]] ?? '', mm.stops.join('>'), mm.shapes.join('|')].join('\t'));
     }
-    writeFileSync(join(ROOT, 'roles-report.tsv'), 'asset\trole\tstops\tshapes\n' + rows.join('\n') + '\n');
+    writeFileSync(join(ROOT, 'roles-report.tsv'), 'asset\trole\tarchetype\tstops\tshapes\n' + rows.join('\n') + '\n');
     console.log(`\n  roles-report.tsv  ${rows.length} rows`);
   }
   console.log('');

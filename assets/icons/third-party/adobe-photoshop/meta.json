@@ -84,14 +84,15 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 2,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
             "stops": [
               "#001e36"
             ],
@@ -99,13 +100,33 @@
               0
             ]
           }
-        ]
+        ],
+        "spread": 0.104
       },
       {
-        "id": "group2",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color2.part1",
+            "stops": [
+              "#31a8ff"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ],
+        "spread": 0.104
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#31a8ff"
             ],
@@ -115,23 +136,39 @@
             ]
           }
         ]
+      },
+      {
+        "id": "muted-deep-blue",
+        "members": [
+          {
+            "id": "muted-deep-blue.part1",
+            "stops": [
+              "#001e36"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "muted-deep-blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part1",
         "part": null
       }
     ],

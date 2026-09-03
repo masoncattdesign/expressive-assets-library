@@ -68,14 +68,31 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#02a4ef"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ],
+        "spread": 0.32
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
             "stops": [
               "#f25022"
             ],
@@ -83,13 +100,62 @@
               0
             ]
           }
+        ],
+        "spread": 0.263
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#80ba01"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.24
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#ffb902"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.206
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
+            "stops": [
+              "#02a4ef"
+            ],
+            "shapes": [
+              3
+            ]
+          }
         ]
       },
       {
-        "id": "group2",
+        "id": "green",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "green.part1",
             "stops": [
               "#80ba01"
             ],
@@ -100,10 +166,10 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "light-yellow",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "light-yellow.part1",
             "stops": [
               "#ffb902"
             ],
@@ -114,40 +180,43 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "orange",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "orange.part1",
             "stops": [
-              "#02a4ef"
+              "#f25022"
             ],
             "shapes": [
-              3
+              0
             ]
           }
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color2.part1",
+        "archetype": "orange.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color3.part1",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group3.member1",
+        "role": "color4.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group4.member1",
+        "role": "color1.part1",
+        "archetype": "azure.part1",
         "part": null
       }
     ],

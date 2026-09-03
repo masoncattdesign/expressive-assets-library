@@ -43,14 +43,47 @@
   "notes": "Outline and Filled are Fluent System Icons artwork, unmodified except for a currentColor rewrite. The generated Standard variant was removed: it was invented here, not shipped by Fluent, and a system icon is a monochrome glyph.",
   "roles": {
     "from": "filled-24.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#1793e8"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ],
+        "spread": 0.289
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#b73fbb"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ],
+        "spread": 0.269
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#ffd23e"
             ],
@@ -59,7 +92,7 @@
             ]
           },
           {
-            "id": "group1.member2",
+            "id": "color3.part2",
             "stops": [
               "#61bc51"
             ],
@@ -68,7 +101,7 @@
             ]
           },
           {
-            "id": "group1.member3",
+            "id": "color3.part3",
             "stops": [
               "#745125"
             ],
@@ -76,13 +109,15 @@
               0
             ]
           }
-        ]
+        ],
+        "spread": 0.253
       },
       {
-        "id": "group2",
+        "id": "color4",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color4.part1",
             "stops": [
               "#f36d38"
             ],
@@ -91,7 +126,7 @@
             ]
           },
           {
-            "id": "group2.member2",
+            "id": "color4.part2",
             "stops": [
               "#e62c46"
             ],
@@ -99,13 +134,16 @@
               1
             ]
           }
-        ]
-      },
+        ],
+        "spread": 0.238
+      }
+    ],
+    "archetypes": [
       {
-        "id": "group3",
+        "id": "blue",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "blue.part1",
             "stops": [
               "#1793e8"
             ],
@@ -116,10 +154,38 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "green",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "green.part1",
+            "stops": [
+              "#61bc51"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-yellow",
+        "members": [
+          {
+            "id": "light-yellow.part1",
+            "stops": [
+              "#ffd23e"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "magenta",
+        "members": [
+          {
+            "id": "magenta.part1",
             "stops": [
               "#b73fbb"
             ],
@@ -128,48 +194,92 @@
             ]
           }
         ]
+      },
+      {
+        "id": "muted-amber",
+        "members": [
+          {
+            "id": "muted-amber.part1",
+            "stops": [
+              "#745125"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "members": [
+          {
+            "id": "orange.part1",
+            "stops": [
+              "#f36d38"
+            ],
+            "shapes": [
+              2
+            ]
+          },
+          {
+            "id": "orange.part2",
+            "stops": [
+              "#e62c46"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member3",
+        "role": "color3.part3",
+        "archetype": "muted-amber.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member2",
+        "role": "color4.part2",
+        "archetype": "orange.part2",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color4.part1",
+        "archetype": "orange.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group1.member2",
+        "role": "color3.part2",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "group3.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group4.member1",
+        "role": "color2.part1",
+        "archetype": "magenta.part1",
         "part": null
       },
       {
         "i": 7,
         "role": null,
+        "archetype": null,
         "part": null
       }
     ],

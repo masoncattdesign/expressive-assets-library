@@ -65,14 +65,86 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#0f848b",
+              "#18cbcb",
+              "#18dae7"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.034
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#053f4b",
+              "#0a6b78",
+              "#149fb3"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.028
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#084c54",
+              "#12888f",
+              "#1cc2d8"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.021
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
+            "stops": [
+              "#084c54",
+              "#12888f",
+              "#1cc2d8"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cyan",
+        "members": [
+          {
+            "id": "cyan.part1",
             "stops": [
               "#0f848b",
               "#18cbcb",
@@ -85,10 +157,10 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "muted-azure",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "muted-azure.part1",
             "stops": [
               "#053f4b",
               "#0a6b78",
@@ -99,39 +171,25 @@
             ]
           }
         ]
-      },
-      {
-        "id": "group3",
-        "members": [
-          {
-            "id": "group3.member1",
-            "stops": [
-              "#084c54",
-              "#12888f",
-              "#1cc2d8"
-            ],
-            "shapes": [
-              0
-            ]
-          }
-        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group3.member1",
+        "role": "color3.part1",
+        "archetype": "azure.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "muted-azure.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "cyan.part1",
         "part": null
       }
     ],

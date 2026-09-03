@@ -65,14 +65,49 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#64d9e1",
+              "#1098b6"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.038
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#057093",
+              "#043346"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.026
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#084961",
               "#1282a4"
@@ -81,13 +116,16 @@
               2
             ]
           }
-        ]
-      },
+        ],
+        "spread": 0.022
+      }
+    ],
+    "archetypes": [
       {
-        "id": "group2",
+        "id": "azure",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "azure.part1",
             "stops": [
               "#64d9e1",
               "#1098b6"
@@ -99,10 +137,25 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "muted-azure",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "muted-azure.part1",
+            "stops": [
+              "#084961",
+              "#1282a4"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "muted-deep-azure",
+        "members": [
+          {
+            "id": "muted-deep-azure.part1",
             "stops": [
               "#057093",
               "#043346"
@@ -114,21 +167,23 @@
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "muted-deep-azure.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "azure.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "muted-azure.part1",
         "part": null
       }
     ],

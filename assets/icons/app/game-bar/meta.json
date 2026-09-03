@@ -83,14 +83,70 @@
   ],
   "roles": {
     "from": "standard-64.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 2,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#139613",
+              "#107d10"
+            ],
+            "shapes": [
+              0,
+              4
+            ]
+          }
+        ],
+        "spread": 0.067
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#9bf00b",
+              "#94e60b"
+            ],
+            "shapes": [
+              1,
+              2,
+              3,
+              6,
+              7
+            ]
+          }
+        ],
+        "spread": 0.067
+      },
+      {
+        "id": "color3",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color3.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "green",
+        "members": [
+          {
+            "id": "green.part1",
             "stops": [
               "#139613",
               "#107d10"
@@ -103,10 +159,10 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "light-green",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "light-green.part1",
             "stops": [
               "#9bf00b",
               "#94e60b"
@@ -120,58 +176,69 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          5
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "light-green.part1",
         "part": null
       }
     ],

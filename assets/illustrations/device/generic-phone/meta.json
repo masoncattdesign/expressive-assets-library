@@ -32,14 +32,15 @@
   "notes": "Device illustration. This collection is devices only — console, desktop, laptop, phone, tablet — which is what it was always for, and now what it is called.",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 2,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
             "stops": [
               "#2e3133",
               "#5c6166"
@@ -48,13 +49,49 @@
               0
             ]
           }
-        ]
+        ],
+        "spread": 0.118
       },
       {
-        "id": "group2",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color2.part1",
+            "stops": [
+              "#0669bc",
+              "#40e6e8"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ],
+        "spread": 0.118
+      },
+      {
+        "id": "color3",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color3.basecolor.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
             "stops": [
               "#0669bc",
               "#40e6e8"
@@ -64,64 +101,91 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#000000"
-        ],
-        "shapes": [
-          1,
-          2
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gray",
+        "members": [
+          {
+            "id": "gray.part1",
+            "stops": [
+              "#2e3133",
+              "#5c6166"
+            ],
+            "shapes": [
+              0
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.1",
+        "role": "color3.basecolor.part1",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "azure.part1",
         "part": null
       },
       {
         "i": 4,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 5,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 6,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 7,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 8,
         "role": null,
+        "archetype": null,
         "part": null
       }
     ],

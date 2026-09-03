@@ -60,30 +60,32 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
             "stops": [
-              "#0078d4",
-              "#14b1ff",
-              "#3dcbff"
+              "#d7f7ff",
+              "#abeeff"
             ],
             "shapes": [
-              3
+              6
             ]
           }
-        ]
+        ],
+        "spread": 0.121
       },
       {
-        "id": "group2",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color2.part1",
             "stops": [
               "#0084df"
             ],
@@ -92,7 +94,7 @@
             ]
           },
           {
-            "id": "group2.member2",
+            "id": "color2.part2",
             "stops": [
               "#0057ad",
               "#0078d4",
@@ -103,7 +105,105 @@
             ]
           },
           {
-            "id": "group2.member3",
+            "id": "color2.part3",
+            "stops": [
+              "#00479e",
+              "#0078d4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.079
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#0078d4",
+              "#14b1ff",
+              "#3dcbff"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ],
+        "spread": 0.052
+      },
+      {
+        "id": "color4",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color4.basecolor.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000"
+            ],
+            "shapes": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#0078d4",
+              "#14b1ff",
+              "#3dcbff"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#0084df"
+            ],
+            "shapes": [
+              5
+            ]
+          },
+          {
+            "id": "blue.part3",
+            "stops": [
+              "#0057ad",
+              "#0078d4",
+              "#0091eb"
+            ],
+            "shapes": [
+              4
+            ]
+          },
+          {
+            "id": "blue.part4",
             "stops": [
               "#00479e",
               "#0078d4"
@@ -115,10 +215,10 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "muted-azure",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "muted-azure.part1",
             "stops": [
               "#d7f7ff",
               "#abeeff"
@@ -130,52 +230,47 @@
         ]
       }
     ],
-    "held": [
-      {
-        "id": "held.1",
-        "stops": [
-          "#000000"
-        ],
-        "shapes": [
-          1,
-          2
-        ]
-      }
-    ],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member3",
+        "role": "color2.part3",
+        "archetype": "blue.part4",
         "part": null
       },
       {
         "i": 1,
-        "role": "held.1",
+        "role": "color4.basecolor.part1",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.1",
+        "role": "color4.basecolor.part1",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group2.member2",
+        "role": "color2.part2",
+        "archetype": "blue.part3",
         "part": null
       },
       {
         "i": 5,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part2",
         "part": null
       },
       {
         "i": 6,
-        "role": "group3.member1",
+        "role": "color1.part1",
+        "archetype": "muted-azure.part1",
         "part": null
       }
     ],

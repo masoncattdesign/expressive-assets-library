@@ -82,14 +82,32 @@
   ],
   "roles": {
     "from": "standard-64.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 1,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#eb8383"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "orange",
+        "members": [
+          {
+            "id": "orange.part1",
             "stops": [
               "#eb8383"
             ],
@@ -100,11 +118,11 @@
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "orange.part1",
         "part": null
       }
     ],

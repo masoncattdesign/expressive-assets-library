@@ -72,14 +72,48 @@
   ],
   "roles": {
     "from": "standard-256.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#185abd"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.129
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#62c4f6",
+              "#2a88e5"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ],
+        "spread": 0.109
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#ffffff",
               "#ebebeb"
@@ -89,13 +123,57 @@
               2
             ]
           }
+        ],
+        "spread": 0.102
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#bbbbbb",
+              "#888888"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.102
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#62c4f6",
+              "#2a88e5"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#185abd"
+            ],
+            "shapes": [
+              4
+            ]
+          }
         ]
       },
       {
-        "id": "group2",
+        "id": "gray",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "gray.part1",
             "stops": [
               "#bbbbbb",
               "#888888"
@@ -107,60 +185,51 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "white",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "white.part1",
             "stops": [
-              "#62c4f6",
-              "#2a88e5"
+              "#ffffff",
+              "#ebebeb"
             ],
             "shapes": [
-              3
-            ]
-          }
-        ]
-      },
-      {
-        "id": "group4",
-        "members": [
-          {
-            "id": "group4.member1",
-            "stops": [
-              "#185abd"
-            ],
-            "shapes": [
-              4
+              1,
+              2
             ]
           }
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member1",
+        "role": "color4.part1",
+        "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group4.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part2",
         "part": null
       }
     ],

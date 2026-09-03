@@ -83,14 +83,60 @@
   ],
   "roles": {
     "from": "standard-64.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#8a9299",
+              "#a1aab3"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "color1.part2",
+            "stops": [
+              "#8a9299",
+              "#737a80"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.123
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#28afea",
+              "#50e6ff"
+            ],
+            "shapes": [
+              5,
+              6
+            ]
+          }
+        ],
+        "spread": 0.09
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#0078d4",
               "#28afea"
@@ -100,13 +146,15 @@
               4
             ]
           }
-        ]
+        ],
+        "spread": 0.09
       },
       {
-        "id": "group2",
+        "id": "color4",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color4.part1",
             "stops": [
               "#114a8b",
               "#0c59a4"
@@ -115,13 +163,16 @@
               2
             ]
           }
-        ]
-      },
+        ],
+        "spread": 0.085
+      }
+    ],
+    "archetypes": [
       {
-        "id": "group3",
+        "id": "azure",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "azure.part1",
             "stops": [
               "#28afea",
               "#50e6ff"
@@ -134,10 +185,41 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "blue",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "blue.part1",
+            "stops": [
+              "#0078d4",
+              "#28afea"
+            ],
+            "shapes": [
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deep-blue",
+        "members": [
+          {
+            "id": "deep-blue.part1",
+            "stops": [
+              "#114a8b",
+              "#0c59a4"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gray",
+        "members": [
+          {
+            "id": "gray.part1",
             "stops": [
               "#8a9299",
               "#a1aab3"
@@ -147,7 +229,7 @@
             ]
           },
           {
-            "id": "group4.member2",
+            "id": "gray.part2",
             "stops": [
               "#8a9299",
               "#737a80"
@@ -159,41 +241,47 @@
         ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group4.member2",
+        "role": "color1.part2",
+        "archetype": "gray.part2",
         "part": null
       },
       {
         "i": 1,
-        "role": "group4.member1",
+        "role": "color1.part1",
+        "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color4.part1",
+        "archetype": "deep-blue.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "azure.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "azure.part1",
         "part": null
       }
     ],

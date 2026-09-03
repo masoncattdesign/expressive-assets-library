@@ -83,14 +83,47 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#4285f4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.327
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#ea4335"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ],
+        "spread": 0.281
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
             "stops": [
               "#34a853"
             ],
@@ -98,13 +131,32 @@
               1
             ]
           }
-        ]
+        ],
+        "spread": 0.258
       },
       {
-        "id": "group2",
+        "id": "color4",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color4.part1",
+            "stops": [
+              "#fbbc05"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.234
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#4285f4"
             ],
@@ -115,24 +167,24 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "green",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "green.part1",
             "stops": [
-              "#ea4335"
+              "#34a853"
             ],
             "shapes": [
-              3
+              1
             ]
           }
         ]
       },
       {
-        "id": "group4",
+        "id": "light-yellow",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "light-yellow.part1",
             "stops": [
               "#fbbc05"
             ],
@@ -141,28 +193,45 @@
             ]
           }
         ]
+      },
+      {
+        "id": "orange",
+        "members": [
+          {
+            "id": "orange.part1",
+            "stops": [
+              "#ea4335"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "green.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group4.member1",
+        "role": "color4.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group3.member1",
+        "role": "color2.part1",
+        "archetype": "orange.part1",
         "part": null
       }
     ],

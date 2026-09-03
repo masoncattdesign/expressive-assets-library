@@ -31,14 +31,49 @@
   "updated": "2026-08-26",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 1,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#15a6e4",
+              "#3575d5",
+              "#4438e4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0
+      },
+      {
+        "id": "color2",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color2.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
             "stops": [
               "#15a6e4",
               "#3575d5",
@@ -49,28 +84,33 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#ffffff"
-        ],
-        "shapes": [
-          1
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              1
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "held.1",
+        "role": "color2.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

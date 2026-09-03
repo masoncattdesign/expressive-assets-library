@@ -60,14 +60,84 @@
   "notes": "Imported from Figma. Standard keeps its baked brand colors and cannot be retinted; Outline and Filled are rewritten to currentColor and do take a Windows accent.",
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 3,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#43efb1",
+              "#21c6b3",
+              "#1e8fcf"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.176
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#a194f4"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.118
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#d59dff",
+              "#0078d4",
+              "#0c59a4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.102
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#d59dff",
+              "#0078d4",
+              "#0c59a4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cyan",
+        "members": [
+          {
+            "id": "cyan.part1",
             "stops": [
               "#43efb1",
               "#21c6b3",
@@ -80,10 +150,10 @@
         ]
       },
       {
-        "id": "group2",
+        "id": "violet",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "violet.part1",
             "stops": [
               "#a194f4"
             ],
@@ -92,39 +162,25 @@
             ]
           }
         ]
-      },
-      {
-        "id": "group3",
-        "members": [
-          {
-            "id": "group3.member1",
-            "stops": [
-              "#d59dff",
-              "#0078d4",
-              "#0c59a4"
-            ],
-            "shapes": [
-              0
-            ]
-          }
-        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group3.member1",
+        "role": "color3.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member1",
+        "role": "color1.part1",
+        "archetype": "cyan.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "violet.part1",
         "part": null
       }
     ],

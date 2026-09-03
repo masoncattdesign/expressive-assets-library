@@ -33,28 +33,31 @@
   "notes": "Contains 1 embedded raster image. It will not scale like vector artwork — check it at the largest size you intend to ship before relying on it.",
   "roles": {
     "from": "standard-any.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
             "stops": [
-              "#e1dfdd"
+              "#66eb6e"
             ],
             "shapes": [
-              1
+              9
             ]
           }
-        ]
+        ],
+        "spread": 0.229
       },
       {
-        "id": "group2",
+        "id": "color2",
+        "basecolor": false,
         "members": [
           {
-            "id": "group2.member1",
+            "id": "color2.part1",
             "stops": [
               "#1b9de2",
               "#1595df",
@@ -66,7 +69,7 @@
             ]
           },
           {
-            "id": "group2.member2",
+            "id": "color2.part2",
             "stops": [
               "#3f469c",
               "#7b83eb"
@@ -76,7 +79,7 @@
             ]
           },
           {
-            "id": "group2.member3",
+            "id": "color2.part3",
             "stops": [
               "#0c59a4",
               "#114a8b"
@@ -85,13 +88,31 @@
               4
             ]
           }
-        ]
+        ],
+        "spread": 0.185
       },
       {
-        "id": "group3",
+        "id": "color3",
+        "basecolor": false,
         "members": [
           {
-            "id": "group3.member1",
+            "id": "color3.part1",
+            "stops": [
+              "#e1dfdd"
+            ],
+            "shapes": [
+              1
+            ]
+          }
+        ],
+        "spread": 0.148
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
             "stops": [
               "#11c6ad",
               "#6ce8d7"
@@ -101,7 +122,99 @@
             ]
           },
           {
-            "id": "group3.member2",
+            "id": "color4.part2",
+            "stops": [
+              "#35c1f1",
+              "#34c1ed",
+              "#2fc2df",
+              "#2bc3d2",
+              "#36c752"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ],
+        "spread": 0.144
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#f4f3f3"
+            ],
+            "shapes": [
+              2,
+              3,
+              12
+            ]
+          },
+          {
+            "id": "color5.basecolor.part2",
+            "stops": [
+              "#000000",
+              "#000000"
+            ],
+            "shapes": [
+              5,
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "black",
+        "members": [
+          {
+            "id": "black.part1",
+            "stops": [
+              "#000000",
+              "#000000"
+            ],
+            "shapes": [
+              5,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#1b9de2",
+              "#1595df",
+              "#0680d7",
+              "#0078d4"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cyan",
+        "members": [
+          {
+            "id": "cyan.part1",
+            "stops": [
+              "#11c6ad",
+              "#6ce8d7"
+            ],
+            "shapes": [
+              10
+            ]
+          },
+          {
+            "id": "cyan.part2",
             "stops": [
               "#35c1f1",
               "#34c1ed",
@@ -116,10 +229,25 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "deep-blue",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "deep-blue.part1",
+            "stops": [
+              "#0c59a4",
+              "#114a8b"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-green",
+        "members": [
+          {
+            "id": "light-green.part1",
             "stops": [
               "#66eb6e"
             ],
@@ -128,96 +256,125 @@
             ]
           }
         ]
-      }
-    ],
-    "held": [
+      },
       {
-        "id": "held.1",
-        "stops": [
-          "#f4f3f3"
-        ],
-        "shapes": [
-          2,
-          3,
-          12
+        "id": "violet",
+        "members": [
+          {
+            "id": "violet.part1",
+            "stops": [
+              "#3f469c",
+              "#7b83eb"
+            ],
+            "shapes": [
+              0
+            ]
+          }
         ]
       },
       {
-        "id": "held.2",
-        "stops": [
-          "#000000",
-          "#000000"
-        ],
-        "shapes": [
-          5,
-          7
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#f4f3f3"
+            ],
+            "shapes": [
+              2,
+              3,
+              12
+            ]
+          },
+          {
+            "id": "white.part2",
+            "stops": [
+              "#e1dfdd"
+            ],
+            "shapes": [
+              1
+            ]
+          }
         ]
       }
     ],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member2",
+        "role": "color2.part2",
+        "archetype": "violet.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group1.member1",
+        "role": "color3.part1",
+        "archetype": "white.part2",
         "part": null
       },
       {
         "i": 2,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group2.member3",
+        "role": "color2.part3",
+        "archetype": "deep-blue.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "held.2",
+        "role": "color5.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group2.member1",
+        "role": "color2.part1",
+        "archetype": "blue.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "held.2",
+        "role": "color5.basecolor.part2",
+        "archetype": "black.part1",
         "part": null
       },
       {
         "i": 8,
-        "role": "group3.member2",
+        "role": "color4.part2",
+        "archetype": "cyan.part2",
         "part": null
       },
       {
         "i": 9,
-        "role": "group4.member1",
+        "role": "color1.part1",
+        "archetype": "light-green.part1",
         "part": null
       },
       {
         "i": 10,
-        "role": "group3.member1",
+        "role": "color4.part1",
+        "archetype": "cyan.part1",
         "part": null
       },
       {
         "i": 11,
         "role": null,
+        "archetype": null,
         "part": null
       },
       {
         "i": 12,
-        "role": "held.1",
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
         "part": null
       }
     ],

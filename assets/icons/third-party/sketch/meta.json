@@ -83,14 +83,65 @@
   ],
   "roles": {
     "from": "standard-48.svg",
-    "derivedBy": "chromaticity/silhouette",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
     "k": 4,
     "groups": [
       {
-        "id": "group1",
+        "id": "color1",
+        "basecolor": false,
         "members": [
           {
-            "id": "group1.member1",
+            "id": "color1.part1",
+            "stops": [
+              "#ea6c00"
+            ],
+            "shapes": [
+              0,
+              3
+            ]
+          }
+        ],
+        "spread": 0.116
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#feeeb7"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ],
+        "spread": 0.112
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#fdd231"
+            ],
+            "shapes": [
+              1,
+              5
+            ]
+          }
+        ],
+        "spread": 0.092
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
             "stops": [
               "#fdad00"
             ],
@@ -100,13 +151,16 @@
               6
             ]
           }
-        ]
-      },
+        ],
+        "spread": 0.078
+      }
+    ],
+    "archetypes": [
       {
-        "id": "group2",
+        "id": "amber",
         "members": [
           {
-            "id": "group2.member1",
+            "id": "amber.part1",
             "stops": [
               "#ea6c00"
             ],
@@ -118,10 +172,10 @@
         ]
       },
       {
-        "id": "group3",
+        "id": "light-yellow",
         "members": [
           {
-            "id": "group3.member1",
+            "id": "light-yellow.part1",
             "stops": [
               "#fdd231"
             ],
@@ -133,10 +187,10 @@
         ]
       },
       {
-        "id": "group4",
+        "id": "muted-yellow",
         "members": [
           {
-            "id": "group4.member1",
+            "id": "muted-yellow.part1",
             "stops": [
               "#feeeb7"
             ],
@@ -145,48 +199,71 @@
             ]
           }
         ]
+      },
+      {
+        "id": "yellow",
+        "members": [
+          {
+            "id": "yellow.part1",
+            "stops": [
+              "#fdad00"
+            ],
+            "shapes": [
+              2,
+              4,
+              6
+            ]
+          }
+        ]
       }
     ],
-    "held": [],
     "shapes": [
       {
         "i": 0,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "amber.part1",
         "part": null
       },
       {
         "i": 1,
-        "role": "group3.member1",
+        "role": "color3.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 2,
-        "role": "group1.member1",
+        "role": "color4.part1",
+        "archetype": "yellow.part1",
         "part": null
       },
       {
         "i": 3,
-        "role": "group2.member1",
+        "role": "color1.part1",
+        "archetype": "amber.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "group1.member1",
+        "role": "color4.part1",
+        "archetype": "yellow.part1",
         "part": null
       },
       {
         "i": 5,
-        "role": "group3.member1",
+        "role": "color3.part1",
+        "archetype": "light-yellow.part1",
         "part": null
       },
       {
         "i": 6,
-        "role": "group1.member1",
+        "role": "color4.part1",
+        "archetype": "yellow.part1",
         "part": null
       },
       {
         "i": 7,
-        "role": "group4.member1",
+        "role": "color2.part1",
+        "archetype": "muted-yellow.part1",
         "part": null
       }
     ],
