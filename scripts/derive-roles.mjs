@@ -68,7 +68,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -176,7 +176,7 @@ function pathArea(d) {
 // One entry per painted shape, in document order, with the fill resolved to
 // its stops. Document order is the shape index, and it is the join key between
 // this file, the SVG and whatever assigns parts later.
-function paintsOf(svg) {
+export function paintsOf(svg) {
   const grads = {};
   for (const m of svg.matchAll(/<(linear|radial)Gradient\b([^>]*)>([\s\S]*?)<\/\1Gradient>/g)) {
     grads[attrs(m[2]).id] = [...m[3].matchAll(/<stop\b([^>]*)\/?>/g)].map((s) => {
@@ -210,7 +210,7 @@ function paintsOf(svg) {
 
 /* ------------------------------------------------------------------ roles */
 
-function derive(paints) {
+export function derive(paints, kmode = KMODE) {
   const literal = paints.filter((p) => p.stops.length);
   if (!literal.length) return null;
 
@@ -289,7 +289,11 @@ function derive(paints) {
   const opts = trace.filter((t) => t.k >= K_MIN && t.k <= K_MAX);
   let chosen;
   if (!opts.length) chosen = trace[0];
-  else if (KMODE === 'gap') {
+  else if (typeof kmode === 'number') {
+    // Force a cut, for side-by-side review. Falls back to the nearest available.
+    chosen = opts.find((o) => o.k === kmode) || opts.sort((a, b) => Math.abs(a.k - kmode) - Math.abs(b.k - kmode))[0];
+  }
+  else if (kmode === 'gap') {
     for (const o of opts) { const n = trace.find((t) => t.k === o.k - 1); o.score = n ? n.cut - o.cut : 0; }
     chosen = opts.sort((a, b) => b.score - a.score || a.k - b.k)[0];
   } else {
@@ -329,7 +333,7 @@ function derive(paints) {
 // Hash the paint the roles were derived from, not the whole file. Whitespace,
 // gradient ids and viewBox churn should not invalidate a mapping; a changed
 // color should.
-const paintHash = (paints) =>
+export const paintHash = (paints) =>
   createHash('sha256')
     .update(JSON.stringify(paints.map((p) => [p.shape, p.stops.map((s) => [s.color, s.alpha]), p.alpha])))
     .digest('hex')
@@ -337,7 +341,7 @@ const paintHash = (paints) =>
 
 /* ------------------------------------------------------------------- walk */
 
-function metas(dir, out = []) {
+export function metas(dir, out = []) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, e.name);
     if (e.isDirectory()) metas(p, out);
@@ -346,96 +350,99 @@ function metas(dir, out = []) {
   return out;
 }
 
-const all = metas(join(ROOT, 'assets'));
-const tally = { seen: 0, colored: 0, written: 0, unchanged: 0, drift: [], floorMissed: [], k: {}, depth: {} };
+// Only walk when run directly, so a comparison script can import the derivation.
+if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
+  const all = metas(join(ROOT, 'assets'));
+  const tally = { seen: 0, colored: 0, written: 0, unchanged: 0, drift: [], floorMissed: [], k: {}, depth: {} };
 
-for (const file of all) {
-  const meta = JSON.parse(readFileSync(file, 'utf8'));
-  if (ONLY && meta.collection !== ONLY) continue;
-  tally.seen++;
-
-  // Derive from the largest Standard the asset has: it is the authored one,
-  // and the one with the most paint to reason about.
-  const dir = dirname(file);
-  const svgs = readdirSync(dir).filter((f) => f.endsWith('.svg'));
-  const pick = (pre) =>
-    svgs.filter((f) => f.startsWith(pre))
-        .sort((a, b) => parseInt(b.match(/(\d+)\.svg/)?.[1] || 0) - parseInt(a.match(/(\d+)\.svg/)?.[1] || 0))[0];
-  const from = pick('standard') || pick('color') || pick('filled') || svgs[0];
-  if (!from) continue;
-
-  const paints = paintsOf(readFileSync(join(dir, from), 'utf8'));
-  const roles = derive(paints);
-  if (!roles) continue;           // currentColor only: nothing to address
-  tally.colored++;
-
-  const hash = paintHash(paints);
-  const next = {
-    from,
-    derivedBy: `chromaticity/${KMODE}`,
-    k: roles.k,
-    groups: roles.groups,
-    held: roles.held,
-    shapes: roles.shapes,
-    hash,
-  };
-
-  tally.k[roles.k] = (tally.k[roles.k] || 0) + 1;
-  const depth = Math.max(0, ...roles.groups.map((g) => g.members.length));
-  tally.depth[depth] = (tally.depth[depth] || 0) + 1;
-  if (roles.floorMissed) tally.floorMissed.push(meta.id);
-
-  const prev = meta.roles;
-  if (prev && prev.hash !== hash) {
-    // The artwork moved under a frozen mapping. Say so; do not renumber.
-    tally.drift.push({ id: meta.id, was: prev.hash, now: hash, from: prev.from });
-    if (CHECK) continue;
-  }
-  if (prev && prev.hash === hash && JSON.stringify(prev) === JSON.stringify({ ...prev, ...next })) {
-    tally.unchanged++;
-    continue;
-  }
-  if (CHECK) continue;
-
-  meta.roles = next;
-  if (!DRY) writeFileSync(file, JSON.stringify(meta, null, 2) + '\n');
-  tally.written++;
-}
-
-/* ----------------------------------------------------------------- report */
-
-const pad = (n) => String(n).padStart(5);
-console.log(`\nderive-roles  ${KMODE}${ONLY ? `  collection=${ONLY}` : ''}${DRY ? '  (dry)' : ''}${CHECK ? '  (check)' : ''}`);
-console.log(`  ${pad(tally.seen)} assets seen`);
-console.log(`  ${pad(tally.colored)} carry literal color`);
-console.log(`  ${pad(tally.written)} written   ${pad(tally.unchanged)} unchanged`);
-console.log(`  groups: ` + Object.entries(tally.k).sort().map(([k, n]) => `${k}->${n}`).join('  '));
-console.log(`  deepest group: ` + Object.entries(tally.depth).sort((a,b)=>a[0]-b[0]).map(([k, n]) => `${k}->${n}`).join('  '));
-
-if (tally.floorMissed.length) {
-  console.log(`\n  ${tally.floorMissed.length} cannot reach two groups on color alone.`);
-  console.log(`  These need a part before a two-color theme can bind to them:`);
-  console.log(`    ` + tally.floorMissed.slice(0, 12).join(', ') + (tally.floorMissed.length > 12 ? ', ...' : ''));
-}
-
-if (tally.drift.length) {
-  console.log(`\n  ${tally.drift.length} asset(s) drifted from a frozen mapping:`);
-  for (const d of tally.drift.slice(0, 20)) console.log(`    ${d.id}  ${d.from}  ${d.was} -> ${d.now}`);
-  console.log(`\n  Roles were NOT renumbered. Re-run without --check to re-freeze,`);
-  console.log(`  after confirming nothing downstream is bound to the old numbers.`);
-  process.exit(1);
-}
-
-if (REPORT) {
-  const rows = [];
   for (const file of all) {
-    const m = JSON.parse(readFileSync(file, 'utf8'));
-    if (!m.roles) continue;
-    for (const g of m.roles.groups) for (const mm of g.members)
-      rows.push([m.id, mm.id, mm.stops.join('>'), mm.shapes.join('|')].join('\t'));
-    for (const h of m.roles.held) rows.push([m.id, h.id, h.stops.join('>'), h.shapes.join('|')].join('\t'));
+    const meta = JSON.parse(readFileSync(file, 'utf8'));
+    if (ONLY && meta.collection !== ONLY) continue;
+    tally.seen++;
+
+    // Derive from the largest Standard the asset has: it is the authored one,
+    // and the one with the most paint to reason about.
+    const dir = dirname(file);
+    const svgs = readdirSync(dir).filter((f) => f.endsWith('.svg'));
+    const pick = (pre) =>
+      svgs.filter((f) => f.startsWith(pre))
+          .sort((a, b) => parseInt(b.match(/(\d+)\.svg/)?.[1] || 0) - parseInt(a.match(/(\d+)\.svg/)?.[1] || 0))[0];
+    const from = pick('standard') || pick('color') || pick('filled') || svgs[0];
+    if (!from) continue;
+
+    const paints = paintsOf(readFileSync(join(dir, from), 'utf8'));
+    const roles = derive(paints);
+    if (!roles) continue;           // currentColor only: nothing to address
+    tally.colored++;
+
+    const hash = paintHash(paints);
+    const next = {
+      from,
+      derivedBy: `chromaticity/${KMODE}`,
+      k: roles.k,
+      groups: roles.groups,
+      held: roles.held,
+      shapes: roles.shapes,
+      hash,
+    };
+
+    tally.k[roles.k] = (tally.k[roles.k] || 0) + 1;
+    const depth = Math.max(0, ...roles.groups.map((g) => g.members.length));
+    tally.depth[depth] = (tally.depth[depth] || 0) + 1;
+    if (roles.floorMissed) tally.floorMissed.push(meta.id);
+
+    const prev = meta.roles;
+    if (prev && prev.hash !== hash) {
+      // The artwork moved under a frozen mapping. Say so; do not renumber.
+      tally.drift.push({ id: meta.id, was: prev.hash, now: hash, from: prev.from });
+      if (CHECK) continue;
+    }
+    if (prev && prev.hash === hash && JSON.stringify(prev) === JSON.stringify({ ...prev, ...next })) {
+      tally.unchanged++;
+      continue;
+    }
+    if (CHECK) continue;
+
+    meta.roles = next;
+    if (!DRY) writeFileSync(file, JSON.stringify(meta, null, 2) + '\n');
+    tally.written++;
   }
-  writeFileSync(join(ROOT, 'roles-report.tsv'), 'asset\trole\tstops\tshapes\n' + rows.join('\n') + '\n');
-  console.log(`\n  roles-report.tsv  ${rows.length} rows`);
+
+  /* ----------------------------------------------------------------- report */
+
+  const pad = (n) => String(n).padStart(5);
+  console.log(`\nderive-roles  ${KMODE}${ONLY ? `  collection=${ONLY}` : ''}${DRY ? '  (dry)' : ''}${CHECK ? '  (check)' : ''}`);
+  console.log(`  ${pad(tally.seen)} assets seen`);
+  console.log(`  ${pad(tally.colored)} carry literal color`);
+  console.log(`  ${pad(tally.written)} written   ${pad(tally.unchanged)} unchanged`);
+  console.log(`  groups: ` + Object.entries(tally.k).sort().map(([k, n]) => `${k}->${n}`).join('  '));
+  console.log(`  deepest group: ` + Object.entries(tally.depth).sort((a,b)=>a[0]-b[0]).map(([k, n]) => `${k}->${n}`).join('  '));
+
+  if (tally.floorMissed.length) {
+    console.log(`\n  ${tally.floorMissed.length} cannot reach two groups on color alone.`);
+    console.log(`  These need a part before a two-color theme can bind to them:`);
+    console.log(`    ` + tally.floorMissed.slice(0, 12).join(', ') + (tally.floorMissed.length > 12 ? ', ...' : ''));
+  }
+
+  if (tally.drift.length) {
+    console.log(`\n  ${tally.drift.length} asset(s) drifted from a frozen mapping:`);
+    for (const d of tally.drift.slice(0, 20)) console.log(`    ${d.id}  ${d.from}  ${d.was} -> ${d.now}`);
+    console.log(`\n  Roles were NOT renumbered. Re-run without --check to re-freeze,`);
+    console.log(`  after confirming nothing downstream is bound to the old numbers.`);
+    process.exit(1);
+  }
+
+  if (REPORT) {
+    const rows = [];
+    for (const file of all) {
+      const m = JSON.parse(readFileSync(file, 'utf8'));
+      if (!m.roles) continue;
+      for (const g of m.roles.groups) for (const mm of g.members)
+        rows.push([m.id, mm.id, mm.stops.join('>'), mm.shapes.join('|')].join('\t'));
+      for (const h of m.roles.held) rows.push([m.id, h.id, h.stops.join('>'), h.shapes.join('|')].join('\t'));
+    }
+    writeFileSync(join(ROOT, 'roles-report.tsv'), 'asset\trole\tstops\tshapes\n' + rows.join('\n') + '\n');
+    console.log(`\n  roles-report.tsv  ${rows.length} rows`);
+  }
+  console.log('');
 }
-console.log('');
