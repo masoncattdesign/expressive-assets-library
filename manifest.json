@@ -25085,9 +25085,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -25112,22 +25110,6 @@
           "32": "assets/icons/app/admin-center/standard-32.svg",
           "48": "assets/icons/app/admin-center/standard-48.svg",
           "64": "assets/icons/app/admin-center/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/admin-center/outline-16.svg",
-          "20": "assets/icons/app/admin-center/outline-20.svg",
-          "24": "assets/icons/app/admin-center/outline-24.svg",
-          "28": "assets/icons/app/admin-center/outline-28.svg",
-          "32": "assets/icons/app/admin-center/outline-32.svg",
-          "48": "assets/icons/app/admin-center/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/admin-center/filled-16.svg",
-          "20": "assets/icons/app/admin-center/filled-20.svg",
-          "24": "assets/icons/app/admin-center/filled-24.svg",
-          "28": "assets/icons/app/admin-center/filled-28.svg",
-          "32": "assets/icons/app/admin-center/filled-32.svg",
-          "48": "assets/icons/app/admin-center/filled-48.svg"
         }
       },
       "figma": {
@@ -25138,18 +25120,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -25423,9 +25393,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -25450,22 +25418,6 @@
           "32": "assets/icons/app/bookings/standard-32.svg",
           "48": "assets/icons/app/bookings/standard-48.svg",
           "64": "assets/icons/app/bookings/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/bookings/outline-16.svg",
-          "20": "assets/icons/app/bookings/outline-20.svg",
-          "24": "assets/icons/app/bookings/outline-24.svg",
-          "28": "assets/icons/app/bookings/outline-28.svg",
-          "32": "assets/icons/app/bookings/outline-32.svg",
-          "48": "assets/icons/app/bookings/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/bookings/filled-16.svg",
-          "20": "assets/icons/app/bookings/filled-20.svg",
-          "24": "assets/icons/app/bookings/filled-24.svg",
-          "28": "assets/icons/app/bookings/filled-28.svg",
-          "32": "assets/icons/app/bookings/filled-32.svg",
-          "48": "assets/icons/app/bookings/filled-48.svg"
         }
       },
       "figma": {
@@ -25476,18 +25428,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -25763,9 +25703,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -25790,22 +25728,6 @@
           "32": "assets/icons/app/calculator/standard-32.svg",
           "48": "assets/icons/app/calculator/standard-48.svg",
           "64": "assets/icons/app/calculator/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/calculator/outline-16.svg",
-          "20": "assets/icons/app/calculator/outline-20.svg",
-          "24": "assets/icons/app/calculator/outline-24.svg",
-          "28": "assets/icons/app/calculator/outline-28.svg",
-          "32": "assets/icons/app/calculator/outline-32.svg",
-          "48": "assets/icons/app/calculator/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/calculator/filled-16.svg",
-          "20": "assets/icons/app/calculator/filled-20.svg",
-          "24": "assets/icons/app/calculator/filled-24.svg",
-          "28": "assets/icons/app/calculator/filled-28.svg",
-          "32": "assets/icons/app/calculator/filled-32.svg",
-          "48": "assets/icons/app/calculator/filled-48.svg"
         }
       },
       "figma": {
@@ -25816,18 +25738,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -26010,9 +25920,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -26037,22 +25945,6 @@
           "32": "assets/icons/app/command-prompt/standard-32.svg",
           "48": "assets/icons/app/command-prompt/standard-48.svg",
           "64": "assets/icons/app/command-prompt/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/command-prompt/outline-16.svg",
-          "20": "assets/icons/app/command-prompt/outline-20.svg",
-          "24": "assets/icons/app/command-prompt/outline-24.svg",
-          "28": "assets/icons/app/command-prompt/outline-28.svg",
-          "32": "assets/icons/app/command-prompt/outline-32.svg",
-          "48": "assets/icons/app/command-prompt/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/command-prompt/filled-16.svg",
-          "20": "assets/icons/app/command-prompt/filled-20.svg",
-          "24": "assets/icons/app/command-prompt/filled-24.svg",
-          "28": "assets/icons/app/command-prompt/filled-28.svg",
-          "32": "assets/icons/app/command-prompt/filled-32.svg",
-          "48": "assets/icons/app/command-prompt/filled-48.svg"
         }
       },
       "figma": {
@@ -26063,18 +25955,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -26142,9 +26022,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -26169,22 +26047,6 @@
           "32": "assets/icons/app/dev-home/standard-32.svg",
           "48": "assets/icons/app/dev-home/standard-48.svg",
           "64": "assets/icons/app/dev-home/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/dev-home/outline-16.svg",
-          "20": "assets/icons/app/dev-home/outline-20.svg",
-          "24": "assets/icons/app/dev-home/outline-24.svg",
-          "28": "assets/icons/app/dev-home/outline-28.svg",
-          "32": "assets/icons/app/dev-home/outline-32.svg",
-          "48": "assets/icons/app/dev-home/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/dev-home/filled-16.svg",
-          "20": "assets/icons/app/dev-home/filled-20.svg",
-          "24": "assets/icons/app/dev-home/filled-24.svg",
-          "28": "assets/icons/app/dev-home/filled-28.svg",
-          "32": "assets/icons/app/dev-home/filled-32.svg",
-          "48": "assets/icons/app/dev-home/filled-48.svg"
         }
       },
       "figma": {
@@ -26195,18 +26057,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -26479,9 +26329,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -26506,22 +26354,6 @@
           "32": "assets/icons/app/editor/standard-32.svg",
           "48": "assets/icons/app/editor/standard-48.svg",
           "64": "assets/icons/app/editor/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/editor/outline-16.svg",
-          "20": "assets/icons/app/editor/outline-20.svg",
-          "24": "assets/icons/app/editor/outline-24.svg",
-          "28": "assets/icons/app/editor/outline-28.svg",
-          "32": "assets/icons/app/editor/outline-32.svg",
-          "48": "assets/icons/app/editor/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/editor/filled-16.svg",
-          "20": "assets/icons/app/editor/filled-20.svg",
-          "24": "assets/icons/app/editor/filled-24.svg",
-          "28": "assets/icons/app/editor/filled-28.svg",
-          "32": "assets/icons/app/editor/filled-32.svg",
-          "48": "assets/icons/app/editor/filled-48.svg"
         }
       },
       "figma": {
@@ -26532,18 +26364,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -26784,9 +26604,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -26811,22 +26629,6 @@
           "32": "assets/icons/app/exchange/standard-32.svg",
           "48": "assets/icons/app/exchange/standard-48.svg",
           "64": "assets/icons/app/exchange/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/exchange/outline-16.svg",
-          "20": "assets/icons/app/exchange/outline-20.svg",
-          "24": "assets/icons/app/exchange/outline-24.svg",
-          "28": "assets/icons/app/exchange/outline-28.svg",
-          "32": "assets/icons/app/exchange/outline-32.svg",
-          "48": "assets/icons/app/exchange/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/exchange/filled-16.svg",
-          "20": "assets/icons/app/exchange/filled-20.svg",
-          "24": "assets/icons/app/exchange/filled-24.svg",
-          "28": "assets/icons/app/exchange/filled-28.svg",
-          "32": "assets/icons/app/exchange/filled-32.svg",
-          "48": "assets/icons/app/exchange/filled-48.svg"
         }
       },
       "figma": {
@@ -26837,18 +26639,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -27082,9 +26872,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -27109,22 +26897,6 @@
           "32": "assets/icons/app/feedback-hub/standard-32.svg",
           "48": "assets/icons/app/feedback-hub/standard-48.svg",
           "64": "assets/icons/app/feedback-hub/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/feedback-hub/outline-16.svg",
-          "20": "assets/icons/app/feedback-hub/outline-20.svg",
-          "24": "assets/icons/app/feedback-hub/outline-24.svg",
-          "28": "assets/icons/app/feedback-hub/outline-28.svg",
-          "32": "assets/icons/app/feedback-hub/outline-32.svg",
-          "48": "assets/icons/app/feedback-hub/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/feedback-hub/filled-16.svg",
-          "20": "assets/icons/app/feedback-hub/filled-20.svg",
-          "24": "assets/icons/app/feedback-hub/filled-24.svg",
-          "28": "assets/icons/app/feedback-hub/filled-28.svg",
-          "32": "assets/icons/app/feedback-hub/filled-32.svg",
-          "48": "assets/icons/app/feedback-hub/filled-48.svg"
         }
       },
       "figma": {
@@ -27135,18 +26907,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -27278,9 +27038,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -27305,22 +27063,6 @@
           "32": "assets/icons/app/file-explorer/standard-32.svg",
           "48": "assets/icons/app/file-explorer/standard-48.svg",
           "64": "assets/icons/app/file-explorer/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/file-explorer/outline-16.svg",
-          "20": "assets/icons/app/file-explorer/outline-20.svg",
-          "24": "assets/icons/app/file-explorer/outline-24.svg",
-          "28": "assets/icons/app/file-explorer/outline-28.svg",
-          "32": "assets/icons/app/file-explorer/outline-32.svg",
-          "48": "assets/icons/app/file-explorer/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/file-explorer/filled-16.svg",
-          "20": "assets/icons/app/file-explorer/filled-20.svg",
-          "24": "assets/icons/app/file-explorer/filled-24.svg",
-          "28": "assets/icons/app/file-explorer/filled-28.svg",
-          "32": "assets/icons/app/file-explorer/filled-32.svg",
-          "48": "assets/icons/app/file-explorer/filled-48.svg"
         }
       },
       "figma": {
@@ -27331,18 +27073,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -27591,9 +27321,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -27618,22 +27346,6 @@
           "32": "assets/icons/app/game-bar/standard-32.svg",
           "48": "assets/icons/app/game-bar/standard-48.svg",
           "64": "assets/icons/app/game-bar/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/game-bar/outline-16.svg",
-          "20": "assets/icons/app/game-bar/outline-20.svg",
-          "24": "assets/icons/app/game-bar/outline-24.svg",
-          "28": "assets/icons/app/game-bar/outline-28.svg",
-          "32": "assets/icons/app/game-bar/outline-32.svg",
-          "48": "assets/icons/app/game-bar/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/game-bar/filled-16.svg",
-          "20": "assets/icons/app/game-bar/filled-20.svg",
-          "24": "assets/icons/app/game-bar/filled-24.svg",
-          "28": "assets/icons/app/game-bar/filled-28.svg",
-          "32": "assets/icons/app/game-bar/filled-32.svg",
-          "48": "assets/icons/app/game-bar/filled-48.svg"
         }
       },
       "figma": {
@@ -27644,18 +27356,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -27838,9 +27538,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -27865,22 +27563,6 @@
           "32": "assets/icons/app/get-help/standard-32.svg",
           "48": "assets/icons/app/get-help/standard-48.svg",
           "64": "assets/icons/app/get-help/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/get-help/outline-16.svg",
-          "20": "assets/icons/app/get-help/outline-20.svg",
-          "24": "assets/icons/app/get-help/outline-24.svg",
-          "28": "assets/icons/app/get-help/outline-28.svg",
-          "32": "assets/icons/app/get-help/outline-32.svg",
-          "48": "assets/icons/app/get-help/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/get-help/filled-16.svg",
-          "20": "assets/icons/app/get-help/filled-20.svg",
-          "24": "assets/icons/app/get-help/filled-24.svg",
-          "28": "assets/icons/app/get-help/filled-28.svg",
-          "32": "assets/icons/app/get-help/filled-32.svg",
-          "48": "assets/icons/app/get-help/filled-48.svg"
         }
       },
       "figma": {
@@ -27891,18 +27573,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -28061,9 +27731,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -28088,22 +27756,6 @@
           "32": "assets/icons/app/get-started/standard-32.svg",
           "48": "assets/icons/app/get-started/standard-48.svg",
           "64": "assets/icons/app/get-started/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/get-started/outline-16.svg",
-          "20": "assets/icons/app/get-started/outline-20.svg",
-          "24": "assets/icons/app/get-started/outline-24.svg",
-          "28": "assets/icons/app/get-started/outline-28.svg",
-          "32": "assets/icons/app/get-started/outline-32.svg",
-          "48": "assets/icons/app/get-started/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/get-started/filled-16.svg",
-          "20": "assets/icons/app/get-started/filled-20.svg",
-          "24": "assets/icons/app/get-started/filled-24.svg",
-          "28": "assets/icons/app/get-started/filled-28.svg",
-          "32": "assets/icons/app/get-started/filled-32.svg",
-          "48": "assets/icons/app/get-started/filled-48.svg"
         }
       },
       "figma": {
@@ -28114,18 +27766,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -28362,9 +28002,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -28389,22 +28027,6 @@
           "32": "assets/icons/app/loop/standard-32.svg",
           "48": "assets/icons/app/loop/standard-48.svg",
           "64": "assets/icons/app/loop/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/loop/outline-16.svg",
-          "20": "assets/icons/app/loop/outline-20.svg",
-          "24": "assets/icons/app/loop/outline-24.svg",
-          "28": "assets/icons/app/loop/outline-28.svg",
-          "32": "assets/icons/app/loop/outline-32.svg",
-          "48": "assets/icons/app/loop/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/loop/filled-16.svg",
-          "20": "assets/icons/app/loop/filled-20.svg",
-          "24": "assets/icons/app/loop/filled-24.svg",
-          "28": "assets/icons/app/loop/filled-28.svg",
-          "32": "assets/icons/app/loop/filled-32.svg",
-          "48": "assets/icons/app/loop/filled-48.svg"
         }
       },
       "figma": {
@@ -28415,18 +28037,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -28610,9 +28220,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -28637,22 +28245,6 @@
           "32": "assets/icons/app/media-player/standard-32.svg",
           "48": "assets/icons/app/media-player/standard-48.svg",
           "64": "assets/icons/app/media-player/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/media-player/outline-16.svg",
-          "20": "assets/icons/app/media-player/outline-20.svg",
-          "24": "assets/icons/app/media-player/outline-24.svg",
-          "28": "assets/icons/app/media-player/outline-28.svg",
-          "32": "assets/icons/app/media-player/outline-32.svg",
-          "48": "assets/icons/app/media-player/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/media-player/filled-16.svg",
-          "20": "assets/icons/app/media-player/filled-20.svg",
-          "24": "assets/icons/app/media-player/filled-24.svg",
-          "28": "assets/icons/app/media-player/filled-28.svg",
-          "32": "assets/icons/app/media-player/filled-32.svg",
-          "48": "assets/icons/app/media-player/filled-48.svg"
         }
       },
       "figma": {
@@ -28663,18 +28255,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -28821,9 +28401,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -28848,22 +28426,6 @@
           "32": "assets/icons/app/news/standard-32.svg",
           "48": "assets/icons/app/news/standard-48.svg",
           "64": "assets/icons/app/news/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/news/outline-16.svg",
-          "20": "assets/icons/app/news/outline-20.svg",
-          "24": "assets/icons/app/news/outline-24.svg",
-          "28": "assets/icons/app/news/outline-28.svg",
-          "32": "assets/icons/app/news/outline-32.svg",
-          "48": "assets/icons/app/news/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/news/filled-16.svg",
-          "20": "assets/icons/app/news/filled-20.svg",
-          "24": "assets/icons/app/news/filled-24.svg",
-          "28": "assets/icons/app/news/filled-28.svg",
-          "32": "assets/icons/app/news/filled-32.svg",
-          "48": "assets/icons/app/news/filled-48.svg"
         }
       },
       "figma": {
@@ -28874,18 +28436,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -29165,9 +28715,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -29192,22 +28740,6 @@
           "32": "assets/icons/app/notepad/standard-32.svg",
           "48": "assets/icons/app/notepad/standard-48.svg",
           "64": "assets/icons/app/notepad/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/notepad/outline-16.svg",
-          "20": "assets/icons/app/notepad/outline-20.svg",
-          "24": "assets/icons/app/notepad/outline-24.svg",
-          "28": "assets/icons/app/notepad/outline-28.svg",
-          "32": "assets/icons/app/notepad/outline-32.svg",
-          "48": "assets/icons/app/notepad/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/notepad/filled-16.svg",
-          "20": "assets/icons/app/notepad/filled-20.svg",
-          "24": "assets/icons/app/notepad/filled-24.svg",
-          "28": "assets/icons/app/notepad/filled-28.svg",
-          "32": "assets/icons/app/notepad/filled-32.svg",
-          "48": "assets/icons/app/notepad/filled-48.svg"
         }
       },
       "figma": {
@@ -29218,18 +28750,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -29443,9 +28963,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -29470,22 +28988,6 @@
           "32": "assets/icons/app/paint/standard-32.svg",
           "48": "assets/icons/app/paint/standard-48.svg",
           "64": "assets/icons/app/paint/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/paint/outline-16.svg",
-          "20": "assets/icons/app/paint/outline-20.svg",
-          "24": "assets/icons/app/paint/outline-24.svg",
-          "28": "assets/icons/app/paint/outline-28.svg",
-          "32": "assets/icons/app/paint/outline-32.svg",
-          "48": "assets/icons/app/paint/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/paint/filled-16.svg",
-          "20": "assets/icons/app/paint/filled-20.svg",
-          "24": "assets/icons/app/paint/filled-24.svg",
-          "28": "assets/icons/app/paint/filled-28.svg",
-          "32": "assets/icons/app/paint/filled-32.svg",
-          "48": "assets/icons/app/paint/filled-48.svg"
         }
       },
       "figma": {
@@ -29496,18 +28998,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -29804,9 +29294,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -29831,22 +29319,6 @@
           "32": "assets/icons/app/phone-link/standard-32.svg",
           "48": "assets/icons/app/phone-link/standard-48.svg",
           "64": "assets/icons/app/phone-link/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/phone-link/outline-16.svg",
-          "20": "assets/icons/app/phone-link/outline-20.svg",
-          "24": "assets/icons/app/phone-link/outline-24.svg",
-          "28": "assets/icons/app/phone-link/outline-28.svg",
-          "32": "assets/icons/app/phone-link/outline-32.svg",
-          "48": "assets/icons/app/phone-link/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/phone-link/filled-16.svg",
-          "20": "assets/icons/app/phone-link/filled-20.svg",
-          "24": "assets/icons/app/phone-link/filled-24.svg",
-          "28": "assets/icons/app/phone-link/filled-28.svg",
-          "32": "assets/icons/app/phone-link/filled-32.svg",
-          "48": "assets/icons/app/phone-link/filled-48.svg"
         }
       },
       "figma": {
@@ -29857,18 +29329,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -30129,9 +29589,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -30156,22 +29614,6 @@
           "32": "assets/icons/app/photos/standard-32.svg",
           "48": "assets/icons/app/photos/standard-48.svg",
           "64": "assets/icons/app/photos/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/photos/outline-16.svg",
-          "20": "assets/icons/app/photos/outline-20.svg",
-          "24": "assets/icons/app/photos/outline-24.svg",
-          "28": "assets/icons/app/photos/outline-28.svg",
-          "32": "assets/icons/app/photos/outline-32.svg",
-          "48": "assets/icons/app/photos/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/photos/filled-16.svg",
-          "20": "assets/icons/app/photos/filled-20.svg",
-          "24": "assets/icons/app/photos/filled-24.svg",
-          "28": "assets/icons/app/photos/filled-28.svg",
-          "32": "assets/icons/app/photos/filled-32.svg",
-          "48": "assets/icons/app/photos/filled-48.svg"
         }
       },
       "figma": {
@@ -30182,18 +29624,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -30519,9 +29949,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -30546,22 +29974,6 @@
           "32": "assets/icons/app/places/standard-32.svg",
           "48": "assets/icons/app/places/standard-48.svg",
           "64": "assets/icons/app/places/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/places/outline-16.svg",
-          "20": "assets/icons/app/places/outline-20.svg",
-          "24": "assets/icons/app/places/outline-24.svg",
-          "28": "assets/icons/app/places/outline-28.svg",
-          "32": "assets/icons/app/places/outline-32.svg",
-          "48": "assets/icons/app/places/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/places/filled-16.svg",
-          "20": "assets/icons/app/places/filled-20.svg",
-          "24": "assets/icons/app/places/filled-24.svg",
-          "28": "assets/icons/app/places/filled-28.svg",
-          "32": "assets/icons/app/places/filled-32.svg",
-          "48": "assets/icons/app/places/filled-48.svg"
         }
       },
       "figma": {
@@ -30572,18 +29984,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -30766,9 +30166,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -30793,22 +30191,6 @@
           "32": "assets/icons/app/publisher/standard-32.svg",
           "48": "assets/icons/app/publisher/standard-48.svg",
           "64": "assets/icons/app/publisher/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/publisher/outline-16.svg",
-          "20": "assets/icons/app/publisher/outline-20.svg",
-          "24": "assets/icons/app/publisher/outline-24.svg",
-          "28": "assets/icons/app/publisher/outline-28.svg",
-          "32": "assets/icons/app/publisher/outline-32.svg",
-          "48": "assets/icons/app/publisher/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/publisher/filled-16.svg",
-          "20": "assets/icons/app/publisher/filled-20.svg",
-          "24": "assets/icons/app/publisher/filled-24.svg",
-          "28": "assets/icons/app/publisher/filled-28.svg",
-          "32": "assets/icons/app/publisher/filled-32.svg",
-          "48": "assets/icons/app/publisher/filled-48.svg"
         }
       },
       "figma": {
@@ -30819,18 +30201,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -31070,9 +30440,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -31097,22 +30465,6 @@
           "32": "assets/icons/app/quick-assist/standard-32.svg",
           "48": "assets/icons/app/quick-assist/standard-48.svg",
           "64": "assets/icons/app/quick-assist/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/quick-assist/outline-16.svg",
-          "20": "assets/icons/app/quick-assist/outline-20.svg",
-          "24": "assets/icons/app/quick-assist/outline-24.svg",
-          "28": "assets/icons/app/quick-assist/outline-28.svg",
-          "32": "assets/icons/app/quick-assist/outline-32.svg",
-          "48": "assets/icons/app/quick-assist/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/quick-assist/filled-16.svg",
-          "20": "assets/icons/app/quick-assist/filled-20.svg",
-          "24": "assets/icons/app/quick-assist/filled-24.svg",
-          "28": "assets/icons/app/quick-assist/filled-28.svg",
-          "32": "assets/icons/app/quick-assist/filled-32.svg",
-          "48": "assets/icons/app/quick-assist/filled-48.svg"
         }
       },
       "figma": {
@@ -31123,18 +30475,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -31359,9 +30699,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -31386,22 +30724,6 @@
           "32": "assets/icons/app/settings/standard-32.svg",
           "48": "assets/icons/app/settings/standard-48.svg",
           "64": "assets/icons/app/settings/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/settings/outline-16.svg",
-          "20": "assets/icons/app/settings/outline-20.svg",
-          "24": "assets/icons/app/settings/outline-24.svg",
-          "28": "assets/icons/app/settings/outline-28.svg",
-          "32": "assets/icons/app/settings/outline-32.svg",
-          "48": "assets/icons/app/settings/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/settings/filled-16.svg",
-          "20": "assets/icons/app/settings/filled-20.svg",
-          "24": "assets/icons/app/settings/filled-24.svg",
-          "28": "assets/icons/app/settings/filled-28.svg",
-          "32": "assets/icons/app/settings/filled-32.svg",
-          "48": "assets/icons/app/settings/filled-48.svg"
         }
       },
       "figma": {
@@ -31412,18 +30734,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -31569,9 +30879,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -31596,22 +30904,6 @@
           "32": "assets/icons/app/snipping-tool/standard-32.svg",
           "48": "assets/icons/app/snipping-tool/standard-48.svg",
           "64": "assets/icons/app/snipping-tool/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/snipping-tool/outline-16.svg",
-          "20": "assets/icons/app/snipping-tool/outline-20.svg",
-          "24": "assets/icons/app/snipping-tool/outline-24.svg",
-          "28": "assets/icons/app/snipping-tool/outline-28.svg",
-          "32": "assets/icons/app/snipping-tool/outline-32.svg",
-          "48": "assets/icons/app/snipping-tool/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/snipping-tool/filled-16.svg",
-          "20": "assets/icons/app/snipping-tool/filled-20.svg",
-          "24": "assets/icons/app/snipping-tool/filled-24.svg",
-          "28": "assets/icons/app/snipping-tool/filled-28.svg",
-          "32": "assets/icons/app/snipping-tool/filled-32.svg",
-          "48": "assets/icons/app/snipping-tool/filled-48.svg"
         }
       },
       "figma": {
@@ -31622,18 +30914,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -31922,9 +31202,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -31949,22 +31227,6 @@
           "32": "assets/icons/app/solitaire/standard-32.svg",
           "48": "assets/icons/app/solitaire/standard-48.svg",
           "64": "assets/icons/app/solitaire/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/solitaire/outline-16.svg",
-          "20": "assets/icons/app/solitaire/outline-20.svg",
-          "24": "assets/icons/app/solitaire/outline-24.svg",
-          "28": "assets/icons/app/solitaire/outline-28.svg",
-          "32": "assets/icons/app/solitaire/outline-32.svg",
-          "48": "assets/icons/app/solitaire/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/solitaire/filled-16.svg",
-          "20": "assets/icons/app/solitaire/filled-20.svg",
-          "24": "assets/icons/app/solitaire/filled-24.svg",
-          "28": "assets/icons/app/solitaire/filled-28.svg",
-          "32": "assets/icons/app/solitaire/filled-32.svg",
-          "48": "assets/icons/app/solitaire/filled-48.svg"
         }
       },
       "figma": {
@@ -31975,18 +31237,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -32054,9 +31304,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -32081,22 +31329,6 @@
           "32": "assets/icons/app/sound-recorder/standard-32.svg",
           "48": "assets/icons/app/sound-recorder/standard-48.svg",
           "64": "assets/icons/app/sound-recorder/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/sound-recorder/outline-16.svg",
-          "20": "assets/icons/app/sound-recorder/outline-20.svg",
-          "24": "assets/icons/app/sound-recorder/outline-24.svg",
-          "28": "assets/icons/app/sound-recorder/outline-28.svg",
-          "32": "assets/icons/app/sound-recorder/outline-32.svg",
-          "48": "assets/icons/app/sound-recorder/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/sound-recorder/filled-16.svg",
-          "20": "assets/icons/app/sound-recorder/filled-20.svg",
-          "24": "assets/icons/app/sound-recorder/filled-24.svg",
-          "28": "assets/icons/app/sound-recorder/filled-28.svg",
-          "32": "assets/icons/app/sound-recorder/filled-32.svg",
-          "48": "assets/icons/app/sound-recorder/filled-48.svg"
         }
       },
       "figma": {
@@ -32107,18 +31339,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -32321,9 +31541,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -32348,22 +31566,6 @@
           "32": "assets/icons/app/store-dark-theme/standard-32.svg",
           "48": "assets/icons/app/store-dark-theme/standard-48.svg",
           "64": "assets/icons/app/store-dark-theme/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/store-dark-theme/outline-16.svg",
-          "20": "assets/icons/app/store-dark-theme/outline-20.svg",
-          "24": "assets/icons/app/store-dark-theme/outline-24.svg",
-          "28": "assets/icons/app/store-dark-theme/outline-28.svg",
-          "32": "assets/icons/app/store-dark-theme/outline-32.svg",
-          "48": "assets/icons/app/store-dark-theme/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/store-dark-theme/filled-16.svg",
-          "20": "assets/icons/app/store-dark-theme/filled-20.svg",
-          "24": "assets/icons/app/store-dark-theme/filled-24.svg",
-          "28": "assets/icons/app/store-dark-theme/filled-28.svg",
-          "32": "assets/icons/app/store-dark-theme/filled-32.svg",
-          "48": "assets/icons/app/store-dark-theme/filled-48.svg"
         }
       },
       "figma": {
@@ -32374,18 +31576,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -32720,9 +31910,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -32747,22 +31935,6 @@
           "32": "assets/icons/app/store-light-theme/standard-32.svg",
           "48": "assets/icons/app/store-light-theme/standard-48.svg",
           "64": "assets/icons/app/store-light-theme/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/store-light-theme/outline-16.svg",
-          "20": "assets/icons/app/store-light-theme/outline-20.svg",
-          "24": "assets/icons/app/store-light-theme/outline-24.svg",
-          "28": "assets/icons/app/store-light-theme/outline-28.svg",
-          "32": "assets/icons/app/store-light-theme/outline-32.svg",
-          "48": "assets/icons/app/store-light-theme/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/store-light-theme/filled-16.svg",
-          "20": "assets/icons/app/store-light-theme/filled-20.svg",
-          "24": "assets/icons/app/store-light-theme/filled-24.svg",
-          "28": "assets/icons/app/store-light-theme/filled-28.svg",
-          "32": "assets/icons/app/store-light-theme/filled-32.svg",
-          "48": "assets/icons/app/store-light-theme/filled-48.svg"
         }
       },
       "figma": {
@@ -32773,18 +31945,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -33122,9 +32282,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -33149,22 +32307,6 @@
           "32": "assets/icons/app/terminal/standard-32.svg",
           "48": "assets/icons/app/terminal/standard-48.svg",
           "64": "assets/icons/app/terminal/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/terminal/outline-16.svg",
-          "20": "assets/icons/app/terminal/outline-20.svg",
-          "24": "assets/icons/app/terminal/outline-24.svg",
-          "28": "assets/icons/app/terminal/outline-28.svg",
-          "32": "assets/icons/app/terminal/outline-32.svg",
-          "48": "assets/icons/app/terminal/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/terminal/filled-16.svg",
-          "20": "assets/icons/app/terminal/filled-20.svg",
-          "24": "assets/icons/app/terminal/filled-24.svg",
-          "28": "assets/icons/app/terminal/filled-28.svg",
-          "32": "assets/icons/app/terminal/filled-32.svg",
-          "48": "assets/icons/app/terminal/filled-48.svg"
         }
       },
       "figma": {
@@ -33175,18 +32317,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -33425,9 +32555,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -33452,22 +32580,6 @@
           "32": "assets/icons/app/visio/standard-32.svg",
           "48": "assets/icons/app/visio/standard-48.svg",
           "64": "assets/icons/app/visio/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/visio/outline-16.svg",
-          "20": "assets/icons/app/visio/outline-20.svg",
-          "24": "assets/icons/app/visio/outline-24.svg",
-          "28": "assets/icons/app/visio/outline-28.svg",
-          "32": "assets/icons/app/visio/outline-32.svg",
-          "48": "assets/icons/app/visio/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/visio/filled-16.svg",
-          "20": "assets/icons/app/visio/filled-20.svg",
-          "24": "assets/icons/app/visio/filled-24.svg",
-          "28": "assets/icons/app/visio/filled-28.svg",
-          "32": "assets/icons/app/visio/filled-32.svg",
-          "48": "assets/icons/app/visio/filled-48.svg"
         }
       },
       "figma": {
@@ -33478,18 +32590,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -33709,9 +32809,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -33736,22 +32834,6 @@
           "32": "assets/icons/app/weather/standard-32.svg",
           "48": "assets/icons/app/weather/standard-48.svg",
           "64": "assets/icons/app/weather/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/weather/outline-16.svg",
-          "20": "assets/icons/app/weather/outline-20.svg",
-          "24": "assets/icons/app/weather/outline-24.svg",
-          "28": "assets/icons/app/weather/outline-28.svg",
-          "32": "assets/icons/app/weather/outline-32.svg",
-          "48": "assets/icons/app/weather/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/weather/filled-16.svg",
-          "20": "assets/icons/app/weather/filled-20.svg",
-          "24": "assets/icons/app/weather/filled-24.svg",
-          "28": "assets/icons/app/weather/filled-28.svg",
-          "32": "assets/icons/app/weather/filled-32.svg",
-          "48": "assets/icons/app/weather/filled-48.svg"
         }
       },
       "figma": {
@@ -33762,18 +32844,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",
@@ -33897,9 +32967,7 @@
       "collection": "app",
       "status": "published",
       "themes": [
-        "standard",
-        "outline",
-        "filled"
+        "standard"
       ],
       "sizes": [
         16,
@@ -33924,22 +32992,6 @@
           "32": "assets/icons/app/white-board/standard-32.svg",
           "48": "assets/icons/app/white-board/standard-48.svg",
           "64": "assets/icons/app/white-board/standard-64.svg"
-        },
-        "outline": {
-          "16": "assets/icons/app/white-board/outline-16.svg",
-          "20": "assets/icons/app/white-board/outline-20.svg",
-          "24": "assets/icons/app/white-board/outline-24.svg",
-          "28": "assets/icons/app/white-board/outline-28.svg",
-          "32": "assets/icons/app/white-board/outline-32.svg",
-          "48": "assets/icons/app/white-board/outline-48.svg"
-        },
-        "filled": {
-          "16": "assets/icons/app/white-board/filled-16.svg",
-          "20": "assets/icons/app/white-board/filled-20.svg",
-          "24": "assets/icons/app/white-board/filled-24.svg",
-          "28": "assets/icons/app/white-board/filled-28.svg",
-          "32": "assets/icons/app/white-board/filled-32.svg",
-          "48": "assets/icons/app/white-board/filled-48.svg"
         }
       },
       "figma": {
@@ -33950,18 +33002,6 @@
       "updated": "2026-09-01",
       "notes": "Windows app tile, imported from the App Icons section at 64px, the only size the file holds. Its own collection rather than a Product Icon: an app tile and a product mark are different objects, which is why seven of these collided by name on the way in.",
       "generated": [
-        "filled:16",
-        "filled:20",
-        "filled:24",
-        "filled:28",
-        "filled:32",
-        "filled:48",
-        "outline:16",
-        "outline:20",
-        "outline:24",
-        "outline:28",
-        "outline:32",
-        "outline:48",
         "standard:16",
         "standard:20",
         "standard:24",

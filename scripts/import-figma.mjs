@@ -585,7 +585,10 @@ async function runPlan() {
           keywords: [...new Set(slug(asset.name).split('-').filter((w) => w.length > 1))],
           type: asset.type,
           collection: asset.collection,
-          status: 'draft',
+          // A reviewed plan may already know an asset's status — a retired app
+          // is deprecated the moment it lands, not after someone remembers to
+          // go back and say so. Anything the plan does not decide stays draft.
+          status: asset.status || 'draft',
           themes: Object.keys(variants),
           sizes: asset.sizes,
           colors: extractColors(sample),
