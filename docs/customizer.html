@@ -2007,12 +2007,48 @@ function candCollect(doc, svg) {
       isWhite: lum > 0.93, isBlack: lum < 0.05,
     });
   }
+  /* One optical shape is often drawn several times: a base coat, then radial
+     or linear passes over the identical geometry that shade it. Fluent
+     authors them base first and shading after, so the first pass carries the
+     color and the rest carry the rendering. Those later passes are not parts
+     of the icon, they are how one part is drawn, so they must not take an
+     accent of their own, must not be locked as white or black, and must not
+     count toward how many shapes the icon has. The base keeps them and they
+     take whatever it takes.
+
+     This is not a corner case. Across 317 standard drawings, 63% have at
+     least one repeat pass and 19% of all drawn shapes are repeats: 3,151
+     drawn collapse to 2,540 optical. Edge is six paths and three shapes,
+     which is what a person counts when they look at it. Calculator has none,
+     which is why Calculator always read correctly and Edge never did. */
+  const seenGeo = new Map();
+  for (const s of out) {
+    const key = candGeoKey(s.el);
+    if (!key) continue;
+    const base = seenGeo.get(key);
+    if (base) { s.pass = true; s.base = base; (base.passes || (base.passes = [])).push(s); }
+    else seenGeo.set(key, s);
+  }
   return out;
+}
+
+/** What makes two drawn elements the same optical shape: identical geometry
+ *  under an identical transform. Anything else is a different part. */
+function candGeoKey(el) {
+  const a = (n) => el.getAttribute(n) || '';
+  const t = (el.tagName || '').toLowerCase();
+  const tf = a('transform');
+  if (t === 'path')     return a('d') ? 'd|' + tf + '|' + a('d') : '';
+  if (t === 'rect')     return 'r|' + tf + '|' + [a('x'),a('y'),a('width'),a('height'),a('rx'),a('ry')].join(',');
+  if (t === 'circle')   return 'c|' + tf + '|' + [a('cx'),a('cy'),a('r')].join(',');
+  if (t === 'ellipse')  return 'e|' + tf + '|' + [a('cx'),a('cy'),a('rx'),a('ry')].join(',');
+  if (t === 'polygon' || t === 'polyline') return 'p|' + tf + '|' + a('points');
+  return '';
 }
 
 /** Group index 0..k-1 for every shape. Always computed from this icon alone. */
 function candGroup(rule, shapes, asset, k) {
-  const live = shapes.filter(s => !s.isWhite && !s.isBlack);
+  const live = shapes.filter(s => !s.pass && !s.isWhite && !s.isBlack);
   const g = new Map();
   const put = (arr) => arr.forEach(([s,i]) => g.set(s, Math.max(0, Math.min(k-1, i))));
   if (!live.length) return g;
@@ -2089,6 +2125,12 @@ function candGroup(rule, shapes, asset, k) {
   } else {
     // luminance: fixed cutoffs, stretched across however many accents there are
     put(live.map(s => [s, Math.min(k-1, Math.floor((1 - s.lum) * k))]));
+  }
+  // a shading pass takes whatever its base took, so the region stays one color
+  for (const s of shapes) {
+    if (!s.pass) continue;
+    const gi = g.get(s.base);
+    if (gi != null) g.set(s, gi);
   }
   return g;
 }

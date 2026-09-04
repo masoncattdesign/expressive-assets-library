@@ -17,6 +17,8 @@
  * Run: npm run build
  */
 import { cp, mkdir, rm, readFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -45,6 +47,23 @@ async function main() {
      same IntersectionObserver that already decides what to paint, so only the
      ~50 drawings actually on screen are ever requested. They are small, they
      cache, and HTTP/2 multiplexes them. It also deletes a build step. */
+
+  /* The Customizer kit ships as a download rather than as a file in git. It is
+     4.5MB that regenerates from the library every time, so committing it would
+     store a new copy of the whole thing on every asset change forever. Built
+     here means the download is never stale and never in history.
+
+     Built outside _site and zipped in, so the site serves the archive and not
+     an unpacked second copy of the pages. */
+  const KIT = 'expressive-assets-customizer-kit';
+  const stage = join(tmpdir(), `ea-kit-${process.pid}`);
+  const kitDir = join(OUT, 'kit');
+  await mkdir(kitDir, { recursive: true });
+  execFileSync('node', [join(ROOT, 'scripts/build-kit.mjs'), join(stage, KIT)], { stdio: 'pipe' });
+  // zip from the parent so the archive carries one named folder, not loose files.
+  execFileSync('zip', ['-qr', join(kitDir, 'Expressive-Assets-Customizer-Kit.zip'), KIT,
+                       '-x', '*.DS_Store'], { cwd: stage, stdio: 'pipe' });
+  await rm(stage, { recursive: true, force: true });
 
   // Stops GitHub Pages from running the content through Jekyll.
   await writeFile(join(OUT, '.nojekyll'), '', 'utf8');

@@ -87,6 +87,18 @@ If that redirects to sign-in rather than returning the drawing, the artwork is
 genuinely protected and not just the page around it. That is the test that
 matters.
 
+## The Customizer kit is inside the fence
+
+`npm run build` writes `_site/kit/Expressive-Assets-Customizer-Kit.zip` and
+About links to it. It is generated rather than committed, so it is never stale
+and never in git history.
+
+It sits under `/*` like everything else, so whatever protects the site protects
+the kit. On Pages today that means it is as public as the 15,474 drawings
+already are, which is to say the kit adds no exposure the site does not already
+have. Behind Entra it is a signed-in download, and nothing about the link
+changes.
+
 ## Sharing it with someone outside
 
 Invite them as a guest in Entra, or add a second identity provider in
