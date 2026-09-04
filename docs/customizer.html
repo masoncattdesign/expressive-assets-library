@@ -163,7 +163,14 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 .seed-derived div{flex:1;min-width:0}
 .presets-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:6px;margin-top:2px}
 .preset-swatches{display:flex;gap:5px;flex-wrap:wrap}
-.preset-swatch{width:24px;height:24px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .12s;flex-shrink:0}
+.seed-row{display:flex;align-items:center;gap:9px}
+.seed-sq{width:30px;height:30px;flex:none;padding:0;border:1px solid var(--border2);border-radius:7px;background:none;cursor:pointer}
+.seed-sq::-webkit-color-swatch-wrapper{padding:3px}
+.seed-sq::-webkit-color-swatch{border:none;border-radius:4px}
+.seed-sep{width:3px;height:3px;border-radius:50%;background:var(--border2);flex:none;margin:0 1px}
+.sel-in{width:100%;font-size:11.5px;font-family:var(--font);border:1px solid var(--border);border-radius:6px;padding:5px 7px;background:var(--surface2);color:var(--text);cursor:pointer}
+.sel-in:focus{outline:none;border-color:var(--border2)}
+.preset-swatch{width:22px;height:22px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .12s;flex-shrink:0}
 .preset-swatch:hover{transform:scale(1.15)}
 .preset-swatch.active{border-color:var(--text);box-shadow:0 0 0 1px var(--accent-ring)}
 
@@ -510,6 +517,7 @@ const state = {
   candSteps: 4,
   candVary: 45,                // how far members of one group step apart
   candOffsets: [0, 96, 192, 264, 40, 150],
+  candHarmony: 'spread',       // how the accents are related to each other
   candBase: false,
 };
 
@@ -525,7 +533,7 @@ const DEFAULTS = {
   rolesHue: 'replace', rolesChroma: 100, rolesLight: 0, rolesFlatten: false, rolesBase: false,
   softGroupBy: 'luminance', softBase: false,
   candSeed: '#0078D4', candRule: 'flatrule', candSteps: 4, candVary: 45,
-  candOffsets: [0, 96, 192, 264, 40, 150], candBase: false,
+  candOffsets: [0, 96, 192, 264, 40, 150], candHarmony: 'spread', candBase: false,
 };
 
 const RESET_KEYS = {
@@ -621,52 +629,48 @@ function renderIllusPreview() {
     row.appendChild(cell);
   });
 }
+/* Six seeds from the Microsoft palette rather than a mood board. They are
+   picked to sit in one narrow lightness band, L 0.546 to 0.589 in OKLCH, and
+   to spread around the hue wheel: 42, 133, 199, 251, 302, 333. Same lightness
+   means switching preset changes the hue of a theme and nothing else, which
+   is the only way two presets are comparable. The set they replaced had Clay
+   at L 0.654 and Slate at C 0.023, so it was neither. */
 const SYSTEM_PRESETS = [
   { name: 'Azure',  hex: '#0078D4' },
-  { name: 'Teal',   hex: '#0D8FA0' },
-  { name: 'Iris',   hex: '#7B6FD4' },
-  { name: 'Sage',   hex: '#5C7A5E' },
-  { name: 'Clay',   hex: '#C47A6A' },
-  { name: 'Slate',  hex: '#6B7280' },
+  { name: 'Teal',   hex: '#038387' },
+  { name: 'Iris',   hex: '#8764B8' },
+  { name: 'Berry',  hex: '#C239B3' },
+  { name: 'Green',  hex: '#498205' },
+  { name: 'Orange', hex: '#CA5010' },
 ];
 
-function renderPresets(stateKey, colorInputId, hexInputId) {
-  const wrap = document.createElement('div');
-
-  const label = document.createElement('div');
-  label.className = 'presets-label';
-  label.textContent = 'Presets';
-  const row = document.createElement('div');
-  row.className = 'preset-swatches';
-  row.id = 'preset-row-' + stateKey;
-
+/** Fill the preset circles that sit beside a mode's seed swatch. The row is
+ *  in the panel markup so the swatch and the presets share one line. */
+function fillPresets(stateKey, colorInputId, prefix) {
+  const row = document.getElementById(prefix + '-preset-row');
+  if (!row) return;
+  row.dataset.seed = stateKey;
+  row.innerHTML = '';
   SYSTEM_PRESETS.forEach(p => {
     const btn = document.createElement('div');
-    const isActive = p.hex.toLowerCase() === state[stateKey].toLowerCase();
-    btn.className = 'preset-swatch' + (isActive ? ' active' : '');
+    btn.className = 'preset-swatch' + (p.hex.toLowerCase() === String(state[stateKey]).toLowerCase() ? ' active' : '');
     btn.style.background = p.hex;
     btn.title = p.name;
     btn.onclick = () => {
       state[stateKey] = p.hex;
       const c = document.getElementById(colorInputId);
-      const h = document.getElementById(hexInputId);
       if (c) c.value = p.hex;
-      if (h) h.value = p.hex;
-      row.querySelectorAll('.preset-swatch').forEach(s => s.classList.remove('active'));
+      row.querySelectorAll('.preset-swatch').forEach(x => x.classList.remove('active'));
       btn.classList.add('active');
       onSeedUpdate();
     };
     row.appendChild(btn);
   });
-
-  wrap.appendChild(label);
-  wrap.appendChild(row);
-  return wrap;
 }
 
 // Called whenever a seed color input changes manually — deselects presets if no match
 function syncPresetActive(stateKey) {
-  const row = document.getElementById('preset-row-' + stateKey);
+  const row = document.querySelector('.preset-swatches[data-seed="' + stateKey + '"]');
   if (!row) return;
   const current = (state[stateKey] || '').toLowerCase();
   row.querySelectorAll('.preset-swatch').forEach(btn => {
@@ -1964,6 +1968,31 @@ const CAND_RULES = [
   ['contrast',  'Color contrast','The declared color groups: fills grouped by how similar they are, ordered most distinct first. Not lightness at all.'],
   ['shape',     'By shape',     'Clusters shapes that sit on top of one another into one object, biggest first, then steps each member within its accent. The closest thing here to base, emblem and glyph without anyone naming them.'],
 ];
+
+/* Accents are stored as hue rotations from the seed, so the relationship
+   between them is a list of angles and nothing else. These are the named
+   relationships worth having: pick one and every accent moves at once. Set an
+   accent by hand and the choice becomes Custom, because it no longer is one
+   of these. "One wash" is the interesting end of the range: every accent on
+   the seed's own hue, so the only thing separating parts is the lightness
+   step inside a group. */
+const CAND_HARMONY = [
+  ['spread',    'Spread',        [0, 96, 192, 264, 40, 150]],
+  ['analogous', 'Analogous',     [0, 24, -24, 48, -48, 72]],
+  ['triad',     'Triad',         [0, 120, 240, 60, 180, 300]],
+  ['comp',      'Complementary', [0, 180, 24, 204, 48, 228]],
+  ['split',     'Split complementary', [0, 150, 210, 30, 180, 330]],
+  ['square',    'Square',        [0, 90, 180, 270, 45, 225]],
+  ['wash',      'One wash',      [0, 0, 0, 0, 0, 0]],
+];
+function setCandHarmony(id) {
+  const h = CAND_HARMONY.find(x => x[0] === id);
+  if (!h) return;
+  state.candHarmony = id;
+  state.candOffsets = h[2].slice();
+  renderControls();
+  renderIcons();
+}
 
 function candLum(hex) {
   try {
@@ -3386,10 +3415,9 @@ function renderControls(){
         </div>
       </div>
       ${!isOriginal?`
-      <div class="ctrl-section" id="tint-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="tint-seed-c" value="${state.tintSeed}"><input class="hex-in" id="tint-seed-h" value="${state.tintSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="tint-seed-c" value="${state.tintSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="tint-preset-row"></div></div>
         <div class="seed-derived" id="tint-derived"></div>
         ${isDuo?`${secHueRow('tint','tintSecHue','tintSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Each icon is tinted in its own dominant hue \u2014 a wash of its own primary color.</div>'}
@@ -3402,7 +3430,7 @@ function renderControls(){
         <div class="slider-row"><span class="slabel">Saturation</span><input type="range" id="tint-saturation" min="0" max="100" value="${state.tintSaturation}" step="1"><span class="sval" id="v-tint-saturation">${state.tintSaturation}%</span></div>
       </div>`;
     if(!isOriginal){
-      document.getElementById('tint-preset-section').appendChild(renderPresets('tintSeed','tint-seed-c','tint-seed-h'));
+      fillPresets('tintSeed','tint-seed-c','tint');
       wireSeed('tint-seed','tintSeed');updateTintDerived();
       if(isDuo)wireSecHue('tint','tintSecHue','tintSeed');
     }
@@ -3412,10 +3440,9 @@ function renderControls(){
     const{shadow,highlight,lightColor}=deriveDichColors(state.dichSeed,state.dichSecHue);
     panel.innerHTML=`
       <div class="ctrl-label" style="display:flex;align-items:center">Chroma <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
-      <div class="ctrl-section" id="dich-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="dich-seed-c" value="${state.dichSeed}"><input class="hex-in" id="dich-seed-h" value="${state.dichSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="dich-seed-c" value="${state.dichSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="dich-preset-row"></div></div>
         <div class="seed-derived" id="dich-derived"></div>
         ${secHueRow('dich','dichSecHue','dichSeed')}
       </div>
@@ -3434,7 +3461,7 @@ function renderControls(){
         <label class="tog-row" onclick="toggleDich('dichShimmer')"><div class="tog${state.dichShimmer?' on':''}" id="tog-dichShimmer"></div>Shimmer</label>
         <label class="tog-row" onclick="toggleDich('dichEdge')"><div class="tog${state.dichEdge?' on':''}" id="tog-dichEdge"></div>Edge rim</label>
       </div>`;
-    document.getElementById('dich-preset-section').appendChild(renderPresets('dichSeed','dich-seed-c','dich-seed-h'));
+    fillPresets('dichSeed','dich-seed-c','dich');
     wireSeed('dich-seed','dichSeed');updateDichDerived();
     wireSecHue('dich','dichSecHue','dichSeed');wireSlider('dich-angle','v-dich-angle','dichAngle','°');wireSlider('dich-intensity','v-dich-intensity','dichIntensity','%');wireSlider('dich-spread','v-dich-spread','dichSpread','%');wireSlider('dich-bloomdist','v-dich-bloomdist','dichBloomDist','%');
   }
@@ -3454,10 +3481,9 @@ function renderControls(){
         </div>
       </div>
       ${!isOriginal?`
-      <div class="ctrl-section" id="outline-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="outline-seed-c" value="${state.outlineSeed}"><input class="hex-in" id="outline-seed-h" value="${state.outlineSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="outline-seed-c" value="${state.outlineSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="outline-preset-row"></div></div>
         <div class="seed-derived" id="outline-derived"></div>
         ${isDuo?`${secHueRow('outline','outlineSecHue','outlineSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Icons keep their original brand hues, rendered as outlines.</div>'}
@@ -3477,7 +3503,7 @@ function renderControls(){
         </div>
       </div>`;
     if(!isOriginal){
-      document.getElementById('outline-preset-section').appendChild(renderPresets('outlineSeed','outline-seed-c','outline-seed-h'));
+      fillPresets('outlineSeed','outline-seed-c','outline');
       wireSeed('outline-seed','outlineSeed');updateOutlineDerived();
       if(isDuo)wireSecHue('outline','outlineSecHue','outlineSeed');
     }
@@ -3501,10 +3527,9 @@ function renderControls(){
         </div>
       </div>
       ${!isOriginal?`
-      <div class="ctrl-section" id="flat-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="flat-seed-c" value="${state.flatSeed}"><input class="hex-in" id="flat-seed-h" value="${state.flatSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="flat-seed-c" value="${state.flatSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="flat-preset-row"></div></div>
         <div class="seed-derived" id="flat-derived"></div>
         ${isDuo?`${secHueRow('flat','flatSecHue','flatSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Icons keep their original brand hues, flattened to 4 tonal values.</div>'}
@@ -3524,7 +3549,7 @@ function renderControls(){
         </div>
       </div>`;
     if(!isOriginal){
-      document.getElementById('flat-preset-section').appendChild(renderPresets('flatSeed','flat-seed-c','flat-seed-h'));
+      fillPresets('flatSeed','flat-seed-c','flat');
       wireSeed('flat-seed','flatSeed');updateFlatDerived();
       if(isDuo)wireSecHue('flat','flatSecHue','flatSeed');
     }
@@ -3534,10 +3559,9 @@ function renderControls(){
   if(state.mode==='acrylic'){
     panel.innerHTML=`
       <div class="ctrl-label" style="display:flex;align-items:center">Acrylic <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
-      <div class="ctrl-section" id="acrylic-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="acrylic-seed-c" value="${state.acrylicSeed}"><input class="hex-in" id="acrylic-seed-h" value="${state.acrylicSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="acrylic-seed-c" value="${state.acrylicSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="acrylic-preset-row"></div></div>
         <div class="seed-derived" id="acrylic-derived"></div>
         ${secHueRow('acrylic','acrylicSecHue','acrylicSeed')}
       </div>
@@ -3547,7 +3571,7 @@ function renderControls(){
         <div class="slider-row"><span class="slabel">Offset</span><input type="range" id="acrylic-offset" min="0" max="20" value="${state.acrylicOffset}" step="1"><span class="sval" id="v-acrylic-offset">${state.acrylicOffset}%</span></div>
         <div class="slider-row"><span class="slabel">Frost</span><input type="range" id="acrylic-frost" min="15" max="55" value="${state.acrylicFrost}" step="1"><span class="sval" id="v-acrylic-frost">${state.acrylicFrost}%</span></div>
       </div>`;
-    document.getElementById('acrylic-preset-section').appendChild(renderPresets('acrylicSeed','acrylic-seed-c','acrylic-seed-h'));
+    fillPresets('acrylicSeed','acrylic-seed-c','acrylic');
     wireSeed('acrylic-seed','acrylicSeed');updateAcrylicDerived();
     wireSecHue('acrylic','acrylicSecHue','acrylicSeed');
     wireSlider('acrylic-offset','v-acrylic-offset','acrylicOffset','%');
@@ -3556,10 +3580,9 @@ function renderControls(){
   if(state.mode==='soft'){
     panel.innerHTML=`
       <div class="ctrl-label" style="display:flex;align-items:center">Soft <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
-      <div class="ctrl-section" id="soft-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="soft-seed-c" value="${state.softSeed}"><input class="hex-in" id="soft-seed-h" value="${state.softSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="soft-seed-c" value="${state.softSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="soft-preset-row"></div></div>
         <div class="seed-derived" id="soft-derived"></div>
         ${secHueRow('soft','softSecHue','softSeed')}
       </div>
@@ -3590,7 +3613,7 @@ function renderControls(){
         ${(state.softGroupBy==='relative'||state.softGroupBy==='archetype')?`<div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.softBase?' on':''}" id="tog-softBase" onclick="toggleRoles('softBase')"></span></div>`:''}
       </div>
       <div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Soft keeps the original gradients and remaps them into a six-tone pastel palette, warm pales through cool deeps.</div>`;
-    document.getElementById('soft-preset-section').appendChild(renderPresets('softSeed','soft-seed-c','soft-seed-h'));
+    fillPresets('softSeed','soft-seed-c','soft');
     wireSeed('soft-seed','softSeed');updateSoftDerived();
     wireSecHue('soft','softSecHue','softSeed');
     wireSlider('soft-intensity','v-soft-intensity','softIntensity','');
@@ -3610,10 +3633,9 @@ function renderControls(){
         Flat only, and always decided from the icon in front of it. No gradients,
         highlights or strokes, so the grouping is the only thing you are judging.
       </div>
-      <div class="ctrl-section" id="cand-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="cand-seed-c" value="${state.candSeed}"><input class="hex-in" id="cand-seed-h" value="${state.candSeed}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="cand-seed-c" value="${state.candSeed}"><span class="seed-sep"></span><div class="preset-swatches" id="cand-preset-row"></div></div>
       </div>
 
       <div class="divider"></div>
@@ -3634,10 +3656,14 @@ function renderControls(){
             <input type="color" class="cand-acc" id="cand-acc-${i}" value="${hex}" title="Accent ${i+1}">
             <span style="font-size:9px;color:var(--text3);font-family:var(--mono,monospace)">${i+1}</span></label>`).join('')}
         </div>
-        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
-          Each accent is stored as a rotation from the seed, so setting one here
-          calculates its own offset and moving the seed carries all of them
-          together.
+        <select class="sel-in" id="cand-harmony" onchange="setCandHarmony(this.value)">
+          ${CAND_HARMONY.map(h=>`<option value="${h[0]}"${state.candHarmony===h[0]?' selected':''}>${h[1]}</option>`).join('')}
+          ${state.candHarmony==='custom'?'<option value="custom" selected>Custom</option>':''}
+        </select>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:6px 0 0;line-height:1.5">
+          Each accent is stored as a rotation from the seed, so moving the seed
+          carries all of them together. The list sets how far apart those
+          rotations are; setting a swatch by hand makes it Custom.
         </div>
       </div>
 
@@ -3653,7 +3679,7 @@ function renderControls(){
         <div class="ctrl-row" style="margin-top:9px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.candBase?' on':''}" id="tog-candBase" onclick="toggleRoles('candBase')"></span></div>
       </div>`;
 
-    document.getElementById('cand-preset-section').appendChild(renderPresets('candSeed','cand-seed-c','cand-seed-h'));
+    fillPresets('candSeed','cand-seed-c','cand');
     wireSeed('cand-seed','candSeed');
     wireSlider('cand-vary','v-cand-vary','candVary','');
     acc.forEach((hex,i)=>{
@@ -3665,6 +3691,16 @@ function renderControls(){
           const next=state.candOffsets.slice();
           next[i]=Math.round(((P-H)%360+360)%360);
           state.candOffsets=next;
+          if(state.candHarmony!=='custom'){
+            state.candHarmony='custom';
+            const sel=document.getElementById('cand-harmony');
+            if(sel && !sel.querySelector('option[value="custom"]')){
+              const o=document.createElement('option');
+              o.value='custom'; o.textContent='Custom';
+              sel.appendChild(o);
+            }
+            if(sel) sel.value='custom';
+          }
           renderIcons();
         }catch(e){}
       });
@@ -3690,10 +3726,9 @@ function renderControls(){
 
     panel.innerHTML=`
       <div class="ctrl-label" style="display:flex;align-items:center">Roles <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
-      <div class="ctrl-section" id="roles-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="roles-seed-c" value="${state[K.seed]}"><input class="hex-in" id="roles-seed-h" value="${state[K.seed]}" maxlength="7"></div>
+        <div class="seed-row"><input type="color" class="seed-sq" id="roles-seed-c" value="${state[K.seed]}"><span class="seed-sep"></span><div class="preset-swatches" id="roles-preset-row"></div></div>
         <div class="seed-derived" id="roles-derived"></div>
       </div>
 
@@ -3748,7 +3783,7 @@ function renderControls(){
           :'Nothing on the canvas carries roles yet. Run npm run roles, or pick assets from the library.'}
       </div>`;
 
-    document.getElementById('roles-preset-section').appendChild(renderPresets(K.seed,'roles-seed-c','roles-seed-h'));
+    fillPresets(K.seed,'roles-seed-c','roles');
     wireSeed('roles-seed',K.seed);updateRolesDerived();
     wireSlider('roles-spread','v-roles-spread','rolesSpread','°');
     wireSlider('roles-chroma','v-roles-chroma','rolesChroma','%');
@@ -3781,9 +3816,9 @@ function updateRolesDerived(){
 
 function wireSeed(prefix,stateKey){
   const cEl=document.getElementById(prefix+'-c'),hEl=document.getElementById(prefix+'-h');
-  if(!cEl||!hEl)return;
-  cEl.addEventListener('input',()=>{state[stateKey]=cEl.value;hEl.value=cEl.value;syncPresetActive(stateKey);onSeedUpdate();});
-  hEl.addEventListener('input',()=>{if(/^#[0-9a-fA-F]{6}$/.test(hEl.value)){state[stateKey]=hEl.value;cEl.value=hEl.value;syncPresetActive(stateKey);onSeedUpdate();}});
+  if(!cEl)return;
+  cEl.addEventListener('input',()=>{state[stateKey]=cEl.value;if(hEl)hEl.value=cEl.value;syncPresetActive(stateKey);onSeedUpdate();});
+  if(hEl)hEl.addEventListener('input',()=>{if(/^#[0-9a-fA-F]{6}$/.test(hEl.value)){state[stateKey]=hEl.value;cEl.value=hEl.value;syncPresetActive(stateKey);onSeedUpdate();}});
 }
 function onSeedUpdate(){updateAllDerived();renderIcons();}
 function updateAllDerived(){updateTintDerived();updateDichDerived();updateOutlineDerived();updateFlatDerived();updateAcrylicDerived();updateSoftDerived();updateRolesDerived();}
@@ -4206,7 +4241,7 @@ var SETS = {
     'product.word', 'product.excel', 'product.powerpoint',
     'product.copilot', 'product.teams', 'product.outlook',
     'app.photos', 'app.calculator', 'product.edge',
-    'app.paint', 'product.swiftkey', 'app.file-explorer',
+    'app.paint', 'third-party.figma', 'app.file-explorer',
   ],
   illustrations: [
     'oobe.desktop', 'oobe.msa-sign-up', 'oobe.device-name', 'oobe.privacy',
