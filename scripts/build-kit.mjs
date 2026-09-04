@@ -23,6 +23,7 @@
 import { readFile, writeFile, mkdir, rm, cp, chmod } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 import { statsFor, fillMarks } from './lib/stats.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -34,6 +35,16 @@ const OUT = process.argv[2]
    first pass shipped the Customizer without styles.css, which it needs, and
    left four links pointing at pages that were not there. A kit you hand
    someone should not 404 on its own navigation. */
+/* A kit with no version on it cannot answer "is this an older version?", which
+   is the first question anyone asks when the UI does not match the screen they
+   were shown. It is stamped in three places: a file, the README, and the page
+   the Customizer sits in front of. */
+let stamp = 'unknown';
+try {
+  stamp = execSync('git log -1 --format=%h\\ %cd --date=format:%Y-%m-%d\\ %H:%M', { cwd: ROOT })
+    .toString().trim();
+} catch { /* no .git is not a reason to fail */ }
+
 const PAGES = [
   'customizer.html', 'customizer-v1.html', 'styles.css',
   'index.html', 'app.js',
@@ -168,9 +179,13 @@ if that is easier. Do not send the whole folder back: \`assets/\` and
 Every page here is an unmodified copy apart from the counts in About and the
 System Map, so a diff against his will show only what you changed.
 
-Built ${new Date().toISOString().slice(0, 10)} from ${manifest.total} assets.
+**This copy: ${stamp}.** Built from ${manifest.total} assets. If the Customizer
+here does not match what you were shown, check that against the build date on
+the About page and download again.
 `;
 await writeFile(join(OUT, 'README.md'), readme);
+await writeFile(join(OUT, 'VERSION.txt'), stamp + '\n');
 
 console.log(`Kit at ${OUT}`);
+console.log(`  built from ${stamp}`);
 console.log(`  ${kept.length} assets, ${copied} drawings, standard only.`);
