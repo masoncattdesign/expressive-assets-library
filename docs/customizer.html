@@ -156,8 +156,15 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 .preset-swatch.active{border-color:var(--text);box-shadow:0 0 0 1px var(--accent-ring)}
 
 /* ---- Expressive Assets library picker ---------------------------------- */
-.lib-search{flex:1;min-width:0;margin-left:12px;background:var(--surface2,#2a2a2e);border:1px solid var(--line);
-  color:inherit;font:inherit;font-size:12px;padding:5px 9px;border-radius:6px}
+/* This input sits on the canvas, which has its own Dark/Light control separate
+   from the page theme. Taking its background from the page tokens put a white
+   field on a dark canvas, so it follows .light-bg like everything else here. */
+.lib-search{flex:1;min-width:0;margin-left:12px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.92);
+  font:inherit;font-size:12px;padding:5px 9px;border-radius:6px}
+.lib-search::placeholder{color:rgba(255,255,255,.45)}
+.light-bg .lib-search{background:rgba(16,16,20,.04);border-color:rgba(16,16,20,.14);color:#16181d}
+.light-bg .lib-search::placeholder{color:rgba(16,16,20,.42)}
 .lib-search:focus{outline:2px solid var(--accent,#4a9eff);outline-offset:1px}
 .lib-results{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
 .lib-hit{background:var(--surface2,#2a2a2e);border:1px solid var(--line);color:inherit;
@@ -2774,10 +2781,40 @@ function transformSvg(svgStr,iconName,forceOriginal,asset){
   return svgStr;
 }
 
+/* SVG ids are document-global, and this page puts the same artwork on the
+   canvas and inside seven mode-card thumbnails at once. Word's paint0 gradient
+   ends up defined six times under one id, the browser resolves url(#id) to the
+   FIRST match, and every copy paints itself with whichever one happened to be
+   inserted first -- normally a thumbnail, holding the untouched original.
+
+   The effect is invisible in modes that build fresh gradients under a random
+   uid, and glaring in Roles, which edits the stops of the gradients already
+   there: the canvas icon was recolored correctly and then drawn with the
+   thumbnail's colors.
+
+   So every instance gets its own namespace at insertion time. Applied after
+   the transform, never before, so a pipeline still sees the ids it expects.
+   Exported SVGs keep the original ids, since they leave as whole documents. */
+let _nsSeq = 0;
+function nsIds(svgStr) {
+  const ids = [...new Set([...svgStr.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]))];
+  if (!ids.length) return svgStr;
+  const tag = 'i' + (++_nsSeq).toString(36) + '-';
+  let out = svgStr;
+  for (const id of ids) {
+    const esc = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    out = out
+      .replace(new RegExp('id="' + esc + '"', 'g'), 'id="' + tag + id + '"')
+      .replace(new RegExp('url\\(#' + esc + '\\)', 'g'), 'url(#' + tag + id + ')')
+      .replace(new RegExp('(xlink:)?href="#' + esc + '"', 'g'), '$1href="#' + tag + id + '"');
+  }
+  return out;
+}
+
 async function renderIconCell(name,svgStr,forceOriginal,asset){
   const cell=document.createElement('div');cell.className='icon-cell';
   const transformed=transformSvg(svgStr,name,forceOriginal,asset);
-  cell.innerHTML=transformed+`<div class="icon-label">${name}</div>`;
+  cell.innerHTML=nsIds(transformed)+`<div class="icon-label">${name}</div>`;
   const svg=cell.querySelector('svg');if(svg){svg.setAttribute('width','64');svg.setAttribute('height','64');}
   // Right-click → download this icon's current SVG. Source preserved on the
   // cell so the export pipeline re-runs transformSvg from the unmodified input.
@@ -2821,7 +2858,7 @@ async function renderThumbs(){
   const samples=fromSet.length?fromSet:[SVG_WIN_V2['Photos'],SVG_WIN_V2['Notepad']].filter(Boolean);
   const sample=samples[0];
   const sample2=samples[1]||samples[0];
-  const makeSvgThumb=(svgStr,size=28)=>{const w=document.createElement('div');w.innerHTML=svgStr;const s=w.querySelector('svg');if(s){s.setAttribute('width',size);s.setAttribute('height',size);}return s;};
+  const makeSvgThumb=(svgStr,size=28)=>{const w=document.createElement('div');w.innerHTML=nsIds(svgStr);const s=w.querySelector('svg');if(s){s.setAttribute('width',size);s.setAttribute('height',size);}return s;};
   const dtThumb=document.getElementById('thumb-default');if(dtThumb){dtThumb.innerHTML='';samples.forEach(s=>{const el=makeSvgThumb(s);if(el)dtThumb.appendChild(el);});}
   const tintedThumb=document.getElementById('thumb-tinted');if(tintedThumb){tintedThumb.innerHTML='';samples.forEach(s=>{const t=applyTinted(s,'#0078D4',85,100,110,90,'duo');const el=makeSvgThumb(t);if(el)tintedThumb.appendChild(el);});}
   const dichThumb=document.getElementById('thumb-dichromic');if(dichThumb){dichThumb.innerHTML='';const{shadow,highlight,lightColor}=deriveDichColors('#0078D4',0);samples.forEach(s=>{const t=applyDichromic(s,shadow,highlight,lightColor,315,85,70,true,true,true,90);const el=makeSvgThumb(t);if(el)dichThumb.appendChild(el);});}
@@ -3377,7 +3414,7 @@ async function loadLibrary(){
     search.placeholder = `Search ${LIB.assets.length.toLocaleString()} assets…`;
     search.addEventListener('input', () => libSearch(search.value));
     note.hidden = false;
-    note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source color for these pipelines to read — recolor those in Gallery instead.';
+    note.hidden = true;
   }else{
     note.hidden = false;
     note.textContent = 'Library not loaded. Open this page from the published site (or any local server) to pull assets from Expressive Assets; opened straight from disk, browsers block the fetch and only the sample icons above are available.';
@@ -3466,10 +3503,14 @@ renderIcons();
 
 /** The anatomy pilot group, so the styling work and the anatomy work are
  *  looking at the same twelve icons. */
+/* Product and app icons together, because the two groups are drawn under
+   different rules and a pipeline that only ever sees Office tiles will look
+   finished while being wrong about half the library. */
 var SET_DEFAULT = [
-  'product.word', 'product.excel', 'product.powerpoint', 'product.onenote',
-  'product.teams', 'product.outlook', 'product.sharepoint', 'product.copilot',
-  'product.edge', 'product.microsoft', 'product.swiftkey', 'product.github',
+  'product.word', 'product.excel', 'product.powerpoint',
+  'product.copilot', 'product.teams', 'product.outlook',
+  'app.photos', 'app.calculator', 'product.edge',
+  'app.paint', 'product.swiftkey', 'app.file-explorer',
 ];
 
 var SET = [];
@@ -3646,8 +3687,7 @@ async function loadLibrary() {
   const search = document.getElementById('lib-search');
   search.placeholder = 'Search ' + LIB.assets.length.toLocaleString() + ' assets by name';
   search.addEventListener('input', () => libSearch(search.value));
-  note.hidden = false;
-  note.textContent = 'Standard artwork only. Outline and Filled are drawn in currentColor, so there is no source color for these pipelines to read. Recolor those in Gallery instead.';
+  note.hidden = true;
 
   // Gallery deep-links here as customizer.html?asset=<id>, which opens the set
   // on what you clicked rather than on the default twelve.
