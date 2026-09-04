@@ -147,7 +147,7 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 .reset-btn{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid var(--border);background:transparent;color:var(--text3);cursor:pointer;font-family:var(--font);transition:all .12s;margin-left:auto}
 .reset-btn:hover{border-color:var(--border2);color:var(--text2)}
 .reset-btn svg{width:11px;height:11px;opacity:0.7}
-.seed-derived{display:flex;gap:4px;height:20px;border-radius:6px;overflow:hidden;margin-top:6px;border:1px solid var(--border2)}
+.seed-derived{display:flex;flex-wrap:wrap;align-items:center;row-gap:4px;min-height:18px;margin-top:8px;font-size:11px;color:var(--text3);line-height:1.5}
 .seed-derived div{flex:1;min-width:0}
 .presets-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:6px;margin-top:2px}
 .preset-swatches{display:flex;gap:5px;flex-wrap:wrap}
@@ -262,6 +262,14 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
         <span class="mode-desc">Stroke-only, minimal style</span>
       </span>
     </button>
+    <button type="button" class="mode-card" data-mode="roles" onclick="setMode('roles')" aria-pressed="false">
+      <span class="mode-check"></span>
+      <span class="mode-thumb" id="thumb-roles"></span>
+      <span class="mode-text">
+        <span class="mode-name">Roles</span>
+        <span class="mode-desc">Themes the declared color groups instead of guessing</span>
+      </span>
+    </button>
     <button type="button" class="mode-card" data-mode="tinted" onclick="setMode('tinted')" aria-pressed="false">
       <span class="mode-check"></span>
       <span class="mode-thumb" id="thumb-tinted"></span>
@@ -278,12 +286,12 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
         <span class="mode-desc">Pastel illustration palette with airy gradients</span>
       </span>
     </button>
-    <button type="button" class="mode-card" data-mode="roles" onclick="setMode('roles')" aria-pressed="false">
+    <button type="button" class="mode-card" data-mode="softroles" onclick="setMode('softroles')" aria-pressed="false">
       <span class="mode-check"></span>
-      <span class="mode-thumb" id="thumb-roles"></span>
+      <span class="mode-thumb" id="thumb-softroles"></span>
       <span class="mode-text">
-        <span class="mode-name">Roles</span>
-        <span class="mode-desc">Themes the declared color groups instead of guessing</span>
+        <span class="mode-name">Soft Roles</span>
+        <span class="mode-desc">Soft's palette, assigned by declared groups</span>
       </span>
     </button>
     <button type="button" class="mode-card" data-mode="dichromic" onclick="setMode('dichromic')" aria-pressed="false">
@@ -463,9 +471,22 @@ const state = {
   // the last one, so dropping the accent count merges the already-similar
   // groups and keeps the separation the artwork had.
   rolesSeed: '#0078D4',
+  rolesTarget: 'relative',     // 'relative' (colorN) | 'archetype' (every green at once)
   rolesAccents: 2,             // 2..4 — how many accents the theme carries
   rolesSpread: 46,             // degrees between accent hues
+  rolesHue: 'replace',         // 'replace' the hue, or 'rotate' it and keep the icon's own relationships
+  rolesChroma: 100,            // 0..200 — none to vivid
+  rolesLight: 0,               // -30..30
+  rolesFlatten: false,         // collapse every ramp to one color
   rolesBase: false,            // theme the intentional white/black too
+  // ── Soft Roles ──
+  // Soft's palette, Roles' targeting. The palette says which colors exist,
+  // the roles say which shapes get which one.
+  softRolesSeed: '#5B7AE8',
+  softRolesIntensity: 50,
+  softRolesSecHue: 0,
+  softRolesTarget: 'relative',
+  softRolesBase: false,
 };
 
 const DEFAULTS = {
@@ -476,7 +497,10 @@ const DEFAULTS = {
   flatSeed: '#0078D4', flatGradients: false, flatGradIntensity: 50, flatMode: 'duo', flatSaturation: 130, flatSecHue: 0, flatTexture: 'none',
   acrylicSeed: '#0078D4', acrylicOffset: 0, acrylicFrost: 32, acrylicSecHue: 0,
   softSeed: '#5B7AE8', softIntensity: 50, softSecHue: 0,
-  rolesSeed: '#0078D4', rolesAccents: 2, rolesSpread: 46, rolesBase: false,
+  rolesSeed: '#0078D4', rolesTarget: 'relative', rolesAccents: 2, rolesSpread: 46,
+  rolesHue: 'replace', rolesChroma: 100, rolesLight: 0, rolesFlatten: false, rolesBase: false,
+  softRolesSeed: '#5B7AE8', softRolesIntensity: 50, softRolesSecHue: 0,
+  softRolesTarget: 'relative', softRolesBase: false,
 };
 
 const RESET_KEYS = {
@@ -486,7 +510,8 @@ const RESET_KEYS = {
   flat:     ['flatSeed','flatGradients','flatGradIntensity','flatMode','flatSaturation','flatSecHue','flatTexture'],
   acrylic:  ['acrylicSeed','acrylicOffset','acrylicFrost','acrylicSecHue'],
   soft:     ['softSeed','softIntensity','softSecHue'],
-  roles:    ['rolesSeed','rolesAccents','rolesSpread','rolesBase'],
+  roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesSpread','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase'],
+  softroles:['softRolesSeed','softRolesIntensity','softRolesSecHue','softRolesTarget','softRolesBase'],
 };
 
 function resetMode() {
@@ -1690,12 +1715,46 @@ function applyOutline(svgStr, seedHex, strokeW, bgMode='dark', duo=false, perSha
    signature, so the mapping survives the SVG being reordered, re-exported, or
    parsed by a different tool than the one that derived it.
    ═══════════════════════════════════════════════════════ */
-function rolesIndex(asset) {
-  if (!asset || !asset.roles || !Array.isArray(asset.roles.groups)) return null;
+/* The twelve hue bands the archetype names are built from, in wheel order.
+   Targeting by archetype maps a band to an accent by its position here, so the
+   mapping is the same in every asset: every green in the library answers to the
+   same accent whether or not green is that icon's most distinct color. */
+const ROLE_BANDS = ['red','orange','amber','yellow','lime','green','teal','cyan','azure','blue','violet','magenta'];
+const baseBand = (name) => String(name || '').replace(/^(muted-deep-|muted-|light-|deep-)/, '');
+
+/* One index, two ways to slice the same fills.
+
+   relative  — colorN, ordered most distinct first. Means nothing outside this
+               icon; what it carries is separation.
+   archetype — the absolute name. The same fill answers to the same accent in
+               every asset, so a theme can move every green at once. */
+function rolesIndex(asset, target) {
+  if (!asset || !asset.roles) return null;
   const map = new Map();
-  let themable = 0, held = 0;
-  for (const g of asset.roles.groups) {
-    const gi = g.basecolor ? -1 : themable++;
+  let count = 0, held = 0;
+
+  if (target === 'archetype' && Array.isArray(asset.roles.archetypes)) {
+    const held4 = new Set();
+    for (const g of asset.roles.groups || []) if (g.basecolor)
+      for (const m of g.members) held4.add(m.stops.join('>').toLowerCase());
+    const slots = new Set();
+    for (const a of asset.roles.archetypes) {
+      const band = baseBand(a.id);
+      const at = ROLE_BANDS.indexOf(band);
+      for (const m of a.members) {
+        const key = m.stops.join('>').toLowerCase();
+        const isHeld = held4.has(key) || band === 'white' || band === 'black';
+        const hit = { g: at < 0 ? ROLE_BANDS.length : at, base: isHeld, band };
+        map.set(key, hit);
+        for (const alt of m.alsoFills || []) map.set(alt.join('>').toLowerCase(), hit);
+        if (isHeld) held += m.shapes.length; else slots.add(band);
+      }
+    }
+    return { map, count: slots.size, held, byBand: true };
+  }
+
+  for (const g of asset.roles.groups || []) {
+    const gi = g.basecolor ? -1 : count++;
     for (const m of g.members) {
       const hit = { g: gi, base: !!g.basecolor };
       map.set(m.stops.join('>').toLowerCase(), hit);
@@ -1706,7 +1765,7 @@ function rolesIndex(asset) {
       if (g.basecolor) held += m.shapes.length;
     }
   }
-  return { map, count: themable, held };
+  return { map, count, held, byBand: false };
 }
 
 /** Accents fan out from the seed. Accent 1 goes to the most distinct group. */
@@ -1714,41 +1773,66 @@ function rolesAccentHues(seedHex, n, spread) {
   try {
     const [, , H] = hexToOklch(seedHex);
     return Array.from({ length: n }, (_, i) => (H + i * spread) % 360);
-  } catch (e) { return Array.from({ length: n }, () => 250); }
+  } catch (e) { return Array.from({ length: n }, (_, i) => (250 + i * spread) % 360); }
 }
 
-/** Keep the fill's own lightness, adopt the accent's hue. That preserves the
- *  shading a gradient was drawn with while changing what color it is. */
-/* Keep the fill's own lightness so a gradient stays the ramp it was drawn as,
-   and adopt the accent's hue.
-
-   Near-neutrals used to be returned untouched, on the theory that a gray is a
-   gray. That was wrong here: intentional white and black are already held out
-   as basecolor, so any neutral still in a themable group is one the artwork put
-   there as a color -- Calculator's body, Photos' frame -- and leaving it dead
-   gray made those icons read as though nothing had happened. They now take the
-   accent hue at a low chroma floor, so they tint rather than shift. */
+/* What actually happens to a color once its group is chosen. Every knob here
+   is a separate question, which is the point: hue says what color it becomes,
+   chroma how much of it there is, lightness where it sits, and REPLACE versus
+   ROTATE decides whether the icon's own internal hue relationships survive. */
 const ROLES_NEUTRAL_FLOOR = 0.035;
-function rolesRecolor(hex, hue) {
+function rolesShift(hex, hue, o) {
   try {
-    const [L, C] = hexToOklch(hex);
-    return oklchToHex(L, Math.max(C, ROLES_NEUTRAL_FLOOR), hue);
+    let [L, C, H] = hexToOklch(hex);
+    H = o.hueMode === 'rotate' ? (H + hue) % 360 : hue;
+    C = Math.max(C, ROLES_NEUTRAL_FLOOR) * (o.chroma / 100);
+    L = Math.max(0.02, Math.min(0.99, L + o.light / 100));
+    return oklchToHex(L, Math.max(0, C), H);
   } catch (e) { return hex; }
 }
 
-function applyRoles(svgStr, asset, seedHex, accents, spread, themeBase) {
-  const idx = rolesIndex(asset);
+/** Mean of a fill's stops, for flattening a ramp to one color. */
+function rolesMean(hexes) {
+  try {
+    const ls = hexes.map(hexToOklch);
+    const L = ls.reduce((n, x) => n + x[0], 0) / ls.length;
+    const C = ls.reduce((n, x) => n + x[1], 0) / ls.length;
+    const rad = ls.map((x) => (x[2] * Math.PI) / 180);
+    const H = (Math.atan2(rad.reduce((n, r) => n + Math.sin(r), 0), rad.reduce((n, r) => n + Math.cos(r), 0)) * 180) / Math.PI;
+    return oklchToHex(L, C, (H + 360) % 360);
+  } catch (e) { return hexes[0]; }
+}
+
+/* Map a fill onto one tone of a generated palette, keeping the fill's own
+   internal lightness spread so a gradient stays a gradient. This is what lets
+   Soft's palette drive Roles' targeting: the palette says which colors exist,
+   the roles say which shapes get which one. */
+function rolesToTone(stops, toneHex, o) {
+  try {
+    const [tL, tC, tH] = hexToOklch(toneHex);
+    const Ls = stops.map((c) => hexToOklch(c)[0]);
+    const lo = Math.min(...Ls), hi = Math.max(...Ls), span = hi - lo || 1;
+    return stops.map((c) => {
+      const [L] = hexToOklch(c);
+      const rel = hi === lo ? 0.5 : (L - lo) / span;      // 0 darkest .. 1 lightest
+      const outL = Math.max(0.05, Math.min(0.97, tL - 0.11 + rel * 0.22 + o.light / 100));
+      return oklchToHex(outL, Math.max(0, tC * (o.chroma / 100)), tH);
+    });
+  } catch (e) { return stops; }
+}
+
+function applyRoles(svgStr, asset, o) {
+  const idx = rolesIndex(asset, o.target);
   if (!idx || !idx.count) return svgStr;      // no declared roles: show it untouched
   try {
     const doc = new DOMParser().parseFromString(svgStr, 'image/svg+xml');
-    const svg = doc.querySelector('svg');
-    if (!svg) return svgStr;
+    if (!doc.querySelector('svg')) return svgStr;
 
-    const n = Math.max(1, Math.min(accents, idx.count));
-    const hues = rolesAccentHues(seedHex, n, spread);
+    const n = Math.max(1, Math.min(o.accents, idx.byBand ? ROLE_BANDS.length : idx.count));
+    const hues = rolesAccentHues(o.seed, n, o.spread);
     /* The fold. A group past the last accent takes the last accent, which is
        why cutting too fine is safe and cutting too coarse is not. */
-    const hueFor = (g) => hues[Math.min(g, n - 1)];
+    const slotFor = (g) => (idx.byBand ? g % n : Math.min(g, n - 1));
 
     const norm = (c) => {
       const v = String(c || '').trim().toLowerCase();
@@ -1760,25 +1844,22 @@ function applyRoles(svgStr, asset, seedHex, accents, spread, themeBase) {
     const num = (v, d) => { const f = parseFloat(v); return Number.isFinite(f) ? f : d; };
 
     /* The signature has to be built the way the derivation built it, or nothing
-       matches. Two details do the damage if missed:
-
-       Stops the derivation judged invisible were never stored, so a live
-       gradient carrying its fade-out anchors has more stops than its member
-       does. Visibility depends on the REFERENCING element's fill-opacity, not
-       on the gradient alone, so signatures are resolved per element rather than
-       per gradient definition.
-
-       Every stop is then recolored, the invisible ones included, so a bloom
-       fades toward the new hue rather than the old one. */
+       matches. Stops the derivation judged invisible were never stored, and
+       visibility depends on the REFERENCING element's fill-opacity rather than
+       on the gradient alone, so signatures are resolved per element. Every stop
+       is then recolored, the invisible ones included, so a bloom fades toward
+       the new hue rather than the old one. */
     const GHOST = 0.05;
     const grads = new Map();
     for (const g of doc.querySelectorAll('linearGradient, radialGradient'))
       if (g.id) grads.set(g.id, g);
 
-    const repaint = (stops, hue) => stops.forEach((st) => {
-      const c = norm(st.getAttribute('stop-color') || '#000000');
-      st.setAttribute('stop-color', rolesRecolor(c, hue));
-    });
+    const recolor = (colors, hit) => {
+      const slot = slotFor(hit.g);
+      if (o.palette) return rolesToTone(colors, o.palette[slot % o.palette.length], o);
+      const hue = o.hueMode === 'rotate' ? o.spread * slot : hues[slot];
+      return colors.map((c) => rolesShift(c, hue, o));
+    };
 
     let touched = 0;
     for (const el of doc.querySelectorAll('path, rect, circle, ellipse, polygon')) {
@@ -1794,20 +1875,41 @@ function applyRoles(svgStr, asset, seedHex, accents, spread, themeBase) {
         if (!stops.length) continue;
         const visible = stops.filter((st) => num(st.getAttribute('stop-opacity'), 1) * fo > GHOST);
         const hit = idx.map.get(visible.map((st) => norm(st.getAttribute('stop-color') || '#000000')).join('>'));
-        if (!hit || (hit.base && !themeBase)) continue;
-        repaint(stops, hit.base ? hues[n - 1] : hueFor(hit.g));
+        if (!hit || (hit.base && !o.themeBase)) continue;
+        const src = stops.map((st) => norm(st.getAttribute('stop-color') || '#000000'));
+        const out = recolor(src, hit);
+        if (o.flatten) {
+          // A ramp collapses to one color, which is the flat-art question: how
+          // much of an icon's read is shading rather than color?
+          const flat = rolesMean(out);
+          el.setAttribute('fill', flat);
+        } else {
+          stops.forEach((st, i) => st.setAttribute('stop-color', out[i]));
+        }
         touched++;
       } else {
         if (fo <= GHOST) continue;
         const hit = idx.map.get(norm(f));
-        if (!hit || (hit.base && !themeBase)) continue;
-        el.setAttribute('fill', rolesRecolor(norm(f), hit.base ? hues[n - 1] : hueFor(hit.g)));
+        if (!hit || (hit.base && !o.themeBase)) continue;
+        el.setAttribute('fill', recolor([norm(f)], hit)[0]);
         touched++;
       }
     }
     if (!touched) return svgStr;
     return new XMLSerializer().serializeToString(doc);
   } catch (e) { return svgStr; }
+}
+
+/** Roles targeting, Soft's palette. The palette says which colors exist; the
+ *  roles say which shapes get which one. */
+function applySoftRoles(svgStr, asset, seedHex, intensity, secHue, themeBase, target) {
+  const pal = generateSoftPalette(seedHex, intensity, secHue);
+  // Most distinct group takes the warm accent; the rest walk cooler and deeper.
+  const tones = [pal.t1, pal.t3, pal.t4, pal.t5, pal.t0, pal.t2];
+  return applyRoles(svgStr, asset, {
+    seed: seedHex, accents: tones.length, spread: 0, themeBase, target,
+    hueMode: 'replace', chroma: 100, light: 0, flatten: false, palette: tones,
+  });
 }
 
 function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
@@ -2738,7 +2840,15 @@ function applyAcrylic(svgStr, seedHex, bgMode='dark', offsetPct=8, frost=32, sec
 function transformSvg(svgStr,iconName,forceOriginal,asset){
   if(state.mode==='default')return svgStr;
   if(state.mode==='roles'){
-    return applyRoles(svgStr,asset,state.rolesSeed,state.rolesAccents,state.rolesSpread,state.rolesBase);
+    return applyRoles(svgStr,asset,{
+      seed:state.rolesSeed, target:state.rolesTarget, accents:state.rolesAccents,
+      spread:state.rolesSpread, hueMode:state.rolesHue, chroma:state.rolesChroma,
+      light:state.rolesLight, flatten:state.rolesFlatten, themeBase:state.rolesBase,
+    });
+  }
+  if(state.mode==='softroles'){
+    return applySoftRoles(svgStr,asset,state.softRolesSeed,state.softRolesIntensity,
+      state.softRolesSecHue,state.softRolesBase,state.softRolesTarget);
   }
   // Copilot is rainbow by design — in any Original sub-mode, single-hue
   // treatment loses its multi-color identity. For Tinted we pass through
@@ -2890,8 +3000,18 @@ async function renderThumbs(){
     const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles);
     const src=withRoles.length?withRoles.slice(0,3):[];
     (src.length?src:samples.map(sv=>({svg:sv,roles:null}))).forEach(a=>{
-      const t=a.roles?applyRoles(a.svg,a,'#0078D4',2,46,false):a.svg;
+      const t=a.roles?applyRoles(a.svg,a,{seed:'#0078D4',target:'relative',accents:2,spread:46,
+        hueMode:'replace',chroma:100,light:0,flatten:false,themeBase:false}):a.svg;
       const el=makeSvgThumb(t);if(el)rolesThumb.appendChild(el);
+    });
+  }
+  const srThumb=document.getElementById('thumb-softroles');
+  if(srThumb){
+    srThumb.innerHTML='';
+    const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles).slice(0,3);
+    (withRoles.length?withRoles:samples.map(sv=>({svg:sv,roles:null}))).forEach(a=>{
+      const t=a.roles?applySoftRoles(a.svg,a,'#5B7AE8',50,0,false,'relative'):a.svg;
+      const el=makeSvgThumb(t);if(el)srThumb.appendChild(el);
     });
   }
   const softThumb=document.getElementById('thumb-soft');if(softThumb){softThumb.innerHTML='';samples.forEach(s=>{const t=applySoft(s,'#5B7AE8',50,0);const el=makeSvgThumb(t);if(el)softThumb.appendChild(el);});}
@@ -3105,59 +3225,131 @@ function renderControls(){
     wireSlider('soft-sechue','v-soft-sechue','softSecHue','°');
     wireSlider('soft-intensity','v-soft-intensity','softIntensity','');
   }
-  if(state.mode==='roles'){
+  if(state.mode==='roles'||state.mode==='softroles'){
+    const soft = state.mode==='softroles';
+    const K = soft
+      ? {seed:'softRolesSeed', target:'softRolesTarget', base:'softRolesBase'}
+      : {seed:'rolesSeed',     target:'rolesTarget',     base:'rolesBase'};
     const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles&&a.roles.groups);
     const counts=withRoles.map(a=>a.roles.groups.filter(g=>!g.basecolor).length);
     const maxG=counts.length?Math.max(...counts):0;
     const folded=counts.filter(c=>c>state.rolesAccents).length;
-    // An icon that is mostly held reads as "the theme did nothing"; say so.
     const mostlyHeld=withRoles.filter(a=>{
-      const idx=rolesIndex(a); if(!idx) return false;
+      const idx=rolesIndex(a,'relative'); if(!idx) return false;
       const painted=(a.roles.shapes||[]).length||1;
       return idx.held/painted>0.5;
     }).map(a=>a.name);
-    const segBtn=(n)=>{const on=state.rolesAccents===n;
+    const bands=[...new Set(withRoles.flatMap(a=>(a.roles.archetypes||[]).map(x=>baseBand(x.id))))]
+      .filter(x=>x!=='white'&&x!=='black').sort();
+    const seg=(fn,val,cur,label)=>{const on=val===cur;
+      return `<button type="button" onclick="${fn}('${val}')" style="flex:1;padding:6px 4px;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${label}</button>`;};
+    const segN=(n)=>{const on=state.rolesAccents===n;
       return `<button type="button" onclick="setRolesAccents(${n})" style="flex:1;padding:6px 0;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${n}</button>`;};
+
     panel.innerHTML=`
-      <div class="ctrl-label" style="display:flex;align-items:center">Roles <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
+      <div class="ctrl-label" style="display:flex;align-items:center">${soft?'Soft Roles':'Roles'} <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
       <div class="ctrl-section" id="roles-preset-section"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
-        <div class="ctrl-row"><input type="color" id="roles-seed-c" value="${state.rolesSeed}"><input class="hex-in" id="roles-seed-h" value="${state.rolesSeed}" maxlength="7"></div>
+        <div class="ctrl-row"><input type="color" id="roles-seed-c" value="${state[K.seed]}"><input class="hex-in" id="roles-seed-h" value="${state[K.seed]}" maxlength="7"></div>
         <div class="seed-derived" id="roles-derived"></div>
       </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">What a color group means</div>
+        <div style="display:flex;gap:6px;margin-bottom:6px">
+          ${seg('setRolesTarget','relative',state[K.target],'This icon')}
+          ${seg('setRolesTarget','archetype',state[K.target],'The library')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
+          ${state[K.target]==='archetype'
+            ? `Every fill answers to its absolute color name, so the same accent moves every ${bands.slice(0,3).join(', ')||'hue'} in every asset at once.`
+            : 'Groups are per icon, ordered most distinct first. The same seed reads differently per asset.'}
+        </div>
+      </div>
+      ${soft?'':`
       <div class="divider"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Accents in the theme</div>
-        <div style="display:flex;gap:6px;margin-bottom:8px">${segBtn(2)}${segBtn(3)}${segBtn(4)}</div>
-        <div class="slider-row"><span class="slabel">Hue step</span><input type="range" id="roles-spread" min="12" max="120" value="${state.rolesSpread}" step="1"><span class="sval" id="v-roles-spread">${state.rolesSpread}°</span></div>
-        <div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.rolesBase?' on':''}" id="tog-rolesBase" onclick="toggleRoles('rolesBase')"></span></div>
+        <div style="display:flex;gap:6px;margin-bottom:8px">${segN(2)}${segN(3)}${segN(4)}</div>
+        <div class="slider-row"><span class="slabel">Hue step</span><input type="range" id="roles-spread" min="12" max="180" value="${state.rolesSpread}" step="1"><span class="sval" id="v-roles-spread">${state.rolesSpread}&deg;</span></div>
       </div>
-      <div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:6px 0;line-height:1.5">
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">How the color is applied</div>
+        <div style="display:flex;gap:6px;margin-bottom:8px">
+          ${seg('setRolesHue','replace',state.rolesHue,'Replace hue')}
+          ${seg('setRolesHue','rotate',state.rolesHue,'Rotate hue')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:0 0 8px;line-height:1.5">
+          ${state.rolesHue==='rotate'
+            ? 'Each group turns by its accent offset, so the icon keeps its own hue relationships and only shifts around the wheel.'
+            : 'Each group takes its accent outright. Strongest reading of the theme, furthest from the original.'}
+        </div>
+        <div class="slider-row"><span class="slabel">Chroma</span><input type="range" id="roles-chroma" min="0" max="200" value="${state.rolesChroma}" step="1"><span class="sval" id="v-roles-chroma">${state.rolesChroma}%</span></div>
+        <div class="slider-row"><span class="slabel">Lightness</span><input type="range" id="roles-light" min="-30" max="30" value="${state.rolesLight}" step="1"><span class="sval" id="v-roles-light">${state.rolesLight>0?'+':''}${state.rolesLight}</span></div>
+        <div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Flatten every ramp</span><span class="tog${state.rolesFlatten?' on':''}" id="tog-rolesFlatten" onclick="toggleRoles('rolesFlatten')"></span></div>
+      </div>`}
+      ${soft?`
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Palette</div>
+        <div class="slider-row"><span class="slabel">Intensity</span><input type="range" id="softroles-intensity" min="0" max="100" value="${state.softRolesIntensity}" step="1"><span class="sval" id="v-softroles-intensity">${state.softRolesIntensity}</span></div>
+        <div class="slider-row"><span class="slabel">Sec. hue</span><input type="range" id="softroles-sechue" min="-180" max="180" value="${state.softRolesSecHue}" step="1"><span class="sval" id="v-softroles-sechue">${state.softRolesSecHue}&deg;</span></div>
+      </div>`:''}
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-row"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state[K.base]?' on':''}" id="tog-${K.base}" onclick="toggleRoles('${K.base}')"></span></div>
+      </div>
+
+      <div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:8px 0 0;line-height:1.5">
         ${withRoles.length?
           `${withRoles.length} of ${SET.length} on the canvas carry declared roles, up to ${maxG} groups.
-           ${folded?`${folded} have more groups than accents, so their least distinct groups share the last accent.`:'Every group has its own accent right now.'}
-           Accent 1 lands on the most distinct group in each icon, which is why the same seed reads differently per asset.
+           ${soft?'Soft supplies six tones; the most distinct group takes the warm accent and the rest walk cooler and deeper.':
+             (folded?`${folded} have more groups than accents, so their least distinct groups share the last accent.`:'Every group has its own accent right now.')}
            ${mostlyHeld.length?`<br><br>${mostlyHeld.join(' and ')} ${mostlyHeld.length===1?'is':'are'} mostly intentional white and black, so ${mostlyHeld.length===1?'it barely moves':'they barely move'} until you turn on theming for those.`:''}`
           :'Nothing on the canvas carries roles yet. Run npm run roles, or pick assets from the library.'}
       </div>`;
-    document.getElementById('roles-preset-section').appendChild(renderPresets('rolesSeed','roles-seed-c','roles-seed-h'));
-    wireSeed('roles-seed','rolesSeed');updateRolesDerived();
-    wireSlider('roles-spread','v-roles-spread','rolesSpread','°');
+
+    document.getElementById('roles-preset-section').appendChild(renderPresets(K.seed,'roles-seed-c','roles-seed-h'));
+    wireSeed('roles-seed',K.seed);updateRolesDerived();
+    if(!soft){
+      wireSlider('roles-spread','v-roles-spread','rolesSpread','°');
+      wireSlider('roles-chroma','v-roles-chroma','rolesChroma','%');
+      wireSlider('roles-light','v-roles-light','rolesLight','');
+    } else {
+      wireSlider('softroles-intensity','v-softroles-intensity','softRolesIntensity','');
+      wireSlider('softroles-sechue','v-softroles-sechue','softRolesSecHue','°');
+    }
   }
 }
 
+function setRolesTarget(v){const k=state.mode==='softroles'?'softRolesTarget':'rolesTarget';state[k]=v;renderControls();renderIcons();}
+function setRolesHue(v){state.rolesHue=v;renderControls();renderIcons();}
 function setRolesAccents(n){state.rolesAccents=n;renderControls();renderIcons();}
 function toggleRoles(key){state[key]=!state[key];const t=document.getElementById('tog-'+key);if(t)t.classList.toggle('on',state[key]);renderIcons();}
 function updateRolesDerived(){
   const el=document.getElementById('roles-derived');if(!el)return;
+  const chip=(hex,title)=>`<span title="${title}" style="display:inline-block;width:22px;height:14px;border-radius:3px;background:${hex};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);margin-right:4px"></span>`;
+  if(state.mode==='softroles'){
+    const pal=generateSoftPalette(state.softRolesSeed,state.softRolesIntensity,state.softRolesSecHue);
+    const tones=[pal.t1,pal.t3,pal.t4,pal.t5,pal.t0,pal.t2];
+    el.innerHTML=tones.map((h,i)=>chip(h,'tone '+(i+1))).join('')+
+      `<span style="font-size:11px;color:var(--text3);margin-left:4px">warm &rarr; deep</span>`;
+    return;
+  }
   const n=state.rolesAccents;
   const hues=rolesAccentHues(state.rolesSeed,n,state.rolesSpread);
   let sw='';
   hues.forEach((h,i)=>{
     let hex=state.rolesSeed;
-    try{const[L,C]=hexToOklch(state.rolesSeed);hex=oklchToHex(L,C,h);}catch(e){}
-    sw+=`<span title="accent ${i+1}" style="display:inline-block;width:22px;height:14px;border-radius:3px;background:${hex};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);margin-right:4px"></span>`;
+    try{const[L,C]=hexToOklch(state.rolesSeed);
+      hex=oklchToHex(Math.max(0.02,Math.min(0.99,L+state.rolesLight/100)),
+                     Math.max(0,C*(state.rolesChroma/100)),h);}catch(e){}
+    sw+=chip(hex,'accent '+(i+1));
   });
   el.innerHTML=sw+`<span style="font-size:11px;color:var(--text3);margin-left:4px">accent 1 &rarr; ${n}</span>`;
 }
@@ -3275,7 +3467,8 @@ function currentExportConfig(){
   else if(state.mode==='flat'){cfg.seed=state.flatMode==='original'?null:state.flatSeed;cfg.modeOption=state.flatMode;}
   else if(state.mode==='acrylic'){cfg.seed=state.acrylicSeed;}
   else if(state.mode==='soft'){cfg.seed=state.softSeed;}
-  else if(state.mode==='roles'){cfg.seed=state.rolesSeed;cfg.modeOption=state.rolesAccents+'accent';}
+  else if(state.mode==='roles'){cfg.seed=state.rolesSeed;cfg.modeOption=state.rolesTarget+state.rolesAccents;}
+  else if(state.mode==='softroles'){cfg.seed=state.softRolesSeed;cfg.modeOption=state.softRolesTarget;}
   return cfg;
 }
 // Match a hex to a preset name. Case-insensitive. Returns hex sans '#' if no match.
