@@ -73,18 +73,22 @@
    canvas rather than from the toolbar they came out of. Both grounds get an
    explicit pair: a control tuned for the light chrome disappears on #1a1a1f. */
 .canvas-tools{margin-left:auto;display:flex;align-items:center;gap:8px}
-.canvas-tools .preview-bg-toggle{background:rgba(255,255,255,.09);padding:3px}
-.canvas-tools .bg-btn{color:rgba(255,255,255,.62)}
-.canvas-tools .bg-btn:hover{color:#fff}
-.canvas-tools .bg-btn.active{background:rgba(255,255,255,.92);color:#1a1a1f;font-weight:600}
-.canvas-tools .export-btn{color:rgba(255,255,255,.72);border-color:rgba(255,255,255,.22)}
-.canvas-tools .export-btn:hover{color:#fff;border-color:rgba(255,255,255,.5)}
-.light-bg .canvas-tools .preview-bg-toggle{background:rgba(0,0,0,.06)}
-.light-bg .canvas-tools .bg-btn{color:rgba(30,30,40,.6)}
-.light-bg .canvas-tools .bg-btn:hover{color:#101014}
-.light-bg .canvas-tools .bg-btn.active{background:#fff;color:#101014}
-.light-bg .canvas-tools .export-btn{color:rgba(30,30,40,.72);border-color:rgba(0,0,0,.18)}
-.light-bg .canvas-tools .export-btn:hover{color:#101014;border-color:rgba(0,0,0,.4)}
+/* Scoped to the pane rather than to the toolbar group: everything sitting on
+   the canvas follows the canvas's own Dark/Light control, not the page theme.
+   Scoped to .canvas-tools, a control placed anywhere else on the canvas fell
+   back to the page tokens and painted a white pill on a dark canvas. */
+.preview-pane .preview-bg-toggle{background:rgba(255,255,255,.09);padding:3px}
+.preview-pane .bg-btn{color:rgba(255,255,255,.62)}
+.preview-pane .bg-btn:hover{color:#fff}
+.preview-pane .bg-btn.active{background:rgba(255,255,255,.92);color:#1a1a1f;font-weight:600}
+.preview-pane .export-btn{color:rgba(255,255,255,.72);border-color:rgba(255,255,255,.22)}
+.preview-pane .export-btn:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.light-bg .preview-bg-toggle{background:rgba(0,0,0,.06)}
+.light-bg .bg-btn{color:rgba(30,30,40,.6)}
+.light-bg .bg-btn:hover{color:#101014}
+.light-bg .bg-btn.active{background:#fff;color:#101014}
+.light-bg .export-btn{color:rgba(30,30,40,.72);border-color:rgba(0,0,0,.18)}
+.light-bg .export-btn:hover{color:#101014;border-color:rgba(0,0,0,.4)}
 .row-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(128,128,140,0.6);margin-bottom:8px;padding-left:2px;display:flex;align-items:center;gap:8px}
 .light-bg .row-label{color:rgba(80,80,100,0.5)}
 .row-lock-badge{font-size:9px;padding:2px 6px;border-radius:10px;background:rgba(124,110,247,0.15);color:var(--accent);border:1px solid rgba(124,110,247,0.25)}
@@ -103,6 +107,7 @@
    twelve icons were sharing rather than being shrunk into the same cell. */
 .icon-row.illus{grid-template-columns:repeat(2,1fr);gap:22px;max-width:520px;margin-inline:auto}
 .set-toggle{margin-right:2px}
+.row-label #set-reset{margin-left:2px}
 .icon-cell{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:default}
 .icon-cell svg,.icon-cell .icon-img{width:64px;height:64px;display:block}
 .icon-label{font-size:10px;color:rgba(128,128,140,0.7);text-align:center}
@@ -334,6 +339,7 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
                 <button class="bg-btn" id="set-illustrations" onclick="setSetKind('illustrations')">Illustrations</button>
                 <button class="bg-btn" id="set-custom" onclick="setSetKind('custom')">Custom</button>
               </span>
+              <button class="export-btn" id="set-reset" onclick="setReset()" title="Put this canvas back to its starting assets">Reset</button>
               <span class="m365-toggle-label" id="set-hint">Click a name to swap it</span>
               <span class="canvas-tools">
                 <span class="preview-bg-toggle" role="group" aria-label="Canvas background">
@@ -341,7 +347,6 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
                   <button class="bg-btn" id="bg-light" onclick="setBg('light')">Light</button>
                 </span>
                 <button class="export-btn" onclick="exportAllSvgs()" title="Download every icon on the canvas as SVG">Export all</button>
-                <button class="export-btn" id="set-reset" onclick="setReset()" title="Put this canvas back to its starting assets">Reset</button>
               </span>
             </div>
             <div class="icon-row" id="row-set"></div>
