@@ -162,6 +162,20 @@
               2,
               3,
               4
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ],
+              [
+                "#ffffff",
+                "#ebebeb"
+              ],
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           },
           {
@@ -300,6 +314,20 @@
               2,
               3,
               4
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ],
+              [
+                "#ffffff",
+                "#ebebeb"
+              ],
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           }
         ]

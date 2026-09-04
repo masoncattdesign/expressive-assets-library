@@ -75,6 +75,11 @@
             "shapes": [
               5,
               8
+            ],
+            "alsoFills": [
+              [
+                "#a1d3ff"
+              ]
             ]
           }
         ],
@@ -92,6 +97,11 @@
             "shapes": [
               6,
               9
+            ],
+            "alsoFills": [
+              [
+                "#e3acfd"
+              ]
             ]
           }
         ],
@@ -245,6 +255,11 @@
             "shapes": [
               6,
               9
+            ],
+            "alsoFills": [
+              [
+                "#e3acfd"
+              ]
             ]
           }
         ]
@@ -260,6 +275,11 @@
             "shapes": [
               5,
               8
+            ],
+            "alsoFills": [
+              [
+                "#a1d3ff"
+              ]
             ]
           }
         ]

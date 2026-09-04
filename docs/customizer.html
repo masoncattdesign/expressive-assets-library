@@ -1693,12 +1693,20 @@ function applyOutline(svgStr, seedHex, strokeW, bgMode='dark', duo=false, perSha
 function rolesIndex(asset) {
   if (!asset || !asset.roles || !Array.isArray(asset.roles.groups)) return null;
   const map = new Map();
-  let themable = 0;
+  let themable = 0, held = 0;
   for (const g of asset.roles.groups) {
     const gi = g.basecolor ? -1 : themable++;
-    for (const m of g.members) map.set(m.stops.join('>').toLowerCase(), { g: gi, base: !!g.basecolor });
+    for (const m of g.members) {
+      const hit = { g: gi, base: !!g.basecolor };
+      map.set(m.stops.join('>').toLowerCase(), hit);
+      /* Fills merged into this member during derivation still appear in the
+         artwork under their own stops, so they have to resolve too. Without
+         this a fifth of Copilot goes untouched by every theme. */
+      for (const alt of m.alsoFills || []) map.set(alt.join('>').toLowerCase(), hit);
+      if (g.basecolor) held += m.shapes.length;
+    }
   }
-  return { map, count: themable };
+  return { map, count: themable, held };
 }
 
 /** Accents fan out from the seed. Accent 1 goes to the most distinct group. */
@@ -1711,11 +1719,20 @@ function rolesAccentHues(seedHex, n, spread) {
 
 /** Keep the fill's own lightness, adopt the accent's hue. That preserves the
  *  shading a gradient was drawn with while changing what color it is. */
+/* Keep the fill's own lightness so a gradient stays the ramp it was drawn as,
+   and adopt the accent's hue.
+
+   Near-neutrals used to be returned untouched, on the theory that a gray is a
+   gray. That was wrong here: intentional white and black are already held out
+   as basecolor, so any neutral still in a themable group is one the artwork put
+   there as a color -- Calculator's body, Photos' frame -- and leaving it dead
+   gray made those icons read as though nothing had happened. They now take the
+   accent hue at a low chroma floor, so they tint rather than shift. */
+const ROLES_NEUTRAL_FLOOR = 0.035;
 function rolesRecolor(hex, hue) {
   try {
     const [L, C] = hexToOklch(hex);
-    if (C < 0.02) return hex;                 // a neutral inside a themed group stays neutral
-    return oklchToHex(L, C, hue);             // keep its own lightness and chroma
+    return oklchToHex(L, Math.max(C, ROLES_NEUTRAL_FLOOR), hue);
   } catch (e) { return hex; }
 }
 
@@ -3093,6 +3110,12 @@ function renderControls(){
     const counts=withRoles.map(a=>a.roles.groups.filter(g=>!g.basecolor).length);
     const maxG=counts.length?Math.max(...counts):0;
     const folded=counts.filter(c=>c>state.rolesAccents).length;
+    // An icon that is mostly held reads as "the theme did nothing"; say so.
+    const mostlyHeld=withRoles.filter(a=>{
+      const idx=rolesIndex(a); if(!idx) return false;
+      const painted=(a.roles.shapes||[]).length||1;
+      return idx.held/painted>0.5;
+    }).map(a=>a.name);
     const segBtn=(n)=>{const on=state.rolesAccents===n;
       return `<button type="button" onclick="setRolesAccents(${n})" style="flex:1;padding:6px 0;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${n}</button>`;};
     panel.innerHTML=`
@@ -3114,7 +3137,8 @@ function renderControls(){
         ${withRoles.length?
           `${withRoles.length} of ${SET.length} on the canvas carry declared roles, up to ${maxG} groups.
            ${folded?`${folded} have more groups than accents, so their least distinct groups share the last accent.`:'Every group has its own accent right now.'}
-           Accent 1 lands on the most distinct group in each icon, which is why the same seed reads differently per asset.`
+           Accent 1 lands on the most distinct group in each icon, which is why the same seed reads differently per asset.
+           ${mostlyHeld.length?`<br><br>${mostlyHeld.join(' and ')} ${mostlyHeld.length===1?'is':'are'} mostly intentional white and black, so ${mostlyHeld.length===1?'it barely moves':'they barely move'} until you turn on theming for those.`:''}`
           :'Nothing on the canvas carries roles yet. Run npm run roles, or pick assets from the library.'}
       </div>`;
     document.getElementById('roles-preset-section').appendChild(renderPresets('rolesSeed','roles-seed-c','roles-seed-h'));

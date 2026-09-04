@@ -116,6 +116,11 @@
             "shapes": [
               1,
               2
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]
@@ -148,6 +153,11 @@
             "shapes": [
               1,
               2
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]

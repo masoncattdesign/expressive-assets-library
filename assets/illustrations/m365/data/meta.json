@@ -95,6 +95,11 @@
             "shapes": [
               2,
               3
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]
@@ -154,6 +159,11 @@
             "shapes": [
               2,
               3
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]

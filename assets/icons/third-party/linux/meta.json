@@ -125,6 +125,11 @@
             "shapes": [
               26,
               35
+            ],
+            "alsoFills": [
+              [
+                "#f5c021"
+              ]
             ]
           }
         ],
@@ -193,6 +198,68 @@
               40,
               61,
               63
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#fdfdfb"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ]
             ]
           },
           {
@@ -204,6 +271,14 @@
               0,
               16,
               19
+            ],
+            "alsoFills": [
+              [
+                "#020204"
+              ],
+              [
+                "#020204"
+              ]
             ]
           },
           {
@@ -245,6 +320,14 @@
               0,
               16,
               19
+            ],
+            "alsoFills": [
+              [
+                "#020204"
+              ],
+              [
+                "#020204"
+              ]
             ]
           },
           {
@@ -269,6 +352,11 @@
             "shapes": [
               26,
               35
+            ],
+            "alsoFills": [
+              [
+                "#f5c021"
+              ]
             ]
           }
         ]
@@ -303,6 +391,68 @@
               40,
               61,
               63
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#fdfdfb"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]

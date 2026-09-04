@@ -264,8 +264,16 @@ export function derive(paints, kmode = KMODE) {
       (m) => m.stops.length === p.stops.length &&
              m.stops.every((s, i) => dFull(oklab(s.color), oklab(p.stops[i].color)) < SAME_FILL)
     );
-    if (same) { same.w += p.w; same.shapes.push(p.shape); }
-    else members.push({ ...p, shapes: [p.shape] });
+    if (same) {
+      same.w += p.w; same.shapes.push(p.shape);
+      /* The merged-away fill keeps its own stop list. A consumer matches a
+         shape by the fill it carries, and that fill is no longer written down
+         anywhere unless we write it down here. Copilot has a shape covering a
+         fifth of the icon whose fill was absorbed this way, and it silently
+         went untouched by every theme. */
+      same.absorbed.push(p.stops.map((x) => x.color));
+    }
+    else members.push({ ...p, shapes: [p.shape], absorbed: [] });
   }
 
   const isHeld = (m) => m.stops.every((s) => {
@@ -380,7 +388,9 @@ export function derive(paints, kmode = KMODE) {
     if (!g.basecolor) grp.spread = Math.round(g.spread * 1000) / 1000;
     g.members.forEach((m, mi) => {
       const id = g.basecolor ? `${gid}.basecolor.part${mi + 1}` : `${gid}.part${mi + 1}`;
-      grp.members.push({ id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) });
+      const mem = { id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) };
+      if (m.absorbed && m.absorbed.length) mem.alsoFills = m.absorbed;
+      grp.members.push(mem);
       for (const s of m.shapes) shapeRole[s] = id;
     });
     out.groups.push(grp);
@@ -397,7 +407,9 @@ export function derive(paints, kmode = KMODE) {
     const grp = { id: name, members: [] };
     ms.forEach((m, mi) => {
       const id = `${name}.part${mi + 1}`;
-      grp.members.push({ id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) });
+      const mem = { id, stops: m.stops.map((s) => s.color), shapes: [...m.shapes].sort((a, b) => a - b) };
+      if (m.absorbed && m.absorbed.length) mem.alsoFills = m.absorbed;
+      grp.members.push(mem);
       for (const s of m.shapes) shapeArch[s] = id;
     });
     out.archetypes.push(grp);

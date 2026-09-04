@@ -95,6 +95,12 @@
             "shapes": [
               6,
               8
+            ],
+            "alsoFills": [
+              [
+                "#bd00ff",
+                "#ff5f3d"
+              ]
             ]
           }
         ],
@@ -347,6 +353,12 @@
             "shapes": [
               6,
               8
+            ],
+            "alsoFills": [
+              [
+                "#bd00ff",
+                "#ff5f3d"
+              ]
             ]
           }
         ]

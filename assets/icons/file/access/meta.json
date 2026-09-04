@@ -87,6 +87,12 @@
             "shapes": [
               1,
               2
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           },
           {
@@ -114,6 +120,11 @@
             "shapes": [
               4,
               10
+            ],
+            "alsoFills": [
+              [
+                "#ff9fb2"
+              ]
             ]
           },
           {
@@ -177,6 +188,11 @@
             "shapes": [
               6,
               8
+            ],
+            "alsoFills": [
+              [
+                "#560b14"
+              ]
             ]
           }
         ],
@@ -210,6 +226,11 @@
             "shapes": [
               6,
               8
+            ],
+            "alsoFills": [
+              [
+                "#560b14"
+              ]
             ]
           }
         ]
@@ -271,6 +292,11 @@
             "shapes": [
               4,
               10
+            ],
+            "alsoFills": [
+              [
+                "#ff9fb2"
+              ]
             ]
           },
           {
@@ -328,6 +354,12 @@
             "shapes": [
               1,
               2
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           }
         ]

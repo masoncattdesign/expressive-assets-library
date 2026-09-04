@@ -87,6 +87,12 @@
             "shapes": [
               5,
               6
+            ],
+            "alsoFills": [
+              [
+                "#597493",
+                "#0f2f56"
+              ]
             ]
           }
         ],
@@ -107,6 +113,20 @@
               2,
               3,
               4
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ],
+              [
+                "#ffffff",
+                "#ebebeb"
+              ],
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           }
         ],
@@ -158,6 +178,12 @@
             "shapes": [
               5,
               6
+            ],
+            "alsoFills": [
+              [
+                "#597493",
+                "#0f2f56"
+              ]
             ]
           }
         ]
@@ -176,6 +202,20 @@
               2,
               3,
               4
+            ],
+            "alsoFills": [
+              [
+                "#ffffff",
+                "#efefef"
+              ],
+              [
+                "#ffffff",
+                "#ebebeb"
+              ],
+              [
+                "#ffffff",
+                "#efefef"
+              ]
             ]
           }
         ]

@@ -225,6 +225,47 @@
               51,
               52,
               53
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ]
             ]
           },
           {
@@ -235,6 +276,11 @@
             "shapes": [
               33,
               41
+            ],
+            "alsoFills": [
+              [
+                "#000000"
+              ]
             ]
           },
           {
@@ -246,6 +292,12 @@
             "shapes": [
               2,
               4
+            ],
+            "alsoFills": [
+              [
+                "#000000",
+                "#000000"
+              ]
             ]
           }
         ]
@@ -288,6 +340,11 @@
             "shapes": [
               33,
               41
+            ],
+            "alsoFills": [
+              [
+                "#000000"
+              ]
             ]
           },
           {
@@ -299,6 +356,12 @@
             "shapes": [
               2,
               4
+            ],
+            "alsoFills": [
+              [
+                "#000000",
+                "#000000"
+              ]
             ]
           }
         ]
@@ -482,6 +545,47 @@
               51,
               52,
               53
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ],
+              [
+                "#ffffff"
+              ]
             ]
           }
         ]
