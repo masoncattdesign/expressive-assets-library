@@ -2091,6 +2091,8 @@ function candObjects(shapes, asset) {
      candCollect walks the document in order. */
   const cached = asset && asset.__objIdx;
   if (cached && cached.n === optical.length) {
+    for (const s of optical) s.glyph = false;
+    for (const i of cached.glyphs) if (optical[i]) optical[i].glyph = true;
     return {
       objects: cached.groups.map((gp) => ({ role: gp.role, shapes: gp.idx.map((i) => optical[i]) })),
       glyphs: cached.glyphs.map((i) => optical[i]),
@@ -2099,21 +2101,32 @@ function candObjects(shapes, asset) {
   const svg = optical.length ? optical[0].el.ownerSVGElement : null;
   candRaster(optical, svg);
   const total = CAND_RASTER * CAND_RASTER;
-  const glyphs = optical.filter((s) => s.isWhite || s.isBlack);
-  const live = optical.filter((s) => !(s.isWhite || s.isBlack));
+  /* Being white is not a reason to be left alone. Photos' moon, Celebration's
+     burst and Calculator's near-white buttons are drawing, and they should
+     take a color like everything else. What earns an exemption is being a
+     letterform, and a letterform is recognisable by where it sits: on a plate.
 
-  // The plate is a convention: the smallest modest shape that completely
-  // covers a held glyph. In Word and Teams it is the same rect, 16x16 at
-  // x4 y23 on a 48 canvas. Photos has a glyph but its only container is the
-  // whole card, so Photos has no plate, which is the right answer.
+     So white and black only make a shape a candidate. The plate is the
+     smallest modest shape that completely covers a candidate, and a candidate
+     with a plate under it is a glyph. Word's W and Teams' T qualify. Photos'
+     moon does not: the only shape covering it is the whole card, well past the
+     size a plate can be. Celebration's burst does not: nothing covers more
+     than half of it. Both join the recolor, which is the point. */
+  const marks = optical.filter((s) => s.isWhite || s.isBlack);
+  const solid = optical.filter((s) => !(s.isWhite || s.isBlack));
   let plate = null;
-  for (const g of glyphs) {
-    const cand = live.filter((s) => s.px < CAND_PLATE_MAX * total && s.px > g.px && candHolds(s, g) > 0.9);
+  const glyphs = [];
+  for (const m of marks) {
+    const cand = solid.filter((s) => s.px < CAND_PLATE_MAX * total && s.px > m.px && candHolds(s, m) > 0.9);
     cand.sort((a, b) => a.px - b.px);
-    if (cand.length) { plate = cand[0]; break; }
+    if (!cand.length) continue;
+    glyphs.push(m);
+    if (!plate) plate = cand[0];
   }
+  for (const s of optical) s.glyph = false;
+  for (const g of glyphs) g.glyph = true;
 
-  const rest = live.filter((s) => s !== plate);
+  const rest = optical.filter((s) => !s.glyph && s !== plate);
   const parent = rest.map((_, i) => i);
   const find = (i) => { while (parent[i] !== i) i = parent[i] = parent[parent[i]]; return i; };
   const join = (i, j) => { const a = find(i), b = find(j); if (a !== b) parent[a] = b; };
@@ -2274,7 +2287,11 @@ function candGeoKey(el) {
 
 /** Group index 0..k-1 for every shape. Always computed from this icon alone. */
 function candGroup(rule, shapes, asset, k) {
-  const live = shapes.filter(s => !s.pass && !s.isWhite && !s.isBlack);
+  /* Ask the anatomy first, so every rule holds the same shapes: letterforms
+     on a plate, and nothing else. A white shape that is not a letterform is
+     drawing and takes a color. */
+  candObjects(shapes, asset);
+  const live = shapes.filter(s => !s.pass && !s.glyph);
   const g = new Map();
   const put = (arr) => arr.forEach(([s,i]) => g.set(s, Math.max(0, Math.min(k-1, i))));
   if (!live.length) return g;
