@@ -1966,7 +1966,7 @@ const CAND_RULES = [
   ['area',      'By area',      'Splits by cumulative area rather than count, so the shape carrying the icon anchors its own accent and small marks go to the extremes.'],
   ['flatrule',  'Anchored lightness','Lightness normalized inside the icon, with the ends anchored: a white letterform takes the lightest accent and a plate the darkest, whatever the rest of the icon is doing. Shapes drawn identically stay identical.'],
   ['contrast',  'By color family','Groups fills by how close their color is, ordered most distinct first, and ignores lightness entirely. An icon drawn in one family says so rather than being split into four.'],
-  ['shape',     'By object',    'Every object in the icon takes its own accent, and members inside an object step by lightness. Objects are found from real outlines, not bounding boxes, so two figures that interlock stay two figures. The plate always takes accent 2, whatever else the icon contains.'],
+  ['shape',     'By object',    'Every object in the icon takes its own accent, and members inside an object step by lightness. Objects come from real outlines, not bounding boxes, so two figures that interlock stay two figures, and a shape drawn on top of another is its own object rather than part of it. The plate always takes accent 2.'],
   ['plateonly', 'Base and plate','The coarse reading: everything is one object except the plate. Two accents at most, base and plate, with the base stepping by lightness inside accent 1. Nothing to argue about, and it says the same thing on every icon in the library.'],
 ];
 
@@ -2078,7 +2078,47 @@ function candHolds(a, b) {
   return b.px ? candInter(a, b) / b.px : 0;
 }
 
-const CAND_MERGE = 0.10;   // outlines this entangled are one object
+/* Two shapes are one object when they overlap PARTIALLY: they are pieces of
+   one drawn thing, like the three stripes of Word's document. A shape that
+   sits entirely inside another is not a piece of it, it is a thing drawn on
+   top of it, and it gets to be its own object. That is Calculator's screen and
+   buttons on its body, and Photos' moon on its card.
+
+   Both ends of the band are measured, not chosen. Below 0.10: Teams' two
+   figures touch at 0.054 and must stay apart, Word's stripes meet at 0.154 and
+   must join. Above 0.90: containment, where coverage runs to 1.000. */
+const CAND_MERGE = 0.10;
+const CAND_ENGULF = 0.90;
+/* Overlapping is not enough to be one thing. Celebration's balloon crosses its
+   blue mass at 0.208 exactly the way Word's stripes cross each other at 0.154,
+   and one pair is one object while the other is two. What separates them is
+   hue: the pieces of a single drawn thing sit within a few degrees of each
+   other, and a different thing drawn across it does not.
+
+   Measured on the bench, the widest gap that must merge is 24.6 degrees (two
+   of Word's stripes) and the narrowest that must split is 42.0 (Celebration's
+   blue against its purple). 32 sits between with room on both sides. Earlier
+   I tried this as a plain chromaticity distance and the margin was 0.024 wide;
+   in hue it is 17 degrees, because Word's stripes differ in saturation while
+   blue and purple differ in hue, and only the second is a change of subject.
+
+   A neutral has no meaningful hue, so a near-neutral beside a saturated shape
+   is a different thing by definition. That is how Celebration's white burst
+   leaves the blue it sits on. */
+const CAND_HUE = 32;
+const CAND_NEUTRAL = 0.04;
+
+function candFamily(a, b) {
+  try {
+    const [, ca, ha] = hexToOklch(a.stops[0]);
+    const [, cb, hb] = hexToOklch(b.stops[0]);
+    const na = ca < CAND_NEUTRAL, nb = cb < CAND_NEUTRAL;
+    if (na !== nb) return false;
+    if (na && nb) return true;
+    const d = Math.abs(ha - hb) % 360;
+    return Math.min(d, 360 - d) <= CAND_HUE;
+  } catch (e) { return true; }
+}
 const CAND_PLATE_MAX = 0.30;  // a plate is a corner mark, never the icon
 
 /** The objects in one icon, largest first, with the plate called out.
@@ -2132,7 +2172,8 @@ function candObjects(shapes, asset) {
   const join = (i, j) => { const a = find(i), b = find(j); if (a !== b) parent[a] = b; };
   for (let i = 0; i < rest.length; i++)
     for (let j = i + 1; j < rest.length; j++)
-      if (candCover(rest[i], rest[j]) >= CAND_MERGE) join(i, j);
+      { const c = candCover(rest[i], rest[j]);
+        if (c >= CAND_MERGE && c <= CAND_ENGULF && candFamily(rest[i], rest[j])) join(i, j); }
 
   const bucket = new Map();
   rest.forEach((s, i) => {
@@ -2194,10 +2235,14 @@ function candObjects(shapes, asset) {
 function candAssignObjects(objects, k, coarse) {
   const map = new Map();
   let next = 0;
+  /* Accent 2 is held for the plate so a plate is the same color library-wide,
+     but only on icons that have one. Holding an accent empty on an icon with
+     no plate would just cost it a color. */
+  const hasPlate = objects.some((o) => o.role === 'plate');
   for (const o of objects) {
     if (o.role === 'plate') { o.slot = Math.min(1, k - 1); continue; }
     if (coarse) { o.slot = 0; continue; }
-    if (next === 1) next = 2;
+    if (hasPlate && next === 1) next = 2;
     o.slot = Math.min(next++, k - 1);
   }
   for (const o of objects) for (const s of o.shapes) map.set(s, o.slot);
