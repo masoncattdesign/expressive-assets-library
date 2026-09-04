@@ -3716,9 +3716,11 @@ renderIcons();
    illustrations  Four at 2x2. Twenty times the shape count and drawn under
                   different rules, which is where a luminance-bucketing
                   pipeline falls apart first.
-   custom         One of everything, including a mark that is a single black
-                  path, so "there is nothing here to theme" is visible on the
-                  canvas rather than something you have to be told. */
+   custom         Twelve, two from each family, so every kind of artwork in the
+                  library is on screen at once and any of them can be swapped
+                  out. Includes a mark that is a single black path, so "there
+                  is nothing here to theme" is visible on the canvas rather
+                  than something you have to be told. */
 var SETS = {
   icons: [
     'product.word', 'product.excel', 'product.powerpoint',
@@ -3730,7 +3732,8 @@ var SETS = {
     'oobe.desktop', 'oobe.msa-sign-up', 'm365.celebration', 'm365.chat',
   ],
   custom: [
-    'product.teams', 'app.paint', 'file.excel', 'third-party.figma',
+    'product.teams', 'product.copilot', 'app.paint', 'app.calculator',
+    'file.excel', 'file.pdf', 'third-party.figma', 'third-party.slack',
     'device.generic-laptop', 'm365.celebration', 'oobe.desktop', 'product.github',
   ],
 };
