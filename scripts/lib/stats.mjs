@@ -77,13 +77,22 @@ export function statsFor(manifest, { head = 'unknown', now = new Date() } = {}) 
   return { stats, blocks };
 }
 
+/* Stamps rather than facts. A page records the commit it was written at, which
+   is always the PARENT of the commit that then contains it, so a page can never
+   state its own hash and comparing them fails on every push forever. The dates
+   go the same way the following morning. They are written on every sync and
+   never enforced; the counts, which must be true, are. */
+export const STAMPS = new Set(['head', 'date', 'date-short']);
+
 /** Fill `data-stat` marks and `<!-- stat:x -->` blocks in a page. */
 export function fillMarks(html, stats, blocks, onIssue = () => {}) {
   html = html.replace(
     /(<(\w+)(?=[\s>])[^>]*\bdata-stat="([^"]+)"[^>]*>)([\s\S]*?)(<\/\2>)/g,
     (whole, open, tag, key, inner, close) => {
       if (!(key in stats)) { onIssue(`data-stat="${key}"`); return whole; }
-      if (inner !== stats[key]) onIssue(`${key} is "${inner}", should be "${stats[key]}"`, true);
+      if (inner !== stats[key] && !STAMPS.has(key)) {
+        onIssue(`${key} is "${inner}", should be "${stats[key]}"`, true);
+      }
       return open + stats[key] + close;
     }
   );

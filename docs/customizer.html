@@ -104,6 +104,9 @@
 .m365-tog-btn.disabled{opacity:0.4;cursor:not-allowed}
 .icon-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px}
 .set-toggle{margin-right:2px}
+.cand-acc{width:36px;height:24px;padding:0;border:1px solid var(--border2);border-radius:5px;background:none;cursor:pointer}
+.cand-acc::-webkit-color-swatch-wrapper{padding:2px}
+.cand-acc::-webkit-color-swatch{border:none;border-radius:3px}
 .sec-swatch{width:26px;height:22px;flex:none;padding:0;border:1px solid var(--border2);border-radius:5px;background:none;cursor:pointer}
 .sec-swatch::-webkit-color-swatch-wrapper{padding:2px}
 .sec-swatch::-webkit-color-swatch{border:none;border-radius:3px}
@@ -247,6 +250,14 @@ input[type=color]{width:30px;height:30px;border-radius:7px;border:1px solid var(
 
     <div class="modes">
       <div class="sidebar-label">Asset style</div>
+      <button type="button" class="mode-card" data-mode="candidate" onclick="setMode('candidate')" aria-pressed="false">
+        <span class="mode-check"></span>
+        <span class="mode-thumb" id="thumb-candidate"></span>
+        <span class="mode-text">
+          <span class="mode-name">Candidate</span>
+          <span class="mode-desc">Flat only, every grouping rule side by side</span>
+        </span>
+      </button>
       <button type="button" class="mode-card active" data-mode="default" onclick="setMode('default')" aria-pressed="true">
       <span class="mode-check"></span>
       <span class="mode-thumb" id="thumb-default"></span>
@@ -492,6 +503,14 @@ const state = {
      side by side rather than argued about. */
   softGroupBy: 'luminance',    // 'luminance' | 'relative' | 'archetype'
   softBase: false,
+  /* Candidate: the comparison bench. Flat only, per icon only, every grouping
+     rule in one place, so the rule is the only thing changing. */
+  candSeed: '#0078D4',
+  candRule: 'flatrule',
+  candSteps: 4,
+  candVary: 45,                // how far members of one group step apart
+  candOffsets: [0, 96, 192, 264, 40, 150],
+  candBase: false,
 };
 
 const DEFAULTS = {
@@ -505,6 +524,8 @@ const DEFAULTS = {
   rolesSeed: '#0078D4', rolesTarget: 'relative', rolesAccents: 2, rolesSpread: 46,
   rolesHue: 'replace', rolesChroma: 100, rolesLight: 0, rolesFlatten: false, rolesBase: false,
   softGroupBy: 'luminance', softBase: false,
+  candSeed: '#0078D4', candRule: 'flatrule', candSteps: 4, candVary: 45,
+  candOffsets: [0, 96, 192, 264, 40, 150], candBase: false,
 };
 
 const RESET_KEYS = {
@@ -514,6 +535,7 @@ const RESET_KEYS = {
   flat:     ['flatSeed','flatGradients','flatGradIntensity','flatMode','flatSaturation','flatSecHue','flatTexture'],
   acrylic:  ['acrylicSeed','acrylicOffset','acrylicFrost','acrylicSecHue'],
   soft:     ['softSeed','softIntensity','softSecHue','softGroupBy','softBase'],
+  candidate:['candSeed','candRule','candSteps','candVary','candOffsets','candBase'],
   roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesSpread','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase'],
 };
 
@@ -1915,6 +1937,230 @@ function applySoftRoles(svgStr, asset, seedHex, intensity, secHue, themeBase, ta
   });
 }
 
+/* ═══════════════════════════════════════════════════════
+   CANDIDATE — one panel, every way of splitting an icon
+
+   From the 4 September review: put the grouping rules in one place, render
+   them FLAT so grouping is the only variable, and always decide per icon
+   rather than against the library, because the rule has to work from what is
+   in front of it.
+
+   Everything else is deliberately stripped. No gradients, no highlights, no
+   noise, no strokes: one solid color per shape. Effects come back as layers
+   once the grouping is settled, and until then they hide which rule is
+   actually doing the work.
+
+   Within a group, members do not all take the identical color. A group that
+   swallowed three shapes still has three shapes, so each member steps in
+   lightness around its accent. That is the "give me three little versions of
+   it" from the review, and the amount is a control.
+   ═══════════════════════════════════════════════════════ */
+const CAND_RULES = [
+  ['luminance', 'Luminance',    'Fixed lightness cutoffs, the same everywhere in the library. Consistent, but shapes that sit close together in lightness collapse into one group.'],
+  ['spread',    'Even steps',   'Ranks this icon\'s own shapes and splits them into equal counts, so every icon uses every accent. The same gray means different things in different icons.'],
+  ['breaks',    'Natural breaks','Cuts at the largest gaps in the sorted lightnesses. Shapes drawn nearly the same stay together, shapes drawn apart separate.'],
+  ['area',      'By area',      'Splits by cumulative area rather than count, so the shape carrying the icon anchors its own accent and small marks go to the extremes.'],
+  ['flatrule',  'Flat’s rule','What Flat does, and why it reads well: normalize lightness within the icon, lock white letterforms and plate rects to fixed ends, then push any shape that collided with its neighbour to the nearest free accent. Shapes drawn identically stay identical.'],
+  ['contrast',  'Color contrast','The declared color groups: fills grouped by how similar they are, ordered most distinct first. Not lightness at all.'],
+  ['shape',     'By shape',     'Clusters shapes that sit on top of one another into one object, biggest first, then steps each member within its accent. The closest thing here to base, emblem and glyph without anyone naming them.'],
+];
+
+function candLum(hex) {
+  try {
+    const r = parseInt(hex.slice(1,3),16)/255, g = parseInt(hex.slice(3,5),16)/255, b = parseInt(hex.slice(5,7),16)/255;
+    return 0.2126*r + 0.7152*g + 0.0722*b;
+  } catch (e) { return 0.5; }
+}
+
+/** Every painted shape, with what we need to group it. */
+function candCollect(doc, svg) {
+  const named = { white:'#ffffff', black:'#000000', red:'#ff0000', green:'#008000', blue:'#0000ff', gray:'#808080' };
+  const norm = (c) => {
+    let v = String(c||'').trim().toLowerCase();
+    if (named[v]) v = named[v];
+    if (v.length === 4 && v[0] === '#') v = '#' + [...v.slice(1)].map(x=>x+x).join('');
+    return v.slice(0,7);
+  };
+  const grads = {};
+  for (const g of doc.querySelectorAll('linearGradient, radialGradient')) {
+    const st = [...g.querySelectorAll('stop')].map(x => norm(x.getAttribute('stop-color')||'#000000'));
+    if (g.id && st.length) grads[g.id] = st;
+  }
+  const out = [];
+  for (const el of svg.querySelectorAll('path,rect,circle,ellipse,polygon,polyline')) {
+    let n = el.parentElement, skip = false;
+    while (n && n !== svg) { if (n.tagName === 'mask' || n.tagName === 'defs') { skip = true; break; } n = n.parentElement; }
+    if (skip) continue;
+    let f = el.getAttribute('fill');
+    if (f == null) { const m = (el.getAttribute('style')||'').match(/fill\s*:\s*([^;]+)/i); if (m) f = m[1].trim(); }
+    if (!f || f === 'none') continue;
+    const ref = f.match(/^url\(#(.+)\)$/);
+    const stops = ref ? (grads[ref[1]] || []) : [norm(f)];
+    if (!stops.length) continue;
+    const lum = stops.reduce((a,c)=>a+candLum(c),0) / stops.length;
+    const b = shapeBBox(el);
+    out.push({
+      el, stops, lum,
+      area: b ? Math.max(0,b.w) * Math.max(0,b.h) : 0,
+      box: b,
+      sig: stops.join('>'),
+      isWhite: lum > 0.93, isBlack: lum < 0.05,
+    });
+  }
+  return out;
+}
+
+/** Group index 0..k-1 for every shape. Always computed from this icon alone. */
+function candGroup(rule, shapes, asset, k) {
+  const live = shapes.filter(s => !s.isWhite && !s.isBlack);
+  const g = new Map();
+  const put = (arr) => arr.forEach(([s,i]) => g.set(s, Math.max(0, Math.min(k-1, i))));
+  if (!live.length) return g;
+
+  const byLum = [...live].sort((a,b) => b.lum - a.lum);        // lightest first
+
+  if (rule === 'spread') {
+    put(byLum.map((s,i) => [s, Math.floor(i / byLum.length * k)]));
+  } else if (rule === 'area') {
+    const total = byLum.reduce((n,s)=>n+s.area,0) || 1;
+    let run = 0;
+    put(byLum.map(s => { run += s.area; return [s, Math.min(k-1, Math.floor((run/total)*k))]; }));
+  } else if (rule === 'breaks') {
+    const gaps = [];
+    for (let i = 1; i < byLum.length; i++) gaps.push([byLum[i-1].lum - byLum[i].lum, i]);
+    const cuts = gaps.sort((a,b)=>b[0]-a[0]).slice(0, k-1).map(x=>x[1]).sort((a,b)=>a-b);
+    put(byLum.map((s,i) => { let b = 0; for (const c of cuts) if (i >= c) b++; return [s, b]; }));
+  } else if (rule === 'contrast') {
+    const idx = rolesIndex(asset, 'relative');
+    if (idx && idx.count) {
+      const norm = (c)=>String(c||'').toLowerCase();
+      for (const s of live) {
+        const hit = idx.map.get(s.stops.map(norm).join('>'));
+        g.set(s, hit && !hit.base ? Math.min(k-1, hit.g) : k-1);
+      }
+    } else put(byLum.map((s,i) => [s, Math.floor(i / byLum.length * k)]));
+  } else if (rule === 'shape') {
+    /* Shapes that sit on top of one another are one object. Cluster by bbox
+       overlap, order the clusters by area, and the biggest becomes accent 1 --
+       which is the base, without anyone having had to say so. */
+    const overlaps = (a,b) => {
+      if (!a.box || !b.box) return false;
+      const ax2=a.box.x+a.box.w, ay2=a.box.y+a.box.h, bx2=b.box.x+b.box.w, by2=b.box.y+b.box.h;
+      const ix = Math.min(ax2,bx2) - Math.max(a.box.x,b.box.x);
+      const iy = Math.min(ay2,by2) - Math.max(a.box.y,b.box.y);
+      if (ix <= 0 || iy <= 0) return false;
+      return (ix*iy) / Math.max(1, Math.min(a.area, b.area)) > 0.55;
+    };
+    const cl = [];
+    for (const s of live) {
+      const hit = cl.find(c => c.some(x => overlaps(x, s)));
+      if (hit) hit.push(s); else cl.push([s]);
+    }
+    cl.sort((a,b) => b.reduce((n,s)=>n+s.area,0) - a.reduce((n,s)=>n+s.area,0));
+    cl.forEach((c,i) => c.forEach(s => g.set(s, Math.min(k-1, i))));
+  } else if (rule === 'flatrule') {
+    /* Flat's four mechanisms together, which is why it reads better than a
+       plain threshold: normalize within the icon, lock the semantic ends,
+       avoid collisions with the previous shape, and leave deliberate sets
+       alone. */
+    const lo = Math.min(...live.map(s=>s.lum)), hi = Math.max(...live.map(s=>s.lum));
+    const range = Math.max(hi - lo, 0.001);
+    const ideal = [], locked = [];
+    live.forEach((s,i) => {
+      const t = (s.lum - lo) / range;
+      if (s.stops.length === 1 && s.stops[0] === '#ffffff') { ideal[i] = k-1; locked[i] = true; return; }
+      ideal[i] = Math.min(k-1, Math.floor((1 - t) * k));
+      locked[i] = false;
+    });
+    const done = [];
+    live.forEach((s,i) => {
+      if (locked[i] || i === 0) { done[i] = ideal[i]; return; }
+      const prev = done[i-1];
+      if (ideal[i] !== prev || live[i].sig === live[i-1].sig) { done[i] = ideal[i]; return; }
+      let best = ideal[i], bd = Infinity;
+      for (let t = 0; t < k; t++) {
+        if (t === prev) continue;
+        const d = Math.abs(t - ideal[i]) - (t > ideal[i] ? 0.1 : 0);
+        if (d < bd) { bd = d; best = t; }
+      }
+      done[i] = best;
+    });
+    live.forEach((s,i) => g.set(s, done[i]));
+  } else {
+    // luminance: fixed cutoffs, stretched across however many accents there are
+    put(live.map(s => [s, Math.min(k-1, Math.floor((1 - s.lum) * k))]));
+  }
+  return g;
+}
+
+function applyCandidate(svgStr, asset, o) {
+  try {
+    const doc = new DOMParser().parseFromString(svgStr, 'image/svg+xml');
+    const svg = doc.querySelector('svg');
+    if (!svg) return svgStr;
+    const shapes = candCollect(doc, svg);
+    if (!shapes.length) return svgStr;
+
+    const k = Math.max(2, Math.min(6, o.steps));
+    const accents = candAccents(o.seed, k, o.offsets);
+    const groups = candGroup(o.rule, shapes, asset, k);
+
+    // members of one group, ordered light to dark, so the step is meaningful
+    const members = new Map();
+    for (const s of shapes) {
+      const gi = groups.get(s);
+      if (gi == null) continue;
+      (members.get(gi) ?? members.set(gi, []).get(gi)).push(s);
+    }
+    for (const arr of members.values()) arr.sort((a,b) => b.lum - a.lum);
+
+    for (const s of shapes) {
+      let fill;
+      const gi = groups.get(s);
+      if (gi == null) {
+        if (!o.themeBase) { s.el.setAttribute('fill', s.isWhite ? '#ffffff' : '#111318'); }
+        else fill = accents[k-1];
+        if (!fill) { flattenEl(s.el); continue; }
+      }
+      if (!fill) {
+        const arr = members.get(gi) || [s];
+        const at = arr.indexOf(s), n = arr.length;
+        // spread the group's members around its accent, lightest member up
+        const t = n > 1 ? (at / (n - 1)) - 0.5 : 0;      // +0.5 lightest .. -0.5 darkest
+        const shift = -t * (o.vary / 100) * 0.42;
+        try {
+          const [L, C, H] = hexToOklch(accents[gi]);
+          fill = oklchToHex(Math.max(0.06, Math.min(0.96, L + shift)), C, H);
+        } catch (e) { fill = accents[gi]; }
+      }
+      s.el.setAttribute('fill', fill);
+      flattenEl(s.el);
+    }
+    // nothing but flat color: no ramps, no filters, no half-transparent overlays
+    for (const d of doc.querySelectorAll('linearGradient, radialGradient, filter')) d.remove();
+    return new XMLSerializer().serializeToString(doc);
+  } catch (e) { return svgStr; }
+}
+function flattenEl(el) {
+  el.removeAttribute('fill-opacity');
+  el.removeAttribute('filter');
+  el.removeAttribute('opacity');
+  const st = el.getAttribute('style');
+  if (st) el.setAttribute('style', st.replace(/fill\s*:\s*[^;]+;?/i,'').replace(/mix-blend-mode\s*:\s*[^;]+;?/i,''));
+}
+/** Accent i is the seed rotated by its own offset, so moving the seed moves
+ *  the whole set and each accent can still be set on its own. */
+function candAccents(seed, k, offsets) {
+  const out = [];
+  for (let i = 0; i < k; i++) {
+    try {
+      const [L, C, H] = hexToOklch(seed);
+      out.push(oklchToHex(L, Math.max(C, 0.06), (H + (offsets[i] ?? 0) + 360) % 360));
+    } catch (e) { out.push(seed); }
+  }
+  return out;
+}
+
 function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
 function hsl(h,s,l){return`hsl(${Math.round(h)},${Math.round(s)}%,${Math.round(l)}%)`;}
 
@@ -2893,6 +3139,12 @@ function applyAcrylic(svgStr, seedHex, bgMode='dark', offsetPct=8, frost=32, sec
 
 function transformSvg(svgStr,iconName,forceOriginal,asset){
   if(state.mode==='default')return svgStr;
+  if(state.mode==='candidate'){
+    return applyCandidate(svgStr,asset,{
+      seed:state.candSeed, rule:state.candRule, steps:state.candSteps,
+      vary:state.candVary, offsets:state.candOffsets, themeBase:state.candBase,
+    });
+  }
   if(state.mode==='roles'){
     return applyRoles(svgStr,asset,{
       seed:state.rolesSeed, target:state.rolesTarget, accents:state.rolesAccents,
@@ -3057,6 +3309,16 @@ async function renderThumbs(){
       const t=a.roles?applyRoles(a.svg,a,{seed:'#0078D4',target:'relative',accents:2,spread:46,
         hueMode:'replace',chroma:100,light:0,flatten:false,themeBase:false}):a.svg;
       const el=makeSvgThumb(t);if(el)rolesThumb.appendChild(el);
+    });
+  }
+  const candThumb=document.getElementById('thumb-candidate');
+  if(candThumb){
+    candThumb.innerHTML='';
+    const src=(Array.isArray(SET)?SET:[]).slice(0,3);
+    (src.length?src:samples.map(sv=>({svg:sv,roles:null}))).forEach(a=>{
+      const t=applyCandidate(a.svg,a,{seed:'#0078D4',rule:'flatrule',steps:4,vary:45,
+        offsets:[0,96,192,264,40,150],themeBase:false});
+      const el=makeSvgThumb(t);if(el)candThumb.appendChild(el);
     });
   }
   const softThumb=document.getElementById('thumb-soft');if(softThumb){softThumb.innerHTML='';samples.forEach(s=>{const t=applySoft(s,'#5B7AE8',50,0);const el=makeSvgThumb(t);if(el)softThumb.appendChild(el);});}
@@ -3291,6 +3553,81 @@ function renderControls(){
     wireSecHue('soft','softSecHue','softSeed');
     wireSlider('soft-intensity','v-soft-intensity','softIntensity','');
   }
+  if(state.mode==='candidate'){
+    const k=Math.max(2,Math.min(6,state.candSteps));
+    const acc=candAccents(state.candSeed,k,state.candOffsets);
+    const rule=CAND_RULES.find(r=>r[0]===state.candRule)||CAND_RULES[0];
+    const ruleBtn=([v,lbl])=>{const on=state.candRule===v;
+      return `<button type="button" onclick="setCandRule('${v}')" style="padding:6px 3px;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:10.5px;cursor:pointer;font-family:var(--font)">${lbl}</button>`;};
+    const stepBtn=(n)=>{const on=k===n;
+      return `<button type="button" onclick="setCandSteps(${n})" style="flex:1;padding:6px 0;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${n}</button>`;};
+
+    panel.innerHTML=`
+      <div class="ctrl-label" style="display:flex;align-items:center">Candidate <button class="reset-btn" onclick="resetMode()">${RESET_ICON} Reset</button></div>
+      <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:0 0 10px;line-height:1.5">
+        Flat only, and always decided from the icon in front of it. No gradients,
+        highlights or strokes, so the grouping is the only thing you are judging.
+      </div>
+      <div class="ctrl-section" id="cand-preset-section"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Seed color</div>
+        <div class="ctrl-row"><input type="color" id="cand-seed-c" value="${state.candSeed}"><input class="hex-in" id="cand-seed-h" value="${state.candSeed}" maxlength="7"></div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">How the shapes are grouped</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:7px">
+          ${CAND_RULES.map(ruleBtn).join('')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">${rule[2]}</div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Accent colors</div>
+        <div style="display:flex;gap:6px;margin-bottom:9px">${[2,3,4,5,6].map(stepBtn).join('')}</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px">
+          ${acc.map((hex,i)=>`<label style="display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer">
+            <input type="color" class="cand-acc" id="cand-acc-${i}" value="${hex}" title="Accent ${i+1}">
+            <span style="font-size:9px;color:var(--text3);font-family:var(--mono,monospace)">${i+1}</span></label>`).join('')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
+          Each accent is stored as a rotation from the seed, so setting one here
+          calculates its own offset and moving the seed carries all of them
+          together.
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Inside a group</div>
+        <div class="slider-row"><span class="slabel">Step apart</span><input type="range" id="cand-vary" min="0" max="100" value="${state.candVary}" step="1"><span class="sval" id="v-cand-vary">${state.candVary}</span></div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:4px 0 0;line-height:1.5">
+          A group that swallowed three shapes still has three shapes. At 0 they
+          take the identical color; higher steps them apart in lightness around
+          the group's accent so the parts stay readable.
+        </div>
+        <div class="ctrl-row" style="margin-top:9px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.candBase?' on':''}" id="tog-candBase" onclick="toggleRoles('candBase')"></span></div>
+      </div>`;
+
+    document.getElementById('cand-preset-section').appendChild(renderPresets('candSeed','cand-seed-c','cand-seed-h'));
+    wireSeed('cand-seed','candSeed');
+    wireSlider('cand-vary','v-cand-vary','candVary','');
+    acc.forEach((hex,i)=>{
+      const el=document.getElementById('cand-acc-'+i); if(!el)return;
+      el.addEventListener('input',()=>{
+        try{
+          const [,,H]=hexToOklch(state.candSeed);
+          const [,,P]=hexToOklch(el.value);
+          const next=state.candOffsets.slice();
+          next[i]=Math.round(((P-H)%360+360)%360);
+          state.candOffsets=next;
+          renderIcons();
+        }catch(e){}
+      });
+    });
+  }
   if(state.mode==='roles'){
     const K = {seed:'rolesSeed', target:'rolesTarget', base:'rolesBase'};
     const withRoles=(Array.isArray(SET)?SET:[]).filter(a=>a&&a.roles&&a.roles.groups);
@@ -3377,6 +3714,8 @@ function renderControls(){
   }
 }
 
+function setCandRule(v){state.candRule=v;renderControls();renderIcons();}
+function setCandSteps(n){state.candSteps=n;renderControls();renderIcons();}
 function setRolesTarget(v){state.rolesTarget=v;renderControls();renderIcons();}
 function setSoftGroupBy(v){state.softGroupBy=v;renderControls();renderIcons();}
 function setRolesHue(v){state.rolesHue=v;renderControls();renderIcons();}
@@ -3552,6 +3891,7 @@ function currentExportConfig(){
   else if(state.mode==='flat'){cfg.seed=state.flatMode==='original'?null:state.flatSeed;cfg.modeOption=state.flatMode;}
   else if(state.mode==='acrylic'){cfg.seed=state.acrylicSeed;}
   else if(state.mode==='soft'){cfg.seed=state.softSeed;cfg.modeOption=state.softGroupBy;}
+  else if(state.mode==='candidate'){cfg.seed=state.candSeed;cfg.modeOption=state.candRule+state.candSteps;}
   else if(state.mode==='roles'){cfg.seed=state.rolesSeed;cfg.modeOption=state.rolesTarget+state.rolesAccents;}
 
   return cfg;
