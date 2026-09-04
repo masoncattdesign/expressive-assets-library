@@ -496,7 +496,11 @@ const state = {
   rolesSeed: '#0078D4',
   rolesTarget: 'relative',     // 'relative' (colorN) | 'archetype' (every green at once)
   rolesAccents: 2,             // 2..4 — how many accents the theme carries
-  rolesSpread: 46,             // degrees between accent hues
+  /* Accents were one uniform step apart, which can only ever make a fan. They
+     are rotations now, the same as Candidate's, so Roles can be a triad or a
+     single wash as easily as a fan. */
+  rolesOffsets: [0, 96, 192, 264, 40, 150],
+  rolesHarmony: 'spread',
   rolesHue: 'replace',         // 'replace' the hue, or 'rotate' it and keep the icon's own relationships
   rolesChroma: 100,            // 0..200 — none to vivid
   rolesLight: 0,               // -30..30
@@ -529,7 +533,7 @@ const DEFAULTS = {
   flatSeed: '#0078D4', flatGradients: false, flatGradIntensity: 50, flatMode: 'duo', flatSaturation: 130, flatSecHue: 0, flatTexture: 'none',
   acrylicSeed: '#0078D4', acrylicOffset: 0, acrylicFrost: 32, acrylicSecHue: 0,
   softSeed: '#5B7AE8', softIntensity: 50, softSecHue: 0,
-  rolesSeed: '#0078D4', rolesTarget: 'relative', rolesAccents: 2, rolesSpread: 46,
+  rolesSeed: '#0078D4', rolesTarget: 'relative', rolesAccents: 2, rolesOffsets: [0, 96, 192, 264, 40, 150], rolesHarmony: 'spread',
   rolesHue: 'replace', rolesChroma: 100, rolesLight: 0, rolesFlatten: false, rolesBase: false,
   softGroupBy: 'luminance', softBase: false,
   candSeed: '#0078D4', candRule: 'flatrule', candSteps: 4, candVary: 45,
@@ -544,7 +548,7 @@ const RESET_KEYS = {
   acrylic:  ['acrylicSeed','acrylicOffset','acrylicFrost','acrylicSecHue'],
   soft:     ['softSeed','softIntensity','softSecHue','softGroupBy','softBase'],
   candidate:['candSeed','candRule','candSteps','candVary','candOffsets','candBase'],
-  roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesSpread','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase'],
+  roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesOffsets','rolesHarmony','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase'],
 };
 
 function resetMode() {
@@ -1798,11 +1802,24 @@ function rolesIndex(asset, target) {
 }
 
 /** Accents fan out from the seed. Accent 1 goes to the most distinct group. */
-function rolesAccentHues(seedHex, n, spread) {
+function rolesAccentHues(seedHex, n, offsets) {
+  const off = (i) => (offsets && offsets[i] != null) ? offsets[i] : i * 46;
   try {
     const [, , H] = hexToOklch(seedHex);
-    return Array.from({ length: n }, (_, i) => (H + i * spread) % 360);
-  } catch (e) { return Array.from({ length: n }, (_, i) => (250 + i * spread) % 360); }
+    return Array.from({ length: n }, (_, i) => ((H + off(i)) % 360 + 360) % 360);
+  } catch (e) { return Array.from({ length: n }, (_, i) => ((250 + off(i)) % 360 + 360) % 360); }
+}
+/** What accent i actually comes out as: the seed plus its rotation, then the
+ *  chroma and lightness the theme asks for. */
+function rolesAccentColors(n) {
+  const hues = rolesAccentHues(state.rolesSeed, n, state.rolesOffsets);
+  return hues.map((h) => {
+    try {
+      const [L, C] = hexToOklch(state.rolesSeed);
+      return oklchToHex(Math.max(0.02, Math.min(0.99, L + state.rolesLight / 100)),
+                        Math.max(0, C * (state.rolesChroma / 100)), h);
+    } catch (e) { return state.rolesSeed; }
+  });
 }
 
 /* What actually happens to a color once its group is chosen. Every knob here
@@ -1858,7 +1875,7 @@ function applyRoles(svgStr, asset, o) {
     if (!doc.querySelector('svg')) return svgStr;
 
     const n = Math.max(1, Math.min(o.accents, idx.byBand ? ROLE_BANDS.length : idx.count));
-    const hues = rolesAccentHues(o.seed, n, o.spread);
+    const hues = rolesAccentHues(o.seed, n, o.offsets);
     /* The fold. A group past the last accent takes the last accent, which is
        why cutting too fine is safe and cutting too coarse is not. */
     const slotFor = (g) => (idx.byBand ? g % n : Math.min(g, n - 1));
@@ -1886,7 +1903,7 @@ function applyRoles(svgStr, asset, o) {
     const recolor = (colors, hit) => {
       const slot = slotFor(hit.g);
       if (o.palette) return rolesToTone(colors, o.palette[slot % o.palette.length], o);
-      const hue = o.hueMode === 'rotate' ? o.spread * slot : hues[slot];
+      const hue = o.hueMode === 'rotate' ? ((o.offsets && o.offsets[slot]) || 0) : hues[slot];
       return colors.map((c) => rolesShift(c, hue, o));
     };
 
@@ -1977,7 +1994,7 @@ const CAND_RULES = [
    of these. "One wash" is the interesting end of the range: every accent on
    the seed's own hue, so the only thing separating parts is the lightness
    step inside a group. */
-const CAND_HARMONY = [
+const ACCENT_HARMONY = [
   ['spread',    'Spread',        [0, 96, 192, 264, 40, 150]],
   ['analogous', 'Analogous',     [0, 24, -24, 48, -48, 72]],
   ['triad',     'Triad',         [0, 120, 240, 60, 180, 300]],
@@ -1986,13 +2003,60 @@ const CAND_HARMONY = [
   ['square',    'Square',        [0, 90, 180, 270, 45, 225]],
   ['wash',      'One wash',      [0, 0, 0, 0, 0, 0]],
 ];
-function setCandHarmony(id) {
-  const h = CAND_HARMONY.find(x => x[0] === id);
+function setAccentHarmony(offsetsKey, harmonyKey, id) {
+  const h = ACCENT_HARMONY.find(x => x[0] === id);
   if (!h) return;
-  state.candHarmony = id;
-  state.candOffsets = h[2].slice();
+  state[harmonyKey] = id;
+  state[offsetsKey] = h[2].slice();
   renderControls();
   renderIcons();
+}
+function setCandHarmony(id) { setAccentHarmony('candOffsets', 'candHarmony', id); }
+function setRolesHarmony(id) { setAccentHarmony('rolesOffsets', 'rolesHarmony', id); }
+
+/** The swatch row and the relationship list, shared by Candidate and Roles so
+ *  the two cannot drift apart. `colors` is what each accent actually comes out
+ *  as, so a swatch shows the result rather than the rotation behind it. */
+function accentBlock(prefix, colors, harmonyKey, setter) {
+  const sw = colors.map((hex, i) =>
+    `<label style="display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer">
+       <input type="color" class="cand-acc" id="${prefix}-acc-${i}" value="${hex}" title="Accent ${i + 1}">
+       <span style="font-size:9px;color:var(--text3);font-family:var(--mono,monospace)">${i + 1}</span>
+     </label>`).join('');
+  const opts = ACCENT_HARMONY.map((h) =>
+    `<option value="${h[0]}"${state[harmonyKey] === h[0] ? ' selected' : ''}>${h[1]}</option>`).join('')
+    + (state[harmonyKey] === 'custom' ? '<option value="custom" selected>Custom</option>' : '');
+  return `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">${sw}</div>
+    <select class="sel-in" id="${prefix}-harmony" onchange="${setter}(this.value)">${opts}</select>`;
+}
+
+/** Every accent is a rotation from the seed, so setting one by hand is read
+ *  back as its own rotation, and the named relationship becomes Custom. */
+function wireAccents(prefix, seedKey, offsetsKey, harmonyKey, n) {
+  for (let i = 0; i < n; i++) {
+    const el = document.getElementById(prefix + '-acc-' + i);
+    if (!el) continue;
+    el.addEventListener('input', () => {
+      try {
+        const [, , H] = hexToOklch(state[seedKey]);
+        const [, , P] = hexToOklch(el.value);
+        const next = state[offsetsKey].slice();
+        next[i] = Math.round(((P - H) % 360 + 360) % 360);
+        state[offsetsKey] = next;
+        if (state[harmonyKey] !== 'custom') {
+          state[harmonyKey] = 'custom';
+          const sel = document.getElementById(prefix + '-harmony');
+          if (sel && !sel.querySelector('option[value="custom"]')) {
+            const o = document.createElement('option');
+            o.value = 'custom'; o.textContent = 'Custom';
+            sel.appendChild(o);
+          }
+          if (sel) sel.value = 'custom';
+        }
+        renderIcons();
+      } catch (e) {}
+    });
+  }
 }
 
 /* ── Objects ───────────────────────────────────────────────────────────────
@@ -3463,7 +3527,7 @@ function transformSvg(svgStr,iconName,forceOriginal,asset){
   if(state.mode==='roles'){
     return applyRoles(svgStr,asset,{
       seed:state.rolesSeed, target:state.rolesTarget, accents:state.rolesAccents,
-      spread:state.rolesSpread, hueMode:state.rolesHue, chroma:state.rolesChroma,
+      offsets:state.rolesOffsets, hueMode:state.rolesHue, chroma:state.rolesChroma,
       light:state.rolesLight, flatten:state.rolesFlatten, themeBase:state.rolesBase,
     });
   }
@@ -3895,15 +3959,7 @@ function renderControls(){
       <div class="ctrl-section">
         <div class="ctrl-label">Accent colors</div>
         <div style="display:flex;gap:6px;margin-bottom:9px">${[2,3,4,5,6].map(stepBtn).join('')}</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px">
-          ${acc.map((hex,i)=>`<label style="display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer">
-            <input type="color" class="cand-acc" id="cand-acc-${i}" value="${hex}" title="Accent ${i+1}">
-            <span style="font-size:9px;color:var(--text3);font-family:var(--mono,monospace)">${i+1}</span></label>`).join('')}
-        </div>
-        <select class="sel-in" id="cand-harmony" onchange="setCandHarmony(this.value)">
-          ${CAND_HARMONY.map(h=>`<option value="${h[0]}"${state.candHarmony===h[0]?' selected':''}>${h[1]}</option>`).join('')}
-          ${state.candHarmony==='custom'?'<option value="custom" selected>Custom</option>':''}
-        </select>
+        ${accentBlock('cand', acc, 'candHarmony', 'setCandHarmony')}
         <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:6px 0 0;line-height:1.5">
           Each accent is stored as a rotation from the seed, so moving the seed
           carries all of them together. The list sets how far apart those
@@ -3926,29 +3982,7 @@ function renderControls(){
     fillPresets('candSeed','cand-seed-c','cand');
     wireSeed('cand-seed','candSeed');
     wireSlider('cand-vary','v-cand-vary','candVary','');
-    acc.forEach((hex,i)=>{
-      const el=document.getElementById('cand-acc-'+i); if(!el)return;
-      el.addEventListener('input',()=>{
-        try{
-          const [,,H]=hexToOklch(state.candSeed);
-          const [,,P]=hexToOklch(el.value);
-          const next=state.candOffsets.slice();
-          next[i]=Math.round(((P-H)%360+360)%360);
-          state.candOffsets=next;
-          if(state.candHarmony!=='custom'){
-            state.candHarmony='custom';
-            const sel=document.getElementById('cand-harmony');
-            if(sel && !sel.querySelector('option[value="custom"]')){
-              const o=document.createElement('option');
-              o.value='custom'; o.textContent='Custom';
-              sel.appendChild(o);
-            }
-            if(sel) sel.value='custom';
-          }
-          renderIcons();
-        }catch(e){}
-      });
-    });
+    wireAccents('cand', 'candSeed', 'candOffsets', 'candHarmony', acc.length);
   }
   if(state.mode==='roles'){
     const K = {seed:'rolesSeed', target:'rolesTarget', base:'rolesBase'};
@@ -3973,7 +4007,6 @@ function renderControls(){
       <div class="ctrl-section">
         <div class="ctrl-label">Seed color</div>
         <div class="seed-row"><input type="color" class="seed-sq" id="roles-seed-c" value="${state[K.seed]}"><span class="seed-sep"></span><div class="preset-swatches" id="roles-preset-row"></div></div>
-        <div class="seed-derived" id="roles-derived"></div>
       </div>
 
       <div class="divider"></div>
@@ -3993,8 +4026,13 @@ function renderControls(){
       <div class="divider"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Accents in the theme</div>
-        <div style="display:flex;gap:6px;margin-bottom:8px">${segN(2)}${segN(3)}${segN(4)}</div>
-        <div class="slider-row"><span class="slabel">Hue step</span><input type="range" id="roles-spread" min="12" max="180" value="${state.rolesSpread}" step="1"><span class="sval" id="v-roles-spread">${state.rolesSpread}&deg;</span></div>
+        <div style="display:flex;gap:6px;margin-bottom:9px">${segN(2)}${segN(3)}${segN(4)}</div>
+        ${accentBlock('roles', rolesAccentColors(state.rolesAccents), 'rolesHarmony', 'setRolesHarmony')}
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:6px 0 0;line-height:1.5">
+          Group 1 takes accent 1, group 2 accent 2, and so on. Each accent is a
+          rotation from the seed, so moving the seed carries all of them, and
+          the list sets how far apart those rotations are.
+        </div>
       </div>
 
       <div class="divider"></div>
@@ -4029,7 +4067,7 @@ function renderControls(){
 
     fillPresets(K.seed,'roles-seed-c','roles');
     wireSeed('roles-seed',K.seed);updateRolesDerived();
-    wireSlider('roles-spread','v-roles-spread','rolesSpread','°');
+    wireAccents('roles', 'rolesSeed', 'rolesOffsets', 'rolesHarmony', state.rolesAccents);
     wireSlider('roles-chroma','v-roles-chroma','rolesChroma','%');
     wireSlider('roles-light','v-roles-light','rolesLight','');
   }
@@ -4046,7 +4084,7 @@ function updateRolesDerived(){
   const el=document.getElementById('roles-derived');if(!el)return;
   const chip=(hex,title)=>`<span title="${title}" style="display:inline-block;width:22px;height:14px;border-radius:3px;background:${hex};box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);margin-right:4px"></span>`;
   const n=state.rolesAccents;
-  const hues=rolesAccentHues(state.rolesSeed,n,state.rolesSpread);
+  const hues=rolesAccentHues(state.rolesSeed,n,state.rolesOffsets);
   let sw='';
   hues.forEach((h,i)=>{
     let hex=state.rolesSeed;
