@@ -103,9 +103,6 @@
 .light-bg .m365-tog-btn.active{background:rgba(124,110,247,0.16);color:var(--accent)}
 .m365-tog-btn.disabled{opacity:0.4;cursor:not-allowed}
 .icon-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px}
-/* Illustrations are drawn to be read at size, so four of them get the room
-   twelve icons were sharing rather than being shrunk into the same cell. */
-.icon-row.illus{grid-template-columns:repeat(2,1fr);gap:22px;max-width:520px;margin-inline:auto}
 .set-toggle{margin-right:2px}
 .row-label #set-reset{margin-left:2px}
 .icon-cell{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:default}
@@ -3713,9 +3710,11 @@ renderIcons();
    that only ever shows one will look finished while being wrong elsewhere.
 
    icons          Product and app together. Small, dense, mostly gradients.
-   illustrations  Four at 2x2. Twenty times the shape count and drawn under
-                  different rules, which is where a luminance-bucketing
-                  pipeline falls apart first.
+   illustrations  Twelve, in the same six-wide grid the icons use, so the
+                  three canvases line up and only the artwork changes. Twenty
+                  times the shape count of an icon and drawn under different
+                  rules, which is where a luminance-bucketing pipeline falls
+                  apart first.
    custom         Twelve, two from each family, so every kind of artwork in the
                   library is on screen at once and any of them can be swapped
                   out. Includes a mark that is a single black path, so "there
@@ -3729,7 +3728,9 @@ var SETS = {
     'app.paint', 'product.swiftkey', 'app.file-explorer',
   ],
   illustrations: [
-    'oobe.desktop', 'oobe.msa-sign-up', 'm365.celebration', 'm365.chat',
+    'oobe.desktop', 'oobe.msa-sign-up', 'oobe.device-name', 'oobe.privacy',
+    'oobe.camera-roll-backup', 'oobe.user-intent', 'm365.celebration', 'm365.chat',
+    'm365.calendar', 'm365.clock', 'm365.compass', 'device.generic-desktop',
   ],
   custom: [
     'product.teams', 'product.copilot', 'app.paint', 'app.calculator',
@@ -3822,13 +3823,12 @@ function selectSlot(i) {
 var _setToken = 0;
 async function renderIcons() {
   const row = document.getElementById('row-set');
-  if (row) row.classList.toggle('illus', setKind === 'illustrations');
   // First call lands before the initialisers below have run: nothing to draw
   // yet, and loadLibrary calls back once the set is in.
   if (!row || !Array.isArray(SET)) return;
   const token = (_setToken = (_setToken || 0) + 1);
   const cells = await Promise.all(SET.map(async (a, i) => {
-    const cell = await renderIconCell(a.name, a.svg, false, a, setKind === 'illustrations' ? 168 : 64);
+    const cell = await renderIconCell(a.name, a.svg, false, a);
     cell.classList.toggle('picking', i === picking);
     cell.title = 'Click to swap, right-click to download the SVG';
     cell.addEventListener('click', () => selectSlot(i));
