@@ -1966,7 +1966,8 @@ const CAND_RULES = [
   ['area',      'By area',      'Splits by cumulative area rather than count, so the shape carrying the icon anchors its own accent and small marks go to the extremes.'],
   ['flatrule',  'Anchored lightness','Lightness normalized inside the icon, with the ends anchored: a white letterform takes the lightest accent and a plate the darkest, whatever the rest of the icon is doing. Shapes drawn identically stay identical.'],
   ['contrast',  'By color family','Groups fills by how close their color is, ordered most distinct first, and ignores lightness entirely. An icon drawn in one family says so rather than being split into four.'],
-  ['shape',     'By object',    'Clusters shapes that sit on top of one another into one object, biggest first, then steps each member inside its accent by lightness. The closest thing here to base, emblem and glyph without anyone naming them.'],
+  ['shape',     'By object',    'Every object in the icon takes its own accent, and members inside an object step by lightness. Objects are found from real outlines, not bounding boxes, so two figures that interlock stay two figures. The plate always takes accent 2, whatever else the icon contains.'],
+  ['plateonly', 'Base and plate','The coarse reading: everything is one object except the plate. Two accents at most, base and plate, with the base stepping by lightness inside accent 1. Nothing to argue about, and it says the same thing on every icon in the library.'],
 ];
 
 /* Accents are stored as hue rotations from the seed, so the relationship
@@ -1992,6 +1993,202 @@ function setCandHarmony(id) {
   state.candOffsets = h[2].slice();
   renderControls();
   renderIcons();
+}
+
+/* ── Objects ───────────────────────────────────────────────────────────────
+   A bounding box is a bad model of a drawn shape. Teams is the proof: its two
+   figures interlock, so their boxes overlap 0.67 and every box-based rule
+   fused them into one person. Their real outlines overlap 0.054. That is a
+   twelvefold error, and it is why "by shape" kept reading a whole icon as one
+   object.
+
+   So every shape is rasterized once and compared as pixels. Coverage is the
+   intersection over the smaller of the two, which is the question that matters:
+   how much of the smaller shape is inside the larger one. At a threshold of
+   0.10 the six bench icons come out the way a person reads them: Word's three
+   stripes chain into one document (0.535 and 0.154), Teams' two figures stay
+   apart (0.054), Edge stays one (0.170, 0.147), Photos and Calculator stay one.
+
+   Color deliberately plays no part. It was the obvious tiebreaker and it is
+   inverted here: Word's stripes are 0.135 and 0.196 apart in chromaticity and
+   must merge, while Teams' two bodies are 0.118 apart and must split. Any
+   threshold that merges the first merges the second. Geometry decides what an
+   object is. Color decides what an object is painted. */
+const CAND_RASTER = 128;
+
+function candRaster(shapes, svg) {
+  const N = CAND_RASTER;
+  const vbAttr = (svg && svg.getAttribute('viewBox')) || '0 0 48 48';
+  const vb = vbAttr.split(/[\s,]+/).map(Number);
+  const k = N / (Math.max(vb[2], vb[3]) || 48);
+  for (const s of shapes) {
+    if (s.bits) continue;
+    try {
+      const cv = document.createElement('canvas');
+      cv.width = N; cv.height = N;
+      const ctx = cv.getContext('2d', { willReadFrequently: true });
+      ctx.setTransform(k, 0, 0, k, -vb[0] * k, -vb[1] * k);
+      const el = s.el, t = (el.tagName || '').toLowerCase();
+      const num = (n) => parseFloat(el.getAttribute(n)) || 0;
+      if (t === 'path') {
+        const d = el.getAttribute('d');
+        if (d) ctx.fill(new Path2D(d));
+      } else if (t === 'rect') {
+        const x = num('x'), y = num('y'), w = num('width'), h = num('height'), r = num('rx');
+        ctx.beginPath();
+        if (r && ctx.roundRect) ctx.roundRect(x, y, w, h, r); else ctx.rect(x, y, w, h);
+        ctx.fill();
+      } else if (t === 'circle') {
+        ctx.beginPath(); ctx.arc(num('cx'), num('cy'), num('r'), 0, Math.PI * 2); ctx.fill();
+      } else if (t === 'ellipse') {
+        ctx.beginPath(); ctx.ellipse(num('cx'), num('cy'), num('rx'), num('ry'), 0, 0, Math.PI * 2); ctx.fill();
+      } else if (t === 'polygon' || t === 'polyline') {
+        const pts = (el.getAttribute('points') || '').trim().split(/[\s,]+/).map(Number);
+        if (pts.length >= 6) {
+          ctx.beginPath(); ctx.moveTo(pts[0], pts[1]);
+          for (let i = 2; i < pts.length - 1; i += 2) ctx.lineTo(pts[i], pts[i + 1]);
+          ctx.closePath(); ctx.fill();
+        }
+      }
+      const px = ctx.getImageData(0, 0, N, N).data;
+      const bits = new Uint8Array(N * N);
+      let n = 0;
+      for (let i = 0; i < N * N; i++) { const on = px[i * 4 + 3] > 40 ? 1 : 0; bits[i] = on; n += on; }
+      s.bits = bits; s.px = n;
+    } catch (e) { s.bits = null; s.px = 0; }
+  }
+}
+
+/** Pixels the two shapes share. */
+function candInter(a, b) {
+  if (!a.bits || !b.bits || !a.px || !b.px) return 0;
+  let inter = 0;
+  const A = a.bits, B = b.bits, N = A.length;
+  for (let i = 0; i < N; i++) if (A[i] && B[i]) inter++;
+  return inter;
+}
+/** How much of the smaller shape lies inside the larger one, 0 to 1. */
+function candCover(a, b) {
+  const m = Math.min(a.px || 0, b.px || 0);
+  return m ? candInter(a, b) / m : 0;
+}
+/** How much of b lies inside a. Directional, which containment has to be:
+ *  a plate holds its glyph, a glyph swallowed by a big shape is not a plate. */
+function candHolds(a, b) {
+  return b.px ? candInter(a, b) / b.px : 0;
+}
+
+const CAND_MERGE = 0.10;   // outlines this entangled are one object
+const CAND_PLATE_MAX = 0.30;  // a plate is a corner mark, never the icon
+
+/** The objects in one icon, largest first, with the plate called out.
+ *  Cached on the asset: geometry does not change when a slider moves. */
+function candObjects(shapes, asset) {
+  const optical = shapes.filter((s) => !s.pass);
+  /* The cache holds indices, never shape references. Every rule re-parses the
+     icon, so a cached reference points at the previous parse's objects and
+     every lookup misses silently. Indices survive the re-parse because
+     candCollect walks the document in order. */
+  const cached = asset && asset.__objIdx;
+  if (cached && cached.n === optical.length) {
+    return {
+      objects: cached.groups.map((gp) => ({ role: gp.role, shapes: gp.idx.map((i) => optical[i]) })),
+      glyphs: cached.glyphs.map((i) => optical[i]),
+    };
+  }
+  const svg = optical.length ? optical[0].el.ownerSVGElement : null;
+  candRaster(optical, svg);
+  const total = CAND_RASTER * CAND_RASTER;
+  const glyphs = optical.filter((s) => s.isWhite || s.isBlack);
+  const live = optical.filter((s) => !(s.isWhite || s.isBlack));
+
+  // The plate is a convention: the smallest modest shape that completely
+  // covers a held glyph. In Word and Teams it is the same rect, 16x16 at
+  // x4 y23 on a 48 canvas. Photos has a glyph but its only container is the
+  // whole card, so Photos has no plate, which is the right answer.
+  let plate = null;
+  for (const g of glyphs) {
+    const cand = live.filter((s) => s.px < CAND_PLATE_MAX * total && s.px > g.px && candHolds(s, g) > 0.9);
+    cand.sort((a, b) => a.px - b.px);
+    if (cand.length) { plate = cand[0]; break; }
+  }
+
+  const rest = live.filter((s) => s !== plate);
+  const parent = rest.map((_, i) => i);
+  const find = (i) => { while (parent[i] !== i) i = parent[i] = parent[parent[i]]; return i; };
+  const join = (i, j) => { const a = find(i), b = find(j); if (a !== b) parent[a] = b; };
+  for (let i = 0; i < rest.length; i++)
+    for (let j = i + 1; j < rest.length; j++)
+      if (candCover(rest[i], rest[j]) >= CAND_MERGE) join(i, j);
+
+  const bucket = new Map();
+  rest.forEach((s, i) => {
+    const r = find(i);
+    if (!bucket.has(r)) bucket.set(r, []);
+    bucket.get(r).push(s);
+  });
+  let groups = [...bucket.values()];
+
+  /* A head floating over its body touches nothing, so union-find leaves it
+     alone. Attach a lone shape to the object directly beneath it whose span
+     it sits inside. Both of Teams' heads clear their body by two units. */
+  const span = (arr) => {
+    const bs = arr.map((s) => s.box).filter(Boolean);
+    if (!bs.length) return null;
+    return {
+      x: Math.min(...bs.map((b) => b.x)), y: Math.min(...bs.map((b) => b.y)),
+      r: Math.max(...bs.map((b) => b.x + b.w)), b: Math.max(...bs.map((b) => b.y + b.h)),
+    };
+  };
+  const vb = ((svg && svg.getAttribute('viewBox')) || '0 0 48 48').split(/[\s,]+/).map(Number);
+  const gap = 0.12 * (Math.max(vb[2], vb[3]) || 48);
+  const FLOAT_MAX = 0.08 * total;   // a body is never a floating mark
+  const singles = groups.filter((g) => g.length === 1 && g[0].box && (g[0].px || 0) < FLOAT_MAX);
+  for (const one of singles) {
+    const b = one[0].box, cx = b.x + b.w / 2;
+    let best = null, bd = Infinity;
+    for (const g of groups) {
+      if (g === one || !g.length) continue;
+      const sp = span(g);
+      if (!sp || cx < sp.x || cx > sp.r) continue;      // must sit over it
+      const d = sp.y - (b.y + b.h);
+      if (d < -1 || d >= gap) continue;                 // and just above it
+      /* Teams has two heads and two bodies, and both heads sit inside both
+         spans. The head belongs to the body it is centred over. */
+      const off = Math.abs(cx - (sp.x + sp.r) / 2);
+      if (off < bd) { bd = off; best = g; }
+    }
+    if (best) { best.push(one[0]); groups = groups.filter((g) => g !== one); }
+  }
+
+  const area = (g) => g.reduce((n, s) => n + (s.px || 0), 0);
+  groups.sort((a, b) => area(b) - area(a));
+  const objects = groups.map((g, i) => ({ shapes: g, role: i === 0 ? 'base' : 'object' }));
+  if (plate) objects.push({ shapes: [plate], role: 'plate' });
+
+  if (asset) {
+    asset.__objIdx = {
+      n: optical.length,
+      groups: objects.map((o) => ({ role: o.role, idx: o.shapes.map((sh) => optical.indexOf(sh)) })),
+      glyphs: glyphs.map((sh) => optical.indexOf(sh)),
+    };
+  }
+  return { objects, glyphs };
+}
+
+/** Accent 2 belongs to the plate, always, so a plate is the same color on
+ *  every icon no matter how many objects the icon happens to have. */
+function candAssignObjects(objects, k, coarse) {
+  const map = new Map();
+  let next = 0;
+  for (const o of objects) {
+    if (o.role === 'plate') { o.slot = Math.min(1, k - 1); continue; }
+    if (coarse) { o.slot = 0; continue; }
+    if (next === 1) next = 2;
+    o.slot = Math.min(next++, k - 1);
+  }
+  for (const o of objects) for (const s of o.shapes) map.set(s, o.slot);
+  return map;
 }
 
 function candLum(hex) {
@@ -2104,25 +2301,10 @@ function candGroup(rule, shapes, asset, k) {
         g.set(s, hit && !hit.base ? Math.min(k-1, hit.g) : k-1);
       }
     } else put(byLum.map((s,i) => [s, Math.floor(i / byLum.length * k)]));
-  } else if (rule === 'shape') {
-    /* Shapes that sit on top of one another are one object. Cluster by bbox
-       overlap, order the clusters by area, and the biggest becomes accent 1 --
-       which is the base, without anyone having had to say so. */
-    const overlaps = (a,b) => {
-      if (!a.box || !b.box) return false;
-      const ax2=a.box.x+a.box.w, ay2=a.box.y+a.box.h, bx2=b.box.x+b.box.w, by2=b.box.y+b.box.h;
-      const ix = Math.min(ax2,bx2) - Math.max(a.box.x,b.box.x);
-      const iy = Math.min(ay2,by2) - Math.max(a.box.y,b.box.y);
-      if (ix <= 0 || iy <= 0) return false;
-      return (ix*iy) / Math.max(1, Math.min(a.area, b.area)) > 0.55;
-    };
-    const cl = [];
-    for (const s of live) {
-      const hit = cl.find(c => c.some(x => overlaps(x, s)));
-      if (hit) hit.push(s); else cl.push([s]);
-    }
-    cl.sort((a,b) => b.reduce((n,s)=>n+s.area,0) - a.reduce((n,s)=>n+s.area,0));
-    cl.forEach((c,i) => c.forEach(s => g.set(s, Math.min(k-1, i))));
+  } else if (rule === 'shape' || rule === 'plateonly') {
+    const { objects } = candObjects(shapes, asset);
+    const slots = candAssignObjects(objects, k, rule === 'plateonly');
+    for (const s of live) { const v = slots.get(s); if (v != null) g.set(s, v); }
   } else if (rule === 'flatrule') {
     /* Flat's four mechanisms together, which is why it reads better than a
        plain threshold: normalize within the icon, lock the semantic ends,
