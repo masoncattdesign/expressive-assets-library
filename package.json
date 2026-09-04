@@ -38,6 +38,7 @@
     "figma:plan:moreapps": "node scripts/build-moreapps-plan.mjs",
     "figma:run:moreapps": "node scripts/import-figma.mjs --plan=figma-moreapps-plan.json",
     "stats": "node scripts/sync-stats.mjs",
-    "stats:check": "node scripts/sync-stats.mjs --check"
+    "stats:check": "node scripts/sync-stats.mjs --check",
+    "kit": "node scripts/build-kit.mjs"
   }
 }
