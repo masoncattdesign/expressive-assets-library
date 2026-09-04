@@ -1960,13 +1960,13 @@ function applySoftRoles(svgStr, asset, seedHex, intensity, secHue, themeBase, ta
    it" from the review, and the amount is a control.
    ═══════════════════════════════════════════════════════ */
 const CAND_RULES = [
-  ['luminance', 'Luminance',    'Fixed lightness cutoffs, the same everywhere in the library. Consistent, but shapes that sit close together in lightness collapse into one group.'],
+  ['luminance', 'Luminance',    'Fixed lightness cutoffs, the same everywhere in the library. Consistent across every icon, but shapes that sit close together in lightness collapse into one group.'],
   ['spread',    'Even steps',   'Ranks this icon\'s own shapes and splits them into equal counts, so every icon uses every accent. The same gray means different things in different icons.'],
-  ['breaks',    'Natural breaks','Cuts at the largest gaps in the sorted lightnesses. Shapes drawn nearly the same stay together, shapes drawn apart separate.'],
+  ['breaks',    'Natural breaks','Cuts at the largest gaps in the sorted lightnesses, so the icon decides how many groups it has. Shapes drawn nearly alike stay together, shapes drawn apart separate.'],
   ['area',      'By area',      'Splits by cumulative area rather than count, so the shape carrying the icon anchors its own accent and small marks go to the extremes.'],
-  ['flatrule',  'Flat’s rule','What Flat does, and why it reads well: normalize lightness within the icon, lock white letterforms and plate rects to fixed ends, then push any shape that collided with its neighbor to the nearest free accent. Shapes drawn identically stay identical.'],
-  ['contrast',  'Color contrast','The declared color groups: fills grouped by how similar they are, ordered most distinct first. Not lightness at all.'],
-  ['shape',     'By shape',     'Clusters shapes that sit on top of one another into one object, biggest first, then steps each member within its accent. The closest thing here to base, emblem and glyph without anyone naming them.'],
+  ['flatrule',  'Anchored lightness','Lightness normalized inside the icon, with the ends anchored: a white letterform takes the lightest accent and a plate the darkest, whatever the rest of the icon is doing. Shapes drawn identically stay identical.'],
+  ['contrast',  'By color family','Groups fills by how close their color is, ordered most distinct first, and ignores lightness entirely. An icon drawn in one family says so rather than being split into four.'],
+  ['shape',     'By object',    'Clusters shapes that sit on top of one another into one object, biggest first, then steps each member inside its accent by lightness. The closest thing here to base, emblem and glyph without anyone naming them.'],
 ];
 
 /* Accents are stored as hue rotations from the seed, so the relationship
