@@ -3994,7 +3994,8 @@ function buildExportFilename(iconName,cfg){
 // Strip the 64x64 width/height that renderIconCell adds, so exported SVGs use
 // their native viewBox and scale crisply at any size.
 function svgForExport(svgStr){
-  return svgStr.replace(/<svg([^>]*?)\s+width="64"/,'<svg$1').replace(/\s+height="64"/,'');
+  // Was: strip width="64" and hope. Now every file leaves at the same size.
+  return sizeTo48(svgStr);
 }
 // Trigger a browser download of a single string as a file.
 function downloadFile(filename,content,mime='image/svg+xml'){
@@ -4164,15 +4165,20 @@ async function libAdd(id){
   const asset = LIB.byId.get(id);
   if(!asset) return;
   const sizes = Object.keys(asset.variants.standard);
-  // Prefer the largest drawing: these pipelines bucket by luminance and read
-  // better with more shapes to work from. 'any' means one scalable drawing.
-  const pick = sizes.includes('any') ? 'any'
+  /* One canvas size for everything. The library is drawn at sizes that range
+     from 16 to 512, and taking the largest of each meant an export held icons
+     at 48, 64, 256 and 512 side by side. 48 is the size the icon grid is built
+     on, so it is the one everything lands at: the 48 drawing when the asset
+     has one, otherwise the scalable drawing or the largest there is, scaled to
+     48 on the way out. */
+  const pick = sizes.includes('48') ? '48'
+    : sizes.includes('any') ? 'any'
     : String(Math.max(...sizes.map(Number).filter(Number.isFinite)));
   const path = asset.variants.standard[pick];
   try{
     const res = await fetch(path, { cache: 'no-store' });
     if(!res.ok) throw new Error('HTTP ' + res.status);
-    const svg = resolveColorVars(await res.text());
+    const svg = sizeTo48(resolveColorVars(await res.text()));
     if(!LIB.chosen.some(c => c.id === id)) LIB.chosen.push({ id, name: asset.name, svg });
     await renderLibraryRow();
   }catch(err){
@@ -4260,19 +4266,46 @@ var SET = [];
 var picking = -1;
 var setKind = 'icons';
 
-/** Largest standard drawing: these pipelines bucket by luminance and read
- *  better with more shapes to work from. */
+/** Put a drawing on a 48 canvas without changing what it draws: keep the
+ *  viewBox, or build one from the width and height when the file has none,
+ *  then state the size once. Everything downstream, canvas, thumbnails and
+ *  export, then agrees on one size. */
+function sizeTo48(svgStr) {
+  const m = /<svg\b[^>]*>/i.exec(svgStr || '');
+  if (!m) return svgStr;
+  let tag = m[0];
+  const attr = (n) => { const r = new RegExp(n + '="([^"]*)"', 'i').exec(tag); return r ? r[1] : null; };
+  if (!attr('viewBox')) {
+    const w = parseFloat(attr('width')), h = parseFloat(attr('height'));
+    if (Number.isFinite(w) && Number.isFinite(h) && w > 0 && h > 0)
+      tag = tag.replace(/<svg/i, `<svg viewBox="0 0 ${w} ${h}"`);
+    else return svgStr;   // nothing to scale against, leave it alone
+  }
+  tag = tag.replace(/\s+width="[^"]*"/i, '').replace(/\s+height="[^"]*"/i, '');
+  tag = tag.replace(/<svg/i, '<svg width="48" height="48"');
+  return svgStr.slice(0, m.index) + tag + svgStr.slice(m.index + m[0].length);
+}
+
+/** The drawing for one asset, always on a 48 canvas. */
 async function fetchAsset(id) {
   const asset = LIB.byId.get(id);
   if (!asset) return null;
   const sizes = Object.keys(asset.variants.standard);
-  const pick = sizes.includes('any') ? 'any' : String(Math.max(...sizes.map(Number).filter(Number.isFinite)));
+  /* One canvas size for everything. The library is drawn at sizes that range
+     from 16 to 512, and taking the largest of each meant an export held icons
+     at 48, 64, 256 and 512 side by side. 48 is the size the icon grid is built
+     on, so it is the one everything lands at: the 48 drawing when the asset
+     has one, otherwise the scalable drawing or the largest there is, scaled to
+     48 on the way out. */
+  const pick = sizes.includes('48') ? '48'
+    : sizes.includes('any') ? 'any'
+    : String(Math.max(...sizes.map(Number).filter(Number.isFinite)));
   const path = asset.variants.standard[pick];
   try {
     const res = await fetch(path, { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     // roles ride along so the Roles pipeline has the declared answer
-    return { id, name: asset.name, svg: resolveColorVars(await res.text()), roles: asset.roles || null };
+    return { id, name: asset.name, svg: sizeTo48(resolveColorVars(await res.text())), roles: asset.roles || null };
   } catch (err) {
     return null;
   }
