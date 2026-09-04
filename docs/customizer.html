@@ -104,6 +104,9 @@
 .m365-tog-btn.disabled{opacity:0.4;cursor:not-allowed}
 .icon-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px}
 .set-toggle{margin-right:2px}
+.sec-swatch{width:26px;height:22px;flex:none;padding:0;border:1px solid var(--border2);border-radius:5px;background:none;cursor:pointer}
+.sec-swatch::-webkit-color-swatch-wrapper{padding:2px}
+.sec-swatch::-webkit-color-swatch{border:none;border-radius:3px}
 .row-label #set-reset{margin-left:2px}
 .icon-cell{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:default}
 .icon-cell svg,.icon-cell .icon-img{width:64px;height:64px;display:block}
@@ -2054,7 +2057,7 @@ function generateSoftPalette(seedHex, intensity=50, secHueOffset=0){
   };
 }
 
-function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0){
+function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0, rule='absolute'){
   try {
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgStr, 'image/svg+xml');
@@ -2192,13 +2195,64 @@ function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0){
     //
     // Pure-black shapes (lum < 0.04) still hit the isBlack lock and go to
     // tones[5] directly. White locks (lum > 0.93) stay white.
-    const bucketFor = (lum) => {
-      // Returns 0..3 where 0 = lightest → fillA, 3 = darkest → fillD.
-      if(lum < 0.45) return 3;
-      if(lum < 0.65) return 2;
-      if(lum < 0.82) return 1;
-      return 0;
-    };
+    /* Four ways to cut the same axis, because absolute thresholds are right
+       for some icons and wrong for others in a way you can see:
+
+       absolute  Fixed cutoffs, hand-tuned. Consistent across the library, so
+                 a mid-gray reads as structural dark wherever it appears. But
+                 three shapes that happen to sit close together in lightness
+                 all land in one bucket, which is why Edge goes flat.
+
+       spread    Rank this icon's own shapes and split into four equal counts.
+                 Every icon uses its full palette, so Edge's three shapes are
+                 always three tones. The cost is that the same gray means
+                 different things in different icons.
+
+       breaks    Cut at the largest GAPS in the sorted lightnesses rather than
+                 at fixed or even positions. Shapes drawn nearly the same stay
+                 together, shapes drawn apart separate -- which is what the
+                 artwork was already saying. Teams' near head and body hold
+                 together here; Edge still separates.
+
+       area      Split by cumulative area rather than by count, so the shape
+                 carrying the icon anchors a tone of its own and small marks
+                 are pushed to the extremes rather than averaged into the
+                 middle. */
+    function makeBucketer(rule, data, areaOf) {
+      const live = data.filter((d) => !d.isWhite && !d.isBlack && d.lum != null);
+      const abs = (lum) => (lum < 0.45 ? 3 : lum < 0.65 ? 2 : lum < 0.82 ? 1 : 0);
+      if (rule === 'absolute' || live.length < 2) return (d) => abs(d.lum);
+
+      const sorted = [...live].sort((a, b) => a.lum - b.lum);   // darkest first
+
+      if (rule === 'spread') {
+        const rank = new Map(sorted.map((d, i) => [d, i]));
+        const n = sorted.length;
+        return (d) => (rank.has(d) ? 3 - Math.min(3, Math.floor((rank.get(d) / n) * 4)) : abs(d.lum));
+      }
+
+      if (rule === 'area') {
+        const total = sorted.reduce((m, d) => m + (areaOf(d) || 0), 0) || 1;
+        let run = 0; const cut = new Map();
+        for (const d of sorted) { run += areaOf(d) || 0; cut.set(d, Math.min(3, Math.floor((run / total) * 4))); }
+        return (d) => (cut.has(d) ? 3 - cut.get(d) : abs(d.lum));
+      }
+
+      // breaks: the three widest gaps between consecutive lightnesses
+      const gaps = [];
+      for (let i = 1; i < sorted.length; i++) gaps.push([sorted[i].lum - sorted[i - 1].lum, i]);
+      const edges = gaps.sort((a, b) => b[0] - a[0]).slice(0, 3).map((g) => g[1]).sort((a, b) => a - b);
+      const band = new Map();
+      sorted.forEach((d, i) => {
+        let b = 0; for (const e of edges) if (i >= e) b++;
+        band.set(d, b);                                   // 0 darkest .. 3 lightest
+      });
+      return (d) => (band.has(d) ? 3 - band.get(d) : abs(d.lum));
+    }
+    const bucketOf = makeBucketer(rule, shapeData, (d) => {
+      const b = shapeBox.get(d.el);
+      return b ? Math.max(0, b.w) * Math.max(0, b.h) : 0;
+    });
 
     // ── fixed gradient library ──
     // v5: corrected gradient direction. Previous "VERTICAL_ANGLE = 180" was
@@ -2308,7 +2362,7 @@ function applySoft(svgStr, seedHex, intensity=50, secHueOffset=0){
         d.el.setAttribute('filter', `url(#${noiseId})`);
         return;
       }
-      const bucket = bucketFor(d.lum);     // 0 = lightest → fillA, 3 = darkest → fillD
+      const bucket = bucketOf(d);          // 0 = lightest → fillA, 3 = darkest → fillD
       const fillId = fillIds[bucket];
       d.el.setAttribute('fill', `url(#${fillId})`);
       d.el.setAttribute('filter', `url(#${noiseId})`);
@@ -2900,9 +2954,9 @@ function transformSvg(svgStr,iconName,forceOriginal,asset){
     // Soft mode honors M365 forceOriginal by passing the source through
     // unchanged — same convention as Tinted/Flat.
     if(forceOriginal) return svgStr;
-    if(state.softGroupBy!=='luminance')
+    if(state.softGroupBy==='relative'||state.softGroupBy==='archetype')
       return applySoftRoles(svgStr,asset,state.softSeed,state.softIntensity,state.softSecHue,state.softBase,state.softGroupBy);
-    return applySoft(svgStr, state.softSeed, state.softIntensity, state.softSecHue);
+    return applySoft(svgStr, state.softSeed, state.softIntensity, state.softSecHue, state.softGroupBy);
   }
   return svgStr;
 }
@@ -3033,7 +3087,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="tint-seed-c" value="${state.tintSeed}"><input class="hex-in" id="tint-seed-h" value="${state.tintSeed}" maxlength="7"></div>
         <div class="seed-derived" id="tint-derived"></div>
-        ${isDuo?`<div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="tint-sechue" min="-180" max="180" value="${state.tintSecHue}" step="1"><span class="sval" id="v-tint-sechue">${state.tintSecHue}°</span></div>`:''}
+        ${isDuo?`${secHueRow('tint','tintSecHue','tintSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Each icon is tinted in its own dominant hue \u2014 a wash of its own primary color.</div>'}
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3046,7 +3100,7 @@ function renderControls(){
     if(!isOriginal){
       document.getElementById('tint-preset-section').appendChild(renderPresets('tintSeed','tint-seed-c','tint-seed-h'));
       wireSeed('tint-seed','tintSeed');updateTintDerived();
-      if(isDuo)wireSlider('tint-sechue','v-tint-sechue','tintSecHue','°');
+      if(isDuo)wireSecHue('tint','tintSecHue','tintSeed');
     }
     wireSlider('tint-opacity','v-tint-opacity','tintOpacity','%');wireSlider('tint-brightness','v-tint-brightness','tintBrightness','%');wireSlider('tint-contrast','v-tint-contrast','tintContrast','%');wireSlider('tint-saturation','v-tint-saturation','tintSaturation','%');
   }
@@ -3059,7 +3113,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="dich-seed-c" value="${state.dichSeed}"><input class="hex-in" id="dich-seed-h" value="${state.dichSeed}" maxlength="7"></div>
         <div class="seed-derived" id="dich-derived"></div>
-        <div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="dich-sechue" min="-180" max="180" value="${state.dichSecHue}" step="1"><span class="sval" id="v-dich-sechue">${state.dichSecHue}°</span></div>
+        ${secHueRow('dich','dichSecHue','dichSeed')}
       </div>
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3078,7 +3132,7 @@ function renderControls(){
       </div>`;
     document.getElementById('dich-preset-section').appendChild(renderPresets('dichSeed','dich-seed-c','dich-seed-h'));
     wireSeed('dich-seed','dichSeed');updateDichDerived();
-    wireSlider('dich-sechue','v-dich-sechue','dichSecHue','°');wireSlider('dich-angle','v-dich-angle','dichAngle','°');wireSlider('dich-intensity','v-dich-intensity','dichIntensity','%');wireSlider('dich-spread','v-dich-spread','dichSpread','%');wireSlider('dich-bloomdist','v-dich-bloomdist','dichBloomDist','%');
+    wireSecHue('dich','dichSecHue','dichSeed');wireSlider('dich-angle','v-dich-angle','dichAngle','°');wireSlider('dich-intensity','v-dich-intensity','dichIntensity','%');wireSlider('dich-spread','v-dich-spread','dichSpread','%');wireSlider('dich-bloomdist','v-dich-bloomdist','dichBloomDist','%');
   }
   if(state.mode==='outline'){
     const isOriginal=state.outlineMode==='original';
@@ -3101,7 +3155,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="outline-seed-c" value="${state.outlineSeed}"><input class="hex-in" id="outline-seed-h" value="${state.outlineSeed}" maxlength="7"></div>
         <div class="seed-derived" id="outline-derived"></div>
-        ${isDuo?`<div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="outline-sechue" min="-180" max="180" value="${state.outlineSecHue}" step="1"><span class="sval" id="v-outline-sechue">${state.outlineSecHue}°</span></div>`:''}
+        ${isDuo?`${secHueRow('outline','outlineSecHue','outlineSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Icons keep their original brand hues, rendered as outlines.</div>'}
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3121,7 +3175,7 @@ function renderControls(){
     if(!isOriginal){
       document.getElementById('outline-preset-section').appendChild(renderPresets('outlineSeed','outline-seed-c','outline-seed-h'));
       wireSeed('outline-seed','outlineSeed');updateOutlineDerived();
-      if(isDuo)wireSlider('outline-sechue','v-outline-sechue','outlineSecHue','°');
+      if(isDuo)wireSecHue('outline','outlineSecHue','outlineSeed');
     }
     const wSlider=document.getElementById('outline-weight'),wVal=document.getElementById('v-outline-weight');
     wSlider.addEventListener('input',()=>{state.outlineWeight=parseInt(wSlider.value)/10;wVal.textContent=state.outlineWeight;renderIcons();});
@@ -3148,7 +3202,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="flat-seed-c" value="${state.flatSeed}"><input class="hex-in" id="flat-seed-h" value="${state.flatSeed}" maxlength="7"></div>
         <div class="seed-derived" id="flat-derived"></div>
-        ${isDuo?`<div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="flat-sechue" min="-180" max="180" value="${state.flatSecHue}" step="1"><span class="sval" id="v-flat-sechue">${state.flatSecHue}°</span></div>`:''}
+        ${isDuo?`${secHueRow('flat','flatSecHue','flatSeed')}`:''}
       </div>`:'<div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Icons keep their original brand hues, flattened to 4 tonal values.</div>'}
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3168,7 +3222,7 @@ function renderControls(){
     if(!isOriginal){
       document.getElementById('flat-preset-section').appendChild(renderPresets('flatSeed','flat-seed-c','flat-seed-h'));
       wireSeed('flat-seed','flatSeed');updateFlatDerived();
-      if(isDuo)wireSlider('flat-sechue','v-flat-sechue','flatSecHue','°');
+      if(isDuo)wireSecHue('flat','flatSecHue','flatSeed');
     }
     wireSlider('flat-sat','v-flat-sat','flatSaturation','%');
     wireSlider('flat-gradint','v-flat-gradint','flatGradIntensity','%');
@@ -3181,7 +3235,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="acrylic-seed-c" value="${state.acrylicSeed}"><input class="hex-in" id="acrylic-seed-h" value="${state.acrylicSeed}" maxlength="7"></div>
         <div class="seed-derived" id="acrylic-derived"></div>
-        <div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="acrylic-sechue" min="-180" max="180" value="${state.acrylicSecHue}" step="1"><span class="sval" id="v-acrylic-sechue">${state.acrylicSecHue}°</span></div>
+        ${secHueRow('acrylic','acrylicSecHue','acrylicSeed')}
       </div>
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3191,7 +3245,7 @@ function renderControls(){
       </div>`;
     document.getElementById('acrylic-preset-section').appendChild(renderPresets('acrylicSeed','acrylic-seed-c','acrylic-seed-h'));
     wireSeed('acrylic-seed','acrylicSeed');updateAcrylicDerived();
-    wireSlider('acrylic-sechue','v-acrylic-sechue','acrylicSecHue','°');
+    wireSecHue('acrylic','acrylicSecHue','acrylicSeed');
     wireSlider('acrylic-offset','v-acrylic-offset','acrylicOffset','%');
     wireSlider('acrylic-frost','v-acrylic-frost','acrylicFrost','%');
   }
@@ -3203,7 +3257,7 @@ function renderControls(){
         <div class="ctrl-label">Seed color</div>
         <div class="ctrl-row"><input type="color" id="soft-seed-c" value="${state.softSeed}"><input class="hex-in" id="soft-seed-h" value="${state.softSeed}" maxlength="7"></div>
         <div class="seed-derived" id="soft-derived"></div>
-        <div class="slider-row" style="margin-top:6px"><span class="slabel">Sec. hue</span><input type="range" id="soft-sechue" min="-180" max="180" value="${state.softSecHue}" step="1"><span class="sval" id="v-soft-sechue">${state.softSecHue}°</span></div>
+        ${secHueRow('soft','softSecHue','softSeed')}
       </div>
       <div class="divider"></div>
       <div class="ctrl-section">
@@ -3213,24 +3267,28 @@ function renderControls(){
       <div class="divider"></div>
       <div class="ctrl-section">
         <div class="ctrl-label">Grouped by</div>
-        <div style="display:flex;gap:6px;margin-bottom:6px">
-          ${['luminance','relative','archetype'].map(v=>{const on=state.softGroupBy===v;
-            const lbl={luminance:'Luminance',relative:'This icon',archetype:'The library'}[v];
-            return `<button type="button" onclick="setSoftGroupBy('${v}')" style="flex:1;padding:6px 4px;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:11px;cursor:pointer;font-family:var(--font)">${lbl}</button>`;}).join('')}
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:6px">
+          ${[['luminance','Luminance'],['spread','Even spread'],['breaks','Natural breaks'],
+             ['area','By area'],['relative','This icon'],['archetype','The library']].map(([v,lbl])=>{
+            const on=state.softGroupBy===v;
+            return `<button type="button" onclick="setSoftGroupBy('${v}')" style="padding:6px 2px;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};background:${on?'var(--surface3)':'var(--surface2)'};color:${on?'var(--text)':'var(--text2)'};font-size:10.5px;cursor:pointer;font-family:var(--font)">${lbl}</button>`;}).join('')}
         </div>
         <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
-          ${state.softGroupBy==='luminance'
-            ? 'Soft\'s original rule: bucket every shape by how light it is, at three fixed cutoffs. Fast and hand-tuned, but two shapes of the same lightness get the same tone however differently they were colored.'
-            : state.softGroupBy==='relative'
-              ? 'The same six tones, assigned by declared color group. Most distinct group takes the warm accent; the rest walk cooler and deeper.'
-              : 'The same six tones, assigned by absolute color name, so every green in the library takes the same tone in every asset.'}
+          ${({
+            luminance:'Fixed cutoffs, hand-tuned across the library, so a mid-gray reads as structural dark wherever it appears. Three shapes that sit close together in lightness all land in one tone, which is why Edge goes flat.',
+            spread:'Ranks this icon\'s own shapes and splits them into four equal counts, so every icon uses the full palette and Edge\'s three shapes are always three tones. The cost is that the same gray means different things in different icons.',
+            breaks:'Cuts at the largest gaps in the sorted lightnesses rather than at fixed positions. Shapes drawn nearly the same stay together and shapes drawn apart separate, which is what the artwork was already saying.',
+            area:'Splits by cumulative area rather than by count, so the shape carrying the icon anchors a tone of its own and small marks are pushed to the extremes instead of averaged into the middle.',
+            relative:'Not lightness at all. The same six tones, assigned by declared color group: most distinct group takes the warm accent, the rest walk cooler and deeper.',
+            archetype:'Not lightness at all. The same six tones, assigned by absolute color name, so every green in the library takes the same tone in every asset.',
+          })[state.softGroupBy]}
         </div>
-        ${state.softGroupBy==='luminance'?'':`<div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.softBase?' on':''}" id="tog-softBase" onclick="toggleRoles('softBase')"></span></div>`}
+        ${(state.softGroupBy==='relative'||state.softGroupBy==='archetype')?`<div class="ctrl-row" style="margin-top:8px"><span class="slabel" style="flex:1">Theme white and black too</span><span class="tog${state.softBase?' on':''}" id="tog-softBase" onclick="toggleRoles('softBase')"></span></div>`:''}
       </div>
       <div class="no-ctrl" style="font-size:11px;color:var(--text3);padding:4px 0">Soft keeps the original gradients and remaps them into a six-tone pastel palette, warm pales through cool deeps.</div>`;
     document.getElementById('soft-preset-section').appendChild(renderPresets('softSeed','soft-seed-c','soft-seed-h'));
     wireSeed('soft-seed','softSeed');updateSoftDerived();
-    wireSlider('soft-sechue','v-soft-sechue','softSecHue','°');
+    wireSecHue('soft','softSecHue','softSeed');
     wireSlider('soft-intensity','v-soft-intensity','softIntensity','');
   }
   if(state.mode==='roles'){
@@ -3405,6 +3463,47 @@ function updateAcrylicDerived(){
     const stops=[backColor,glyphColor,'#FFFFFF','#F0F0F2'];
     el.innerHTML=stops.map(c=>`<div style="background:${c};flex:1"></div>`).join('');
   }catch(e){}
+}
+
+/* A secondary hue is a rotation from the seed, which is the honest model --
+   change the seed and the pair moves together -- but nobody thinks in degrees.
+   The swatch shows where that rotation actually lands and lets you set it by
+   picking the color you want instead. Both directions stay in sync, and the
+   number remains the source of truth. */
+function secHueHex(seedKey, off) {
+  try {
+    const [L, C, H] = hexToOklch(state[seedKey]);
+    return oklchToHex(Math.max(0.35, Math.min(0.82, L)), Math.max(C, 0.10), (H + off + 360) % 360);
+  } catch (e) { return '#888888'; }
+}
+function secHueRow(prefix, stateKey, seedKey) {
+  const off = state[stateKey];
+  return `<div class="slider-row" style="margin-top:6px">
+      <span class="slabel">Sec. hue</span>
+      <input type="color" class="sec-swatch" id="${prefix}-sechue-c" value="${secHueHex(seedKey, off)}" title="Pick the secondary color">
+      <input type="range" id="${prefix}-sechue" min="-180" max="180" value="${off}" step="1">
+      <span class="sval" id="v-${prefix}-sechue">${off}&deg;</span>
+    </div>`;
+}
+function wireSecHue(prefix, stateKey, seedKey) {
+  wireSlider(prefix + '-sechue', 'v-' + prefix + '-sechue', stateKey, '°');
+  const sw = document.getElementById(prefix + '-sechue-c');
+  const sl = document.getElementById(prefix + '-sechue');
+  if (!sw || !sl) return;
+  sl.addEventListener('input', () => { sw.value = secHueHex(seedKey, parseInt(sl.value)); });
+  sw.addEventListener('input', () => {
+    try {
+      const [, , H] = hexToOklch(state[seedKey]);
+      const [, , P] = hexToOklch(sw.value);
+      const off = Math.round(((P - H + 540) % 360) - 180);
+      state[stateKey] = off;
+      sl.value = off;
+      const v = document.getElementById('v-' + prefix + '-sechue');
+      if (v) v.textContent = off + '°';
+      updateAllDerived();
+      renderIcons();
+    } catch (e) {}
+  });
 }
 
 function wireSlider(id,valId,stateKey,suffix){
