@@ -589,6 +589,7 @@ async function runPlan() {
           // is deprecated the moment it lands, not after someone remembers to
           // go back and say so. Anything the plan does not decide stays draft.
           status: asset.status || 'draft',
+          ...(asset.replacedBy ? { replacedBy: asset.replacedBy } : {}),
           themes: Object.keys(variants),
           sizes: asset.sizes,
           colors: extractColors(sample),

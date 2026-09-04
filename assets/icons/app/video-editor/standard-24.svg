@@ -1,0 +1,51 @@
+<svg aria-label="Video Editor standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-video-editor-standard-24-clip0_584118_1559)">
+<path d="M23 3H1C0.447715 3 0 3.44772 0 4V20C0 20.5523 0.447715 21 1 21H23C23.5523 21 24 20.5523 24 20V4C24 3.44772 23.5523 3 23 3Z" fill="url(#app-video-editor-standard-24-paint0_linear_584118_1559)"/>
+<path d="M24 19.5V20C23.9981 20.2646 23.8921 20.5179 23.705 20.705C23.5179 20.8921 23.2646 20.9981 23 21H9V17.5L13 13.5L14.085 12.415C14.4606 12.0404 14.9695 11.83 15.5 11.83C16.0305 11.83 16.5394 12.0404 16.915 12.415L24 19.5Z" fill="#436DCD"/>
+<mask id="app-video-editor-standard-24-mask0_584118_1559" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="24" height="18">
+<path d="M23 3H1C0.447715 3 0 3.44772 0 4V20C0 20.5523 0.447715 21 1 21H23C23.5523 21 24 20.5523 24 20V4C24 3.44772 23.5523 3 23 3Z" fill="url(#app-video-editor-standard-24-paint1_linear_584118_1559)"/>
+</mask>
+<g mask="url(#app-video-editor-standard-24-mask0_584118_1559)">
+<g filter="url(#app-video-editor-standard-24-filter0_dd_584118_1559)">
+<path d="M20.5 21H1C0.735027 20.9992 0.481133 20.8936 0.293767 20.7062C0.106402 20.5189 0.000791363 20.265 0 20L0 16.5L6.585 9.91501C6.96063 9.54039 7.46949 9.33002 8 9.33002C8.53051 9.33002 9.03937 9.54039 9.415 9.91501L13 13.5L20.5 21Z" fill="#3C5EB3"/>
+</g>
+</g>
+<path d="M20.5 21H1C0.73502 20.9992 0.481112 20.8936 0.293741 20.7063C0.106371 20.5189 0.000767747 20.265 0 20L0 16.5L6.585 9.91501C6.96066 9.54041 7.46953 9.33005 8.00004 9.33005C8.53055 9.33005 9.03942 9.54041 9.41508 9.91501L13 13.5L20.5 21Z" fill="url(#app-video-editor-standard-24-paint2_linear_584118_1559)"/>
+<path d="M3.59961 17C3.82052 17 4 17.1795 4 17.4004V18.5996C4 18.8205 3.82052 19 3.59961 19H2.40039C2.17948 19 2 18.8205 2 18.5996V17.4004C2 17.1795 2.17948 17 2.40039 17H3.59961ZM21.5996 17C21.8205 17 22 17.1795 22 17.4004V18.5996C22 18.8205 21.8205 19 21.5996 19H20.4004C20.1795 19 20 18.8205 20 18.5996V17.4004C20 17.1795 20.1795 17 20.4004 17H21.5996ZM3.59961 13C3.82052 13 4 13.1795 4 13.4004V14.5996C4 14.8205 3.82052 15 3.59961 15H2.40039C2.17948 15 2 14.8205 2 14.5996V13.4004C2 13.1795 2.17948 13 2.40039 13H3.59961ZM21.5996 13C21.8205 13 22 13.1795 22 13.4004V14.5996C22 14.8205 21.8205 15 21.5996 15H20.4004C20.1795 15 20 14.8205 20 14.5996V13.4004C20 13.1795 20.1795 13 20.4004 13H21.5996ZM3.59961 9C3.82052 9 4 9.17948 4 9.40039V10.5996C4 10.8205 3.82052 11 3.59961 11H2.40039C2.17948 11 2 10.8205 2 10.5996V9.40039C2 9.17948 2.17948 9 2.40039 9H3.59961ZM21.5996 9C21.8205 9 22 9.17948 22 9.40039V10.5996C22 10.8205 21.8205 11 21.5996 11H20.4004C20.1795 11 20 10.8205 20 10.5996V9.40039C20 9.17948 20.1795 9 20.4004 9H21.5996ZM3.59961 5C3.82052 5 4 5.17948 4 5.40039V6.59961C4 6.82052 3.82052 7 3.59961 7H2.40039C2.17948 7 2 6.82052 2 6.59961V5.40039C2 5.17948 2.17948 5 2.40039 5H3.59961ZM21.5996 5C21.8205 5 22 5.17948 22 5.40039V6.59961C22 6.82052 21.8205 7 21.5996 7H20.4004C20.1795 7 20 6.82052 20 6.59961V5.40039C20 5.17948 20.1795 5 20.4004 5H21.5996Z" fill="#F2F2F2"/>
+</g>
+<defs>
+<filter id="app-video-editor-standard-24-filter0_dd_584118_1559" x="-1" y="8.33002" width="22.5" height="13.67" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1559"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.05"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1559" result="effect2_dropShadow_584118_1559"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1559" result="shape"/>
+</filter>
+<linearGradient id="app-video-editor-standard-24-paint0_linear_584118_1559" x1="18.7142" y1="23.6293" x2="5.28581" y2="0.370689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-24-paint1_linear_584118_1559" x1="18.7142" y1="23.6293" x2="5.28581" y2="0.370689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-24-paint2_linear_584118_1559" x1="12.9713" y1="25.3467" x2="4.65844" y2="10.9483" gradientUnits="userSpaceOnUse">
+<stop offset="0.29562" stop-color="#173A73"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<clipPath id="app-video-editor-standard-24-clip0_584118_1559">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

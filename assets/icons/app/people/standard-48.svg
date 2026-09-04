@@ -1,0 +1,69 @@
+<svg aria-label="People standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 46H15L22 34C22 27.9 17.1 23 11 23C4.9 23 0 27.9 0 34V44.5C0 45.3 0.7 46 1.5 46Z" fill="url(#app-people-standard-48-paint0_linear_584118_2348)"/>
+<path d="M10 21C13.3137 21 16 18.3137 16 15C16 11.6863 13.3137 9 10 9C6.68629 9 4 11.6863 4 15C4 18.3137 6.68629 21 10 21Z" fill="url(#app-people-standard-48-paint1_linear_584118_2348)"/>
+<path d="M33.5 46H46.5C47.3 46 48 45.3 48 44.5V34C48 27.9 43.1 23 37 23C30.9 23 26 27.9 26 34L33.5 46Z" fill="url(#app-people-standard-48-paint2_linear_584118_2348)"/>
+<path d="M38 21C41.3137 21 44 18.3137 44 15C44 11.6863 41.3137 9 38 9C34.6863 9 32 11.6863 32 15C32 18.3137 34.6863 21 38 21Z" fill="url(#app-people-standard-48-paint3_linear_584118_2348)"/>
+<mask id="app-people-standard-48-mask0_584118_2348" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="23" width="48" height="23">
+<path d="M1.5 46H15L22 34C22 27.9 17.1 23 11 23C4.9 23 0 27.9 0 34V44.5C0 45.3 0.7 46 1.5 46Z" fill="url(#app-people-standard-48-paint4_linear_584118_2348)"/>
+<path d="M33.5 46H46.5C47.3 46 48 45.3 48 44.5V34C48 27.9 43.1 23 37 23C30.9 23 26 27.9 26 34L33.5 46Z" fill="url(#app-people-standard-48-paint5_linear_584118_2348)"/>
+</mask>
+<g mask="url(#app-people-standard-48-mask0_584118_2348)">
+<g filter="url(#app-people-standard-48-filter0_dd_584118_2348)">
+<path d="M14.5 46H33.5C34.3 46 35 45.3 35 44.5V30C35 23.9 30.1 19 24 19C17.9 19 13 23.9 13 30V44.5C13 45.3 13.7 46 14.5 46Z" fill="url(#app-people-standard-48-paint6_linear_584118_2348)"/>
+</g>
+</g>
+<path d="M14.5 46H33.5C34.3 46 35 45.3 35 44.5V30C35 23.9 30.1 19 24 19C17.9 19 13 23.9 13 30V44.5C13 45.3 13.7 46 14.5 46Z" fill="url(#app-people-standard-48-paint7_linear_584118_2348)"/>
+<path d="M24 17C27.3137 17 30 14.3137 30 11C30 7.68629 27.3137 5 24 5C20.6863 5 18 7.68629 18 11C18 14.3137 20.6863 17 24 17Z" fill="url(#app-people-standard-48-paint8_linear_584118_2348)"/>
+<defs>
+<filter id="app-people-standard-48-filter0_dd_584118_2348" x="10" y="17" width="28" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2348"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2348" result="effect2_dropShadow_584118_2348"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2348" result="shape"/>
+</filter>
+<linearGradient id="app-people-standard-48-paint0_linear_584118_2348" x1="15.4758" y1="45.7252" x2="3.7788" y2="25.4654" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint1_linear_584118_2348" x1="13.0005" y1="20.197" x2="6.9995" y2="9.803" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint2_linear_584118_2348" x1="45.3092" y1="46.9165" x2="32.138" y2="24.1033" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint3_linear_584118_2348" x1="41.0005" y1="20.197" x2="34.9995" y2="9.803" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint4_linear_584118_2348" x1="45.3092" y1="46.9165" x2="32.138" y2="24.1033" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint5_linear_584118_2348" x1="45.3092" y1="46.9165" x2="32.138" y2="24.1033" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint6_linear_584118_2348" x1="30.8161" y1="47.7786" x2="15.9128" y2="21.9654" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint7_linear_584118_2348" x1="30.8161" y1="47.7786" x2="15.9128" y2="21.9654" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-people-standard-48-paint8_linear_584118_2348" x1="27.0005" y1="16.197" x2="20.9995" y2="5.803" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+</defs>
+</svg>

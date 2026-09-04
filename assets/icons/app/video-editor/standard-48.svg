@@ -1,0 +1,51 @@
+<svg aria-label="Video Editor standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-video-editor-standard-48-clip0_584118_1524)">
+<path d="M46 6H2C0.89543 6 0 6.89543 0 8V40C0 41.1046 0.89543 42 2 42H46C47.1046 42 48 41.1046 48 40V8C48 6.89543 47.1046 6 46 6Z" fill="url(#app-video-editor-standard-48-paint0_linear_584118_1524)"/>
+<path d="M48 39V40C47.9962 40.5292 47.7842 41.0357 47.41 41.41C47.0357 41.7842 46.5292 41.9962 46 42H18V35L26 27L28.17 24.83C28.9213 24.0808 29.939 23.66 31 23.66C32.061 23.66 33.0787 24.0808 33.83 24.83L48 39Z" fill="#436DCD"/>
+<mask id="app-video-editor-standard-48-mask0_584118_1524" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="6" width="48" height="36">
+<path d="M46 6H2C0.89543 6 0 6.89543 0 8V40C0 41.1046 0.89543 42 2 42H46C47.1046 42 48 41.1046 48 40V8C48 6.89543 47.1046 6 46 6Z" fill="url(#app-video-editor-standard-48-paint1_linear_584118_1524)"/>
+</mask>
+<g mask="url(#app-video-editor-standard-48-mask0_584118_1524)">
+<g filter="url(#app-video-editor-standard-48-filter0_dd_584118_1524)">
+<path d="M41 42H2C1.47005 41.9985 0.962244 41.7872 0.587509 41.4125C0.212773 41.0378 0.00155911 40.53 0 40L0 33L13.17 19.83C13.9213 19.0808 14.939 18.66 16 18.66C17.061 18.66 18.0787 19.0808 18.83 19.83L26 27L41 42Z" fill="#3C5EB3"/>
+</g>
+</g>
+<path d="M41 42H2C1.47004 41.9985 0.962225 41.7873 0.587486 41.4125C0.212746 41.0378 0.00153812 40.53 0 40L0 33L13.1699 19.83C13.9212 19.0808 14.939 18.66 16 18.66C17.061 18.66 18.0788 19.0808 18.8301 19.83L26 27L41 42Z" fill="url(#app-video-editor-standard-48-paint2_linear_584118_1524)"/>
+<path d="M7 34C7.55228 34 8 34.4477 8 35V38C8 38.5523 7.55228 39 7 39H4C3.44772 39 3 38.5523 3 38V35C3 34.4477 3.44772 34 4 34H7ZM44 34C44.5523 34 45 34.4477 45 35V38C45 38.5523 44.5523 39 44 39H41C40.4477 39 40 38.5523 40 38V35C40 34.4477 40.4477 34 41 34H44ZM7 26C7.55228 26 8 26.4477 8 27V30C8 30.5523 7.55228 31 7 31H4C3.44772 31 3 30.5523 3 30V27C3 26.4477 3.44772 26 4 26H7ZM44 26C44.5523 26 45 26.4477 45 27V30C45 30.5523 44.5523 31 44 31H41C40.4477 31 40 30.5523 40 30V27C40 26.4477 40.4477 26 41 26H44ZM7 18C7.55228 18 8 18.4477 8 19V22C8 22.5523 7.55228 23 7 23H4C3.44772 23 3 22.5523 3 22V19C3 18.4477 3.44772 18 4 18H7ZM44 18C44.5523 18 45 18.4477 45 19V22C45 22.5523 44.5523 23 44 23H41C40.4477 23 40 22.5523 40 22V19C40 18.4477 40.4477 18 41 18H44ZM7 10C7.55228 10 8 10.4477 8 11V14C8 14.5523 7.55228 15 7 15H4C3.44772 15 3 14.5523 3 14V11C3 10.4477 3.44772 10 4 10H7ZM44 10C44.5523 10 45 10.4477 45 11V14C45 14.5523 44.5523 15 44 15H41C40.4477 15 40 14.5523 40 14V11C40 10.4477 40.4477 10 41 10H44Z" fill="#F2F2F2"/>
+</g>
+<defs>
+<filter id="app-video-editor-standard-48-filter0_dd_584118_1524" x="-2" y="16.66" width="45" height="27.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1524"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1524" result="effect2_dropShadow_584118_1524"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1524" result="shape"/>
+</filter>
+<linearGradient id="app-video-editor-standard-48-paint0_linear_584118_1524" x1="37.4284" y1="47.2586" x2="10.5716" y2="0.741378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-48-paint1_linear_584118_1524" x1="37.4284" y1="47.2586" x2="10.5716" y2="0.741378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-48-paint2_linear_584118_1524" x1="25.9427" y1="50.6934" x2="9.31687" y2="21.8967" gradientUnits="userSpaceOnUse">
+<stop offset="0.29562" stop-color="#173A73"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<clipPath id="app-video-editor-standard-48-clip0_584118_1524">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

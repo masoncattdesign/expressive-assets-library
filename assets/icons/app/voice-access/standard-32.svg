@@ -1,0 +1,28 @@
+<svg aria-label="Voice Access standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-voice-access-standard-32-clip0_584118_4187)">
+<g clip-path="url(#app-voice-access-standard-32-clip1_584118_4187)">
+<path d="M20 20C22.2091 20 24 21.7909 24 24C24 26.3933 22.4775 28.417 20.3154 29.793C18.1413 31.1765 15.1984 32 12 32C8.80162 32 5.85873 31.1765 3.68457 29.793C1.52252 28.417 0 26.3933 0 24C0 21.7909 1.79086 20 4 20H20ZM12 4C15.866 4 19 7.13401 19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4Z" fill="#212121"/>
+<path d="M20 20C22.2091 20 24 21.7909 24 24C24 26.3933 22.4775 28.417 20.3154 29.793C18.1413 31.1765 15.1984 32 12 32C8.80162 32 5.85873 31.1765 3.68457 29.793C1.52252 28.417 0 26.3933 0 24C0 21.7909 1.79086 20 4 20H20ZM12 4C15.866 4 19 7.13401 19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4Z" fill="url(#app-voice-access-standard-32-paint0_linear_584118_4187)"/>
+<path d="M20 20C22.2091 20 24 21.7909 24 24C24 26.3933 22.4775 28.417 20.3154 29.793C18.1413 31.1765 15.1984 32 12 32C8.80162 32 5.85873 31.1765 3.68457 29.793C1.52252 28.417 0 26.3933 0 24C0 21.7909 1.79086 20 4 20H20ZM12 4C15.866 4 19 7.13401 19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4Z" fill="url(#app-voice-access-standard-32-paint1_linear_584118_4187)"/>
+<rect x="30" y="2" width="2" height="10" rx="1" fill="#0078D4"/>
+<rect x="26" width="2" height="14" rx="1" fill="#1493DF"/>
+<rect x="22" y="4" width="2" height="6" rx="1" fill="#28AFEA"/>
+</g>
+</g>
+<defs>
+<linearGradient id="app-voice-access-standard-32-paint0_linear_584118_4187" x1="16.4034" y1="39.3745" x2="-5.27011" y2="18.8041" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-voice-access-standard-32-paint1_linear_584118_4187" x1="17.0747" y1="26.807" x2="1.92986" y2="7.17332" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<clipPath id="app-voice-access-standard-32-clip0_584118_4187">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+<clipPath id="app-voice-access-standard-32-clip1_584118_4187">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

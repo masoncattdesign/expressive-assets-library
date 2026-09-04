@@ -1,0 +1,55 @@
+<svg aria-label="PowerToys standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-power-toys-standard-16-clip0_584118_5790)">
+<path d="M15.2381 0H0.7619C0.341114 0 0 0.341114 0 0.7619V15.2381C0 15.6589 0.341114 16 0.7619 16H15.2381C15.6589 16 16 15.6589 16 15.2381V0.7619C16 0.341114 15.6589 0 15.2381 0Z" fill="url(#app-power-toys-standard-16-paint0_linear_584118_5790)"/>
+<path d="M15 1H1V15H15V1Z" fill="#666666"/>
+<path d="M4.66667 11H3.33333C3.14924 11 3 11.1492 3 11.3333V12.6667C3 12.8508 3.14924 13 3.33333 13H4.66667C4.85076 13 5 12.8508 5 12.6667V11.3333C5 11.1492 4.85076 11 4.66667 11Z" fill="url(#app-power-toys-standard-16-paint1_linear_584118_5790)"/>
+<path d="M8.66667 11H7.33333C7.14924 11 7 11.1492 7 11.3333V12.6667C7 12.8508 7.14924 13 7.33333 13H8.66667C8.85076 13 9 12.8508 9 12.6667V11.3333C9 11.1492 8.85076 11 8.66667 11Z" fill="url(#app-power-toys-standard-16-paint2_linear_584118_5790)"/>
+<path d="M12.6667 11H11.3333C11.1492 11 11 11.1492 11 11.3333V12.6667C11 12.8508 11.1492 13 11.3333 13H12.6667C12.8508 13 13 12.8508 13 12.6667V11.3333C13 11.1492 12.8508 11 12.6667 11Z" fill="url(#app-power-toys-standard-16-paint3_linear_584118_5790)"/>
+<path d="M6 3H3V9H6V3Z" fill="url(#app-power-toys-standard-16-paint4_linear_584118_5790)"/>
+<path d="M8 3H5.5V9H8V3Z" fill="url(#app-power-toys-standard-16-paint5_linear_584118_5790)"/>
+<path d="M13 3H10V9H13V3Z" fill="url(#app-power-toys-standard-16-paint6_linear_584118_5790)"/>
+<path d="M10.5 3H8V9H10.5V3Z" fill="url(#app-power-toys-standard-16-paint7_linear_584118_5790)"/>
+<path d="M13 9H3V10H13V9Z" fill="#4D4D4D"/>
+</g>
+<defs>
+<linearGradient id="app-power-toys-standard-16-paint0_linear_584118_5790" x1="13.3247" y1="17.2227" x2="2.67527" y2="-1.2227" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint1_linear_584118_5790" x1="4.62204" y1="13.0774" x2="3.37796" y2="10.9226" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint2_linear_584118_5790" x1="8.62204" y1="13.0774" x2="7.37796" y2="10.9226" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint3_linear_584118_5790" x1="12.622" y1="13.0774" x2="11.378" y2="10.9226" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint4_linear_584118_5790" x1="4.5" y1="9" x2="4.5" y2="3" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#D83B01"/>
+<stop offset="1" stop-color="#EC6725"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint5_linear_584118_5790" x1="6.75" y1="9" x2="6.75" y2="3" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#FFB900"/>
+<stop offset="1" stop-color="#FEF000"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint6_linear_584118_5790" x1="11.5" y1="9" x2="11.5" y2="3" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-16-paint7_linear_584118_5790" x1="9.25" y1="9" x2="9.25" y2="3" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#56B60E"/>
+<stop offset="1" stop-color="#66EB6E"/>
+</linearGradient>
+<clipPath id="app-power-toys-standard-16-clip0_584118_5790">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

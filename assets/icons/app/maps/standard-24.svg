@@ -1,0 +1,69 @@
+<svg aria-label="Maps standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M11.9998 0C6.29982 0 1.74982 4.75 1.99982 10.5C2.09982 12.8 3.14982 14.95 4.79982 16.55L6.69982 18.45C7.69982 16.55 9.69982 15.25 11.9998 15.25C14.2998 15.25 16.2998 16.55 17.2998 18.45L19.1998 16.55C20.8498 14.9 21.8998 12.75 21.9998 10.5C22.2498 4.75 17.6998 0 11.9998 0Z" fill="url(#app-maps-standard-24-paint0_linear_584118_5039)"/>
+<g opacity="0.32">
+<rect x="4.91943" y="3.95752" width="14.16" height="14.16" fill="url(#app-maps-standard-24-pattern0_584118_5039)"/>
+<path opacity="0.32" d="M11.9998 14.5C14.2089 14.5 15.9998 12.7091 15.9998 10.5C15.9998 8.29086 14.2089 6.5 11.9998 6.5C9.79062 6.5 7.99976 8.29086 7.99976 10.5C7.99976 12.7091 9.79062 14.5 11.9998 14.5Z" fill="white"/>
+</g>
+<g opacity="0.24">
+<rect x="7.63794" y="6.19629" width="8.76" height="8.76" fill="url(#app-maps-standard-24-pattern1_584118_5039)"/>
+<path opacity="0.24" d="M11.9995 14.5C14.2087 14.5 15.9995 12.7091 15.9995 10.5C15.9995 8.29086 14.2087 6.5 11.9995 6.5C9.79037 6.5 7.99951 8.29086 7.99951 10.5C7.99951 12.7091 9.79037 14.5 11.9995 14.5Z" fill="white"/>
+</g>
+<g opacity="0.24">
+<rect x="6.31812" y="15.0763" width="11.4" height="8.64" fill="url(#app-maps-standard-24-pattern2_584118_5039)"/>
+<path opacity="0.24" d="M12 15.25C9.69995 15.25 7.69995 16.55 6.69995 18.45L11.1 22.85C11.6 23.35 12.4 23.35 12.85 22.85L17.25 18.45C16.3 16.55 14.3 15.25 12 15.25Z" fill="white"/>
+</g>
+<path d="M12 15.25C9.69995 15.25 7.69995 16.55 6.69995 18.45L11.1 22.85C11.6 23.35 12.4 23.35 12.85 22.85L17.25 18.45C16.3 16.55 14.3 15.25 12 15.25Z" fill="url(#app-maps-standard-24-paint1_linear_584118_5039)"/>
+<path d="M12 14.5C14.2091 14.5 16 12.7091 16 10.5C16 8.29086 14.2091 6.5 12 6.5C9.79086 6.5 8 8.29086 8 10.5C8 12.7091 9.79086 14.5 12 14.5Z" fill="url(#app-maps-standard-24-paint2_linear_584118_5039)"/>
+<mask id="app-maps-standard-24-mask0_584118_5039" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="0" width="22" height="24">
+<path d="M11.9998 0C17.6998 0 22.2498 4.75 21.9998 10.5C21.8998 12.7499 20.8499 14.8998 19.2 16.5498L17.2996 18.4502C16.5495 17.025 15.237 15.937 13.657 15.4824C15.2344 15.9371 16.5373 17.0252 17.2498 18.4502L12.8504 22.8496C12.4004 23.3496 11.6004 23.3496 11.1004 22.8496L6.70002 18.4502L4.79963 16.5498C3.14976 14.9498 2.09982 12.7999 1.99982 10.5C1.74982 4.75002 6.29985 3.65574e-05 11.9998 0ZM10.742 15.3828H10.743H10.742Z" fill="url(#app-maps-standard-24-paint3_linear_584118_5039)"/>
+</mask>
+<g mask="url(#app-maps-standard-24-mask0_584118_5039)">
+<g filter="url(#app-maps-standard-24-filter0_dd_584118_5039)" style="mix-blend-mode:multiply">
+<path d="M11.9998 15.25C14.2998 15.25 16.2998 16.5502 17.2498 18.4502L12.8503 22.8496C12.4003 23.3496 11.6003 23.3496 11.1003 22.8496L6.69995 18.4502C7.69992 16.5503 9.69984 15.2501 11.9998 15.25ZM11.9998 6.5C14.2089 6.5 15.9997 8.29087 15.9998 10.5C15.9998 12.7091 14.2089 14.5 11.9998 14.5C9.79073 14.4999 7.99976 12.7091 7.99976 10.5C7.99976 8.29095 9.79073 6.50013 11.9998 6.5Z" fill="white"/>
+</g>
+</g>
+<defs>
+<pattern id="app-maps-standard-24-pattern0_584118_5039" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_584118_5039"/>
+</pattern>
+<pattern id="app-maps-standard-24-pattern1_584118_5039" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_584118_5039"/>
+</pattern>
+<pattern id="app-maps-standard-24-pattern2_584118_5039" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2_584118_5039"/>
+</pattern>
+<filter id="app-maps-standard-24-filter0_dd_584118_5039" x="4.69995" y="5" width="14.5498" height="20.7246" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5039"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5039" result="effect2_dropShadow_584118_5039"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5039" result="shape"/>
+</filter>
+<linearGradient id="app-maps-standard-24-paint0_linear_584118_5039" x1="17.0487" y1="18.5953" x2="7.06321" y2="1.30001" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B4350E"/>
+<stop offset="1" stop-color="#D83B01"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-24-paint1_linear_584118_5039" x1="14.1548" y1="22.1808" x2="10.2219" y2="15.3689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#E55819"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-24-paint2_linear_584118_5039" x1="14.0004" y1="13.9635" x2="9.99965" y2="7.03415" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-24-paint3_linear_584118_5039" x1="14.1546" y1="22.1804" x2="10.2219" y2="15.3686" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#E55819"/>
+</linearGradient>
+<image id="app-maps-standard-24-image0_584118_5039" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAYAAACPgGwlAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+<image id="app-maps-standard-24-image1_584118_5039" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+<image id="app-maps-standard-24-image2_584118_5039" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABLCAYAAACGGCK3AAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+</defs>
+</svg>

@@ -1,0 +1,72 @@
+<svg aria-label="Mail standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.5 0.900001L47 13.4C47.6 13.8 48 14.4 48 15.1L47 43H1L0 15.1C0 14.4 0.4 13.7 1 13.4L22.5 0.900001C23.4 0.300001 24.6 0.300001 25.5 0.900001Z" fill="url(#app-mail-standard-48-paint0_linear_584118_2064)"/>
+<g filter="url(#app-mail-standard-48-filter0_dd_584118_2064)">
+<path d="M42 39H6C4.9 39 4 38.1 4 37V17C4 15.9 4.9 15 6 15H42C43.1 15 44 15.9 44 17V37C44 38.1 43.1 39 42 39Z" fill="#F2F2F2"/>
+</g>
+<path d="M42 39H6C4.9 39 4 38.1 4 37V17C4 15.9 4.9 15 6 15H42C43.1 15 44 15.9 44 17V37C44 38.1 43.1 39 42 39Z" fill="#F2F2F2"/>
+<mask id="app-mail-standard-48-mask0_584118_2064" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="43">
+<path d="M25.5 0.900012L47 13.4C47.6 13.8 48 14.4 48 15.1L47 43H1L0 15.1C0 14.4 0.4 13.7 1 13.4L22.5 0.900012C23.4 0.300012 24.6 0.300012 25.5 0.900012Z" fill="url(#app-mail-standard-48-paint1_linear_584118_2064)"/>
+</mask>
+<g mask="url(#app-mail-standard-48-mask0_584118_2064)">
+<g filter="url(#app-mail-standard-48-filter1_dd_584118_2064)">
+<path d="M47.3 44.5C47.7 44.1 48 43.6 48 43V15.1L24 30L33.6 38.6L47.3 44.5Z" fill="url(#app-mail-standard-48-paint2_linear_584118_2064)"/>
+<path d="M0 15V43C0 44.1 0.9 45 2 45H46C46.5 45 46.9 44.8 47.3 44.5L0 15Z" fill="url(#app-mail-standard-48-paint3_linear_584118_2064)"/>
+</g>
+</g>
+<path d="M47.3 44.5C47.7 44.1 48 43.6 48 43V15.1L24 30L33.6 38.6L47.3 44.5Z" fill="url(#app-mail-standard-48-paint4_linear_584118_2064)"/>
+<path d="M0 15V43C0 44.1 0.9 45 2 45H46C46.5 45 46.9 44.8 47.3 44.5L0 15Z" fill="url(#app-mail-standard-48-paint5_linear_584118_2064)"/>
+<defs>
+<filter id="app-mail-standard-48-filter0_dd_584118_2064" x="1" y="12" width="46" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2064"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2064" result="effect2_dropShadow_584118_2064"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2064" result="shape"/>
+</filter>
+<filter id="app-mail-standard-48-filter1_dd_584118_2064" x="-3" y="12" width="54" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2064"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2064" result="effect2_dropShadow_584118_2064"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2064" result="shape"/>
+</filter>
+<linearGradient id="app-mail-standard-48-paint0_linear_584118_2064" x1="36.7224" y1="49.9762" x2="12.3567" y2="7.7736" gradientUnits="userSpaceOnUse">
+<stop offset="0.3116" stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-48-paint1_linear_584118_2064" x1="36.7224" y1="49.9762" x2="12.3567" y2="7.77361" gradientUnits="userSpaceOnUse">
+<stop offset="0.3116" stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-48-paint2_linear_584118_2064" x1="35.512" y1="64.6151" x2="10.8922" y2="21.9723" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-48-paint3_linear_584118_2064" x1="35.512" y1="64.6151" x2="10.8922" y2="21.9723" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-48-paint4_linear_584118_2064" x1="50.3309" y1="47.3955" x2="37.7866" y2="25.6681" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1490DF"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-48-paint5_linear_584118_2064" x1="35.512" y1="64.6151" x2="10.8922" y2="21.9723" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+</defs>
+</svg>

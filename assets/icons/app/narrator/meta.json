@@ -1,0 +1,39 @@
+{
+  "id": "app.narrator",
+  "name": "Narrator",
+  "keywords": [
+    "narrator"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#8A9299",
+    "secondary": "#30E5D0"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "16": "assets/icons/app/narrator/standard-16.svg",
+      "24": "assets/icons/app/narrator/standard-24.svg",
+      "32": "assets/icons/app/narrator/standard-32.svg",
+      "48": "assets/icons/app/narrator/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "kk3KX66O732kqUoY7Y9wau",
+    "nodeId": "584118:3877"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-04",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+}

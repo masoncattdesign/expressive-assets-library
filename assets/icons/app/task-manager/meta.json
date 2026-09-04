@@ -1,0 +1,40 @@
+{
+  "id": "app.task-manager",
+  "name": "Task Manager",
+  "keywords": [
+    "task",
+    "manager"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#0C59A4",
+    "secondary": "#7AD1FF"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "16": "assets/icons/app/task-manager/standard-16.svg",
+      "24": "assets/icons/app/task-manager/standard-24.svg",
+      "32": "assets/icons/app/task-manager/standard-32.svg",
+      "48": "assets/icons/app/task-manager/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "kk3KX66O732kqUoY7Y9wau",
+    "nodeId": "584118:3845"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-04",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+}

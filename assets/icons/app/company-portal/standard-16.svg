@@ -1,0 +1,49 @@
+<svg aria-label="Company Portal standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-company-portal-standard-16-clip0_584118_6341)">
+<path d="M7.78519e-05 11.3125V6.5L11.6667 5.46875L11.0001 12H0.666748C0.487187 11.9972 0.316089 11.9232 0.191073 11.7943C0.0660569 11.6654 -0.00264312 11.4921 7.78519e-05 11.3125Z" fill="url(#app-company-portal-standard-16-paint0_linear_584118_6341)"/>
+<path d="M11 12V9L16 10V11.3125C16.0027 11.4921 15.934 11.6654 15.809 11.7943C15.684 11.9232 15.5129 11.9972 15.3333 12H11Z" fill="url(#app-company-portal-standard-16-paint1_linear_584118_6341)"/>
+<path d="M11 10V6L16 6.5V10H11Z" fill="url(#app-company-portal-standard-16-paint2_linear_584118_6341)"/>
+<path d="M7.00003 7H2.8624e-05V1.75C-0.00170031 1.55284 0.0749557 1.36306 0.213137 1.22241C0.351317 1.08176 0.539706 1.00176 0.736869 1H5.89477L7.00003 7Z" fill="url(#app-company-portal-standard-16-paint3_linear_584118_6341)"/>
+<path d="M12 7H5V1H11L12 7Z" fill="url(#app-company-portal-standard-16-paint4_linear_584118_6341)"/>
+<path d="M11 1H15.3153C15.4053 1 15.4943 1.01771 15.5774 1.05212C15.6604 1.08652 15.7359 1.13695 15.7995 1.20053C15.863 1.2641 15.9135 1.33958 15.9479 1.42265C15.9823 1.50571 16 1.59474 16 1.68465V7H11V1Z" fill="url(#app-company-portal-standard-16-paint5_linear_584118_6341)"/>
+<path d="M5.5 9C6.88071 9 8 7.88071 8 6.5C8 5.11929 6.88071 4 5.5 4C4.11929 4 3 5.11929 3 6.5C3 7.88071 4.11929 9 5.5 9Z" fill="url(#app-company-portal-standard-16-paint6_linear_584118_6341)"/>
+<path d="M5.5 10.24C6.09095 10.24 6.67611 10.3564 7.22208 10.5825C7.76804 10.8087 8.26412 11.1401 8.68198 11.558C9.09984 11.9759 9.43131 12.4719 9.65746 13.0179C9.8836 13.5639 10 14.149 10 14.74V15.6786C10 15.7638 9.96613 15.8456 9.90585 15.9058C9.84557 15.9661 9.76382 16 9.67857 16H1.32143C1.23618 16 1.15442 15.9661 1.09414 15.9058C1.03386 15.8456 1 15.7638 1 15.6786V14.74C1 13.5465 1.47411 12.4019 2.31802 11.558C3.16193 10.7141 4.30653 10.24 5.5 10.24Z" fill="url(#app-company-portal-standard-16-paint7_linear_584118_6341)"/>
+</g>
+<defs>
+<linearGradient id="app-company-portal-standard-16-paint0_linear_584118_6341" x1="8.64698" y1="13.3586" x2="3.51541" y2="4.47042" gradientUnits="userSpaceOnUse">
+<stop stop-color="#173A73"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint1_linear_584118_6341" x1="14.4349" y1="12.6193" x2="12.009" y2="8.41747" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint2_linear_584118_6341" x1="14.8828" y1="10.645" x2="11.9007" y2="5.47997" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint3_linear_584118_6341" x1="5.25959" y1="8.00484" x2="1.04706" y2="0.70851" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint4_linear_584118_6341" x1="10.299" y1="7.98205" x2="5.95096" y2="0.45096" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint5_linear_584118_6341" x1="15.3156" y1="7.39515" x2="11.4675" y2="0.73009" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint6_linear_584118_6341" x1="6.75021" y1="8.66543" x2="4.24979" y2="4.33457" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-16-paint7_linear_584118_6341" x1="7.1513" y1="17.5089" x2="3.28913" y2="10.8194" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<clipPath id="app-company-portal-standard-16-clip0_584118_6341">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

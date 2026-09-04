@@ -1,0 +1,32 @@
+<svg aria-label="Windows HDR Calibration standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-windows-hdr-calibration-standard-48-paint0_angular_584118_5689_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0 0.0233437 -0.0233437 0 24 24)"><foreignObject x="-1128.51" y="-1128.51" width="2257.03" height="2257.03"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(0, 120, 212, 1) 0deg,rgba(0, 255, 239, 1) 54.487deg,rgba(155, 240, 11, 1) 125.01deg,rgba(255, 229, 0, 1) 180.205deg,rgba(216, 59, 1, 1) 239.036deg,rgba(249, 0, 255, 1) 309.463deg,rgba(0, 120, 212, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><circle cx="24" cy="24" r="23.3438" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.0,&#34;g&#34;:0.47058823704719543,&#34;b&#34;:0.83137255907058716,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.0,&#34;g&#34;:1.0,&#34;b&#34;:0.94000005722045898,&#34;a&#34;:1.0},&#34;position&#34;:0.15135268867015839},{&#34;color&#34;:{&#34;r&#34;:0.60784316062927246,&#34;g&#34;:0.94117647409439087,&#34;b&#34;:0.043137256056070328,&#34;a&#34;:1.0},&#34;position&#34;:0.34724926948547363},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:0.90000003576278687,&#34;b&#34;:0.0,&#34;a&#34;:1.0},&#34;position&#34;:0.50056838989257812},{&#34;color&#34;:{&#34;r&#34;:0.84705883264541626,&#34;g&#34;:0.23137255012989044,&#34;b&#34;:0.0039215688593685627,&#34;a&#34;:1.0},&#34;position&#34;:0.66398954391479492},{&#34;color&#34;:{&#34;r&#34;:0.98000001907348633,&#34;g&#34;:0.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.85961973667144775}],&#34;transform&#34;:{&#34;m00&#34;:2.8587849013777308e-15,&#34;m01&#34;:-46.68750,&#34;m02&#34;:47.343750,&#34;m10&#34;:46.68750,&#34;m11&#34;:2.8587849013777308e-15,&#34;m12&#34;:0.656250},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;stopsVar&#34;:[],&#34;visible&#34;:true}"/>
+<g filter="url(#app-windows-hdr-calibration-standard-48-filter0_dd_584118_5689)">
+<circle cx="24.0001" cy="24.0001" r="14.2257" fill="#212121"/>
+</g>
+<path d="M23.9998 38.4514C16.0185 38.4514 9.54834 31.9813 9.54834 23.9999C9.54834 16.0186 16.0185 9.54846 23.9998 9.54846L23.9998 38.4514Z" fill="url(#app-windows-hdr-calibration-standard-48-paint1_linear_584118_5689)"/>
+<path d="M24 38.4514L24 9.54846C31.9813 9.54846 38.4515 16.0186 38.4515 23.9999C38.4515 31.9813 31.9813 38.4514 24 38.4514Z" fill="url(#app-windows-hdr-calibration-standard-48-paint2_linear_584118_5689)"/>
+<defs>
+<clipPath id="app-windows-hdr-calibration-standard-48-paint0_angular_584118_5689_clip_path"><circle cx="24" cy="24" r="23.3438"/></clipPath><filter id="app-windows-hdr-calibration-standard-48-filter0_dd_584118_5689" x="6.77441" y="6.77441" width="34.4514" height="34.4514" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5689"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5689" result="effect2_dropShadow_584118_5689"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5689" result="shape"/>
+</filter>
+<linearGradient id="app-windows-hdr-calibration-standard-48-paint1_linear_584118_5689" x1="6.9686" y1="23.9999" x2="23.9998" y2="23.9999" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#E6E6E6"/>
+</linearGradient>
+<linearGradient id="app-windows-hdr-calibration-standard-48-paint2_linear_584118_5689" x1="24.0001" y1="24" x2="41.0313" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#212121"/>
+</linearGradient>
+</defs>
+</svg>

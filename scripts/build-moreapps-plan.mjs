@@ -25,21 +25,36 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const map = JSON.parse(await readFile(join(ROOT, 'scripts/sources/moreapps-nodes.json'), 'utf8'));
 const manifest = JSON.parse(await readFile(join(ROOT, 'manifest.json'), 'utf8'));
 
-/* An id that already exists anywhere in the library is a collision, not a
-   gap. The point of this import is to fill gaps, so a collision is a bug in
-   the node map rather than something to resolve at import time. */
-const taken = new Map(manifest.assets.map((a) => [a.id, a.collection]));
+/* An id that already exists in the library is a collision, not a gap, and the
+   point of this import is to fill gaps.
+
+   With one exception, learned the hard way: after a successful run every id in
+   the map exists, so a guard that only asks "does this id exist" refuses to
+   regenerate its own plan. The question that actually matters is whether the
+   existing asset came from this board. If its recorded Figma node is the one
+   the map names, this is a re-plan of artwork already imported — the normal
+   case when a drawing changes upstream — and it passes. If the node differs,
+   the map is claiming a name something else already holds, which is a bug in
+   the map. */
+const taken = new Map(manifest.assets.map((a) => [a.id, a]));
 const collisions = [];
 
 const assets = map.assets.map((a) => {
   const id = `app.${a.id}`;
-  if (taken.has(id)) collisions.push(`${id} already exists in ${taken.get(id)}`);
+  const existing = taken.get(id);
+  const sameSource = existing && Object.values(a.nodes).includes(existing.figma?.nodeId);
+  if (existing && !sameSource) {
+    collisions.push(`${id} already exists in ${existing.collection}, from a different source`);
+  }
   return {
     id,
     name: a.name,
     collection: 'app',
     type: 'icon',
     status: a.status || 'published',
+    /* The schema requires a migration target on anything deprecated, and it is
+       right to: a deprecation that points nowhere just strands consumers. */
+    ...(a.replacedBy ? { replacedBy: a.replacedBy } : {}),
     nodeId: Object.values(a.nodes)[0],
     sizes: Object.keys(a.nodes).map(Number).sort((x, y) => x - y),
     renders: { standard: a.nodes },
@@ -47,7 +62,7 @@ const assets = map.assets.map((a) => {
 });
 
 if (collisions.length) {
-  console.error('Refusing to write the plan. The node map claims these are new:\n');
+  console.error('Refusing to write the plan. These ids are taken by something else:\n');
   for (const c of collisions) console.error(`  ${c}`);
   console.error('\nFix scripts/sources/moreapps-nodes.json rather than the plan.');
   process.exit(1);

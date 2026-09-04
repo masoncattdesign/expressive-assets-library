@@ -1,0 +1,66 @@
+<svg aria-label="On-Screen Keyboard standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" y="6" width="21" height="17" rx="1.5" fill="url(#app-on-screen-keyboard-standard-24-paint0_linear_584118_4048)"/>
+<path d="M24 21.5C24 22.3284 23.3284 23 22.5 23H4.5C3.67157 23 3 22.3284 3 21.5V21H24V21.5Z" fill="url(#app-on-screen-keyboard-standard-24-paint1_linear_584118_4048)"/>
+<mask id="app-on-screen-keyboard-standard-24-mask0_584118_4048" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="21" height="16">
+<rect x="3" y="6" width="21" height="16" rx="1.5" fill="url(#app-on-screen-keyboard-standard-24-paint2_linear_584118_4048)"/>
+</mask>
+<g mask="url(#app-on-screen-keyboard-standard-24-mask0_584118_4048)">
+<g filter="url(#app-on-screen-keyboard-standard-24-filter0_dd_584118_4048)">
+<rect x="1" y="1" width="18" height="13" rx="1.57143" fill="url(#app-on-screen-keyboard-standard-24-paint3_linear_584118_4048)"/>
+</g>
+</g>
+<rect x="1" y="1" width="18" height="13" rx="1.57143" fill="url(#app-on-screen-keyboard-standard-24-paint4_linear_584118_4048)"/>
+<g filter="url(#app-on-screen-keyboard-standard-24-filter1_dd_584118_4048)">
+<path d="M15 10C15.5523 10 16 10.4477 16 11C16 11.5523 15.5523 12 15 12H5C4.44772 12 4 11.5523 4 11C4 10.4477 4.44772 10 5 10H15ZM6 6C6.55228 6 7 6.44772 7 7C7 7.55228 6.55228 8 6 8C5.44772 8 5 7.55228 5 7C5 6.44772 5.44772 6 6 6ZM10 6C10.5523 6 11 6.44772 11 7C11 7.55228 10.5523 8 10 8C9.44772 8 9 7.55228 9 7C9 6.44772 9.44772 6 10 6ZM14 6C14.5523 6 15 6.44772 15 7C15 7.55228 14.5523 8 14 8C13.4477 8 13 7.55228 13 7C13 6.44772 13.4477 6 14 6ZM4 3C4.55228 3 5 3.44772 5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3ZM8 3C8.55228 3 9 3.44772 9 4C9 4.55228 8.55228 5 8 5C7.44772 5 7 4.55228 7 4C7 3.44772 7.44772 3 8 3ZM12 3C12.5523 3 13 3.44772 13 4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4C11 3.44772 11.4477 3 12 3ZM16 3C16.5523 3 17 3.44772 17 4C17 4.55228 16.5523 5 16 5C15.4477 5 15 4.55228 15 4C15 3.44772 15.4477 3 16 3Z" fill="white"/>
+</g>
+<defs>
+<filter id="app-on-screen-keyboard-standard-24-filter0_dd_584118_4048" x="-0.5" y="-0.5" width="21" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4048"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4048" result="effect2_dropShadow_584118_4048"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4048" result="shape"/>
+</filter>
+<filter id="app-on-screen-keyboard-standard-24-filter1_dd_584118_4048" x="1.42857" y="1.42857" width="17.1429" height="12.1429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.261905"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4048"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.785714"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4048" result="effect2_dropShadow_584118_4048"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4048" result="shape"/>
+</filter>
+<linearGradient id="app-on-screen-keyboard-standard-24-paint0_linear_584118_4048" x1="19.1413" y1="26.2441" x2="5.05227" y2="5.14272" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-24-paint1_linear_584118_4048" x1="16.3266" y1="26.0375" x2="12.7516" y2="17.9104" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737A80"/>
+<stop offset="1" stop-color="#8A9299"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-24-paint2_linear_584118_4048" x1="19.1413" y1="25.0532" x2="6.2056" y2="4.46838" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-24-paint3_linear_584118_4048" x1="13.7974" y1="11.5365" x2="8.17482" y2="-0.261606" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-24-paint4_linear_584118_4048" x1="13.7974" y1="11.5365" x2="8.17482" y2="-0.261606" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+</defs>
+</svg>

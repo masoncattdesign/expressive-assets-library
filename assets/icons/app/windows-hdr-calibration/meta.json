@@ -1,0 +1,41 @@
+{
+  "id": "app.windows-hdr-calibration",
+  "name": "Windows HDR Calibration",
+  "keywords": [
+    "windows",
+    "hdr",
+    "calibration"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#212121",
+    "secondary": "#45494D"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "16": "assets/icons/app/windows-hdr-calibration/standard-16.svg",
+      "24": "assets/icons/app/windows-hdr-calibration/standard-24.svg",
+      "32": "assets/icons/app/windows-hdr-calibration/standard-32.svg",
+      "48": "assets/icons/app/windows-hdr-calibration/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "kk3KX66O732kqUoY7Y9wau",
+    "nodeId": "584118:5724"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-04",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+}

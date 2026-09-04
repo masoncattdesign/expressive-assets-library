@@ -1,0 +1,51 @@
+<svg aria-label="Video Editor standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-video-editor-standard-32-clip0_584118_1541)">
+<path d="M30.6667 4H1.33333C0.596952 4 0 4.59695 0 5.33333V26.6667C0 27.403 0.596952 28 1.33333 28H30.6667C31.403 28 32 27.403 32 26.6667V5.33333C32 4.59695 31.403 4 30.6667 4Z" fill="url(#app-video-editor-standard-32-paint0_linear_584118_1541)"/>
+<path d="M32 26V26.6667C31.9974 27.0195 31.8561 27.3572 31.6067 27.6067C31.3572 27.8561 31.0195 27.9974 30.6667 28H12V23.3333L17.3333 18L18.78 16.5533C19.2808 16.0538 19.9593 15.7733 20.6667 15.7733C21.374 15.7733 22.0525 16.0538 22.5534 16.5533L32 26Z" fill="#436DCD"/>
+<mask id="app-video-editor-standard-32-mask0_584118_1541" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="32" height="24">
+<path d="M30.6667 4H1.33333C0.596952 4 0 4.59695 0 5.33333V26.6667C0 27.403 0.596952 28 1.33333 28H30.6667C31.403 28 32 27.403 32 26.6667V5.33333C32 4.59695 31.403 4 30.6667 4Z" fill="url(#app-video-editor-standard-32-paint1_linear_584118_1541)"/>
+</mask>
+<g mask="url(#app-video-editor-standard-32-mask0_584118_1541)">
+<g filter="url(#app-video-editor-standard-32-filter0_dd_584118_1541)">
+<path d="M27.3333 28H1.33333C0.980029 27.999 0.641497 27.8582 0.391674 27.6083C0.141852 27.3585 0.00104203 27.02 0 26.6667L0 22L8.78 13.22C9.28084 12.7205 9.95933 12.44 10.6667 12.44C11.374 12.44 12.0525 12.7205 12.5534 13.22L17.3333 18L27.3333 28Z" fill="#3C5EB3"/>
+</g>
+</g>
+<path d="M27.3333 28H1.33333C0.980025 27.999 0.641483 27.8582 0.391657 27.6083C0.141831 27.3585 0.00102629 27.02 0 26.6667L0 22L8.78 13.22C9.28087 12.7205 9.95936 12.44 10.6667 12.44C11.3741 12.44 12.0526 12.7205 12.5534 13.22L17.3333 18L27.3333 28Z" fill="url(#app-video-editor-standard-32-paint2_linear_584118_1541)"/>
+<path d="M4.40039 22C4.73145 22.0002 4.99979 22.2685 5 22.5996V24.4004C4.99979 24.7315 4.73145 24.9998 4.40039 25H2.59961C2.26855 24.9998 2.00021 24.7315 2 24.4004V22.5996C2.00021 22.2685 2.26855 22.0002 2.59961 22H4.40039ZM29.4004 22C29.7315 22.0002 29.9998 22.2685 30 22.5996V24.4004C29.9998 24.7315 29.7315 24.9998 29.4004 25H27.5996C27.2685 24.9998 27.0002 24.7315 27 24.4004V22.5996C27.0002 22.2685 27.2685 22.0002 27.5996 22H29.4004ZM4.40039 17C4.73145 17.0002 4.99979 17.2685 5 17.5996V19.4004C4.99979 19.7315 4.73145 19.9998 4.40039 20H2.59961C2.26855 19.9998 2.00021 19.7315 2 19.4004V17.5996C2.00021 17.2685 2.26855 17.0002 2.59961 17H4.40039ZM29.4004 17C29.7315 17.0002 29.9998 17.2685 30 17.5996V19.4004C29.9998 19.7315 29.7315 19.9998 29.4004 20H27.5996C27.2685 19.9998 27.0002 19.7315 27 19.4004V17.5996C27.0002 17.2685 27.2685 17.0002 27.5996 17H29.4004ZM4.40039 12C4.73145 12.0002 4.99979 12.2685 5 12.5996V14.4004C4.99979 14.7315 4.73145 14.9998 4.40039 15H2.59961C2.26855 14.9998 2.00021 14.7315 2 14.4004V12.5996C2.00021 12.2685 2.26855 12.0002 2.59961 12H4.40039ZM29.4004 12C29.7315 12.0002 29.9998 12.2685 30 12.5996V14.4004C29.9998 14.7315 29.7315 14.9998 29.4004 15H27.5996C27.2685 14.9998 27.0002 14.7315 27 14.4004V12.5996C27.0002 12.2685 27.2685 12.0002 27.5996 12H29.4004ZM4.40039 7C4.73145 7.00021 4.99979 7.26855 5 7.59961V9.40039C4.99979 9.73145 4.73145 9.99979 4.40039 10H2.59961C2.26855 9.99979 2.00021 9.73145 2 9.40039V7.59961C2.00021 7.26855 2.26855 7.00021 2.59961 7H4.40039ZM29.4004 7C29.7315 7.00021 29.9998 7.26855 30 7.59961V9.40039C29.9998 9.73145 29.7315 9.99979 29.4004 10H27.5996C27.2685 9.99979 27.0002 9.73145 27 9.40039V7.59961C27.0002 7.26855 27.2685 7.00021 27.5996 7H29.4004Z" fill="#F2F2F2"/>
+</g>
+<defs>
+<filter id="app-video-editor-standard-32-filter0_dd_584118_1541" x="-1.33333" y="11.1067" width="30" height="18.2267" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1541"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.0666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1541" result="effect2_dropShadow_584118_1541"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1541" result="shape"/>
+</filter>
+<linearGradient id="app-video-editor-standard-32-paint0_linear_584118_1541" x1="24.9523" y1="31.5058" x2="7.04775" y2="0.494252" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-32-paint1_linear_584118_1541" x1="24.9523" y1="31.5058" x2="7.04775" y2="0.494252" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AE7FE2"/>
+<stop offset="0.20544" stop-color="#8B8CE4"/>
+<stop offset="0.65923" stop-color="#31ACE9"/>
+<stop offset="0.70505" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-video-editor-standard-32-paint2_linear_584118_1541" x1="17.2951" y1="33.7956" x2="6.21125" y2="14.5978" gradientUnits="userSpaceOnUse">
+<stop offset="0.29562" stop-color="#173A73"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<clipPath id="app-video-editor-standard-32-clip0_584118_1541">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "id": "app.xbox",
+  "name": "Xbox",
+  "keywords": [
+    "xbox"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "published",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#107C10",
+    "secondary": "#107C10"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "16": "assets/icons/app/xbox/standard-16.svg",
+      "24": "assets/icons/app/xbox/standard-24.svg",
+      "32": "assets/icons/app/xbox/standard-32.svg",
+      "48": "assets/icons/app/xbox/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "kk3KX66O732kqUoY7Y9wau",
+    "nodeId": "584118:6761"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-04",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+}

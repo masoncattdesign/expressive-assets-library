@@ -1,0 +1,28 @@
+<svg aria-label="Voice Access standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-voice-access-standard-24-clip0_584118_4169)">
+<g clip-path="url(#app-voice-access-standard-24-clip1_584118_4169)">
+<path d="M15 15C16.6569 15 18 16.3431 18 18C18 19.795 16.858 21.3127 15.2363 22.3447C13.6057 23.3824 11.3988 24 9 24C6.60122 24 4.39429 23.3824 2.76367 22.3447C1.14204 21.3127 0 19.795 0 18C0 16.3431 1.34315 15 3 15H15ZM9 3C11.8995 3 14.25 5.35051 14.25 8.25C14.25 11.1495 11.8995 13.5 9 13.5C6.1005 13.5 3.75 11.1495 3.75 8.25C3.75 5.35051 6.1005 3 9 3Z" fill="#212121"/>
+<path d="M15 15C16.6569 15 18 16.3431 18 18C18 19.795 16.858 21.3127 15.2363 22.3447C13.6057 23.3824 11.3988 24 9 24C6.60122 24 4.39429 23.3824 2.76367 22.3447C1.14204 21.3127 0 19.795 0 18C0 16.3431 1.34315 15 3 15H15ZM9 3C11.8995 3 14.25 5.35051 14.25 8.25C14.25 11.1495 11.8995 13.5 9 13.5C6.1005 13.5 3.75 11.1495 3.75 8.25C3.75 5.35051 6.1005 3 9 3Z" fill="url(#app-voice-access-standard-24-paint0_linear_584118_4169)"/>
+<path d="M15 15C16.6569 15 18 16.3431 18 18C18 19.795 16.858 21.3127 15.2363 22.3447C13.6057 23.3824 11.3988 24 9 24C6.60122 24 4.39429 23.3824 2.76367 22.3447C1.14204 21.3127 0 19.795 0 18C0 16.3431 1.34315 15 3 15H15ZM9 3C11.8995 3 14.25 5.35051 14.25 8.25C14.25 11.1495 11.8995 13.5 9 13.5C6.1005 13.5 3.75 11.1495 3.75 8.25C3.75 5.35051 6.1005 3 9 3Z" fill="url(#app-voice-access-standard-24-paint1_linear_584118_4169)"/>
+<rect x="22" y="1" width="2" height="8" rx="0.99" fill="#0078D4"/>
+<rect x="19" width="2" height="10" rx="0.942857" fill="#1493DF"/>
+<rect x="16" y="3" width="2" height="4" rx="0.99" fill="#28AFEA"/>
+</g>
+</g>
+<defs>
+<linearGradient id="app-voice-access-standard-24-paint0_linear_584118_4169" x1="12.3026" y1="29.5309" x2="-3.95258" y2="14.1031" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-voice-access-standard-24-paint1_linear_584118_4169" x1="12.806" y1="20.1052" x2="1.4474" y2="5.37999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<clipPath id="app-voice-access-standard-24-clip0_584118_4169">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+<clipPath id="app-voice-access-standard-24-clip1_584118_4169">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

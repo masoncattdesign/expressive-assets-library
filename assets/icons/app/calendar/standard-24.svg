@@ -1,0 +1,62 @@
+<svg aria-label="Calendar standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 6H22.5V21.5C22.5 21.7652 22.3946 22.0196 22.2071 22.2071C22.0196 22.3946 21.7652 22.5 21.5 22.5H2.5C2.23478 22.5 1.98043 22.3946 1.79289 22.2071C1.60536 22.0196 1.5 21.7652 1.5 21.5V6Z" fill="url(#app-calendar-standard-24-paint0_linear_584118_2128)"/>
+<g filter="url(#app-calendar-standard-24-filter0_d_584118_2128)">
+<path d="M10.5 9H9C8.72386 9 8.5 9.22386 8.5 9.5V11C8.5 11.2761 8.72386 11.5 9 11.5H10.5C10.7761 11.5 11 11.2761 11 11V9.5C11 9.22386 10.7761 9 10.5 9Z" fill="#F2F2F2"/>
+<path d="M15 9H13.5C13.2239 9 13 9.22386 13 9.5V11C13 11.2761 13.2239 11.5 13.5 11.5H15C15.2761 11.5 15.5 11.2761 15.5 11V9.5C15.5 9.22386 15.2761 9 15 9Z" fill="#F2F2F2"/>
+<path d="M19.5 9H18C17.7239 9 17.5 9.22386 17.5 9.5V11C17.5 11.2761 17.7239 11.5 18 11.5H19.5C19.7761 11.5 20 11.2761 20 11V9.5C20 9.22386 19.7761 9 19.5 9Z" fill="#F2F2F2"/>
+<path d="M6 13H4.5C4.22386 13 4 13.2239 4 13.5V15C4 15.2761 4.22386 15.5 4.5 15.5H6C6.27614 15.5 6.5 15.2761 6.5 15V13.5C6.5 13.2239 6.27614 13 6 13Z" fill="#F2F2F2"/>
+<path d="M10.5 13H9C8.72386 13 8.5 13.2239 8.5 13.5V15C8.5 15.2761 8.72386 15.5 9 15.5H10.5C10.7761 15.5 11 15.2761 11 15V13.5C11 13.2239 10.7761 13 10.5 13Z" fill="#F2F2F2"/>
+<path d="M15 13H13.5C13.2239 13 13 13.2239 13 13.5V15C13 15.2761 13.2239 15.5 13.5 15.5H15C15.2761 15.5 15.5 15.2761 15.5 15V13.5C15.5 13.2239 15.2761 13 15 13Z" fill="#F2F2F2"/>
+<path d="M19.5 13H18C17.7239 13 17.5 13.2239 17.5 13.5V15C17.5 15.2761 17.7239 15.5 18 15.5H19.5C19.7761 15.5 20 15.2761 20 15V13.5C20 13.2239 19.7761 13 19.5 13Z" fill="#F2F2F2"/>
+<path d="M6 17H4.5C4.22386 17 4 17.2239 4 17.5V19C4 19.2761 4.22386 19.5 4.5 19.5H6C6.27614 19.5 6.5 19.2761 6.5 19V17.5C6.5 17.2239 6.27614 17 6 17Z" fill="#F2F2F2"/>
+<path d="M10.5 17H9C8.72386 17 8.5 17.2239 8.5 17.5V19C8.5 19.2761 8.72386 19.5 9 19.5H10.5C10.7761 19.5 11 19.2761 11 19V17.5C11 17.2239 10.7761 17 10.5 17Z" fill="#F2F2F2"/>
+<path d="M15 17H13.5C13.2239 17 13 17.2239 13 17.5V19C13 19.2761 13.2239 19.5 13.5 19.5H15C15.2761 19.5 15.5 19.2761 15.5 19V17.5C15.5 17.2239 15.2761 17 15 17Z" fill="#F2F2F2"/>
+</g>
+<path d="M2.5 1.5H21.5C21.7652 1.5 22.0196 1.60536 22.2071 1.79289C22.3946 1.98043 22.5 2.23478 22.5 2.5V6H1.5V2.5C1.5 2.23478 1.60536 1.98043 1.79289 1.79289C1.98043 1.60536 2.23478 1.5 2.5 1.5Z" fill="url(#app-calendar-standard-24-paint1_linear_584118_2128)"/>
+<mask id="app-calendar-standard-24-mask0_584118_2128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="5">
+<path d="M2.5 1.5H21.5C21.7652 1.5 22.0196 1.60536 22.2071 1.79289C22.3946 1.98043 22.5 2.23478 22.5 2.5V6H1.5V2.5C1.5 2.23478 1.60536 1.98043 1.79289 1.79289C1.98043 1.60536 2.23478 1.5 2.5 1.5Z" fill="url(#app-calendar-standard-24-paint2_linear_584118_2128)"/>
+</mask>
+<g mask="url(#app-calendar-standard-24-mask0_584118_2128)">
+<g filter="url(#app-calendar-standard-24-filter1_dd_584118_2128)">
+<path d="M5.5 4.5C5.23502 4.49922 4.98112 4.39362 4.79375 4.20625C4.60638 4.01888 4.50078 3.76498 4.5 3.5V1C4.50078 0.735022 4.60638 0.481119 4.79375 0.29375C4.98112 0.106382 5.23502 0.00077562 5.5 0V0C5.76498 0.00077562 6.01888 0.106382 6.20625 0.29375C6.39362 0.481119 6.49922 0.735022 6.5 1V3.5C6.49922 3.76498 6.39362 4.01888 6.20625 4.20625C6.01888 4.39362 5.76498 4.49922 5.5 4.5ZM19.5 3.5V1C19.4992 0.735022 19.3936 0.481119 19.2062 0.29375C19.0189 0.106382 18.765 0.00077562 18.5 0V0C18.235 0.00077562 17.9811 0.106382 17.7938 0.29375C17.6064 0.481119 17.5008 0.735022 17.5 1V3.5C17.5008 3.76498 17.6064 4.01888 17.7938 4.20625C17.9811 4.39362 18.235 4.49922 18.5 4.5C18.765 4.49922 19.0189 4.39362 19.2062 4.20625C19.3936 4.01888 19.4992 3.76498 19.5 3.5Z" fill="#3CCBF4"/>
+</g>
+</g>
+<path d="M5.5 4.5C5.23502 4.49922 4.98112 4.39362 4.79375 4.20625C4.60638 4.01888 4.50078 3.76498 4.5 3.5V1C4.50078 0.735022 4.60638 0.481119 4.79375 0.29375C4.98112 0.106382 5.23502 0.00077562 5.5 0V0C5.76498 0.00077562 6.01888 0.106382 6.20625 0.29375C6.39362 0.481119 6.49922 0.735022 6.5 1V3.5C6.49922 3.76498 6.39362 4.01888 6.20625 4.20625C6.01888 4.39362 5.76498 4.49922 5.5 4.5ZM19.5 3.5V1C19.4992 0.735022 19.3936 0.481119 19.2062 0.29375C19.0189 0.106382 18.765 0.00077562 18.5 0V0C18.235 0.00077562 17.9811 0.106382 17.7938 0.29375C17.6064 0.481119 17.5008 0.735022 17.5 1V3.5C17.5008 3.76498 17.6064 4.01888 17.7938 4.20625C17.9811 4.39362 18.235 4.49922 18.5 4.5C18.765 4.49922 19.0189 4.39362 19.2062 4.20625C19.3936 4.01888 19.4992 3.76498 19.5 3.5Z" fill="#3CCBF4"/>
+<defs>
+<filter id="app-calendar-standard-24-filter0_d_584118_2128" x="3.5" y="9" width="17" height="11.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2128"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584118_2128" result="shape"/>
+</filter>
+<filter id="app-calendar-standard-24-filter1_dd_584118_2128" x="1.5" y="-2" width="21" height="10.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2128"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2128" result="effect2_dropShadow_584118_2128"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2128" result="shape"/>
+</filter>
+<linearGradient id="app-calendar-standard-24-paint0_linear_584118_2128" x1="18.6684" y1="25.4342" x2="6.47648" y2="4.31713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-calendar-standard-24-paint1_linear_584118_2128" x1="16.8667" y1="12.5452" x2="9.85106" y2="0.39378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-calendar-standard-24-paint2_linear_584118_2128" x1="16.8667" y1="12.5452" x2="9.85106" y2="0.39378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+</defs>
+</svg>

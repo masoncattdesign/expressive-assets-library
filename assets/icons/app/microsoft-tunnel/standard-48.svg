@@ -1,0 +1,75 @@
+<svg aria-label="Microsoft Tunnel standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-microsoft-tunnel-standard-48-clip0_584118_5803)">
+<path d="M24 9L3 30V46C3 46.5304 3.21071 47.0391 3.58579 47.4142C3.96086 47.7893 4.46957 48 5 48H43C43.5304 48 44.0391 47.7893 44.4142 47.4142C44.7893 47.0391 45 46.5304 45 46V30L24 9Z" fill="url(#app-microsoft-tunnel-standard-48-paint0_linear_584118_5803)"/>
+<mask id="app-microsoft-tunnel-standard-48-mask0_584118_5803" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="9" width="42" height="39">
+<path d="M24 9L3 30V46C3 46.5304 3.21071 47.0391 3.58579 47.4142C3.96086 47.7893 4.46957 48 5 48H43C43.5304 48 44.0391 47.7893 44.4142 47.4142C44.7893 47.0391 45 46.5304 45 46V30L24 9Z" fill="url(#app-microsoft-tunnel-standard-48-paint1_linear_584118_5803)"/>
+</mask>
+<g mask="url(#app-microsoft-tunnel-standard-48-mask0_584118_5803)">
+<g filter="url(#app-microsoft-tunnel-standard-48-filter0_dd_584118_5803)">
+<path d="M24.0381 0C26.0027 7.87868e-06 27.9486 0.386896 29.7637 1.13867C31.5789 1.89056 33.2289 2.99255 34.6182 4.38184C36.0075 5.77114 37.1095 7.42111 37.8613 9.23633C38.6131 11.0515 39 12.9973 39 14.9619V18H43C43.5304 18 44.039 18.2109 44.4141 18.5859C44.7891 18.961 45 19.4696 45 20V30C41.8174 30 38.7651 28.7358 36.5146 26.4854C34.2642 24.2349 33 21.1826 33 18H15C15 21.1826 13.7358 24.2349 11.4854 26.4854C9.23491 28.7358 6.1826 30 3 30V20C3.00003 19.4696 3.21087 18.961 3.58594 18.5859C3.961 18.2109 4.46958 18 5 18H9.07715V14.9619C9.07715 12.9972 9.464 11.0515 10.2158 9.23633C10.9677 7.4211 12.0697 5.77115 13.459 4.38184C14.8483 2.99256 16.4983 1.89054 18.3135 1.13867C20.1284 0.386981 22.0736 4.65357e-05 24.0381 0Z" fill="url(#app-microsoft-tunnel-standard-48-paint2_linear_584118_5803)"/>
+</g>
+</g>
+<path d="M24.0381 0C26.0027 7.87868e-06 27.9486 0.386896 29.7637 1.13867C31.5789 1.89056 33.2289 2.99255 34.6182 4.38184C36.0075 5.77114 37.1095 7.42111 37.8613 9.23633C38.6131 11.0515 39 12.9973 39 14.9619V18H43C43.5304 18 44.039 18.2109 44.4141 18.5859C44.7891 18.961 45 19.4696 45 20V30C41.8174 30 38.7651 28.7358 36.5146 26.4854C34.2642 24.2349 33 21.1826 33 18H15C15 21.1826 13.7358 24.2349 11.4854 26.4854C9.23491 28.7358 6.1826 30 3 30V20C3.00003 19.4696 3.21087 18.961 3.58594 18.5859C3.961 18.2109 4.46958 18 5 18H9.07715V14.9619C9.07715 12.9972 9.464 11.0515 10.2158 9.23633C10.9677 7.4211 12.0697 5.77115 13.459 4.38184C14.8483 2.99256 16.4983 1.89054 18.3135 1.13867C20.1284 0.386981 22.0736 4.65357e-05 24.0381 0Z" fill="url(#app-microsoft-tunnel-standard-48-paint3_linear_584118_5803)"/>
+<path d="M24.4629 6.01172C29.2183 6.25264 33 10.1847 33 15V18H15V15C15 10.0294 19.0294 6 24 6L24.4629 6.01172Z" fill="url(#app-microsoft-tunnel-standard-48-paint4_linear_584118_5803)"/>
+<g filter="url(#app-microsoft-tunnel-standard-48-filter1_dd_584118_5803)">
+<path d="M25 27H23C22.4477 27 22 27.4477 22 28V41C22 41.5523 22.4477 42 23 42H25C25.5523 42 26 41.5523 26 41V28C26 27.4477 25.5523 27 25 27Z" fill="url(#app-microsoft-tunnel-standard-48-paint5_linear_584118_5803)"/>
+</g>
+</g>
+<defs>
+<filter id="app-microsoft-tunnel-standard-48-filter0_dd_584118_5803" x="1" y="-1" width="46" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5803"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5803" result="effect2_dropShadow_584118_5803"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5803" result="shape"/>
+</filter>
+<filter id="app-microsoft-tunnel-standard-48-filter1_dd_584118_5803" x="20" y="26" width="8" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5803"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5803" result="effect2_dropShadow_584118_5803"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5803" result="shape"/>
+</filter>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint0_linear_584118_5803" x1="33.0981" y1="54.0267" x2="11.3265" y2="16.3171" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint1_linear_584118_5803" x1="33.0981" y1="54.0267" x2="11.3265" y2="16.3171" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint2_linear_584118_5803" x1="33.2633" y1="44.7762" x2="10.5649" y2="5.4615" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint3_linear_584118_5803" x1="33.2633" y1="44.7762" x2="10.5649" y2="5.4615" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint4_linear_584118_5803" x1="30.0163" y1="28.9205" x2="17.9837" y2="8.07947" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CCBF4"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-microsoft-tunnel-standard-48-paint5_linear_584118_5803" x1="27.5647" y1="40.6742" x2="20.4353" y2="28.3258" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<clipPath id="app-microsoft-tunnel-standard-48-clip0_584118_5803">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

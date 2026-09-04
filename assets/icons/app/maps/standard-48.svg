@@ -1,0 +1,69 @@
+<svg aria-label="Maps standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M24 0C12.6 0 3.50001 9.5 4.00001 21C4.20001 25.6 6.30001 29.9 9.60001 33.1L13.4 36.9C15.4 33.1 19.4 30.5 24 30.5C28.6 30.5 32.6 33.1 34.6 36.9L38.4 33.1C41.7 29.8 43.8 25.5 44 21C44.5 9.5 35.4 0 24 0Z" fill="url(#app-maps-standard-48-paint0_linear_584118_5093)"/>
+<g opacity="0.32">
+<rect x="9.84" y="7.91504" width="28.32" height="28.32" fill="url(#app-maps-standard-48-pattern0_584118_5093)"/>
+<path opacity="0.32" d="M24 29C28.4183 29 32 25.4183 32 21C32 16.5817 28.4183 13 24 13C19.5817 13 16 16.5817 16 21C16 25.4183 19.5817 29 24 29Z" fill="white"/>
+</g>
+<g opacity="0.24">
+<rect x="15.2775" y="12.3926" width="17.52" height="17.52" fill="url(#app-maps-standard-48-pattern1_584118_5093)"/>
+<path opacity="0.24" d="M24 29.0001C28.4183 29.0001 32 25.4183 32 21.0001C32 16.5818 28.4183 13.0001 24 13.0001C19.5817 13.0001 16 16.5818 16 21.0001C16 25.4183 19.5817 29.0001 24 29.0001Z" fill="white"/>
+</g>
+<g opacity="0.24">
+<rect x="12.6375" y="30.1526" width="22.8" height="17.28" fill="url(#app-maps-standard-48-pattern2_584118_5093)"/>
+<path opacity="0.24" d="M24 30.5001C19.4 30.5001 15.4 33.1001 13.4 36.9001L22.2 45.7001C23.2 46.7001 24.8 46.7001 25.7 45.7001L34.5 36.9001C32.6 33.1001 28.6 30.5001 24 30.5001Z" fill="white"/>
+</g>
+<path d="M24 30.5C19.4 30.5 15.4 33.1 13.4 36.9L22.2 45.7C23.2 46.7 24.8 46.7 25.7 45.7L34.5 36.9C32.6 33.1 28.6 30.5 24 30.5Z" fill="url(#app-maps-standard-48-paint1_linear_584118_5093)"/>
+<path d="M24 29C28.4183 29 32 25.4183 32 21C32 16.5817 28.4183 13 24 13C19.5817 13 16 16.5817 16 21C16 25.4183 19.5817 29 24 29Z" fill="url(#app-maps-standard-48-paint2_linear_584118_5093)"/>
+<mask id="app-maps-standard-48-mask0_584118_5093" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="0" width="42" height="47">
+<path d="M24 0C35.4 0 44.5 9.5 44 21C43.8 25.4999 41.7002 29.7997 38.4004 33.0996L34.6006 36.9004C32.913 33.694 29.8009 31.3421 26.1065 30.6855C29.7987 31.3422 32.8969 33.6941 34.5 36.9004L25.7002 45.7002C24.8002 46.7001 23.2002 46.7001 22.2002 45.7002L13.4004 36.9004L9.60059 33.0996C6.30059 29.8996 4.20001 25.6 4.00001 21C3.50001 9.50005 12.6001 7.31149e-05 24 0Z" fill="url(#app-maps-standard-48-paint3_linear_584118_5093)"/>
+</mask>
+<g mask="url(#app-maps-standard-48-mask0_584118_5093)">
+<g filter="url(#app-maps-standard-48-filter0_dd_584118_5093)" style="mix-blend-mode:multiply">
+<path d="M23.9996 30.5C28.5996 30.5 32.5996 33.1004 34.4996 36.9004L25.6998 45.7002C24.7998 46.7 23.1997 46.7001 22.1998 45.7002L13.4 36.9004C15.3999 33.1005 19.3998 30.5001 23.9996 30.5ZM23.9996 13C28.4179 13 31.9996 16.5817 31.9996 21C31.9996 25.4183 28.4179 29 23.9996 29C19.5815 28.9998 15.9996 25.4181 15.9996 21C15.9996 16.5819 19.5815 13.0002 23.9996 13Z" fill="white"/>
+</g>
+</g>
+<defs>
+<pattern id="app-maps-standard-48-pattern0_584118_5093" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_584118_5093"/>
+</pattern>
+<pattern id="app-maps-standard-48-pattern1_584118_5093" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_584118_5093"/>
+</pattern>
+<pattern id="app-maps-standard-48-pattern2_584118_5093" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2_584118_5093"/>
+</pattern>
+<filter id="app-maps-standard-48-filter0_dd_584118_5093" x="9.39999" y="10" width="29.0996" height="41.4501" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5093"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5093" result="effect2_dropShadow_584118_5093"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5093" result="shape"/>
+</filter>
+<linearGradient id="app-maps-standard-48-paint0_linear_584118_5093" x1="34.0977" y1="37.1906" x2="14.1268" y2="2.60001" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B4350E"/>
+<stop offset="1" stop-color="#D83B01"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-48-paint1_linear_584118_5093" x1="28.3096" y1="44.3615" x2="20.4439" y2="30.7378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#E55819"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-48-paint2_linear_584118_5093" x1="28.0007" y1="27.927" x2="19.9993" y2="14.0683" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-maps-standard-48-paint3_linear_584118_5093" x1="28.3096" y1="44.3615" x2="20.4439" y2="30.7378" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83B01"/>
+<stop offset="1" stop-color="#E55819"/>
+</linearGradient>
+<image id="app-maps-standard-48-image0_584118_5093" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAYAAACPgGwlAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+<image id="app-maps-standard-48-image1_584118_5093" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+<image id="app-maps-standard-48-image2_584118_5093" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABLCAYAAACGGCK3AAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+</defs>
+</svg>

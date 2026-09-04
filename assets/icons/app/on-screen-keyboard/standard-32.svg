@@ -1,0 +1,71 @@
+<svg aria-label="On-Screen Keyboard standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-on-screen-keyboard-standard-32-clip0_584118_4080)">
+<rect x="4" y="8" width="28" height="22" rx="2" fill="url(#app-on-screen-keyboard-standard-32-paint0_linear_584118_4080)"/>
+<path d="M32 28C32 29.1046 31.1046 30 30 30H6C4.89543 30 4 29.1046 4 28H32Z" fill="url(#app-on-screen-keyboard-standard-32-paint1_linear_584118_4080)"/>
+<mask id="app-on-screen-keyboard-standard-32-mask0_584118_4080" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="8" width="28" height="22">
+<rect x="4" y="8" width="28" height="22" rx="2" fill="url(#app-on-screen-keyboard-standard-32-paint2_linear_584118_4080)"/>
+</mask>
+<g mask="url(#app-on-screen-keyboard-standard-32-mask0_584118_4080)">
+<g filter="url(#app-on-screen-keyboard-standard-32-filter0_dd_584118_4080)">
+<path d="M8.24699e-06 15.7104L4.93848e-05 4.28955C5.39395e-05 3.02507 1.02513 2 2.28961 2H19.7104C20.9749 2 22 3.02507 22 4.28956V15.7104C22 16.9749 20.9749 18 19.7104 18H2.28957C1.02508 18 3.69231e-06 16.9749 8.24699e-06 15.7104Z" fill="url(#app-on-screen-keyboard-standard-32-paint3_linear_584118_4080)"/>
+</g>
+</g>
+<rect y="2" width="22" height="16" rx="2" fill="url(#app-on-screen-keyboard-standard-32-paint4_linear_584118_4080)"/>
+<g filter="url(#app-on-screen-keyboard-standard-32-filter1_dd_584118_4080)">
+<path d="M17 13C17.5523 13 18 13.4477 18 14C18 14.5523 17.5523 15 17 15H5C4.44772 15 4 14.5523 4 14C4 13.4477 4.44772 13 5 13H17ZM7 8.99997C7.55228 8.99997 8 9.44768 8 9.99997C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 9.99997C6 9.44768 6.44772 8.99997 7 8.99997ZM11 8.99997C11.5523 8.99997 12 9.44768 12 9.99997C12 10.5523 11.5523 11 11 11C10.4477 11 10 10.5523 10 9.99997C10 9.44768 10.4477 8.99997 11 8.99997ZM15 8.99997C15.5523 8.99997 16 9.44768 16 9.99997C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 9.99997C14 9.44768 14.4477 8.99997 15 8.99997ZM5 4.99997C5.55228 4.99997 6 5.44768 6 5.99997C6 6.55225 5.55228 6.99997 5 6.99997C4.44772 6.99997 4 6.55225 4 5.99997C4 5.44768 4.44772 4.99997 5 4.99997ZM9 4.99997C9.55228 4.99997 10 5.44768 10 5.99997C10 6.55225 9.55228 6.99997 9 6.99997C8.44772 6.99997 8 6.55225 8 5.99997C8 5.44768 8.44772 4.99997 9 4.99997ZM13 4.99997C13.5523 4.99997 14 5.44768 14 5.99997C14 6.55225 13.5523 6.99997 13 6.99997C12.4477 6.99997 12 6.55225 12 5.99997C12 5.44768 12.4477 4.99997 13 4.99997ZM17 4.99997C17.5523 4.99997 18 5.44768 18 5.99997C18 6.55225 17.5523 6.99997 17 6.99997C16.4477 6.99997 16 6.55225 16 5.99997C16 5.44768 16.4477 4.99997 17 4.99997Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="app-on-screen-keyboard-standard-32-filter0_dd_584118_4080" x="-2.22222" y="-0.222222" width="26.4444" height="20.4444" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.37037"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4080"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.11111"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4080" result="effect2_dropShadow_584118_4080"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4080" result="shape"/>
+</filter>
+<filter id="app-on-screen-keyboard-standard-32-filter1_dd_584118_4080" x="2" y="2.99997" width="18" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4080"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4080" result="effect2_dropShadow_584118_4080"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4080" result="shape"/>
+</filter>
+<linearGradient id="app-on-screen-keyboard-standard-32-paint0_linear_584118_4080" x1="25.5217" y1="34.1982" x2="7.50311" y2="6.39368" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-32-paint1_linear_584118_4080" x1="21.7688" y1="33.0375" x2="18.8829" y2="24.2899" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737A80"/>
+<stop offset="1" stop-color="#8A9299"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-32-paint2_linear_584118_4080" x1="25.5217" y1="34.1982" x2="7.50311" y2="6.39368" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-32-paint3_linear_584118_4080" x1="15.6413" y1="14.968" x2="8.69083" y2="0.484876" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-32-paint4_linear_584118_4080" x1="15.6413" y1="14.968" x2="8.69083" y2="0.484876" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<clipPath id="app-on-screen-keyboard-standard-32-clip0_584118_4080">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

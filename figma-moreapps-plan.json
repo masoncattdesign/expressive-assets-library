@@ -2,7 +2,7 @@
   "fileKey": "kk3KX66O732kqUoY7Y9wau",
   "page": "More App Icons",
   "sectionNodeId": "584118:7251",
-  "generated": "2026-09-03",
+  "generated": "2026-09-04",
   "note": "46 Windows app icons at 16, 24, 32 and 48, drawn at each size rather than scaled. Standard only. 4 land as deprecated: they sit in a board section labeled Retired-Sunsetting-Depricated, and the drawing being real does not make the app current.",
   "warnings": [
     "Branch import. fileKey kk3KX66O732kqUoY7Y9wau is a branch of l752WyMxGqlvG5g8zkOaxm; the board does not exist on main.",
@@ -1050,6 +1050,7 @@
       "collection": "app",
       "type": "icon",
       "status": "deprecated",
+      "replacedBy": "app.media-player",
       "nodeId": "584118:5122",
       "sizes": [
         16,
@@ -1072,6 +1073,7 @@
       "collection": "app",
       "type": "icon",
       "status": "deprecated",
+      "replacedBy": "app.paint",
       "nodeId": "584118:5187",
       "sizes": [
         16,
@@ -1094,6 +1096,7 @@
       "collection": "app",
       "type": "icon",
       "status": "deprecated",
+      "replacedBy": "app.snipping-tool",
       "nodeId": "584118:5196",
       "sizes": [
         16,
@@ -1116,6 +1119,7 @@
       "collection": "app",
       "type": "icon",
       "status": "deprecated",
+      "replacedBy": "app.photos",
       "nodeId": "584118:5397",
       "sizes": [
         16,

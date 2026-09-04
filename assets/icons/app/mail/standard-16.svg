@@ -1,0 +1,72 @@
+<svg aria-label="Mail standard 16" role="img" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.167 0.299994L17.3337 4.46666C17.5337 4.59999 17.667 4.79999 17.667 5.03333L17.3337 14.3333H2.00033L1.66699 5.03333C1.66699 4.79999 1.80033 4.56666 2.00033 4.46666L9.16699 0.299994C9.46699 0.0999939 9.86699 0.0999939 10.167 0.299994Z" fill="url(#app-mail-standard-16-paint0_linear_584118_1965)"/>
+<g filter="url(#app-mail-standard-16-filter0_dd_584118_1965)">
+<path d="M15.6667 13H3.66667C3.3 13 3 12.7 3 12.3333V5.66667C3 5.3 3.3 5 3.66667 5H15.6667C16.0333 5 16.3333 5.3 16.3333 5.66667V12.3333C16.3333 12.7 16.0333 13 15.6667 13Z" fill="#F2F2F2"/>
+</g>
+<path d="M15.6667 13H3.66667C3.3 13 3 12.7 3 12.3333V5.66667C3 5.3 3.3 5 3.66667 5H15.6667C16.0333 5 16.3333 5.3 16.3333 5.66667V12.3333C16.3333 12.7 16.0333 13 15.6667 13Z" fill="#F2F2F2"/>
+<mask id="app-mail-standard-16-mask0_584118_1965" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="0" width="17" height="15">
+<path d="M10.167 0.300009L17.3337 4.46668C17.5337 4.60001 17.667 4.80001 17.667 5.03334L17.3337 14.3333H2.00033L1.66699 5.03334C1.66699 4.80001 1.80033 4.56668 2.00033 4.46668L9.16699 0.300009C9.46699 0.100009 9.86699 0.100009 10.167 0.300009Z" fill="url(#app-mail-standard-16-paint1_linear_584118_1965)"/>
+</mask>
+<g mask="url(#app-mail-standard-16-mask0_584118_1965)">
+<g filter="url(#app-mail-standard-16-filter1_dd_584118_1965)">
+<path d="M17.4337 14.8333C17.567 14.7 17.667 14.5333 17.667 14.3333V5.03334L9.66699 10L12.867 12.8667L17.4337 14.8333Z" fill="url(#app-mail-standard-16-paint2_linear_584118_1965)"/>
+<path d="M1.66699 5V14.3333C1.66699 14.7 1.96699 15 2.33366 15H17.0003C17.167 15 17.3003 14.9333 17.4337 14.8333L1.66699 5Z" fill="url(#app-mail-standard-16-paint3_linear_584118_1965)"/>
+</g>
+</g>
+<path d="M17.4337 14.8333C17.567 14.7 17.667 14.5333 17.667 14.3333V5.03334L9.66699 10L12.867 12.8667L17.4337 14.8333Z" fill="url(#app-mail-standard-16-paint4_linear_584118_1965)"/>
+<path d="M1.66699 5V14.3333C1.66699 14.7 1.96699 15 2.33366 15H17.0003C17.167 15 17.3003 14.9333 17.4337 14.8333L1.66699 5Z" fill="url(#app-mail-standard-16-paint5_linear_584118_1965)"/>
+<defs>
+<filter id="app-mail-standard-16-filter0_dd_584118_1965" x="0" y="2" width="19.3334" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1965"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1965" result="effect2_dropShadow_584118_1965"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1965" result="shape"/>
+</filter>
+<filter id="app-mail-standard-16-filter1_dd_584118_1965" x="-1.33301" y="2" width="22" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1965"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1965" result="effect2_dropShadow_584118_1965"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1965" result="shape"/>
+</filter>
+<linearGradient id="app-mail-standard-16-paint0_linear_584118_1965" x1="13.9078" y1="16.6587" x2="5.78589" y2="2.59119" gradientUnits="userSpaceOnUse">
+<stop offset="0.3116" stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-16-paint1_linear_584118_1965" x1="13.9078" y1="16.6587" x2="5.78589" y2="2.59121" gradientUnits="userSpaceOnUse">
+<stop offset="0.3116" stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-16-paint2_linear_584118_1965" x1="13.5043" y1="21.5384" x2="5.29773" y2="7.3241" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-16-paint3_linear_584118_1965" x1="13.5043" y1="21.5384" x2="5.29773" y2="7.3241" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-16-paint4_linear_584118_1965" x1="18.444" y1="15.7985" x2="14.2625" y2="8.55604" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1490DF"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-mail-standard-16-paint5_linear_584118_1965" x1="13.5043" y1="21.5384" x2="5.29773" y2="7.3241" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+</defs>
+</svg>

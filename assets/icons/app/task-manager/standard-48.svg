@@ -1,0 +1,75 @@
+<svg aria-label="Task Manager standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-task-manager-standard-48-clip0_584118_3866)">
+<rect y="6" width="48" height="36" rx="3" fill="url(#app-task-manager-standard-48-paint0_linear_584118_3866)"/>
+<mask id="app-task-manager-standard-48-mask0_584118_3866" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="6" width="48" height="36">
+<rect y="6" width="48" height="36" rx="3" fill="url(#app-task-manager-standard-48-paint1_linear_584118_3866)"/>
+</mask>
+<g mask="url(#app-task-manager-standard-48-mask0_584118_3866)">
+<g filter="url(#app-task-manager-standard-48-filter0_dd_584118_3866)">
+<path d="M4.98445 21H1.5C0.671573 21 0 21.6716 0 22.5V40.5C0 41.3284 0.671573 42 1.5 42H46.5C47.3284 42 48 41.3284 48 40.5V19.5C48 18.6716 47.3284 18 46.5 18H39.9271C39.3589 18 38.8395 17.679 38.5854 17.1708L36.9948 13.9896C35.5206 11.0412 31.2177 11.347 30.1753 14.4742L27.3419 22.9743C27.1377 23.5869 26.5645 24 25.9189 24H24.9271C24.3589 24 23.8395 23.679 23.5854 23.1708L21.4146 18.8292C21.1605 18.321 20.6411 18 20.0729 18H18.9271C18.3589 18 17.8395 17.679 17.5854 17.1708L16.1827 14.3653C14.562 11.124 9.87238 11.319 8.52648 14.6838L6.37717 20.0571C6.14937 20.6266 5.59781 21 4.98445 21Z" fill="url(#app-task-manager-standard-48-paint2_linear_584118_3866)"/>
+<path d="M4.98445 21H1.5C0.671573 21 0 21.6716 0 22.5V40.5C0 41.3284 0.671573 42 1.5 42H46.5C47.3284 42 48 41.3284 48 40.5V19.5C48 18.6716 47.3284 18 46.5 18H39.9271C39.3589 18 38.8395 17.679 38.5854 17.1708L36.9948 13.9896C35.5206 11.0412 31.2177 11.347 30.1753 14.4742L27.3419 22.9743C27.1377 23.5869 26.5645 24 25.9189 24H24.9271C24.3589 24 23.8395 23.679 23.5854 23.1708L21.4146 18.8292C21.1605 18.321 20.6411 18 20.0729 18H18.9271C18.3589 18 17.8395 17.679 17.5854 17.1708L16.1827 14.3653C14.562 11.124 9.87238 11.319 8.52648 14.6838L6.37717 20.0571C6.14937 20.6266 5.59781 21 4.98445 21Z" fill="url(#app-task-manager-standard-48-paint3_linear_584118_3866)"/>
+</g>
+<g filter="url(#app-task-manager-standard-48-filter1_dd_584118_3866)">
+<path d="M6.4605 30H1.5C0.671573 30 0 30.6716 0 31.5V40.5C0 41.3284 0.671573 42 1.5 42H46.5C47.3284 42 48 41.3284 48 40.5V28.5C48 27.6716 47.3284 27 46.5 27H39.8028C39.3012 27 38.8329 26.7493 38.5547 26.3321L34.7927 20.689C34.0334 19.5501 32.3081 19.7297 31.7998 21.0006L27.3772 32.0571C27.1494 32.6266 26.5978 33 25.9845 33H24.6213C24.2235 33 23.842 32.842 23.5607 32.5607L21.4393 30.4393C21.158 30.158 20.7765 30 20.3787 30H18.9271C18.3589 30 17.8395 29.679 17.5854 29.1708L13.5383 21.0767C12.9526 19.9052 11.2521 19.9944 10.7922 21.2208L7.86499 29.0267C7.64545 29.6121 7.08577 30 6.4605 30Z" fill="url(#app-task-manager-standard-48-paint4_linear_584118_3866)"/>
+<path d="M6.4605 30H1.5C0.671573 30 0 30.6716 0 31.5V40.5C0 41.3284 0.671573 42 1.5 42H46.5C47.3284 42 48 41.3284 48 40.5V28.5C48 27.6716 47.3284 27 46.5 27H39.8028C39.3012 27 38.8329 26.7493 38.5547 26.3321L34.7927 20.689C34.0334 19.5501 32.3081 19.7297 31.7998 21.0006L27.3772 32.0571C27.1494 32.6266 26.5978 33 25.9845 33H24.6213C24.2235 33 23.842 32.842 23.5607 32.5607L21.4393 30.4393C21.158 30.158 20.7765 30 20.3787 30H18.9271C18.3589 30 17.8395 29.679 17.5854 29.1708L13.5383 21.0767C12.9526 19.9052 11.2521 19.9944 10.7922 21.2208L7.86499 29.0267C7.64545 29.6121 7.08577 30 6.4605 30Z" fill="url(#app-task-manager-standard-48-paint5_linear_584118_3866)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="app-task-manager-standard-48-filter0_dd_584118_3866" x="-2" y="9.94391" width="52" height="34.0561" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3866"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3866" result="effect2_dropShadow_584118_3866"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3866" result="shape"/>
+</filter>
+<filter id="app-task-manager-standard-48-filter1_dd_584118_3866" x="-2" y="17.9318" width="52" height="26.0682" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3866"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3866" result="effect2_dropShadow_584118_3866"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3866" result="shape"/>
+</filter>
+<linearGradient id="app-task-manager-standard-48-paint0_linear_584118_3866" x1="28.5" y1="43.5" x2="27.3662" y2="5.71893" gradientUnits="userSpaceOnUse">
+<stop offset="0.533476" stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-task-manager-standard-48-paint1_linear_584118_3866" x1="28.5" y1="43.5" x2="27.3662" y2="5.71893" gradientUnits="userSpaceOnUse">
+<stop offset="0.427592" stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-task-manager-standard-48-paint2_linear_584118_3866" x1="22.5" y1="36" x2="16.5" y2="9" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-task-manager-standard-48-paint3_linear_584118_3866" x1="22.5" y1="36" x2="16.5" y2="9" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-task-manager-standard-48-paint4_linear_584118_3866" x1="27" y1="43.5" x2="21" y2="18" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-task-manager-standard-48-paint5_linear_584118_3866" x1="24" y1="20.7359" x2="24" y2="42" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C3EBFF"/>
+<stop offset="1" stop-color="#7AD1FF"/>
+</linearGradient>
+<clipPath id="app-task-manager-standard-48-clip0_584118_3866">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

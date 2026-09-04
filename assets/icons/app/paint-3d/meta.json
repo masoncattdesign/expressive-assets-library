@@ -1,0 +1,41 @@
+{
+  "id": "app.paint-3d",
+  "name": "Paint 3D",
+  "keywords": [
+    "paint",
+    "3d"
+  ],
+  "type": "icon",
+  "collection": "app",
+  "status": "deprecated",
+  "replacedBy": "app.paint",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
+  "colors": {
+    "primary": "#F29209",
+    "secondary": "#50E6FF"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "16": "assets/icons/app/paint-3d/standard-16.svg",
+      "24": "assets/icons/app/paint-3d/standard-24.svg",
+      "32": "assets/icons/app/paint-3d/standard-32.svg",
+      "48": "assets/icons/app/paint-3d/standard-48.svg"
+    }
+  },
+  "figma": {
+    "fileKey": "kk3KX66O732kqUoY7Y9wau",
+    "nodeId": "584118:5187"
+  },
+  "version": "1.0.0",
+  "updated": "2026-09-04",
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized. Paint 3D was retired; Paint continues."
+}

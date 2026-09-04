@@ -1,0 +1,56 @@
+<svg aria-label="Remote Desktop standard 16" role="img" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="url(#app-remote-desktop-standard-16-paint0_linear_584118_3238)"/>
+<path d="M7.99967 14.6666C11.6816 14.6666 14.6663 11.6819 14.6663 7.99998C14.6663 4.31808 11.6816 1.33331 7.99967 1.33331C4.31777 1.33331 1.33301 4.31808 1.33301 7.99998C1.33301 11.6819 4.31777 14.6666 7.99967 14.6666Z" fill="url(#app-remote-desktop-standard-16-paint1_linear_584118_3238)"/>
+<g filter="url(#app-remote-desktop-standard-16-filter0_dd_584118_3238)">
+<path d="M9.76779 6.23225L11.6534 4.34664C11.7836 4.21646 11.7836 4.0054 11.6534 3.87523L10.9463 3.16812C10.8161 3.03795 10.6051 3.03795 10.4749 3.16812L7.64646 5.99655C7.51628 6.12673 7.51628 6.33778 7.64646 6.46796L10.4749 9.29639C10.6051 9.42655 10.8161 9.42655 10.9463 9.29639L11.6534 8.58927C11.7836 8.4591 11.7836 8.24805 11.6534 8.11787L9.76779 6.23225Z" fill="url(#app-remote-desktop-standard-16-paint2_linear_584118_3238)"/>
+</g>
+<g filter="url(#app-remote-desktop-standard-16-filter1_dd_584118_3238)">
+<path d="M5.05377 6.70364L4.34666 7.41076C4.21648 7.54093 4.21648 7.75198 4.34666 7.88216L6.23227 9.76778L4.34666 11.6534C4.21648 11.7836 4.21648 11.9946 4.34666 12.1248L5.05377 12.8319C5.18393 12.9621 5.39499 12.9621 5.52517 12.8319L8.35359 10.0035C8.48377 9.8733 8.48377 9.66225 8.35359 9.53207L5.52517 6.70364C5.39499 6.57347 5.18394 6.57348 5.05377 6.70364Z" fill="url(#app-remote-desktop-standard-16-paint3_linear_584118_3238)"/>
+</g>
+<defs>
+<filter id="app-remote-desktop-standard-16-filter0_dd_584118_3238" x="4.54883" y="1.0705" width="10.2022" height="12.3235" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3238"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3238" result="effect2_dropShadow_584118_3238"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3238" result="shape"/>
+</filter>
+<filter id="app-remote-desktop-standard-16-filter1_dd_584118_3238" x="1.24902" y="4.60602" width="10.2022" height="12.3235" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3238"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3238" result="effect2_dropShadow_584118_3238"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3238" result="shape"/>
+</filter>
+<linearGradient id="app-remote-desktop-standard-16-paint0_linear_584118_3238" x1="12.0007" y1="14.9294" x2="3.99933" y2="1.07064" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2C8CC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-remote-desktop-standard-16-paint1_linear_584118_3238" x1="11.3336" y1="13.7744" x2="4.66578" y2="2.22551" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BF3207"/>
+<stop offset="1" stop-color="#E25113"/>
+</linearGradient>
+<linearGradient id="app-remote-desktop-standard-16-paint2_linear_584118_3238" x1="11.7646" y1="8.83304" x2="8.98167" y2="4.01291" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2C8CC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-remote-desktop-standard-16-paint3_linear_584118_3238" x1="7.0159" y1="11.9804" x2="4.23293" y2="7.1602" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2C8CC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,89 @@
+<svg aria-label="PC Health standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-pc-health-standard-48-clip0_584118_5879)">
+<path d="M34.3662 24.1943L33 22.8286L25.9443 29.8838C25.6891 30.1392 25.3859 30.3418 25.0523 30.4801C24.7187 30.6183 24.3611 30.6895 24 30.6895C23.6389 30.6895 23.2813 30.6183 22.9477 30.4801C22.6141 30.3418 22.3109 30.1392 22.0557 29.8838L13 20.8286L9.63379 24.1943C9.37908 24.4505 9.07607 24.6536 8.74233 24.7919C8.40858 24.9302 8.05072 25.001 7.68945 25H2.81262C3.11796 25.3834 3.44461 25.7494 3.79102 26.0961L21.7487 44.0508C22.346 44.648 23.156 44.9834 24.0006 44.9834C24.8452 44.9833 25.6552 44.6478 26.2524 44.0506L44.2094 26.0932C44.5549 25.7473 44.8808 25.3824 45.1854 25H36.3106C35.9493 25.001 35.5914 24.9302 35.2577 24.7919C34.9239 24.6536 34.6209 24.4505 34.3662 24.1943Z" fill="url(#app-pc-health-standard-48-paint0_linear_584118_5879)"/>
+<path d="M11.0557 17.1162C11.5717 16.6012 12.271 16.312 13 16.312C13.7291 16.312 14.4283 16.6012 14.9444 17.1162L24 26.1714L31.0557 19.1162C31.5794 18.616 32.2758 18.3369 33 18.3369C33.7242 18.3369 34.4206 18.616 34.9444 19.1162L36.8281 21H47.3495C48.3434 17.9826 48.193 14.7051 46.9269 11.7914C45.6608 8.87764 43.3675 6.53123 40.4836 5.19881C37.5996 3.86638 34.3264 3.64099 31.287 4.56553C28.2476 5.49007 25.6544 7.49999 24.0009 10.2127C22.3474 7.49961 19.754 5.48933 16.7143 4.56453C13.6747 3.63973 10.4011 3.865 7.5168 5.19744C4.63249 6.52989 2.33888 8.87646 1.07261 11.7904C-0.193655 14.7044 -0.344144 17.9823 0.649793 21H7.17188L11.0557 17.1162Z" fill="url(#app-pc-health-standard-48-paint1_linear_584118_5879)"/>
+<mask id="app-pc-health-standard-48-mask0_584118_5879" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="48" height="41">
+<path d="M13 16.312C12.271 16.312 11.5717 16.6012 11.0557 17.1162L7.17188 21H0.649793C-0.344144 17.9823 -0.193655 14.7044 1.07261 11.7904C2.33888 8.87646 4.63249 6.52989 7.5168 5.19744C10.4011 3.865 13.6747 3.63973 16.7143 4.56453C19.754 5.48933 22.3474 7.49961 24.0009 10.2127C25.6544 7.49999 28.2476 5.49007 31.287 4.56553C34.3264 3.64099 37.5996 3.86638 40.4836 5.19881C43.3675 6.53123 45.6608 8.87764 46.9269 11.7914C48.193 14.7051 48.3434 17.9826 47.3495 21H36.8281L34.9444 19.1162C34.4206 18.616 33.7242 18.3369 33 18.3369C32.2758 18.3369 31.5794 18.616 31.0557 19.1162L24 26.1714L14.9444 17.1162C14.4283 16.6012 13.7291 16.312 13 16.312Z" fill="url(#app-pc-health-standard-48-paint2_linear_584118_5879)"/>
+<path d="M33 22.8286L34.3662 24.1944C34.6209 24.4505 34.9239 24.6537 35.2577 24.792C35.5914 24.9302 35.9493 25.001 36.3106 25H45.1854C44.8808 25.3824 44.5549 25.7474 44.2094 26.0932L26.2524 44.0506C25.6552 44.6478 24.8452 44.9834 24.0006 44.9834C23.156 44.9835 22.346 44.648 21.7487 44.0509L3.79102 26.0961C3.44461 25.7494 3.11796 25.3834 2.81262 25H7.68945C8.05072 25.001 8.40858 24.9302 8.74233 24.792C9.07607 24.6537 9.37908 24.4505 9.63379 24.1944L13 20.8286L22.0557 29.8838C22.3109 30.1392 22.6141 30.3418 22.9477 30.4801C23.2813 30.6183 23.6389 30.6895 24 30.6895C24.3611 30.6895 24.7187 30.6183 25.0523 30.4801C25.3859 30.3418 25.6891 30.1392 25.9443 29.8838L33 22.8286Z" fill="url(#app-pc-health-standard-48-paint3_linear_584118_5879)"/>
+</mask>
+<g mask="url(#app-pc-health-standard-48-mask0_584118_5879)">
+<g filter="url(#app-pc-health-standard-48-filter0_ddii_584118_5879)">
+<path d="M36.8281 21L34.9443 19.1162C34.4206 18.616 33.7242 18.3369 33 18.3369C32.2758 18.3369 31.5794 18.616 31.0557 19.1162L24 26.1714L14.9443 17.1162C14.4283 16.6012 13.729 16.312 13 16.312C12.271 16.312 11.5717 16.6012 11.0557 17.1162L7.17187 21H0.64978C1.12733 22.4513 1.85973 23.8058 2.81262 25H7.68945C8.05071 25.0009 8.40858 24.9302 8.74232 24.7919C9.07607 24.6536 9.37907 24.4505 9.63379 24.1943L13 20.8286L22.0557 29.8838C22.3109 30.1392 22.6141 30.3418 22.9477 30.4801C23.2813 30.6183 23.6389 30.6895 24 30.6895C24.3611 30.6895 24.7187 30.6183 25.0523 30.4801C25.3859 30.3418 25.6891 30.1392 25.9443 29.8838L33 22.8286L34.3662 24.1943C34.6209 24.4505 34.9239 24.6536 35.2577 24.7919C35.5914 24.9302 35.9493 25.0009 36.3106 25H45.1854C46.1388 23.8059 46.8716 22.4513 47.3495 21H36.8281Z" fill="url(#app-pc-health-standard-48-paint4_linear_584118_5879)"/>
+</g>
+</g>
+<g filter="url(#app-pc-health-standard-48-filter1_ii_584118_5879)">
+<path d="M36.8281 21L34.9443 19.1162C34.4206 18.616 33.7242 18.3369 33 18.3369C32.2758 18.3369 31.5794 18.616 31.0557 19.1162L24 26.1714L14.9443 17.1162C14.4283 16.6012 13.729 16.312 13 16.312C12.271 16.312 11.5717 16.6012 11.0557 17.1162L7.17187 21H0.64978C1.12733 22.4513 1.85973 23.8058 2.81262 25H7.68945C8.05071 25.0009 8.40858 24.9302 8.74232 24.7919C9.07607 24.6536 9.37907 24.4505 9.63379 24.1943L13 20.8286L22.0557 29.8838C22.3109 30.1392 22.6141 30.3418 22.9477 30.4801C23.2813 30.6183 23.6389 30.6895 24 30.6895C24.3611 30.6895 24.7187 30.6183 25.0523 30.4801C25.3859 30.3418 25.6891 30.1392 25.9443 29.8838L33 22.8286L34.3662 24.1943C34.6209 24.4505 34.9239 24.6536 35.2577 24.7919C35.5914 24.9302 35.9493 25.0009 36.3106 25H45.1854C46.1388 23.8059 46.8716 22.4513 47.3495 21H36.8281Z" fill="url(#app-pc-health-standard-48-paint5_linear_584118_5879)"/>
+</g>
+</g>
+<defs>
+<filter id="app-pc-health-standard-48-filter0_ddii_584118_5879" x="-1.35022" y="15.312" width="50.6997" height="18.3774" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5879"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5879" result="effect2_dropShadow_584118_5879"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5879" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.75"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_584118_5879"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.25"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.75 0"/>
+<feBlend mode="normal" in2="effect3_innerShadow_584118_5879" result="effect4_innerShadow_584118_5879"/>
+</filter>
+<filter id="app-pc-health-standard-48-filter1_ii_584118_5879" x="0.64978" y="15.562" width="46.6997" height="16.6274" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.75"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_584118_5879"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.25"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.75 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_584118_5879" result="effect2_innerShadow_584118_5879"/>
+</filter>
+<linearGradient id="app-pc-health-standard-48-paint0_linear_584118_5879" x1="32.8662" y1="40.3584" x2="11.2734" y2="2.95862" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-pc-health-standard-48-paint1_linear_584118_5879" x1="36.4734" y1="38.2757" x2="14.8807" y2="0.876012" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-pc-health-standard-48-paint2_linear_584118_5879" x1="36.4734" y1="38.2757" x2="14.8807" y2="0.876012" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-pc-health-standard-48-paint3_linear_584118_5879" x1="36.4734" y1="38.2757" x2="14.8807" y2="0.876012" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-pc-health-standard-48-paint4_linear_584118_5879" x1="30.9108" y1="33.2415" x2="18.0448" y2="10.957" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-pc-health-standard-48-paint5_linear_584118_5879" x1="30.9108" y1="33.2415" x2="18.0448" y2="10.957" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-pc-health-standard-48-clip0_584118_5879">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

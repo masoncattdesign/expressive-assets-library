@@ -1,0 +1,75 @@
+<svg aria-label="Magnifier standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-magnifier-standard-32-clip0_584118_3968)">
+<rect x="4" y="2" width="28" height="22" rx="2" fill="url(#app-magnifier-standard-32-paint0_linear_584118_3968)"/>
+<path d="M32 22C32 23.1046 31.1046 24 30 24H6C4.89543 24 4 23.1046 4 22H32Z" fill="url(#app-magnifier-standard-32-paint1_linear_584118_3968)"/>
+<mask id="app-magnifier-standard-32-mask0_584118_3968" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="2" width="28" height="22">
+<rect x="4" y="2" width="28" height="22" rx="2" fill="url(#app-magnifier-standard-32-paint2_linear_584118_3968)"/>
+</mask>
+<g mask="url(#app-magnifier-standard-32-mask0_584118_3968)">
+<g filter="url(#app-magnifier-standard-32-filter0_dd_584118_3968)">
+<path d="M9 11C14.0322 11 18 14.9678 18 20C18 22.027 17.3547 23.8802 16.2568 25.3721L20.4424 29.5576C20.9631 30.0783 20.9631 30.9217 20.4424 31.4424C19.9217 31.9631 19.0783 31.9631 18.5576 31.4424L14.3721 27.2568C12.8802 28.3547 11.027 29 9 29C3.96776 29 1.2517e-05 24.9355 0 20C0 14.9678 4.06453 11 9 11Z" fill="url(#app-magnifier-standard-32-paint3_linear_584118_3968)"/>
+</g>
+</g>
+<path d="M9 11C14.0322 11 18 14.9678 18 20C18 22.027 17.3547 23.8802 16.2568 25.3721L20.4424 29.5576C20.9631 30.0783 20.9631 30.9217 20.4424 31.4424C19.9217 31.9631 19.0783 31.9631 18.5576 31.4424L14.3721 27.2568C12.8802 28.3547 11.027 29 9 29C3.96776 29 1.2517e-05 24.9355 0 20C0 14.9678 4.06453 11 9 11Z" fill="url(#app-magnifier-standard-32-paint4_linear_584118_3968)"/>
+<g filter="url(#app-magnifier-standard-32-filter1_dd_584118_3968)">
+<path d="M9 15C9.55228 15 10 15.4477 10 16V19H13C13.5523 19 14 19.4477 14 20C14 20.5523 13.5523 21 13 21H10V24C10 24.5523 9.55228 25 9 25C8.44772 25 8 24.5523 8 24V21H5C4.44772 21 4 20.5523 4 20C4 19.4477 4.44772 19 5 19H8V16C8 15.4477 8.44772 15 9 15Z" fill="url(#app-magnifier-standard-32-paint5_linear_584118_3968)"/>
+</g>
+</g>
+<defs>
+<filter id="app-magnifier-standard-32-filter0_dd_584118_3968" x="-2" y="9" width="24.8329" height="24.8329" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3968"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3968" result="effect2_dropShadow_584118_3968"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3968" result="shape"/>
+</filter>
+<filter id="app-magnifier-standard-32-filter1_dd_584118_3968" x="2" y="13" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3968"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3968" result="effect2_dropShadow_584118_3968"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3968" result="shape"/>
+</filter>
+<linearGradient id="app-magnifier-standard-32-paint0_linear_584118_3968" x1="25.5217" y1="28.1982" x2="7.50311" y2="0.393684" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-magnifier-standard-32-paint1_linear_584118_3968" x1="21.7688" y1="27.0375" x2="18.8829" y2="18.2899" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737A80"/>
+<stop offset="1" stop-color="#8A9299"/>
+</linearGradient>
+<linearGradient id="app-magnifier-standard-32-paint2_linear_584118_3968" x1="25.5217" y1="28.1982" x2="7.50311" y2="0.393684" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-magnifier-standard-32-paint3_linear_584118_3968" x1="14.8115" y1="27.8851" x2="4.14605" y2="11.7219" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-magnifier-standard-32-paint4_linear_584118_3968" x1="14.8115" y1="27.8851" x2="4.14605" y2="11.7219" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-magnifier-standard-32-paint5_linear_584118_3968" x1="6.27273" y1="13.5227" x2="9" y2="24.4318" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<clipPath id="app-magnifier-standard-32-clip0_584118_3968">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,27 @@
+<svg aria-label="Connect standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-connect-standard-16-clip0_584118_6394)">
+<path d="M15 1H5C4.44772 1 4 1.44772 4 2V10C4 10.5523 4.44772 11 5 11H15C15.5523 11 16 10.5523 16 10V2C16 1.44772 15.5523 1 15 1Z" fill="url(#app-connect-standard-16-paint0_linear_584118_6394)"/>
+<path d="M9 14C9 14.2652 8.89464 14.5196 8.70711 14.7071C8.51957 14.8946 8.26522 15 8 15H1C0.734784 15 0.48043 14.8946 0.292893 14.7071C0.105357 14.5196 0 14.2652 0 14L5 13L9 14Z" fill="url(#app-connect-standard-16-paint1_linear_584118_6394)"/>
+<path d="M0 14V8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H7.42221C7.84067 7 8.24198 7.16623 8.53788 7.46212C8.83377 7.75802 9 8.15933 9 8.57779V14H0Z" fill="url(#app-connect-standard-16-paint2_linear_584118_6394)"/>
+<path d="M7.5 10C8.32843 10 9 9.32843 9 8.5C9 7.67157 8.32843 7 7.5 7C6.67157 7 6 7.67157 6 8.5C6 9.32843 6.67157 10 7.5 10Z" fill="white"/>
+<path d="M6 2.5C7.98912 2.5 9.89678 3.29018 11.3033 4.6967C12.7098 6.10322 13.5 8.01088 13.5 10" stroke="white" stroke-miterlimit="10"/>
+<path d="M6 4.5C7.45869 4.5 8.85764 5.07946 9.88909 6.11091C10.9205 7.14236 11.5 8.54131 11.5 10" stroke="white" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="app-connect-standard-16-paint0_linear_584118_6394" x1="13.4821" y1="12.0312" x2="6.51787" y2="-0.0312298" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E3133"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-connect-standard-16-paint1_linear_584118_6394" x1="5.817" y1="16.4152" x2="3.31691" y2="12.085" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-connect-standard-16-paint2_linear_584118_6394" x1="6.89059" y1="15.2179" x2="1.79243" y2="6.3876" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<clipPath id="app-connect-standard-16-clip0_584118_6394">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

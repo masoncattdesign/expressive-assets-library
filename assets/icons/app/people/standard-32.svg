@@ -1,0 +1,69 @@
+<svg aria-label="People standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 30.6667H10L14.6667 22.6667C14.6667 18.6 11.4 15.3333 7.33333 15.3333C3.26667 15.3333 0 18.6 0 22.6667V29.6667C0 30.2 0.466667 30.6667 1 30.6667Z" fill="url(#app-people-standard-32-paint0_linear_584118_2305)"/>
+<path d="M6.66663 14C8.87577 14 10.6666 12.2091 10.6666 10C10.6666 7.79086 8.87577 6 6.66663 6C4.45749 6 2.66663 7.79086 2.66663 10C2.66663 12.2091 4.45749 14 6.66663 14Z" fill="url(#app-people-standard-32-paint1_linear_584118_2305)"/>
+<path d="M22.3334 30.6667H31C31.5334 30.6667 32 30.2 32 29.6667V22.6667C32 18.6 28.7334 15.3333 24.6667 15.3333C20.6 15.3333 17.3334 18.6 17.3334 22.6667L22.3334 30.6667Z" fill="url(#app-people-standard-32-paint2_linear_584118_2305)"/>
+<path d="M25.3334 14C27.5425 14 29.3334 12.2091 29.3334 10C29.3334 7.79086 27.5425 6 25.3334 6C23.1242 6 21.3334 7.79086 21.3334 10C21.3334 12.2091 23.1242 14 25.3334 14Z" fill="url(#app-people-standard-32-paint3_linear_584118_2305)"/>
+<mask id="app-people-standard-32-mask0_584118_2305" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="15" width="32" height="16">
+<path d="M1 30.6667H10L14.6667 22.6667C14.6667 18.6 11.4 15.3333 7.33333 15.3333C3.26667 15.3333 0 18.6 0 22.6667V29.6667C0 30.2 0.466667 30.6667 1 30.6667Z" fill="url(#app-people-standard-32-paint4_linear_584118_2305)"/>
+<path d="M22.3333 30.6667H31C31.5333 30.6667 32 30.2 32 29.6667V22.6667C32 18.6 28.7333 15.3333 24.6667 15.3333C20.6 15.3333 17.3333 18.6 17.3333 22.6667L22.3333 30.6667Z" fill="url(#app-people-standard-32-paint5_linear_584118_2305)"/>
+</mask>
+<g mask="url(#app-people-standard-32-mask0_584118_2305)">
+<g filter="url(#app-people-standard-32-filter0_dd_584118_2305)">
+<path d="M9.66663 30.6667H22.3333C22.8666 30.6667 23.3333 30.2 23.3333 29.6667V20C23.3333 15.9333 20.0666 12.6667 16 12.6667C11.9333 12.6667 8.66663 15.9333 8.66663 20V29.6667C8.66663 30.2 9.13329 30.6667 9.66663 30.6667Z" fill="url(#app-people-standard-32-paint6_linear_584118_2305)"/>
+</g>
+</g>
+<path d="M9.66663 30.6667H22.3333C22.8666 30.6667 23.3333 30.2 23.3333 29.6667V20C23.3333 15.9333 20.0666 12.6667 16 12.6667C11.9333 12.6667 8.66663 15.9333 8.66663 20V29.6667C8.66663 30.2 9.13329 30.6667 9.66663 30.6667Z" fill="url(#app-people-standard-32-paint7_linear_584118_2305)"/>
+<path d="M16 11.3333C18.2091 11.3333 20 9.54248 20 7.33334C20 5.1242 18.2091 3.33334 16 3.33334C13.7909 3.33334 12 5.1242 12 7.33334C12 9.54248 13.7909 11.3333 16 11.3333Z" fill="url(#app-people-standard-32-paint8_linear_584118_2305)"/>
+<defs>
+<filter id="app-people-standard-32-filter0_dd_584118_2305" x="5.66663" y="10.6667" width="20.6666" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2305"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2305" result="effect2_dropShadow_584118_2305"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2305" result="shape"/>
+</filter>
+<linearGradient id="app-people-standard-32-paint0_linear_584118_2305" x1="10.3172" y1="30.4835" x2="2.5192" y2="16.9769" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint1_linear_584118_2305" x1="8.66696" y1="13.4647" x2="4.66629" y2="6.53533" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1B9DE2"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint2_linear_584118_2305" x1="30.2062" y1="31.2777" x2="21.4254" y2="16.0689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint3_linear_584118_2305" x1="27.3337" y1="13.4647" x2="23.333" y2="6.53533" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint4_linear_584118_2305" x1="30.2061" y1="31.2777" x2="21.4253" y2="16.0689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint5_linear_584118_2305" x1="30.2061" y1="31.2777" x2="21.4253" y2="16.0689" gradientUnits="userSpaceOnUse">
+<stop stop-color="#184F85"/>
+<stop offset="1" stop-color="#0C63AD"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint6_linear_584118_2305" x1="20.544" y1="31.8524" x2="10.6085" y2="14.6436" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint7_linear_584118_2305" x1="20.544" y1="31.8524" x2="10.6085" y2="14.6436" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-people-standard-32-paint8_linear_584118_2305" x1="18.0003" y1="10.798" x2="13.9997" y2="3.86867" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+</defs>
+</svg>

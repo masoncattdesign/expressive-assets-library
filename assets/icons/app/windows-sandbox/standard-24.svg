@@ -1,0 +1,116 @@
+<svg aria-label="Windows Sandbox standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-windows-sandbox-standard-24-clip0_584118_6411)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.449101 8.2759L11.497 2.75195C11.8137 2.59359 12.1865 2.59359 12.5032 2.75195L23.5512 8.27591C24.1482 8.57441 24.1482 9.42637 23.5512 9.72488L19.0001 12.0004L12.5032 8.75195C12.1865 8.59359 11.8137 8.59359 11.497 8.75195L5.00013 12.0004L0.449099 9.72488C-0.14791 9.42637 -0.147909 8.57441 0.449101 8.2759Z" fill="url(#app-windows-sandbox-standard-24-paint0_linear_584118_6411)"/>
+<mask id="app-windows-sandbox-standard-24-mask0_584118_6411" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="24" height="14">
+<path d="M11.6378 2.68161L0.448972 8.276C-0.148037 8.57451 -0.148039 9.42647 0.44897 9.72497L11.6378 15.3194C11.8658 15.4334 12.1342 15.4334 12.3622 15.3194L23.551 9.72497C24.148 9.42647 24.148 8.57451 23.551 8.276L12.3622 2.68161C12.1342 2.56759 11.8658 2.56759 11.6378 2.68161Z" fill="url(#app-windows-sandbox-standard-24-paint1_linear_584118_6411)"/>
+</mask>
+<g mask="url(#app-windows-sandbox-standard-24-mask0_584118_6411)">
+<g filter="url(#app-windows-sandbox-standard-24-filter0_dd_584118_6411)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0005 12.0006L12.3627 8.68171C12.1347 8.56769 11.8663 8.56769 11.6382 8.68171L5.00049 12.0006L11.6382 15.3195C11.8663 15.4335 12.1347 15.4335 12.3627 15.3195L19.0005 12.0006Z" fill="url(#app-windows-sandbox-standard-24-paint2_linear_584118_6411)"/>
+</g>
+</g>
+<g filter="url(#app-windows-sandbox-standard-24-filter1_i_584118_6411)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0005 12.0001L12.3627 8.68122C12.1347 8.5672 11.8663 8.5672 11.6382 8.68122L5.00049 12.0001L11.6382 15.319C11.8663 15.433 12.1347 15.433 12.3627 15.319L19.0005 12.0001Z" fill="url(#app-windows-sandbox-standard-24-paint3_linear_584118_6411)"/>
+</g>
+<g opacity="0.3">
+<mask id="app-windows-sandbox-standard-24-mask1_584118_6411" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="24" height="14">
+<path d="M11.6378 2.68161L0.448972 8.276C-0.148037 8.57451 -0.148039 9.42647 0.44897 9.72497L11.6378 15.3194C11.8658 15.4334 12.1342 15.4334 12.3622 15.3194L23.551 9.72497C24.148 9.42647 24.148 8.57451 23.551 8.276L12.3622 2.68161C12.1342 2.56759 11.8658 2.56759 11.6378 2.68161Z" fill="url(#app-windows-sandbox-standard-24-paint4_linear_584118_6411)"/>
+</mask>
+<g mask="url(#app-windows-sandbox-standard-24-mask1_584118_6411)">
+<g filter="url(#app-windows-sandbox-standard-24-filter2_dd_584118_6411)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.00134391 9.00049C0.00135561 9.28809 0.150607 9.57569 0.4491 9.72494L11.6379 15.3193C11.8659 15.4334 12.1343 15.4334 12.3624 15.3193L23.5512 9.72494C23.8496 9.57569 23.9989 9.28809 23.9989 9.00049H24V15.0005H23.9988C23.9988 15.2881 23.8495 15.5757 23.551 15.725L12.3622 21.3194C12.1342 21.4334 11.8658 21.4334 11.6377 21.3194L0.448963 15.725C0.150448 15.5757 0.00119574 15.2881 0.00120658 15.0005H0V9.00049H0.00134391Z" fill="url(#app-windows-sandbox-standard-24-paint5_linear_584118_6411)"/>
+</g>
+</g>
+</g>
+<g filter="url(#app-windows-sandbox-standard-24-filter3_i_584118_6411)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.00107694 9C0.00108855 9.2876 0.15034 9.5752 0.448833 9.72445L11.4967 15.2484C11.8135 15.4068 12.1863 15.4068 12.503 15.2484L23.5509 9.72445C23.8494 9.57521 23.9986 9.28761 23.9986 9H23.9998V15H23.9985C23.9985 15.2876 23.8493 15.5753 23.5508 15.7245L12.5029 21.2485C12.1861 21.4068 11.8134 21.4068 11.4966 21.2485L0.448719 15.7245C0.150203 15.5753 0.000951559 15.2876 0.000962504 15H-0.000244141V9H0.00107694Z" fill="url(#app-windows-sandbox-standard-24-paint6_linear_584118_6411)"/>
+</g>
+</g>
+<defs>
+<filter id="app-windows-sandbox-standard-24-filter0_dd_584118_6411" x="-2.49951" y="1.09619" width="29" height="21.8088" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.17 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6411"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="3.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6411" result="effect2_dropShadow_584118_6411"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6411" result="shape"/>
+</filter>
+<filter id="app-windows-sandbox-standard-24-filter1_i_584118_6411" x="5.00049" y="8.5957" width="14" height="8.30878" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.5"/>
+<feGaussianBlur stdDeviation="1.125"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.313726 0 0 0 0 0.901961 0 0 0 0 1 0 0 0 0.18 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_584118_6411"/>
+</filter>
+<filter id="app-windows-sandbox-standard-24-filter2_dd_584118_6411" x="-2.5" y="6.50049" width="29" height="17.4044" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6411"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6411" result="effect2_dropShadow_584118_6411"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6411" result="shape"/>
+</filter>
+<filter id="app-windows-sandbox-standard-24-filter3_i_584118_6411" x="-0.000244141" y="9" width="24" height="13.8672" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.5"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.313726 0 0 0 0 0.901961 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_584118_6411"/>
+</filter>
+<linearGradient id="app-windows-sandbox-standard-24-paint0_linear_584118_6411" x1="24.0002" y1="8.26485" x2="6.11955e-05" y2="8.26485" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00438F"/>
+<stop offset="0.446289" stop-color="#034995"/>
+<stop offset="0.548828" stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0069C1"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint1_linear_584118_6411" x1="14.3214" y1="14.2366" x2="10.0484" y2="3.63193" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="0.496008" stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint2_linear_584118_6411" x1="16.7136" y1="16.0631" x2="14.1416" y2="7.13263" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0080CD"/>
+<stop offset="1" stop-color="#00ACF8"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint3_linear_584118_6411" x1="16.7136" y1="16.0627" x2="14.1416" y2="7.13214" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0080CD"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint4_linear_584118_6411" x1="14.3214" y1="14.2366" x2="10.0484" y2="3.63193" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="0.496008" stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint5_linear_584118_6411" x1="16.0824" y1="20.092" x2="11.5431" y2="6.85741" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#40E6E8"/>
+</linearGradient>
+<linearGradient id="app-windows-sandbox-standard-24-paint6_linear_584118_6411" x1="23.9999" y1="14.2341" x2="-6.09078e-05" y2="14.2341" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00A0FF"/>
+<stop offset="0.453125" stop-color="#1BB8FF"/>
+<stop offset="0.549805" stop-color="#38D2FF"/>
+<stop offset="1" stop-color="#3DD5FF"/>
+</linearGradient>
+<clipPath id="app-windows-sandbox-standard-24-clip0_584118_6411">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

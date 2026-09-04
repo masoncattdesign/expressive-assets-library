@@ -1,0 +1,77 @@
+<svg aria-label="Windows File Recovery standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-windows-file-recovery-standard-24-clip0_584118_5615)">
+<path d="M22.768 4H1.23201C0.55159 4 0 4.55159 0 5.23201V19.768C0 20.4484 0.55159 21 1.23201 21H22.768C23.4484 21 24 20.4484 24 19.768V5.23201C24 4.55159 23.4484 4 22.768 4Z" fill="url(#app-windows-file-recovery-standard-24-paint0_linear_584118_5615)"/>
+<path d="M8.67157 6H0V3.04054C2.65212e-06 2.76457 0.109632 2.49991 0.30477 2.30477C0.499909 2.10963 0.764572 2 1.04054 2H8.67154C8.93419 2 9.19426 2.05173 9.43691 2.15224C9.67956 2.25275 9.90004 2.40007 10.0858 2.58579L11.5 4L10.0858 5.41421C9.90007 5.59993 9.67959 5.74725 9.43694 5.84776C9.19429 5.94827 8.93421 6 8.67157 6Z" fill="url(#app-windows-file-recovery-standard-24-paint1_linear_584118_5615)"/>
+<mask id="app-windows-file-recovery-standard-24-mask0_584118_5615" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="24" height="19">
+<path d="M8.67188 2C8.9343 2.00004 9.19406 2.05196 9.43652 2.15234C9.67918 2.25285 9.90022 2.40022 10.0859 2.58594L11.5 4H22.7676C23.448 4 24 4.552 24 5.23242V19.7676C24 20.448 23.448 21 22.7676 21H1.23242C0.552002 21 0 20.448 0 19.7676V3.04102C2.65212e-06 2.76505 0.109549 2.49983 0.304688 2.30469C0.499826 2.10955 0.765048 2 1.04102 2H8.67188Z" fill="url(#app-windows-file-recovery-standard-24-paint2_linear_584118_5615)"/>
+</mask>
+<g mask="url(#app-windows-file-recovery-standard-24-mask0_584118_5615)">
+<g filter="url(#app-windows-file-recovery-standard-24-filter0_dd_584118_5615)">
+<path d="M12 0V6C12 7.06087 12.4217 8.07798 13.1719 8.82812C13.922 9.57827 14.9391 10 16 10C17.0609 10 18.078 9.57827 18.8281 8.82812C19.5783 8.07798 20 7.06087 20 6V0C20.5303 0.000529476 21.0391 0.21098 21.4141 0.585938C21.789 0.960896 21.9995 1.46973 22 2V6C21.9982 7.41745 21.495 8.78848 20.5801 9.87109C19.6651 10.9536 18.3973 11.678 17 11.916V17C17 18.5913 16.3674 20.117 15.2422 21.2422C14.117 22.3674 12.5913 23 11 23C9.4087 23 7.88303 22.3674 6.75781 21.2422C5.63259 20.117 5 18.5913 5 17V14H7V17C7 18.0609 7.42173 19.078 8.17188 19.8281C8.92202 20.5783 9.93913 21 11 21C12.0609 21 13.078 20.5783 13.8281 19.8281C14.5783 19.078 15 18.0609 15 17V11.916C13.6027 11.678 12.3349 10.9536 11.4199 9.87109C10.505 8.78848 10.0018 7.41745 10 6V2C10.0005 1.46973 10.211 0.960896 10.5859 0.585938C10.9609 0.210979 11.4697 0.000529477 12 0Z" fill="url(#app-windows-file-recovery-standard-24-paint3_linear_584118_5615)"/>
+<path d="M6 17C7.65685 17 9 15.6569 9 14C9 12.3431 7.65685 11 6 11C4.34315 11 3 12.3431 3 14C3 15.6569 4.34315 17 6 17Z" fill="url(#app-windows-file-recovery-standard-24-paint4_linear_584118_5615)"/>
+<path d="M6 15.2857C6.71008 15.2857 7.28571 14.7101 7.28571 14C7.28571 13.2899 6.71008 12.7143 6 12.7143C5.28993 12.7143 4.71429 13.2899 4.71429 14C4.71429 14.7101 5.28993 15.2857 6 15.2857Z" fill="url(#app-windows-file-recovery-standard-24-paint5_linear_584118_5615)"/>
+</g>
+</g>
+<path d="M12.5 2H12L11 1L12 0H12.5C12.6326 0 12.7598 0.0526784 12.8536 0.146447C12.9473 0.240215 13 0.367392 13 0.5V1.5C13 1.63261 12.9473 1.75979 12.8536 1.85355C12.7598 1.94732 12.6326 2 12.5 2Z" fill="#0669BC"/>
+<path d="M19.5 2H20L21 1L20 0H19.5C19.3674 0 19.2402 0.0526784 19.1464 0.146447C19.0527 0.240215 19 0.367392 19 0.5V1.5C19 1.63261 19.0527 1.75979 19.1464 1.85355C19.2402 1.94732 19.3674 2 19.5 2Z" fill="#0669BC"/>
+<path d="M12 0V6C12 7.06087 12.4217 8.07798 13.1719 8.82812C13.922 9.57827 14.9391 10 16 10C17.0609 10 18.078 9.57827 18.8281 8.82812C19.5783 8.07798 20 7.06087 20 6V0C20.5303 0.000529476 21.0391 0.21098 21.4141 0.585938C21.789 0.960896 21.9995 1.46973 22 2V6C21.9982 7.41745 21.495 8.78848 20.5801 9.87109C19.6651 10.9536 18.3973 11.678 17 11.916V17C17 18.5913 16.3674 20.117 15.2422 21.2422C14.117 22.3674 12.5913 23 11 23C9.4087 23 7.88303 22.3674 6.75781 21.2422C5.63259 20.117 5 18.5913 5 17V14H7V17C7 18.0609 7.42173 19.078 8.17188 19.8281C8.92202 20.5783 9.93913 21 11 21C12.0609 21 13.078 20.5783 13.8281 19.8281C14.5783 19.078 15 18.0609 15 17V11.916C13.6027 11.678 12.3349 10.9536 11.4199 9.87109C10.505 8.78848 10.0018 7.41745 10 6V2C10.0005 1.46973 10.211 0.960896 10.5859 0.585938C10.9609 0.210979 11.4697 0.000529477 12 0Z" fill="url(#app-windows-file-recovery-standard-24-paint6_linear_584118_5615)"/>
+<path d="M6 17C7.65685 17 9 15.6569 9 14C9 12.3431 7.65685 11 6 11C4.34315 11 3 12.3431 3 14C3 15.6569 4.34315 17 6 17Z" fill="url(#app-windows-file-recovery-standard-24-paint7_linear_584118_5615)"/>
+<path d="M6 15.2857C6.71008 15.2857 7.28571 14.7101 7.28571 14C7.28571 13.2899 6.71008 12.7143 6 12.7143C5.28993 12.7143 4.71429 13.2899 4.71429 14C4.71429 14.7101 5.28993 15.2857 6 15.2857Z" fill="url(#app-windows-file-recovery-standard-24-paint8_linear_584118_5615)"/>
+</g>
+<defs>
+<filter id="app-windows-file-recovery-standard-24-filter0_dd_584118_5615" x="2" y="-0.5" width="21" height="25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5615"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.1"/>
+<feGaussianBlur stdDeviation="0.05"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5615" result="effect2_dropShadow_584118_5615"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5615" result="shape"/>
+</filter>
+<linearGradient id="app-windows-file-recovery-standard-24-paint0_linear_584118_5615" x1="18.4552" y1="23.6808" x2="5.54476" y2="1.3192" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC425"/>
+<stop offset="0.14324" stop-color="#FFCF4A"/>
+<stop offset="1" stop-color="#FFDA6F"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint1_linear_584118_5615" x1="5.75" y1="5.65637" x2="5.75" y2="2.09354" gradientUnits="userSpaceOnUse">
+<stop offset="0.11351" stop-color="#D18B00"/>
+<stop offset="0.61622" stop-color="#E09F00"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint2_linear_584118_5615" x1="5.75" y1="5.65637" x2="5.75" y2="2.09354" gradientUnits="userSpaceOnUse">
+<stop offset="0.11351" stop-color="#D18B00"/>
+<stop offset="0.61622" stop-color="#E09F00"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint3_linear_584118_5615" x1="18.8903" y1="19.3714" x2="8.64585" y2="1.62746" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint4_linear_584118_5615" x1="7.50025" y1="16.5985" x2="4.49975" y2="11.4015" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint5_linear_584118_5615" x1="6.64296" y1="15.1137" x2="5.35704" y2="12.8864" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CCBF4"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint6_linear_584118_5615" x1="18.8903" y1="19.3714" x2="8.64585" y2="1.62746" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint7_linear_584118_5615" x1="7.50025" y1="16.5985" x2="4.49975" y2="11.4015" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-windows-file-recovery-standard-24-paint8_linear_584118_5615" x1="6.64296" y1="15.1137" x2="5.35704" y2="12.8864" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CCBF4"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<clipPath id="app-windows-file-recovery-standard-24-clip0_584118_5615">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

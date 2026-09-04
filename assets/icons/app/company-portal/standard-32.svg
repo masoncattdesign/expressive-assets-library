@@ -1,0 +1,79 @@
+<svg aria-label="Company Portal standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-company-portal-standard-32-clip0_584118_6272)">
+<path d="M-8.85849e-05 22.625V13L23.3332 10.9375L21.3332 24H1.33324C0.974122 23.9944 0.631931 23.8464 0.381901 23.5885C0.131872 23.3307 -0.00552789 22.9841 -8.85849e-05 22.625Z" fill="url(#app-company-portal-standard-32-paint0_linear_584118_6272)"/>
+<path d="M21 24V17.125L32 18V22.625C32 22.9897 31.8551 23.3394 31.5973 23.5973C31.3394 23.8551 30.9897 24 30.625 24H21Z" fill="url(#app-company-portal-standard-32-paint1_linear_584118_6272)"/>
+<path d="M21 18.875V12L32 13V18.875H21Z" fill="url(#app-company-portal-standard-32-paint2_linear_584118_6272)"/>
+<path d="M12.6666 13H-8.85873e-05V3.375C-0.00552788 3.01588 0.131873 2.66929 0.381905 2.41145C0.631936 2.1536 0.974131 2.00561 1.33325 2H10.9999L12.6666 13Z" fill="url(#app-company-portal-standard-32-paint3_linear_584118_6272)"/>
+<path d="M23.667 13H11V2H21.667L23.667 13Z" fill="url(#app-company-portal-standard-32-paint4_linear_584118_6272)"/>
+<path d="M21 2H30.625C30.9897 2 31.3394 2.14487 31.5973 2.40273C31.8551 2.66059 32 3.01033 32 3.375V13H21V2Z" fill="url(#app-company-portal-standard-32-paint5_linear_584118_6272)"/>
+<mask id="app-company-portal-standard-32-mask0_584118_6272" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="2" width="33" height="22">
+<path d="M30.6249 2C30.9895 2 31.3397 2.14454 31.5976 2.40234C31.8554 2.66021 31.9999 3.01033 31.9999 3.375V22.625C31.9999 22.9897 31.8554 23.3398 31.5976 23.5977C31.3397 23.8555 30.9895 24 30.6249 24H1.33292C0.973979 23.9943 0.631665 23.8466 0.381747 23.5889C0.131719 23.331 -0.00552712 22.9841 -8.84532e-05 22.625V3.375C-0.00552711 3.01588 0.131716 2.66898 0.381747 2.41113C0.631665 2.15341 0.973979 2.00574 1.33292 2H30.6249Z" fill="url(#app-company-portal-standard-32-paint6_linear_584118_6272)"/>
+</mask>
+<g mask="url(#app-company-portal-standard-32-mask0_584118_6272)">
+<g filter="url(#app-company-portal-standard-32-filter0_dd_584118_6272)">
+<path d="M11 20.4802C12.1819 20.4802 13.3524 20.7125 14.4443 21.1648C15.5363 21.6171 16.5285 22.2802 17.3643 23.116C18.1999 23.9516 18.8622 24.9441 19.3145 26.0359C19.7667 27.1278 20 28.2983 20 29.4802V31.3572C20 31.5276 19.932 31.6907 19.8115 31.8113C19.691 31.9318 19.5278 31.9997 19.3574 31.9998H2.64258C2.47218 31.9997 2.30897 31.9318 2.18848 31.8113C2.06801 31.6907 2 31.5276 2 31.3572V29.4802C2 27.0933 2.94797 24.8038 4.63574 23.116C6.32357 21.4281 8.61305 20.4802 11 20.4802ZM11 8.85718C13.8402 8.85719 16.1424 11.1596 16.1426 13.9998C16.1426 16.8401 13.8403 19.1433 11 19.1433C8.15968 19.1433 5.85742 16.8401 5.85742 13.9998C5.85757 11.1596 8.15977 8.85718 11 8.85718Z" fill="url(#app-company-portal-standard-32-paint7_linear_584118_6272)"/>
+</g>
+</g>
+<path d="M11 19.1429C13.8404 19.1429 16.1429 16.8404 16.1429 14C16.1429 11.1597 13.8404 8.85718 11 8.85718C8.15971 8.85718 5.85718 11.1597 5.85718 14C5.85718 16.8404 8.15971 19.1429 11 19.1429Z" fill="url(#app-company-portal-standard-32-paint8_linear_584118_6272)"/>
+<path d="M11 20.48C12.1819 20.48 13.3522 20.7128 14.4442 21.1651C15.5361 21.6174 16.5282 22.2804 17.364 23.1161C18.1997 23.9518 18.8626 24.944 19.3149 26.0359C19.7672 27.1278 20 28.2981 20 29.48V31.3572C20 31.5277 19.9323 31.6912 19.8117 31.8118C19.6911 31.9323 19.5276 32 19.3571 32H2.64286C2.47236 32 2.30885 31.9323 2.18829 31.8118C2.06773 31.6912 2 31.5277 2 31.3572V29.48C2 27.0931 2.94821 24.8039 4.63604 23.1161C6.32387 21.4283 8.61305 20.48 11 20.48Z" fill="url(#app-company-portal-standard-32-paint9_linear_584118_6272)"/>
+</g>
+<defs>
+<filter id="app-company-portal-standard-32-filter0_dd_584118_6272" x="0.666667" y="8.19051" width="20.6667" height="25.8092" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6272"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.133333"/>
+<feGaussianBlur stdDeviation="0.0666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6272" result="effect2_dropShadow_584118_6272"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6272" result="shape"/>
+</filter>
+<linearGradient id="app-company-portal-standard-32-paint0_linear_584118_6272" x1="17.1271" y1="26.4284" x2="7.03058" y2="8.94084" gradientUnits="userSpaceOnUse">
+<stop stop-color="#173A73"/>
+<stop offset="1" stop-color="#114A8B"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint1_linear_584118_6272" x1="28.9225" y1="25.1959" x2="23.4471" y2="15.7122" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint2_linear_584118_6272" x1="29.147" y1="20.5222" x2="23.42" y2="10.6028" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint3_linear_584118_6272" x1="9.67315" y1="14.7283" x2="1.98959" y2="1.41995" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint4_linear_584118_6272" x1="20.5482" y1="14.8004" x2="12.6184" y2="1.0656" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint5_linear_584118_6272" x1="30.0387" y1="14.1323" x2="22.5256" y2="1.11919" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint6_linear_584118_6272" x1="30.0387" y1="14.1323" x2="22.5255" y2="1.11919" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint7_linear_584118_6272" x1="14.3026" y1="35.0175" x2="6.5784" y2="21.6387" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint8_linear_584118_6272" x1="13.5719" y1="18.4546" x2="8.42818" y2="9.54545" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-company-portal-standard-32-paint9_linear_584118_6272" x1="14.3026" y1="35.0179" x2="6.57826" y2="21.6389" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<clipPath id="app-company-portal-standard-32-clip0_584118_6272">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,98 @@
+<svg aria-label="Live Captions standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-live-captions-standard-24-clip0_584118_4234)">
+<path d="M22.9999 2.99998H0.999995C0.447713 2.99998 0 3.4477 0 3.99998V19.9999C0 20.5522 0.447713 20.9999 0.999995 20.9999H22.9999C23.5522 20.9999 23.9999 20.5522 23.9999 19.9999V3.99998C23.9999 3.4477 23.5522 2.99998 22.9999 2.99998Z" fill="url(#app-live-captions-standard-24-paint0_linear_584118_4234)"/>
+<g filter="url(#app-live-captions-standard-24-filter0_dd_584118_4234)">
+<rect x="2.99998" y="14.9999" width="10.9999" height="0.999995" rx="0.5" fill="url(#app-live-captions-standard-24-paint1_linear_584118_4234)"/>
+</g>
+<g filter="url(#app-live-captions-standard-24-filter1_dd_584118_4234)">
+<rect x="10.9999" y="16.9999" width="9.99995" height="0.999995" rx="0.5" fill="url(#app-live-captions-standard-24-paint2_linear_584118_4234)"/>
+</g>
+<g filter="url(#app-live-captions-standard-24-filter2_dd_584118_4234)">
+<rect x="15.9999" y="14.9999" width="4.99997" height="0.999995" rx="0.5" fill="url(#app-live-captions-standard-24-paint3_linear_584118_4234)"/>
+</g>
+<g filter="url(#app-live-captions-standard-24-filter3_dd_584118_4234)">
+<rect x="2.99998" y="16.9999" width="5.99997" height="0.999995" rx="0.5" fill="url(#app-live-captions-standard-24-paint4_linear_584118_4234)"/>
+</g>
+</g>
+<defs>
+<filter id="app-live-captions-standard-24-filter0_dd_584118_4234" x="1.49999" y="13.9999" width="13.9999" height="3.99998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.25"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4234"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4234" result="effect2_dropShadow_584118_4234"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4234" result="shape"/>
+</filter>
+<filter id="app-live-captions-standard-24-filter1_dd_584118_4234" x="9.49995" y="15.9999" width="12.9999" height="3.99998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.25"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4234"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4234" result="effect2_dropShadow_584118_4234"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4234" result="shape"/>
+</filter>
+<filter id="app-live-captions-standard-24-filter2_dd_584118_4234" x="14.4999" y="13.9999" width="7.99996" height="3.99998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.25"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4234"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4234" result="effect2_dropShadow_584118_4234"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4234" result="shape"/>
+</filter>
+<filter id="app-live-captions-standard-24-filter3_dd_584118_4234" x="1.49999" y="15.9999" width="8.99995" height="3.99998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.25"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4234"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.75"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4234" result="effect2_dropShadow_584118_4234"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4234" result="shape"/>
+</filter>
+<linearGradient id="app-live-captions-standard-24-paint0_linear_584118_4234" x1="17.0746" y1="17.6615" x2="9.06202" y2="1.50325" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-24-paint1_linear_584118_4234" x1="5.49997" y1="14.8522" x2="5.5263" y2="16.0107" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-24-paint2_linear_584118_4234" x1="13.2727" y1="16.8522" x2="13.3016" y2="18.0105" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-24-paint3_linear_584118_4234" x1="17.1363" y1="14.8522" x2="17.1941" y2="16.0084" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-24-paint4_linear_584118_4234" x1="4.36361" y1="16.8522" x2="4.41183" y2="18.0093" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<clipPath id="app-live-captions-standard-24-clip0_584118_4234">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,98 @@
+<svg aria-label="Printer standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-printer-standard-48-clip0_584118_6647)">
+<path d="M6 12H42C43.5913 12 45.1174 12.6321 46.2426 13.7574C47.3679 14.8826 48 16.4087 48 18V37C48 37.5304 47.7893 38.0391 47.4142 38.4142C47.0391 38.7893 46.5304 39 46 39H2C1.46957 39 0.960859 38.7893 0.585786 38.4142C0.210714 38.0391 0 37.5304 0 37V18C0 16.4087 0.632141 14.8826 1.75736 13.7574C2.88258 12.6321 4.4087 12 6 12Z" fill="url(#app-printer-standard-48-paint0_linear_584118_6647)"/>
+<path d="M42 18H39V21H42V18Z" fill="#78D30C"/>
+<mask id="app-printer-standard-48-mask0_584118_6647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="12" width="48" height="27">
+<path d="M6 12H42C43.5913 12 45.1174 12.6321 46.2426 13.7574C47.3679 14.8826 48 16.4087 48 18V37C48 37.5304 47.7893 38.0391 47.4142 38.4142C47.0391 38.7893 46.5304 39 46 39H2C1.46957 39 0.960859 38.7893 0.585786 38.4142C0.210714 38.0391 0 37.5304 0 37V18C0 16.4087 0.632141 14.8826 1.75736 13.7574C2.88258 12.6321 4.4087 12 6 12Z" fill="url(#app-printer-standard-48-paint1_linear_584118_6647)"/>
+</mask>
+<g mask="url(#app-printer-standard-48-mask0_584118_6647)">
+<g filter="url(#app-printer-standard-48-filter0_dd_584118_6647)">
+<path d="M48 36H39V32C38.9984 30.6744 38.4715 29.4032 37.5342 28.4658C36.5968 27.5285 35.3256 27.0016 34 27H14C12.6744 27.0016 11.4032 27.5285 10.4658 28.4658C9.52848 29.4032 9.00156 30.6744 9 32V36H0V21H48V36Z" fill="url(#app-printer-standard-48-paint2_linear_584118_6647)"/>
+</g>
+</g>
+<path d="M48 36H39L24 31.714L9 36H0V21H48V36Z" fill="url(#app-printer-standard-48-paint3_linear_584118_6647)"/>
+<path d="M39 36V32C38.9984 30.6744 38.4712 29.4035 37.5338 28.4662C36.5965 27.5288 35.3256 27.0016 34 27H14C12.6744 27.0016 11.4035 27.5288 10.4662 28.4662C9.52884 29.4035 9.00156 30.6744 9 32V36H39Z" fill="url(#app-printer-standard-48-paint4_linear_584118_6647)"/>
+<mask id="app-printer-standard-48-mask1_584118_6647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="12" width="48" height="27">
+<path d="M6 12H42C43.5913 12 45.1174 12.6321 46.2426 13.7574C47.3679 14.8826 48 16.4087 48 18V37C48 37.5304 47.7893 38.0391 47.4142 38.4142C47.0391 38.7893 46.5304 39 46 39H2C1.46957 39 0.960859 38.7893 0.585786 38.4142C0.210714 38.0391 0 37.5304 0 37V18C0 16.4087 0.632141 14.8826 1.75736 13.7574C2.88258 12.6321 4.4087 12 6 12Z" fill="url(#app-printer-standard-48-paint5_linear_584118_6647)"/>
+</mask>
+<g mask="url(#app-printer-standard-48-mask1_584118_6647)">
+<g filter="url(#app-printer-standard-48-filter1_dd_584118_6647)">
+<path d="M34 30H14C12.8954 30 12 30.8954 12 32V43C12 44.1046 12.8954 45 14 45H34C35.1046 45 36 44.1046 36 43V32C36 30.8954 35.1046 30 34 30Z" fill="url(#app-printer-standard-48-paint6_linear_584118_6647)"/>
+</g>
+</g>
+<path d="M34 30H14C12.8954 30 12 30.8954 12 32V43C12 44.1046 12.8954 45 14 45H34C35.1046 45 36 44.1046 36 43V32C36 30.8954 35.1046 30 34 30Z" fill="url(#app-printer-standard-48-paint7_linear_584118_6647)"/>
+<path d="M33.9999 18H30L28 10L36 12V15.9999C36 16.5304 35.7893 17.0391 35.4142 17.4142C35.0391 17.7893 34.5304 18 33.9999 18Z" fill="#0669BC"/>
+<path d="M30 18H24L22 10L30 12V18Z" fill="#78D30C"/>
+<path d="M36 12H28L30 6H34C34.5304 6 35.0391 6.21071 35.4142 6.58579C35.7893 6.96086 36 7.46957 36 8V12Z" fill="#0078D4"/>
+<path d="M24 18H18L16 10L24 12V18Z" fill="#0078D4"/>
+<path d="M30 12H22L24 6H30V12Z" fill="#9BF00B"/>
+<path d="M18 18H14.0001C13.4696 18 12.9609 17.7893 12.5858 17.4142C12.2107 17.0391 12 16.5304 12 15.9999V12L18 10V18Z" fill="#3CCBF4"/>
+<path d="M24 12H16L18 6H24V12Z" fill="#1493DF"/>
+<path d="M14.0001 6H18V12H12V8.0001C12 7.46964 12.2107 6.96091 12.5858 6.58582C12.9609 6.21072 13.4696 6 14.0001 6Z" fill="#50E6FF"/>
+</g>
+<defs>
+<filter id="app-printer-standard-48-filter0_dd_584118_6647" x="-2" y="19" width="52" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6647"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6647" result="effect2_dropShadow_584118_6647"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6647" result="shape"/>
+</filter>
+<filter id="app-printer-standard-48-filter1_dd_584118_6647" x="10" y="28" width="28" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6647"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6647" result="effect2_dropShadow_584118_6647"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6647" result="shape"/>
+</filter>
+<linearGradient id="app-printer-standard-48-paint0_linear_584118_6647" x1="34.8461" y1="45.7495" x2="12.6182" y2="7.24961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint1_linear_584118_6647" x1="34.8461" y1="45.7495" x2="12.6182" y2="7.24961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint2_linear_584118_6647" x1="33.2476" y1="44.5173" x2="14.7524" y2="12.4827" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint3_linear_584118_6647" x1="33.2476" y1="44.5173" x2="14.7524" y2="12.4827" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint4_linear_584118_6647" x1="28.9056" y1="41.828" x2="18.4241" y2="23.6734" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E2021"/>
+<stop offset="1" stop-color="#2E3133"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint5_linear_584118_6647" x1="34.8461" y1="45.7495" x2="12.6182" y2="7.24961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint6_linear_584118_6647" x1="29.8817" y1="47.6875" x2="18.1183" y2="27.3125" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-48-paint7_linear_584118_6647" x1="29.8817" y1="47.6875" x2="18.1183" y2="27.3125" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-printer-standard-48-clip0_584118_6647">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

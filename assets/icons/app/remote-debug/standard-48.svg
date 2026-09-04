@@ -1,0 +1,75 @@
+<svg aria-label="Remote Debug standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-remote-debug-standard-48-clip0_584118_5505)">
+<path d="M34 36H2C1.46957 36 0.960859 35.7893 0.585786 35.4142C0.210714 35.0391 0 34.5304 0 34V10H41V24C38.5 26.5 37.5 31.5 34 36Z" fill="url(#app-remote-debug-standard-48-paint0_linear_584118_5505)"/>
+<mask id="app-remote-debug-standard-48-mask0_584118_5505" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="10" width="41" height="26">
+<path d="M34 36H2C1.46957 36 0.960859 35.7893 0.585786 35.4142C0.210714 35.0391 0 34.5304 0 34V10H41V24C38.5 26.5 37.5 31.5 34 36Z" fill="url(#app-remote-debug-standard-48-paint1_linear_584118_5505)"/>
+</mask>
+<g mask="url(#app-remote-debug-standard-48-mask0_584118_5505)">
+<g filter="url(#app-remote-debug-standard-48-filter0_dd_584118_5505)">
+<path d="M47.4129 25.3309L43.4297 29.3138C43.0547 29.6886 42.5461 29.8991 42.0158 29.899C41.4855 29.899 40.977 29.6883 40.6021 29.3133C40.2271 28.9384 40.0164 28.4298 40.0163 27.8996C40.0162 27.3693 40.2268 26.8607 40.6016 26.4856V26.4854L44.5845 22.5025C43.555 22.0047 42.4041 21.8136 41.2689 21.952C40.1338 22.0904 39.0625 22.5525 38.1828 23.2831C37.3031 24.0137 36.6522 24.982 36.3077 26.0724C35.9632 27.1628 35.9397 28.3293 36.24 29.4327L23.8943 41.7784C23.3317 42.341 23.0156 43.104 23.0156 43.8997C23.0156 44.6954 23.3317 45.4584 23.8943 46.021C24.4569 46.5837 25.22 46.8997 26.0156 46.8997C26.8113 46.8997 27.5744 46.5837 28.137 46.0211L40.4829 33.6751C41.5863 33.9754 42.7528 33.9519 43.8431 33.6075C44.9335 33.263 45.9018 32.6121 46.6324 31.7324C47.363 30.8527 47.825 29.7814 47.9634 28.6463C48.1018 27.5113 47.9107 26.3603 47.4129 25.3309Z" fill="url(#app-remote-debug-standard-48-paint2_linear_584118_5505)"/>
+</g>
+</g>
+<path d="M41 7C41 6.46957 40.7893 5.96086 40.4142 5.58579C40.0391 5.21071 39.5304 5 39 5H2C1.46957 5 0.960859 5.21071 0.585786 5.58579C0.210714 5.96086 0 6.46957 0 7L0 11H41V7Z" fill="url(#app-remote-debug-standard-48-paint3_linear_584118_5505)"/>
+<g filter="url(#app-remote-debug-standard-48-filter1_dd_584118_5505)">
+<path d="M13.0957 15.1497C13.3198 15.1497 13.5347 15.2385 13.6934 15.3967L15.0342 16.7385C15.1518 16.856 15.2326 17.0053 15.2656 17.1682C15.2987 17.3312 15.2833 17.5005 15.2207 17.6545C15.1782 17.7593 15.1142 17.854 15.0342 17.9338L10.5586 22.4104L15.0342 26.886C15.1127 26.9645 15.1753 27.0578 15.2178 27.1604C15.2602 27.2629 15.2822 27.3727 15.2822 27.4836C15.2822 27.5947 15.2603 27.7053 15.2178 27.8079C15.1753 27.9103 15.1126 28.0029 15.0342 28.0813L13.6934 29.4231C13.6149 29.5015 13.5214 29.5633 13.4189 29.6057C13.3164 29.6482 13.2067 29.6702 13.0957 29.6702C12.9847 29.6702 12.875 29.6482 12.7725 29.6057C12.67 29.5633 12.5765 29.5015 12.498 29.4231L6.08301 23.0081C6.0044 22.9296 5.94196 22.8362 5.89941 22.7336C5.85692 22.6312 5.835 22.5213 5.83496 22.4104C5.83496 22.2993 5.85686 22.1888 5.89941 22.0862C5.94196 21.9837 6.00446 21.8902 6.08301 21.8118L12.498 15.3967C12.6567 15.2385 12.8716 15.1497 13.0957 15.1497ZM27.376 15.1497C27.6 15.1497 27.8151 15.2385 27.9736 15.3967L34.3887 21.8127C34.4671 21.8911 34.5298 21.9838 34.5723 22.0862C34.6148 22.1888 34.6367 22.2993 34.6367 22.4104C34.6367 22.5213 34.6147 22.6312 34.5723 22.7336C34.5298 22.8362 34.4672 22.9296 34.3887 23.0081L27.9736 29.4231C27.8953 29.5014 27.8026 29.5642 27.7002 29.6067C27.5976 29.6492 27.487 29.6702 27.376 29.6702C27.2651 29.6701 27.1552 29.6491 27.0527 29.6067C26.9502 29.5642 26.8568 29.5016 26.7783 29.4231L25.4375 28.0823C25.359 28.0039 25.2965 27.9103 25.2539 27.8079C25.2114 27.7053 25.1895 27.5947 25.1895 27.4836C25.1895 27.3727 25.2114 27.2629 25.2539 27.1604C25.2965 27.0578 25.3589 26.9645 25.4375 26.886L29.9131 22.4094L25.4375 17.9338C25.3591 17.8554 25.2964 17.7628 25.2539 17.6604C25.2114 17.5578 25.1895 17.4472 25.1895 17.3362C25.1895 17.2252 25.2115 17.1154 25.2539 17.0129C25.2964 16.9103 25.359 16.8171 25.4375 16.7385L26.7783 15.3967C26.9368 15.2384 27.1519 15.1497 27.376 15.1497Z" fill="url(#app-remote-debug-standard-48-paint4_linear_584118_5505)"/>
+</g>
+<path d="M47.413 25.3308L43.4299 29.3137C43.0548 29.6885 42.5462 29.8991 42.0159 29.899C41.4857 29.8989 40.9771 29.6882 40.6022 29.3133C40.2272 28.9383 40.0165 28.4298 40.0165 27.8995C40.0164 27.3692 40.2269 26.8607 40.6017 26.4856V26.4853L44.5846 22.5024C43.5551 22.0046 42.4042 21.8135 41.2691 21.952C40.134 22.0904 39.0626 22.5525 38.1829 23.2831C37.3032 24.0137 36.6523 24.9819 36.3078 26.0723C35.9633 27.1627 35.9399 28.3292 36.2402 29.4326L23.8944 41.7783C23.3318 42.3409 23.0157 43.104 23.0157 43.8996C23.0157 44.6953 23.3318 45.4584 23.8944 46.021C24.457 46.5836 25.2201 46.8997 26.0158 46.8997C26.8114 46.8997 27.5745 46.5836 28.1371 46.021L40.4831 33.675C41.5864 33.9753 42.7529 33.9519 43.8433 33.6074C44.9337 33.263 45.9019 32.612 46.6325 31.7324C47.3631 30.8527 47.8251 29.7814 47.9635 28.6463C48.1019 27.5112 47.9108 26.3602 47.413 25.3308Z" fill="url(#app-remote-debug-standard-48-paint5_linear_584118_5505)"/>
+</g>
+<defs>
+<filter id="app-remote-debug-standard-48-filter0_dd_584118_5505" x="21.0156" y="20.9082" width="28.9916" height="28.9915" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5505"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5505" result="effect2_dropShadow_584118_5505"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5505" result="shape"/>
+</filter>
+<filter id="app-remote-debug-standard-48-filter1_dd_584118_5505" x="3.83496" y="14.1497" width="32.8018" height="18.5205" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5505"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5505" result="effect2_dropShadow_584118_5505"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5505" result="shape"/>
+</filter>
+<linearGradient id="app-remote-debug-standard-48-paint0_linear_584118_5505" x1="31.2051" y1="40.8101" x2="10.0627" y2="4.19031" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="0.99441" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="app-remote-debug-standard-48-paint1_linear_584118_5505" x1="31.2051" y1="40.8101" x2="10.0627" y2="4.19031" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="0.99441" stop-color="#0C59A4"/>
+</linearGradient>
+<linearGradient id="app-remote-debug-standard-48-paint2_linear_584118_5505" x1="38.2609" y1="40.2949" x2="30.8324" y2="27.4283" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="0.99441" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-remote-debug-standard-48-paint3_linear_584118_5505" x1="26.6072" y1="19.3097" x2="14.125" y2="-2.31015" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="0.99441" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-remote-debug-standard-48-paint4_linear_584118_5505" x1="35.2756" y1="28.4177" x2="32.5729" y2="14.1468" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="0.99441" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-remote-debug-standard-48-paint5_linear_584118_5505" x1="38.261" y1="40.2948" x2="30.8325" y2="27.4283" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="0.99441" stop-color="#A1AAB3"/>
+</linearGradient>
+<clipPath id="app-remote-debug-standard-48-clip0_584118_5505">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

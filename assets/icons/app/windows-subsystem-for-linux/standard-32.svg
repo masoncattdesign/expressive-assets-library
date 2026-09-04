@@ -1,0 +1,76 @@
+<svg aria-label="Windows Subsystem for Linux standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 12C4 5.37258 9.37258 0 16 0C22.6274 0 28 5.37258 28 12V30.6667C28 31.403 27.403 32 26.6667 32H5.33333C4.59695 32 4 31.403 4 30.6667V12Z" fill="url(#app-windows-subsystem-for-linux-standard-32-paint0_linear_584118_6069)"/>
+<g filter="url(#app-windows-subsystem-for-linux-standard-32-filter0_dd_584118_6069)">
+<mask id="app-windows-subsystem-for-linux-standard-32-mask0_584118_6069" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="0" width="18" height="28">
+<rect x="7" width="17.9999" height="28" rx="8.99996" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#app-windows-subsystem-for-linux-standard-32-mask0_584118_6069)">
+<path d="M11.1785 7C9.04812 7 7.32141 8.81486 7.32141 11.0541V32H15.0357V11.0541C15.0357 8.81486 13.309 7 11.1785 7Z" fill="white"/>
+<path d="M20.8214 7C18.691 7 16.9642 8.79067 16.9642 11V31.6667H24.6786V11C24.6786 8.79067 22.9518 7 20.8214 7Z" fill="white"/>
+<path d="M17.9285 20.6667H14.0714V32H17.9285V20.6667Z" fill="white"/>
+</g>
+<path d="M25 20.1852C25 25.0535 20.9705 28.9996 16 28.9996C11.0295 28.9996 7.00001 25.0535 7 20.1852V17.6666C7 22.5349 11.0295 26.4811 16 26.4811C20.9705 26.4811 25 22.5349 25 17.6666V20.1852Z" fill="#FFC225"/>
+</g>
+<path d="M24.9248 18C24.9723 18.3743 25 18.7554 25 19.1426V20C25 24.9705 20.9705 29 16 29C11.0295 29 7 24.9705 7 20V19.1426C7.00001 18.7554 7.02678 18.3743 7.07422 18C7.63587 22.4308 11.4167 25.8574 16 25.8574C20.5832 25.8574 24.3631 22.4307 24.9248 18Z" fill="#FFC700"/>
+<mask id="app-windows-subsystem-for-linux-standard-32-mask1_584118_6069" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="0" width="20" height="27">
+<rect x="6.66663" width="18.6667" height="26.6667" rx="9.33333" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#app-windows-subsystem-for-linux-standard-32-mask1_584118_6069)">
+<path d="M18 20.6667H14V28H18V20.6667Z" fill="white"/>
+<rect x="17" y="7" width="8" height="23.3333" rx="4" fill="white"/>
+<rect x="7" y="7" width="8" height="23.3333" rx="4" fill="white"/>
+</g>
+<circle cx="11" cy="12" r="2" fill="black"/>
+<circle cx="21" cy="12" r="2" fill="black"/>
+<g filter="url(#app-windows-subsystem-for-linux-standard-32-filter1_dd_584118_6069)">
+<circle cx="16" cy="19" r="3.85537" fill="white"/>
+</g>
+<path d="M16 17.6667C17.4362 17.6667 18.7897 18.0181 19.9824 18.6364C19.9932 18.7561 20 18.8772 20 18.9997C20 21.2088 18.2091 22.9997 16 22.9997C13.7909 22.9997 12 21.2088 12 18.9997C12 18.8772 12.0058 18.7561 12.0166 18.6364C13.2095 18.0178 14.5635 17.6667 16 17.6667Z" fill="url(#app-windows-subsystem-for-linux-standard-32-paint1_linear_584118_6069)"/>
+<path d="M15.9996 15C18.1059 15 19.8307 16.6281 19.9869 18.6943C18.7931 19.3142 17.4377 19.667 15.9996 19.667C14.5615 19.6669 13.2062 19.3143 12.0123 18.6943C12.1685 16.6282 13.8935 15.0002 15.9996 15Z" fill="url(#app-windows-subsystem-for-linux-standard-32-paint2_linear_584118_6069)"/>
+<defs>
+<filter id="app-windows-subsystem-for-linux-standard-32-filter0_dd_584118_6069" x="5" y="5" width="22" height="25.9996" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6069"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.333333"/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6069" result="effect2_dropShadow_584118_6069"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6069" result="shape"/>
+</filter>
+<filter id="app-windows-subsystem-for-linux-standard-32-filter1_dd_584118_6069" x="10.1447" y="13.1446" width="11.7107" height="11.7108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6069"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.333333"/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6069" result="effect2_dropShadow_584118_6069"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6069" result="shape"/>
+</filter>
+<linearGradient id="app-windows-subsystem-for-linux-standard-32-paint0_linear_584118_6069" x1="23.9945" y1="33.7493" x2="6.57712" y2="3.58158" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-windows-subsystem-for-linux-standard-32-paint1_linear_584118_6069" x1="18.0003" y1="22.4644" x2="14" y2="15.5353" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B0570C"/>
+<stop offset="1" stop-color="#EC7A01"/>
+</linearGradient>
+<linearGradient id="app-windows-subsystem-for-linux-standard-32-paint2_linear_584118_6069" x1="20.3323" y1="18.5071" x2="11.6618" y2="3.49542" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EC7A01"/>
+<stop offset="0.3346" stop-color="#F69E13"/>
+</linearGradient>
+</defs>
+</svg>

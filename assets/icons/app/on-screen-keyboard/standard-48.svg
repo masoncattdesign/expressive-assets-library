@@ -1,0 +1,71 @@
+<svg aria-label="On-Screen Keyboard standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-on-screen-keyboard-standard-48-clip0_584118_4116)">
+<rect x="6" y="12" width="42" height="33" rx="3" fill="url(#app-on-screen-keyboard-standard-48-paint0_linear_584118_4116)"/>
+<path d="M48 42C48 43.6569 46.6569 45 45 45H9C7.34315 45 6 43.6569 6 42H48Z" fill="url(#app-on-screen-keyboard-standard-48-paint1_linear_584118_4116)"/>
+<mask id="app-on-screen-keyboard-standard-48-mask0_584118_4116" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="12" width="42" height="33">
+<rect x="6" y="12" width="42" height="33" rx="3" fill="url(#app-on-screen-keyboard-standard-48-paint2_linear_584118_4116)"/>
+</mask>
+<g mask="url(#app-on-screen-keyboard-standard-48-mask0_584118_4116)">
+<g filter="url(#app-on-screen-keyboard-standard-48-filter0_dd_584118_4116)">
+<path d="M1.34951e-05 22.5656L7.29526e-05 7.43433C8.04057e-05 5.5376 1.53769 4 3.43442 4H29.5657C31.4624 4 33 5.53761 33 7.43434V22.5657C33 24.4624 31.4624 26 29.5657 26H3.43436C1.53762 26 6.04196e-06 24.4624 1.34951e-05 22.5656Z" fill="url(#app-on-screen-keyboard-standard-48-paint3_linear_584118_4116)"/>
+</g>
+</g>
+<rect y="3" width="33" height="23" rx="3" fill="url(#app-on-screen-keyboard-standard-48-paint4_linear_584118_4116)"/>
+<g filter="url(#app-on-screen-keyboard-standard-48-filter1_dd_584118_4116)">
+<path d="M25.5 19C26.3284 19 27 19.6716 27 20.5C27 21.3284 26.3284 22 25.5 22H7.5C6.67157 22 6 21.3284 6 20.5C6 19.6716 6.67157 19 7.5 19H25.5ZM10.5 13C11.3284 13 12 13.6716 12 14.5C12 15.3284 11.3284 16 10.5 16C9.67157 16 9 15.3284 9 14.5C9 13.6716 9.67157 13 10.5 13ZM16.5 13C17.3284 13 18 13.6716 18 14.5C18 15.3284 17.3284 16 16.5 16C15.6716 16 15 15.3284 15 14.5C15 13.6716 15.6716 13 16.5 13ZM22.5 13C23.3284 13 24 13.6716 24 14.5C24 15.3284 23.3284 16 22.5 16C21.6716 16 21 15.3284 21 14.5C21 13.6716 21.6716 13 22.5 13ZM7.5 7C8.32843 7 9 7.67157 9 8.5C9 9.32843 8.32843 10 7.5 10C6.67157 10 6 9.32843 6 8.5C6 7.67157 6.67157 7 7.5 7ZM13.5 7C14.3284 7 15 7.67157 15 8.5C15 9.32843 14.3284 10 13.5 10C12.6716 10 12 9.32843 12 8.5C12 7.67157 12.6716 7 13.5 7ZM19.5 7C20.3284 7 21 7.67157 21 8.5C21 9.32843 20.3284 10 19.5 10C18.6716 10 18 9.32843 18 8.5C18 7.67157 18.6716 7 19.5 7ZM25.5 7C26.3284 7 27 7.67157 27 8.5C27 9.32843 26.3284 10 25.5 10C24.6716 10 24 9.32843 24 8.5C24 7.67157 24.6716 7 25.5 7Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="app-on-screen-keyboard-standard-48-filter0_dd_584118_4116" x="-3.33333" y="0.666667" width="39.6667" height="28.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.555556"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4116"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.66667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4116" result="effect2_dropShadow_584118_4116"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4116" result="shape"/>
+</filter>
+<filter id="app-on-screen-keyboard-standard-48-filter1_dd_584118_4116" x="3" y="4" width="27" height="21" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4116"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4116" result="effect2_dropShadow_584118_4116"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4116" result="shape"/>
+</filter>
+<linearGradient id="app-on-screen-keyboard-standard-48-paint0_linear_584118_4116" x1="38.2826" y1="51.2973" x2="11.2547" y2="9.59053" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-48-paint1_linear_584118_4116" x1="32.6532" y1="49.5562" x2="28.3243" y2="36.4349" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737A80"/>
+<stop offset="1" stop-color="#8A9299"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-48-paint2_linear_584118_4116" x1="38.2826" y1="51.2973" x2="11.2547" y2="9.59053" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-48-paint3_linear_584118_4116" x1="23.4619" y1="21.831" x2="14.4314" y2="1.30294" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-on-screen-keyboard-standard-48-paint4_linear_584118_4116" x1="23.4619" y1="21.6415" x2="13.7384" y2="0.499071" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<clipPath id="app-on-screen-keyboard-standard-48-clip0_584118_4116">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

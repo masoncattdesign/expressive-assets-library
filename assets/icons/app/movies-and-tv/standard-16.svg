@@ -1,0 +1,101 @@
+<svg aria-label="Movies and TV standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-movies-and-tv-standard-16-clip0_584118_1614)">
+<path d="M0 15.3333V4.66667H15.3333C15.5101 4.66667 15.6797 4.73691 15.8047 4.86193C15.9298 4.98696 16 5.15653 16 5.33334V15.3333C16 15.5101 15.9298 15.6797 15.8047 15.8047C15.6797 15.9298 15.5101 16 15.3333 16H0.666667C0.489856 16 0.320286 15.9298 0.195262 15.8047C0.0702379 15.6797 0 15.5101 0 15.3333Z" fill="url(#app-movies-and-tv-standard-16-paint0_linear_584118_1614)"/>
+<mask id="app-movies-and-tv-standard-16-mask0_584118_1614" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="16" height="12">
+<path d="M0 15.3333V4.66667H15.3333C15.5101 4.66667 15.6797 4.73691 15.8047 4.86193C15.9298 4.98696 16 5.15653 16 5.33334V15.3333C16 15.5101 15.9298 15.6797 15.8047 15.8047C15.6797 15.9298 15.5101 16 15.3333 16H0.666667C0.489856 16 0.320286 15.9298 0.195262 15.8047C0.0702379 15.6797 0 15.5101 0 15.3333Z" fill="url(#app-movies-and-tv-standard-16-paint1_linear_584118_1614)"/>
+</mask>
+<g mask="url(#app-movies-and-tv-standard-16-mask0_584118_1614)">
+<g filter="url(#app-movies-and-tv-standard-16-filter0_dd_584118_1614)">
+<path d="M0.592 2.2045L3.56338 1.87908L3.52754 3.24279L2.53646 4.66718L1.78282 6.73233C1.70866 6.93525 1.56542 7.10557 1.37821 7.21341C1.191 7.32124 0.971801 7.3597 0.759067 7.32204C0.546332 7.28438 0.353657 7.173 0.214852 7.00744C0.0760475 6.84189 -1.93541e-05 6.63274 3.69376e-09 6.4167V4.94289C3.69376e-09 4.94289 0.004 3.31329 0.004 2.93713C-0.00935511 2.76317 0.0439828 2.59065 0.153187 2.45459C0.262391 2.31853 0.419277 2.22911 0.592 2.2045Z" fill="black"/>
+<path d="M6.865 1.51766L7.00967 2.838L5.83367 4.30333L2.537 4.66767L3.56338 1.87908L6.865 1.51766Z" fill="black"/>
+<path d="M10.1663 1.156L10.311 2.47667L9.135 3.94167L5.83367 4.30333L6.865 1.51766L10.1663 1.156Z" fill="black"/>
+<path d="M13.468 0.794332L13.6127 2.115L12.4367 3.58033L9.135 3.94167L10.1663 1.156L13.468 0.794332Z" fill="black"/>
+<path d="M15.1187 0.613567C15.2055 0.604071 15.2932 0.611746 15.3769 0.636157C15.4607 0.660567 15.5388 0.701233 15.6068 0.755834C15.6749 0.810436 15.7315 0.877902 15.7734 0.954381C15.8154 1.03086 15.8419 1.11485 15.8514 1.20157L15.996 2.52217C16.0055 2.60888 15.9978 2.69662 15.9734 2.78037C15.949 2.86411 15.9083 2.94223 15.8537 3.01026C15.7991 3.07829 15.7317 3.1349 15.6552 3.17686C15.5787 3.21882 15.4947 3.2453 15.408 3.25479L12.4367 3.58033L13.468 0.794332L15.1187 0.613567Z" fill="black"/>
+</g>
+</g>
+<path d="M0.592 2.20451L3.56338 1.87909L3.52754 3.2428L2.53646 4.66719L1.78282 6.73234C1.70866 6.93525 1.56542 7.10557 1.37821 7.21341C1.191 7.32125 0.971801 7.35971 0.759067 7.32204C0.546332 7.28438 0.353657 7.173 0.214852 7.00745C0.0760475 6.8419 -1.93541e-05 6.63275 3.69376e-09 6.41671V4.9429C3.69376e-09 4.9429 0.004 3.31329 0.004 2.93713C-0.00935511 2.76318 0.0439828 2.59066 0.153187 2.45459C0.262391 2.31853 0.419277 2.22912 0.592 2.20451Z" fill="url(#app-movies-and-tv-standard-16-paint2_linear_584118_1614)"/>
+<path d="M6.86474 1.51767L7.00941 2.838L5.83341 4.30334L2.53674 4.66767L3.56308 1.879L6.86474 1.51767Z" fill="url(#app-movies-and-tv-standard-16-paint3_linear_584118_1614)"/>
+<path d="M10.1664 1.15601L10.3111 2.47667L9.13508 3.94167L5.83374 4.30334L6.86507 1.51767L10.1664 1.15601Z" fill="url(#app-movies-and-tv-standard-16-paint4_linear_584118_1614)"/>
+<path d="M13.4678 0.794327L13.6124 2.11499L12.4364 3.58033L9.13477 3.94166L10.1661 1.15599L13.4678 0.794327Z" fill="url(#app-movies-and-tv-standard-16-paint5_linear_584118_1614)"/>
+<path d="M15.1189 0.613567C15.2056 0.604071 15.2933 0.611746 15.3771 0.636157C15.4608 0.660567 15.539 0.701233 15.607 0.755834C15.675 0.810436 15.7316 0.877902 15.7736 0.954381C15.8155 1.03086 15.842 1.11485 15.8515 1.20157L15.9961 2.52217C16.0056 2.60888 15.998 2.69662 15.9736 2.78037C15.9491 2.86411 15.9085 2.94223 15.8539 3.01026C15.7993 3.07829 15.7318 3.1349 15.6553 3.17686C15.5789 3.21882 15.4949 3.2453 15.4081 3.25479L12.4368 3.58021L13.4681 0.794354L15.1189 0.613567Z" fill="url(#app-movies-and-tv-standard-16-paint6_linear_584118_1614)"/>
+<g filter="url(#app-movies-and-tv-standard-16-filter1_dd_584118_1614)">
+<path d="M6.60835 6.73469L11.32 9.98095C11.3757 10.0213 11.4211 10.0742 11.4524 10.1355C11.4837 10.1967 11.5 10.2645 11.5 10.3333C11.5 10.4021 11.4837 10.4699 11.4524 10.5312C11.4211 10.5924 11.3757 10.6454 11.32 10.6857L6.60835 13.932C6.54731 13.9717 6.47645 13.9938 6.40364 13.9957C6.33083 13.9976 6.25892 13.9792 6.19589 13.9427C6.13287 13.9062 6.08119 13.853 6.04662 13.7889C6.01204 13.7247 5.99591 13.6523 6.00002 13.5796V7.08707C5.99591 7.01435 6.01204 6.94192 6.04662 6.87781C6.08119 6.81371 6.13287 6.76044 6.19589 6.72393C6.25892 6.68742 6.33083 6.6691 6.40364 6.671C6.47645 6.6729 6.54731 6.69495 6.60835 6.73469Z" fill="url(#app-movies-and-tv-standard-16-paint7_linear_584118_1614)"/>
+</g>
+</g>
+<defs>
+<filter id="app-movies-and-tv-standard-16-filter0_dd_584118_1614" x="-3" y="-1.39038" width="22" height="12.7265" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1614"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1614" result="effect2_dropShadow_584118_1614"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1614" result="shape"/>
+</filter>
+<filter id="app-movies-and-tv-standard-16-filter1_dd_584118_1614" x="2.99939" y="4.67087" width="11.5006" height="13.3249" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1614"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1614" result="effect2_dropShadow_584118_1614"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1614" result="shape"/>
+</filter>
+<linearGradient id="app-movies-and-tv-standard-16-paint0_linear_584118_1614" x1="13.4858" y1="19.835" x2="3.26211" y2="2.12707" gradientUnits="userSpaceOnUse">
+<stop offset="0.02935" stop-color="#004EB5"/>
+<stop offset="0.16725" stop-color="#0455B9"/>
+<stop offset="0.3724" stop-color="#0D6AC3"/>
+<stop offset="0.61945" stop-color="#1D8BD4"/>
+<stop offset="0.89686" stop-color="#33B8EA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint1_linear_584118_1614" x1="13.4858" y1="19.835" x2="3.26211" y2="2.12707" gradientUnits="userSpaceOnUse">
+<stop offset="0.02935" stop-color="#004EB5"/>
+<stop offset="0.16725" stop-color="#0455B9"/>
+<stop offset="0.3724" stop-color="#0D6AC3"/>
+<stop offset="0.61945" stop-color="#1D8BD4"/>
+<stop offset="0.89686" stop-color="#33B8EA"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint2_linear_584118_1614" x1="2.95549" y1="6.31189" x2="0.558593" y2="2.16035" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint3_linear_584118_1614" x1="5.50811" y1="4.49112" x2="3.89083" y2="1.68989" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint4_linear_584118_1614" x1="8.80872" y1="4.13027" x2="7.19143" y2="1.32904" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="0.90483" stop-color="#26ACE9"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint5_linear_584118_1614" x1="12.1099" y1="3.76868" x2="10.4927" y2="0.967453" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="0.09517" stop-color="#2AB2EB"/>
+<stop offset="1" stop-color="#3CCBF4"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint6_linear_584118_1614" x1="14.8869" y1="3.62091" x2="13.3083" y2="0.886658" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3CCBF4"/>
+<stop offset="0.93481" stop-color="#4FE4FE"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-movies-and-tv-standard-16-paint7_linear_584118_1614" x1="10.3578" y1="14.7415" x2="6.36131" y2="7.81933" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCCCC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-movies-and-tv-standard-16-clip0_584118_1614">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

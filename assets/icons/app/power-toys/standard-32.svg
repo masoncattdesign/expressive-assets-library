@@ -1,0 +1,76 @@
+<svg aria-label="PowerToys standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-power-toys-standard-32-clip0_584118_5748)">
+<path d="M28.6667 2H3.33333C2.59695 2 2 2.59695 2 3.33333V28.6667C2 29.403 2.59695 30 3.33333 30H28.6667C29.403 30 30 29.403 30 28.6667V3.33333C30 2.59695 29.403 2 28.6667 2Z" fill="url(#app-power-toys-standard-32-paint0_linear_584118_5748)"/>
+<path d="M28 4H4V28H28V4Z" fill="#666666"/>
+<g opacity="0.32" style="mix-blend-mode:multiply">
+<path d="M23.4091 7H8.59094C8.26457 7 8 7.26457 8 7.59094V17.4091C8 17.7354 8.26457 18 8.59094 18H23.4091C23.7354 18 24 17.7354 24 17.4091V7.59094C24 7.26457 23.7354 7 23.4091 7Z" fill="white"/>
+</g>
+<g opacity="0.24" style="mix-blend-mode:multiply">
+<path d="M23.4091 7H8.59094C8.26457 7 8 7.26457 8 7.59094V17.4091C8 17.7354 8.26457 18 8.59094 18H23.4091C23.7354 18 24 17.7354 24 17.4091V7.59094C24 7.26457 23.7354 7 23.4091 7Z" fill="white"/>
+</g>
+<g filter="url(#app-power-toys-standard-32-filter0_dd_584118_5748)">
+<path d="M16 7H12V18H16V7Z" fill="url(#app-power-toys-standard-32-paint1_linear_584118_5748)"/>
+<path d="M8.625 7H12V18H8.625C8.45924 18 8.30027 17.9342 8.18306 17.8169C8.06585 17.6997 8 17.5408 8 17.375V7.625C8 7.45924 8.06585 7.30027 8.18306 7.18306C8.30027 7.06585 8.45924 7 8.625 7Z" fill="url(#app-power-toys-standard-32-paint2_linear_584118_5748)"/>
+<path d="M20 7H16V18H20V7Z" fill="url(#app-power-toys-standard-32-paint3_linear_584118_5748)"/>
+<path d="M20 7H23.3679C23.4509 7 23.5331 7.01635 23.6098 7.04811C23.6865 7.07988 23.7562 7.12644 23.8149 7.18513C23.8736 7.24383 23.9201 7.31351 23.9519 7.39019C23.9837 7.46688 24 7.54907 24 7.63208V17.3679C24 17.5356 23.9334 17.6963 23.8149 17.8149C23.6963 17.9334 23.5356 18 23.3679 18H20V7Z" fill="url(#app-power-toys-standard-32-paint4_linear_584118_5748)"/>
+</g>
+<path d="M11.4167 21H8.58333C8.26117 21 8 21.2612 8 21.5833V24.4167C8 24.7388 8.26117 25 8.58333 25H11.4167C11.7388 25 12 24.7388 12 24.4167V21.5833C12 21.2612 11.7388 21 11.4167 21Z" fill="url(#app-power-toys-standard-32-paint5_linear_584118_5748)"/>
+<path d="M17.4167 21H14.5833C14.2612 21 14 21.2612 14 21.5833V24.4167C14 24.7388 14.2612 25 14.5833 25H17.4167C17.7388 25 18 24.7388 18 24.4167V21.5833C18 21.2612 17.7388 21 17.4167 21Z" fill="url(#app-power-toys-standard-32-paint6_linear_584118_5748)"/>
+<path d="M23.4167 21H20.5833C20.2612 21 20 21.2612 20 21.5833V24.4167C20 24.7388 20.2612 25 20.5833 25H23.4167C23.7388 25 24 24.7388 24 24.4167V21.5833C24 21.2612 23.7388 21 23.4167 21Z" fill="url(#app-power-toys-standard-32-paint7_linear_584118_5748)"/>
+</g>
+<defs>
+<filter id="app-power-toys-standard-32-filter0_dd_584118_5748" x="6.66667" y="6.33333" width="18.6667" height="13.6667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5748"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.133333"/>
+<feGaussianBlur stdDeviation="0.0666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5748" result="effect2_dropShadow_584118_5748"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5748" result="shape"/>
+</filter>
+<linearGradient id="app-power-toys-standard-32-paint0_linear_584118_5748" x1="25.3183" y1="32.1397" x2="6.68173" y2="-0.13972" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint1_linear_584118_5748" x1="16.8816" y1="17.491" x2="11.1184" y2="7.50897" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#FFB900"/>
+<stop offset="1" stop-color="#FEF000"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint2_linear_584118_5748" x1="12.9806" y1="17.4339" x2="7.33178" y2="7.64984" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#D83B01"/>
+<stop offset="1" stop-color="#EC6725"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint3_linear_584118_5748" x1="20.8816" y1="17.491" x2="15.1184" y2="7.50897" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#56B60E"/>
+<stop offset="1" stop-color="#66EB6E"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint4_linear_584118_5748" x1="24.6658" y1="17.3486" x2="19.0183" y2="7.56679" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.00279" stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint5_linear_584118_5748" x1="11.2593" y1="25.1812" x2="8.74068" y2="20.8188" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint6_linear_584118_5748" x1="17.2593" y1="25.1812" x2="14.7407" y2="20.8188" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<linearGradient id="app-power-toys-standard-32-paint7_linear_584118_5748" x1="23.2593" y1="25.1812" x2="20.7407" y2="20.8188" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D7CCB3"/>
+<stop offset="1" stop-color="#F2E6CA"/>
+</linearGradient>
+<clipPath id="app-power-toys-standard-32-clip0_584118_5748">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

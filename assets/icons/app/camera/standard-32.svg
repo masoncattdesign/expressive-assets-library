@@ -1,0 +1,41 @@
+<svg aria-label="Camera standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.3386 7.34118H30.6719C31.4083 7.34118 32 7.92996 32 8.66629V27.3316C32 28.0679 31.403 27.9982 30.6667 27.9982H1.33333C0.596947 27.9982 0 28.0679 0 27.3316V8.6663C0 7.92997 0.592057 7.33727 1.32843 7.33727H8.58038C9.04502 7.33727 9.48104 7.0912 9.72321 6.69469L10.9963 4.6101C11.4806 3.81707 12.3429 3.33334 13.2722 3.33334H18.7278C19.6571 3.33334 20.5194 3.81707 21.0037 4.61009L22.2768 6.69468C22.5189 7.0912 22.8739 7.34118 23.3386 7.34118Z" fill="url(#app-camera-standard-32-paint0_linear_584118_2730)"/>
+<mask id="app-camera-standard-32-mask0_584118_2730" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="3" width="32" height="26">
+<path d="M23.3386 7.34118H30.6719C31.4083 7.34118 32 7.92996 32 8.66629V27.3316C32 28.0679 31.403 27.9982 30.6667 27.9982H1.33333C0.596947 27.9982 0 28.0679 0 27.3316V8.6663C0 7.92997 0.592057 7.33727 1.32843 7.33727H8.58038C9.04502 7.33727 9.48104 7.0912 9.72321 6.69469L10.9963 4.6101C11.4806 3.81707 12.3429 3.33334 13.2722 3.33334H18.7278C19.6571 3.33334 20.5194 3.81707 21.0037 4.61009L22.2768 6.69468C22.5189 7.0912 22.8739 7.34118 23.3386 7.34118Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 27.3333C32 28.0697 31.403 28.6667 30.6667 28.6667H1.33333C0.596947 28.6667 0 28.0697 0 27.3333H32Z" fill="black"/>
+</mask>
+<g mask="url(#app-camera-standard-32-mask0_584118_2730)">
+<g filter="url(#app-camera-standard-32-filter0_dd_584118_2730)">
+<path d="M16 25.3333C20.4183 25.3333 24 21.7516 24 17.3333C24 12.9151 20.4183 9.33334 16 9.33334C11.5817 9.33334 8 12.9151 8 17.3333C8 21.7516 11.5817 25.3333 16 25.3333Z" fill="#F2F2F2"/>
+</g>
+</g>
+<path d="M16 23.3333C19.3137 23.3333 22 20.6471 22 17.3333C22 14.0196 19.3137 11.3333 16 11.3333C12.6863 11.3333 10 14.0196 10 17.3333C10 20.6471 12.6863 23.3333 16 23.3333Z" fill="url(#app-camera-standard-32-paint1_linear_584118_2730)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 5.33334H6.66667C7.40303 5.33334 8 5.9303 8 6.66668V7.33334H2V6.66668C2 5.9303 2.59695 5.33334 3.33333 5.33334Z" fill="#28AFEA"/>
+<path d="M28 12.6667C28.7364 12.6667 29.3333 12.0697 29.3333 11.3333C29.3333 10.597 28.7364 10 28 10C27.2636 10 26.6667 10.597 26.6667 11.3333C26.6667 12.0697 27.2636 12.6667 28 12.6667Z" fill="#B8C2CC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 27.3333C32 28.0697 31.403 28.6667 30.6667 28.6667H1.33333C0.596947 28.6667 0 28.0697 0 27.3333H32Z" fill="#45494D"/>
+<defs>
+<filter id="app-camera-standard-32-filter0_dd_584118_2730" x="5" y="7.33334" width="22" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2730"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2730" result="effect2_dropShadow_584118_2730"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2730" result="shape"/>
+</filter>
+<linearGradient id="app-camera-standard-32-paint0_linear_584118_2730" x1="24.2425" y1="32.2147" x2="7.65212" y2="3.47939" gradientUnits="userSpaceOnUse">
+<stop stop-color="#626F7A"/>
+<stop offset="1" stop-color="#8B9299"/>
+</linearGradient>
+<linearGradient id="app-camera-standard-32-paint1_linear_584118_2730" x1="12.9995" y1="12.1363" x2="19.0005" y2="22.5304" gradientUnits="userSpaceOnUse">
+<stop offset="0.16201" stop-color="#AE7FE2"/>
+<stop offset="0.49561" stop-color="#7195E6"/>
+<stop offset="0.91176" stop-color="#28AFEA"/>
+</linearGradient>
+</defs>
+</svg>

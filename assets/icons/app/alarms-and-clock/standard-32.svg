@@ -1,0 +1,35 @@
+<svg aria-label="Alarms and Clock standard 32" role="img" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.1617 8.20874L24.7813 5.82838C24.5184 5.56546 24.5184 5.13916 24.7813 4.87624L28.1138 1.54374C28.3767 1.28081 28.803 1.28081 29.0659 1.54374L31.4463 3.92409C31.7092 4.18702 31.7092 4.61331 31.4463 4.87623L28.1138 8.20874C27.8509 8.47166 27.4246 8.47166 27.1617 8.20874Z" fill="#4D4D4D"/>
+<path d="M31.6435 32.3168H2.0198C1.27613 32.3168 0.673266 31.7139 0.673266 30.9703V16.1584C0.673266 7.23436 7.90763 0 16.8317 0H16.8317C25.7557 0 32.9901 7.23436 32.9901 16.1584V30.9703C32.9901 31.7139 32.3872 32.3168 31.6435 32.3168Z" fill="url(#app-alarms-and-clock-standard-32-paint0_linear_584118_2637)"/>
+<g filter="url(#app-alarms-and-clock-standard-32-filter0_dd_584118_2637)">
+<path d="M16.8317 28.9505C23.8965 28.9505 29.6237 23.2233 29.6237 16.1584C29.6237 9.09355 23.8965 3.36634 16.8317 3.36634C9.76681 3.36634 4.0396 9.09355 4.0396 16.1584C4.0396 23.2233 9.76681 28.9505 16.8317 28.9505Z" fill="url(#app-alarms-and-clock-standard-32-paint1_linear_584118_2637)"/>
+</g>
+<path d="M16.8317 26.9307C16.4599 26.9307 16.1584 26.6292 16.1584 26.2574V16.1584C16.1584 15.7866 16.4599 15.4851 16.8317 15.4851C17.2035 15.4851 17.5049 15.7866 17.5049 16.1584V26.2574C17.5049 26.6292 17.2035 26.9307 16.8317 26.9307Z" fill="#D83B01"/>
+<path d="M16.8306 17.6246C16.6652 17.6246 16.4969 17.5872 16.3388 17.5083L9.00485 13.802C8.46078 13.5298 8.2402 12.8677 8.51239 12.324C8.78426 11.7796 9.44537 11.5593 9.99042 11.8309L17.3244 15.5371C17.8684 15.8093 18.089 16.4714 17.8168 17.0151C17.6239 17.4017 17.235 17.6246 16.8306 17.6246Z" fill="#45494D"/>
+<path d="M16.8313 17.2571C16.6433 17.2571 16.4553 17.1854 16.3119 17.0421C16.0253 16.7554 16.0253 16.2899 16.3119 16.0033L23.8388 8.47635C24.1255 8.18968 24.591 8.18968 24.8777 8.47635C25.1643 8.76301 25.1643 9.22851 24.8777 9.51518L17.3508 17.0421C17.2074 17.1854 17.0194 17.2571 16.8313 17.2571Z" fill="#45494D"/>
+<path d="M16.8313 18.1782C17.9468 18.1782 18.8511 17.2739 18.8511 16.1584C18.8511 15.0429 17.9468 14.1386 16.8313 14.1386C15.7158 14.1386 14.8115 15.0429 14.8115 16.1584C14.8115 17.2739 15.7158 18.1782 16.8313 18.1782Z" fill="#1E2021"/>
+<defs>
+<filter id="app-alarms-and-clock-standard-32-filter0_dd_584118_2637" x="0" y="0.336644" width="33.6634" height="33.6634" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2637"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2637" result="effect2_dropShadow_584118_2637"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2637" result="shape"/>
+</filter>
+<linearGradient id="app-alarms-and-clock-standard-32-paint0_linear_584118_2637" x1="25.2752" y1="36.2021" x2="6.40461" y2="3.51724" gradientUnits="userSpaceOnUse">
+<stop stop-color="#626F7A"/>
+<stop offset="1" stop-color="#8B9299"/>
+</linearGradient>
+<linearGradient id="app-alarms-and-clock-standard-32-paint1_linear_584118_2637" x1="23.2288" y1="27.2385" x2="10.4346" y2="5.07831" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2C8CC"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

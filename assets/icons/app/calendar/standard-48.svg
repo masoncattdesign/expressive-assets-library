@@ -1,0 +1,62 @@
+<svg aria-label="Calendar standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 12H45V43C45 43.5304 44.7893 44.0391 44.4142 44.4142C44.0391 44.7893 43.5304 45 43 45H5C4.46957 45 3.96086 44.7893 3.58579 44.4142C3.21071 44.0391 3 43.5304 3 43V12Z" fill="url(#app-calendar-standard-48-paint0_linear_584118_2188)"/>
+<g filter="url(#app-calendar-standard-48-filter0_d_584118_2188)">
+<path d="M21 18H18C17.4477 18 17 18.4477 17 19V22C17 22.5523 17.4477 23 18 23H21C21.5523 23 22 22.5523 22 22V19C22 18.4477 21.5523 18 21 18Z" fill="#F2F2F2"/>
+<path d="M30 18H27C26.4477 18 26 18.4477 26 19V22C26 22.5523 26.4477 23 27 23H30C30.5523 23 31 22.5523 31 22V19C31 18.4477 30.5523 18 30 18Z" fill="#F2F2F2"/>
+<path d="M39 18H36C35.4477 18 35 18.4477 35 19V22C35 22.5523 35.4477 23 36 23H39C39.5523 23 40 22.5523 40 22V19C40 18.4477 39.5523 18 39 18Z" fill="#F2F2F2"/>
+<path d="M12 26H9C8.44772 26 8 26.4477 8 27V30C8 30.5523 8.44772 31 9 31H12C12.5523 31 13 30.5523 13 30V27C13 26.4477 12.5523 26 12 26Z" fill="#F2F2F2"/>
+<path d="M21 26H18C17.4477 26 17 26.4477 17 27V30C17 30.5523 17.4477 31 18 31H21C21.5523 31 22 30.5523 22 30V27C22 26.4477 21.5523 26 21 26Z" fill="#F2F2F2"/>
+<path d="M30 26H27C26.4477 26 26 26.4477 26 27V30C26 30.5523 26.4477 31 27 31H30C30.5523 31 31 30.5523 31 30V27C31 26.4477 30.5523 26 30 26Z" fill="#F2F2F2"/>
+<path d="M39 26H36C35.4477 26 35 26.4477 35 27V30C35 30.5523 35.4477 31 36 31H39C39.5523 31 40 30.5523 40 30V27C40 26.4477 39.5523 26 39 26Z" fill="#F2F2F2"/>
+<path d="M12 34H9C8.44772 34 8 34.4477 8 35V38C8 38.5523 8.44772 39 9 39H12C12.5523 39 13 38.5523 13 38V35C13 34.4477 12.5523 34 12 34Z" fill="#F2F2F2"/>
+<path d="M21 34H18C17.4477 34 17 34.4477 17 35V38C17 38.5523 17.4477 39 18 39H21C21.5523 39 22 38.5523 22 38V35C22 34.4477 21.5523 34 21 34Z" fill="#F2F2F2"/>
+<path d="M30 34H27C26.4477 34 26 34.4477 26 35V38C26 38.5523 26.4477 39 27 39H30C30.5523 39 31 38.5523 31 38V35C31 34.4477 30.5523 34 30 34Z" fill="#F2F2F2"/>
+</g>
+<path d="M5 3H43C43.5304 3 44.0391 3.21071 44.4142 3.58579C44.7893 3.96086 45 4.46957 45 5V12H3V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3Z" fill="url(#app-calendar-standard-48-paint1_linear_584118_2188)"/>
+<mask id="app-calendar-standard-48-mask0_584118_2188" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="42" height="9">
+<path d="M5 3H43C43.5304 3 44.0391 3.21071 44.4142 3.58579C44.7893 3.96086 45 4.46957 45 5V12H3V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3Z" fill="url(#app-calendar-standard-48-paint2_linear_584118_2188)"/>
+</mask>
+<g mask="url(#app-calendar-standard-48-mask0_584118_2188)">
+<g filter="url(#app-calendar-standard-48-filter1_dd_584118_2188)">
+<path d="M11 9C10.47 8.99845 9.96224 8.78724 9.5875 8.4125C9.21276 8.03776 9.00155 7.52996 9 7V2C9.00155 1.47004 9.21276 0.962237 9.5875 0.5875C9.96224 0.212763 10.47 0.00155124 11 0V0C11.53 0.00155124 12.0378 0.212763 12.4125 0.5875C12.7872 0.962237 12.9984 1.47004 13 2V7C12.9984 7.52996 12.7872 8.03776 12.4125 8.4125C12.0378 8.78724 11.53 8.99845 11 9ZM39 7V2C38.9984 1.47004 38.7872 0.962237 38.4125 0.5875C38.0378 0.212763 37.53 0.00155124 37 0V0C36.47 0.00155124 35.9622 0.212763 35.5875 0.5875C35.2128 0.962237 35.0016 1.47004 35 2V7C35.0016 7.52996 35.2128 8.03776 35.5875 8.4125C35.9622 8.78724 36.47 8.99845 37 9C37.53 8.99845 38.0378 8.78724 38.4125 8.4125C38.7872 8.03776 38.9984 7.52996 39 7Z" fill="#3CCBF4"/>
+</g>
+</g>
+<path d="M11 9C10.47 8.99845 9.96224 8.78724 9.5875 8.4125C9.21276 8.03776 9.00155 7.52996 9 7V2C9.00155 1.47004 9.21276 0.962237 9.5875 0.5875C9.96224 0.212763 10.47 0.00155124 11 0V0C11.53 0.00155124 12.0378 0.212763 12.4125 0.5875C12.7872 0.962237 12.9984 1.47004 13 2V7C12.9984 7.52996 12.7872 8.03776 12.4125 8.4125C12.0378 8.78724 11.53 8.99845 11 9ZM39 7V2C38.9984 1.47004 38.7872 0.962237 38.4125 0.5875C38.0378 0.212763 37.53 0.00155124 37 0V0C36.47 0.00155124 35.9622 0.212763 35.5875 0.5875C35.2128 0.962237 35.0016 1.47004 35 2V7C35.0016 7.52996 35.2128 8.03776 35.5875 8.4125C35.9622 8.78724 36.47 8.99845 37 9C37.53 8.99845 38.0378 8.78724 38.4125 8.4125C38.7872 8.03776 38.9984 7.52996 39 7Z" fill="#3CCBF4"/>
+<defs>
+<filter id="app-calendar-standard-48-filter0_d_584118_2188" x="7.5" y="18" width="33" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2188"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584118_2188" result="shape"/>
+</filter>
+<filter id="app-calendar-standard-48-filter1_dd_584118_2188" x="6" y="-2" width="36" height="15" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_2188"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_2188" result="effect2_dropShadow_584118_2188"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_2188" result="shape"/>
+</filter>
+<linearGradient id="app-calendar-standard-48-paint0_linear_584118_2188" x1="37.3368" y1="50.8683" x2="12.953" y2="8.63426" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-calendar-standard-48-paint1_linear_584118_2188" x1="33.7334" y1="25.0904" x2="19.7021" y2="0.787561" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-calendar-standard-48-paint2_linear_584118_2188" x1="33.7334" y1="25.0904" x2="19.7021" y2="0.787561" gradientUnits="userSpaceOnUse">
+<stop stop-color="#114A8B"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+</defs>
+</svg>

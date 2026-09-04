@@ -1,0 +1,38 @@
+<svg aria-label="Windows Subsystem for Android standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-windows-subsystem-for-android-standard-16-clip0_584118_5987)">
+<path d="M0 2.66667C0 2.29848 0.298477 2 0.666667 2H15.3333C15.7015 2 16 2.29848 16 2.66667V3L8.12286 4.47696C8.04166 4.49219 7.95834 4.49219 7.87714 4.47696L0 3V2.66667Z" fill="#209B4E"/>
+<path d="M0 3H16V8L8 9.5L0 8V3Z" fill="#088142"/>
+<path d="M0 8H16V13.3333C16 13.7015 15.7015 14 15.3333 14H0.666667C0.298477 14 0 13.7015 0 13.3333V8Z" fill="#096738"/>
+<mask id="app-windows-subsystem-for-android-standard-16-mask0_584118_5987" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="12" height="12">
+<rect x="2" y="2" width="12" height="12" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#app-windows-subsystem-for-android-standard-16-mask0_584118_5987)">
+<g filter="url(#app-windows-subsystem-for-android-standard-16-filter0_dd_584118_5987)">
+<rect x="4" y="1" width="8" height="14" rx="0.666667" fill="#209B4E"/>
+</g>
+</g>
+<path d="M4 14L7.83831 13.0404C7.94447 13.0139 8.05553 13.0139 8.16169 13.0404L12 14V14.3333C12 14.7015 11.7015 15 11.3333 15H4.66667C4.29848 15 4 14.7015 4 14.3333V14Z" fill="#088142"/>
+<path d="M4 8L7.83831 7.04042C7.94447 7.01388 8.05553 7.01388 8.16169 7.04042L12 8V14H4V8Z" fill="#37B659"/>
+<path d="M4 3L8 2L12 3V8H4V3Z" fill="#4ED062"/>
+<path d="M4 1.66667C4 1.29848 4.29848 1 4.66667 1H11.3333C11.7015 1 12 1.29848 12 1.66667V3H4V1.66667Z" fill="#66EB6E"/>
+</g>
+<defs>
+<filter id="app-windows-subsystem-for-android-standard-16-filter0_dd_584118_5987" x="3" y="0" width="10" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.166667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_5987"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_5987" result="effect2_dropShadow_584118_5987"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_5987" result="shape"/>
+</filter>
+<clipPath id="app-windows-subsystem-for-android-standard-16-clip0_584118_5987">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

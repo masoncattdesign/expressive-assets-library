@@ -1,0 +1,28 @@
+<svg aria-label="Voice Access standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-voice-access-standard-48-clip0_584118_4205)">
+<g clip-path="url(#app-voice-access-standard-48-clip1_584118_4205)">
+<path d="M30 30C33.3137 30 36 32.6863 36 36C36 39.5902 33.7161 42.6264 30.4727 44.6904C27.2114 46.7657 22.7975 48 18 48C13.2025 48 8.78858 46.7657 5.52734 44.6904C2.2839 42.6264 0 39.5902 0 36C0 32.6863 2.68629 30 6 30H30ZM18 6C23.799 6 28.5 10.701 28.5 16.5C28.5 22.299 23.799 27 18 27C12.201 27 7.5 22.299 7.5 16.5C7.5 10.701 12.201 6 18 6Z" fill="#212121"/>
+<path d="M30 30C33.3137 30 36 32.6863 36 36C36 39.5902 33.7161 42.6264 30.4727 44.6904C27.2114 46.7657 22.7975 48 18 48C13.2025 48 8.78858 46.7657 5.52734 44.6904C2.2839 42.6264 0 39.5902 0 36C0 32.6863 2.68629 30 6 30H30ZM18 6C23.799 6 28.5 10.701 28.5 16.5C28.5 22.299 23.799 27 18 27C12.201 27 7.5 22.299 7.5 16.5C7.5 10.701 12.201 6 18 6Z" fill="url(#app-voice-access-standard-48-paint0_linear_584118_4205)"/>
+<path d="M30 30C33.3137 30 36 32.6863 36 36C36 39.5902 33.7161 42.6264 30.4727 44.6904C27.2114 46.7657 22.7975 48 18 48C13.2025 48 8.78858 46.7657 5.52734 44.6904C2.2839 42.6264 0 39.5902 0 36C0 32.6863 2.68629 30 6 30H30ZM18 6C23.799 6 28.5 10.701 28.5 16.5C28.5 22.299 23.799 27 18 27C12.201 27 7.5 22.299 7.5 16.5C7.5 10.701 12.201 6 18 6Z" fill="url(#app-voice-access-standard-48-paint1_linear_584118_4205)"/>
+<rect x="45" y="3" width="3" height="15" rx="1.5" fill="#0078D4"/>
+<rect x="39" width="3" height="21" rx="1.5" fill="#1493DF"/>
+<rect x="33" y="6" width="3" height="9" rx="1.5" fill="#28AFEA"/>
+</g>
+</g>
+<defs>
+<linearGradient id="app-voice-access-standard-48-paint0_linear_584118_4205" x1="24.6051" y1="59.0617" x2="-7.90517" y2="28.2062" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#35C1F1"/>
+</linearGradient>
+<linearGradient id="app-voice-access-standard-48-paint1_linear_584118_4205" x1="25.6121" y1="40.2105" x2="2.89479" y2="10.76" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<clipPath id="app-voice-access-standard-48-clip0_584118_4205">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+<clipPath id="app-voice-access-standard-48-clip1_584118_4205">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

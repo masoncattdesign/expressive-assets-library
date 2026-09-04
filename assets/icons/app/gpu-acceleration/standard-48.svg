@@ -1,0 +1,65 @@
+<svg aria-label="GPU Acceleration standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-gpu-acceleration-standard-48-clip0_584118_6193)">
+<path d="M42 21H39V11C39 10.4696 38.7893 9.96088 38.4142 9.58582C38.0391 9.21075 37.5304 9.00003 37 9H27V6C27 4.4087 26.3679 2.88258 25.2426 1.75736C24.1174 0.632141 22.5913 0 21 0C19.4087 0 17.8826 0.632141 16.7574 1.75736C15.6321 2.88258 15 4.4087 15 6V9H5C4.46958 9.00003 3.96088 9.21075 3.58582 9.58582C3.21075 9.96088 3.00003 10.4696 3 11V37C3.00002 39.1217 3.84289 41.1565 5.34317 42.6568C6.84346 44.1571 8.87828 45 11 45H37C37.5304 45 38.0391 44.7893 38.4142 44.4142C38.7893 44.0391 39 43.5304 39 43V33H42C43.5913 33 45.1174 32.3679 46.2426 31.2426C47.3679 30.1174 48 28.5913 48 27C48 25.4087 47.3679 23.8826 46.2426 22.7574C45.1174 21.6321 43.5913 21 42 21Z" fill="url(#app-gpu-acceleration-standard-48-paint0_linear_584118_6193)"/>
+<g filter="url(#app-gpu-acceleration-standard-48-filter0_dd_584118_6193)">
+<path d="M33 16H30C29.7348 16 29.4804 16.1054 29.2929 16.2929C29.1054 16.4804 29 16.7348 29 17V37C29 37.2652 29.1054 37.5196 29.2929 37.7071C29.4804 37.8946 29.7348 38 30 38H31C31.2652 38 31.5196 37.8946 31.7071 37.7071C31.8946 37.5196 32 37.2652 32 37V19H33C33.2652 19 33.5196 18.8946 33.7071 18.7071C33.8946 18.5196 34 18.2652 34 18V17C34 16.7348 33.8946 16.4804 33.7071 16.2929C33.5196 16.1054 33.2652 16 33 16Z" fill="url(#app-gpu-acceleration-standard-48-paint1_linear_584118_6193)"/>
+<path d="M14 33H11C10.4477 33 10 33.4477 10 34V35C10 35.5523 10.4477 36 11 36H14C14.5523 36 15 35.5523 15 35V34C15 33.4477 14.5523 33 14 33Z" fill="url(#app-gpu-acceleration-standard-48-paint2_linear_584118_6193)"/>
+<path d="M23 33H20C19.4477 33 19 33.4477 19 34V35C19 35.5523 19.4477 36 20 36H23C23.5523 36 24 35.5523 24 35V34C24 33.4477 23.5523 33 23 33Z" fill="url(#app-gpu-acceleration-standard-48-paint3_linear_584118_6193)"/>
+<path d="M9 21H29V34H9C8.73478 34 8.48043 33.8946 8.29289 33.7071C8.10536 33.5196 8 33.2652 8 33V22C8 21.7348 8.10536 21.4804 8.29289 21.2929C8.48043 21.1054 8.73478 21 9 21Z" fill="url(#app-gpu-acceleration-standard-48-paint4_linear_584118_6193)"/>
+<path d="M25.5 24H20.5C20.2239 24 20 24.2239 20 24.5V29.5C20 29.7761 20.2239 30 20.5 30H25.5C25.7761 30 26 29.7761 26 29.5V24.5C26 24.2239 25.7761 24 25.5 24Z" fill="url(#app-gpu-acceleration-standard-48-paint5_linear_584118_6193)"/>
+<path d="M16.5 24H11.5C11.2239 24 11 24.2239 11 24.5V25.5C11 25.7761 11.2239 26 11.5 26H16.5C16.7761 26 17 25.7761 17 25.5V24.5C17 24.2239 16.7761 24 16.5 24Z" fill="url(#app-gpu-acceleration-standard-48-paint6_linear_584118_6193)"/>
+<path d="M16.5 28H11.5C11.2239 28 11 28.2239 11 28.5V29.5C11 29.7761 11.2239 30 11.5 30H16.5C16.7761 30 17 29.7761 17 29.5V28.5C17 28.2239 16.7761 28 16.5 28Z" fill="url(#app-gpu-acceleration-standard-48-paint7_linear_584118_6193)"/>
+</g>
+</g>
+<defs>
+<filter id="app-gpu-acceleration-standard-48-filter0_dd_584118_6193" x="6" y="15" width="30" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6193"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6193" result="effect2_dropShadow_584118_6193"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6193" result="shape"/>
+</filter>
+<linearGradient id="app-gpu-acceleration-standard-48-paint0_linear_584118_6193" x1="34.0221" y1="47.0291" x2="10" y2="5.42149" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint1_linear_584118_6193" x1="36.2052" y1="35.1497" x2="26.2948" y2="17.9843" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint2_linear_584118_6193" x1="13.5916" y1="36.3907" x2="11.4084" y2="32.6093" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint3_linear_584118_6193" x1="22.5916" y1="36.3907" x2="20.4084" y2="32.6093" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint4_linear_584118_6193" x1="24.098" y1="36.8302" x2="13.4018" y2="18.3037" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint5_linear_584118_6193" x1="24.9576" y1="30.3906" x2="21.0424" y2="23.6094" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint6_linear_584118_6193" x1="15.0916" y1="26.8906" x2="12.9085" y2="23.1094" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-48-paint7_linear_584118_6193" x1="15.0916" y1="30.8906" x2="12.9085" y2="27.1094" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<clipPath id="app-gpu-acceleration-standard-48-clip0_584118_6193">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

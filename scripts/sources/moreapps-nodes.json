@@ -3,84 +3,596 @@
   "fileKey": "kk3KX66O732kqUoY7Y9wau",
   "branchOf": "l752WyMxGqlvG5g8zkOaxm",
   "boardNodeId": "584118:7251",
-  "sizes": [16, 24, 32, 48],
+  "sizes": [
+    16,
+    24,
+    32,
+    48
+  ],
   "hiddenSizeNote": "Several frames carry a 20 that is hidden in Figma. Hidden means not ready, so 20 is not imported.",
   "assets": [
-    { "id": "windows-365", "name": "Windows 365", "nodes": { "16": "584118:1183", "24": "584118:1149", "32": "584118:1132", "48": "584118:1114" } },
-    { "id": "w365-cloud-pc", "name": "Windows 365 Cloud PC", "nodes": { "16": "584118:1255", "24": "584118:1239", "32": "584118:1223", "48": "584118:1201" } },
-    { "id": "surface", "name": "Surface", "nodes": { "16": "584118:1333", "24": "584118:1348", "32": "584118:1366", "48": "584118:1384" } },
-    { "id": "video-editor", "name": "Video Editor", "nodes": { "16": "584118:1595", "24": "584118:1559", "32": "584118:1541", "48": "584118:1524" } },
-    { "id": "movies-and-tv", "name": "Movies and TV", "nodes": { "16": "584118:1614", "24": "584118:1628", "32": "584118:1642", "48": "584118:1656" } },
-    { "id": "mail", "name": "Mail", "nodes": { "16": "584118:1965", "24": "584118:1998", "32": "584118:2031", "48": "584118:2064" } },
-    { "id": "calendar", "name": "Calendar", "nodes": { "16": "584118:2098", "24": "584118:2128", "32": "584118:2158", "48": "584118:2188" } },
-    { "id": "people", "name": "People", "nodes": { "16": "584118:2219", "24": "584118:2262", "32": "584118:2305", "48": "584118:2348" } },
-    { "id": "messages", "name": "Messages", "nodes": { "16": "584118:2392", "24": "584118:2409", "32": "584118:2426", "48": "584118:2443" } },
-    { "id": "alarms-and-clock", "name": "Alarms and Clock", "nodes": { "16": "584118:2587", "24": "584118:2612", "32": "584118:2637", "48": "584118:2662" } },
-    { "id": "camera", "name": "Camera", "nodes": { "16": "584118:2688", "24": "584118:2709", "32": "584118:2730", "48": "584118:2751" } },
-    { "id": "remote-desktop", "name": "Remote Desktop", "nodes": { "16": "584118:3238", "24": "584118:3247", "32": "584118:3256", "48": "584118:3265" } },
-    { "id": "windows-backup", "name": "Windows Backup", "nodes": { "16": "584118:3356", "24": "584118:3399", "32": "584118:3442", "48": "584118:3485" } },
-    { "id": "performance-analyzer", "name": "Performance Analyzer", "nodes": { "16": "584118:3585", "24": "584118:3569", "32": "584118:3549", "48": "584118:3529" } },
-    { "id": "store-cli", "name": "Store CLI", "nodes": { "16": "584118:3726", "24": "584118:3680", "32": "584118:3650", "48": "584118:3605" } },
-    { "id": "winget", "name": "Windows Package Manager (WinGet)", "nodes": { "16": "584118:3823", "24": "584118:3801", "32": "584118:3779", "48": "584118:3755" } },
-    { "id": "task-manager", "name": "Task Manager", "nodes": { "16": "584118:3845", "24": "584118:3852", "32": "584118:3859", "48": "584118:3866" } },
-    { "id": "narrator", "name": "Narrator", "nodes": { "16": "584118:3877", "24": "584118:3889", "32": "584118:3901", "48": "584118:3913" } },
-    { "id": "magnifier", "name": "Magnifier", "nodes": { "16": "584118:3926", "24": "584118:3950", "32": "584118:3968", "48": "584118:3988" } },
-    { "id": "on-screen-keyboard", "name": "On-Screen Keyboard", "nodes": { "16": "584118:4015", "24": "584118:4048", "32": "584118:4080", "48": "584118:4116" } },
-    { "id": "voice-access", "name": "Voice Access", "nodes": { "16": "584118:4151", "24": "584118:4169", "32": "584118:4187", "48": "584118:4205" } },
-    { "id": "live-captions", "name": "Live Captions", "nodes": { "16": "584118:4224", "24": "584118:4234", "32": "584118:4244", "48": "584118:4253" } },
-    { "id": "tips", "name": "Tips", "nodes": { "16": "584118:4265", "24": "584118:4298", "32": "584118:4331", "48": "584118:4364" } },
-    { "id": "mobile-plans", "name": "Mobile Plans", "nodes": { "16": "584118:4663", "24": "584118:4690", "32": "584118:4717", "48": "584118:4744" } },
-    { "id": "maps", "name": "Maps", "nodes": { "16": "584118:5012", "24": "584118:5039", "32": "584118:5066", "48": "584118:5093" } },
-    { "id": "remote-debug", "name": "Remote Debug", "nodes": { "16": "584118:5553", "24": "584118:5529", "32": "584118:5517", "48": "584118:5505" } },
-    { "id": "windows-file-recovery", "name": "Windows File Recovery", "nodes": { "16": "584118:5663", "24": "584118:5615", "32": "584118:5590", "48": "584118:5566" } },
-    { "id": "windows-hdr-calibration", "name": "Windows HDR Calibration", "nodes": { "16": "584118:5724", "24": "584118:5706", "32": "584118:5697", "48": "584118:5689" } },
-    { "id": "power-toys", "name": "PowerToys", "nodes": { "16": "584118:5790", "24": "584118:5762", "32": "584118:5748", "48": "584118:5734" } },
-    { "id": "microsoft-tunnel", "name": "Microsoft Tunnel", "nodes": { "16": "584118:5863", "24": "584118:5833", "32": "584118:5818", "48": "584118:5803" } },
-    { "id": "pc-health", "name": "PC Health", "nodes": { "16": "584118:5913", "24": "584118:5895", "32": "584118:5887", "48": "584118:5879" } },
-    { "id": "windows-subsystem-for-android", "name": "Windows Subsystem for Android", "nodes": { "16": "584118:5987", "24": "584118:5961", "32": "584118:5948", "48": "584118:5924" } },
-    { "id": "windows-subsystem-for-linux", "name": "Windows Subsystem for Linux", "nodes": { "16": "584118:6001", "24": "584118:6035", "32": "584118:6069", "48": "584118:6103" } },
-    { "id": "microsoft-emulator", "name": "Microsoft Emulator", "nodes": { "16": "584118:6181", "24": "584118:6160", "32": "584118:6149", "48": "584118:6138" } },
-    { "id": "gpu-acceleration", "name": "GPU Acceleration", "nodes": { "16": "584118:6237", "24": "584118:6215", "32": "584118:6204", "48": "584118:6193" } },
-    { "id": "company-portal", "name": "Company Portal", "nodes": { "16": "584118:6341", "24": "584118:6295", "32": "584118:6272", "48": "584118:6249" } },
-    { "id": "connect", "name": "Connect", "nodes": { "16": "584118:6394", "24": "584118:6374", "32": "584118:6364", "48": "584118:6354" } },
-    { "id": "windows-sandbox", "name": "Windows Sandbox", "nodes": { "16": "584118:6417", "24": "584118:6411", "32": "584118:6408", "48": "584118:6405" } },
-    { "id": "edge-webview2", "name": "Edge WebView2", "nodes": { "16": "584118:6494", "24": "584118:6470", "32": "584118:6458", "48": "584118:6446" } },
-    { "id": "proxy", "name": "Proxy", "nodes": { "16": "584118:6628", "24": "584118:6576", "32": "584118:6542", "48": "584118:6508" } },
-    { "id": "printer", "name": "Printer", "nodes": { "16": "584118:6743", "24": "584118:6695", "32": "584118:6671", "48": "584118:6647" } },
-    { "id": "xbox", "name": "Xbox", "nodes": { "16": "584118:6761", "24": "584118:6769", "32": "584118:6777", "48": "584118:6785" } },
-
-    { "id": "groove", "name": "Groove", "status": "deprecated", "nodes": { "16": "584118:5122", "24": "584118:5130", "32": "584118:5138", "48": "584118:5146" } },
-    { "id": "paint-3d", "name": "Paint 3D", "status": "deprecated", "nodes": { "16": "584118:5187", "24": "584118:5171", "32": "584118:5163", "48": "584118:5155" } },
-    { "id": "snip-and-sketch", "name": "Snip and Sketch", "status": "deprecated", "nodes": { "16": "584118:5196", "24": "584118:5246", "32": "584118:5296", "48": "584118:5346" } },
-    { "id": "photos-legacy", "name": "Photos Legacy", "status": "deprecated", "nodes": { "16": "584118:5397", "24": "584118:5413", "32": "584118:5429", "48": "584118:5445" } }
+    {
+      "id": "windows-365",
+      "name": "Windows 365",
+      "nodes": {
+        "16": "584118:1183",
+        "24": "584118:1149",
+        "32": "584118:1132",
+        "48": "584118:1114"
+      }
+    },
+    {
+      "id": "w365-cloud-pc",
+      "name": "Windows 365 Cloud PC",
+      "nodes": {
+        "16": "584118:1255",
+        "24": "584118:1239",
+        "32": "584118:1223",
+        "48": "584118:1201"
+      }
+    },
+    {
+      "id": "surface",
+      "name": "Surface",
+      "nodes": {
+        "16": "584118:1333",
+        "24": "584118:1348",
+        "32": "584118:1366",
+        "48": "584118:1384"
+      }
+    },
+    {
+      "id": "video-editor",
+      "name": "Video Editor",
+      "nodes": {
+        "16": "584118:1595",
+        "24": "584118:1559",
+        "32": "584118:1541",
+        "48": "584118:1524"
+      }
+    },
+    {
+      "id": "movies-and-tv",
+      "name": "Movies and TV",
+      "nodes": {
+        "16": "584118:1614",
+        "24": "584118:1628",
+        "32": "584118:1642",
+        "48": "584118:1656"
+      }
+    },
+    {
+      "id": "mail",
+      "name": "Mail",
+      "nodes": {
+        "16": "584118:1965",
+        "24": "584118:1998",
+        "32": "584118:2031",
+        "48": "584118:2064"
+      }
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "nodes": {
+        "16": "584118:2098",
+        "24": "584118:2128",
+        "32": "584118:2158",
+        "48": "584118:2188"
+      }
+    },
+    {
+      "id": "people",
+      "name": "People",
+      "nodes": {
+        "16": "584118:2219",
+        "24": "584118:2262",
+        "32": "584118:2305",
+        "48": "584118:2348"
+      }
+    },
+    {
+      "id": "messages",
+      "name": "Messages",
+      "nodes": {
+        "16": "584118:2392",
+        "24": "584118:2409",
+        "32": "584118:2426",
+        "48": "584118:2443"
+      }
+    },
+    {
+      "id": "alarms-and-clock",
+      "name": "Alarms and Clock",
+      "nodes": {
+        "16": "584118:2587",
+        "24": "584118:2612",
+        "32": "584118:2637",
+        "48": "584118:2662"
+      }
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "nodes": {
+        "16": "584118:2688",
+        "24": "584118:2709",
+        "32": "584118:2730",
+        "48": "584118:2751"
+      }
+    },
+    {
+      "id": "remote-desktop",
+      "name": "Remote Desktop",
+      "nodes": {
+        "16": "584118:3238",
+        "24": "584118:3247",
+        "32": "584118:3256",
+        "48": "584118:3265"
+      }
+    },
+    {
+      "id": "windows-backup",
+      "name": "Windows Backup",
+      "nodes": {
+        "16": "584118:3356",
+        "24": "584118:3399",
+        "32": "584118:3442",
+        "48": "584118:3485"
+      }
+    },
+    {
+      "id": "performance-analyzer",
+      "name": "Performance Analyzer",
+      "nodes": {
+        "16": "584118:3585",
+        "24": "584118:3569",
+        "32": "584118:3549",
+        "48": "584118:3529"
+      }
+    },
+    {
+      "id": "store-cli",
+      "name": "Store CLI",
+      "nodes": {
+        "16": "584118:3726",
+        "24": "584118:3680",
+        "32": "584118:3650",
+        "48": "584118:3605"
+      }
+    },
+    {
+      "id": "winget",
+      "name": "Windows Package Manager (WinGet)",
+      "nodes": {
+        "16": "584118:3823",
+        "24": "584118:3801",
+        "32": "584118:3779",
+        "48": "584118:3755"
+      }
+    },
+    {
+      "id": "task-manager",
+      "name": "Task Manager",
+      "nodes": {
+        "16": "584118:3845",
+        "24": "584118:3852",
+        "32": "584118:3859",
+        "48": "584118:3866"
+      }
+    },
+    {
+      "id": "narrator",
+      "name": "Narrator",
+      "nodes": {
+        "16": "584118:3877",
+        "24": "584118:3889",
+        "32": "584118:3901",
+        "48": "584118:3913"
+      }
+    },
+    {
+      "id": "magnifier",
+      "name": "Magnifier",
+      "nodes": {
+        "16": "584118:3926",
+        "24": "584118:3950",
+        "32": "584118:3968",
+        "48": "584118:3988"
+      }
+    },
+    {
+      "id": "on-screen-keyboard",
+      "name": "On-Screen Keyboard",
+      "nodes": {
+        "16": "584118:4015",
+        "24": "584118:4048",
+        "32": "584118:4080",
+        "48": "584118:4116"
+      }
+    },
+    {
+      "id": "voice-access",
+      "name": "Voice Access",
+      "nodes": {
+        "16": "584118:4151",
+        "24": "584118:4169",
+        "32": "584118:4187",
+        "48": "584118:4205"
+      }
+    },
+    {
+      "id": "live-captions",
+      "name": "Live Captions",
+      "nodes": {
+        "16": "584118:4224",
+        "24": "584118:4234",
+        "32": "584118:4244",
+        "48": "584118:4253"
+      }
+    },
+    {
+      "id": "tips",
+      "name": "Tips",
+      "nodes": {
+        "16": "584118:4265",
+        "24": "584118:4298",
+        "32": "584118:4331",
+        "48": "584118:4364"
+      }
+    },
+    {
+      "id": "mobile-plans",
+      "name": "Mobile Plans",
+      "nodes": {
+        "16": "584118:4663",
+        "24": "584118:4690",
+        "32": "584118:4717",
+        "48": "584118:4744"
+      }
+    },
+    {
+      "id": "maps",
+      "name": "Maps",
+      "nodes": {
+        "16": "584118:5012",
+        "24": "584118:5039",
+        "32": "584118:5066",
+        "48": "584118:5093"
+      }
+    },
+    {
+      "id": "remote-debug",
+      "name": "Remote Debug",
+      "nodes": {
+        "16": "584118:5553",
+        "24": "584118:5529",
+        "32": "584118:5517",
+        "48": "584118:5505"
+      }
+    },
+    {
+      "id": "windows-file-recovery",
+      "name": "Windows File Recovery",
+      "nodes": {
+        "16": "584118:5663",
+        "24": "584118:5615",
+        "32": "584118:5590",
+        "48": "584118:5566"
+      }
+    },
+    {
+      "id": "windows-hdr-calibration",
+      "name": "Windows HDR Calibration",
+      "nodes": {
+        "16": "584118:5724",
+        "24": "584118:5706",
+        "32": "584118:5697",
+        "48": "584118:5689"
+      }
+    },
+    {
+      "id": "power-toys",
+      "name": "PowerToys",
+      "nodes": {
+        "16": "584118:5790",
+        "24": "584118:5762",
+        "32": "584118:5748",
+        "48": "584118:5734"
+      }
+    },
+    {
+      "id": "microsoft-tunnel",
+      "name": "Microsoft Tunnel",
+      "nodes": {
+        "16": "584118:5863",
+        "24": "584118:5833",
+        "32": "584118:5818",
+        "48": "584118:5803"
+      }
+    },
+    {
+      "id": "pc-health",
+      "name": "PC Health",
+      "nodes": {
+        "16": "584118:5913",
+        "24": "584118:5895",
+        "32": "584118:5887",
+        "48": "584118:5879"
+      }
+    },
+    {
+      "id": "windows-subsystem-for-android",
+      "name": "Windows Subsystem for Android",
+      "nodes": {
+        "16": "584118:5987",
+        "24": "584118:5961",
+        "32": "584118:5948",
+        "48": "584118:5924"
+      }
+    },
+    {
+      "id": "windows-subsystem-for-linux",
+      "name": "Windows Subsystem for Linux",
+      "nodes": {
+        "16": "584118:6001",
+        "24": "584118:6035",
+        "32": "584118:6069",
+        "48": "584118:6103"
+      }
+    },
+    {
+      "id": "microsoft-emulator",
+      "name": "Microsoft Emulator",
+      "nodes": {
+        "16": "584118:6181",
+        "24": "584118:6160",
+        "32": "584118:6149",
+        "48": "584118:6138"
+      }
+    },
+    {
+      "id": "gpu-acceleration",
+      "name": "GPU Acceleration",
+      "nodes": {
+        "16": "584118:6237",
+        "24": "584118:6215",
+        "32": "584118:6204",
+        "48": "584118:6193"
+      }
+    },
+    {
+      "id": "company-portal",
+      "name": "Company Portal",
+      "nodes": {
+        "16": "584118:6341",
+        "24": "584118:6295",
+        "32": "584118:6272",
+        "48": "584118:6249"
+      }
+    },
+    {
+      "id": "connect",
+      "name": "Connect",
+      "nodes": {
+        "16": "584118:6394",
+        "24": "584118:6374",
+        "32": "584118:6364",
+        "48": "584118:6354"
+      }
+    },
+    {
+      "id": "windows-sandbox",
+      "name": "Windows Sandbox",
+      "nodes": {
+        "16": "584118:6417",
+        "24": "584118:6411",
+        "32": "584118:6408",
+        "48": "584118:6405"
+      }
+    },
+    {
+      "id": "edge-webview2",
+      "name": "Edge WebView2",
+      "nodes": {
+        "16": "584118:6494",
+        "24": "584118:6470",
+        "32": "584118:6458",
+        "48": "584118:6446"
+      }
+    },
+    {
+      "id": "proxy",
+      "name": "Proxy",
+      "nodes": {
+        "16": "584118:6628",
+        "24": "584118:6576",
+        "32": "584118:6542",
+        "48": "584118:6508"
+      }
+    },
+    {
+      "id": "printer",
+      "name": "Printer",
+      "nodes": {
+        "16": "584118:6743",
+        "24": "584118:6695",
+        "32": "584118:6671",
+        "48": "584118:6647"
+      }
+    },
+    {
+      "id": "xbox",
+      "name": "Xbox",
+      "nodes": {
+        "16": "584118:6761",
+        "24": "584118:6769",
+        "32": "584118:6777",
+        "48": "584118:6785"
+      }
+    },
+    {
+      "id": "groove",
+      "name": "Groove",
+      "status": "deprecated",
+      "nodes": {
+        "16": "584118:5122",
+        "24": "584118:5130",
+        "32": "584118:5138",
+        "48": "584118:5146"
+      },
+      "replacedBy": "app.media-player",
+      "replacedNote": "Groove Music was folded into Media Player."
+    },
+    {
+      "id": "paint-3d",
+      "name": "Paint 3D",
+      "status": "deprecated",
+      "nodes": {
+        "16": "584118:5187",
+        "24": "584118:5171",
+        "32": "584118:5163",
+        "48": "584118:5155"
+      },
+      "replacedBy": "app.paint",
+      "replacedNote": "Paint 3D was retired; Paint continues."
+    },
+    {
+      "id": "snip-and-sketch",
+      "name": "Snip and Sketch",
+      "status": "deprecated",
+      "nodes": {
+        "16": "584118:5196",
+        "24": "584118:5246",
+        "32": "584118:5296",
+        "48": "584118:5346"
+      },
+      "replacedBy": "app.snipping-tool",
+      "replacedNote": "Snip & Sketch merged back into Snipping Tool."
+    },
+    {
+      "id": "photos-legacy",
+      "name": "Photos Legacy",
+      "status": "deprecated",
+      "nodes": {
+        "16": "584118:5397",
+        "24": "584118:5413",
+        "32": "584118:5429",
+        "48": "584118:5445"
+      },
+      "replacedBy": "app.photos",
+      "replacedNote": "The legacy Photos app was superseded by Photos."
+    }
   ],
   "skipped": [
-    { "name": "File Explorer", "why": "already app.file-explorer" },
-    { "name": "Dev Home", "why": "already app.dev-home" },
-    { "name": "Media Player", "why": "already app.media-player" },
-    { "name": "Photos", "why": "already app.photos" },
-    { "name": "Paint", "why": "already app.paint" },
-    { "name": "Weather", "why": "already app.weather" },
-    { "name": "News", "why": "already app.news" },
-    { "name": "Solitaire", "why": "already app.solitaire" },
-    { "name": "Calculator", "why": "already app.calculator" },
-    { "name": "Settings", "why": "already app.settings" },
-    { "name": "SnippingTool", "why": "already app.snipping-tool" },
-    { "name": "Terminal", "why": "already app.terminal" },
-    { "name": "Get Started", "why": "already app.get-started" },
-    { "name": "Get Help", "why": "already app.get-help" },
-    { "name": "FeedbackHub", "why": "already app.feedback-hub" },
-    { "name": "QuickAssist", "why": "already app.quick-assist" },
-    { "name": "Notepad", "why": "already app.notepad" },
-    { "name": "Store (Dark and Light)", "why": "already app.store-dark-theme and app.store-light-theme; the theme is baked into the variant name here too" },
-    { "name": "Edge", "why": "already product.edge" },
-    { "name": "FamilySafety", "why": "already product.family-safety" },
-    { "name": "Sticky Notes", "why": "already product.sticky-notes" },
-    { "name": "Whiteboard", "why": "already product.whiteboard, and app.white-board" },
-    { "name": "Your Phone Companion", "why": "the same app as app.phone-link under its older name; Mason's call, 3 September 2026" },
-    { "name": "Your Phone", "why": "the same app as app.phone-link under its oldest name; Mason's call, 3 September 2026" },
-    { "name": "Voice Recorder", "why": "the same app as app.sound-recorder under a different name; Mason's call, 3 September 2026" },
-    { "name": "Xbox Game Bar", "why": "the same app as app.game-bar under its full name; Mason's call, 3 September 2026" },
-    { "name": "Windows Security", "why": "the same product as product.defender under its shipping name; Mason's call, 3 September 2026" }
-  ]
+    {
+      "name": "File Explorer",
+      "why": "already app.file-explorer"
+    },
+    {
+      "name": "Dev Home",
+      "why": "already app.dev-home"
+    },
+    {
+      "name": "Media Player",
+      "why": "already app.media-player"
+    },
+    {
+      "name": "Photos",
+      "why": "already app.photos"
+    },
+    {
+      "name": "Paint",
+      "why": "already app.paint"
+    },
+    {
+      "name": "Weather",
+      "why": "already app.weather"
+    },
+    {
+      "name": "News",
+      "why": "already app.news"
+    },
+    {
+      "name": "Solitaire",
+      "why": "already app.solitaire"
+    },
+    {
+      "name": "Calculator",
+      "why": "already app.calculator"
+    },
+    {
+      "name": "Settings",
+      "why": "already app.settings"
+    },
+    {
+      "name": "SnippingTool",
+      "why": "already app.snipping-tool"
+    },
+    {
+      "name": "Terminal",
+      "why": "already app.terminal"
+    },
+    {
+      "name": "Get Started",
+      "why": "already app.get-started"
+    },
+    {
+      "name": "Get Help",
+      "why": "already app.get-help"
+    },
+    {
+      "name": "FeedbackHub",
+      "why": "already app.feedback-hub"
+    },
+    {
+      "name": "QuickAssist",
+      "why": "already app.quick-assist"
+    },
+    {
+      "name": "Notepad",
+      "why": "already app.notepad"
+    },
+    {
+      "name": "Store (Dark and Light)",
+      "why": "already app.store-dark-theme and app.store-light-theme; the theme is baked into the variant name here too"
+    },
+    {
+      "name": "Edge",
+      "why": "already product.edge"
+    },
+    {
+      "name": "FamilySafety",
+      "why": "already product.family-safety"
+    },
+    {
+      "name": "Sticky Notes",
+      "why": "already product.sticky-notes"
+    },
+    {
+      "name": "Whiteboard",
+      "why": "already product.whiteboard, and app.white-board"
+    },
+    {
+      "name": "Your Phone Companion",
+      "why": "the same app as app.phone-link under its older name; Mason's call, 3 September 2026"
+    },
+    {
+      "name": "Your Phone",
+      "why": "the same app as app.phone-link under its oldest name; Mason's call, 3 September 2026"
+    },
+    {
+      "name": "Voice Recorder",
+      "why": "the same app as app.sound-recorder under a different name; Mason's call, 3 September 2026"
+    },
+    {
+      "name": "Xbox Game Bar",
+      "why": "the same app as app.game-bar under its full name; Mason's call, 3 September 2026"
+    },
+    {
+      "name": "Windows Security",
+      "why": "the same product as product.defender under its shipping name; Mason's call, 3 September 2026"
+    }
+  ],
+  "deprecationNote": "A deprecation with no migration target strands consumers, which is what the schema means by requiring replacedBy. Each of these four has an obvious successor already in the collection, so the pairing is recorded here rather than left for someone to work out later."
 }

@@ -1,0 +1,38 @@
+<svg aria-label="Printer standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-printer-standard-16-clip0_584118_6743)">
+<path d="M2 4H14C14.5304 4 15.0391 4.21071 15.4142 4.58579C15.7893 4.96086 16 5.46957 16 6V12.3333C16 12.5101 15.9298 12.6797 15.8047 12.8047C15.6797 12.9298 15.5101 13 15.3333 13H0.66667C0.489858 13 0.320288 12.9298 0.195263 12.8047C0.0702382 12.6797 0 12.5101 0 12.3333L0 6C0 5.46957 0.210714 4.96086 0.585786 4.58579C0.960859 4.21071 1.46957 4 2 4Z" fill="url(#app-printer-standard-16-paint0_linear_584118_6743)"/>
+<path d="M14 6H13V7H14V6Z" fill="#78D30C"/>
+<path d="M16 12H13L8 10.571L3 12H0V7H16V12Z" fill="url(#app-printer-standard-16-paint1_linear_584118_6743)"/>
+<path d="M13 12V10.6665C12.9995 10.2247 12.8238 9.80107 12.5114 9.48865C12.1989 9.17622 11.7753 9.00049 11.3335 9H4.6665C4.22467 9.00049 3.80107 9.17622 3.48865 9.48865C3.17622 9.80107 3.00049 10.2247 3 10.6665V12H13Z" fill="url(#app-printer-standard-16-paint2_linear_584118_6743)"/>
+<path d="M11.3333 10H4.66667C4.29848 10 4 10.2985 4 10.6667V14.3333C4 14.7015 4.29848 15 4.66667 15H11.3333C11.7015 15 12 14.7015 12 14.3333V10.6667C12 10.2985 11.7015 10 11.3333 10Z" fill="url(#app-printer-standard-16-paint3_linear_584118_6743)"/>
+<path d="M11.3333 6H10V3L12 4V5.3333C12 5.42085 11.9828 5.50755 11.9492 5.58844C11.9157 5.66933 11.8666 5.74283 11.8047 5.80474C11.7428 5.86664 11.6693 5.91575 11.5884 5.94926C11.5075 5.98276 11.4208 6 11.3333 6Z" fill="#0669BC"/>
+<path d="M10 6H8V3L10 4V6Z" fill="#78D30C"/>
+<path d="M11.9999 4H9.33325L9.99992 2H11.3333C11.5101 2 11.6796 2.07024 11.8047 2.19526C11.9297 2.32029 11.9999 2.48986 11.9999 2.66667V4Z" fill="#0078D4"/>
+<path d="M8.00001 6.00001H6.00001L5.33301 3.33301L8.00001 4.00001V6.00001Z" fill="#0078D4"/>
+<path d="M10 4H7.33301L8.00001 2H10V4Z" fill="#9BF00B"/>
+<path d="M6 5.99998H4.66668C4.57913 5.99998 4.49244 5.98274 4.41155 5.94923C4.33066 5.91572 4.25717 5.86662 4.19526 5.80471C4.13335 5.7428 4.08425 5.6693 4.05075 5.58841C4.01724 5.50753 4 5.42083 4 5.33328V3.99998L6 3.33331V5.99998Z" fill="#3CCBF4"/>
+<path d="M8.00001 4H5.33301L6.00001 2H8.00001V4Z" fill="#1493DF"/>
+<path d="M4.6667 2H6V4H4V2.6667C4 2.48988 4.07024 2.3203 4.19527 2.19527C4.3203 2.07024 4.48988 2 4.6667 2Z" fill="#50E6FF"/>
+</g>
+<defs>
+<linearGradient id="app-printer-standard-16-paint0_linear_584118_6743" x1="11.6154" y1="15.2498" x2="4.20607" y2="2.41654" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#5C6166"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-16-paint1_linear_584118_6743" x1="11.0825" y1="14.8391" x2="4.91747" y2="4.1609" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-16-paint2_linear_584118_6743" x1="9.63525" y1="13.9426" x2="6.14136" y2="7.89104" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E2021"/>
+<stop offset="1" stop-color="#2E3133"/>
+</linearGradient>
+<linearGradient id="app-printer-standard-16-paint3_linear_584118_6743" x1="9.96058" y1="15.8958" x2="6.03942" y2="9.10418" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-printer-standard-16-clip0_584118_6743">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

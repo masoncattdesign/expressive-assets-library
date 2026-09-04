@@ -1,0 +1,97 @@
+<svg aria-label="Windows Package Manager (WinGet) standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-winget-standard-48-clip0_584118_3755)">
+<path d="M6 3C6 1.34315 7.34315 0 9 0H39C40.6569 0 42 1.34315 42 3V33C42 34.6569 40.6569 36 39 36H9C7.34315 36 6 34.6569 6 33V3Z" fill="#9C640A"/>
+<mask id="app-winget-standard-48-mask0_584118_3755" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="0" width="36" height="36">
+<path d="M6 3C6 1.34315 7.34315 0 9 0H39C40.6569 0 42 1.34315 42 3V33C42 34.6569 40.6569 36 39 36H9C7.34315 36 6 34.6569 6 33V3Z" fill="#9C640A"/>
+</mask>
+<g mask="url(#app-winget-standard-48-mask0_584118_3755)">
+<g filter="url(#app-winget-standard-48-filter0_dd_584118_3755)">
+<path d="M3 9C3 7.34315 4.34315 6 6 6H42C43.6569 6 45 7.34315 45 9V39C45 40.6569 43.6569 42 42 42H6C4.34315 42 3 40.6569 3 39V9Z" fill="#BC822A"/>
+</g>
+</g>
+<path d="M3 9C3 7.34315 4.34315 6 6 6H42C43.6569 6 45 7.34315 45 9V39C45 40.6569 43.6569 42 42 42H6C4.34315 42 3 40.6569 3 39V9Z" fill="#BC822A"/>
+<mask id="app-winget-standard-48-mask1_584118_3755" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="42" height="36">
+<path d="M3 9C3 7.34315 4.34315 6 6 6H42C43.6569 6 45 7.34315 45 9V39C45 40.6569 43.6569 42 42 42H6C4.34315 42 3 40.6569 3 39V9Z" fill="#BC822A"/>
+</mask>
+<g mask="url(#app-winget-standard-48-mask1_584118_3755)">
+<g filter="url(#app-winget-standard-48-filter1_dd_584118_3755)">
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="#D9D9D9"/>
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="url(#app-winget-standard-48-paint0_linear_584118_3755)"/>
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="url(#app-winget-standard-48-paint1_linear_584118_3755)"/>
+</g>
+</g>
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="#D9D9D9"/>
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="url(#app-winget-standard-48-paint2_linear_584118_3755)"/>
+<path d="M0 15C0 13.3431 1.34315 12 3 12H45C46.6569 12 48 13.3431 48 15V45C48 46.6569 46.6569 48 45 48H3C1.34315 48 0 46.6569 0 45V15Z" fill="url(#app-winget-standard-48-paint3_linear_584118_3755)"/>
+<g filter="url(#app-winget-standard-48-filter2_dd_584118_3755)">
+<path d="M23.9998 18C25.6566 18 26.9998 19.3431 26.9998 21V31.7578L29.3787 29.3789C30.5503 28.2073 32.4493 28.2073 33.6209 29.3789C34.7924 30.5505 34.7924 32.4495 33.6209 33.6211L26.1209 41.1211C24.9493 42.2927 23.0503 42.2927 21.8787 41.1211L14.3787 33.6211C13.2071 32.4495 13.2071 30.5505 14.3787 29.3789C15.5503 28.2073 17.4493 28.2073 18.6209 29.3789L20.9998 31.7578V21C20.9998 19.3431 22.3429 18 23.9998 18Z" fill="url(#app-winget-standard-48-paint4_linear_584118_3755)"/>
+</g>
+</g>
+<defs>
+<filter id="app-winget-standard-48-filter0_dd_584118_3755" x="1" y="3.01" width="46" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.99"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3755"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.21"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3755" result="effect2_dropShadow_584118_3755"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3755" result="shape"/>
+</filter>
+<filter id="app-winget-standard-48-filter1_dd_584118_3755" x="-2" y="9.01" width="52" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.99"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3755"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.21"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3755" result="effect2_dropShadow_584118_3755"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3755" result="shape"/>
+</filter>
+<filter id="app-winget-standard-48-filter2_dd_584118_3755" x="11.5" y="17" width="24.9995" height="27.9998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3755"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.2"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3755" result="effect2_dropShadow_584118_3755"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3755" result="shape"/>
+</filter>
+<linearGradient id="app-winget-standard-48-paint0_linear_584118_3755" x1="0" y1="12" x2="34.56" y2="58.08" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DEB678"/>
+<stop offset="1" stop-color="#C59141"/>
+</linearGradient>
+<linearGradient id="app-winget-standard-48-paint1_linear_584118_3755" x1="13.5" y1="7.5" x2="28.5" y2="52.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DEB678"/>
+<stop offset="1" stop-color="#B57F2D"/>
+</linearGradient>
+<linearGradient id="app-winget-standard-48-paint2_linear_584118_3755" x1="0" y1="12" x2="34.56" y2="58.08" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DEB678"/>
+<stop offset="1" stop-color="#C59141"/>
+</linearGradient>
+<linearGradient id="app-winget-standard-48-paint3_linear_584118_3755" x1="13.5" y1="7.5" x2="28.5" y2="52.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DEB678"/>
+<stop offset="1" stop-color="#B57F2D"/>
+</linearGradient>
+<linearGradient id="app-winget-standard-48-paint4_linear_584118_3755" x1="18.2726" y1="14.4546" x2="25.6208" y2="40.173" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#F0F0F0"/>
+</linearGradient>
+<clipPath id="app-winget-standard-48-clip0_584118_3755">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,110 @@
+<svg aria-label="Windows 365 Cloud PC standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-w365-cloud-pc-standard-32-clip0_584118_1223)">
+<g clip-path="url(#app-w365-cloud-pc-standard-32-clip1_584118_1223)">
+<path d="M29.6471 1H9.35294C8.60573 1 8 1.60573 8 2.35294V22.6471C8 23.3943 8.60573 24 9.35294 24H29.6471C30.3943 24 31 23.3943 31 22.6471V2.35294C31 1.60573 30.3943 1 29.6471 1Z" fill="url(#app-w365-cloud-pc-standard-32-paint0_linear_584118_1223)"/>
+<mask id="app-w365-cloud-pc-standard-32-mask0_584118_1223" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="1" width="23" height="23">
+<path d="M29.6471 1H9.35294C8.60573 1 8 1.60573 8 2.35294V22.6471C8 23.3943 8.60573 24 9.35294 24H29.6471C30.3943 24 31 23.3943 31 22.6471V2.35294C31 1.60573 30.3943 1 29.6471 1Z" fill="url(#app-w365-cloud-pc-standard-32-paint1_linear_584118_1223)"/>
+</mask>
+<g mask="url(#app-w365-cloud-pc-standard-32-mask0_584118_1223)">
+<g filter="url(#app-w365-cloud-pc-standard-32-filter0_dd_584118_1223)">
+<path d="M25.6471 5H5.35294C4.60573 5 4 5.60573 4 6.35294V26.6471C4 27.3943 4.60573 28 5.35294 28H25.6471C26.3943 28 27 27.3943 27 26.6471V6.35294C27 5.60573 26.3943 5 25.6471 5Z" fill="url(#app-w365-cloud-pc-standard-32-paint2_linear_584118_1223)"/>
+</g>
+</g>
+<path d="M21.6471 9H1.35294C0.605731 9 0 9.60573 0 10.3529V30.6471C0 31.3943 0.605731 32 1.35294 32H21.6471C22.3943 32 23 31.3943 23 30.6471V10.3529C23 9.60573 22.3943 9 21.6471 9Z" fill="url(#app-w365-cloud-pc-standard-32-paint3_linear_584118_1223)"/>
+<mask id="app-w365-cloud-pc-standard-32-mask1_584118_1223" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="9" width="23" height="23">
+<path d="M21.6471 9H1.35294C0.605731 9 0 9.60573 0 10.3529V30.6471C0 31.3943 0.605731 32 1.35294 32H21.6471C22.3943 32 23 31.3943 23 30.6471V10.3529C23 9.60573 22.3943 9 21.6471 9Z" fill="url(#app-w365-cloud-pc-standard-32-paint4_linear_584118_1223)"/>
+</mask>
+<g mask="url(#app-w365-cloud-pc-standard-32-mask1_584118_1223)">
+<g filter="url(#app-w365-cloud-pc-standard-32-filter1_dd_584118_1223)">
+<path d="M25.6471 5H5.35294C4.60573 5 4 5.60573 4 6.35294V26.6471C4 27.3943 4.60573 28 5.35294 28H25.6471C26.3943 28 27 27.3943 27 26.6471V6.35294C27 5.60573 26.3943 5 25.6471 5Z" fill="url(#app-w365-cloud-pc-standard-32-paint5_linear_584118_1223)"/>
+</g>
+</g>
+<path d="M25.6471 5H5.35294C4.60573 5 4 5.60573 4 6.35294V26.6471C4 27.3943 4.60573 28 5.35294 28H25.6471C26.3943 28 27 27.3943 27 26.6471V6.35294C27 5.60573 26.3943 5 25.6471 5Z" fill="url(#app-w365-cloud-pc-standard-32-paint6_linear_584118_1223)"/>
+<g filter="url(#app-w365-cloud-pc-standard-32-filter2_dd_584118_1223)">
+<path d="M20.0666 19.9794C21.7114 19.8577 23 18.4959 23 16.8948C23 15.353 21.8122 14.0396 20.2372 13.8396L20.1624 13.83L20.1351 13.762C19.426 11.9925 17.7065 10.849 15.7542 10.849C13.4219 10.849 11.4697 12.4735 11.1124 14.7113L11.0938 14.8281L10.9726 14.8151C10.8731 14.8043 10.7723 14.7973 10.6695 14.7973C9.19745 14.7973 8 15.9596 8 17.3884C8 18.8172 9.19745 19.9794 10.6695 19.9794H20.0666Z" fill="url(#app-w365-cloud-pc-standard-32-paint7_linear_584118_1223)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="app-w365-cloud-pc-standard-32-filter0_dd_584118_1223" x="2" y="3" width="27" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1223"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1223" result="effect2_dropShadow_584118_1223"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1223" result="shape"/>
+</filter>
+<filter id="app-w365-cloud-pc-standard-32-filter1_dd_584118_1223" x="2" y="3" width="27" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.333333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1223"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1223" result="effect2_dropShadow_584118_1223"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1223" result="shape"/>
+</filter>
+<filter id="app-w365-cloud-pc-standard-32-filter2_dd_584118_1223" x="6.66667" y="10.1823" width="17.6667" height="11.7971" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1223"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.133333"/>
+<feGaussianBlur stdDeviation="0.0666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1223" result="effect2_dropShadow_584118_1223"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1223" result="shape"/>
+</filter>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint0_linear_584118_1223" x1="25.2794" y1="22.5103" x2="13.3727" y2="1.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint1_linear_584118_1223" x1="25.2794" y1="22.5103" x2="13.3727" y2="1.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint2_linear_584118_1223" x1="21.2794" y1="26.5103" x2="9.37265" y2="5.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint3_linear_584118_1223" x1="17.2794" y1="30.5103" x2="5.37265" y2="9.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint4_linear_584118_1223" x1="17.2794" y1="30.5103" x2="5.37265" y2="9.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint5_linear_584118_1223" x1="21.2794" y1="26.5103" x2="9.37265" y2="5.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint6_linear_584118_1223" x1="21.2794" y1="26.5103" x2="9.37265" y2="5.88713" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-w365-cloud-pc-standard-32-paint7_linear_584118_1223" x1="15.2597" y1="21.2992" x2="12.7333" y2="9.73528" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-w365-cloud-pc-standard-32-clip0_584118_1223">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+<clipPath id="app-w365-cloud-pc-standard-32-clip1_584118_1223">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,46 @@
+<svg aria-label="Live Captions standard 16" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-live-captions-standard-16-clip0_584118_4224)">
+<path d="M14.9999 1.99998H0.999992C0.447712 1.99998 0 2.4477 0 2.99998V12.9999C0 13.5522 0.447712 13.9999 0.999992 13.9999H14.9999C15.5522 13.9999 15.9999 13.5522 15.9999 12.9999V2.99998C15.9999 2.4477 15.5522 1.99998 14.9999 1.99998Z" fill="url(#app-live-captions-standard-16-paint0_linear_584118_4224)"/>
+<g filter="url(#app-live-captions-standard-16-filter0_d_584118_4224)">
+<rect x="1.99998" y="8.99993" width="7.99994" height="0.999992" rx="0.5" fill="url(#app-live-captions-standard-16-paint1_linear_584118_4224)"/>
+<rect x="6.99995" y="10.9999" width="6.99995" height="0.999992" rx="0.5" fill="url(#app-live-captions-standard-16-paint2_linear_584118_4224)"/>
+<rect x="10.9999" y="8.99993" width="2.99998" height="0.999992" rx="0.5" fill="url(#app-live-captions-standard-16-paint3_linear_584118_4224)"/>
+<rect x="1.99998" y="10.9999" width="3.99997" height="0.999992" rx="0.5" fill="url(#app-live-captions-standard-16-paint4_linear_584118_4224)"/>
+</g>
+</g>
+<defs>
+<filter id="app-live-captions-standard-16-filter0_d_584118_4224" x="1.49999" y="8.49994" width="12.9999" height="3.99997" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.25"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4224"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584118_4224" result="shape"/>
+</filter>
+<linearGradient id="app-live-captions-standard-16-paint0_linear_584118_4224" x1="11.3831" y1="11.7743" x2="6.04133" y2="1.00217" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B9DE2"/>
+<stop offset="1" stop-color="#30E5D0"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-16-paint1_linear_584118_4224" x1="3.81815" y1="8.85221" x2="3.85434" y2="10.0102" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-16-paint2_linear_584118_4224" x1="11.8531" y1="12.3369" x2="11.4116" y2="10.1958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-16-paint3_linear_584118_4224" x1="11.6817" y1="8.85221" x2="11.7777" y2="10.0033" gradientUnits="userSpaceOnUse">
+<stop offset="0.270833" stop-color="white"/>
+<stop offset="1" stop-color="#DFDFDF"/>
+</linearGradient>
+<linearGradient id="app-live-captions-standard-16-paint4_linear_584118_4224" x1="4.7732" y1="12.3369" x2="4.06055" y2="10.3619" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<clipPath id="app-live-captions-standard-16-clip0_584118_4224">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

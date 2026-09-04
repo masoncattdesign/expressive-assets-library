@@ -1,0 +1,76 @@
+<svg aria-label="Windows Subsystem for Linux standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 18C6 8.05888 14.0589 0 24 0C33.9411 0 42 8.05888 42 18V46C42 47.1046 41.1046 48 40 48H8C6.89543 48 6 47.1046 6 46V18Z" fill="url(#app-windows-subsystem-for-linux-standard-48-paint0_linear_584118_6103)"/>
+<g filter="url(#app-windows-subsystem-for-linux-standard-48-filter0_dd_584118_6103)">
+<mask id="app-windows-subsystem-for-linux-standard-48-mask0_584118_6103" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="0" width="28" height="42">
+<rect x="10" width="28" height="42" rx="14" fill="white"/>
+</mask>
+<g mask="url(#app-windows-subsystem-for-linux-standard-48-mask0_584118_6103)">
+<path d="M16 11C12.686 11 10 13.686 10 17V48H22V17C22 13.686 19.314 11 16 11Z" fill="white"/>
+<path d="M31.9999 11C28.6859 11 25.9999 13.686 25.9999 17V48H38V17C38 13.686 35.314 11 31.9999 11Z" fill="white"/>
+<path d="M27 31H21V48H27V31Z" fill="white"/>
+</g>
+<path d="M38 30C38 37.732 31.732 44 24 44C16.268 44 10 37.732 10 30V26C10 33.732 16.268 40 24 40C31.732 40 38 33.732 38 26V30Z" fill="#FFC225"/>
+</g>
+<path d="M37.9199 26.5C37.9724 26.9928 38 27.4932 38 28V30C38 37.732 31.732 44 24 44C16.268 44 10 37.732 10 30V28C10 27.4933 10.0266 26.9928 10.0791 26.5C10.8275 33.5267 16.7747 39 24 39C31.2252 39 37.1714 33.5266 37.9199 26.5Z" fill="#FFC700"/>
+<mask id="app-windows-subsystem-for-linux-standard-48-mask1_584118_6103" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="0" width="28" height="40">
+<rect x="10" width="28" height="40" rx="14" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#app-windows-subsystem-for-linux-standard-48-mask1_584118_6103)">
+<path d="M27 31H21V42H27V31Z" fill="white"/>
+<rect x="26" y="11" width="12" height="35" rx="6" fill="white"/>
+<rect x="10" y="11" width="12" height="35" rx="6" fill="white"/>
+</g>
+<circle cx="16" cy="18" r="3" fill="black"/>
+<circle cx="32" cy="18" r="3" fill="black"/>
+<g filter="url(#app-windows-subsystem-for-linux-standard-48-filter1_dd_584118_6103)">
+<circle cx="24" cy="29" r="5.78305" fill="white"/>
+</g>
+<path d="M24 27C26.1537 27 28.185 27.5241 29.9736 28.4512C29.99 28.632 30 28.8149 30 29C30 32.3137 27.3137 35 24 35C20.6863 35 18 32.3137 18 29C18 28.815 18.009 28.6319 18.0254 28.4512C19.8142 27.5239 21.846 27 24 27Z" fill="url(#app-windows-subsystem-for-linux-standard-48-paint1_linear_584118_6103)"/>
+<path d="M24.0005 23C27.1605 23.0002 29.7479 25.4435 29.981 28.5439C28.1905 29.4734 26.1572 29.9999 24.0005 30C21.8438 30 19.8095 29.4744 18.019 28.5449C18.2517 25.4439 20.8399 23 24.0005 23Z" fill="url(#app-windows-subsystem-for-linux-standard-48-paint2_linear_584118_6103)"/>
+<defs>
+<filter id="app-windows-subsystem-for-linux-standard-48-filter0_dd_584118_6103" x="7" y="8" width="34" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6103"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6103" result="effect2_dropShadow_584118_6103"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6103" result="shape"/>
+</filter>
+<filter id="app-windows-subsystem-for-linux-standard-48-filter1_dd_584118_6103" x="15.2169" y="20.2169" width="17.5662" height="17.5661" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6103"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6103" result="effect2_dropShadow_584118_6103"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6103" result="shape"/>
+</filter>
+<linearGradient id="app-windows-subsystem-for-linux-standard-48-paint0_linear_584118_6103" x1="35.9917" y1="50.624" x2="9.86568" y2="5.37236" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-windows-subsystem-for-linux-standard-48-paint1_linear_584118_6103" x1="27.0005" y1="34.197" x2="20.9995" y2="23.803" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B0570C"/>
+<stop offset="1" stop-color="#EC7A01"/>
+</linearGradient>
+<linearGradient id="app-windows-subsystem-for-linux-standard-48-paint2_linear_584118_6103" x1="30.4989" y1="28.2602" x2="17.4946" y2="5.74355" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EC7A01"/>
+<stop offset="0.3346" stop-color="#F69E13"/>
+</linearGradient>
+</defs>
+</svg>

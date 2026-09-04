@@ -1,0 +1,65 @@
+<svg aria-label="GPU Acceleration standard 32" role="img" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-gpu-acceleration-standard-32-clip0_584118_6204)">
+<path d="M28 14H26V7.33325C26 6.97965 25.8595 6.64053 25.6095 6.3905C25.3595 6.14047 25.0203 6 24.6667 6H18V4C18 2.93913 17.5786 1.92172 16.8284 1.17157C16.0783 0.421427 15.0609 0 14 0C12.9391 0 11.9217 0.421427 11.1716 1.17157C10.4214 1.92172 10 2.93913 10 4V6H3.3335C3.1584 5.99998 2.985 6.03444 2.82322 6.10143C2.66144 6.16842 2.51443 6.26662 2.39061 6.39043C2.26678 6.51423 2.16855 6.66122 2.10153 6.82299C2.03451 6.98476 2.00001 7.15815 2 7.33325V24.6667C2 25.3671 2.13796 26.0607 2.406 26.7078C2.67404 27.3548 3.06691 27.9428 3.56217 28.438C4.05743 28.9332 4.64539 29.3261 5.29248 29.5941C5.93957 29.8621 6.63311 30 7.3335 30H24.6667C25.0203 30 25.3595 29.8595 25.6095 29.6095C25.8595 29.3595 26 29.0203 26 28.6667V22H28C29.0609 22 30.0783 21.5786 30.8284 20.8284C31.5786 20.0783 32 19.0609 32 18C32 16.9391 31.5786 15.9217 30.8284 15.1716C30.0783 14.4214 29.0609 14 28 14Z" fill="url(#app-gpu-acceleration-standard-32-paint0_linear_584118_6204)"/>
+<g filter="url(#app-gpu-acceleration-standard-32-filter0_dd_584118_6204)">
+<path d="M9.33341 22H7.33342C6.96523 22 6.66675 22.2985 6.66675 22.6667V23.3333C6.66675 23.7015 6.96523 24 7.33342 24H9.33341C9.7016 24 10.0001 23.7015 10.0001 23.3333V22.6667C10.0001 22.2985 9.7016 22 9.33341 22Z" fill="url(#app-gpu-acceleration-standard-32-paint1_linear_584118_6204)"/>
+<path d="M15.3334 22H13.3334C12.9652 22 12.6667 22.2985 12.6667 22.6667V23.3333C12.6667 23.7015 12.9652 24 13.3334 24H15.3334C15.7016 24 16.0001 23.7015 16.0001 23.3333V22.6667C16.0001 22.2985 15.7016 22 15.3334 22Z" fill="url(#app-gpu-acceleration-standard-32-paint2_linear_584118_6204)"/>
+<path d="M5.66667 14H19.3333V23H5.66667C5.48986 23 5.32029 22.9298 5.19526 22.8047C5.07024 22.6797 5 22.5101 5 22.3333V14.6667C5 14.4899 5.07024 14.3203 5.19526 14.1953C5.32029 14.0702 5.48986 14 5.66667 14Z" fill="url(#app-gpu-acceleration-standard-32-paint3_linear_584118_6204)"/>
+<path d="M16.6667 16H12.3333C12.1492 16 12 16.1492 12 16.3333V20.6667C12 20.8508 12.1492 21 12.3333 21H16.6667C16.8508 21 17 20.8508 17 20.6667V16.3333C17 16.1492 16.8508 16 16.6667 16Z" fill="url(#app-gpu-acceleration-standard-32-paint4_linear_584118_6204)"/>
+<path d="M10.6667 16H7.33333C7.14924 16 7 16.1492 7 16.3333V17.6667C7 17.8508 7.14924 18 7.33333 18H10.6667C10.8508 18 11 17.8508 11 17.6667V16.3333C11 16.1492 10.8508 16 10.6667 16Z" fill="url(#app-gpu-acceleration-standard-32-paint5_linear_584118_6204)"/>
+<path d="M10.6667 19H7.33333C7.14924 19 7 19.1492 7 19.3333V20.6667C7 20.8508 7.14924 21 7.33333 21H10.6667C10.8508 21 11 20.8508 11 20.6667V19.3333C11 19.1492 10.8508 19 10.6667 19Z" fill="url(#app-gpu-acceleration-standard-32-paint6_linear_584118_6204)"/>
+<path d="M22.25 11H19.75C19.5511 11 19.3604 11.0791 19.2197 11.2197C19.0791 11.3604 19 11.5511 19 11.75V24.2478C19 24.4467 19.0791 24.6374 19.2197 24.7781C19.3603 24.9187 19.5511 24.9977 19.75 24.9978H20.25C20.4489 24.9978 20.6397 24.9187 20.7803 24.7781C20.921 24.6374 21 24.4467 21 24.2478V13H22.25C22.4489 13 22.6397 12.921 22.7803 12.7803C22.921 12.6397 23 12.4489 23 12.25V11.75C23 11.5511 22.921 11.3603 22.7803 11.2197C22.6397 11.079 22.4489 11 22.25 11Z" fill="url(#app-gpu-acceleration-standard-32-paint7_linear_584118_6204)"/>
+</g>
+</g>
+<defs>
+<filter id="app-gpu-acceleration-standard-32-filter0_dd_584118_6204" x="3.66667" y="10.3333" width="20.6667" height="16.6644" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.666667"/>
+<feGaussianBlur stdDeviation="0.666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_6204"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.133333"/>
+<feGaussianBlur stdDeviation="0.0666667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_6204" result="effect2_dropShadow_584118_6204"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_6204" result="shape"/>
+</filter>
+<linearGradient id="app-gpu-acceleration-standard-32-paint0_linear_584118_6204" x1="22.6814" y1="31.3527" x2="6.66667" y2="3.61433" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0669BC"/>
+<stop offset="1" stop-color="#1493DF"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint1_linear_584118_6204" x1="9.06114" y1="24.2605" x2="7.60569" y2="21.7395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint2_linear_584118_6204" x1="15.0611" y1="24.2605" x2="13.6057" y2="21.7395" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint3_linear_584118_6204" x1="16.0125" y1="24.9173" x2="8.65401" y2="12.172" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint4_linear_584118_6204" x1="16.1466" y1="21.3519" x2="12.8534" y2="15.6481" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint5_linear_584118_6204" x1="9.87204" y1="18.5104" x2="8.12796" y2="15.4896" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint6_linear_584118_6204" x1="9.87204" y1="21.5104" x2="8.12796" y2="18.4896" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A9299"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-gpu-acceleration-standard-32-paint7_linear_584118_6204" x1="23.8934" y1="23.0104" x2="17.6066" y2="12.1214" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A1AAB3"/>
+<stop offset="1" stop-color="#B8C2CC"/>
+</linearGradient>
+<clipPath id="app-gpu-acceleration-standard-32-clip0_584118_6204">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,106 @@
+<svg aria-label="Windows 365 standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#app-windows-365-standard-48-clip0_584118_1114)">
+<g clip-path="url(#app-windows-365-standard-48-clip1_584118_1114)">
+<path d="M44.9412 1H14.0588C12.9218 1 12 1.92177 12 3.05882V33.9412C12 35.0782 12.9218 36 14.0588 36H44.9412C46.0782 36 47 35.0782 47 33.9412V3.05882C47 1.92177 46.0782 1 44.9412 1Z" fill="url(#app-windows-365-standard-48-paint0_linear_584118_1114)"/>
+<mask id="app-windows-365-standard-48-mask0_584118_1114" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="1" width="35" height="35">
+<path d="M44.9412 1H14.0588C12.9218 1 12 1.92177 12 3.05882V33.9412C12 35.0782 12.9218 36 14.0588 36H44.9412C46.0782 36 47 35.0782 47 33.9412V3.05882C47 1.92177 46.0782 1 44.9412 1Z" fill="url(#app-windows-365-standard-48-paint1_linear_584118_1114)"/>
+</mask>
+<g mask="url(#app-windows-365-standard-48-mask0_584118_1114)">
+<g filter="url(#app-windows-365-standard-48-filter0_dd_584118_1114)">
+<path d="M38.9412 7H8.05882C6.92176 7 6 7.92176 6 9.05882V39.9412C6 41.0782 6.92176 42 8.05882 42H38.9412C40.0782 42 41 41.0782 41 39.9412V9.05882C41 7.92176 40.0782 7 38.9412 7Z" fill="url(#app-windows-365-standard-48-paint2_linear_584118_1114)"/>
+</g>
+</g>
+<path d="M38.9412 7H8.05882C6.92176 7 6 7.92176 6 9.05882V39.9412C6 41.0782 6.92176 42 8.05882 42H38.9412C40.0782 42 41 41.0782 41 39.9412V9.05882C41 7.92176 40.0782 7 38.9412 7Z" fill="url(#app-windows-365-standard-48-paint3_linear_584118_1114)"/>
+<mask id="app-windows-365-standard-48-mask1_584118_1114" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="7" width="35" height="35">
+<path d="M38.9412 7H8.05882C6.92176 7 6 7.92176 6 9.05882V39.9412C6 41.0782 6.92176 42 8.05882 42H38.9412C40.0782 42 41 41.0782 41 39.9412V9.05882C41 7.92176 40.0782 7 38.9412 7Z" fill="url(#app-windows-365-standard-48-paint4_linear_584118_1114)"/>
+</mask>
+<g mask="url(#app-windows-365-standard-48-mask1_584118_1114)">
+<g filter="url(#app-windows-365-standard-48-filter1_dd_584118_1114)">
+<path d="M32.9412 13H2.05882C0.921765 13 0 13.9218 0 15.0588V45.9412C0 47.0782 0.921765 48 2.05882 48H32.9412C34.0782 48 35 47.0782 35 45.9412V15.0588C35 13.9218 34.0782 13 32.9412 13Z" fill="url(#app-windows-365-standard-48-paint5_linear_584118_1114)"/>
+</g>
+</g>
+<path d="M32.9412 13H2.05882C0.921765 13 0 13.9218 0 15.0588V45.9412C0 47.0782 0.921765 48 2.05882 48H32.9412C34.0782 48 35 47.0782 35 45.9412V15.0588C35 13.9218 34.0782 13 32.9412 13Z" fill="url(#app-windows-365-standard-48-paint6_linear_584118_1114)"/>
+<g filter="url(#app-windows-365-standard-48-filter2_dd_584118_1114)">
+<path d="M17 31V39H9V31H17ZM26 31V39H18V31H26ZM26 30H18V22H26V30ZM17 30H9V22H17V30Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="app-windows-365-standard-48-filter0_dd_584118_1114" x="3" y="4" width="41" height="41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1114"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1114" result="effect2_dropShadow_584118_1114"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1114" result="shape"/>
+</filter>
+<filter id="app-windows-365-standard-48-filter1_dd_584118_1114" x="-3" y="10" width="41" height="41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1114"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1114" result="effect2_dropShadow_584118_1114"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1114" result="shape"/>
+</filter>
+<filter id="app-windows-365-standard-48-filter2_dd_584118_1114" x="6" y="19" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_1114"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_1114" result="effect2_dropShadow_584118_1114"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_1114" result="shape"/>
+</filter>
+<linearGradient id="app-windows-365-standard-48-paint0_linear_584118_1114" x1="38.2948" y1="33.733" x2="20.1758" y2="2.34998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint1_linear_584118_1114" x1="38.2948" y1="33.733" x2="20.1758" y2="2.34998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#0078D4"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint2_linear_584118_1114" x1="32.2948" y1="39.733" x2="14.1758" y2="8.34998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint3_linear_584118_1114" x1="32.2948" y1="39.733" x2="14.1758" y2="8.34998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint4_linear_584118_1114" x1="32.2948" y1="39.733" x2="14.1758" y2="8.34998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint5_linear_584118_1114" x1="26.2948" y1="45.733" x2="8.17578" y2="14.35" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<linearGradient id="app-windows-365-standard-48-paint6_linear_584118_1114" x1="26.2948" y1="45.733" x2="8.17578" y2="14.35" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1493DF"/>
+<stop offset="1" stop-color="#50E6FF"/>
+</linearGradient>
+<clipPath id="app-windows-365-standard-48-clip0_584118_1114">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+<clipPath id="app-windows-365-standard-48-clip1_584118_1114">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

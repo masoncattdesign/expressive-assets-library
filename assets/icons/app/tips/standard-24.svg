@@ -1,0 +1,54 @@
+<svg aria-label="Tips standard 24" role="img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9996 21.9C18.0195 21.9 22.8996 17.0199 22.8996 11C22.8996 4.98007 18.0195 0.0999756 11.9996 0.0999756C5.97971 0.0999756 1.09961 4.98007 1.09961 11C1.09961 17.0199 5.97971 21.9 11.9996 21.9Z" fill="url(#app-tips-standard-24-paint0_linear_584118_4298)"/>
+<mask id="app-tips-standard-24-mask0_584118_4298" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="0" width="22" height="22">
+<path d="M11.9996 21.9C18.0195 21.9 22.8996 17.0199 22.8996 11C22.8996 4.98007 18.0195 0.0999756 11.9996 0.0999756C5.97971 0.0999756 1.09961 4.98007 1.09961 11C1.09961 17.0199 5.97971 21.9 11.9996 21.9Z" fill="url(#app-tips-standard-24-paint1_linear_584118_4298)"/>
+</mask>
+<g mask="url(#app-tips-standard-24-mask0_584118_4298)">
+<g filter="url(#app-tips-standard-24-filter0_dd_584118_4298)">
+<path d="M11.3003 5.04996C8.70031 5.34996 6.50031 7.44996 6.10031 10.05C5.80031 11.85 6.35031 13.5 7.35031 14.75C8.50031 16.2 9.00031 18.05 9.00031 19.95V20L12.0003 21L15.0003 20V19.65C15.0003 17.8 15.7003 16.05 16.8503 14.55C17.6003 13.55 18.0003 12.35 18.0003 11C18.0003 7.44996 14.9003 4.64996 11.3003 5.04996Z" fill="url(#app-tips-standard-24-paint2_linear_584118_4298)"/>
+<path d="M9.00031 20L9.00031 21C9.00031 22.65 10.3503 24 12.0003 24C13.6503 24 15.0003 22.65 15.0003 21L15.0003 20H9.00031Z" fill="url(#app-tips-standard-24-paint3_linear_584118_4298)"/>
+</g>
+</g>
+<path d="M11.2993 5.05002C8.69934 5.35002 6.49934 7.45002 6.09934 10.05C5.79934 11.85 6.34934 13.5 7.34934 14.75C8.49934 16.2 8.99934 18.05 8.99934 19.95V20L11.9993 21L14.9993 20V19.65C14.9993 17.8 15.6993 16.05 16.8493 14.55C17.5993 13.55 17.9993 12.35 17.9993 11C17.9993 7.45002 14.8993 4.65002 11.2993 5.05002Z" fill="url(#app-tips-standard-24-paint4_linear_584118_4298)"/>
+<path d="M9 20V21C9 22.65 10.35 24 12 24C13.65 24 15 22.65 15 21V20H9Z" fill="url(#app-tips-standard-24-paint5_linear_584118_4298)"/>
+<defs>
+<filter id="app-tips-standard-24-filter0_dd_584118_4298" x="3.01855" y="3.01184" width="17.9818" height="24.9881" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.5"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_4298"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_4298" result="effect2_dropShadow_584118_4298"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_4298" result="shape"/>
+</filter>
+<linearGradient id="app-tips-standard-24-paint0_linear_584118_4298" x1="17.438" y1="20.4196" x2="6.56121" y2="1.58038" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-tips-standard-24-paint1_linear_584118_4298" x1="17.438" y1="20.4196" x2="6.56121" y2="1.58038" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0C59A4"/>
+<stop offset="1" stop-color="#28AFEA"/>
+</linearGradient>
+<linearGradient id="app-tips-standard-24-paint2_linear_584118_4298" x1="13.5428" y1="23.5741" x2="10.8596" y2="18.9265" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-tips-standard-24-paint3_linear_584118_4298" x1="13.5428" y1="23.5741" x2="10.8596" y2="18.9265" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+<linearGradient id="app-tips-standard-24-paint4_linear_584118_4298" x1="16.1678" y1="19.3245" x2="8.52789" y2="6.09172" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E6E6"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="app-tips-standard-24-paint5_linear_584118_4298" x1="13.5425" y1="23.5741" x2="10.8592" y2="18.9265" gradientUnits="userSpaceOnUse">
+<stop stop-color="#45494D"/>
+<stop offset="1" stop-color="#737A80"/>
+</linearGradient>
+</defs>
+</svg>

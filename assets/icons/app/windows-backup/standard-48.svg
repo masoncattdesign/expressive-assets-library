@@ -1,0 +1,82 @@
+<svg aria-label="Windows Backup standard 48" role="img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4.5C31.4558 4.5 37.5 10.5442 37.5 18C37.5 18.0417 37.4984 18.0834 37.498 18.125C34.2469 18.6714 31.5879 20.9612 30.5137 24H17.4863C16.412 20.9609 13.7526 18.6711 10.501 18.125C10.5006 18.0834 10.5 18.0417 10.5 18C10.5 10.5442 16.5442 4.5 24 4.5Z" fill="url(#app-windows-backup-standard-48-paint0_linear_584118_3485)"/>
+<mask id="app-windows-backup-standard-48-mask0_584118_3485" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="4" width="28" height="20">
+<path d="M24 4.5C31.4558 4.5 37.5 10.5442 37.5 18C37.5 18.0417 37.4984 18.0834 37.498 18.125C34.2469 18.6714 31.5879 20.9612 30.5137 24H17.4863C16.412 20.9609 13.7526 18.6711 10.501 18.125C10.5006 18.0834 10.5 18.0417 10.5 18C10.5 10.5442 16.5442 4.5 24 4.5Z" fill="url(#app-windows-backup-standard-48-paint1_linear_584118_3485)"/>
+</mask>
+<g mask="url(#app-windows-backup-standard-48-mask0_584118_3485)">
+<g filter="url(#app-windows-backup-standard-48-filter0_dd_584118_3485)">
+<path d="M39 18C43.9706 18 48 22.0294 48 27C48 31.9706 43.9706 36 39 36H9C4.02944 36 0 31.9706 0 27C0 22.0294 4.02944 18 9 18C12.9185 18 16.2507 20.5047 17.4863 24H30.5137C31.7493 20.5047 35.0815 18 39 18Z" fill="#A1AAB3"/>
+<path d="M39 18C43.9706 18 48 22.0294 48 27C48 31.9706 43.9706 36 39 36H9C4.02944 36 0 31.9706 0 27C0 22.0294 4.02944 18 9 18C12.9185 18 16.2507 20.5047 17.4863 24H30.5137C31.7493 20.5047 35.0815 18 39 18Z" fill="url(#app-windows-backup-standard-48-paint2_linear_584118_3485)"/>
+</g>
+</g>
+<path d="M39 18C43.9706 18 48 22.0294 48 27C48 31.9706 43.9706 36 39 36H9C4.02944 36 0 31.9706 0 27C0 22.0294 4.02944 18 9 18C12.9185 18 16.2507 20.5047 17.4863 24H30.5137C31.7493 20.5047 35.0815 18 39 18Z" fill="url(#app-windows-backup-standard-48-paint3_linear_584118_3485)"/>
+<mask id="app-windows-backup-standard-48-mask1_584118_3485" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="48" height="32">
+<path d="M24 4.5C31.4558 4.5 37.5 10.5442 37.5 18C37.5 18.0417 37.4984 18.0834 37.498 18.125C37.4556 18.1321 37.4134 18.1407 37.3711 18.1484C37.8994 18.0518 38.4437 18 39 18C43.9706 18 48 22.0294 48 27C48 31.9706 43.9706 36 39 36H9C4.02944 36 0 31.9706 0 27C0 22.0294 4.02944 18 9 18C9.54328 18 10.0751 18.0493 10.5918 18.1416C10.5615 18.1362 10.5314 18.1301 10.501 18.125C10.5006 18.0834 10.5 18.0417 10.5 18C10.5 10.5442 16.5442 4.5 24 4.5ZM16.7363 22.4023C16.6944 22.332 16.6512 22.2625 16.6074 22.1934C16.6512 22.2625 16.6944 22.332 16.7363 22.4023ZM31.79 21.6152C31.7471 21.6727 31.7047 21.7306 31.6631 21.7891C31.7047 21.7306 31.7471 21.6727 31.79 21.6152ZM31.5439 21.9609C31.5043 22.0195 31.465 22.0782 31.4268 22.1377C31.465 22.0782 31.5043 22.0195 31.5439 21.9609ZM15.2754 20.5508C15.2105 20.4877 15.1448 20.4254 15.0781 20.3643C15.1448 20.4254 15.2105 20.4876 15.2754 20.5508Z" fill="#A1AAB3"/>
+<path d="M24 4.5C31.4558 4.5 37.5 10.5442 37.5 18C37.5 18.0417 37.4984 18.0834 37.498 18.125C37.4556 18.1321 37.4134 18.1407 37.3711 18.1484C37.8994 18.0518 38.4437 18 39 18C43.9706 18 48 22.0294 48 27C48 31.9706 43.9706 36 39 36H9C4.02944 36 0 31.9706 0 27C0 22.0294 4.02944 18 9 18C9.54328 18 10.0751 18.0493 10.5918 18.1416C10.5615 18.1362 10.5314 18.1301 10.501 18.125C10.5006 18.0834 10.5 18.0417 10.5 18C10.5 10.5442 16.5442 4.5 24 4.5ZM16.7363 22.4023C16.6944 22.332 16.6512 22.2625 16.6074 22.1934C16.6512 22.2625 16.6944 22.332 16.7363 22.4023ZM31.79 21.6152C31.7471 21.6727 31.7047 21.7306 31.6631 21.7891C31.7047 21.7306 31.7471 21.6727 31.79 21.6152ZM31.5439 21.9609C31.5043 22.0195 31.465 22.0782 31.4268 22.1377C31.465 22.0782 31.5043 22.0195 31.5439 21.9609ZM15.2754 20.5508C15.2105 20.4877 15.1448 20.4254 15.0781 20.3643C15.1448 20.4254 15.2105 20.4876 15.2754 20.5508Z" fill="url(#app-windows-backup-standard-48-paint4_linear_584118_3485)"/>
+</mask>
+<g mask="url(#app-windows-backup-standard-48-mask1_584118_3485)">
+<g filter="url(#app-windows-backup-standard-48-filter1_dd_584118_3485)">
+<path d="M21.9901 15.7724C23.1678 14.7081 24.9859 14.7438 26.121 15.8788L33.621 23.3788C34.7926 24.5504 34.7926 26.4495 33.621 27.621C32.4494 28.7926 30.5504 28.7926 29.3788 27.621L26.9999 25.2421L26.9999 41.9999C26.9999 43.6568 25.6567 44.9999 23.9999 44.9999C22.343 44.9999 20.9999 43.6568 20.9999 41.9999L20.9999 25.2421L18.621 27.621C17.4494 28.7926 15.5504 28.7926 14.3788 27.621C13.2072 26.4495 13.2072 24.5504 14.3788 23.3788L21.8788 15.8788L21.9901 15.7724Z" fill="url(#app-windows-backup-standard-48-paint5_linear_584118_3485)"/>
+</g>
+</g>
+<path d="M21.9901 15.7724C23.1678 14.7081 24.9859 14.7438 26.121 15.8788L33.621 23.3788C34.7926 24.5504 34.7926 26.4495 33.621 27.621C32.4494 28.7926 30.5504 28.7926 29.3788 27.621L26.9999 25.2421L26.9999 41.9999C26.9999 43.6568 25.6567 44.9999 23.9999 44.9999C22.343 44.9999 20.9999 43.6568 20.9999 41.9999L20.9999 25.2421L18.621 27.621C17.4494 28.7926 15.5504 28.7926 14.3788 27.621C13.2072 26.4495 13.2072 24.5504 14.3788 23.3788L21.8788 15.8788L21.9901 15.7724Z" fill="url(#app-windows-backup-standard-48-paint6_linear_584118_3485)"/>
+<defs>
+<filter id="app-windows-backup-standard-48-filter0_dd_584118_3485" x="-2" y="15.01" width="52" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.99"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3485"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.21"/>
+<feGaussianBlur stdDeviation="0.15"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3485" result="effect2_dropShadow_584118_3485"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3485" result="shape"/>
+</filter>
+<filter id="app-windows-backup-standard-48-filter1_dd_584118_3485" x="10.5001" y="11.01" width="26.9996" height="35.9999" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.99"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584118_3485"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.21"/>
+<feGaussianBlur stdDeviation="0.15"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_584118_3485" result="effect2_dropShadow_584118_3485"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_584118_3485" result="shape"/>
+</filter>
+<linearGradient id="app-windows-backup-standard-48-paint0_linear_584118_3485" x1="18" y1="6" x2="24" y2="25.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#24CDB9"/>
+<stop offset="1" stop-color="#008575"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint1_linear_584118_3485" x1="18" y1="4.5" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CAD2D9"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint2_linear_584118_3485" x1="13.3333" y1="18" x2="16.403" y2="37.2137" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECF6FF"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint3_linear_584118_3485" x1="13.3333" y1="19.3846" x2="16.403" y2="38.5983" gradientUnits="userSpaceOnUse">
+<stop stop-color="#24CDB9"/>
+<stop offset="1" stop-color="#008575"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint4_linear_584118_3485" x1="13.3333" y1="18" x2="16.403" y2="37.2137" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECF6FF"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint5_linear_584118_3485" x1="17.0274" y1="15" x2="29.9245" y2="42.1897" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28AFEA"/>
+<stop offset="0.458333" stop-color="#1493DF"/>
+<stop offset="1" stop-color="#0669BC"/>
+</linearGradient>
+<linearGradient id="app-windows-backup-standard-48-paint6_linear_584118_3485" x1="19.3333" y1="17.3077" x2="33.9182" y2="41.271" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECF6FF"/>
+<stop offset="1" stop-color="#A1AAB3"/>
+</linearGradient>
+</defs>
+</svg>
