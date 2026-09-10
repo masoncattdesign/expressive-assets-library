@@ -506,6 +506,15 @@ const state = {
   rolesLight: 0,               // -30..30
   rolesFlatten: false,         // collapse every ramp to one color
   rolesBase: false,            // theme the intentional white/black too
+  /* Bridge's shared style vocabulary (BR-088 in Ada's trust ledger). A theme
+     built here uses the same eight words the Color contract uses instead of a
+     parallel set of our own. 'brand' is exactly what this mode has always
+     done, so it stays the default and nothing moves until you pick another. */
+  rolesStyle: 'brand',
+  /* Bridge ships light with standard, medium and high contrast. Here that is
+     a floor on how far apart two accents may sit in lightness, so a theme
+     that only reads on a light surface can be pushed until it reads anywhere. */
+  rolesContrast: 'standard',
   /* Soft's own answer to "which shapes belong together" is a luminance
      histogram with three hand-tuned cutoffs. That is a third thing, neither
      of the two declared axes, and it cannot tell a cyan band from a purple
@@ -540,6 +549,7 @@ const DEFAULTS = {
   softSeed: '#5B7AE8', softIntensity: 50, softSecHue: 0,
   rolesSeed: '#0078D4', rolesTarget: 'relative', rolesAccents: 2, rolesOffsets: [0, 96, 192, 264, 40, 150], rolesHarmony: 'spread',
   rolesHue: 'replace', rolesChroma: 100, rolesLight: 0, rolesFlatten: false, rolesBase: false,
+  rolesStyle: 'brand', rolesContrast: 'standard',
   softGroupBy: 'luminance', softSteps: 4, softOffsets: [0, 0, 0, 0, 0, 0], softHarmony: 'wash', softBase: false,
   candSeed: '#0078D4', candRule: 'flatrule', candSteps: 4, candVary: 45,
   candOffsets: [0, 96, 192, 264, 40, 150], candHarmony: 'spread', candBase: false,
@@ -553,7 +563,7 @@ const RESET_KEYS = {
   acrylic:  ['acrylicSeed','acrylicOffset','acrylicFrost','acrylicSecHue'],
   soft:     ['softSeed','softIntensity','softSecHue','softGroupBy','softSteps','softOffsets','softHarmony','softBase'],
   candidate:['candSeed','candRule','candSteps','candVary','candOffsets','candBase'],
-  roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesOffsets','rolesHarmony','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase'],
+  roles:    ['rolesSeed','rolesTarget','rolesAccents','rolesOffsets','rolesHarmony','rolesHue','rolesChroma','rolesLight','rolesFlatten','rolesBase','rolesStyle','rolesContrast'],
 };
 
 function resetMode() {
@@ -1817,12 +1827,24 @@ function rolesAccentHues(seedHex, n, offsets) {
 /** What accent i actually comes out as: the seed plus its rotation, then the
  *  chroma and lightness the theme asks for. */
 function rolesAccentColors(n) {
-  const hues = rolesAccentHues(state.rolesSeed, n, state.rolesOffsets);
-  return hues.map((h) => {
+  const st = ROLES_STYLES[state.rolesStyle] || ROLES_STYLES.brand;
+  const floor = ROLES_CONTRAST[state.rolesContrast] || 0;
+  const cm = st.needsPart ? 1 : st.chroma;
+  const lo = st.needsPart ? 0 : st.light;
+  /* A wash is one hue for every group, so the rotations stop applying. */
+  let hues;
+  if (st.wash) {
+    let H = 250; try { H = hexToOklch(state.rolesSeed)[2]; } catch (e) {}
+    hues = Array.from({ length: n }, () => H);
+  } else {
+    hues = rolesAccentHues(state.rolesSeed, n, state.rolesOffsets);
+  }
+  return hues.map((h, i) => {
     try {
       const [L, C] = hexToOklch(state.rolesSeed);
-      return oklchToHex(Math.max(0.02, Math.min(0.99, L + state.rolesLight / 100)),
-                        Math.max(0, C * (state.rolesChroma / 100)), h);
+      return oklchToHex(
+        Math.max(0.02, Math.min(0.99, L + (state.rolesLight + lo) / 100 + rolesLightStep(i, floor))),
+        Math.max(0, C * (state.rolesChroma / 100) * cm), h);
     } catch (e) { return state.rolesSeed; }
   });
 }
@@ -1831,6 +1853,39 @@ function rolesAccentColors(n) {
    is a separate question, which is the point: hue says what color it becomes,
    chroma how much of it there is, lightness where it sits, and REPLACE versus
    ROTATE decides whether the icon's own internal hue relationships survive. */
+/* ═══ Bridge style families ═══════════════════════════════════════════════
+   BR-088 owns eight shared style names. Six are pure color transforms and
+   work on what an asset already carries. Outline and transparent need to
+   know which shape is the plate, and `part` is null on all 345 assets, so
+   they are listed and disabled rather than faked from the largest group. */
+const ROLES_STYLES = {
+  brand:        { label: 'Brand',         chroma: 1.00, light:  0, note: 'The seed at full strength. What this mode has always done.' },
+  neutral:      { label: 'Neutral',       chroma: 0.06, light:  0, note: 'Hue drained out, the lightness structure kept. The theme in gray.' },
+  strong:       { label: 'Strong',        chroma: 1.45, light: -4, note: 'Chroma pushed and the range deepened. The loudest reading of a seed.' },
+  subtle:       { label: 'Subtle',        chroma: 0.42, light:  6, note: 'Quiet, and lifted toward the surface behind it.' },
+  brightsubtle: { label: 'Bright subtle', chroma: 0.42, light: 14, note: 'Subtle, but lifted for a dark surface rather than a light one.' },
+  tinted:       { label: 'Tinted',        chroma: 0.30, light:  4, wash: true, note: 'One hue washed across every group instead of an accent each, so the offsets stop applying.' },
+  outline:      { label: 'Outline',       needsPart: true, note: 'Drops the plate and paints only the glyph. Needs part on the asset.' },
+  transparent:  { label: 'Transparent',   needsPart: true, note: 'Drops the plate entirely. Needs part on the asset.' },
+};
+/* Bridge solves contrast against the worst legal stack. We have no stack, so
+   this is the honest small version: a floor on the lightness gap between one
+   accent and the next. Accents fan both ways from the seed, so the seed stays
+   the middle of the set rather than one end of it. */
+const ROLES_CONTRAST = { standard: 0, medium: 0.12, high: 0.20 };
+const rolesLightStep = (slot, floor) =>
+  floor ? Math.ceil(slot / 2) * floor * (slot % 2 ? 1 : -1) : 0;
+
+/** Fold the chosen style into the user's own chroma and lightness knobs. The
+ *  knobs stay in charge; the style scales what they produce. */
+function rolesStyleOpts(o) {
+  const st = ROLES_STYLES[o.style] || ROLES_STYLES.brand;
+  if (st.needsPart) return o;
+  return { ...o, chroma: (o.chroma == null ? 100 : o.chroma) * st.chroma,
+                 light:  (o.light  == null ? 0   : o.light) + st.light,
+                 wash: !!st.wash };
+}
+
 const ROLES_NEUTRAL_FLOOR = 0.035;
 function rolesShift(hex, hue, o) {
   try {
@@ -1875,12 +1930,23 @@ function rolesToTone(stops, toneHex, o) {
 function applyRoles(svgStr, asset, o) {
   const idx = rolesIndex(asset, o.target);
   if (!idx || !idx.count) return svgStr;      // no declared roles: show it untouched
+  o = rolesStyleOpts(o);
   try {
     const doc = new DOMParser().parseFromString(svgStr, 'image/svg+xml');
     if (!doc.querySelector('svg')) return svgStr;
 
     const n = Math.max(1, Math.min(o.accents, idx.byBand ? ROLE_BANDS.length : idx.count));
-    const hues = rolesAccentHues(o.seed, n, o.offsets);
+    let hues = rolesAccentHues(o.seed, n, o.offsets);
+    if (o.wash) {                              // tinted: one hue, every group
+      let H = hues[0]; try { H = hexToOklch(o.seed)[2]; } catch (e) {}
+      hues = hues.map(() => H);
+    }
+    /* Contrast is a per-slot lightness offset, so it has to reach rolesShift
+       with the slot already known rather than being applied to o once. */
+    const cfloor = ROLES_CONTRAST[o.contrast] || 0;
+    const optsFor = (slot) => cfloor
+      ? Object.assign({}, o, { light: o.light + rolesLightStep(slot, cfloor) * 100 })
+      : o;
     /* The fold. A group past the last accent takes the last accent, which is
        why cutting too fine is safe and cutting too coarse is not. */
     const slotFor = (g) => (idx.byBand ? g % n : Math.min(g, n - 1));
@@ -1909,7 +1975,7 @@ function applyRoles(svgStr, asset, o) {
       const slot = slotFor(hit.g);
       if (o.palette) return rolesToTone(colors, o.palette[slot % o.palette.length], o);
       const hue = o.hueMode === 'rotate' ? ((o.offsets && o.offsets[slot]) || 0) : hues[slot];
-      return colors.map((c) => rolesShift(c, hue, o));
+      return colors.map((c) => rolesShift(c, hue, optsFor(slot)));
     };
 
     let touched = 0;
@@ -3536,6 +3602,7 @@ function transformSvg(svgStr,iconName,forceOriginal,asset){
       seed:state.rolesSeed, target:state.rolesTarget, accents:state.rolesAccents,
       offsets:state.rolesOffsets, hueMode:state.rolesHue, chroma:state.rolesChroma,
       light:state.rolesLight, flatten:state.rolesFlatten, themeBase:state.rolesBase,
+      style:state.rolesStyle, contrast:state.rolesContrast,
     });
   }
 
@@ -4054,6 +4121,43 @@ function renderControls(){
 
       <div class="divider"></div>
       <div class="ctrl-section">
+        <div class="ctrl-label">Style family</div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:8px">
+          ${Object.entries(ROLES_STYLES).map(([id,st])=>{
+            const on=state.rolesStyle===id, off=!!st.needsPart;
+            return `<button type="button" ${off?'disabled':`onclick="setRolesStyle('${id}')"`}
+              title="${st.note.replace(/"/g,'&quot;')}"
+              style="padding:6px 4px;border-radius:7px;border:1.5px solid ${on?'var(--accent)':'var(--border2)'};
+              background:${on?'var(--surface3)':'var(--surface2)'};
+              color:${off?'var(--text3)':on?'var(--text)':'var(--text2)'};
+              font-size:11px;font-family:var(--font);cursor:${off?'not-allowed':'pointer'};
+              opacity:${off?'0.5':'1'}">${st.label}</button>`;}).join('')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
+          ${(ROLES_STYLES[state.rolesStyle]||ROLES_STYLES.brand).note}
+          <br><br>Bridge's eight shared style names (BR-088). Outline and transparent
+          are greyed because they have to know which shape is the plate, and
+          <code>part</code> is still null on every asset.
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
+        <div class="ctrl-label">Contrast profile</div>
+        <div style="display:flex;gap:6px;margin-bottom:6px">
+          ${seg('setRolesContrast','standard',state.rolesContrast,'Standard')}
+          ${seg('setRolesContrast','medium',state.rolesContrast,'Medium')}
+          ${seg('setRolesContrast','high',state.rolesContrast,'High')}
+        </div>
+        <div class="no-ctrl" style="font-size:10.5px;color:var(--text3);padding:2px 0 0;line-height:1.5">
+          ${state.rolesContrast==='standard'
+            ? 'No floor. Accents sit wherever the seed and the artwork put them.'
+            : `Accents are held at least ${Math.round(ROLES_CONTRAST[state.rolesContrast]*100)}% of the lightness range apart, fanning both ways from the seed so the seed stays the middle of the set.`}
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="ctrl-section">
         <div class="ctrl-label">How the color is applied</div>
         <div style="display:flex;gap:6px;margin-bottom:8px">
           ${seg('setRolesHue','replace',state.rolesHue,'Replace hue')}
@@ -4093,6 +4197,8 @@ function renderControls(){
 function setCandRule(v){state.candRule=v;renderControls();renderIcons();}
 function setCandSteps(n){state.candSteps=n;renderControls();renderIcons();}
 function setRolesTarget(v){state.rolesTarget=v;renderControls();renderIcons();}
+function setRolesStyle(v){const st=ROLES_STYLES[v];if(!st||st.needsPart)return;state.rolesStyle=v;renderControls();renderIcons();}
+function setRolesContrast(v){state.rolesContrast=v;renderControls();renderIcons();}
 function setSoftGroupBy(v){state.softGroupBy=v;renderControls();renderIcons();}
 function setSoftSteps(n){state.softSteps=n;renderControls();renderIcons();}
 function setSoftHarmony(id){setAccentHarmony('softOffsets','softHarmony',id);}
