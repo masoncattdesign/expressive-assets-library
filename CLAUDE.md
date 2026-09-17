@@ -55,11 +55,26 @@ changed the asset tree, `npm run notices` too.
 ## Mason pushes, not you
 
 The shell has no GitHub credentials, no `gh`, no SSH key. `git push` fails with
-`could not read Username`. Commit freely, then hand him:
+`could not read Username`. Commit freely, then tell him the repo is ready and
+that it is `npm run push`:
+
+```
+npm run push     # git push origin main
+npm run ship     # manifest, stats, validate, then push
+```
+
+The long form still works and is worth knowing when the scripts are not
+available:
 
 ```
 cd ~/Downloads/expressive-assets && git push origin main
 ```
+
+The step exists because credentials are missing, not because pushing is hard.
+The VM this shell runs in *can* reach github.com over HTTPS, so a token on the
+remote URL would let a session push for itself. That is Mason's call to make,
+not something to set up unasked: it puts a credential in plaintext in
+`.git/config`.
 
 ## Two filesystems
 

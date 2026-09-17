@@ -15,6 +15,8 @@
     "notices": "node scripts/build-notices.mjs",
     "manifest": "node scripts/build-manifest.mjs",
     "validate": "node scripts/validate.mjs",
+    "push": "git push origin main",
+    "ship": "npm run manifest && npm run stats && npm run validate && git push origin main",
     "build": "npm run notices && npm run manifest && npm run validate && node scripts/build-site.mjs",
     "dev": "node scripts/build-site.mjs && node scripts/serve.mjs",
     "figma:run": "node scripts/import-figma.mjs --plan=figma-plan.json",
