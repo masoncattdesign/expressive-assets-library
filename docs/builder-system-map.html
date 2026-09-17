@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>System Map &mdash; Builder</title>
+<meta name="description" content="How an illustration gets made in Builder: four modes into one language, the glyph sources, the checks that read the output back, and where it meets the library.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="doc.css">
+<link rel="stylesheet" href="builder.css">
+<script src="chrome.js"></script>
+<script>applyStoredTheme();</script>
+</head>
+<body>
+
+<nav class="ea-bar" aria-label="Builder">
+  <a class="ea-brand" href="builder.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Builder</a>
+  <a class="ea-tab" href="builder.html">Builder</a>
+  <a class="ea-tab" href="builder-about.html">About</a>
+  <a class="ea-tab on" href="builder-system-map.html" aria-current="page">System Map</a>
+  <span class="ea-right">
+    <span data-theme-switch></span>
+  </span>
+</nav>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow"><span>Windows Design Systems</span> &middot; <span>Expressive Assets</span> &middot; <b>System Map</b></p>
+    <h1>How an illustration gets made</h1>
+    <p class="standfirst">Four modes, one language, and a linter that reads the output back. This is
+    the whole pipeline: what each stage decides, what it hands on, and where the library plugs into
+    it.</p>
+    <div class="facts">
+      <span><b>7</b> stages</span>
+      <span><b>4</b> modes</span>
+      <span><b>3</b> glyph sources</span>
+      <span><b>14</b> checks</span>
+      <span>Builder <b>0.2</b></span>
+    </div>
+  </header>
+
+  <section class="col">
+    <h2>In one paragraph</h2>
+    <p>You choose a mode, which sets the style preset and decides which slots you can bind. You
+    choose the relationship between the feature's objects, which narrows the twelve layouts to the
+    ones that carry it. You pick the layout. From there it is mechanical: the layout calls the
+    shared primitives, the preset supplies the numbers and the token fallbacks, the glyph sources
+    fill the slots, and the result is an SVG string on a 160 grid whose every color is a
+    <code>var()</code>. That string is then parsed back and checked against the rules, which is the
+    only honest way to know it obeys them. Nothing is written anywhere: the output is a
+    download.</p>
+  </section>
+
+  <figure>
+    <div class="figframe">
+      <svg viewBox="0 0 900 290" role="img" aria-label="Pipeline diagram: four build modes feed a relationship choice, a layout choice, and one shared visual language, which emits an SVG on a 160 grid; glyph sources and an optional device frame feed the language and the SVG, and the SVG is read back by the checks before export.">
+        <defs>
+          <marker id="bd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+          <marker id="bd-arrow-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
+          </marker>
+        </defs>
+
+        <!-- the two things that feed in from above -->
+        <g fill="none" stroke="currentColor" stroke-width="1.25">
+          <rect x="515" y="16" width="200" height="44" rx="7"/>
+          <rect x="735" y="16" width="145" height="44" rx="7" stroke-dasharray="4 3"/>
+        </g>
+
+        <!-- the pipeline -->
+        <g fill="none" stroke="currentColor" stroke-width="1.25">
+          <rect x="20" y="92" width="140" height="76" rx="7"/>
+          <rect x="190" y="92" width="140" height="76" rx="7"/>
+          <rect x="360" y="92" width="140" height="76" rx="7"/>
+          <rect x="730" y="92" width="150" height="76" rx="7"/>
+          <rect x="730" y="204" width="150" height="64" rx="7"/>
+          <rect x="530" y="204" width="170" height="64" rx="7"/>
+        </g>
+        <!-- the one box every mode shares -->
+        <rect x="530" y="92" width="170" height="76" rx="7"
+              fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+
+        <g font-family="Archivo, sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" fill="currentColor">
+          <text x="615" y="38">Glyph sources</text>
+          <text x="807" y="38">Device frame</text>
+          <text x="90" y="124">Mode</text>
+          <text x="260" y="124">Relationship</text>
+          <text x="430" y="124">Layout</text>
+          <text x="615" y="124" fill="var(--accent)">The language</text>
+          <text x="805" y="124">SVG</text>
+          <text x="805" y="232">Checks</text>
+          <text x="615" y="232">Export</text>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="10" text-anchor="middle" fill="currentColor" opacity=".62">
+          <text x="615" y="54">core 39 · manifest · parts</text>
+          <text x="807" y="54">Devices mode only</text>
+          <text x="90" y="144">4 ways in</text>
+          <text x="260" y="144">10 shapes</text>
+          <text x="430" y="144">1 of 12</text>
+          <text x="615" y="144" fill="var(--accent)" opacity="1">1 stroke · 13 tokens</text>
+          <text x="805" y="144">160 grid · var()</text>
+          <text x="805" y="250">14 rules</text>
+          <text x="615" y="250">themed · flat · brief</text>
+        </g>
+
+        <g stroke="currentColor" stroke-width="1.25" marker-end="url(#bd-arrow)">
+          <line x1="162" y1="130" x2="186" y2="130"/>
+          <line x1="332" y1="130" x2="356" y2="130"/>
+          <line x1="502" y1="130" x2="526" y2="130"/>
+          <line x1="615" y1="62" x2="615" y2="88"/>
+          <line x1="807" y1="62" x2="807" y2="88"/>
+          <line x1="805" y1="170" x2="805" y2="200"/>
+          <line x1="726" y1="236" x2="704" y2="236"/>
+        </g>
+        <g stroke="var(--accent)" stroke-width="1.5" marker-end="url(#bd-arrow-a)">
+          <line x1="702" y1="130" x2="726" y2="130"/>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Solid boxes are built and running; the dashed box applies in one mode only. The
+    highlighted box is the point of the whole thing: four ways in, one language, so the output of
+    any mode belongs to the same family. The checks read the finished SVG rather than the
+    intent.</figcaption>
+  </figure>
+
+  <section>
+    <div class="col">
+      <h2>The pipeline, stage by stage</h2>
+      <p>These are numbered because they really are a sequence. Each stage only decides what the
+      one before it left open, which is why there is never a dialog asking you to resolve two
+      things at once.</p>
+    </div>
+    <ul class="open">
+      <li><span class="q">1 · Mode</span><span class="a">Sets the style preset and decides which
+        slots can be bound. Windows, Pieces and Product UI run the compose path; Devices wraps that
+        path in a frame. A mode is not a separate engine, and switching one mid-build keeps the
+        feature, the layout and the glyph.</span></li>
+      <li><span class="q">2 · Relationship</span><span class="a">Containment, convergence,
+        sequence, mapping, hierarchy, selection, transformation, multiplicity, gating,
+        accumulation. This is the decision that matters and the only one the tool cannot make for
+        you. Changing it moves the layout to one that carries it, because leaving a mismatched
+        layout selected is how a set stops meaning anything.</span></li>
+      <li><span class="q">3 · Layout</span><span class="a">One of twelve, each adapted from a
+        finished illustration rather than composed fresh. The layout owns its panel geometry, its
+        backdrop, its float and its card positions. The only thing a caller may vary is the row
+        count, and only downward: the fade line at y 112 is the ceiling.</span></li>
+      <li><span class="q">4 · The language</span><span class="a">The primitives every layout calls,
+        plus the preset that supplies the numbers. One stroke width, one stroke color, one
+        gradient, at most one shadow, thirteen token slots. Three guards throw here rather than
+        producing a subtly wrong drawing: a glyph that would overlap what it sits between, a rail
+        that would start above its first node, and a card whose content would touch its own bottom
+        edge.</span></li>
+      <li><span class="q">5 · SVG</span><span class="a">A string on a 160 grid where every color is
+        <code>var(--il-token, #fallback)</code> and every id carries the feature's slug. In Devices
+        mode this is where the frame is applied and the composition is nested into the screen rect,
+        with its shadows switched off, because a screen is emissive.</span></li>
+      <li><span class="q">6 · Checks</span><span class="a">The string is parsed back and read
+        against the rules. Running on the output rather than the intent is the whole point: a rule
+        that checks what the code meant to do cannot catch the case where it did something else.
+        They run on every keystroke.</span></li>
+      <li><span class="q">7 · Export</span><span class="a">The themed SVG, or a flat copy with the
+        tokens resolved for one ground, or the brief. Flat exists because an
+        <code>&lt;img&gt;</code> and Figma both refuse to run CSS, so a themed file shows only its
+        fallbacks in either.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>What the checks catch</h2>
+      <p>Fourteen rules. Every one is a failure that shipped before it was a rule, which is the
+      only reason to have it. A rule that cannot fail is decoration, so after fixing something the
+      bug goes back in once to confirm the check catches it.</p>
+    </div>
+    <div class="bd-scroll">
+    <table>
+      <thead><tr><th>Check</th><th>What it catches</th></tr></thead>
+      <tbody>
+        <tr><td>One stroke width</td><td>A second width creeping in, usually from a stroke with no <code>stroke-width</code> at all, which silently defaults to 1.</td></tr>
+        <tr><td>One stroke color</td><td>A second line color, which makes a panel edge and a card edge differ by the line rather than by the fills either side of it.</td></tr>
+        <tr><td>Shadow count</td><td>More than one element casting. Two is right only for the corner chip pair, and it says so rather than passing silently.</td></tr>
+        <tr><td>Shadow values</td><td>A blur or offset outside the two the system has.</td></tr>
+        <tr><td>No text</td><td>A <code>&lt;text&gt;</code> element. The language is placeholder bars, never words.</td></tr>
+        <tr><td>No image</td><td>A raster snuck into geometry.</td></tr>
+        <tr><td>No background rect</td><td>A full canvas fill, which stops the fade dissolving into the host page and only looks right on one background.</td></tr>
+        <tr><td>Canvas</td><td>A viewBox that is not the 160 square, or a baked in width or height on the root.</td></tr>
+        <tr><td>Accessibility</td><td>A missing <code>role="img"</code> or a missing label.</td></tr>
+        <tr><td>Id suffixes</td><td>An id without the feature's slug. Gradient and mask ids are document-global, so this is what stops two drawings on one page painting with each other's gradients.</td></tr>
+        <tr><td>Gradient count</td><td>A second structural gradient. A device plus its nested screen legitimately has two, and the check knows the difference.</td></tr>
+        <tr><td>Fade stops</td><td>A fade that runs between different offsets from its siblings, which makes one illustration in a set dissolve at a different height.</td></tr>
+        <tr><td>Accent budget</td><td>More than two accented elements, which means the accent is carrying meaning the composition should have carried.</td></tr>
+        <tr><td>Legibility</td><td>A glyph under 9 units, which is under 9 pixels at display size and simply disappears.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figcaption>Two more run as notes rather than rules: literal colors that will not theme, which
+    is expected for tiles and nothing else, and freely placed pieces, which mean the drawing was
+    composed outside a layout and is no longer guaranteed to belong to the family.</figcaption>
+  </section>
+
+  <section class="col">
+    <h2>Where it meets the library</h2>
+    <p>At exactly one place: <code>manifest.json</code>. Builder reads the manifest for the System
+    Icon collection, then fetches one drawing at a time as tiles scroll into view, which is the
+    same approach the Gallery settled on. It never walks the asset tree, so adding a collection, a
+    style or a size changes nothing here.</p>
+    <p>Forty glyphs are baked into the page so it draws before any fetch: the ones the twelve
+    layouts need plus a starter set. Everything else in the collection comes down on demand.
+    Anything carrying its own colors is refused rather than recolored, because a tinted brand mark
+    repainted with <code>--il-stroke</code> is a lie about the artwork, and that is why the product,
+    app and file collections are not offered as glyph sources.</p>
+    <p>Nothing goes the other way. There is no path from Builder into <code>assets/</code>, on
+    purpose: an asset entering the library needs a slug, a <code>meta.json</code>, provenance marked
+    as generated rather than received, and the manifest and validate steps passing. None of that
+    should happen through a browser.</p>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Still open</h2>
+      <p>The decisions this map is waiting on, as opposed to the features it is missing. The
+      missing features are on <a href="builder-about.html">About</a>.</p>
+    </div>
+    <ul class="open">
+      <li><span class="q">Two color models</span><span class="a">Stage four has thirteen token
+        slots from the exploration. Expressive Assets separately derives group and member color IDs
+        per asset. Those are two answers to one question and only one of them is ours. Which one
+        survives is entangled with the Bridge naming question, and nothing forces it while Builder
+        emits no Bridge tokens.</span></li>
+      <li><span class="q">Whether Windows is a preset</span><span class="a">Mode one treats a
+        Windows illustration as the twelve layouts at different settings. That is a real thing, and
+        it is not the same as the WDS illustration set, which is scenes and objects rather than UI
+        abstractions. If those need their own parts vocabulary then mode one grows a second engine
+        after all, and the map changes.</span></li>
+      <li><span class="q">What a slot may hold</span><span class="a">Today a slot takes a whole
+        asset used as a glyph. The structural IDs exist so that an asset can supply a
+        <em>part</em>, which would let a card hold a real plate and a real glyph. That is a
+        different contract and it waits on the anatomy vocabulary.</span></li>
+      <li><span class="q">Portrait</span><span class="a">The tablet and the phone crop a square
+        composition rather than showing one built for them. Portrait layouts would be new entries
+        in the twelve, so this is a decision about the taxonomy rather than an addition to
+        it.</span></li>
+    </ul>
+  </section>
+
+  <div class="foot">
+    Builder 0.2. Standalone for now: these three pages link only to each other, and nothing in the
+    main library links here. The visual language, the twelve layouts and the checks are ported from
+    the product illustration generator exploration at
+    <a href="https://github.com/Devesh-Shirsath/spotkit" target="_blank" rel="noopener">Devesh-Shirsath/spotkit</a>,
+    MIT licensed.
+  </div>
+
+</div>
+
+</body>
+</html>

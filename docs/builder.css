@@ -1,0 +1,232 @@
+/* Expressive Assets — Builder
+   ----------------------------------------------------------------------
+   Shared by builder.html, builder-about.html and builder-system-map.html.
+   Layered on doc.css: the three Builder pages are documents first, and only
+   the bench needs a frame wider than a reading column.
+
+   The illustration tokens are not defined here. A preset supplies them and
+   the page writes them onto each [data-ground] wrapper, because the whole
+   point of the presets is that the values change while the structure does
+   not. All this file says about a ground is that it paints its own canvas. */
+
+.wrap.bd-tool { max-width: 1240px; }
+.wrap.bd-tool section > p, .wrap section > .bd-note { max-width: 74ch; }
+
+.bd-unlisted {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--signal);
+  background: var(--signal-soft); border-radius: var(--pill); padding: 4px 11px;
+}
+
+/* --- Modes ------------------------------------------------------------ */
+
+.bd-modes { display: flex; gap: 7px; flex-wrap: wrap; }
+.bd-mode {
+  font: inherit; font-family: var(--display); font-size: 14px; font-weight: 600;
+  color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--rule); border-radius: var(--pill);
+  padding: 8px 16px; cursor: pointer;
+}
+.bd-mode:hover { border-color: var(--accent-ring); color: var(--ink); }
+.bd-mode.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-ring); }
+.bd-mode:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* --- The bench -------------------------------------------------------- */
+
+.bd-bench {
+  display: grid; gap: 18px;
+  grid-template-columns: 300px minmax(0, 1fr) 306px;
+  align-items: start;
+}
+@media (max-width: 1180px) { .bd-bench { grid-template-columns: 286px minmax(0, 1fr); } }
+@media (max-width: 860px)  { .bd-bench { grid-template-columns: minmax(0, 1fr); } }
+
+.bd-col {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+  padding: 16px; display: flex; flex-direction: column; gap: 16px;
+}
+.bd-field { display: flex; flex-direction: column; gap: 6px; }
+.bd-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.bd-hint { font-size: 11.5px; line-height: 1.45; color: var(--ink-3); margin: 0; }
+
+input[type="text"], input[type="number"], select, textarea {
+  width: 100%; font: inherit; font-size: 13px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 7px 9px;
+}
+textarea { resize: vertical; min-height: 54px; line-height: 1.45; }
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+select { appearance: none; background-image: none; }
+
+.bd-btn {
+  font: inherit; font-size: 12.5px; font-weight: 500; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 7px 11px; cursor: pointer; white-space: nowrap;
+}
+.bd-btn:hover { background: var(--sunk); }
+.bd-btn.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-ring); font-weight: 600; }
+.bd-btns { display: flex; flex-wrap: wrap; gap: 7px; }
+
+/* Layout picker. Each tile renders the layout it names, so the choice is made
+   by looking rather than by reading twelve descriptions. */
+.bd-layouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.bd-lay {
+  position: relative; border: 1px solid var(--rule); border-radius: 9px;
+  background: var(--paper); padding: 5px 5px 4px; cursor: pointer;
+  display: flex; flex-direction: column; gap: 3px; text-align: center;
+}
+.bd-lay:hover { border-color: var(--accent-ring); }
+.bd-lay[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.bd-lay > span { display: block; border-radius: 5px; overflow: hidden; }
+.bd-lay svg { width: 100%; min-width: 0; height: auto; display: block; }
+.bd-lay b { font-family: var(--mono); font-size: 9px; color: var(--ink-3); font-weight: 500; }
+.bd-lay[aria-pressed="true"] b { color: var(--accent); }
+.bd-lay.rec::after {
+  content: ''; position: absolute; top: 6px; right: 6px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--p-accent);
+}
+
+/* Glyph picker: a scrolling grid, because 2,883 System Icons will not fit in
+   a select and the shape is what you are choosing. */
+.bd-icons {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px;
+  max-height: 176px; overflow-y: auto; padding: 2px;
+  border: 1px solid var(--rule); border-radius: 8px; background: var(--paper);
+}
+.bd-ico {
+  aspect-ratio: 1; border: 1px solid transparent; border-radius: 6px;
+  background: none; cursor: pointer; padding: 4px;
+  display: flex; align-items: center; justify-content: center;
+}
+.bd-ico:hover { background: var(--sunk); }
+.bd-ico[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.bd-ico svg { width: 100%; height: 100%; min-width: 0; display: block; fill: var(--ink-2); }
+.bd-ico[aria-pressed="true"] svg { fill: var(--accent); }
+.bd-empty { grid-column: 1 / -1; padding: 14px 10px; font-size: 11.5px; color: var(--ink-3); text-align: center; line-height: 1.5; }
+
+.bd-swatches { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.bd-sw { width: 24px; height: 24px; border-radius: 7px; cursor: pointer; padding: 0; border: 1px solid var(--rule); }
+.bd-sw[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--accent); }
+input[type="color"] {
+  width: 34px; height: 24px; padding: 0; border: 1px solid var(--rule);
+  border-radius: 7px; background: none; cursor: pointer;
+}
+
+/* Freely placed pieces: the escape hatch, kept deliberately plain so it does
+   not look like the main way to work. */
+.bd-placed {
+  display: grid; grid-template-columns: minmax(0, 1fr) 46px 46px 46px 28px;
+  gap: 5px; align-items: end; padding: 6px 0; border-top: 1px solid var(--rule-soft);
+}
+.bd-placed span { font-size: 10.5px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd-placed label { display: flex; flex-direction: column; gap: 2px; font-family: var(--mono); font-size: 9px; color: var(--ink-3); }
+.bd-placed input { padding: 4px 5px; font-size: 11px; }
+.bd-placed .bd-btn { padding: 4px 6px; line-height: 1; }
+
+/* --- Stage ------------------------------------------------------------ */
+
+/* The two grounds are shown together and never follow the page theme.
+   Checking artwork against both is the job here, not a preference, so the
+   page's own light and dark switch must not be able to hide one of them. */
+.bd-grounds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 620px) { .bd-grounds { grid-template-columns: 1fr; } }
+
+.bd-ground { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+.bd-ground-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 7px 11px; border-bottom: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3); background: var(--surface);
+}
+.bd-canvas { padding: 18px; display: flex; align-items: center; justify-content: center; }
+.bd-canvas > svg { width: 100%; max-width: 260px; min-width: 0; height: auto; display: block; }
+
+.bd-ladder { display: flex; align-items: flex-end; justify-content: center; gap: 14px; padding: 0 18px 16px; flex-wrap: wrap; }
+.bd-rung { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.bd-rung svg { display: block; width: 100%; min-width: 0; height: auto; }
+.bd-rung > span:last-child { font-family: var(--mono); font-size: 9px; color: var(--ink-3); }
+
+/* A ground paints its own canvas from whichever preset is live. The token
+   values are written on by the page, never here. */
+.bd-il-ground { background: var(--il-canvas, #EDEAE6); }
+.bd-il-ground .bd-ground-head {
+  background: none; border-bottom-color: rgba(128, 128, 128, .28); color: rgba(128, 128, 128, .9);
+}
+
+/* --- Checks ----------------------------------------------------------- */
+
+.bd-checks { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.bd-check {
+  display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 8px;
+  font-size: 11.5px; line-height: 1.45; color: var(--ink-2); padding: 3px 0;
+}
+.bd-check i { font-style: normal; font-family: var(--mono); font-size: 11px; text-align: center; }
+.bd-check.ok i { color: var(--p-accent); }
+.bd-check.warn i { color: var(--p-glyph); }
+.bd-check.error i { color: var(--signal); }
+.bd-check.error { color: var(--ink); }
+.bd-verdict {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 6px 10px; border-radius: 8px; display: inline-block; align-self: flex-start;
+}
+.bd-verdict.pass { color: var(--p-accent); background: var(--p-accent-bg); }
+.bd-verdict.notes { color: var(--p-glyph); background: var(--p-glyph-bg); }
+.bd-verdict.fail { color: var(--signal); background: var(--signal-soft); }
+
+.bd-brief { font-size: 12.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+.bd-brief dt {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ink-3); margin-top: 9px;
+}
+.bd-brief dt:first-child { margin-top: 0; }
+.bd-brief dd { margin: 2px 0 0; }
+
+.bd-code {
+  font-family: var(--mono); font-size: 10.5px; line-height: 1.5; color: var(--ink-2);
+  background: var(--sunk); border: 1px solid var(--rule-soft); border-radius: 8px;
+  padding: 10px; max-height: 200px; overflow: auto; white-space: pre; margin: 0;
+}
+
+/* --- Contact sheet ---------------------------------------------------- */
+
+/* minmax(0, 1fr) rather than 1fr: an SVG with no width attribute has an
+   intrinsic 300px, which a bare 1fr treats as the column's minimum and blows
+   the grid out past its container. */
+.bd-sheet { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; padding: 18px; }
+@media (max-width: 900px) { .bd-sheet { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .bd-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.bd-sheet-wrap { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+.bd-cell { display: flex; flex-direction: column; gap: 5px; margin: 0; }
+/* doc.css gives `figure svg` a 700px minimum for the wide diagrams in the
+   documents. These are 160-unit thumbnails in a six-column grid, so the
+   minimum has to come back off, the way doc.css does for its own small
+   figures. */
+.bd-cell svg { width: 100%; min-width: 0; height: auto; display: block; }
+.bd-cell figcaption {
+  font-family: var(--mono); font-size: 9px; text-align: center; margin: 0;
+  color: rgba(128, 128, 128, .95);
+}
+
+/* --- Prose bits shared with About and the System Map ------------------ */
+
+.bd-note {
+  font-size: 13px; line-height: 1.55; color: var(--ink-2); margin: 0;
+  padding-left: 14px; border-left: 2px solid var(--accent-ring);
+}
+.bd-stubs { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.bd-stubs li { display: flex; flex-direction: column; gap: 3px; }
+.bd-stubs strong { font-size: 14px; }
+.bd-stubs span { font-size: 13px; line-height: 1.55; color: var(--ink-2); }
+.bd-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.bd-status { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+
+/* doc.css tables size to their content and the first cell never wraps, so a
+   five column reference table overflows a phone. Each wide table gets its own
+   scroller rather than the page getting a horizontal scrollbar. */
+.bd-scroll { overflow-x: auto; }
+.bd-scroll > table { min-width: 620px; }

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>About &mdash; Builder</title>
+<meta name="description" content="The four build modes, the visual language they share, the twelve layouts, the presets, the devices, and what is still a stub.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="doc.css">
+<link rel="stylesheet" href="builder.css">
+<script src="chrome.js"></script>
+<script>applyStoredTheme();</script>
+</head>
+<body>
+
+<nav class="ea-bar" aria-label="Builder">
+  <a class="ea-brand" href="builder.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Builder</a>
+  <a class="ea-tab" href="builder.html">Builder</a>
+  <a class="ea-tab on" href="builder-about.html" aria-current="page">About</a>
+  <a class="ea-tab" href="builder-system-map.html">System Map</a>
+  <span class="ea-right">
+    <span data-theme-switch></span>
+  </span>
+</nav>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow"><span>Windows Design Systems</span> &middot; <span>Expressive Assets</span> &middot; <b>About</b></p>
+    <h1>About Builder</h1>
+    <p class="standfirst">Builder composes illustrations from a fixed visual language rather than
+    drawing them. Four modes are four ways into that language, not four tools. This page says what
+    the language is, where it came from, and which parts are real.</p>
+    <div class="facts">
+      <span>Builder <b>0.2</b></span>
+      <span><b>4</b> modes</span>
+      <span><b>12</b> layouts</span>
+      <span><b>3</b> presets</span>
+      <span><b>5</b> devices</span>
+      <span><b>14</b> checks</span>
+      <span>Standalone, unlisted</span>
+    </div>
+  </header>
+
+  <section class="col">
+    <h2>Why one engine and not four tools</h2>
+    <p>Four separate builders would produce four families, and the point of a library is that its
+    artwork looks like it came from one place. So the geometry, the single stroke, the color slots
+    and the checks are shared, and a mode only changes which dials it starts on and which slots it
+    lets you bind. Windows and Product UI are the same machine at different settings, which is
+    worth saying plainly rather than hiding behind two buttons.</p>
+    <p class="bd-note">The standing rule, inherited and not negotiable: <b>adapt, do not
+    invent.</b> Pick the nearest of the twelve layouts, keep its geometry, change only the content.
+    Every tool that follows this produces the same family. Every tool that composes from scratch
+    drifts. Builder enforces it by having no way to move a coordinate, and the one place it lets
+    you out of that is marked.</p>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The four modes</h2>
+      <p>What each one is for, and how much of it is real today.</p>
+    </div>
+    <div class="cards">
+      <div class="card-link">
+        <strong>Windows <span class="tag">Working</span></strong>
+        <span>The twelve layouts at Windows settings: neutral grays, a wider corner radius, a
+        quieter shadow, Windows blue as the accent. The preset is a first pass at the dials and not
+        an agreed style, which is the thing to argue with.</span>
+      </div>
+      <div class="card-link">
+        <strong>Pieces <span class="tag">Working</span></strong>
+        <span>Every glyph position in a layout is a named slot. Bind a slot to anything in the
+        library or to one of your own pieces. Free placement sits underneath as an escape hatch,
+        and the checks mark anything composed that way.</span>
+      </div>
+      <div class="card-link">
+        <strong>Product UI <span class="tag">Working</span></strong>
+        <span>The ported exploration, unchanged except that the glyphs are our System Icons. This
+        is the reference the other three are built from, because it is the one that has been
+        proved.</span>
+      </div>
+      <div class="card-link">
+        <strong>Devices <span class="tag">Working</span></strong>
+        <span>A device is a frame with a screen, and the screen takes anything that draws on the
+        160 grid. A composition built in any other mode goes inside a laptop, and retheming comes
+        along for free.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="col">
+    <h2>Where the language came from</h2>
+    <p>The visual language is ported from a
+    <a href="https://github.com/Devesh-Shirsath/spotkit" target="_blank" rel="noopener">product
+    illustration generator exploration</a> rather than invented here. That exploration had already
+    answered the questions that cost the most to get wrong: how many layouts, what a stroke is
+    allowed to be, which slots a palette has, and how to tell a composition from a screenshot.
+    Builder is the interactive front end for it, so the answers stay in one place.</p>
+    <p>The geometry and the primitives came across verbatim. This style is sub-pixel work: a stroke
+    of 1 where a preset says 0.5 is visibly wrong, so nothing in it is a judgment call to revisit
+    while adding a layout. What did change is the glyphs. The exploration drew around a general
+    purpose icon set; a Windows illustration should be built from Windows marks, so every glyph
+    here is an Expressive Assets System Icon.</p>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The rules that do the work</h2>
+      <p>Five of them, and every check in the tool exists to enforce one.</p>
+    </div>
+    <ul class="open">
+      <li><span class="q">One stroke</span><span class="a">Every stroked element uses the preset's
+        single width, currently 0.5 in all three, in <code>var(--il-line)</code>. There is no
+        second width and no second color. Separators are filled rects 0.5 tall, not strokes. Icons
+        are filled paths and are never stroked. Hierarchy comes from fills, opacity and the one
+        shadow.</span></li>
+      <li><span class="q">One canvas</span><span class="a"><code>viewBox="0 0 160 160"</code> at
+        whatever size it is shown, with no width or height on the root and no background rect. The
+        outer 10 units are shadow bleed, and the fade runs from y 112 to y 131, so nothing that
+        carries meaning goes below y 112. That is what caps the row count in every repeating
+        layout.</span></li>
+      <li><span class="q">One shadow</span><span class="a">At most one element casts a shadow: the
+        floating one. Small objects take dy 2 at blur 2.6, anything above about 2,600 square units
+        takes dy 4 at blur 5. A composition nested into a device screen goes flat, because a screen
+        is emissive and a drop shadow inside one reads as dirt.</span></li>
+      <li><span class="q">One gradient</span><span class="a">The base panel's vertical gradient. No
+        blur, glow, gloss, bevel or perspective anywhere. A device carries two, its own and the one
+        in the view on its screen, and the checks say so rather than failing it.</span></li>
+      <li><span class="q">Grayscale first</span><span class="a">Color is a guest. The accent marks
+        exactly one of success, selection, active state, a live connection or the primary action,
+        it touches at most two elements, and it never touches structure. If removing color destroys
+        the meaning, the composition was doing too little work.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The presets, and what a preset may move</h2>
+      <p>A preset is a set of token values plus the four dials below. Nothing else in the language
+      changes, which is what lets one engine serve two looks. Adding a preset is adding values and
+      a note on which dials it moves; it is not adding code.</p>
+    </div>
+    <div class="bd-scroll">
+    <table>
+      <thead><tr><th>Preset</th><th>Stroke</th><th>Corner</th><th>Elevation</th><th>Accent</th><th>What it is for</th></tr></thead>
+      <tbody>
+        <tr><td>Soft Layered</td><td class="mono">0.5</td><td class="mono">1.0&times;</td><td>Lift</td><td class="mono">#3E9077</td>
+          <td>The exploration's own preset. Warm neutral, layered depth, a fade out edge.</td></tr>
+        <tr><td>Windows</td><td class="mono">0.5</td><td class="mono">1.45&times;</td><td>Lift</td><td class="mono">#0078D4</td>
+          <td>Neutral grays, a wider radius, a quieter shadow. A first pass, not an agreed style.</td></tr>
+        <tr><td>Flat outline</td><td class="mono">0.5</td><td class="mono">1.2&times;</td><td>None</td><td class="mono">#0078D4</td>
+          <td>No shadow at all. The honest test of whether the composition works on the line and the fills alone.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figcaption>Corner is a multiplier on every radius in the language, clamped so a radius never
+    passes half of the shorter side. Elevation None removes the shadow filters from the file
+    entirely rather than setting them to zero.</figcaption>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The twelve layouts</h2>
+      <p>Picked by the feature's relationship first, then by how many elements it needs. Each one
+      started as a finished illustration in the exploration, and Builder adapts that file rather
+      than composing a new arrangement. The slots column is what Pieces mode can rebind.</p>
+    </div>
+    <div class="bd-scroll">
+    <table>
+      <thead><tr><th>Layout</th><th>Relationship</th><th class="num">Elements</th><th>Slots</th><th>Reads as</th></tr></thead>
+      <tbody>
+        <tr><td>L1 Header + rows</td><td>Containment, multiplicity</td><td class="num">3-4</td><td>feature, row leader</td><td>A titled surface with similar items under it. The float is the title.</td></tr>
+        <tr><td>L2 Cascade</td><td>Sequence, accumulation</td><td class="num">3-4</td><td>feature, row leader, action</td><td>Copies of one thing stacking up, each further back than the last.</td></tr>
+        <tr><td>L3 Tab bar</td><td>Selection, containment</td><td class="num">3-4</td><td>feature, row glyph</td><td>Several groups, exactly one of them chosen.</td></tr>
+        <tr><td>L4 Toolbar</td><td>Containment, mapping</td><td class="num">4-6</td><td>row leader, tiles, action</td><td>Many controls over a working surface. No feature glyph: the tiles are the subject.</td></tr>
+        <tr><td>L5 Corner chips</td><td>Multiplicity, containment</td><td class="num">3-4</td><td>feature, row glyph, second chip</td><td>A long structured list, entered from one corner and continuing past the other.</td></tr>
+        <tr><td>L6 Window</td><td>Containment, mapping</td><td class="num">4-6</td><td>tiles</td><td>Records in a table, each with its own fields. No feature glyph.</td></tr>
+        <tr><td>L7 Fanned</td><td>Hierarchy</td><td class="num">1-2</td><td>row leader</td><td>One of a set that matters more than the others.</td></tr>
+        <tr><td>L8 Notifications</td><td>Accumulation, multiplicity</td><td class="num">1-2</td><td>none</td><td>Things arriving, the newest in front.</td></tr>
+        <tr><td>L9 Constellation</td><td>Convergence</td><td class="num">4-6</td><td>feature, tiles</td><td>Several things meeting at one thing. The hub is the float.</td></tr>
+        <tr><td>L10 Matrix</td><td>Mapping, gating</td><td class="num">4-6</td><td>feature, row leader, 3 columns</td><td>Who can do what. Rows against columns, and the cells carry the answer.</td></tr>
+        <tr><td>L11 Timeline</td><td>Sequence</td><td class="num">3-4</td><td>feature</td><td>One thing over time, in order, the newest accented.</td></tr>
+        <tr><td>L12 Split</td><td>Transformation, gating</td><td class="num">1-2</td><td>feature, action</td><td>Before and after, with the change between them.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The thirteen token slots</h2>
+      <p>Every color in every primitive is written <code>var(--il-token, #fallback)</code> with the
+      active preset's light value as the fallback, so a file works standalone and still themes when
+      it is inlined in a page. Three relationships matter more than the values: canvas to panel
+      must be visible but quiet, panel to surface is the only real step, and the placeholder bars
+      stay neutral even when the surfaces are warm. That last mismatch is what makes the bars read
+      as content rather than as chrome. The values below are the Soft Layered preset; Windows and
+      Flat outline move the same thirteen.</p>
+    </div>
+    <div class="bd-scroll">
+    <table>
+      <thead><tr><th>Token</th><th>Light</th><th>Dark</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td><code>--il-canvas</code></td><td class="mono">#EDEAE6</td><td class="mono">#1A1918</td><td>The host page behind the illustration</td></tr>
+        <tr><td><code>--il-ghost</code></td><td class="mono">#EAE7E2</td><td class="mono">#1F1E1C</td><td>Backdrop sheets, and a device screen with nothing on it</td></tr>
+        <tr><td><code>--il-panel</code></td><td class="mono">#F7F5F2</td><td class="mono">#262523</td><td>Base panel, gradient bottom</td></tr>
+        <tr><td><code>--il-panel-top</code></td><td class="mono">#FCFBF9</td><td class="mono">#2E2C29</td><td>Base panel, gradient top</td></tr>
+        <tr><td><code>--il-line</code></td><td class="mono">#B9B1A4</td><td class="mono">#5C564D</td><td><b>Every stroke in the system</b></td></tr>
+        <tr><td><code>--il-surface</code></td><td class="mono">#FFFFFF</td><td class="mono">#322F2B</td><td>Floating cards, the medallion, a device body</td></tr>
+        <tr><td><code>--il-stroke</code></td><td class="mono">#35322D</td><td class="mono">#DDD9D3</td><td>Primary glyphs. The only dark value</td></tr>
+        <tr><td><code>--il-stroke-soft</code></td><td class="mono">#9B948A</td><td class="mono">#877F74</td><td>Secondary glyphs, row leaders, kebabs</td></tr>
+        <tr><td><code>--il-fill</code></td><td class="mono">#DCD6CE</td><td class="mono">#4A463E</td><td>Placeholder bars. Deliberately neutral</td></tr>
+        <tr><td><code>--il-fill-soft</code></td><td class="mono">#E9E4DC</td><td class="mono">#35322D</td><td>Selected pill, the +N chip</td></tr>
+        <tr><td><code>--il-accent</code></td><td class="mono">#3E9077</td><td class="mono">#5FB694</td><td>At most two elements, one meaning</td></tr>
+        <tr><td><code>--il-shadow-c</code></td><td class="mono">#4A3F33</td><td class="mono">#000000</td><td>Shadow color</td></tr>
+        <tr><td><code>--il-shadow-o</code></td><td class="mono">0.16</td><td class="mono">0.55</td><td>Shadow opacity</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figcaption>Dark mode is not an inversion. Surfaces get lighter as they come forward in both
+    themes, because elevation always means closer to light. Shadows do less work on near-black, so
+    the line carries more of the separation and the shadow alpha goes up. A custom accent's dark
+    counterpart is derived in OKLCH rather than picked, so the pair keeps the relationship a shipped
+    pair has; a preset's own accent is returned as shipped rather than re-derived.</figcaption>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>The five devices</h2>
+      <p>A device is contained: closed on all four sides, with no fade, because a device is a thing
+      rather than a view with more below it. The screen rectangle is the whole contract, so
+      anything that draws on the 160 grid nests into it.</p>
+    </div>
+    <div class="bd-scroll">
+    <table>
+      <thead><tr><th>Device</th><th>Screen on the 160 grid</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Laptop</td><td class="mono">124 &times; 76 at 18, 30</td><td>Lid plus a separate base slab. The widest screen of the five.</td></tr>
+        <tr><td>Monitor</td><td class="mono">120 &times; 76 at 20, 20</td><td>An 8 unit chin, a neck and a foot.</td></tr>
+        <tr><td>All in one</td><td class="mono">128 &times; 84 at 16, 18</td><td>The largest screen. A 12 unit chin and a wedge stand.</td></tr>
+        <tr><td>Tablet</td><td class="mono">74 &times; 116 at 43, 17</td><td>Portrait. A 160 square composition crops to a column here.</td></tr>
+        <tr><td>Phone</td><td class="mono">40 &times; 132 at 60, 14</td><td>Portrait and narrow. Crops hardest, and wants its own compositions.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figcaption>A landscape screen shows the top of a composition; a portrait screen shows a column
+    through its middle. Compositions drawn for a portrait screen do not exist yet, which is the
+    honest limit on the two portrait devices.</figcaption>
+  </section>
+
+  <section class="col">
+    <h2>Slots, and adding your own pieces</h2>
+    <p>Pieces mode turns every glyph position in a layout into a named slot. Binding a slot puts
+    real library artwork into a composition without letting the composition itself move, which is
+    the difference between piecing something together and drawing it. The feature glyph, the row
+    leader, the row glyph, the tiles, the second chip, the action glyph and the three matrix
+    columns are all bindable, and which of them a layout offers is in the table above.</p>
+    <p>Anything bound has to be a monochrome glyph: a single <code>currentColor</code> path, or
+    several, on its own grid. System Icons already are. Anything carrying its own colors is refused
+    rather than recolored, because a tinted brand mark repainted with <code>--il-stroke</code> is a
+    lie about the artwork.</p>
+    <p>Your own pieces load from an optional file beside this one. The contract is deliberately
+    small: drop the SVGs anywhere under <code>docs/</code> and list them in
+    <code>builder-parts.json</code>.</p>
+    <pre>{
+  <b>"parts"</b>: [
+    { "id": "plate.rounded", "name": "Rounded plate", "path": "parts/plate-rounded.svg" },
+    { "id": "glyph.window",  "name": "Window glyph",  "path": "parts/glyph-window.svg" }
+  ]
+}</pre>
+    <p>No file means the My pieces tab says so and nothing breaks. The ids are yours and are not
+    validated against anything, because these are not library assets yet: when a piece is good
+    enough to keep it should go through the normal import rather than living in a JSON file next to
+    a tool.</p>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Not built yet</h2>
+      <p>Stated here rather than implied by absence, because a shell that looks finished is worse
+      than one that says what it is.</p>
+    </div>
+    <ul class="bd-stubs">
+      <li><strong>Windows illustrations, as artwork rather than as a preset</strong><span>Mode one
+      is the twelve layouts at Windows settings. That is a real thing and it is not the same as the
+      WDS illustration set, which is scenes and objects rather than UI abstractions. Deciding
+      whether those need their own parts vocabulary waits on the illustration intake and an agreed
+      interim style.</span></li>
+
+      <li><strong>Composing from library parts, not glyphs</strong><span>A slot takes a whole
+      asset used as a glyph. The point of the structural IDs is that an asset can supply a
+      <em>part</em>, so a card could hold a real plate and a real glyph rather than a placeholder
+      bar. That waits on the anatomy vocabulary settling.</span></li>
+
+      <li><strong>Portrait compositions</strong><span>The tablet and the phone crop a square
+      composition rather than showing one built for them. Portrait layouts would be new entries in
+      the twelve, which is a decision about the taxonomy and not a quick addition.</span></li>
+
+      <li><strong>Color roles instead of token slots</strong><span>The thirteen
+      <code>--il-*</code> slots are the exploration's palette model. Expressive Assets already
+      derives group and member color IDs per asset. Those are two answers to one question, and the
+      second one is ours. Reconciling them is a real decision, not a mapping, and it is entangled
+      with the Bridge naming question.</span></li>
+
+      <li><strong>Sets, not single illustrations</strong><span>Layout reuse across a set is what
+      makes a family read as designed. The contact sheet shows the twelve, but Builder cannot yet
+      hold a named set, budget layout reuse across it, or tell you that the fourth illustration is
+      the third header card.</span></li>
+
+      <li><strong>Writing back</strong><span>No output lands anywhere. An illustration built here
+      is a download. Getting it into <code>assets/</code> means a slug, a <code>meta.json</code>,
+      provenance marked as generated rather than received, and the manifest and validate steps
+      passing. None of that is wired, on purpose: nothing should enter the library through a
+      browser.</span></li>
+
+      <li><strong>Figma</strong><span>A flat export pastes into Figma correctly today, which is
+      why the flat buttons exist, but that is a clipboard, not a pipeline.</span></li>
+    </ul>
+  </section>
+
+  <div class="foot">
+    Builder 0.2. Standalone for now: these three pages link only to each other, and nothing in the
+    main library links here. Glyphs are Expressive Assets System Icons, themselves Fluent System
+    Icons artwork under MIT. The visual language, the twelve layouts and the checks are ported from
+    the product illustration generator exploration at
+    <a href="https://github.com/Devesh-Shirsath/spotkit" target="_blank" rel="noopener">Devesh-Shirsath/spotkit</a>,
+    MIT licensed.
+  </div>
+
+</div>
+
+</body>
+</html>
