@@ -63,19 +63,53 @@ const PRESETS = {
   },
   windows: {
     label: 'Windows',
-    note: 'Neutral grays, a wider corner radius, a quieter shadow. A first pass at the Windows dials, not an agreed style.',
-    sw: 0.5, radius: 1.45, elevation: 'lift',
-    brand: ['#0078D4', '#107C10', '#8764B8', '#C239B3', '#CA5010'],
+    note: 'Derived from the 72 illustrations in the library: cool neutrals and Windows blue. '
+      + 'A proposal grounded in what recurs, not a match for the shipped set.',
+    /* The corner dial stays at 1. The set's real rule is proportional, half of
+       every rounded rect sitting at a sixth of its short side, and a multiplier
+       on absolute radii cannot express that: a sixth of the card's short side
+       is 4.5 while a sixth of the panel's is nearly 20. The language's own
+       absolute radii already fall between those two, so moving the multiplier
+       would trade one wrong answer for another. Proportional corners want a
+       dial the preset does not have. */
+    sw: 0.5, radius: 1, elevation: 'lift',
+    /* Five measured hues from the set, far enough apart to read as different
+       services rather than as a ramp. */
+    brand: ['#0078D4', '#FD6F03', '#81B93A', '#5B41D3', '#222E48'],
+    /* Measured, unless marked. 72 illustrations carry 238 distinct colors and
+       no shared palette, so these are the values that actually recur rather
+       than an average of the set, which would be an average of noise.
+       Every mid and dark neutral in the set is cool: blue runs 8 to 28 points
+       above red. The bars are the deliberate exception, true gray while the
+       surfaces are cool, so they read as content rather than as chrome. */
     light: {
-      canvas: '#F3F3F3', ghost: '#EDEDED', panel: '#FAFAFA', 'panel-top': '#FFFFFF',
-      line: '#C4C4C4', surface: '#FFFFFF', stroke: '#1B1B1B', 'stroke-soft': '#8A8A8A',
-      fill: '#E1E1E1', 'fill-soft': '#EDEDED', accent: '#0078D4',
-      'shadow-c': '#000000', 'shadow-o': '0.10',
+      canvas: '#ECECEC',        // derived: #F0F0F0 is measured but too close to the
+                                // panel, and canvas to panel has to be visible
+                                // rather than a whisper or nothing separates at
+                                // display size. This matches the step the
+                                // exploration's own preset uses.
+      ghost: '#E7E7E7',         // 3 files. Sits barely below canvas, behind the panel
+      panel: '#F5F5F5',         // 37 files, the most used color in the set
+      'panel-top': '#FCFCFC',   // derived: about 2% above panel
+      line: '#A8B5BF',          // 4 files. Cool, and reads on canvas, panel and a white card
+      surface: '#FFFFFF',
+      stroke: '#1E2021',        // 3 files. The only genuinely dark value
+      'stroke-soft': '#8897A4', // 4 files. Cool, about halfway to the panel
+      fill: '#E2E2E2',          // derived: true gray on purpose, against the cool surfaces
+      'fill-soft': '#EDEDED',   // derived
+      accent: '#0078D4',        // 13 files
+      'shadow-c': '#000000',
+      'shadow-o': '0.10',
     },
+    /* Derived. Nothing in the library ships a dark variant, so there was
+       nothing to measure: every value below keeps the light set's cool cast
+       and the language's rule that a surface gets lighter as it comes
+       forward. Blue stays within a few points of green on every dark surface,
+       which is what stops a cool near-black drifting olive as it lightens. */
     dark: {
-      canvas: '#202020', ghost: '#272727', panel: '#2B2B2B', 'panel-top': '#333333',
-      line: '#4A4A4A', surface: '#383838', stroke: '#F2F2F2', 'stroke-soft': '#9A9A9A',
-      fill: '#454545', 'fill-soft': '#343434', accent: '#4CC2FF',
+      canvas: '#1B1D1F', ghost: '#202325', panel: '#26292C', 'panel-top': '#2E3135',
+      line: '#4A5057', surface: '#34383C', stroke: '#F2F4F5', 'stroke-soft': '#8E9AA6',
+      fill: '#434649', 'fill-soft': '#323538', accent: '#4CC2FF',
       'shadow-c': '#000000', 'shadow-o': '0.50',
     },
   },
