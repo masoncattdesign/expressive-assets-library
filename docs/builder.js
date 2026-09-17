@@ -1604,18 +1604,6 @@ function renderLeft() {
       h += sec('Content rows', selectField('f-rows', rr, String(o_rows(l))),
         'Capped by the fade line at y&nbsp;112.');
     }
-
-    /* The tray moved onto the canvas. Picking a glyph from a list on the left
-       meant knowing which slot a name like "row leader" referred to before
-       you could use it; clicking the glyph you can see needs no vocabulary at
-       all. What stays here is the one setting that is global. */
-    h += sec('Glyphs', `<div class="bd-btns">
-      <button type="button" class="bd-btn${state.glyphStyle === 'filled' ? ' on' : ''}" data-gstyle="filled">Filled</button>
-      <button type="button" class="bd-btn${state.glyphStyle === 'outline' ? ' on' : ''}" data-gstyle="outline">Line art</button>
-    </div>`,
-      'Click any glyph on the canvas to change it. Windows uses filled today; line art is the '
-      + 'same icons at their outline weight, and 429 of the 2,891 ship no outline, so those '
-      + 'fall back to filled.');
   }
 
   h += sec('Brief', '<div class="bd-btns">' +
@@ -1748,6 +1736,8 @@ function openPicker(target, anchorEl) {
   $('g-srcs').querySelectorAll('[data-src]').forEach((b) =>
     b.classList.toggle('on', b.dataset.src === state.src));
   $('g-search').value = state.search;
+  $('g-weight').querySelectorAll('[data-gstyle]').forEach((b) =>
+    b.classList.toggle('on', b.dataset.gstyle === state.glyphStyle));
   renderGlyphs();
   if (anchorEl) {
     const r = anchorEl.getBoundingClientRect();
@@ -2267,13 +2257,6 @@ function wireLeft() {
 
   on('f-rows', 'change', (e) => { state.rows = Number(e.target.value); render(); });
 
-  document.querySelectorAll('[data-gstyle]').forEach((b) => {
-    b.addEventListener('click', () => {
-      state.glyphStyle = b.dataset.gstyle;
-      renderLeft(); render();
-    });
-  });
-
   on('b-brief', 'click', () => copy(briefText(), 'The brief'));
   on('b-flat', 'click', () => download(`${current.uid}-${state.ground}.svg`,
     new Blob([flatten(current.svg, varsFor(state.ground))], { type: 'image/svg+xml' })));
@@ -2352,6 +2335,18 @@ function wireOnce() {
     else renderGlyphs();
   });
   $('g-search').addEventListener('input', (e) => { state.search = e.target.value; renderGlyphs(); });
+  /* Weight lives with the glyphs it applies to. It was a section of its own
+     in the left rail, which is a lot of rail for a two state switch you touch
+     once, and it was nowhere near the glyphs it changes. */
+  $('g-weight').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-gstyle]');
+    if (!b) return;
+    state.glyphStyle = b.dataset.gstyle;
+    $('g-weight').querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
+    render();
+    renderLeft();
+    renderGlyphs();
+  });
   $('g-close').addEventListener('click', closePicker);
   $('g-default').addEventListener('click', () => {
     const t = state.pickOpen;

@@ -143,7 +143,14 @@
   </div>
   <input type="text" id="g-search" placeholder="Search glyphs" autocomplete="off" spellcheck="false">
   <div class="bd-glyphs" id="g-grid" role="group" aria-label="Glyph"></div>
-  <div class="bd-btns"><button type="button" class="bd-btn" id="g-default">Back to the default</button></div>
+  <div class="bd-pop-foot">
+    <div class="bd-seg" id="g-weight" role="group" aria-label="Glyph weight"
+         title="Applies to every glyph in the illustration">
+      <button type="button" class="on" data-gstyle="filled">Filled</button>
+      <button type="button" data-gstyle="outline">Line art</button>
+    </div>
+    <button type="button" class="bd-btn" id="g-default">Default</button>
+  </div>
 </div>
 
 <script src="builder.js"></script>
