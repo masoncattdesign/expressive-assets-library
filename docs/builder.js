@@ -1016,18 +1016,110 @@ const TONES = {
   soft: { label: 'Soft', surface: () => FSOFT, glyph: () => SOFT, line: true },
 };
 
-const EMBLEM_SHAPES = { squircle: 'Squircle', circle: 'Circle' };
+/* --- the shapes an emblem can take -------------------------------------
+   Every one is a closed silhouette drawn in a unit square and scaled to the
+   emblem's size, so the tone, the glyph and the drag all work the same way
+   whichever is chosen. Corners are rounded by the same proportional radius
+   the language uses elsewhere, because a hard cornered triangle beside a
+   squircle reads as two systems.
+
+   Each shape also declares where its glyph goes. That is the whole reason
+   this is a table rather than a switch: a triangle's usable area is a third
+   of its bounding box and sits low, and a glyph centered in the box would
+   hang off the top edge. `k` is the glyph size as a fraction of the emblem,
+   `cy` the center of the usable area as a fraction of its height. */
+
+/* Corners cut with a quadratic through the vertex: the true arc version is a
+   sweep-flag problem per corner and looks identical at these sizes. */
+function roundPoly(pts, r) {
+  const n = pts.length;
+  const step = (p, q) => {
+    const dx = q[0] - p[0], dy = q[1] - p[1];
+    const len = Math.hypot(dx, dy) || 1;
+    const t = Math.min(r, len / 2) / len;
+    return [p[0] + dx * t, p[1] + dy * t];
+  };
+  const f = (pt) => `${n2(pt[0])} ${n2(pt[1])}`;
+  let d = '';
+  for (let i = 0; i < n; i++) {
+    const p = pts[i], a = pts[(i - 1 + n) % n], b = pts[(i + 1) % n];
+    d += (i === 0 ? 'M' : 'L') + f(step(p, a)) + 'Q' + f(p) + ' ' + f(step(p, b));
+  }
+  return d + 'Z';
+}
+
+const EMBLEM_SHAPES = {
+  squircle: {
+    label: 'Squircle', k: 0.52, cy: 0.5,
+    d: (x, y, s) => {
+      const r = rad(s / 3, s, s);
+      return `M${n1(x + r)} ${n1(y)}H${n1(x + s - r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x + s)} ${n1(y + r)}`
+        + `V${n1(y + s - r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x + s - r)} ${n1(y + s)}`
+        + `H${n1(x + r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x)} ${n1(y + s - r)}`
+        + `V${n1(y + r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x + r)} ${n1(y)}Z`;
+    },
+  },
+  circle: {
+    label: 'Circle', k: 0.52, cy: 0.5,
+    d: (x, y, s) => {
+      const r = s / 2, cx = x + r, cy = y + r;
+      return `M${n1(cx - r)} ${n1(cy)}a${n1(r)} ${n1(r)} 0 1 0 ${n1(2 * r)} 0a${n1(r)} ${n1(r)} 0 1 0 ${n1(-2 * r)} 0Z`;
+    },
+  },
+  triangle: {
+    /* Equilateral, sitting on its base. The glyph rides low because that is
+       where the room is. */
+    label: 'Triangle', k: 0.34, cy: 0.62,
+    d: (x, y, s) => roundPoly([[x + s / 2, y], [x + s, y + s * 0.93], [x, y + s * 0.93]], s * 0.14),
+  },
+  diamond: {
+    label: 'Diamond', k: 0.38, cy: 0.5,
+    d: (x, y, s) => roundPoly([[x + s / 2, y], [x + s, y + s / 2], [x + s / 2, y + s], [x, y + s / 2]], s * 0.13),
+  },
+  hexagon: {
+    /* Pointy top, the orientation a badge uses. */
+    label: 'Hexagon', k: 0.44, cy: 0.5,
+    d: (x, y, s) => roundPoly([
+      [x + s / 2, y], [x + s * 0.933, y + s * 0.25], [x + s * 0.933, y + s * 0.75],
+      [x + s / 2, y + s], [x + s * 0.067, y + s * 0.75], [x + s * 0.067, y + s * 0.25],
+    ], s * 0.1),
+  },
+  shield: {
+    /* Square shouldered, and the point is a curve into the bottom center
+       rather than a corner: a sharp point at 28 units reads as a defect. */
+    label: 'Shield', k: 0.42, cy: 0.44,
+    d: (x, y, s) => {
+      const r = s * 0.2;
+      return `M${n1(x + r)} ${n1(y)}H${n1(x + s - r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x + s)} ${n1(y + r)}`
+        + `V${n1(y + s * 0.52)}C${n1(x + s)} ${n1(y + s * 0.78)} ${n1(x + s * 0.78)} ${n1(y + s * 0.94)} ${n1(x + s / 2)} ${n1(y + s)}`
+        + `C${n1(x + s * 0.22)} ${n1(y + s * 0.94)} ${n1(x)} ${n1(y + s * 0.78)} ${n1(x)} ${n1(y + s * 0.52)}`
+        + `V${n1(y + r)}A${n2(r)} ${n2(r)} 0 0 1 ${n1(x + r)} ${n1(y)}Z`;
+    },
+  },
+  bell: {
+    /* A dome on a flared skirt with a flat foot. The glyph sits in the dome,
+       which is the only part wide enough to hold one. */
+    label: 'Bell', k: 0.36, cy: 0.45,
+    d: (x, y, s) => `M${n1(x + s / 2)} ${n1(y)}`
+      + `C${n1(x + s * 0.76)} ${n1(y)} ${n1(x + s * 0.78)} ${n1(y + s * 0.26)} ${n1(x + s * 0.78)} ${n1(y + s * 0.5)}`
+      + `C${n1(x + s * 0.78)} ${n1(y + s * 0.68)} ${n1(x + s * 0.86)} ${n1(y + s * 0.76)} ${n1(x + s * 0.94)} ${n1(y + s * 0.82)}`
+      + `A${n2(s * 0.08)} ${n2(s * 0.08)} 0 0 1 ${n1(x + s * 0.9)} ${n1(y + s * 0.94)}`
+      + `H${n1(x + s * 0.1)}A${n2(s * 0.08)} ${n2(s * 0.08)} 0 0 1 ${n1(x + s * 0.06)} ${n1(y + s * 0.82)}`
+      + `C${n1(x + s * 0.14)} ${n1(y + s * 0.76)} ${n1(x + s * 0.22)} ${n1(y + s * 0.68)} ${n1(x + s * 0.22)} ${n1(y + s * 0.5)}`
+      + `C${n1(x + s * 0.22)} ${n1(y + s * 0.26)} ${n1(x + s * 0.24)} ${n1(y)} ${n1(x + s / 2)} ${n1(y)}Z`,
+  },
+};
+
+function emblemShape(e) { return EMBLEM_SHAPES[e.shape] || EMBLEM_SHAPES.squircle; }
 
 function emblem(e) {
   const t = TONES[e.tone] || TONES.accent;
+  const sh = emblemShape(e);
   const s = e.size, x = e.x, y = e.y;
-  const edge = t.line ? ` stroke="${LINE}" stroke-width="${SW}"` : '';
-  const body = e.shape === 'circle'
-    ? `<circle cx="${n1(x + s / 2)}" cy="${n1(y + s / 2)}" r="${n1(s / 2)}" fill="${t.surface()}"${edge}/>`
-    : `<rect x="${n1(x)}" y="${n1(y)}" width="${n1(s)}" height="${n1(s)}" ` +
-      `rx="${rad(s / 3, s, s)}" fill="${t.surface()}"${edge}/>`;
-  const g = s * 0.52;   // the glyph fills just over half, the way a medallion's does
-  return body + icon(e.glyph, x + (s - g) / 2, y + (s - g) / 2, g, t.glyph());
+  const edge = t.line ? ` stroke="${LINE}" stroke-width="${SW}" stroke-linejoin="round"` : '';
+  const body = `<path d="${sh.d(x, y, s)}" fill="${t.surface()}"${edge}/>`;
+  const g = s * sh.k;
+  return body + icon(e.glyph, x + (s - g) / 2, y + s * sh.cy - g / 2, g, t.glyph());
 }
 
 /* Each emblem carries its index so the canvas can drag it. Typing coordinates
@@ -1538,6 +1630,7 @@ function renderLeft() {
 const o_rows = (l) => Math.min(l.rows[1], Math.max(l.rows[0], state.rows));
 
 const HOLDING = '<svg viewBox="0 0 24 24" aria-hidden="true" opacity=".28"><circle cx="12" cy="12" r="4"/></svg>';
+const glyphPath = (id) => iconPath(id);
 const glyphArt = (id) => {
   const p = iconPath(id);
   return p ? `<svg viewBox="0 0 ${p.grid} ${p.grid}" aria-hidden="true"><path d="${p.d}"/></svg>` : HOLDING;
@@ -1722,14 +1815,30 @@ function renderEmblems() {
   }
   host.innerHTML = state.emblems.map((e, i) => {
     const t = TONES[e.tone] || TONES.accent;
-    const chipBg = e.tone === 'accent' ? state.accent : 'var(--surface-2)';
-    const chipFg = e.tone === 'accent' ? '#fff' : 'var(--text-2)';
+    const sh = emblemShape(e);
+    /* The chip draws the emblem rather than approximating it with a border
+       radius: once a shape can be a hexagon or a shield, a rounded square
+       standing in for it is just wrong. */
+    const face = e.tone === 'accent' ? state.accent : 'var(--surface-2)';
+    const mark = e.tone === 'accent' ? '#fff' : 'var(--text-2)';
+    const g = glyphPath(e.glyph);
+    const chip = `<svg viewBox="0 0 26 26" aria-hidden="true" style="width:100%;height:100%;display:block">`
+      + `<path d="${sh.d(1, 1, 24)}" fill="${face}"`
+      + (t.line ? ' stroke="rgba(128,128,128,.45)" stroke-width="1" stroke-linejoin="round"' : '') + '/>'
+      + (g ? `<g transform="translate(${n2(1 + (24 - 24 * sh.k) / 2)} ${n2(1 + 24 * sh.cy - 24 * sh.k / 2)}) `
+        + `scale(${(24 * sh.k / g.grid).toFixed(4)})" fill="${mark}"><path d="${g.d}"/></g>` : '')
+      + '</svg>';
     return `<div class="bd-obj${i === state.emblemSel ? ' sel' : ''}" data-obj="${i}">
-      <button type="button" class="bd-obj-chip" data-glyph="${i}" title="Change this glyph"
-        style="background:${chipBg};border-radius:${e.shape === 'circle' ? '50%' : '8px'}">
-        <span style="display:block;width:14px;height:14px;fill:${chipFg}">${glyphArt(e.glyph)}</span></button>
-      <span><span class="bd-obj-name">${esc(glyphName(e.glyph))}</span><br>
-        <span class="bd-obj-sub">${t.label} &middot; ${EMBLEM_SHAPES[e.shape]} &middot; ${e.size}u</span></span>
+      <button type="button" class="bd-obj-chip" data-glyph="${i}" title="Change this glyph">${chip}</button>
+      <span class="bd-obj-body">
+        <span class="bd-obj-name">${esc(glyphName(e.glyph))}</span>
+        <span class="bd-obj-picks">
+          <select data-set="tone" data-i="${i}" aria-label="Style">${Object.entries(TONES).map(([k, tt]) =>
+            `<option value="${k}"${e.tone === k ? ' selected' : ''}>${tt.label}</option>`).join('')}</select>
+          <select data-set="shape" data-i="${i}" aria-label="Shape">${Object.entries(EMBLEM_SHAPES).map(([k, ss]) =>
+            `<option value="${k}"${e.shape === k ? ' selected' : ''}>${ss.label}</option>`).join('')}</select>
+        </span>
+      </span>
       <button type="button" data-drop="${i}" aria-label="Remove">&times;</button>
     </div>`;
   }).join('');
@@ -1738,19 +1847,13 @@ function renderEmblems() {
   if (i < 0 || !state.emblems[i]) { $('f-obj-edit').innerHTML = ''; return; }
   const e = state.emblems[i];
   $('f-obj-edit').innerHTML = `
-    <div class="bd-btns" style="margin:8px 0 6px">
-      ${Object.entries(TONES).map(([k, t]) =>
-        `<button type="button" class="bd-btn${e.tone === k ? ' on' : ''}" data-tone="${k}">${t.label}</button>`).join('')}
-      ${Object.entries(EMBLEM_SHAPES).map(([k, lab]) =>
-        `<button type="button" class="bd-btn${e.shape === k ? ' on' : ''}" data-shape="${k}">${lab}</button>`).join('')}
-    </div>
-    <div class="bd-nums" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+    <div class="bd-nums" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:8px">
       <label>x<input type="number" data-k="x" value="${e.x}" min="-8" max="168" step="1"></label>
       <label>y<input type="number" data-k="y" value="${e.y}" min="-8" max="168" step="1"></label>
       <label>size<input type="number" data-k="size" value="${e.size}" min="12" max="70" step="1"></label>
     </div>
     <p class="bd-hint" style="margin-top:6px">Drag it on the canvas to move it, or type the
-    numbers. Its glyph is the chip above.</p>`;
+    numbers. Its glyph is the chip beside the name.</p>`;
 }
 
 function renderChecks(result, buildError) {
@@ -1793,7 +1896,8 @@ function briefText() {
   }
   if (state.emblems.length) {
     lines.push('Emblems: ' + state.emblems.map((e) =>
-      `${glyphName(e.glyph)} (${e.tone}, ${e.shape}, ${e.size}u at ${e.x},${e.y})`).join('; '));
+      `${glyphName(e.glyph)} (${e.tone}, ${emblemShape(e).label.toLowerCase()}, `
+      + `${e.size}u at ${e.x},${e.y})`).join('; '));
   }
   lines.push(`Accent: ${state.accent} light, ${darkOf()} dark.`);
   return lines.join('\n');
@@ -1984,6 +2088,14 @@ async function runMessage(raw) {
     state.accent = ('#' + m[1]).toUpperCase(); did.push('accent ' + state.accent);
   } else if ((m = /\b(?:make it|accent|color|colour|in) (\w+)\b/.exec(t)) && COLOR_WORDS[m[1]]) {
     state.accent = COLOR_WORDS[m[1]]; did.push('accent ' + m[1]);
+  }
+
+  // emblem shape, on the selected emblem or the last one placed
+  const shapeWord = /\b(?:as a|make it a|shape(?: it)?(?: to)?)\s+(squircle|circle|triangle|diamond|hexagon|shield|bell)\b/.exec(t);
+  if (shapeWord && state.emblems.length) {
+    const idx = state.emblemSel >= 0 ? state.emblemSel : state.emblems.length - 1;
+    state.emblems[idx].shape = shapeWord[1];
+    did.push(shapeWord[1] + ' emblem');
   }
 
   // glyph weight
@@ -2263,6 +2375,7 @@ function wireOnce() {
   });
 
   $('f-objs').addEventListener('click', (e) => {
+    if (e.target.closest('[data-set]')) return;   // the dropdowns are not the row
     const gl = e.target.closest('[data-glyph]');
     if (gl) {
       const i = Number(gl.dataset.glyph);
@@ -2285,12 +2398,12 @@ function wireOnce() {
     renderEmblems();
   });
 
-  $('f-obj-edit').addEventListener('click', (e) => {
-    const b = e.target.closest('[data-tone], [data-shape]');
-    if (!b || state.emblemSel < 0) return;
-    const e0 = state.emblems[state.emblemSel];
-    if (b.dataset.tone) e0.tone = b.dataset.tone;
-    if (b.dataset.shape) e0.shape = b.dataset.shape;
+  $('f-objs').addEventListener('change', (e) => {
+    const sel = e.target.closest('[data-set]');
+    if (!sel) return;
+    const em = state.emblems[Number(sel.dataset.i)];
+    if (!em) return;
+    em[sel.dataset.set] = sel.value;
     renderEmblems(); render();
   });
   $('f-obj-edit').addEventListener('input', (e) => {

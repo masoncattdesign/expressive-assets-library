@@ -245,25 +245,38 @@ input[type="color"]::-webkit-color-swatch { border: none; border-radius: 4px; }
 /* The row is padded rather than flush: the selected row draws a background,
    and with no padding the glyph chip sat against its left edge. */
 .bd-obj {
-  display: grid; grid-template-columns: 26px minmax(0, 1fr) 22px;
-  align-items: center; gap: 9px; padding: 7px 8px;
+  display: grid; grid-template-columns: 34px minmax(0, 1fr) 22px;
+  align-items: start; gap: 9px; padding: 8px;
   border-bottom: 1px solid var(--line-soft);
 }
 .bd-obj:first-child { border-top: 1px solid var(--line-soft); }
+/* The chip draws the emblem itself, so it is a plain 30 square with no
+   background of its own: the shape is the thing being shown. */
 .bd-obj-chip {
-  width: 26px; height: 26px; border-radius: 8px; padding: 0; border: 0;
-  display: flex; align-items: center; justify-content: center; cursor: pointer;
-  box-shadow: 0 0 0 1px rgba(128, 128, 128, .18);
+  width: 34px; height: 34px; padding: 0; border: 0; background: none;
+  border-radius: 8px; cursor: pointer; display: block; margin-top: 1px;
 }
-.bd-obj-chip:hover { box-shadow: 0 0 0 2px var(--accent-ring, rgba(128,128,128,.5)); }
-.bd-obj-chip svg { width: 14px; height: 14px; display: block; }
-.bd-obj-name { font-size: 12.5px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd-obj-chip svg { width: 100%; height: 100%; display: block; }
+.bd-obj-chip:hover { box-shadow: 0 0 0 2px var(--accent-ring, rgba(128, 128, 128, .5)); }
+
+.bd-obj-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.bd-obj-picks { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.bd-obj-picks select {
+  font-size: 11.5px; padding: 4px 6px; border-radius: 7px;
+  background: var(--surface); min-width: 0;
+}
+.bd-obj-name {
+  font-size: 12.5px; color: var(--text); overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; line-height: 1.2;
+}
 .bd-obj-sub { font-size: 10px; color: var(--text-3); }
-.bd-obj button {
+/* The remove control only. Scoped, because an unscoped `.bd-obj button` also
+   matched the glyph chip and quietly padded it by four pixels. */
+.bd-obj button[data-drop] {
   border: 0; background: none; cursor: pointer; color: var(--text-3);
   font-size: 15px; line-height: 1; padding: 2px 4px; border-radius: 5px;
 }
-.bd-obj button:hover { background: var(--surface-2); color: var(--text); }
+.bd-obj button[data-drop]:hover { background: var(--surface-2); color: var(--text); }
 .bd-obj.sel { background: var(--accent-soft); border-radius: 9px; }
 
 /* --- The accent set ---------------------------------------------------- */
