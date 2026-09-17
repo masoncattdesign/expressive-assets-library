@@ -1386,19 +1386,26 @@ function watchGlyphs(host) {
 
 /* ====================================================== T H E  R I G H T == */
 
-const TICK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.6 5.9 13a1 1 0 1 0-1.4 1.4l4.3 4.3a1 1 0 0 0 1.4 0l9.3-9.3A1 1 0 0 0 18.1 8Z"/></svg>';
+/* The Customizer's six system seeds, not a set of my own. They sit in one
+   narrow OKLCH lightness band (0.546 to 0.589) and spread around the hue
+   wheel, so switching seed changes hue and nothing else. Two tools offering
+   different accent sets for the same library would be the same mistake as
+   two vocabularies for the same part. A preset whose accent is not one of
+   these six still shows in the square with no circle selected. */
+const SEEDS = [
+  { name: 'Azure', hex: '#0078D4' },
+  { name: 'Teal', hex: '#038387' },
+  { name: 'Iris', hex: '#8764B8' },
+  { name: 'Berry', hex: '#C239B3' },
+  { name: 'Green', hex: '#498205' },
+  { name: 'Orange', hex: '#CA5010' },
+];
 
 function renderAccents() {
-  const seen = [];
-  Object.values(PRESETS).forEach((p) => {
-    if (!seen.includes(p.light.accent)) seen.push(p.light.accent);
-  });
-  ['#107C10', '#8764B8', '#C239B3', '#CA5010', '#038387'].forEach((c) => {
-    if (!seen.includes(c) && seen.length < 8) seen.push(c);
-  });
-  $('f-accents').innerHTML = seen.map((hex) =>
-    `<button type="button" class="bd-sw" data-hex="${hex}" style="background:${hex}" ` +
-    `aria-pressed="${hex.toLowerCase() === state.accent.toLowerCase()}" title="${hex}">${TICK}</button>`).join('');
+  $('f-accents').innerHTML = SEEDS.map((s) =>
+    `<button type="button" class="bd-sw" data-hex="${s.hex}" style="background:${s.hex}" ` +
+    `aria-pressed="${s.hex.toLowerCase() === state.accent.toLowerCase()}" ` +
+    `title="${s.name} ${s.hex}"></button>`).join('');
   $('f-accent-custom').value = state.accent;
   $('f-accent-pair').textContent = `${state.accent} / ${darkOf()}`;
 }
@@ -1590,10 +1597,14 @@ const GLYPH_WORDS = {
   docs: 'book-open', store: 'building-shop', shop: 'building-shop', globe: 'globe', web: 'globe',
 };
 
+/* The first six names are the seeds in the rail, so "make it teal" selects a
+   circle rather than landing near one. The rest are still allowed and land in
+   the custom square with nothing selected. */
 const COLOR_WORDS = {
-  blue: '#0078D4', green: '#107C10', red: '#C4314B', orange: '#CA5010',
-  purple: '#8764B8', violet: '#8764B8', magenta: '#C239B3', pink: '#C239B3',
-  teal: '#038387', gold: '#B08A3E', yellow: '#B08A3E', gray: '#5C6166', grey: '#5C6166',
+  blue: '#0078D4', azure: '#0078D4', teal: '#038387', iris: '#8764B8',
+  purple: '#8764B8', violet: '#8764B8', berry: '#C239B3', magenta: '#C239B3',
+  pink: '#C239B3', green: '#498205', orange: '#CA5010',
+  red: '#C4314B', gold: '#B08A3E', yellow: '#B08A3E', gray: '#5C6166', grey: '#5C6166',
 };
 
 const LAYOUT_WORDS = {

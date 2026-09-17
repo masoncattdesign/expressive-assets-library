@@ -211,20 +211,34 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 
 /* --- Accent ----------------------------------------------------------- */
 
-.bd-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
-.bd-sw {
-  aspect-ratio: 1; border-radius: 10px; cursor: pointer; padding: 0;
-  border: 1px solid rgba(128, 128, 128, .2);
-  display: flex; align-items: center; justify-content: center;
+/* The same shape as the Customizer's seed row, deliberately: a 30 square for
+   the custom value, a dot, then the six system seeds as circles. Four big
+   tiles on a grid gave the accent more of the rail than a one-meaning dial
+   deserves, and made it look like a palette you assemble rather than one
+   color you pick. */
+
+.bd-seed-row { display: flex; align-items: center; gap: 9px; }
+.bd-seed-sep {
+  width: 3px; height: 3px; border-radius: 50%; background: var(--line);
+  flex: none; margin: 0 1px;
 }
-.bd-sw svg { width: 16px; height: 16px; fill: #fff; opacity: 0; }
-.bd-sw[aria-pressed="true"] svg { opacity: 1; }
-.bd-hex { display: flex; align-items: center; gap: 9px; }
+.bd-swatches { display: flex; gap: 5px; flex-wrap: wrap; }
+.bd-sw {
+  width: 22px; height: 22px; border-radius: 50%; padding: 0; cursor: pointer;
+  border: 2px solid transparent; flex: none; transition: transform .12s;
+}
+.bd-sw:hover { transform: scale(1.15); }
+.bd-sw[aria-pressed="true"] { border-color: var(--text-1); box-shadow: 0 0 0 1px var(--line); }
 input[type="color"] {
   width: 30px; height: 30px; padding: 0; border: 1px solid var(--line);
-  border-radius: 8px; background: none; cursor: pointer; flex: none;
+  border-radius: 7px; background: none; cursor: pointer; flex: none;
 }
-.bd-hex code { font-size: 12.5px; color: var(--text-2); }
+input[type="color"]::-webkit-color-swatch-wrapper { padding: 3px; }
+input[type="color"]::-webkit-color-swatch { border: none; border-radius: 4px; }
+.bd-pair {
+  display: block; margin-top: 7px; font-size: 11px; color: var(--text-3);
+  font-family: 'Cascadia Code', 'Consolas', ui-monospace, monospace;
+}
 
 /* --- Emblems ---------------------------------------------------------- */
 /* An emblem is the one placeable thing: a surface carrying a glyph. A glyph
