@@ -1432,22 +1432,25 @@ function darkAccent(hex, presetKey) {
    It is not a separate engine, which is why switching one keeps the feature,
    the layout, the glyph and the emblems. */
 
+/* Four modes were three too many. Windows was this same engine with the
+   Windows preset selected, which the preset dropdown already does; Pieces was
+   this engine with the library as the glyph source, which the picker's own
+   All and Mine tabs already do; and Devices was not a mode at all, it was a
+   way of looking at a composition, which is now a switch. What is left is one
+   mode, so the section is gone.
+
+   Windows and Pieces come back when they are more than a preset and a source.
+   The table stays because it is the shape they come back into. */
 const MODES = {
-  windows: { label: 'Windows', kind: 'compose', preset: 'windows',
-    sub: 'Twelve layouts at Windows settings' },
-  pieces: { label: 'Pieces', kind: 'compose', preset: 'windows', pieces: true,
-    sub: 'Bind every slot to library art' },
   product: { label: 'Product UI', kind: 'compose', preset: 'soft',
     sub: 'The ported exploration' },
-  device: { label: 'Devices', kind: 'device', preset: 'windows',
-    sub: 'A base with a screen in it' },
 };
 
 /* ============================================================ S T A T E == */
 
 const state = {
-  mode: 'windows',
-  preset: 'windows',
+  mode: 'product',
+  preset: 'soft',
   view: 'canvas',
   ground: 'light',
   name: '',            // empty means derived from the mode and the template
@@ -1465,6 +1468,7 @@ const state = {
   pickOpen: null,       // the picker's target: {kind:'slot',key} or {kind:'emblem',i}
   emblemSel: -1,        // which emblem the editor is on, -1 for none
   device: 'laptop',
+  inDevice: false,      // the composition, shown inside a device
   screenContent: 'composition',
   src: 'core',
   glyphStyle: 'filled',
@@ -1479,8 +1483,7 @@ const $ = (id) => document.getElementById(id);
    the thing precisely enough for a file, and `name it billing` still sets one
    when it matters. */
 const docName = () => state.name
-  || `${MODES[state.mode].label} ${modeOf().kind === 'device'
-    ? DEVICES[state.device].label : state.layout}`;
+  || layoutOf(state.layout).name + (state.inDevice ? ' ' + DEVICES[state.device].label : '');
 const slug = (s) => s.toLowerCase().normalize('NFKD').replace(/[^\w\s-]/g, '')
   .trim().replace(/[\s_]+/g, '-').replace(/-+/g, '-') || 'untitled';
 const layoutOf = (key) => LAYOUTS.find((l) => l.key === key) || LAYOUTS[0];
@@ -1498,7 +1501,7 @@ function opts(extra) {
        feature. */
     slots: state.slots,
     emblems: state.emblems,
-    device: state.device, screenContent: state.screenContent,
+    device: state.device, screenContent: state.inDevice ? state.screenContent : 'off',
   }, extra || {});
   if (l.rows) o.rows = Math.min(l.rows[1], Math.max(l.rows[0], o.rows));
   return o;
@@ -1514,7 +1517,7 @@ function build(layoutKey, uid, o) {
 
 function buildCurrent(uid, extra) {
   const o = opts(extra);
-  return modeOf().kind === 'device'
+  return state.inDevice
     ? buildDevice(uid, docName(), o)
     : build(state.layout, uid, o);
 }
@@ -1612,43 +1615,14 @@ function renderLeft() {
   // it is a drawing surface and has to have the style applied before it runs.
   applyPreset(state.preset, state.accent);
   GLYPH_STYLE = state.glyphStyle;
-  const m = modeOf();
   const l = layoutOf(state.layout);
   let h = '';
-
-  h += sec('Mode', '<div class="bd-modes" id="f-modes" role="group" aria-label="Build mode">' +
-    Object.entries(MODES).map(([k, mm]) =>
-      `<button type="button" class="bd-mode${k === state.mode ? ' on' : ''}" data-mode="${k}" ` +
-      `aria-pressed="${k === state.mode}"><b>${mm.label}</b><span>${esc(mm.sub)}</span></button>`).join('') +
-    '</div>');
 
   h += sec('Style preset', selectField('f-preset',
     Object.entries(PRESETS).map(([k, p]) => [k, p.label]), state.preset),
     esc(PRESETS[state.preset].note));
 
-  if (m.kind === 'device') {
-    h += sec('Base', '<div class="bd-tray three" id="f-devices">' +
-      Object.entries(DEVICES).map(([k, d]) => {
-        let art = '';
-        try { art = CLEAN(buildDevice('dv' + k, d.label, opts({ device: k, emblems: [] }))); } catch (e) {}
-        return `<button type="button" class="bd-card" data-device="${k}" aria-pressed="${k === state.device}">` +
-          `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${d.label}</b></button>`;
-      }).join('') + '</div>');
-    const sc = DEVICES[state.device].screen;
-    h += sec('On the screen', selectField('f-screen',
-      [['composition', 'A composition, below'], ['flat', 'A plain view'], ['off', 'Nothing, screen off']],
-      state.screenContent),
-      sc.w < sc.h
-        ? 'This base is portrait, and a 160 square composition only crops to a column through its '
-          + 'middle here. Portrait layouts are not built yet, so a composition on this screen is a '
-          + 'fragment rather than a view.'
-        : 'The screen rect is the whole contract. Anything on the 160 grid nests into it, cut to '
-          + 'the screen\'s own aspect rather than squashed.');
-  }
-
-  const composing = m.kind === 'compose' || state.screenContent === 'composition';
-
-  if (composing) {
+  {
     h += sec('Templates', '<div class="bd-tray three" id="f-layouts">' +
       LAYOUTS.map((ll) => {
         let art = '';
@@ -1672,6 +1646,28 @@ function renderLeft() {
       h += sec('Content rows', selectField('f-rows', rr, String(o_rows(l))),
         'Capped by the fade line at y&nbsp;112.');
     }
+
+    /* Not a mode. A device is a way of looking at the composition you already
+       have: the same 160 grid, nested into a screen and cropped to it. */
+    h += sec('In a device', `<div class="bd-btns" id="f-indevice">
+      <button type="button" class="bd-btn${state.inDevice ? '' : ' on'}" data-indevice="off">Off</button>
+      <button type="button" class="bd-btn${state.inDevice ? ' on' : ''}" data-indevice="on">In a device</button>
+    </div>` + (state.inDevice ? '<div class="bd-tray three" id="f-devices">'
+      + Object.entries(DEVICES).map(([k, d]) => {
+        let art = '';
+        try {
+          art = CLEAN(buildDevice('dv' + k, d.label,
+            opts({ device: k, emblems: [], screenContent: 'composition' })));
+        } catch (e) {}
+        return `<button type="button" class="bd-card" data-device="${k}" aria-pressed="${k === state.device}">`
+          + `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${d.label}</b></button>`;
+      }).join('') + '</div>' : ''),
+      !state.inDevice
+        ? 'The same drawing, nested into a screen and cropped to it rather than squashed.'
+        : (DEVICES[state.device].screen.w < DEVICES[state.device].screen.h
+          ? 'This base is portrait, and a 160 square only crops to a column through its middle '
+            + 'here. Portrait templates are not built yet, so this is a fragment rather than a view.'
+          : 'The screen rect is the whole contract, and what you export is the device.'));
   }
 
   h += sec('Brief', '<div class="bd-btns">' +
@@ -1944,10 +1940,9 @@ function renderChecks(result, buildError) {
 function briefText() {
   const l = layoutOf(state.layout);
   const r = RELATIONSHIPS.find((x) => x[0] === state.rel) || ['', state.rel, ''];
-  const m = modeOf();
-  const lines = [`Mode: ${m.label}, preset ${PRESETS[state.preset].label}`, `Feature: ${docName()}`];
-  if (m.kind === 'device') lines.push(`Base: ${DEVICES[state.device].label}, screen ${state.screenContent}`);
-  if (m.kind === 'compose' || state.screenContent === 'composition') {
+  const lines = [`Preset: ${PRESETS[state.preset].label}`, `Feature: ${docName()}`];
+  if (state.inDevice) lines.push(`Shown in: ${DEVICES[state.device].label}`);
+  {
     lines.push(`Metaphor: ${r[1]}, ${r[2]}.`);
     lines.push(`Layout: ${l.key} ${l.name}, adapted from ${l.example}.svg.`);
     lines.push(`Primitives: ${l.prims.join(', ')}.`);
@@ -1978,7 +1973,7 @@ function render() {
   applyPreset(state.preset, state.accent);
   GLYPH_STYLE = state.glyphStyle;
   const uid = slug(docName());
-  const contained = modeOf().kind === 'device';
+  const contained = state.inDevice;
 
   let svgText = '', buildError = '';
   try { svgText = buildCurrent(uid); } catch (e) { buildError = e.message; }
@@ -2015,11 +2010,11 @@ function render() {
 }
 
 function renderSheet() {
-  const key = [state.mode, state.preset, state.ic, state.rows, state.device,
+  const key = [state.inDevice, state.preset, state.ic, state.rows, state.device,
     state.screenContent, JSON.stringify(state.slots), JSON.stringify(state.emblems)].join('|');
   if (key === sheetKey) return;
   sheetKey = key;
-  const isDev = modeOf().kind === 'device';
+  const isDev = state.inDevice;
   const cells = isDev
     ? Object.entries(DEVICES).map(([k, d]) => ({ key: k, name: d.label,
         make: (uid) => buildDevice(uid, docName(), opts({ device: k })) }))
@@ -2107,21 +2102,27 @@ async function runMessage(raw) {
     state.emblems = []; state.emblemSel = -1; did.push('cleared the emblems');
   }
 
-  // mode
-  if ((m = /\b(windows|pieces|product ui|devices?)\b/.exec(t)) && !/\bon (a|the) /.test(t)) {
-    const key = { windows: 'windows', pieces: 'pieces', 'product ui': 'product',
-      device: 'device', devices: 'device' }[m[1]];
-    if (key && key !== state.mode) { setMode(key); did.push('switched to ' + MODES[key].label); }
+  // the style preset
+  if ((m = /\b(windows|flat outline|m365|soft layered|soft)\b/.exec(t))) {
+    const key = { windows: 'windows', 'flat outline': 'flat', m365: 'flat',
+      'soft layered': 'soft', soft: 'soft' }[m[1]];
+    if (key && key !== state.preset) {
+      state.preset = key;
+      did.push('the ' + PRESETS[key].label + ' preset');
+    }
   }
 
-  // base device
+  // in a device, which is a view rather than a mode
   if ((m = /\b(?:on|in|inside|use) (?:a |the )?(laptop|monitor|desktop|all in one|tablet|phone)\b/.exec(t))) {
     const key = { laptop: 'laptop', monitor: 'monitor', desktop: 'monitor',
       'all in one': 'allinone', tablet: 'tablet', phone: 'phone' }[m[1]];
     if (key) {
-      if (state.mode !== 'device') setMode('device');
-      state.device = key; did.push('put it on the ' + DEVICES[key].label.toLowerCase());
+      state.inDevice = true;
+      state.device = key;
+      did.push('put it on the ' + DEVICES[key].label.toLowerCase());
     }
+  } else if (/\b(no device|out of the device|on its own|without a device)\b/.test(t)) {
+    state.inDevice = false; did.push('took it out of the device');
   }
 
   // layout. Longest word first, so "corner chips" wins over "chips".
@@ -2191,7 +2192,7 @@ async function runMessage(raw) {
 
   if ((m = /\b(?:glyph|icon|mark) (?:is |as )?(\w+)\b/.exec(t)) && GLYPH_WORDS[m[1]]) {
     state.ic = 'system.' + GLYPH_WORDS[m[1]];
-    if (modeOf().pieces) state.slots.feature = state.ic;
+    state.slots.feature = state.ic;
     did.push('feature glyph ' + m[1]);
   } else if ((m = /\buse (?:the )?(\w+)\b/.exec(t)) && GLYPH_WORDS[m[1]] && !did.length) {
     state.ic = 'system.' + GLYPH_WORDS[m[1]];
@@ -2276,23 +2277,12 @@ async function copy(text, what) {
 
 function on(id, ev, fn) { const el = $(id); if (el) el.addEventListener(ev, fn); }
 
-function setMode(key) {
-  state.mode = key;
-  const m = MODES[key];
-  state.preset = m.preset;
-  if (Object.values(PRESETS).some((p) => p.light.accent.toLowerCase() === state.accent.toLowerCase())) {
-    state.accent = PRESETS[state.preset].light.accent;
-  }
-  state.pick = m.pieces ? (layoutOf(state.layout).slots[0] || 'feature') : 'feature';
-  if (m.pieces) loadLibrary().then(loadParts);
-}
-
 function wireLeft() {
-  on('f-modes', 'click', (e) => {
-    const b = e.target.closest('.bd-mode');
+  on('f-indevice', 'click', (e) => {
+    const b = e.target.closest('[data-indevice]');
     if (!b) return;
-    setMode(b.dataset.mode);
-    renderLeft(); renderAccents(); render();
+    state.inDevice = b.dataset.indevice === 'on';
+    renderLeft(); render();
   });
 
   on('f-preset', 'change', (e) => {
@@ -2307,15 +2297,8 @@ function wireLeft() {
     const b = e.target.closest('[data-device]');
     if (!b) return;
     state.device = b.dataset.device;
-    // A portrait screen cannot show a 160 square: the honest crop is a narrow
-    // column through the middle, which on a phone is a fragment. Until there
-    // are portrait layouts, a portrait base opens with its screen off rather
-    // than opening broken.
-    const s0 = DEVICES[state.device].screen;
-    if (s0.w < s0.h && state.screenContent === 'composition') state.screenContent = 'off';
     renderLeft(); render();
   });
-  on('f-screen', 'change', (e) => { state.screenContent = e.target.value; renderLeft(); render(); });
 
   on('f-layouts', 'click', (e) => {
     const b = e.target.closest('[data-key]');
