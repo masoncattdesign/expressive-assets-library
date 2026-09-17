@@ -118,10 +118,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .bd-card svg { width: 100%; min-width: 0; height: auto; display: block; }
 .bd-card b { font-size: 10px; font-weight: 500; color: var(--text-3); text-align: center; }
 .bd-card[aria-pressed="true"] b { color: var(--accent); }
-.bd-card.rec::after {
-  content: ''; position: absolute; top: 5px; right: 5px;
-  width: 5px; height: 5px; border-radius: 50%; background: #1F7A54;
-}
 
 /* The glyph tray is denser: you are picking a shape, not reading a label. */
 .bd-glyphs {
@@ -245,17 +241,21 @@ input[type="color"]::-webkit-color-swatch { border: none; border-radius: 4px; }
    never floats on its own, which is what keeps this list one kind of row and
    the accent budget countable. */
 
-.bd-objs { display: flex; flex-direction: column; }
+.bd-objs { display: flex; flex-direction: column; margin: 0 -8px; }
+/* The row is padded rather than flush: the selected row draws a background,
+   and with no padding the glyph chip sat against its left edge. */
 .bd-obj {
   display: grid; grid-template-columns: 26px minmax(0, 1fr) 22px;
-  align-items: center; gap: 8px; padding: 7px 0;
+  align-items: center; gap: 9px; padding: 7px 8px;
   border-bottom: 1px solid var(--line-soft);
 }
 .bd-obj:first-child { border-top: 1px solid var(--line-soft); }
 .bd-obj-chip {
-  width: 26px; height: 26px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 8px; padding: 0; border: 0;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(128, 128, 128, .18);
 }
+.bd-obj-chip:hover { box-shadow: 0 0 0 2px var(--accent-ring, rgba(128,128,128,.5)); }
 .bd-obj-chip svg { width: 14px; height: 14px; display: block; }
 .bd-obj-name { font-size: 12.5px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bd-obj-sub { font-size: 10px; color: var(--text-3); }
@@ -264,7 +264,42 @@ input[type="color"]::-webkit-color-swatch { border: none; border-radius: 4px; }
   font-size: 15px; line-height: 1; padding: 2px 4px; border-radius: 5px;
 }
 .bd-obj button:hover { background: var(--surface-2); color: var(--text); }
-.bd-obj.sel { background: var(--accent-soft); border-radius: 8px; }
+.bd-obj.sel { background: var(--accent-soft); border-radius: 9px; }
+
+/* --- The accent set ---------------------------------------------------- */
+
+.bd-ramp { display: flex; gap: 4px; margin-top: 7px; }
+.bd-ramp span { flex: 1; height: 13px; border-radius: 4px; }
+
+/* --- The glyph picker -------------------------------------------------- */
+/* Opened by clicking a glyph on the canvas, so it is positioned against what
+   was clicked rather than docked anywhere. */
+
+.bd-pop {
+  position: fixed; z-index: 60; width: 296px; max-height: min(430px, calc(100vh - 40px));
+  display: flex; flex-direction: column; gap: 7px; padding: 12px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; box-shadow: 0 18px 44px rgba(0, 0, 0, .22);
+}
+.bd-pop[hidden] { display: none; }
+.bd-pop-head { display: flex; align-items: center; gap: 8px; }
+.bd-pop-head span {
+  font-size: 10px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.bd-pop .bd-glyphs { max-height: 246px; }
+.bd-pop-x {
+  margin-left: auto; border: 0; background: none; cursor: pointer;
+  color: var(--text-3); font-size: 16px; line-height: 1; padding: 1px 5px; border-radius: 5px;
+}
+.bd-pop-x:hover { background: var(--surface-2); color: var(--text); }
+
+/* A glyph on the canvas says it can be clicked. The hit rect is transparent
+   and slightly larger than the glyph, because a 9 unit outline glyph is
+   nearly unclickable on its own strokes. */
+.bd-artboard .il-slot { cursor: pointer; }
+.bd-artboard .il-slot:hover > g { opacity: .55; }
+.bd-emblem-drag { cursor: grab; }
 
 .bd-nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
 .bd-nums label { display: flex; flex-direction: column; gap: 3px; font-size: 9.5px; color: var(--text-3); }

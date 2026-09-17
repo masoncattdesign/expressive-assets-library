@@ -63,8 +63,9 @@ const PRESETS = {
   },
   windows: {
     label: 'Windows',
-    note: 'Cool neutrals and Windows blue, measured off the 72 illustrations in the library. '
-      + 'A proposal, not a match: the shipped set has no single style to match.',
+    note: 'Cool neutrals, Windows blue and a rendered material: gradients, inner shadows and a '
+      + 'two pass cast shadow, the way the OOBE illustrations are drawn. Measured off the 72 in '
+      + 'the library. A proposal, not a match: the shipped set has no single style to match.',
     /* The corner dial stays at 1. The set's real rule is proportional, half of
        every rounded rect sitting at a sixth of its short side, and a multiplier
        on absolute radii cannot express that: a sixth of the card's short side
@@ -72,7 +73,7 @@ const PRESETS = {
        absolute radii already fall between those two, so moving the multiplier
        would trade one wrong answer for another. Proportional corners want a
        dial the preset does not have. */
-    sw: 0.5, radius: 1, elevation: 'lift',
+    sw: 0.5, radius: 1, elevation: 'lift', material: 'rendered',
     /* Five measured hues from the set, far enough apart to read as different
        services rather than as a ramp. */
     brand: ['#0078D4', '#FD6F03', '#81B93A', '#5B41D3', '#222E48'],
@@ -133,6 +134,40 @@ const PRESETS = {
   },
 };
 
+/* ===================================================== M A T E R I A L ==
+   How a surface is rendered, as opposed to what color it is. Everything else
+   in this file assumes the flat language: one gradient, one shadow caster, no
+   blur. That language is not what Windows illustrations look like. The survey
+   of the 72 in the library measured the OOBE set at 7.6 filter applications
+   per file, 23 of 72 carrying inner shadows, 27 with a gaussian blur and 38%
+   with more than one gradient. A preset that claims to be Windows and draws
+   flat is a preset that is wrong about its own subject.
+
+   So `rendered` is a deliberate exemption rather than a loosening: the flat
+   rules still hold for every other preset, the checks still run, and they say
+   which rules this material is excused from and why. The gradients are
+   overlays rather than computed color stops, because a stop needs a value and
+   a surface here is a token whose value the preset does not know: white at
+   low alpha lightens whatever it is over, in both grounds. */
+
+const MATERIALS = {
+  flat: {
+    label: 'Flat', sheen: 0, tileSheen: 0, inner: null, cast: null, edgeOpacity: 1,
+  },
+  rendered: {
+    label: 'Rendered',
+    sheen: 0.40,          // the top highlight on a surface
+    tileSheen: 0.26,      // less on a brand tile: it is a mark, not a surface
+    shade: 0.15,          // the bottom darkening on a panel
+    inner: { dy: 1, blur: 1.3, o: 0.22 },
+    /* Two passes, which is the OOBE pattern: a tight contact shadow that says
+       the object is touching, and a wide soft one that says how far off the
+       surface it sits. One shadow can only do one of those. */
+    cast: [{ dy: 2.2, blur: 2.4, o: 0.16 }, { dy: 7, blur: 7.5, o: 0.13 }],
+    edgeOpacity: 0.42,    // the hairline stays, quieter: the mass does the work
+  },
+};
+
 /* The live style. Reassigned before every build rather than read through a
    function, so the layout code below stays readable. */
 let P = PRESETS.soft;
@@ -143,23 +178,70 @@ let SW = 0.5, RR = 1;
 let FLAT_OVERRIDE = false;
 const flatNow = () => FLAT_OVERRIDE || P.elevation === 'flat';
 let LINE, FILL, FSOFT, SOFT, SURF, GHOST, STRK, ACC, BRAND, CANVAS;
+let ACCENTS = [];
+let MAT = MATERIALS.flat;
+const rendered = () => MAT.cast && !FLAT_OVERRIDE;
 
-function applyPreset(key, accentHex) {
+/* How the secondary accents relate to the seed. A tile row was taking the
+   preset's own brand array, which is why moving the accent left the tiles
+   alone: the one color you were choosing did not reach the thing you were
+   looking at. Every set below is derived from the seed in OKLCH by rotating
+   hue and holding lightness and chroma, so a set is one color's family rather
+   than several unrelated colors. `brand` is the exception and says so. */
+const HARMONIES = {
+  spread: { label: 'Spread', offs: [0, 96, 192, 264],
+    note: 'Even steps around the wheel. Reads as a set of peers.' },
+  analogous: { label: 'Analogous', offs: [0, 26, -26, 52],
+    note: 'Neighbors of the seed. One hue family, so it reads as one subject.' },
+  complementary: { label: 'Complementary', offs: [0, 180, 18, 198],
+    note: 'The seed against its opposite. Reads as two sides of something.' },
+  triad: { label: 'Triad', offs: [0, 120, 240, 60],
+    note: 'Three equal parts. The fourth doubles back next to the seed.' },
+  brand: { label: 'Brand', offs: null,
+    note: 'The preset\'s own colors, measured rather than derived. Ignores the seed.' },
+};
+
+/* Hue rotation only. Moving lightness as well is what made the old preset
+   sets read as a fan rather than a family, and the Customizer settled the
+   same question the same way. The offsets are degrees and the hue this works
+   in is radians, which is worth saying because getting that wrong silently
+   produces a plausible looking set of the wrong colors. */
+const DEG = Math.PI / 180;
+
+function accentSet(seed, count, harmony) {
+  const h = HARMONIES[harmony] || HARMONIES.spread;
+  if (!h.offs) return (P.brand || []).slice(0, count);
+  const base = hexToOklch(seed);
+  return h.offs.slice(0, count).map((d) => (d === 0 ? seed.toUpperCase()
+    : oklchFit({ L: base.L, C: base.C, h: base.h + d * DEG })));
+}
+
+function applyPreset(key, accentHex, count, harmony) {
   P = PRESETS[key] || PRESETS.soft;
   SW = P.sw;
   RR = P.radius;
+  MAT = MATERIALS[P.material || 'flat'];
   const t = (n) => `var(--il-${n}, ${P.light[n]})`;
   LINE = t('line'); FILL = t('fill'); FSOFT = t('fill-soft'); SOFT = t('stroke-soft');
   SURF = t('surface'); GHOST = t('ghost'); STRK = t('stroke'); CANVAS = t('canvas');
-  ACC = `var(--il-accent, ${accentHex || P.light.accent})`;
-  BRAND = P.brand;
+  const seed = accentHex || P.light.accent;
+  ACC = `var(--il-accent, ${seed})`;
+  /* Tokens, not literals: a tile painted with a raw hex is the same tile in
+     both grounds, and a saturated light-mode tile on a near-black canvas is
+     the defect the survey found in the shipped set. */
+  const set = accentSet(seed, count || 4, harmony || 'spread');
+  ACCENTS = set.map((hex, i) => `var(--il-acc${i + 1}, ${hex})`);
+  BRAND = [0, 1, 2, 3, 4, 5].map((i) => ACCENTS[i % ACCENTS.length]);
 }
 
-const cssVars = (preset, theme, accent) => {
+const cssVars = (preset, theme, accent, set) => {
   const src = PRESETS[preset][theme];
   const out = {};
   Object.keys(src).forEach((k) => { out['--il-' + k] = src[k]; });
   if (accent) out['--il-accent'] = accent;
+  (set || []).forEach((hex, i) => {
+    out['--il-acc' + (i + 1)] = theme === 'dark' ? darkAccent(hex, preset) : hex;
+  });
   return out;
 };
 
@@ -224,20 +306,33 @@ function iconPath(id) {
   return LIB.paths.get(id + '|' + GLYPH_STYLE) || LIB.paths.get(id + '|filled') || null;
 }
 
-function icon(id, x, y, size, color) {
+/* A glyph, optionally addressable. When a slot key is given the group carries
+   it and a transparent hit rect, so the glyph can be clicked on the canvas to
+   change it: a filled path is thin and an outline glyph at 9 units is nearly
+   unclickable without one. Both the key and the rect are stripped before the
+   SVG is linted, shown or exported, because they are interface and not art. */
+function icon(id, x, y, size, color, key) {
   const p = iconPath(id);
   if (!p) return '';
   const sc = size / p.grid;
-  return `<g transform="translate(${n2(x)} ${n2(y)}) scale(${sc.toFixed(5)})" fill="${color || STRK}">` +
+  const g = `<g transform="translate(${n2(x)} ${n2(y)}) scale(${sc.toFixed(5)})" fill="${color || STRK}">` +
     `<path d="${p.d}"/></g>`;
+  if (!key) return g;
+  const pad = Math.max(0, (11 - size) / 2);
+  return `<g class="il-slot" data-slot="${key}">` +
+    `<rect class="hit" x="${n2(x - pad)}" y="${n2(y - pad)}" width="${n2(size + 2 * pad)}" ` +
+    `height="${n2(size + 2 * pad)}" fill="transparent"/>${g}</g>`;
 }
 
 /* A slot is a named position that art can be bound to. The layout names the
-   slot and supplies the default; Pieces mode rebinds it. This is the only way
-   library art gets into a composition, which is what keeps it on rails. */
+   slot and supplies the default; clicking it on the canvas, or the tray in
+   Pieces mode, rebinds it. This is the only way library art gets into a
+   composition, which is what keeps it on rails. One key can paint several
+   places, and it is meant to: three rows led by three different glyphs is
+   three subjects, not one list. */
 function slot(o, key, fallback, x, y, size, color) {
   const bound = o.slots && o.slots[key];
-  return icon(bound || fallback, x, y, size, color);
+  return icon(bound || fallback, x, y, size, color, key);
 }
 
 const avatar = (o, x, y, size, color) =>
@@ -275,20 +370,25 @@ const vrule = (x, y1, y2, op) =>
 function backdrop(kind, x, w, y, h) {
   const H = h === undefined || h === null ? 160 - y : h;
   if (kind === 'none') return '';
+  /* In the rendered material every surface edge is quieted, backdrops
+     included: a sheet behind the panel drawn at full hairline reads louder
+     than the panel in front of it. */
+  const edge = ` stroke="${LINE}" stroke-width="${SW}"`
+    + (rendered() ? ` stroke-opacity="${MAT.edgeOpacity}"` : '');
   if (kind === 'plate') {
     return `<rect x="${x - 7}" y="${y + 4}" width="${w + 14}" height="${H + 6}" rx="${rad(GEO.PANEL_R + 6)}" ` +
-      `fill="${GHOST}" stroke="${LINE}" stroke-width="${SW}"/>`;
+      `fill="${GHOST}"${edge}/>`;
   }
   if (kind === 'offset') {
     return `<rect x="${x + 8}" y="${y + 8}" width="${w}" height="${H}" rx="${rad(GEO.PANEL_R)}" ` +
-      `fill="${GHOST}" stroke="${LINE}" stroke-width="${SW}"/>`;
+      `fill="${GHOST}"${edge}/>`;
   }
   if (kind === 'twin') {
     // Every sheet steps down from the one in front, and no two share a top
     // edge, because the front card has to read as the front card.
     return [10, 5].map((d) =>
       `<rect x="${x - d}" y="${y + d}" width="${w + 2 * d}" height="${H}" rx="${rad(GEO.PANEL_R + Math.floor(d / 2))}" ` +
-      `fill="${GHOST}" stroke="${LINE}" stroke-width="${SW}"/>`).join('');
+      `fill="${GHOST}"${edge}/>`).join('');
   }
   throw new Error('unknown backdrop ' + kind);
 }
@@ -300,12 +400,18 @@ function panel(uid, x, w, y, h, mode, chrome, back) {
   mode = mode || 'fade'; back = back === undefined ? 'plate' : back;
   const r = rad(GEO.PANEL_R);
   let s = backdrop(back, x, w, y, h);
-  if (mode === 'fade') {
-    s += `<path d="M${x} ${y + r}a${r} ${r} 0 0 1 ${r} -${r}h${n2(w - 2 * r)}a${r} ${r} 0 0 1 ${r} ${r}V160H${x}z" ` +
-      `fill="url(#panelG-${uid})" stroke="${LINE}" stroke-width="${SW}"/>`;
+  const d = `M${x} ${y + r}a${r} ${r} 0 0 1 ${r} -${r}h${n2(w - 2 * r)}a${r} ${r} 0 0 1 ${r} ${r}V160H${x}z`;
+  const shape = (fill, extra) => mode === 'fade'
+    ? `<path d="${d}" fill="${fill}"${extra || ''}/>`
+    : `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}"${extra || ''}/>`;
+  if (rendered()) {
+    /* The panel is the thing everything else sits in, so it is the one part
+       that reads as recessed: the inner shadow is what says inside. */
+    s += shape(`url(#panelG-${uid})`,
+      ` stroke="${LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}" filter="url(#inner-${uid})"`);
+    s += shape(`url(#shade-${uid})`);
   } else {
-    s += `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" ` +
-      `fill="url(#panelG-${uid})" stroke="${LINE}" stroke-width="${SW}"/>`;
+    s += shape(`url(#panelG-${uid})`, ` stroke="${LINE}" stroke-width="${SW}"`);
   }
   if (chrome) {
     for (let i = 0; i < 3; i++) s += dot(x + 10 + i * 5.5, y + 9, 1.7, true, LINE);
@@ -320,28 +426,45 @@ function card(x, y, w, h, r, uid, lift, fill, stroke) {
   // Bigger objects sit further off the surface. One shadow for everything reads
   // as a sticker sheet rather than a stack.
   const big = w * h > 2600;
+  const rr = rad(r, w, h);
+  const box = (f, extra) => `<rect x="${n1(x)}" y="${n1(y)}" width="${n1(w)}" ` +
+    `height="${n1(h)}" rx="${rr}" fill="${f}"${extra || ''}/>`;
+  if (rendered()) {
+    const f = lift ? ` filter="url(#soft-${uid})"` : '';
+    return `<g${f}>` + box(fill || SURF,
+      ` stroke="${stroke || LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}"`)
+      + box(`url(#sheen-${uid})`) + '</g>';
+  }
   const f = lift ? ` filter="url(#lift${big ? 'L' : ''}-${uid})"` : '';
-  return `<g${f}><rect x="${n1(x)}" y="${n1(y)}" width="${n1(w)}" height="${n1(h)}" rx="${rad(r, w, h)}" ` +
-    `fill="${fill || SURF}" stroke="${stroke || LINE}" stroke-width="${SW}"/></g>`;
+  return `<g${f}>` + box(fill || SURF, ` stroke="${stroke || LINE}" stroke-width="${SW}"`) + '</g>';
 }
 
-/* A tile is a colored square, or an outlined square holding bound art. */
-function tile(o, x, y, s, r, fill) {
+/* A tile is a colored square, or an outlined square, and either one can carry
+   a glyph. A colored tile paints its glyph in canvas rather than white, the
+   same reason an accent emblem does: canvas is near-white in light and
+   near-black in dark, so the glyph reads on the tile in both grounds. */
+function tile(o, x, y, s, r, fill, uid) {
   s = s === undefined ? 16 : s; r = r === undefined ? 5 : r;
   const bound = o && o.slots && o.slots.tile;
-  if (bound) {
-    const g = s * 0.68;
-    return `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${rad(r, s, s)}" fill="none" ` +
-      `stroke="${LINE}" stroke-width="${SW}"/>` +
-      icon(bound, x + (s - g) / 2, y + (s - g) / 2, g, SOFT);
-  }
-  if (fill) return `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${rad(r, s, s)}" fill="${fill}"/>`;
-  return `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${rad(r, s, s)}" fill="none" ` +
-    `stroke="${LINE}" stroke-width="${SW}"/>` + dot(x + s / 2, y + s / 2, 2.4);
+  const box = (f, edge) => `<rect x="${x}" y="${y}" width="${s}" height="${s}" ` +
+    `rx="${rad(r, s, s)}" fill="${f}"${edge ? ` stroke="${LINE}" stroke-width="${SW}"` : ''}/>`
+    + (f !== 'none' && rendered() && uid
+      ? `<rect x="${x}" y="${y}" width="${s}" height="${s}" rx="${rad(r, s, s)}" ` +
+        `fill="url(#sheen-${uid})" opacity="${MAT.tileSheen / MAT.sheen}"/>` : '');
+  const g = s * 0.68;
+  const glyph = (c) => icon(bound, x + (s - g) / 2, y + (s - g) / 2, g, c, 'tile');
+  if (bound && fill) return box(fill, false) + glyph(CANVAS);
+  if (bound) return box('none', true) + glyph(SOFT);
+  if (fill) return box(fill, false) + `<g class="il-slot" data-slot="tile">` +
+    `<rect class="hit" x="${x}" y="${y}" width="${s}" height="${s}" fill="transparent"/></g>`;
+  return box('none', true) + dot(x + s / 2, y + s / 2, 2.4);
 }
 
 const kebab = (x, y) => [-1, 0, 1].map((i) => dot(x, y + i * 3.6, 1.15, true, SOFT)).join('');
-const check = (x, y, s, c) => icon('system.checkmark', x, y, s === undefined ? 9 : s, c || ACC);
+/* The state mark. It is a slot like any other, because "done" is not always a
+   check: the same row set with a clock or a warning is a different subject. */
+const check = (o, x, y, s, c) =>
+  slot(o, 'status', 'system.checkmark', x, y, s === undefined ? 9 : s, c || ACC);
 
 /* A row of avatars plus a +N chip. Deliberately spaced rather than overlapped:
    an overlapping cluster needs a surface-colored knockout ring to stay
@@ -389,9 +512,17 @@ function medallion(uid, o, ic, cx, cy, r, lift) {
   cy = cy === undefined ? GEO.MED_CY : cy;
   r = r === undefined ? GEO.MED_R : r;
   if (flatNow()) lift = false;
+  const disc = (fill, extra) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"${extra || ''}/>`;
+  if (rendered()) {
+    const f = lift ? ` filter="url(#soft-${uid})"` : '';
+    return `<g${f}>` + disc(SURF,
+      ` stroke="${LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}"`)
+      + disc(`url(#sheen-${uid})`) + '</g>'
+      + slot(o, 'feature', ic, cx - 7.5, cy - 7.5, 15);
+  }
   const f = lift ? ` filter="url(#lift-${uid})"` : '';
-  return `<g${f}><circle cx="${cx}" cy="${cy}" r="${r}" fill="${SURF}" ` +
-    `stroke="${LINE}" stroke-width="${SW}"/></g>` + slot(o, 'feature', ic, cx - 7.5, cy - 7.5, 15);
+  return `<g${f}>` + disc(SURF, ` stroke="${LINE}" stroke-width="${SW}"`) + '</g>'
+    + slot(o, 'feature', ic, cx - 7.5, cy - 7.5, 15);
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -409,6 +540,32 @@ function doc(uid, label, faded, floating, opts) {
       <stop offset="${GEO.FADE_A}" stop-color="#fff"/><stop offset="${GEO.FADE_B}" stop-color="#000"/>
     </linearGradient>
     <mask id="fade-${uid}"><rect width="160" height="160" fill="url(#fadeG-${uid})"/></mask>`;
+  /* The rendered material's own defs. Two overlay gradients and three
+     filters, shared by every part that asks for them, which is why the
+     measured OOBE files show many filter applications and few filters. */
+  const matDefs = !rendered() ? '' : `
+    <linearGradient id="sheen-${uid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="${MAT.sheen}"/>
+      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shade-${uid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="${MAT.shade}"/>
+    </linearGradient>
+    <filter id="inner-${uid}" x="-10%" y="-10%" width="120%" height="120%">
+      <feOffset in="SourceAlpha" dx="0" dy="${MAT.inner.dy}" result="o"/>
+      <feGaussianBlur in="o" stdDeviation="${MAT.inner.blur}" result="b"/>
+      <feComposite in="b" in2="SourceAlpha" operator="out" result="cut"/>
+      <feFlood flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.inner.o}"/>
+      <feComposite in2="cut" operator="in" result="sh"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="sh"/></feMerge>
+    </filter>
+    <filter id="soft-${uid}" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="0" dy="${MAT.cast[0].dy}" stdDeviation="${MAT.cast[0].blur}"
+        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[0].o}" result="a"/>
+      <feDropShadow in="a" dx="0" dy="${MAT.cast[1].dy}" stdDeviation="${MAT.cast[1].blur}"
+        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[1].o}"/>
+    </filter>`;
   const shadowDefs = flatNow() ? '' : `
     <filter id="lift-${uid}" x="-60%" y="-60%" width="220%" height="220%">
       <feDropShadow dx="0" dy="2" stdDeviation="2.6"
@@ -426,7 +583,7 @@ function doc(uid, label, faded, floating, opts) {
     <linearGradient id="panelG-${uid}" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="var(--il-panel-top, ${P.light['panel-top']})"/>
       <stop offset="1" stop-color="var(--il-panel, ${P.light.panel})"/>
-    </linearGradient>${shadowDefs}
+    </linearGradient>${shadowDefs}${matDefs}
   </defs>
 ${body}
 </svg>
@@ -490,11 +647,11 @@ function L4(uid, label, ic, o) {
     const y = 90 + i * 16;
     b += avatar(o, 32, y - 5.5, 11);
     b += bar(48, y - 2.2, 54, 4.4);
-    b += check(119, y - 4.5, 9, i === 0 ? ACC : FILL);
+    b += check(o, 119, y - 4.5, 9, i === 0 ? ACC : FILL);
   }
   const y = GEO.CARD_Y;
   let f = card(11, y, 138, 26, 9, uid);
-  BRAND.slice(0, 4).forEach((c, i) => { f += tile(o, 26 + i * 23, y + 7.5, 12, 4, c); });
+  BRAND.slice(0, 4).forEach((c, i) => { f += tile(o, 26 + i * 23, y + 7.5, 12, 4, c, uid); });
   f += vrule(119, y + 7, y + 19, 0.8) + slot(o, 'action', 'system.search', 128, y + 8, 10, SOFT);
   return doc(uid, label, b, f);
 }
@@ -520,7 +677,7 @@ function L6(uid, label, ic, o) {
   for (let i = 0; i < 3; i++) {
     const y = 34 + i * 22;
     b += card(21, y, 118, 18, 6, uid, i === 0);
-    b += tile(o, 26, y + 3, 12, 4, BRAND[i]);
+    b += tile(o, 26, y + 3, 12, 4, BRAND[i], uid);
     b += bar(44, y + 6.6, 22, 4.4);
     b += vrule(73, y + 4, y + 14, 0.7);
     b += bar(80, y + 6.6, 24, 4.4);
@@ -615,7 +772,7 @@ function L12(uid, label, ic, o) {
   [[lx, false], [rx, true]].forEach(([x, done]) => {
     b += card(x, 62, cw, 44, 8, uid, false);
     b += bar(x + 8, 71, 26, 4.6) + bar(x + 8, 80, 18, 4.6);
-    b += done ? check(x + 7, 89) : dot(x + 10.5, 93.5, 3.2, false);
+    b += done ? check(o, x + 7, 89) : dot(x + 10.5, 93.5, 3.2, false);
     padded(62, 44, 71, 98, 'split card');
   });
   b += slot(o, 'action', 'system.arrow-right', fits(lx + cw, rx, 12, 'flow arrow'), 78, 12, SOFT);
@@ -641,7 +798,7 @@ const LAYOUTS = [
     why: 'Several groups, exactly one of them chosen.' },
   { key: 'L4', n: 4, name: 'Toolbar', fn: L4, icon: false, rows: null, example: 'workspace',
     rel: ['containment', 'mapping'], range: '4-6',
-    slots: ['avatar', 'tile', 'action'],
+    slots: ['avatar', 'tile', 'action', 'status'],
     prims: ['brand tiles', 'avatar cluster', 'checked rows'],
     why: 'Many controls over a working surface. No feature icon: the tiles are the subject.' },
   { key: 'L5', n: 5, name: 'Corner chips', fn: L5, icon: true, rows: [3, 4], example: 'docs',
@@ -681,14 +838,14 @@ const LAYOUTS = [
     why: 'One thing over time, in order, the newest accented.' },
   { key: 'L12', n: 12, name: 'Split', fn: L12, icon: true, rows: null, example: 'approval',
     rel: ['transformation', 'gating'], range: '1-2',
-    slots: ['feature', 'action'],
+    slots: ['feature', 'action', 'status'],
     prims: ['medallion', 'two state cards', 'arrow in the gap'],
     why: 'Before and after, with the change between them.' },
 ];
 
 const SLOT_LABELS = {
   feature: 'Feature glyph', avatar: 'Row leader', row: 'Row glyph',
-  tile: 'Tiles', second: 'Second chip', action: 'Action glyph',
+  tile: 'Tiles', second: 'Second chip', action: 'Action glyph', status: 'Status mark',
   col1: 'Column 1', col2: 'Column 2', col3: 'Column 3',
 };
 
@@ -873,7 +1030,11 @@ function emblem(e) {
   return body + icon(e.glyph, x + (s - g) / 2, y + (s - g) / 2, g, t.glyph());
 }
 
-const emblemArt = (o) => (o.emblems || []).map(emblem).join('');
+/* Each emblem carries its index so the canvas can drag it. Typing coordinates
+   is exact and stays, but placing a thing by dragging it is how anyone
+   actually decides where it goes. */
+const emblemArt = (o) => (o.emblems || []).map((e, i) =>
+  `<g class="il-emb" data-emb="${i}">${emblem(e)}</g>`).join('');
 
 /* ======================================================== T H E  L I N T ==
    The generator's own checks, run on the output. Every one is a failure that
@@ -885,6 +1046,12 @@ const SHADOWS = [[2, 2.6], [4, 5]];
 function lint(svgText, uid, opts) {
   const errors = [], warns = [], ok = [];
   const contained = !!(opts && opts.contained);
+  /* A rendered material is excused from exactly four rules, and the panel
+     names them rather than going quiet: an exemption you cannot see is
+     indistinguishable from a check that stopped working. Everything else
+     still applies, including the one stroke color, the ids, the fade and the
+     accent budget. */
+  const mat = rendered();
   const parsed = new DOMParser().parseFromString(svgText, 'image/svg+xml');
   if (parsed.querySelector('parsererror')) return { errors: ['the SVG does not parse'], warns, ok };
   const root = parsed.documentElement;
@@ -918,15 +1085,24 @@ function lint(svgText, uid, opts) {
 
   // -- depth
   const lifted = drawn.filter((el) => (el.getAttribute('filter') || 'none') !== 'none');
-  if (lifted.length > 2) errors.push(`${lifted.length} elements cast a shadow: at most one does`);
-  else if (lifted.length === 2) warns.push('two elements cast a shadow, right only for the corner chip pair');
-  else ok.push(lifted.length ? 'one element casts a shadow' : 'nothing casts a shadow, flat by design');
-  Array.from(root.querySelectorAll('feDropShadow')).forEach((d) => {
-    const pair = [Number(d.getAttribute('dy')), Number(d.getAttribute('stdDeviation'))];
-    if (!SHADOWS.some(([a, b]) => Math.abs(pair[0] - a) < 0.01 && Math.abs(pair[1] - b) < 0.01)) {
-      errors.push(`shadow dy ${pair[0]} blur ${pair[1]}: the system uses 2/2.6 or 4/5`);
-    }
-  });
+  if (mat) {
+    ok.push(`${lifted.length} filtered part${lifted.length === 1 ? '' : 's'}: the rendered `
+      + 'material is exempt from the one caster rule');
+  } else if (lifted.length > 2) {
+    errors.push(`${lifted.length} elements cast a shadow: at most one does`);
+  } else if (lifted.length === 2) {
+    warns.push('two elements cast a shadow, right only for the corner chip pair');
+  } else ok.push(lifted.length ? 'one element casts a shadow' : 'nothing casts a shadow, flat by design');
+  if (mat) {
+    ok.push('shadow values are the material\'s two pass pair, not the flat table');
+  } else {
+    Array.from(root.querySelectorAll('feDropShadow')).forEach((d) => {
+      const pair = [Number(d.getAttribute('dy')), Number(d.getAttribute('stdDeviation'))];
+      if (!SHADOWS.some(([a, b]) => Math.abs(pair[0] - a) < 0.01 && Math.abs(pair[1] - b) < 0.01)) {
+        errors.push(`shadow dy ${pair[0]} blur ${pair[1]}: the system uses 2/2.6 or 4/5`);
+      }
+    });
+  }
 
   // -- things that never appear
   if (drawn.some((el) => ['text', 'tspan', 'foreignObject'].includes(el.tagName))) {
@@ -966,7 +1142,10 @@ function lint(svgText, uid, opts) {
   });
   const grads = Array.from(root.querySelectorAll('linearGradient, radialGradient'));
   const structural = grads.filter((g) => !masked.has(g.id));
-  if (contained && structural.length <= 2) {
+  if (mat) {
+    ok.push(`${structural.length} gradients: the panel, plus the material's sheen and shade, `
+      + 'which are overlays rather than a second color decision');
+  } else if (contained && structural.length <= 2) {
     ok.push(structural.length === 2
       ? 'two gradients: the device panel and the view nested in its screen'
       : 'one gradient, the device panel');
@@ -1007,9 +1186,14 @@ function lint(svgText, uid, opts) {
       if (v && v.startsWith('#') && !(el.tagName === 'stop' && masked.has(el.parentElement.id))) literals.add(v);
     });
   });
-  if (literals.size) {
-    warns.push(`${literals.size} literal color${literals.size > 1 ? 's' : ''} will not theme ` +
-      `(${[...literals].slice(0, 4).join(', ')}), expected for tiles only`);
+  const overlay = new Set(['#FFFFFF', '#000000']);
+  const real = [...literals].filter((c) => !(mat && overlay.has(c.toUpperCase())));
+  if (mat && literals.size !== real.length) {
+    ok.push('the sheen and the shade are white and black overlays, which theme by what is under them');
+  }
+  if (real.length) {
+    warns.push(`${real.length} literal color${real.length > 1 ? 's' : ''} will not theme ` +
+      `(${real.slice(0, 4).join(', ')}), expected for tiles only`);
   }
 
   return { errors, warns, ok };
@@ -1051,6 +1235,28 @@ function oklchToHex({ L, C, h }) {
     + to(-0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s)).toUpperCase();
 }
 
+/* A rotated hue at the seed's chroma is often outside sRGB, and clamping each
+   channel to fit moves the hue as well: a purple asked for at the blue's
+   chroma came back orange. Reducing chroma until the color fits keeps the hue
+   that was asked for, which is the whole point of a harmony. */
+function oklchFit(c) {
+  let C = c.C;
+  for (let i = 0; i < 40; i++) {
+    const A = C * Math.cos(c.h), B = C * Math.sin(c.h);
+    const l = (c.L + 0.3963377774 * A + 0.2158037573 * B) ** 3;
+    const m = (c.L - 0.1055613458 * A - 0.0638541728 * B) ** 3;
+    const s2 = (c.L - 0.0894841775 * A - 1.2914855480 * B) ** 3;
+    const rgb = [
+      4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s2,
+      -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s2,
+      -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s2,
+    ];
+    if (rgb.every((v) => v >= -0.0008 && v <= 1.0008)) break;
+    C *= 0.96;
+  }
+  return oklchToHex({ L: c.L, C, h: c.h });
+}
+
 /* A preset's own pair is returned as shipped rather than re-derived: a tool
    that quietly disagrees with the token values it ships is worse than one that
    special-cases them. */
@@ -1084,8 +1290,10 @@ const state = {
   preset: 'windows',
   view: 'canvas',
   ground: 'light',
-  name: 'Audit log',
+  name: '',            // empty means derived from the mode and the template
   rel: 'sequence',
+  accents: 4,          // how many colors the set carries, 1 to 4
+  harmony: 'spread',   // how the others relate to the seed
   layout: 'L11',
   ic: 'system.history',
   accent: '#0078D4',
@@ -1094,6 +1302,7 @@ const state = {
   slots: {},
   emblems: [],
   pick: 'feature',      // which slot the glyph tray is binding
+  pickOpen: null,       // the picker's target: {kind:'slot',key} or {kind:'emblem',i}
   emblemSel: -1,        // which emblem the editor is on, -1 for none
   device: 'laptop',
   screenContent: 'composition',
@@ -1104,6 +1313,14 @@ const state = {
 };
 
 const $ = (id) => document.getElementById(id);
+
+/* The name used to be a field, and it named the file and every id. Nothing
+   downstream needs a person to type it: a mode and a template already name
+   the thing precisely enough for a file, and `name it billing` still sets one
+   when it matters. */
+const docName = () => state.name
+  || `${MODES[state.mode].label} ${modeOf().kind === 'device'
+    ? DEVICES[state.device].label : state.layout}`;
 const slug = (s) => s.toLowerCase().normalize('NFKD').replace(/[^\w\s-]/g, '')
   .trim().replace(/[\s_]+/g, '-').replace(/-+/g, '-') || 'untitled';
 const layoutOf = (key) => LAYOUTS.find((l) => l.key === key) || LAYOUTS[0];
@@ -1115,7 +1332,11 @@ function opts(extra) {
   const l = layoutOf(state.layout);
   const o = Object.assign({
     rows: state.rows, sel: state.sel, layout: state.layout,
-    slots: modeOf().pieces ? state.slots : {},
+    /* Every mode binds. Pieces mode's difference is its source, the 2,891
+       library glyphs and Mason's own pieces, not whether binding is allowed:
+       a Product UI row you cannot relabel is a picture of someone else's
+       feature. */
+    slots: state.slots,
     emblems: state.emblems,
     device: state.device, screenContent: state.screenContent,
   }, extra || {});
@@ -1125,7 +1346,7 @@ function opts(extra) {
 
 function build(layoutKey, uid, o) {
   const l = layoutOf(layoutKey);
-  const body = l.fn(uid, o.label || state.name, l.icon ? (o.ic || state.ic) : null, o);
+  const body = l.fn(uid, o.label || docName(), l.icon ? (o.ic || state.ic) : null, o);
   if (!o.emblems || !o.emblems.length) return body;
   // Emblems sit above the whole drawing, just inside the root.
   return body.replace('</svg>', emblemArt(o) + '\n</svg>');
@@ -1134,7 +1355,7 @@ function build(layoutKey, uid, o) {
 function buildCurrent(uid, extra) {
   const o = opts(extra);
   return modeOf().kind === 'device'
-    ? buildDevice(uid, state.name, o)
+    ? buildDevice(uid, docName(), o)
     : build(state.layout, uid, o);
 }
 
@@ -1142,7 +1363,16 @@ const flatten = (svgText, vars) =>
   svgText.replace(/var\((--il-[\w-]+),\s*([^)]+)\)/g, (_, tok, fb) => (vars[tok] || fb).trim());
 
 const darkOf = () => darkAccent(state.accent, state.preset);
-const varsFor = (theme) => cssVars(state.preset, theme, theme === 'dark' ? darkOf() : state.accent);
+const setNow = () => accentSet(state.accent, state.accents, state.harmony);
+const varsFor = (theme) => cssVars(state.preset, theme,
+  theme === 'dark' ? darkOf() : state.accent, setNow());
+
+/* The slot handles are interface. Everything that reads the SVG as art reads
+   it through here: the lint, the code panel and both exports. */
+const CLEAN = (svgText) => svgText
+  .replace(/<rect class="hit"[^>]*\/>/g, '')
+  .replace(/ class="il-slot" data-slot="[^"]*"/g, '')
+  .replace(/ class="il-emb" data-emb="[^"]*"/g, '');
 
 /* ============================================================ L I B R A R Y */
 
@@ -1232,10 +1462,6 @@ function renderLeft() {
       `aria-pressed="${k === state.mode}"><b>${mm.label}</b><span>${esc(mm.sub)}</span></button>`).join('') +
     '</div>');
 
-  h += sec('Feature',
-    `<input type="text" id="f-name" value="${esc(state.name)}" autocomplete="off" spellcheck="false">`,
-    `Names the file and every id. Slug: <code>${slug(state.name)}</code>`);
-
   h += sec('Style preset', selectField('f-preset',
     Object.entries(PRESETS).map(([k, p]) => [k, p.label]), state.preset),
     esc(PRESETS[state.preset].note));
@@ -1244,7 +1470,7 @@ function renderLeft() {
     h += sec('Base', '<div class="bd-tray three" id="f-devices">' +
       Object.entries(DEVICES).map(([k, d]) => {
         let art = '';
-        try { art = buildDevice('dv' + k, d.label, opts({ device: k, emblems: [] })); } catch (e) {}
+        try { art = CLEAN(buildDevice('dv' + k, d.label, opts({ device: k, emblems: [] }))); } catch (e) {}
         return `<button type="button" class="bd-card" data-device="${k}" aria-pressed="${k === state.device}">` +
           `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${d.label}</b></button>`;
       }).join('') + '</div>');
@@ -1263,23 +1489,20 @@ function renderLeft() {
   const composing = m.kind === 'compose' || state.screenContent === 'composition';
 
   if (composing) {
-    h += sec('Relationship', selectField('f-rel',
-      RELATIONSHIPS.map(([k, lab, shape]) => [k, `${lab} — ${shape}`]), state.rel),
-      'The decision that matters. Layouts carrying it are marked.');
-
-    h += sec('Layout', '<div class="bd-tray three" id="f-layouts">' +
+    h += sec('Templates', '<div class="bd-tray three" id="f-layouts">' +
       LAYOUTS.map((ll) => {
         let art = '';
         try {
-          art = build(ll.key, 't' + ll.key.toLowerCase(),
-            opts({ label: ll.name, rows: ll.rows ? ll.rows[1] : 3, emblems: [] }));
+          art = CLEAN(build(ll.key, 't' + ll.key.toLowerCase(),
+            opts({ label: ll.name, rows: ll.rows ? ll.rows[1] : 3, emblems: [] })));
         } catch (e) {}
-        return `<button type="button" class="bd-card${ll.rel.includes(state.rel) ? ' rec' : ''}" ` +
+        return `<button type="button" class="bd-card" ` +
           `data-key="${ll.key}" aria-pressed="${ll.key === state.layout}" ` +
           `title="${esc(ll.name)}: ${esc(ll.why)}">` +
           `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${ll.key}</b></button>`;
       }).join('') + '</div>',
-      `<b>${l.key} ${esc(l.name)}.</b> ${esc(l.why)}`);
+      `<b>${l.key} ${esc(l.name)}.</b> ${esc(l.why)} A template is a starting arrangement: `
+      + `everything in it is yours to change from here.`);
 
     if (l.rows) {
       const rr = [];
@@ -1290,30 +1513,17 @@ function renderLeft() {
         'Capped by the fade line at y&nbsp;112.');
     }
 
-    const bindable = m.pieces ? l.slots : (l.icon ? ['feature'] : []);
-    if (bindable.length) {
-      let g = '';
-      if (m.pieces && bindable.length > 1) {
-        g += '<div class="bd-btns" id="f-slots" style="margin-bottom:2px">' + bindable.map((k) =>
-          `<button type="button" class="bd-btn${k === state.pick ? ' on' : ''}" data-slot="${k}">` +
-          `${SLOT_LABELS[k] || k}</button>`).join('') + '</div>';
-      }
-      g += `<div class="bd-btns" style="margin-bottom:2px">
-        <button type="button" class="bd-btn${state.glyphStyle === 'filled' ? ' on' : ''}" data-gstyle="filled">Filled</button>
-        <button type="button" class="bd-btn${state.glyphStyle === 'outline' ? ' on' : ''}" data-gstyle="outline">Line art</button>
-      </div>
-      <div class="bd-btns">
-        <button type="button" class="bd-btn${state.src === 'core' ? ' on' : ''}" data-src="core">Core</button>
-        <button type="button" class="bd-btn${state.src === 'library' ? ' on' : ''}" data-src="library">All</button>
-        <button type="button" class="bd-btn${state.src === 'parts' ? ' on' : ''}" data-src="parts">Mine</button>
-      </div>
-      <input type="text" id="f-search" placeholder="Search glyphs" autocomplete="off" spellcheck="false" value="${esc(state.search)}">
-      <div class="bd-glyphs" id="f-glyphs" role="group" aria-label="Glyph"></div>`;
-      h += sec('Glyph', g, (m.pieces
-        ? 'Binds the selected slot. '
-        : '') + 'Windows uses filled today. Line art is the same icons at their outline weight, '
-        + 'and 429 of the 2,891 ship no outline, so those fall back to filled.');
-    }
+    /* The tray moved onto the canvas. Picking a glyph from a list on the left
+       meant knowing which slot a name like "row leader" referred to before
+       you could use it; clicking the glyph you can see needs no vocabulary at
+       all. What stays here is the one setting that is global. */
+    h += sec('Glyphs', `<div class="bd-btns">
+      <button type="button" class="bd-btn${state.glyphStyle === 'filled' ? ' on' : ''}" data-gstyle="filled">Filled</button>
+      <button type="button" class="bd-btn${state.glyphStyle === 'outline' ? ' on' : ''}" data-gstyle="outline">Line art</button>
+    </div>`,
+      'Click any glyph on the canvas to change it. Windows uses filled today; line art is the '
+      + 'same icons at their outline weight, and 429 of the 2,891 ship no outline, so those '
+      + 'fall back to filled.');
   }
 
   h += sec('Brief', '<div class="bd-btns">' +
@@ -1322,7 +1532,6 @@ function renderLeft() {
     'The brief is the interpretation, the metaphor, the layout and the primitives, as text.');
 
   $('f-left').innerHTML = h;
-  if (composing && $('f-glyphs')) renderGlyphs();
   wireLeft();
 }
 
@@ -1335,7 +1544,7 @@ const glyphArt = (id) => {
 };
 
 function renderGlyphs() {
-  const host = $('f-glyphs');
+  const host = $('g-grid');
   if (!host) return;
   const q = state.search.trim().toLowerCase();
   let ids = [];
@@ -1358,7 +1567,7 @@ function renderGlyphs() {
       .slice(0, 240).map((a) => a.id);
   }
   if (!ids.length) { host.innerHTML = '<p class="bd-empty">Nothing matches.</p>'; return; }
-  const bound = state.slots[state.pick] || (state.pick === 'feature' ? state.ic : null);
+  const bound = boundNow();
   host.innerHTML = ids.map((id) =>
     `<button type="button" class="bd-glyph" data-name="${esc(id)}" ` +
     `aria-pressed="${id === bound}" title="${esc(glyphName(id))}">${glyphArt(id)}</button>`).join('');
@@ -1382,6 +1591,87 @@ function watchGlyphs(host) {
     });
   }, { root: host, rootMargin: '90px' });
   pending.forEach((b) => glyphWatcher.observe(b));
+}
+
+/* ========================================================= P I C K E R ==
+   One picker, opened from whatever you clicked: a glyph on the canvas, a
+   tile, or an emblem's chip. It is the same list the left rail used to hold
+   full time, which is most of what made that rail long. */
+
+/* How many places a slot key paints in the current template, so the picker
+   can say it. A key that paints three rows changes all three, and that is the
+   system working rather than a limitation: three rows led by three different
+   glyphs is three subjects. */
+function slotCount(key) {
+  try {
+    return (buildCurrent('probe').match(new RegExp('data-slot="' + key + '"', 'g')) || []).length;
+  } catch (e) { return 0; }
+}
+
+function boundNow() {
+  const t = state.pickOpen;
+  if (!t) return null;
+  if (t.kind === 'emblem') return (state.emblems[t.i] || {}).glyph || null;
+  if (t.key === 'feature') return state.slots.feature || state.ic;
+  return state.slots[t.key] || DEFAULT_SLOT[t.key] || null;
+}
+
+/* What a slot draws when nothing is bound. Kept beside the picker rather than
+   inside each layout so the picker can show the default as selected and offer
+   to go back to it. */
+const DEFAULT_SLOT = {
+  feature: 'system.history', avatar: 'system.person-circle', row: 'system.book-open',
+  action: 'system.edit', second: 'system.stack', status: 'system.checkmark',
+  tile: null, col1: 'system.person-circle', col2: 'system.shield', col3: 'system.key',
+};
+
+function bindGlyph(id) {
+  const t = state.pickOpen;
+  if (!t) return;
+  if (t.kind === 'emblem') {
+    if (state.emblems[t.i]) state.emblems[t.i].glyph = id;
+  } else if (t.key === 'feature') {
+    state.ic = id;
+    state.slots.feature = id;
+  } else {
+    state.slots[t.key] = id;
+  }
+}
+
+function pickerTitle() {
+  const t = state.pickOpen;
+  if (!t) return '';
+  if (t.kind === 'emblem') return 'Emblem glyph';
+  const n = slotCount(t.key);
+  const label = SLOT_LABELS[t.key] || t.key;
+  return label + (n > 1 ? ` \u00b7 ${n} places` : '');
+}
+
+function openPicker(target, anchorEl) {
+  state.pickOpen = target;
+  const pop = $('g-pop');
+  pop.hidden = false;
+  $('g-what').textContent = pickerTitle();
+  $('g-srcs').querySelectorAll('[data-src]').forEach((b) =>
+    b.classList.toggle('on', b.dataset.src === state.src));
+  $('g-search').value = state.search;
+  renderGlyphs();
+  if (anchorEl) {
+    const r = anchorEl.getBoundingClientRect();
+    const w = 296, h = Math.min(430, window.innerHeight - 40);
+    let x = r.left + r.width / 2 - w / 2;
+    let y = r.bottom + 10;
+    if (y + h > window.innerHeight - 12) y = Math.max(12, r.top - h - 10);
+    pop.style.left = Math.max(12, Math.min(x, window.innerWidth - w - 12)) + 'px';
+    pop.style.top = y + 'px';
+  }
+  const f = $('g-search');
+  if (f) setTimeout(() => f.focus(), 0);
+}
+
+function closePicker() {
+  state.pickOpen = null;
+  $('g-pop').hidden = true;
 }
 
 /* ====================================================== T H E  R I G H T == */
@@ -1408,6 +1698,18 @@ function renderAccents() {
     `title="${s.name} ${s.hex}"></button>`).join('');
   $('f-accent-custom').value = state.accent;
   $('f-accent-pair').textContent = `${state.accent} / ${darkOf()}`;
+
+  const set = setNow();
+  $('f-harm').innerHTML =
+    '<div class="bd-btns" id="f-count" style="margin-bottom:6px">'
+    + [1, 2, 3, 4].map((n) =>
+      `<button type="button" class="bd-btn${n === state.accents ? ' on' : ''}" data-count="${n}">${n}</button>`).join('')
+    + '</div>'
+    + selectField('f-harmony', Object.entries(HARMONIES).map(([k, hh]) => [k, hh.label]), state.harmony)
+    + '<div class="bd-ramp">' + set.map((hex) =>
+      `<span style="background:${hex}" title="${hex}"></span>`).join('') + '</div>';
+  $('f-harm-note').textContent = HARMONIES[state.harmony].note
+    + (state.accents === 1 ? ' One color is the language\u2019s own rule: one meaning.' : '');
 }
 
 function renderEmblems() {
@@ -1423,8 +1725,9 @@ function renderEmblems() {
     const chipBg = e.tone === 'accent' ? state.accent : 'var(--surface-2)';
     const chipFg = e.tone === 'accent' ? '#fff' : 'var(--text-2)';
     return `<div class="bd-obj${i === state.emblemSel ? ' sel' : ''}" data-obj="${i}">
-      <span class="bd-obj-chip" style="background:${chipBg};border-radius:${e.shape === 'circle' ? '50%' : '8px'}">
-        <span style="display:block;width:14px;height:14px;fill:${chipFg}">${glyphArt(e.glyph)}</span></span>
+      <button type="button" class="bd-obj-chip" data-glyph="${i}" title="Change this glyph"
+        style="background:${chipBg};border-radius:${e.shape === 'circle' ? '50%' : '8px'}">
+        <span style="display:block;width:14px;height:14px;fill:${chipFg}">${glyphArt(e.glyph)}</span></button>
       <span><span class="bd-obj-name">${esc(glyphName(e.glyph))}</span><br>
         <span class="bd-obj-sub">${t.label} &middot; ${EMBLEM_SHAPES[e.shape]} &middot; ${e.size}u</span></span>
       <button type="button" data-drop="${i}" aria-label="Remove">&times;</button>
@@ -1446,8 +1749,8 @@ function renderEmblems() {
       <label>y<input type="number" data-k="y" value="${e.y}" min="-8" max="168" step="1"></label>
       <label>size<input type="number" data-k="size" value="${e.size}" min="12" max="70" step="1"></label>
     </div>
-    <p class="bd-hint" style="margin-top:6px">While this one is selected, the glyph tray on the left
-    changes its glyph rather than the layout's.</p>`;
+    <p class="bd-hint" style="margin-top:6px">Drag it on the canvas to move it, or type the
+    numbers. Its glyph is the chip above.</p>`;
 }
 
 function renderChecks(result, buildError) {
@@ -1480,7 +1783,7 @@ function briefText() {
   const l = layoutOf(state.layout);
   const r = RELATIONSHIPS.find((x) => x[0] === state.rel) || ['', state.rel, ''];
   const m = modeOf();
-  const lines = [`Mode: ${m.label}, preset ${PRESETS[state.preset].label}`, `Feature: ${state.name}`];
+  const lines = [`Mode: ${m.label}, preset ${PRESETS[state.preset].label}`, `Feature: ${docName()}`];
   if (m.kind === 'device') lines.push(`Base: ${DEVICES[state.device].label}, screen ${state.screenContent}`);
   if (m.kind === 'compose' || state.screenContent === 'composition') {
     lines.push(`Metaphor: ${r[1]}, ${r[2]}.`);
@@ -1511,7 +1814,7 @@ let sheetKey = '';
 function render() {
   applyPreset(state.preset, state.accent);
   GLYPH_STYLE = state.glyphStyle;
-  const uid = slug(state.name);
+  const uid = slug(docName());
   const contained = modeOf().kind === 'device';
 
   let svgText = '', buildError = '';
@@ -1526,21 +1829,23 @@ function render() {
     return;
   }
 
-  current = { svg: svgText, uid };
+  /* The canvas keeps the handles; everything downstream gets the art. */
+  const art = CLEAN(svgText);
+  current = { svg: art, uid };
   $('s-art').dataset.ground = state.ground;
   $('s-art').innerHTML = svgText;
-  $('s-code').textContent = svgText;
+  $('s-code').textContent = art;
 
   $('s-ladder').innerHTML = [96, 64, 40].map((px) => {
     let art = '';
-    try { art = buildCurrent(`${uid}-l${px}`); } catch (e) {}
+    try { art = CLEAN(buildCurrent(`${uid}-l${px}`)); } catch (e) {}
     return `<span class="bd-rung"><span class="bd-ground" data-ground="${state.ground}" ` +
       `style="width:${px}px">${art}</span><span>${px}</span></span>`;
   }).join('');
 
-  $('v-note').textContent = `${slug(state.name)}.svg · 160 grid`;
+  $('v-note').textContent = `${slug(docName())}.svg \u00b7 160 grid`;
 
-  renderChecks(lint(svgText, uid, { contained }), '');
+  renderChecks(lint(art, uid, { contained }), '');
   renderEmblems();
   renderSheet();
   paintGrounds();
@@ -1554,7 +1859,7 @@ function renderSheet() {
   const isDev = modeOf().kind === 'device';
   const cells = isDev
     ? Object.entries(DEVICES).map(([k, d]) => ({ key: k, name: d.label,
-        make: (uid) => buildDevice(uid, state.name, opts({ device: k })) }))
+        make: (uid) => buildDevice(uid, docName(), opts({ device: k })) }))
     : LAYOUTS.map((l) => ({ key: l.key, name: `${l.key} ${l.name}`,
         make: (uid) => build(l.key, uid, opts({ rows: l.rows ? l.rows[1] : 3 })) }));
   $('sheet-count').textContent = cells.length + (isDev ? ' bases' : ' layouts');
@@ -1566,7 +1871,7 @@ function renderSheet() {
   [['sheet-light', 'sl'], ['sheet-dark', 'sd']].forEach(([hostId, tag]) => {
     $(hostId).innerHTML = cells.map((c) => {
       let art = '';
-      try { art = c.make(`${tag}-${c.key.toLowerCase()}`); } catch (e) {}
+      try { art = CLEAN(c.make(`${tag}-${c.key.toLowerCase()}`)); } catch (e) {}
       return `<figure class="bd-cell">${art}<figcaption>${esc(c.name)}</figcaption></figure>`;
     }).join('');
   });
@@ -1819,7 +2124,6 @@ function wireLeft() {
     renderLeft(); renderAccents(); render();
   });
 
-  on('f-name', 'input', (e) => { state.name = e.target.value || 'Untitled'; render(); });
   on('f-preset', 'change', (e) => {
     state.preset = e.target.value;
     if (Object.values(PRESETS).some((p) => p.light.accent.toLowerCase() === state.accent.toLowerCase())) {
@@ -1842,69 +2146,20 @@ function wireLeft() {
   });
   on('f-screen', 'change', (e) => { state.screenContent = e.target.value; renderLeft(); render(); });
 
-  on('f-rel', 'change', (e) => {
-    state.rel = e.target.value;
-    if (!layoutOf(state.layout).rel.includes(state.rel)) {
-      const match = LAYOUTS.find((l) => l.rel.includes(state.rel));
-      if (match) state.layout = match.key;
-    }
-    renderLeft(); render();
-  });
-
   on('f-layouts', 'click', (e) => {
     const b = e.target.closest('[data-key]');
     if (!b) return;
     state.layout = b.dataset.key;
-    if (!layoutOf(state.layout).slots.includes(state.pick)) {
-      state.pick = layoutOf(state.layout).slots[0] || 'feature';
-    }
     renderLeft(); render();
   });
 
   on('f-rows', 'change', (e) => { state.rows = Number(e.target.value); render(); });
-
-  on('f-slots', 'click', (e) => {
-    const b = e.target.closest('[data-slot]');
-    if (!b) return;
-    state.pick = b.dataset.slot;
-    renderLeft();
-  });
 
   document.querySelectorAll('[data-gstyle]').forEach((b) => {
     b.addEventListener('click', () => {
       state.glyphStyle = b.dataset.gstyle;
       renderLeft(); render();
     });
-  });
-
-  document.querySelectorAll('[data-src]').forEach((b) => {
-    b.addEventListener('click', () => {
-      state.src = b.dataset.src;
-      state.search = '';
-      if (state.src === 'library') loadLibrary().then(renderGlyphs);
-      if (state.src === 'parts') loadParts().then(renderGlyphs);
-      renderLeft();
-    });
-  });
-  on('f-search', 'input', (e) => { state.search = e.target.value; renderGlyphs(); });
-
-  /* The glyph tray binds the selected emblem when one is selected, and the
-     layout's slot otherwise. One tray, two destinations, and the selection
-     says which. */
-  on('f-glyphs', 'click', async (e) => {
-    const b = e.target.closest('.bd-glyph');
-    if (!b) return;
-    const id = b.dataset.name;
-    try { await loadGlyph(id); } catch (err) { toast(err.message); return; }
-    if (state.emblemSel >= 0 && state.emblems[state.emblemSel]) {
-      state.emblems[state.emblemSel].glyph = id;
-    } else if (modeOf().pieces && state.pick !== 'feature') {
-      state.slots[state.pick] = id;
-    } else {
-      state.ic = id;
-      if (modeOf().pieces) state.slots.feature = id;
-    }
-    renderGlyphs(); render();
   });
 
   on('b-brief', 'click', () => copy(briefText(), 'The brief'));
@@ -1942,7 +2197,80 @@ function wireOnce() {
     renderAccents(); render();
   });
 
+  /* --- the accent set ---------------------------------------------- */
+  $('f-harm').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-count]');
+    if (!b) return;
+    state.accents = Number(b.dataset.count);
+    renderAccents(); render();
+  });
+  $('f-harm').addEventListener('change', (e) => {
+    if (e.target.id !== 'f-harmony') return;
+    state.harmony = e.target.value;
+    renderAccents(); render();
+  });
+
+  /* --- the glyph picker -------------------------------------------- */
+  /* Clicking the drawing is the primary way in. The handle is on the glyph
+     itself, so there is nothing to learn: the thing you want to change is
+     the thing you click. */
+  $('s-art').addEventListener('click', (e) => {
+    const hit = e.target.closest('[data-slot]');
+    if (!hit) return;
+    openPicker({ kind: 'slot', key: hit.dataset.slot }, hit);
+  });
+
+  $('g-grid').addEventListener('click', async (e) => {
+    const b = e.target.closest('.bd-glyph');
+    if (!b) return;
+    const id = b.dataset.name;
+    try { await loadGlyph(id); } catch (err) { toast(err.message); return; }
+    bindGlyph(id);
+    renderGlyphs(); render();
+  });
+  $('g-srcs').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-src]');
+    if (!b) return;
+    state.src = b.dataset.src;
+    state.search = '';
+    $('g-search').value = '';
+    $('g-srcs').querySelectorAll('[data-src]').forEach((x) => x.classList.toggle('on', x === b));
+    if (state.src === 'library') loadLibrary().then(renderGlyphs);
+    else if (state.src === 'parts') loadParts().then(renderGlyphs);
+    else renderGlyphs();
+  });
+  $('g-search').addEventListener('input', (e) => { state.search = e.target.value; renderGlyphs(); });
+  $('g-close').addEventListener('click', closePicker);
+  $('g-default').addEventListener('click', () => {
+    const t = state.pickOpen;
+    if (!t) return;
+    if (t.kind === 'emblem') {
+      if (state.emblems[t.i]) state.emblems[t.i].glyph = 'system.checkmark';
+    } else if (t.key === 'feature') {
+      state.ic = DEFAULT_SLOT.feature;
+      delete state.slots.feature;
+    } else {
+      delete state.slots[t.key];
+    }
+    renderGlyphs(); render();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePicker(); });
+  document.addEventListener('pointerdown', (e) => {
+    if ($('g-pop').hidden) return;
+    if (e.target.closest('#g-pop') || e.target.closest('[data-slot]')
+      || e.target.closest('[data-glyph]')) return;
+    closePicker();
+  });
+
   $('f-objs').addEventListener('click', (e) => {
+    const gl = e.target.closest('[data-glyph]');
+    if (gl) {
+      const i = Number(gl.dataset.glyph);
+      state.emblemSel = i;
+      renderEmblems();
+      openPicker({ kind: 'emblem', i }, gl);
+      return;
+    }
     const drop = e.target.closest('[data-drop]');
     if (drop) {
       state.emblems.splice(Number(drop.dataset.drop), 1);
@@ -1981,6 +2309,47 @@ function wireOnce() {
     state.emblems = []; state.emblemSel = -1;
     renderEmblems(); render();
   });
+
+  /* --- dragging an emblem ------------------------------------------ */
+  /* The artboard is a square showing the 160 grid, so one client pixel is
+     160 / width units. Only the artboard is repainted while the pointer is
+     down: a full render rebuilds the size ladder and the contact sheet, and
+     doing that on every pointermove is what makes a drag feel heavy. */
+  let dragging = null;
+  const artUnit = () => 160 / ($('s-art').getBoundingClientRect().width || 1);
+  const clamp = (v) => Math.max(-8, Math.min(168, Math.round(v)));
+
+  $('s-art').addEventListener('pointerdown', (e) => {
+    const g = e.target.closest('[data-emb]');
+    if (!g) return;
+    const i = Number(g.dataset.emb);
+    if (!state.emblems[i]) return;
+    dragging = { i, x0: e.clientX, y0: e.clientY, ex: state.emblems[i].x, ey: state.emblems[i].y, moved: false };
+    state.emblemSel = i;
+    renderEmblems();
+    $('s-art').setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  $('s-art').addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const u = artUnit();
+    const em = state.emblems[dragging.i];
+    if (!em) return;
+    const nx = clamp(dragging.ex + (e.clientX - dragging.x0) * u);
+    const ny = clamp(dragging.ey + (e.clientY - dragging.y0) * u);
+    if (nx === em.x && ny === em.y) return;
+    em.x = nx; em.y = ny;
+    dragging.moved = true;
+    try { $('s-art').innerHTML = buildCurrent(slug(docName())); } catch (err) {}
+  });
+  const endDrag = () => {
+    if (!dragging) return;
+    const moved = dragging.moved;
+    dragging = null;
+    if (moved) { renderEmblems(); render(); }
+  };
+  $('s-art').addEventListener('pointerup', endDrag);
+  $('s-art').addEventListener('pointercancel', endDrag);
 
   $('m-form').addEventListener('submit', (e) => {
     e.preventDefault();

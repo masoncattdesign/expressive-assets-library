@@ -81,8 +81,14 @@
           <div class="bd-swatches" id="f-accents"></div>
         </div>
         <code class="bd-pair" id="f-accent-pair"></code>
-        <p class="bd-hint">One meaning, at most two elements. The dark value is derived in OKLCH so
-        a custom accent keeps the relationship a shipped pair has.</p>
+        <p class="bd-hint">The dark value is derived in OKLCH so a custom accent keeps the
+        relationship a shipped pair has.</p>
+      </div>
+
+      <div class="bd-sec">
+        <span class="bd-label">The set</span>
+        <div id="f-harm"></div>
+        <p class="bd-hint" id="f-harm-note"></p>
       </div>
 
       <div class="bd-sec">
@@ -121,6 +127,23 @@
     </aside>
 
   </div>
+</div>
+
+<!-- The glyph picker. Opened by clicking a glyph on the canvas or an
+     emblem's chip, and positioned against whatever was clicked. -->
+<div class="bd-pop" id="g-pop" hidden role="dialog" aria-label="Choose a glyph">
+  <div class="bd-pop-head">
+    <span id="g-what"></span>
+    <button type="button" class="bd-pop-x" id="g-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="bd-btns" id="g-srcs">
+    <button type="button" class="bd-btn on" data-src="core">Core</button>
+    <button type="button" class="bd-btn" data-src="library">All</button>
+    <button type="button" class="bd-btn" data-src="parts">Mine</button>
+  </div>
+  <input type="text" id="g-search" placeholder="Search glyphs" autocomplete="off" spellcheck="false">
+  <div class="bd-glyphs" id="g-grid" role="group" aria-label="Glyph"></div>
+  <div class="bd-btns"><button type="button" class="bd-btn" id="g-default">Back to the default</button></div>
 </div>
 
 <script src="builder.js"></script>
