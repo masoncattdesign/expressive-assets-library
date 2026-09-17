@@ -321,3 +321,16 @@ input[type="color"] {
 }
 .bd-scroll { overflow-x: auto; }
 .bd-scroll > table { min-width: 620px; }
+
+/* Checks and the message box are collapsed by default: they are the panels you
+   consult rather than the ones you work in. The verdict still shows on the
+   closed summary, because a check you cannot see is not a check. */
+details.bd-sec > summary { list-style: none; }
+details.bd-sec > summary::-webkit-details-marker { display: none; }
+details.bd-sec > summary::after {
+  content: '\203A'; margin-left: auto; color: var(--text-3);
+  font-size: 15px; line-height: 1; transition: transform .12s;
+}
+details.bd-sec > summary { display: flex; align-items: center; gap: 9px; }
+details.bd-sec[open] > summary::after { transform: rotate(90deg); }
+details.bd-sec[open] > summary { margin-bottom: 2px; }

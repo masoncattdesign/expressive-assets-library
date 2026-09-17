@@ -96,20 +96,21 @@
         a glyph never floats on its own.</p>
       </div>
 
-      <div class="bd-sec">
-        <span class="bd-label">Checks</span>
-        <span class="bd-verdict pass" id="c-verdict">Pass</span>
-        <ul class="bd-checks" id="c-list"></ul>
-      </div>
+      <details class="bd-sec">
+        <summary class="bd-label" style="cursor:pointer;display:flex;align-items:center;gap:9px">
+          Checks <span class="bd-verdict pass" id="c-verdict">Pass</span>
+        </summary>
+        <ul class="bd-checks" id="c-list" style="margin-top:8px"></ul>
+      </details>
 
-      <div class="bd-sec bd-msg">
-        <span class="bd-label">Create by message</span>
+      <details class="bd-sec bd-msg">
+        <summary class="bd-label" style="cursor:pointer">Create by message</summary>
         <div class="bd-msg-log" id="m-log"></div>
         <form class="bd-msg-form" id="m-form">
           <input type="text" id="m-input" placeholder="Describe a change&hellip;" autocomplete="off" spellcheck="false">
           <button type="submit" aria-label="Send">&rarr;</button>
         </form>
-      </div>
+      </details>
 
       <details class="bd-sec">
         <summary class="bd-label" style="cursor:pointer">The SVG</summary>
