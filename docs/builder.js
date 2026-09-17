@@ -63,9 +63,9 @@ const PRESETS = {
   },
   windows: {
     label: 'Windows',
-    note: 'Cool neutrals, Windows blue and a rendered material: gradients, inner shadows and a '
-      + 'two pass cast shadow, the way the OOBE illustrations are drawn. Measured off the 72 in '
-      + 'the library. A proposal, not a match: the shipped set has no single style to match.',
+    note: 'Filled mass, cool blue neutrals and a soft two pass shadow, measured off the Windows '
+      + 'frame in the Illustration 2026 file. No outlines at all: a bezel is mass and a card is a '
+      + 'value step, and a hairline around either is the drawing not trusting its own fills.',
     /* The corner dial stays at 1. The set's real rule is proportional, half of
        every rounded rect sitting at a sixth of its short side, and a multiplier
        on absolute radii cannot express that: a sixth of the card's short side
@@ -74,61 +74,56 @@ const PRESETS = {
        would trade one wrong answer for another. Proportional corners want a
        dial the preset does not have. */
     sw: 0.5, radius: 1, elevation: 'lift', material: 'rendered',
-    /* Five measured hues from the set, far enough apart to read as different
-       services rather than as a ramp. */
-    brand: ['#0078D4', '#FD6F03', '#81B93A', '#5B41D3', '#222E48'],
-    /* Measured, unless marked. 72 illustrations carry 238 distinct colors and
-       no shared palette, so these are the values that actually recur rather
-       than an average of the set, which would be an average of noise.
-       Every mid and dark neutral in the set is cool: blue runs 8 to 28 points
-       above red. The bars are the deliberate exception, true gray while the
-       surfaces are cool, so they read as content rather than as chrome. */
+    brand: ['#527EDF', '#FD6F03', '#81B93A', '#5B41D3', '#222E48'],
+    /* Sampled from the frame rather than guessed. The screen is a real
+       gradient, #EBF0F9 down to #D4D8DF, and the cards on it are within a
+       point or two of its top: what separates them is the shadow, not a value
+       step, which is the whole argument for the rendered material. */
     light: {
-      canvas: '#ECECEC',        // derived: #F0F0F0 is measured but too close to the
-                                // panel, and canvas to panel has to be visible
-                                // rather than a whisper or nothing separates at
-                                // display size. This matches the step the
-                                // exploration's own preset uses.
-      ghost: '#E7E7E7',         // 3 files. Sits barely below canvas, behind the panel
-      panel: '#F5F5F5',         // 37 files, the most used color in the set
-      'panel-top': '#FCFCFC',   // derived: about 2% above panel
-      line: '#A8B5BF',          // 4 files. Cool, and reads on canvas, panel and a white card
-      surface: '#FFFFFF',
-      stroke: '#1E2021',        // 3 files. The only genuinely dark value
-      'stroke-soft': '#8897A4', // 4 files. Cool, about halfway to the panel
-      fill: '#E2E2E2',          // derived: true gray on purpose, against the cool surfaces
-      'fill-soft': '#EDEDED',   // derived
-      accent: '#0078D4',        // 13 files
-      'shadow-c': '#000000',
-      'shadow-o': '0.10',
+      canvas: '#FFFFFF',        // the frame sits on white
+      ghost: '#F1F4FA',
+      panel: '#D4D8DF',         // sampled, the foot of the screen gradient
+      'panel-top': '#EBF0F9',   // sampled, its head
+      line: '#A3A8B0',          // sampled off the bezel, used where a line exists
+      surface: '#F2F5FB',       // sampled, a card on the screen
+      stroke: '#2A3038',
+      'stroke-soft': '#8D95A3',
+      fill: '#CFD3D9',          // sampled, the inner panel
+      'fill-soft': '#E1E6EF',
+      accent: '#527EDF',        // sampled off the featured card and the emblem
+      'shadow-c': '#39415A',    // the shadow is cool here, not neutral black
+      'shadow-o': '0.16',
     },
     /* Derived. Nothing in the library ships a dark variant, so there was
-       nothing to measure: every value below keeps the light set's cool cast
-       and the language's rule that a surface gets lighter as it comes
-       forward. Blue stays within a few points of green on every dark surface,
-       which is what stops a cool near-black drifting olive as it lightens. */
+       nothing to measure: every value keeps the light set's cool cast and the
+       rule that a surface gets lighter as it comes forward. */
     dark: {
-      canvas: '#1B1D1F', ghost: '#202325', panel: '#26292C', 'panel-top': '#2E3135',
-      line: '#4A5057', surface: '#34383C', stroke: '#F2F4F5', 'stroke-soft': '#8E9AA6',
-      fill: '#434649', 'fill-soft': '#323538', accent: '#4CC2FF',
+      canvas: '#17191C', ghost: '#1D2024', panel: '#22262B', 'panel-top': '#2B3036',
+      line: '#4A5057', surface: '#31363D', stroke: '#F2F4F5', 'stroke-soft': '#8E9AA6',
+      fill: '#3F444B', 'fill-soft': '#2A2F35', accent: '#8AA8F5',
       'shadow-c': '#000000', 'shadow-o': '0.50',
     },
   },
   flat: {
-    label: 'Flat outline',
-    note: 'No shadow at all. Everything separates on the line and the fills, which is the honest test of whether the composition works.',
-    sw: 0.5, radius: 1.2, elevation: 'flat',
-    brand: ['#0078D4', '#107C10', '#8764B8', '#C239B3', '#CA5010'],
+    label: 'Flat outline (M365)',
+    note: 'White surfaces, one hairline around everything and no depth at all. The frame takes '
+      + 'the accent at a deep tone while the contents keep a neutral line, which is what stops an '
+      + 'outline drawing reading as a wireframe. Measured off the M365 frame.',
+    sw: 0.8, radius: 1.2, elevation: 'flat', material: 'outline',
+    brand: ['#3A843C', '#C06C4A', '#765EAC', '#6E8C4E', '#3F6FA8'],
+    /* Sampled: contents outline #C8C8C8, bars #E0E0E0, the light fill behind
+       the base #F4F4F4, and the frame #214B22, which is the accent at the deep
+       tone rather than a color of its own. */
     light: {
-      canvas: '#FFFFFF', ghost: '#F4F4F4', panel: '#FFFFFF', 'panel-top': '#FFFFFF',
-      line: '#B3B3B3', surface: '#FFFFFF', stroke: '#1B1B1B', 'stroke-soft': '#8A8A8A',
-      fill: '#E4E4E4', 'fill-soft': '#F0F0F0', accent: '#0078D4',
+      canvas: '#FFFFFF', ghost: '#FAFAFA', panel: '#FFFFFF', 'panel-top': '#FFFFFF',
+      line: '#C8C8C8', surface: '#FFFFFF', stroke: '#222222', 'stroke-soft': '#8A8A8A',
+      fill: '#E0E0E0', 'fill-soft': '#F4F4F4', accent: '#3A843C',
       'shadow-c': '#000000', 'shadow-o': '0',
     },
     dark: {
-      canvas: '#1A1A1A', ghost: '#232323', panel: '#1A1A1A', 'panel-top': '#1A1A1A',
-      line: '#525252', surface: '#1A1A1A', stroke: '#F2F2F2', 'stroke-soft': '#9A9A9A',
-      fill: '#3C3C3C', 'fill-soft': '#2C2C2C', accent: '#4CC2FF',
+      canvas: '#16181A', ghost: '#1C1E20', panel: '#16181A', 'panel-top': '#16181A',
+      line: '#4E5254', surface: '#16181A', stroke: '#EDEFF0', 'stroke-soft': '#93989B',
+      fill: '#33373A', 'fill-soft': '#232628', accent: '#6FBF72',
       'shadow-c': '#000000', 'shadow-o': '0',
     },
   },
@@ -152,7 +147,20 @@ const PRESETS = {
 
 const MATERIALS = {
   flat: {
-    label: 'Flat', sheen: 0, tileSheen: 0, inner: null, cast: null, edgeOpacity: 1,
+    label: 'Flat', sheen: 0, tileSheen: 0, inner: null, cast: null,
+    edge: 'line', edgeOpacity: 1,
+  },
+  /* M365's flat outline. Measured off the same frame as the Windows one, and
+     the two differ in more than color: this one has no shadow, no gradient
+     and no filled mass at all. Everything is a white surface with a line
+     around it, and the frame's line is not the neutral the contents use, it
+     is the accent taken down to a deep tone. That is the one rule here that
+     the language did not already have, and it is why `frame` exists: a
+     device drawn in the neutral line looks like a wireframe, and drawn in
+     the deep accent it looks like a brand's illustration. */
+  outline: {
+    label: 'Outline', sheen: 0, tileSheen: 0, inner: null, cast: null,
+    edge: 'line', edgeOpacity: 1, frame: true, tone: 'tint',
   },
   rendered: {
     label: 'Rendered',
@@ -164,7 +172,10 @@ const MATERIALS = {
        the object is touching, and a wide soft one that says how far off the
        surface it sits. One shadow can only do one of those. */
     cast: [{ dy: 2.2, blur: 2.4, o: 0.16 }, { dy: 7, blur: 7.5, o: 0.13 }],
-    edgeOpacity: 0.42,    // the hairline stays, quieter: the mass does the work
+    /* No line at all. Mason's Windows frame has none: a bezel is mass, a card
+       is a value step plus a shadow, and a hairline around either of those is
+       the drawing admitting it does not trust its own fills. */
+    edge: 'none', edgeOpacity: 0,
   },
 };
 
@@ -180,7 +191,30 @@ const flatNow = () => FLAT_OVERRIDE || P.elevation === 'flat';
 let LINE, FILL, FSOFT, SOFT, SURF, GHOST, STRK, ACC, BRAND, CANVAS;
 let ACCENTS = [];
 let MAT = MATERIALS.flat;
-const rendered = () => MAT.cast && !FLAT_OVERRIDE;
+let TINT, DEEP, FRAME;
+/* The rendered material stays on inside a device screen. What changes there
+   is how far things sit off the surface: a screen is emissive, so the wide
+   pass goes and the tight contact shadow stays. Turning the material off
+   entirely was worse than either, because with no edges and no shadow a card
+   on a screen has nothing left to separate it. */
+const rendered = () => !!MAT.cast;
+const inScreen = () => FLAT_OVERRIDE;
+/* An edge is drawn only when the material has one. `frame` parts (the panel,
+   a device body, the base it sits on) take the deep accent instead of the
+   neutral line where the material says so. */
+const edged = (frame) => MAT.edge === 'none' ? ''
+  : ` stroke="${frame && MAT.frame ? FRAME : LINE}" stroke-width="${SW}"`
+    + (MAT.edgeOpacity < 1 ? ` stroke-opacity="${MAT.edgeOpacity}"` : '');
+
+/* The accent's two relatives. Measured off the M365 frame: its emblem is a
+   light green surface, a deep green line and a deep green glyph, and those
+   three are one color at three lightnesses rather than three colors. */
+const TINT_STOPS = { light: [0.885, 0.57], dark: [0.30, 0.60] };
+const DEEP_STOPS = { light: [0.37, 0.63], dark: [0.82, 0.55] };
+function relative(hex, stops) {
+  const c = hexToOklch(hex);
+  return oklchFit({ L: stops[0], C: c.C * stops[1], h: c.h });
+}
 
 /* How the secondary accents relate to the seed. A tile row was taking the
    preset's own brand array, which is why moving the accent left the tiles
@@ -229,6 +263,9 @@ function applyPreset(key, accentHex, count, harmony) {
   /* Tokens, not literals: a tile painted with a raw hex is the same tile in
      both grounds, and a saturated light-mode tile on a near-black canvas is
      the defect the survey found in the shipped set. */
+  TINT = `var(--il-tint, ${relative(seed, TINT_STOPS.light)})`;
+  DEEP = `var(--il-deep, ${relative(seed, DEEP_STOPS.light)})`;
+  FRAME = DEEP;
   const set = accentSet(seed, count || 4, harmony || 'spread');
   ACCENTS = set.map((hex, i) => `var(--il-acc${i + 1}, ${hex})`);
   BRAND = [0, 1, 2, 3, 4, 5].map((i) => ACCENTS[i % ACCENTS.length]);
@@ -242,6 +279,10 @@ const cssVars = (preset, theme, accent, set) => {
   (set || []).forEach((hex, i) => {
     out['--il-acc' + (i + 1)] = theme === 'dark' ? darkAccent(hex, preset) : hex;
   });
+  if (accent) {
+    out['--il-tint'] = relative(accent, TINT_STOPS[theme]);
+    out['--il-deep'] = relative(accent, DEEP_STOPS[theme]);
+  }
   return out;
 };
 
@@ -373,8 +414,7 @@ function backdrop(kind, x, w, y, h) {
   /* In the rendered material every surface edge is quieted, backdrops
      included: a sheet behind the panel drawn at full hairline reads louder
      than the panel in front of it. */
-  const edge = ` stroke="${LINE}" stroke-width="${SW}"`
-    + (rendered() ? ` stroke-opacity="${MAT.edgeOpacity}"` : '');
+  const edge = edged(false);
   if (kind === 'plate') {
     return `<rect x="${x - 7}" y="${y + 4}" width="${w + 14}" height="${H + 6}" rx="${rad(GEO.PANEL_R + 6)}" ` +
       `fill="${GHOST}"${edge}/>`;
@@ -407,11 +447,10 @@ function panel(uid, x, w, y, h, mode, chrome, back) {
   if (rendered()) {
     /* The panel is the thing everything else sits in, so it is the one part
        that reads as recessed: the inner shadow is what says inside. */
-    s += shape(`url(#panelG-${uid})`,
-      ` stroke="${LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}" filter="url(#inner-${uid})"`);
+    s += shape(`url(#panelG-${uid})`, edged(true) + ` filter="url(#inner-${uid})"`);
     s += shape(`url(#shade-${uid})`);
   } else {
-    s += shape(`url(#panelG-${uid})`, ` stroke="${LINE}" stroke-width="${SW}"`);
+    s += shape(`url(#panelG-${uid})`, edged(true));
   }
   if (chrome) {
     for (let i = 0; i < 3; i++) s += dot(x + 10 + i * 5.5, y + 9, 1.7, true, LINE);
@@ -422,21 +461,20 @@ function panel(uid, x, w, y, h, mode, chrome, back) {
 
 function card(x, y, w, h, r, uid, lift, fill, stroke) {
   if (lift === undefined) lift = true;
-  if (flatNow()) lift = false;
+  if (flatNow() && !rendered()) lift = false;
   // Bigger objects sit further off the surface. One shadow for everything reads
   // as a sticker sheet rather than a stack.
   const big = w * h > 2600;
   const rr = rad(r, w, h);
   const box = (f, extra) => `<rect x="${n1(x)}" y="${n1(y)}" width="${n1(w)}" ` +
     `height="${n1(h)}" rx="${rr}" fill="${f}"${extra || ''}/>`;
+  const line = stroke ? ` stroke="${stroke}" stroke-width="${SW}"` : edged(false);
   if (rendered()) {
     const f = lift ? ` filter="url(#soft-${uid})"` : '';
-    return `<g${f}>` + box(fill || SURF,
-      ` stroke="${stroke || LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}"`)
-      + box(`url(#sheen-${uid})`) + '</g>';
+    return `<g${f}>` + box(fill || SURF, line) + box(`url(#sheen-${uid})`) + '</g>';
   }
   const f = lift ? ` filter="url(#lift${big ? 'L' : ''}-${uid})"` : '';
-  return `<g${f}>` + box(fill || SURF, ` stroke="${stroke || LINE}" stroke-width="${SW}"`) + '</g>';
+  return `<g${f}>` + box(fill || SURF, line) + '</g>';
 }
 
 /* A tile is a colored square, or an outlined square, and either one can carry
@@ -511,17 +549,15 @@ function medallion(uid, o, ic, cx, cy, r, lift) {
   cx = cx === undefined ? 80 : cx;
   cy = cy === undefined ? GEO.MED_CY : cy;
   r = r === undefined ? GEO.MED_R : r;
-  if (flatNow()) lift = false;
+  if (flatNow() && !rendered()) lift = false;
   const disc = (fill, extra) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"${extra || ''}/>`;
   if (rendered()) {
     const f = lift ? ` filter="url(#soft-${uid})"` : '';
-    return `<g${f}>` + disc(SURF,
-      ` stroke="${LINE}" stroke-width="${SW}" stroke-opacity="${MAT.edgeOpacity}"`)
-      + disc(`url(#sheen-${uid})`) + '</g>'
+    return `<g${f}>` + disc(SURF, edged(false)) + disc(`url(#sheen-${uid})`) + '</g>'
       + slot(o, 'feature', ic, cx - 7.5, cy - 7.5, 15);
   }
   const f = lift ? ` filter="url(#lift-${uid})"` : '';
-  return `<g${f}>` + disc(SURF, ` stroke="${LINE}" stroke-width="${SW}"`) + '</g>'
+  return `<g${f}>` + disc(SURF, edged(false)) + '</g>'
     + slot(o, 'feature', ic, cx - 7.5, cy - 7.5, 15);
 }
 
@@ -562,11 +598,11 @@ function doc(uid, label, faded, floating, opts) {
     </filter>
     <filter id="soft-${uid}" x="-70%" y="-70%" width="240%" height="240%">
       <feDropShadow dx="0" dy="${MAT.cast[0].dy}" stdDeviation="${MAT.cast[0].blur}"
-        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[0].o}" result="a"/>
+        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[0].o}" result="a"/>${inScreen() ? '' : `
       <feDropShadow in="a" dx="0" dy="${MAT.cast[1].dy}" stdDeviation="${MAT.cast[1].blur}"
-        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[1].o}"/>
+        flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="${MAT.cast[1].o}"/>`}
     </filter>`;
-  const shadowDefs = flatNow() ? '' : `
+  const shadowDefs = (flatNow() && !rendered()) ? '' : `
     <filter id="lift-${uid}" x="-60%" y="-60%" width="220%" height="220%">
       <feDropShadow dx="0" dy="2" stdDeviation="2.6"
         flood-color="var(--il-shadow-c, ${P.light['shadow-c']})" flood-opacity="var(--il-shadow-o, ${P.light['shadow-o']})"/>
@@ -884,39 +920,51 @@ const RELATIONSHIPS = [
    The other four are derived from the same construction rather than measured,
    and they say so. */
 
+/* How a device body is painted. In the rendered material it is mass, the way
+   the Figma asset draws it: a filled bezel with no stroke, because at this
+   size an edge around a fill reads as a different object. In the outline
+   material it is the opposite and equally deliberate: a white surface with
+   the deep accent around it, which is what the M365 frame does. */
+const bodyPaint = () => MAT.frame
+  ? `fill="${SURF}" stroke="${FRAME}" stroke-width="${SW * 2}" stroke-linejoin="round"`
+  : `fill="${LINE}"`;
+const restPaint = () => MAT.frame
+  ? `fill="${FSOFT}" stroke="${FRAME}" stroke-width="${SW * 2}" stroke-linejoin="round"`
+  : `fill="${LINE}"`;
+
 const DEVICES = {
   laptop: {
     label: 'Laptop',
     screen: { x: 29.07, y: 45.2, w: 102.72, h: 69.02, r: 4 },
     // lid 24.27,40.4 112.32x78.62, rounded on top only, meeting the base exactly
     art: () => `<path d="M24.27 ${n2(40.4 + rad(4.8))}a${rad(4.8)} ${rad(4.8)} 0 0 1 ${rad(4.8)} -${rad(4.8)}` +
-      `h${n2(112.32 - 2 * rad(4.8))}a${rad(4.8)} ${rad(4.8)} 0 0 1 ${rad(4.8)} ${rad(4.8)}V119.02H24.27z" fill="${LINE}"/>`,
-    rest: () => `<rect x="15.2" y="119.02" width="129.6" height="6.91" rx="${rad(1.6, 129.6, 6.91)}" fill="${LINE}"/>`,
+      `h${n2(112.32 - 2 * rad(4.8))}a${rad(4.8)} ${rad(4.8)} 0 0 1 ${rad(4.8)} ${rad(4.8)}V119.02H24.27z" ${bodyPaint()}/>`,
+    rest: () => `<rect x="15.2" y="119.02" width="129.6" height="6.91" rx="${rad(1.6, 129.6, 6.91)}" ${restPaint()}/>`,
   },
   monitor: {
     label: 'Monitor',
     screen: { x: 22.8, y: 34.8, w: 114.4, h: 68.4, r: 4 },
-    art: () => `<rect x="18" y="30" width="124" height="86" rx="${rad(4.8)}" fill="${LINE}"/>`,
-    rest: () => `<rect x="74" y="116" width="12" height="12" rx="${rad(1.6, 12, 12)}" fill="${LINE}"/>` +
-      `<rect x="54" y="128" width="52" height="6.91" rx="${rad(1.6, 52, 6.91)}" fill="${LINE}"/>`,
+    art: () => `<rect x="18" y="30" width="124" height="86" rx="${rad(4.8)}" ${bodyPaint()}/>`,
+    rest: () => `<rect x="74" y="116" width="12" height="12" rx="${rad(1.6, 12, 12)}" ${restPaint()}/>` +
+      `<rect x="54" y="128" width="52" height="6.91" rx="${rad(1.6, 52, 6.91)}" ${restPaint()}/>`,
   },
   allinone: {
     label: 'All in one',
     screen: { x: 18.8, y: 30.8, w: 122.4, h: 72, r: 4 },
-    art: () => `<rect x="14" y="26" width="132" height="92" rx="${rad(4.8)}" fill="${LINE}"/>`,
-    rest: () => `<rect x="66" y="118" width="28" height="10" rx="${rad(1.6, 28, 10)}" fill="${LINE}"/>` +
-      `<rect x="46" y="128" width="68" height="6.91" rx="${rad(1.6, 68, 6.91)}" fill="${LINE}"/>`,
+    art: () => `<rect x="14" y="26" width="132" height="92" rx="${rad(4.8)}" ${bodyPaint()}/>`,
+    rest: () => `<rect x="66" y="118" width="28" height="10" rx="${rad(1.6, 28, 10)}" ${restPaint()}/>` +
+      `<rect x="46" y="128" width="68" height="6.91" rx="${rad(1.6, 68, 6.91)}" ${restPaint()}/>`,
   },
   tablet: {
     label: 'Tablet',
     screen: { x: 45, y: 21, w: 70, h: 118, r: 5 },
-    art: () => `<rect x="40" y="16" width="80" height="128" rx="${rad(7)}" fill="${LINE}"/>`,
+    art: () => `<rect x="40" y="16" width="80" height="128" rx="${rad(7)}" ${bodyPaint()}/>`,
     rest: () => '',
   },
   phone: {
     label: 'Phone',
     screen: { x: 62, y: 16, w: 36, h: 128, r: 6 },
-    art: () => `<rect x="58" y="12" width="44" height="136" rx="${rad(8)}" fill="${LINE}"/>`,
+    art: () => `<rect x="58" y="12" width="44" height="136" rx="${rad(8)}" ${bodyPaint()}/>`,
     rest: () => '',
   },
 };
@@ -1003,17 +1051,22 @@ function buildDevice(uid, label, o) {
    Emblems are flat. The base is already the one element casting a shadow,
    and an emblem that lifts as well breaks the rule the checks enforce. */
 
+/* The accent tone changes with the material, because the two references
+   disagree about what an accent emblem is. Windows draws it as a solid accent
+   disc with a near-white glyph; M365 draws it as a light tint with the deep
+   accent for both the line and the glyph. Same emblem, same accent, two
+   materials. The other two tones are the same in both. */
 const TONES = {
   accent: {
     label: 'Accent',
-    surface: () => ACC,
+    surface: () => (MAT.tone === 'tint' ? TINT : ACC),
     /* canvas, not white: it is near-white in light and near-black in dark, so
        a glyph painted with it reads on the accent in both themes. */
-    glyph: () => CANVAS,
-    line: false,
+    glyph: () => (MAT.tone === 'tint' ? DEEP : CANVAS),
+    line: () => (MAT.tone === 'tint' ? DEEP : null),
   },
-  surface: { label: 'Surface', surface: () => SURF, glyph: () => STRK, line: true },
-  soft: { label: 'Soft', surface: () => FSOFT, glyph: () => SOFT, line: true },
+  surface: { label: 'Surface', surface: () => SURF, glyph: () => STRK, line: () => LINE },
+  soft: { label: 'Soft', surface: () => FSOFT, glyph: () => SOFT, line: () => LINE },
 };
 
 /* --- the shapes an emblem can take -------------------------------------
@@ -1116,7 +1169,8 @@ function emblem(e) {
   const t = TONES[e.tone] || TONES.accent;
   const sh = emblemShape(e);
   const s = e.size, x = e.x, y = e.y;
-  const edge = t.line ? ` stroke="${LINE}" stroke-width="${SW}" stroke-linejoin="round"` : '';
+  const ln = typeof t.line === 'function' ? t.line() : null;
+  const edge = ln ? ` stroke="${ln}" stroke-width="${SW}" stroke-linejoin="round"` : '';
   const body = `<path d="${sh.d(x, y, s)}" fill="${t.surface()}"${edge}/>`;
   const g = s * sh.k;
   return body + icon(e.glyph, x + (s - g) / 2, y + s * sh.cy - g / 2, g, t.glyph());
@@ -1167,13 +1221,27 @@ function lint(svgText, uid, opts) {
     if (w === null) errors.push(`a <${el.tagName}> has stroke= but no stroke-width, which defaults to 1`);
     else widths.add(Number(w));
   });
-  if (widths.size && (widths.size > 1 || !widths.has(SW))) {
-    errors.push(`stroke widths ${[...widths].join(', ')}: this preset's one width is ${SW}`);
+  const allowed = MAT.frame ? [SW, SW * 2] : [SW];
+  const strays = [...widths].filter((w) => !allowed.some((a2) => Math.abs(w - a2) < 0.001));
+  if (strays.length) {
+    errors.push(`stroke widths ${strays.join(', ')}: this preset draws at `
+      + `${allowed.join(' or ')}`);
+  } else if (widths.size > 1) {
+    ok.push(`two stroke widths, ${[...widths].sort().join(' and ')}: the frame is the heavier one`);
   } else ok.push(widths.size ? `one stroke width, ${SW}`
     : 'no strokes: the parts carry their own edges');
-  if (colors.size > 1) errors.push(`${colors.size} stroke colors: every stroke uses --il-line`);
-  else if (colors.size && ![...colors][0].includes('--il-line')) errors.push('stroke color is not --il-line');
-  else if (colors.size) ok.push('one stroke color, --il-line');
+  /* Two stroke colors are allowed only where the material declares a frame
+     line, and only those two: the neutral for content and the deep accent for
+     the frame. Any third is the old error. */
+  const named = [...colors].filter((c) => c.includes('--il-line') || (MAT.frame && c.includes('--il-deep')));
+  if (colors.size > named.length) {
+    errors.push(`${colors.size} stroke colors and ${colors.size - named.length} of them `
+      + 'named nothing: a stroke is --il-line, or --il-deep where the material has a frame');
+  } else if (colors.size === 2 && MAT.frame) {
+    ok.push('two stroke colors: the neutral for content, the deep accent for the frame');
+  } else if (colors.size > 1) {
+    errors.push(`${colors.size} stroke colors: every stroke uses --il-line`);
+  } else if (colors.size) ok.push('one stroke color, --il-line');
 
   // -- depth
   const lifted = drawn.filter((el) => (el.getAttribute('filter') || 'none') !== 'none');
@@ -1814,7 +1882,8 @@ function renderEmblems() {
     const g = glyphPath(e.glyph);
     const chip = `<svg viewBox="0 0 26 26" aria-hidden="true" style="width:100%;height:100%;display:block">`
       + `<path d="${sh.d(1, 1, 24)}" fill="${face}"`
-      + (t.line ? ' stroke="rgba(128,128,128,.45)" stroke-width="1" stroke-linejoin="round"' : '') + '/>'
+      + ((typeof t.line === 'function' ? t.line() : null)
+        ? ' stroke="rgba(128,128,128,.45)" stroke-width="1" stroke-linejoin="round"' : '') + '/>'
       + (g ? `<g transform="translate(${n2(1 + (24 - 24 * sh.k) / 2)} ${n2(1 + 24 * sh.cy - 24 * sh.k / 2)}) `
         + `scale(${(24 * sh.k / g.grid).toFixed(4)})" fill="${mark}"><path d="${g.d}"/></g>` : '')
       + '</svg>';
