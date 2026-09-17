@@ -63,8 +63,8 @@ const PRESETS = {
   },
   windows: {
     label: 'Windows',
-    note: 'Derived from the 72 illustrations in the library: cool neutrals and Windows blue. '
-      + 'A proposal grounded in what recurs, not a match for the shipped set.',
+    note: 'Cool neutrals and Windows blue, measured off the 72 illustrations in the library. '
+      + 'A proposal, not a match: the shipped set has no single style to match.',
     /* The corner dial stays at 1. The set's real rule is proportional, half of
        every rounded rect sitting at a sixth of its short side, and a multiplier
        on absolute radii cannot express that: a sixth of the card's short side
@@ -142,7 +142,7 @@ let SW = 0.5, RR = 1;
    body is already the one element casting. */
 let FLAT_OVERRIDE = false;
 const flatNow = () => FLAT_OVERRIDE || P.elevation === 'flat';
-let LINE, FILL, FSOFT, SOFT, SURF, GHOST, STRK, ACC, BRAND;
+let LINE, FILL, FSOFT, SOFT, SURF, GHOST, STRK, ACC, BRAND, CANVAS;
 
 function applyPreset(key, accentHex) {
   P = PRESETS[key] || PRESETS.soft;
@@ -150,7 +150,7 @@ function applyPreset(key, accentHex) {
   RR = P.radius;
   const t = (n) => `var(--il-${n}, ${P.light[n]})`;
   LINE = t('line'); FILL = t('fill'); FSOFT = t('fill-soft'); SOFT = t('stroke-soft');
-  SURF = t('surface'); GHOST = t('ghost'); STRK = t('stroke');
+  SURF = t('surface'); GHOST = t('ghost'); STRK = t('stroke'); CANVAS = t('canvas');
   ACC = `var(--il-accent, ${accentHex || P.light.accent})`;
   BRAND = P.brand;
 }
@@ -769,7 +769,7 @@ function buildDevice(uid, label, o) {
   if (o.screenContent === 'composition') {
     FLAT_OVERRIDE = true;
     let inner;
-    try { inner = build(o.layout, uid + '-screen', Object.assign({}, o, { placed: [] })); }
+    try { inner = build(o.layout, uid + '-screen', Object.assign({}, o, { emblems: [] })); }
     finally { FLAT_OVERRIDE = false; }
     screen += `<g clip-path="url(#screenClip-${uid})">` + nest(s, innerOf(inner), 160) + '</g>';
   } else if (o.screenContent === 'flat') {
@@ -780,18 +780,49 @@ function buildDevice(uid, label, o) {
     `width="${s.w}" height="${s.h}" rx="${rad(s.r, s.w, s.h)}"/></clipPath>`;
 
   const art = dev.rest() + dev.body(uid) + screen;
-  const out = doc(uid, label, art, placedArt(o), { contained: true });
+  const out = doc(uid, label, art, emblemArt(o), { contained: true });
   // The clip has to live in defs with everything else, and doc() owns defs.
   return out.replace('  </defs>', '    ' + clip + '\n  </defs>');
 }
 
-/* Freely placed pieces sit above everything, outside any layout. This is the
-   escape hatch, and the checks say so, because nothing composed here is
-   guaranteed to belong to the family. */
-function placedArt(o) {
-  if (!o.placed || !o.placed.length) return '';
-  return o.placed.map((p) => icon(p.id, p.x, p.y, p.size, p.accent ? ACC : STRK)).join('');
+/* ======================================================= E M B L E M S ==
+   An emblem is a surface carrying a glyph, and it is the only thing you
+   place. A glyph never floats on its own: inside an emblem it has something
+   to sit on, and outside one it is a mark with no part to belong to. Keeping
+   that rule makes the placed list one kind of row and the accent budget
+   countable, and it is the anatomy vocabulary rather than a second one.
+
+   Emblems are flat. The base is already the one element casting a shadow,
+   and an emblem that lifts as well breaks the rule the checks enforce. */
+
+const TONES = {
+  accent: {
+    label: 'Accent',
+    surface: () => ACC,
+    /* canvas, not white: it is near-white in light and near-black in dark, so
+       a glyph painted with it reads on the accent in both themes. */
+    glyph: () => CANVAS,
+    line: false,
+  },
+  surface: { label: 'Surface', surface: () => SURF, glyph: () => STRK, line: true },
+  soft: { label: 'Soft', surface: () => FSOFT, glyph: () => SOFT, line: true },
+};
+
+const EMBLEM_SHAPES = { squircle: 'Squircle', circle: 'Circle' };
+
+function emblem(e) {
+  const t = TONES[e.tone] || TONES.accent;
+  const s = e.size, x = e.x, y = e.y;
+  const edge = t.line ? ` stroke="${LINE}" stroke-width="${SW}"` : '';
+  const body = e.shape === 'circle'
+    ? `<circle cx="${n1(x + s / 2)}" cy="${n1(y + s / 2)}" r="${n1(s / 2)}" fill="${t.surface()}"${edge}/>`
+    : `<rect x="${n1(x)}" y="${n1(y)}" width="${n1(s)}" height="${n1(s)}" ` +
+      `rx="${rad(s / 3, s, s)}" fill="${t.surface()}"${edge}/>`;
+  const g = s * 0.52;   // the glyph fills just over half, the way a medallion's does
+  return body + icon(e.glyph, x + (s - g) / 2, y + (s - g) / 2, g, t.glyph());
 }
+
+const emblemArt = (o) => (o.emblems || []).map(emblem).join('');
 
 /* ======================================================== T H E  L I N T ==
    The generator's own checks, run on the output. Every one is a failure that
@@ -979,53 +1010,44 @@ function darkAccent(hex, presetKey) {
 }
 
 /* ============================================================== M O D E S */
+/* A mode sets which preset it starts on and which slots it lets you bind.
+   It is not a separate engine, which is why switching one keeps the feature,
+   the layout, the glyph and the emblems. */
 
 const MODES = {
-  windows: {
-    label: 'Windows', kind: 'compose', preset: 'windows',
-    blurb: 'The same machine at Windows settings. A Windows illustration is a preset here, not a ' +
-      'second engine, which is the whole point of keeping the style on dials. The preset below is ' +
-      'a first pass and not an agreed style.',
-  },
-  pieces: {
-    label: 'Pieces', kind: 'compose', preset: 'windows', pieces: true,
-    blurb: 'Every glyph position in a layout is a named slot. Bind a slot to anything in the ' +
-      'library or to one of your own pieces and the composition stays on rails. Free placement is ' +
-      'the escape hatch underneath, and the checks mark it.',
-  },
-  product: {
-    label: 'Product UI', kind: 'compose', preset: 'soft',
-    blurb: 'The ported exploration, unchanged except that the glyphs are our System Icons. This is ' +
-      'the reference the other three are built from: it is the one that has been proved.',
-  },
-  device: {
-    label: 'Devices', kind: 'device', preset: 'windows',
-    blurb: 'A device is a frame with a screen, and the screen takes anything that draws on the 160 ' +
-      'grid. So a composition built in any other mode can go inside a laptop, and retheming comes ' +
-      'along for free.',
-  },
+  windows: { label: 'Windows', kind: 'compose', preset: 'windows',
+    sub: 'Twelve layouts at Windows settings' },
+  pieces: { label: 'Pieces', kind: 'compose', preset: 'windows', pieces: true,
+    sub: 'Bind every slot to library art' },
+  product: { label: 'Product UI', kind: 'compose', preset: 'soft',
+    sub: 'The ported exploration' },
+  device: { label: 'Devices', kind: 'device', preset: 'windows',
+    sub: 'A base with a screen in it' },
 };
 
 /* ============================================================ S T A T E == */
 
 const state = {
-  mode: 'product',
-  preset: 'soft',
+  mode: 'windows',
+  preset: 'windows',
+  view: 'canvas',
+  ground: 'light',
   name: 'Audit log',
-  does: 'A record of what happened, kept in order.',
   rel: 'sequence',
   layout: 'L11',
   ic: 'system.history',
-  accent: '#3E9077',
+  accent: '#0078D4',
   rows: 3,
   sel: 1,
   slots: {},
-  placed: [],
+  emblems: [],
+  pick: 'feature',      // which slot the glyph tray is binding
+  emblemSel: -1,        // which emblem the editor is on, -1 for none
   device: 'laptop',
   screenContent: 'composition',
   src: 'core',
   search: '',
-  pick: 'feature',      // which slot the icon picker is currently binding
+  log: [],
 };
 
 const $ = (id) => document.getElementById(id);
@@ -1033,29 +1055,27 @@ const slug = (s) => s.toLowerCase().normalize('NFKD').replace(/[^\w\s-]/g, '')
   .trim().replace(/[\s_]+/g, '-').replace(/-+/g, '-') || 'untitled';
 const layoutOf = (key) => LAYOUTS.find((l) => l.key === key) || LAYOUTS[0];
 const modeOf = () => MODES[state.mode];
+const glyphName = (id) => String(id || '').replace(/^system\./, '').replace(/^part:/, '')
+  .replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 
 function opts(extra) {
   const l = layoutOf(state.layout);
   const o = Object.assign({
     rows: state.rows, sel: state.sel, layout: state.layout,
     slots: modeOf().pieces ? state.slots : {},
-    placed: modeOf().pieces ? state.placed : [],
+    emblems: state.emblems,
     device: state.device, screenContent: state.screenContent,
   }, extra || {});
   if (l.rows) o.rows = Math.min(l.rows[1], Math.max(l.rows[0], o.rows));
   return o;
 }
 
-/* Builds one composition. `uid` is separate from the slug so the same drawing
-   can appear many times on this page without id collisions. */
 function build(layoutKey, uid, o) {
   const l = layoutOf(layoutKey);
-  const label = o.label || state.name;
-  const ic = o.ic || state.ic;
-  const body = l.fn(uid, label, l.icon ? ic : null, o);
-  if (!o.placed || !o.placed.length) return body;
-  // Placed pieces go above the whole drawing, just inside the root.
-  return body.replace('</svg>', placedArt(o) + '\n</svg>');
+  const body = l.fn(uid, o.label || state.name, l.icon ? (o.ic || state.ic) : null, o);
+  if (!o.emblems || !o.emblems.length) return body;
+  // Emblems sit above the whole drawing, just inside the root.
+  return body.replace('</svg>', emblemArt(o) + '\n</svg>');
 }
 
 function buildCurrent(uid, extra) {
@@ -1068,14 +1088,13 @@ function buildCurrent(uid, extra) {
 const flatten = (svgText, vars) =>
   svgText.replace(/var\((--il-[\w-]+),\s*([^)]+)\)/g, (_, tok, fb) => (vars[tok] || fb).trim());
 
+const darkOf = () => darkAccent(state.accent, state.preset);
+const varsFor = (theme) => cssVars(state.preset, theme, theme === 'dark' ? darkOf() : state.accent);
+
 /* ============================================================ L I B R A R Y */
-/* manifest.json is the only public contract in this repo. Consumers never walk
-   the asset tree, which is why this reads the manifest and then fetches one
-   drawing at a time rather than assuming any path shape. */
 
 async function loadLibrary() {
   if (LIB.loaded) return;
-  setLibStatus('Reading manifest.json');
   try {
     const res = await fetch('manifest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -1084,218 +1103,166 @@ async function loadLibrary() {
       .filter((a) => a.collection === 'system' && a.variants && a.variants.filled)
       .map((a) => ({ id: a.id, name: a.name, path: a.variants.filled['24'] || a.variants.filled['20'] }))
       .filter((a) => a.path);
-    LIB.illos = manifest.assets
-      .filter((a) => a.type !== 'icon' || ['oobe', 'm365', 'device'].includes(a.collection))
-      .map((a) => {
-        const st = a.variants && (a.variants.standard || Object.values(a.variants)[0]) || {};
-        const sizes = Object.keys(st).map(Number).sort((x, y) => y - x);
-        return { id: a.id, name: a.name, collection: a.collection, path: st[sizes[0]] };
-      })
-      .filter((a) => a.path);
     LIB.loaded = true;
-    LIB.status = `${LIB.sys.length} System Icons, ${LIB.illos.length} illustrations`;
-    setLibStatus(LIB.status);
+    LIB.status = `${LIB.sys.length} System Icons`;
   } catch (e) {
     LIB.status = 'Could not read manifest.json: ' + e.message;
-    setLibStatus(LIB.status);
   }
 }
 
-/* Mason's own pieces. Optional, and the contract is deliberately small: drop
-   SVGs anywhere under docs/ and list them in builder-parts.json. A piece is a
-   monochrome glyph on its own grid, same as a System Icon. */
 async function loadParts() {
   if (PARTS.loaded) return;
   try {
     const res = await fetch('builder-parts.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('no builder-parts.json');
+    if (!res.ok) throw new Error('none');
     const data = await res.json();
     PARTS.list = (data.parts || []).filter((p) => p.id && p.path);
     PARTS.loaded = true;
-    PARTS.status = PARTS.list.length
-      ? `${PARTS.list.length} pieces`
-      : 'builder-parts.json is there but lists no pieces';
+    PARTS.status = PARTS.list.length ? `${PARTS.list.length} pieces` : 'builder-parts.json lists no pieces';
   } catch (e) {
     PARTS.status = 'No builder-parts.json yet. Drop one in docs/ to add your own pieces.';
   }
-  setLibStatus();
 }
 
 /* One drawing at a time, on demand. A System Icon is a single currentColor
-   path on a 24 unit grid, which is what this slot wants. Anything carrying its
-   own colors is refused rather than recolored: a tinted brand mark repainted
-   with --il-stroke is a lie about the artwork. */
+   path on a 24 unit grid, which is what a glyph slot wants. Anything carrying
+   its own colors is refused rather than recolored. */
 async function loadGlyph(id) {
   if (iconPath(id)) return true;
   const isPart = id.startsWith('part:');
-  const entry = isPart
-    ? PARTS.list.find((p) => p.id === id.slice(5))
-    : LIB.sys.find((a) => a.id === id);
+  const entry = isPart ? PARTS.list.find((p) => p.id === id.slice(5)) : LIB.sys.find((a) => a.id === id);
   if (!entry) throw new Error(id + ' is not in the library');
   const res = await fetch(entry.path, { cache: 'force-cache' });
   if (!res.ok) throw new Error('could not fetch ' + entry.path);
   const parsed = new DOMParser().parseFromString(await res.text(), 'image/svg+xml');
   const paths = Array.from(parsed.querySelectorAll('path'));
-  if (!paths.length) throw new Error(id + ' has no path');
-  const colored = paths.filter((p) => {
-    const f = p.getAttribute('fill');
-    return f && f !== 'currentColor' && f !== 'none';
-  });
-  if (colored.length) throw new Error(id + ' carries its own colors, so it is not a monochrome glyph');
+  if (!paths.length) throw new Error(glyphName(id) + ' has no path');
+  if (paths.some((p) => { const f = p.getAttribute('fill'); return f && f !== 'currentColor' && f !== 'none'; })) {
+    throw new Error(glyphName(id) + ' carries its own colors, so it is not a monochrome glyph');
+  }
   const vb = (parsed.documentElement.getAttribute('viewBox') || '0 0 24 24').split(/\s+/);
   const rec = { d: paths.map((p) => p.getAttribute('d')).join(' '), grid: Number(vb[2]) || 24 };
   if (isPart) PARTS.paths.set(id.slice(5), rec); else LIB.paths.set(id, rec);
   return true;
 }
 
-function setLibStatus(msg) {
-  const el = $('m-status');
-  if (!el) return;
-  el.textContent = msg || [LIB.loaded ? LIB.status : LIB.status, PARTS.status].join(' · ');
-}
+/* ======================================================= T H E  L E F T == */
 
-/* ======================================================= R E N D E R I N G */
+const sec = (label, body, hint) =>
+  `<div class="bd-sec"><span class="bd-label">${label}</span>${body}` +
+  (hint ? `<p class="bd-hint">${hint}</p>` : '') + '</div>';
 
-function renderModes() {
-  $('f-modes').innerHTML = Object.entries(MODES).map(([k, m]) =>
-    `<button type="button" class="bd-mode${k === state.mode ? ' on' : ''}" data-mode="${k}" ` +
-    `aria-pressed="${k === state.mode}">${m.label}</button>`).join('');
-  $('f-mode-blurb').textContent = modeOf().blurb;
-}
+const selectField = (id, opts, value) =>
+  `<select id="${id}">` + opts.map(([v, t]) =>
+    `<option value="${v}"${v === value ? ' selected' : ''}>${t}</option>`).join('') + '</select>';
 
-function fieldSelect(id, label, hint, options, value) {
-  return `<div class="bd-field"><label class="bd-label" for="${id}">${label}</label>` +
-    `<select id="${id}">` + options.map(([v, t]) =>
-      `<option value="${v}"${v === value ? ' selected' : ''}>${t}</option>`).join('') + '</select>' +
-    (hint ? `<p class="bd-hint">${hint}</p>` : '') + '</div>';
-}
-
-function renderControls() {
+function renderLeft() {
+  // This rail draws twelve layout thumbnails and five device thumbnails, so
+  // it is a drawing surface and has to have the style applied before it runs.
+  applyPreset(state.preset, state.accent);
   const m = modeOf();
   const l = layoutOf(state.layout);
   let h = '';
 
-  h += `<div class="bd-field">
-    <label class="bd-label" for="f-name">Feature</label>
-    <input type="text" id="f-name" value="${esc(state.name)}" autocomplete="off" spellcheck="false">
-    <p class="bd-hint">Names the file, the ids and the <code>aria-label</code>. Slug: <code id="f-slug">${slug(state.name)}</code></p>
-  </div>
-  <div class="bd-field">
-    <label class="bd-label" for="f-does">What it actually does</label>
-    <textarea id="f-does" spellcheck="true" placeholder="One line.">${esc(state.does)}</textarea>
-  </div>`;
+  h += sec('Mode', '<div class="bd-modes" id="f-modes" role="group" aria-label="Build mode">' +
+    Object.entries(MODES).map(([k, mm]) =>
+      `<button type="button" class="bd-mode${k === state.mode ? ' on' : ''}" data-mode="${k}" ` +
+      `aria-pressed="${k === state.mode}"><b>${mm.label}</b><span>${esc(mm.sub)}</span></button>`).join('') +
+    '</div>');
 
-  h += fieldSelect('f-preset', 'Style preset', esc(PRESETS[state.preset].note),
-    Object.entries(PRESETS).map(([k, p]) => [k, p.label]), state.preset);
+  h += sec('Feature',
+    `<input type="text" id="f-name" value="${esc(state.name)}" autocomplete="off" spellcheck="false">`,
+    `Names the file and every id. Slug: <code>${slug(state.name)}</code>`);
+
+  h += sec('Style preset', selectField('f-preset',
+    Object.entries(PRESETS).map(([k, p]) => [k, p.label]), state.preset),
+    esc(PRESETS[state.preset].note));
 
   if (m.kind === 'device') {
-    h += fieldSelect('f-device', 'Device', 'Each one is contained and closed: a device is a thing, not a view with more below it.',
-      Object.entries(DEVICES).map(([k, d]) => [k, d.label]), state.device);
-    h += fieldSelect('f-screen', 'On the screen',
-      'The screen rect is the whole contract. Anything that draws on the 160 grid nests into it.',
-      [['composition', 'A composition, built below'], ['flat', 'A plain view'], ['off', 'Nothing, screen off']],
-      state.screenContent);
+    h += sec('Base', '<div class="bd-tray three" id="f-devices">' +
+      Object.entries(DEVICES).map(([k, d]) => {
+        let art = '';
+        try { art = buildDevice('dv' + k, d.label, opts({ device: k, emblems: [] })); } catch (e) {}
+        return `<button type="button" class="bd-card" data-device="${k}" aria-pressed="${k === state.device}">` +
+          `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${d.label}</b></button>`;
+      }).join('') + '</div>');
+    h += sec('On the screen', selectField('f-screen',
+      [['composition', 'A composition, below'], ['flat', 'A plain view'], ['off', 'Nothing, screen off']],
+      state.screenContent),
+      'The screen rect is the whole contract. Anything on the 160 grid nests into it.');
   }
 
-  const wantsCompose = m.kind === 'compose' || state.screenContent === 'composition';
+  const composing = m.kind === 'compose' || state.screenContent === 'composition';
 
-  if (wantsCompose) {
-    h += fieldSelect('f-rel', 'Relationship',
-      'This is the decision that matters. Layouts that carry it are marked with a dot.',
-      RELATIONSHIPS.map(([k, lab, shape]) => [k, `${lab} — ${shape}`]), state.rel);
+  if (composing) {
+    h += sec('Relationship', selectField('f-rel',
+      RELATIONSHIPS.map(([k, lab, shape]) => [k, `${lab} — ${shape}`]), state.rel),
+      'The decision that matters. Layouts carrying it are marked.');
 
-    h += '<div class="bd-field"><span class="bd-label">Layout</span>' +
-      '<div class="bd-layouts" id="f-layouts" role="group" aria-label="Layout"></div>' +
-      `<p class="bd-hint" id="f-lay-why"></p></div>`;
+    h += sec('Layout', '<div class="bd-tray three" id="f-layouts">' +
+      LAYOUTS.map((ll) => {
+        let art = '';
+        try {
+          art = build(ll.key, 't' + ll.key.toLowerCase(),
+            opts({ label: ll.name, rows: ll.rows ? ll.rows[1] : 3, emblems: [] }));
+        } catch (e) {}
+        return `<button type="button" class="bd-card${ll.rel.includes(state.rel) ? ' rec' : ''}" ` +
+          `data-key="${ll.key}" aria-pressed="${ll.key === state.layout}" ` +
+          `title="${esc(ll.name)}: ${esc(ll.why)}">` +
+          `<span class="bd-thumb bd-ground" data-ground="${state.ground}">${art}</span><b>${ll.key}</b></button>`;
+      }).join('') + '</div>',
+      `<b>${l.key} ${esc(l.name)}.</b> ${esc(l.why)}`);
 
     if (l.rows) {
-      const o = [];
+      const rr = [];
       for (let i = l.rows[0]; i <= l.rows[1]; i++) {
-        o.push([String(i), `${i} row${i > 1 ? 's' : ''}${i === l.rows[1] ? ' (the cap)' : ''}`]);
+        rr.push([String(i), `${i} row${i > 1 ? 's' : ''}${i === l.rows[1] ? ' (the cap)' : ''}`]);
       }
-      h += fieldSelect('f-rows', 'Content rows',
-        'Capped by the fade line at y&nbsp;112. Nothing that carries meaning goes below it.',
-        o, String(Math.min(l.rows[1], Math.max(l.rows[0], state.rows))));
+      h += sec('Content rows', selectField('f-rows', rr, String(o_rows(l))),
+        'Capped by the fade line at y&nbsp;112.');
     }
-  }
 
-  // -- the glyph picker, and in Pieces mode the slot it binds to
-  if (wantsCompose) {
     const bindable = m.pieces ? l.slots : (l.icon ? ['feature'] : []);
     if (bindable.length) {
-      h += '<div class="bd-field"><span class="bd-label">Glyph</span>';
+      let g = '';
       if (m.pieces && bindable.length > 1) {
-        h += '<div class="bd-btns" id="f-slots">' + bindable.map((k) =>
+        g += '<div class="bd-btns" id="f-slots" style="margin-bottom:2px">' + bindable.map((k) =>
           `<button type="button" class="bd-btn${k === state.pick ? ' on' : ''}" data-slot="${k}">` +
           `${SLOT_LABELS[k] || k}</button>`).join('') + '</div>';
       }
-      h += `<div class="bd-btns">
-        <button type="button" class="bd-btn${state.src === 'core' ? ' on' : ''}" data-src="core">Core 39</button>
-        <button type="button" class="bd-btn${state.src === 'library' ? ' on' : ''}" data-src="library">All System Icons</button>
-        <button type="button" class="bd-btn${state.src === 'parts' ? ' on' : ''}" data-src="parts">My pieces</button>
+      g += `<div class="bd-btns">
+        <button type="button" class="bd-btn${state.src === 'core' ? ' on' : ''}" data-src="core">Core</button>
+        <button type="button" class="bd-btn${state.src === 'library' ? ' on' : ''}" data-src="library">All</button>
+        <button type="button" class="bd-btn${state.src === 'parts' ? ' on' : ''}" data-src="parts">Mine</button>
       </div>
-      <input type="text" id="f-isearch" placeholder="Search glyphs" autocomplete="off" spellcheck="false" value="${esc(state.search)}">
-      <div class="bd-icons" id="f-icons" role="group" aria-label="Glyph"></div>
-      <p class="bd-hint mono" id="m-status"></p>`;
-      if (m.pieces) {
-        h += '<div class="bd-btns"><button type="button" class="bd-btn" id="f-slot-clear">Reset this slot</button>' +
-          '<button type="button" class="bd-btn" id="f-place">Place freely</button></div>';
-      }
-      h += '</div>';
+      <input type="text" id="f-search" placeholder="Search glyphs" autocomplete="off" spellcheck="false" value="${esc(state.search)}">
+      <div class="bd-glyphs" id="f-glyphs" role="group" aria-label="Glyph"></div>`;
+      h += sec('Glyph', g, m.pieces
+        ? 'Binds the selected slot. Everything here is a System Icon or one of your pieces.'
+        : 'The feature glyph, in the layout\'s own slot.');
     }
   }
 
-  h += `<div class="bd-field"><span class="bd-label">Accent</span>
-    <div class="bd-swatches" id="f-accents"></div>
-    <p class="bd-hint">At most two elements carry it, and it marks one meaning. The dark value is
-    derived in OKLCH rather than picked, so the pair stays related.</p>
-  </div>`;
+  h += sec('Brief', '<div class="bd-btns">' +
+    '<button type="button" class="bd-btn" id="b-brief">Copy the brief</button>' +
+    '<button type="button" class="bd-btn" id="b-flat">Flat SVG</button></div>',
+    'The brief is the interpretation, the metaphor, the layout and the primitives, as text.');
 
-  if (m.pieces) {
-    h += '<div class="bd-field"><span class="bd-label">Placed freely</span>' +
-      '<div id="f-placed"></div>' +
-      '<p class="bd-hint">The escape hatch. Anything here is composed outside the layout, so the ' +
-      'checks stop guaranteeing that the output belongs to the family.</p></div>';
-  }
-
-  $('f-controls').innerHTML = h;
-  if (wantsCompose) { renderLayouts(); }
-  renderAccents();
-  if (wantsCompose && $('f-icons')) { renderIconPicker(); setLibStatus(); }
-  if (m.pieces) renderPlaced();
-  wireControls();
+  $('f-left').innerHTML = h;
+  if (composing && $('f-glyphs')) renderGlyphs();
+  wireLeft();
 }
 
-function renderLayouts() {
-  const host = $('f-layouts');
-  if (!host) return;
-  host.innerHTML = LAYOUTS.map((l) => {
-    const rec = l.rel.includes(state.rel) ? ' rec' : '';
-    let art = '';
-    try {
-      art = build(l.key, `t${l.key.toLowerCase()}`,
-        opts({ label: l.name, rows: l.rows ? l.rows[1] : 3, placed: [] }));
-    } catch (e) { art = ''; }
-    return `<button type="button" class="bd-lay${rec}" data-key="${l.key}" ` +
-      `aria-pressed="${l.key === state.layout}" title="${esc(l.name)}: ${esc(l.why)}">` +
-      `<span class="bd-il-ground" data-ground="light">${art}</span><b>${l.key}</b></button>`;
-  }).join('');
-  paintGrounds();
-  const l = layoutOf(state.layout);
-  $('f-lay-why').innerHTML = `<b>${l.key} ${esc(l.name)}.</b> ${esc(l.why)} ` +
-    `Suits ${l.range} elements. Adapted from the exploration's <code>${l.example}.svg</code>.`;
-}
+const o_rows = (l) => Math.min(l.rows[1], Math.max(l.rows[0], state.rows));
 
-const HOLDING = '<svg viewBox="0 0 24 24" aria-hidden="true" opacity=".3"><circle cx="12" cy="12" r="4"/></svg>';
-
-function tileArt(id) {
+const HOLDING = '<svg viewBox="0 0 24 24" aria-hidden="true" opacity=".28"><circle cx="12" cy="12" r="4"/></svg>';
+const glyphArt = (id) => {
   const p = iconPath(id);
-  if (!p) return HOLDING;
-  return `<svg viewBox="0 0 ${p.grid} ${p.grid}" aria-hidden="true"><path d="${p.d}"/></svg>`;
-}
+  return p ? `<svg viewBox="0 0 ${p.grid} ${p.grid}" aria-hidden="true"><path d="${p.d}"/></svg>` : HOLDING;
+};
 
-function renderIconPicker() {
-  const host = $('f-icons');
+function renderGlyphs() {
+  const host = $('f-glyphs');
   if (!host) return;
   const q = state.search.trim().toLowerCase();
   let ids = [];
@@ -1303,18 +1270,15 @@ function renderIconPicker() {
     ids = Object.keys(CORE).sort().map((n) => 'system.' + n).filter((i) => !q || i.includes(q));
   } else if (state.src === 'parts') {
     if (!PARTS.loaded || !PARTS.list.length) {
-      host.innerHTML = `<p class="bd-empty">${esc(PARTS.status)}<br><br>A piece is a monochrome
-        SVG on its own grid. List them in <code>builder-parts.json</code> as
-        <code>{"parts":[{"id":"plate.rounded","name":"Rounded plate","path":"parts/plate.svg"}]}</code>.</p>`;
+      host.innerHTML = `<p class="bd-empty">${esc(PARTS.status)}<br><br>A piece is a monochrome SVG.
+        List them in <code>builder-parts.json</code>.</p>`;
       return;
     }
-    ids = PARTS.list.map((p) => 'part:' + p.id)
-      .filter((i) => !q || i.toLowerCase().includes(q));
+    ids = PARTS.list.map((p) => 'part:' + p.id).filter((i) => !q || i.toLowerCase().includes(q));
   } else {
     if (!LIB.loaded) {
-      host.innerHTML = `<p class="bd-empty">${esc(LIB.status)}<br><br>Loading, or open this page
-        from a served <code>_site</code> rather than from disk.</p>`;
-      loadLibrary().then(() => { if (state.src === 'library') renderIconPicker(); });
+      host.innerHTML = `<p class="bd-empty">${esc(LIB.status)}</p>`;
+      loadLibrary().then(() => { if (state.src === 'library') renderGlyphs(); });
       return;
     }
     ids = LIB.sys.filter((a) => !q || a.id.includes(q) || a.name.toLowerCase().includes(q))
@@ -1323,68 +1287,87 @@ function renderIconPicker() {
   if (!ids.length) { host.innerHTML = '<p class="bd-empty">Nothing matches.</p>'; return; }
   const bound = state.slots[state.pick] || (state.pick === 'feature' ? state.ic : null);
   host.innerHTML = ids.map((id) =>
-    `<button type="button" class="bd-ico" data-name="${esc(id)}" ` +
-    `aria-pressed="${id === bound}" title="${esc(id)}">${tileArt(id)}</button>`).join('');
-  observeTiles(host);
+    `<button type="button" class="bd-glyph" data-name="${esc(id)}" ` +
+    `aria-pressed="${id === bound}" title="${esc(glyphName(id))}">${glyphArt(id)}</button>`).join('');
+  watchGlyphs(host);
 }
 
 /* Tiles paint when they scroll into view. 2,883 System Icons is 2,883 files,
-   and the Gallery already settled this question: fetch the fifty drawings
-   actually on screen rather than bundling the collection. */
-let tileWatcher = null;
-
-function observeTiles(host) {
-  if (tileWatcher) tileWatcher.disconnect();
-  const pending = Array.from(host.querySelectorAll('.bd-ico'))
-    .filter((b) => !iconPath(b.dataset.name));
+   and the Gallery already settled this: fetch the fifty actually on screen. */
+let glyphWatcher = null;
+function watchGlyphs(host) {
+  if (glyphWatcher) glyphWatcher.disconnect();
+  const pending = Array.from(host.querySelectorAll('.bd-glyph')).filter((b) => !iconPath(b.dataset.name));
   if (!pending.length) return;
-  tileWatcher = new IntersectionObserver((entries) => {
-    entries.forEach(async (entry) => {
-      if (!entry.isIntersecting) return;
-      const btn = entry.target;
-      tileWatcher.unobserve(btn);
-      try {
-        await loadGlyph(btn.dataset.name);
-        btn.innerHTML = tileArt(btn.dataset.name);
-      } catch (e) {
-        btn.disabled = true;
-        btn.title = e.message;
-        btn.style.opacity = '.3';
-      }
+  glyphWatcher = new IntersectionObserver((entries) => {
+    entries.forEach(async (en) => {
+      if (!en.isIntersecting) return;
+      const b = en.target;
+      glyphWatcher.unobserve(b);
+      try { await loadGlyph(b.dataset.name); b.innerHTML = glyphArt(b.dataset.name); }
+      catch (e) { b.disabled = true; b.title = e.message; b.style.opacity = '.3'; }
     });
-  }, { root: host, rootMargin: '80px' });
-  pending.forEach((b) => tileWatcher.observe(b));
+  }, { root: host, rootMargin: '90px' });
+  pending.forEach((b) => glyphWatcher.observe(b));
 }
+
+/* ====================================================== T H E  R I G H T == */
+
+const TICK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 16.6 5.9 13a1 1 0 1 0-1.4 1.4l4.3 4.3a1 1 0 0 0 1.4 0l9.3-9.3A1 1 0 0 0 18.1 8Z"/></svg>';
 
 function renderAccents() {
-  const host = $('f-accents');
-  if (!host) return;
-  const swatches = [];
-  Object.entries(PRESETS).forEach(([k, p]) => {
-    if (!swatches.some((s) => s[0] === p.light.accent)) swatches.push([p.light.accent, p.label + ' accent']);
+  const seen = [];
+  Object.values(PRESETS).forEach((p) => {
+    if (!seen.includes(p.light.accent)) seen.push(p.light.accent);
   });
-  [['#8764B8', 'Purple'], ['#C239B3', 'Magenta'], ['#CA5010', 'Orange']].forEach((s) => swatches.push(s));
-  host.innerHTML = swatches.map(([hex, label]) =>
+  ['#107C10', '#8764B8', '#C239B3', '#CA5010', '#038387'].forEach((c) => {
+    if (!seen.includes(c) && seen.length < 8) seen.push(c);
+  });
+  $('f-accents').innerHTML = seen.map((hex) =>
     `<button type="button" class="bd-sw" data-hex="${hex}" style="background:${hex}" ` +
-    `aria-pressed="${hex.toLowerCase() === state.accent.toLowerCase()}" title="${esc(label)}"></button>`).join('')
-    + `<input type="color" id="f-accent-custom" value="${state.accent}" aria-label="Custom accent">`
-    + `<span class="bd-status" id="f-accent-pair"></span>`;
+    `aria-pressed="${hex.toLowerCase() === state.accent.toLowerCase()}" title="${hex}">${TICK}</button>`).join('');
+  $('f-accent-custom').value = state.accent;
+  $('f-accent-pair').textContent = `${state.accent} / ${darkOf()}`;
 }
 
-function renderPlaced() {
-  const host = $('f-placed');
-  if (!host) return;
-  if (!state.placed.length) {
-    host.innerHTML = '<p class="bd-hint">Nothing placed freely. The layout is doing all of it.</p>';
+function renderEmblems() {
+  $('f-obj-count').textContent = String(state.emblems.length);
+  const host = $('f-objs');
+  if (!state.emblems.length) {
+    host.innerHTML = '<p class="bd-hint" style="padding:6px 0">Nothing placed. The base is doing all of it.</p>';
+    $('f-obj-edit').innerHTML = '';
     return;
   }
-  host.innerHTML = state.placed.map((p, i) => `<div class="bd-placed">
-    <span class="mono" title="${esc(p.id)}">${esc(p.id.replace('system.', '').replace('part:', ''))}</span>
-    <label>x<input type="number" data-placed="${i}" data-k="x" value="${p.x}" min="0" max="160" step="1"></label>
-    <label>y<input type="number" data-placed="${i}" data-k="y" value="${p.y}" min="0" max="160" step="1"></label>
-    <label>size<input type="number" data-placed="${i}" data-k="size" value="${p.size}" min="6" max="90" step="1"></label>
-    <button type="button" class="bd-btn" data-drop="${i}" aria-label="Remove">&times;</button>
-  </div>`).join('');
+  host.innerHTML = state.emblems.map((e, i) => {
+    const t = TONES[e.tone] || TONES.accent;
+    const chipBg = e.tone === 'accent' ? state.accent : 'var(--surface-2)';
+    const chipFg = e.tone === 'accent' ? '#fff' : 'var(--text-2)';
+    return `<div class="bd-obj${i === state.emblemSel ? ' sel' : ''}" data-obj="${i}">
+      <span class="bd-obj-chip" style="background:${chipBg};border-radius:${e.shape === 'circle' ? '50%' : '8px'}">
+        <span style="display:block;width:14px;height:14px;fill:${chipFg}">${glyphArt(e.glyph)}</span></span>
+      <span><span class="bd-obj-name">${esc(glyphName(e.glyph))}</span><br>
+        <span class="bd-obj-sub">${t.label} &middot; ${EMBLEM_SHAPES[e.shape]} &middot; ${e.size}u</span></span>
+      <button type="button" data-drop="${i}" aria-label="Remove">&times;</button>
+    </div>`;
+  }).join('');
+
+  const i = state.emblemSel;
+  if (i < 0 || !state.emblems[i]) { $('f-obj-edit').innerHTML = ''; return; }
+  const e = state.emblems[i];
+  $('f-obj-edit').innerHTML = `
+    <div class="bd-btns" style="margin:8px 0 6px">
+      ${Object.entries(TONES).map(([k, t]) =>
+        `<button type="button" class="bd-btn${e.tone === k ? ' on' : ''}" data-tone="${k}">${t.label}</button>`).join('')}
+      ${Object.entries(EMBLEM_SHAPES).map(([k, lab]) =>
+        `<button type="button" class="bd-btn${e.shape === k ? ' on' : ''}" data-shape="${k}">${lab}</button>`).join('')}
+    </div>
+    <div class="bd-nums" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <label>x<input type="number" data-k="x" value="${e.x}" min="-8" max="168" step="1"></label>
+      <label>y<input type="number" data-k="y" value="${e.y}" min="-8" max="168" step="1"></label>
+      <label>size<input type="number" data-k="size" value="${e.size}" min="12" max="70" step="1"></label>
+    </div>
+    <p class="bd-hint" style="margin-top:6px">While this one is selected, the glyph tray on the left
+    changes its glyph rather than the layout's.</p>`;
 }
 
 function renderChecks(result, buildError) {
@@ -1393,18 +1376,18 @@ function renderChecks(result, buildError) {
     verdict.className = 'bd-verdict fail';
     verdict.textContent = 'Build failed';
     list.innerHTML = `<li class="bd-check error"><i>&#215;</i><span>${esc(buildError)}</span></li>` +
-      '<li class="bd-check"><i>&middot;</i><span>A guard in the generator refused the geometry, ' +
-      'which is the guard doing its job. Change the input rather than the guard.</span></li>';
+      '<li class="bd-check"><i>&middot;</i><span>A guard refused the geometry, which is the guard ' +
+      'doing its job. Change the input rather than the guard.</span></li>';
     return;
   }
   const { errors, warns, ok } = result;
-  if (state.placed.length && modeOf().pieces) {
-    warns.unshift(`${state.placed.length} freely placed piece${state.placed.length > 1 ? 's' : ''}: ` +
-      'composed outside the layout, so this drawing is not guaranteed to belong to the family');
+  const accentEmblems = state.emblems.filter((e) => e.tone === 'accent').length;
+  if (accentEmblems > 1) {
+    warns.unshift(`${accentEmblems} accent emblems: the accent marks one meaning, so two of them ` +
+      'are two meanings. Make one of them Surface or Soft.');
   }
   verdict.className = 'bd-verdict ' + (errors.length ? 'fail' : warns.length ? 'notes' : 'pass');
-  verdict.textContent = errors.length
-    ? `${errors.length} error${errors.length > 1 ? 's' : ''}`
+  verdict.textContent = errors.length ? `${errors.length} error${errors.length > 1 ? 's' : ''}`
     : warns.length ? 'Pass, with notes' : 'Pass';
   list.innerHTML = [
     ...errors.map((t) => `<li class="bd-check error"><i>&#215;</i><span>${esc(t)}</span></li>`),
@@ -1413,55 +1396,31 @@ function renderChecks(result, buildError) {
   ].join('');
 }
 
-function renderBrief() {
-  const l = layoutOf(state.layout);
-  const r = RELATIONSHIPS.find((x) => x[0] === state.rel) || ['', state.rel, ''];
-  const m = modeOf();
-  let h = `<dt>Mode</dt><dd>${esc(m.label)}, preset ${esc(PRESETS[state.preset].label)}</dd>` +
-    `<dt>Feature</dt><dd>${esc(state.name)} &middot; <code>${slug(state.name)}</code></dd>` +
-    `<dt>Interpretation</dt><dd>${esc(state.does || 'Not written yet.')}</dd>`;
-  if (m.kind === 'device') {
-    h += `<dt>Device</dt><dd>${esc(DEVICES[state.device].label)}, screen ` +
-      `${DEVICES[state.device].screen.w}&times;${DEVICES[state.device].screen.h} on the 160 grid</dd>`;
-  }
-  if (m.kind === 'compose' || state.screenContent === 'composition') {
-    h += `<dt>Metaphor</dt><dd>${esc(r[1])}: ${esc(r[2])}.</dd>` +
-      `<dt>Layout</dt><dd>${l.key} ${esc(l.name)}, adapted from <code>${l.example}.svg</code>.</dd>` +
-      `<dt>Primitives</dt><dd>${l.prims.map(esc).join(', ')}.</dd>`;
-    const bindings = Object.entries(state.slots).filter(([, v]) => v);
-    h += '<dt>Glyphs</dt><dd>' + (l.icon ? `<code>${esc(state.ic)}</code>` : 'no feature glyph') +
-      (bindings.length ? ', plus ' + bindings.map(([k, v]) =>
-        `${SLOT_LABELS[k] || k} as <code>${esc(v)}</code>`).join(', ') : '') + '</dd>';
-  }
-  $('c-brief').innerHTML = h;
-}
-
 function briefText() {
   const l = layoutOf(state.layout);
   const r = RELATIONSHIPS.find((x) => x[0] === state.rel) || ['', state.rel, ''];
   const m = modeOf();
-  const lines = [
-    `Mode: ${m.label}, preset ${PRESETS[state.preset].label}`,
-    `Feature interpretation: ${state.does || '(not written)'}`,
-  ];
-  if (m.kind === 'device') lines.push(`Device: ${DEVICES[state.device].label}, screen content ${state.screenContent}`);
+  const lines = [`Mode: ${m.label}, preset ${PRESETS[state.preset].label}`, `Feature: ${state.name}`];
+  if (m.kind === 'device') lines.push(`Base: ${DEVICES[state.device].label}, screen ${state.screenContent}`);
   if (m.kind === 'compose' || state.screenContent === 'composition') {
     lines.push(`Metaphor: ${r[1]}, ${r[2]}.`);
     lines.push(`Layout: ${l.key} ${l.name}, adapted from ${l.example}.svg.`);
     lines.push(`Primitives: ${l.prims.join(', ')}.`);
+    if (l.icon) lines.push(`Glyph: ${state.ic}`);
   }
-  lines.push(`Accent: ${state.accent} light, ${darkAccent(state.accent, state.preset)} dark (derived in OKLCH).`);
-  if (state.placed.length) lines.push(`${state.placed.length} pieces placed outside the layout.`);
+  if (state.emblems.length) {
+    lines.push('Emblems: ' + state.emblems.map((e) =>
+      `${glyphName(e.glyph)} (${e.tone}, ${e.shape}, ${e.size}u at ${e.x},${e.y})`).join('; '));
+  }
+  lines.push(`Accent: ${state.accent} light, ${darkOf()} dark.`);
   return lines.join('\n');
 }
 
-/* Token values ride on the ground wrappers rather than in the file, so one SVG
-   string paints correctly on both. */
+/* ========================================================= R E N D E R == */
+
 function paintGrounds() {
-  const dark = darkAccent(state.accent, state.preset);
   document.querySelectorAll('[data-ground]').forEach((el) => {
-    const theme = el.dataset.ground;
-    const vars = cssVars(state.preset, theme, theme === 'dark' ? dark : state.accent);
+    const vars = varsFor(el.dataset.ground);
     Object.entries(vars).forEach(([k, v]) => el.style.setProperty(k, v));
   });
 }
@@ -1474,71 +1433,238 @@ function render() {
   const uid = slug(state.name);
   const contained = modeOf().kind === 'device';
 
-  const pair = $('f-accent-pair');
-  if (pair) pair.textContent = `${state.accent} / ${darkAccent(state.accent, state.preset)}`;
-  if ($('f-slug')) $('f-slug').textContent = uid;
-
   let svgText = '', buildError = '';
   try { svgText = buildCurrent(uid); } catch (e) { buildError = e.message; }
 
   if (buildError) {
-    $('s-light').innerHTML = ''; $('s-dark').innerHTML = '';
-    $('s-light-ladder').innerHTML = ''; $('s-dark-ladder').innerHTML = '';
+    $('s-art').innerHTML = '';
+    $('s-ladder').innerHTML = '';
     $('s-code').textContent = '';
-    renderChecks(null, buildError); renderBrief(); paintGrounds();
+    renderChecks(null, buildError);
+    paintGrounds();
     return;
   }
 
   current = { svg: svgText, uid };
-  $('s-light').innerHTML = svgText;
+  $('s-art').dataset.ground = state.ground;
+  $('s-art').innerHTML = svgText;
   $('s-code').textContent = svgText;
-  try { $('s-dark').innerHTML = buildCurrent(uid + '-dark'); } catch (e) { $('s-dark').innerHTML = ''; }
 
-  [['s-light-ladder', 'l'], ['s-dark-ladder', 'd']].forEach(([hostId, tag]) => {
-    $(hostId).innerHTML = [96, 64, 40].map((px) => {
-      let art = '';
-      try { art = buildCurrent(`${uid}-${tag}${px}`); } catch (e) { art = ''; }
-      return `<span class="bd-rung"><span style="width:${px}px">${art}</span><span>${px}</span></span>`;
-    }).join('');
-  });
+  $('s-ladder').innerHTML = [96, 64, 40].map((px) => {
+    let art = '';
+    try { art = buildCurrent(`${uid}-l${px}`); } catch (e) {}
+    return `<span class="bd-rung"><span class="bd-ground" data-ground="${state.ground}" ` +
+      `style="width:${px}px">${art}</span><span>${px}</span></span>`;
+  }).join('');
+
+  $('v-note').textContent = `${slug(state.name)}.svg · 160 grid`;
 
   renderChecks(lint(svgText, uid, { contained }), '');
-  renderBrief();
+  renderEmblems();
   renderSheet();
   paintGrounds();
 }
 
 function renderSheet() {
   const key = [state.mode, state.preset, state.ic, state.rows, state.device,
-    state.screenContent, JSON.stringify(state.slots)].join('|');
+    state.screenContent, JSON.stringify(state.slots), JSON.stringify(state.emblems)].join('|');
   if (key === sheetKey) return;
   sheetKey = key;
-  const cells = modeOf().kind === 'device'
+  const isDev = modeOf().kind === 'device';
+  const cells = isDev
     ? Object.entries(DEVICES).map(([k, d]) => ({ key: k, name: d.label,
         make: (uid) => buildDevice(uid, state.name, opts({ device: k })) }))
     : LAYOUTS.map((l) => ({ key: l.key, name: `${l.key} ${l.name}`,
         make: (uid) => build(l.key, uid, opts({ rows: l.rows ? l.rows[1] : 3 })) }));
-  const isDev = modeOf().kind === 'device';
-  $('sheet-title').textContent = isDev ? 'Every device, same screen' : 'All twelve, same glyph and accent';
+  $('sheet-count').textContent = cells.length + (isDev ? ' bases' : ' layouts');
   $('sheet-lede').textContent = isDev
-    ? 'One screen across every frame. A composition built for a 160 square crops to fit, so a '
-      + 'landscape screen shows the top of it and a portrait screen shows a column through the '
-      + 'middle. Compositions drawn for a portrait screen are not built yet.'
-    : 'A set drifts one illustration at a time, so the only useful way to look at one is beside '
-      + 'its neighbors. This is the whole family at the current settings, on both grounds. In a '
-      + 'real set no layout appears more than twice in twelve, and at most two carry a full width '
-      + 'header card.';
+    ? 'Every base with the same screen. A composition built for a 160 square crops to fit, so a '
+      + 'landscape screen shows the top of it and a portrait screen a column through the middle.'
+    : 'A set drifts one illustration at a time, so the only useful way to look at one is beside its '
+      + 'neighbors. Both grounds, because an illustration that works on only one is not finished.';
   [['sheet-light', 'sl'], ['sheet-dark', 'sd']].forEach(([hostId, tag]) => {
     $(hostId).innerHTML = cells.map((c) => {
       let art = '';
-      try { art = c.make(`${tag}-${c.key.toLowerCase()}`); } catch (e) { art = ''; }
+      try { art = c.make(`${tag}-${c.key.toLowerCase()}`); } catch (e) {}
       return `<figure class="bd-cell">${art}<figcaption>${esc(c.name)}</figcaption></figure>`;
     }).join('');
   });
-  $('sheet-count').textContent = cells.length + (modeOf().kind === 'device' ? ' devices' : ' layouts');
 }
 
-/* ================================================================ W I R E == */
+/* ========================================================= M E S S A G E ==
+   A parser, not a model. This page is static, so there is nowhere for a model
+   to run, and a box that pretends otherwise is worse than one that says what
+   it understands. Everything below maps onto a control that already exists,
+   which is also why it can never ask for something the tool cannot build. */
+
+const GLYPH_WORDS = {
+  shield: 'shield-checkmark', security: 'shield-checkmark', check: 'checkmark',
+  checkmark: 'checkmark', tick: 'checkmark', done: 'checkmark',
+  calendar: 'calendar-ltr', schedule: 'calendar-ltr', chat: 'chat', message: 'chat',
+  lock: 'lock-closed', locked: 'lock-closed', bell: 'alert', alert: 'alert',
+  notification: 'alert', plug: 'plug-connected', connector: 'plug-connected',
+  cloud: 'cloud', key: 'key', star: 'star', settings: 'settings', gear: 'settings',
+  search: 'search', find: 'search', history: 'history', clock: 'clock',
+  doc: 'document', document: 'document', file: 'document', receipt: 'receipt',
+  invoice: 'receipt', billing: 'receipt', people: 'people', team: 'people',
+  users: 'people', person: 'person-circle', avatar: 'person-circle', user: 'person-circle',
+  tag: 'tag', label: 'tag', code: 'code', braces: 'code', grid: 'grid', apps: 'apps',
+  box: 'box', branch: 'branch', cube: 'cube', database: 'database', desktop: 'desktop',
+  edit: 'edit', pencil: 'edit', flow: 'flowchart', flowchart: 'flowchart',
+  laptop: 'laptop', mail: 'mail', email: 'mail', money: 'money', stack: 'stack',
+  tablet: 'tablet', plus: 'add', add: 'add', arrow: 'arrow-right', book: 'book-open',
+  docs: 'book-open', store: 'building-shop', shop: 'building-shop', globe: 'globe', web: 'globe',
+};
+
+const COLOR_WORDS = {
+  blue: '#0078D4', green: '#107C10', red: '#C4314B', orange: '#CA5010',
+  purple: '#8764B8', violet: '#8764B8', magenta: '#C239B3', pink: '#C239B3',
+  teal: '#038387', gold: '#B08A3E', yellow: '#B08A3E', gray: '#5C6166', grey: '#5C6166',
+};
+
+const LAYOUT_WORDS = {
+  header: 'L1', 'header rows': 'L1', cascade: 'L2', tabs: 'L3', 'tab bar': 'L3', toolbar: 'L4',
+  chips: 'L5', 'corner chips': 'L5', window: 'L6', fanned: 'L7', fan: 'L7',
+  notifications: 'L8', constellation: 'L9', hub: 'L9', matrix: 'L10',
+  timeline: 'L11', split: 'L12',
+};
+
+function nextEmblemSpot(n) {
+  /* Straddling a corner of the base rather than sitting over its content:
+     an emblem is attached to the thing, not printed on it. Kept clear of the
+     outer 10 units, which are shadow bleed. */
+  const spots = [[10, 18], [118, 92], [118, 18], [10, 92], [66, 6]];
+  const [x, y] = spots[n % spots.length];
+  return { x, y };
+}
+
+function addEmblem(glyphId, tone) {
+  const { x, y } = nextEmblemSpot(state.emblems.length);
+  state.emblems.push({ glyph: glyphId, x, y, size: 28, shape: 'squircle', tone: tone || 'accent' });
+  state.emblemSel = state.emblems.length - 1;
+}
+
+async function runMessage(raw) {
+  const t = ' ' + raw.toLowerCase().replace(/[.,!?]/g, ' ').replace(/\s+/g, ' ') + ' ';
+  const did = [];
+  let m;
+
+  // clear
+  if (/\b(clear all|remove all|clear everything|no emblems)\b/.test(t)) {
+    state.emblems = []; state.emblemSel = -1; did.push('cleared the emblems');
+  }
+
+  // mode
+  if ((m = /\b(windows|pieces|product ui|devices?)\b/.exec(t)) && !/\bon (a|the) /.test(t)) {
+    const key = { windows: 'windows', pieces: 'pieces', 'product ui': 'product',
+      device: 'device', devices: 'device' }[m[1]];
+    if (key && key !== state.mode) { setMode(key); did.push('switched to ' + MODES[key].label); }
+  }
+
+  // base device
+  if ((m = /\b(?:on|in|inside|use) (?:a |the )?(laptop|monitor|desktop|all in one|tablet|phone)\b/.exec(t))) {
+    const key = { laptop: 'laptop', monitor: 'monitor', desktop: 'monitor',
+      'all in one': 'allinone', tablet: 'tablet', phone: 'phone' }[m[1]];
+    if (key) {
+      if (state.mode !== 'device') setMode('device');
+      state.device = key; did.push('put it on the ' + DEVICES[key].label.toLowerCase());
+    }
+  }
+
+  // layout. Longest word first, so "corner chips" wins over "chips".
+  for (const word of Object.keys(LAYOUT_WORDS).sort((a, b) => b.length - a.length)) {
+    if (GLYPH_WORDS[word]) continue;
+    if (!new RegExp('\\b' + word + '\\b').test(t)) continue;
+    const key = LAYOUT_WORDS[word];
+    state.layout = key;
+    // Report even when it was already selected: silence reads as "I did not
+    // understand you", which is the one thing a parser must never fake.
+    did.push('used the ' + layoutOf(key).name.toLowerCase());
+    break;
+  }
+
+  // rows
+  if ((m = /\b(one|two|three|four|\d+) rows?\b/.exec(t))) {
+    const n = { one: 1, two: 2, three: 3, four: 4 }[m[1]] || Number(m[1]);
+    if (n) { state.rows = n; did.push(n + ' rows'); }
+  }
+
+  // accent
+  if ((m = /#([0-9a-f]{6})\b/.exec(t))) {
+    state.accent = ('#' + m[1]).toUpperCase(); did.push('accent ' + state.accent);
+  } else if ((m = /\b(?:make it|accent|color|colour|in) (\w+)\b/.exec(t)) && COLOR_WORDS[m[1]]) {
+    state.accent = COLOR_WORDS[m[1]]; did.push('accent ' + m[1]);
+  }
+
+  // ground
+  if (/\b(dark) (ground|mode|background)\b/.test(t)) { state.ground = 'dark'; did.push('dark ground'); }
+  if (/\b(light) (ground|mode|background)\b/.test(t)) { state.ground = 'light'; did.push('light ground'); }
+
+  // name
+  if ((m = /\b(?:call it|name it|title) ([a-z0-9 ]{2,40})$/.exec(t.trim()))) {
+    state.name = m[1].trim().replace(/\b\w/g, (c) => c.toUpperCase());
+    did.push('named it ' + state.name);
+  }
+
+  // remove an emblem by glyph word
+  if ((m = /\b(?:remove|drop|delete|without)(?: the| a| an)? (\w+)\b/.exec(t)) && GLYPH_WORDS[m[1]]) {
+    const want = 'system.' + GLYPH_WORDS[m[1]];
+    const i = state.emblems.findIndex((e) => e.glyph === want);
+    if (i >= 0) { state.emblems.splice(i, 1); state.emblemSel = -1; did.push('removed the ' + m[1]); }
+  }
+
+  // add emblems, or set the feature glyph
+  const addRe = /\b(?:add|place|put|with)(?: a| an| the)? (\w+)\b/g;
+  let a;
+  while ((a = addRe.exec(t))) {
+    const g = GLYPH_WORDS[a[1]];
+    if (!g) continue;
+    if (/\bon (a|the) (laptop|monitor|desktop|tablet|phone|all in one)\b/.test(t) && ['laptop', 'monitor', 'desktop', 'tablet', 'phone'].includes(a[1])) continue;
+    addEmblem('system.' + g, state.emblems.some((e) => e.tone === 'accent') ? 'surface' : 'accent');
+    did.push('added a ' + a[1] + ' emblem');
+  }
+
+  if ((m = /\b(?:glyph|icon|mark) (?:is |as )?(\w+)\b/.exec(t)) && GLYPH_WORDS[m[1]]) {
+    state.ic = 'system.' + GLYPH_WORDS[m[1]];
+    if (modeOf().pieces) state.slots.feature = state.ic;
+    did.push('feature glyph ' + m[1]);
+  } else if ((m = /\buse (?:the )?(\w+)\b/.exec(t)) && GLYPH_WORDS[m[1]] && !did.length) {
+    state.ic = 'system.' + GLYPH_WORDS[m[1]];
+    did.push('feature glyph ' + m[1]);
+  }
+
+  // relationship
+  for (const [k, label] of RELATIONSHIPS.map((r) => [r[0], r[1]])) {
+    if (new RegExp('\\b' + k + '\\b').test(t) && state.rel !== k) {
+      state.rel = k;
+      if (!layoutOf(state.layout).rel.includes(k)) {
+        const match = LAYOUTS.find((l) => l.rel.includes(k));
+        if (match) state.layout = match.key;
+      }
+      did.push('relationship ' + label.toLowerCase());
+      break;
+    }
+  }
+
+  say('you', raw);
+  if (did.length) {
+    say('bot', 'Did that: ' + did.join(', ') + '.');
+    renderLeft(); renderAccents(); render();
+  } else {
+    say('miss', 'I did not understand that. I know: add a shield, remove the calendar, clear all, ' +
+      'on a laptop, use the timeline, three rows, make it green, glyph search, call it Audit log, ' +
+      'and the relationship words.');
+  }
+}
+
+function say(who, text) {
+  state.log.push({ who, text });
+  $('m-log').innerHTML = state.log.slice(-8).map((l) =>
+    `<div class="bd-bubble ${l.who === 'you' ? 'you' : l.who === 'miss' ? 'miss' : ''}">${esc(l.text)}</div>`).join('');
+  $('m-log').scrollTop = $('m-log').scrollHeight;
+}
+
+/* ========================================================== E X P O R T == */
 
 function toast(msg) {
   $('b-status').textContent = msg;
@@ -1546,8 +1672,7 @@ function toast(msg) {
   toast.t = setTimeout(() => { $('b-status').textContent = ''; }, 2600);
 }
 
-function download(name, text) {
-  const blob = new Blob([text], { type: 'image/svg+xml' });
+function download(name, blob) {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = name;
@@ -1555,144 +1680,225 @@ function download(name, text) {
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
 
+/* PNG has to go through the flat copy. An <img> does not run CSS, so a themed
+   file rasterizes to its fallbacks; flattening first is the only way the
+   exported pixels match what is on the canvas. */
+function exportPng() {
+  const flat = flatten(current.svg, varsFor(state.ground));
+  const img = new Image();
+  const url = URL.createObjectURL(new Blob([flat], { type: 'image/svg+xml' }));
+  img.onload = () => {
+    const size = 1024;
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = varsFor(state.ground)['--il-canvas'];
+    ctx.fillRect(0, 0, size, size);
+    ctx.drawImage(img, 0, 0, size, size);
+    URL.revokeObjectURL(url);
+    c.toBlob((b) => { download(`${current.uid}-${state.ground}.png`, b); toast('PNG exported at 1024'); });
+  };
+  img.onerror = () => { URL.revokeObjectURL(url); toast('Could not rasterize that'); };
+  img.src = url;
+}
+
 async function copy(text, what) {
   try { await navigator.clipboard.writeText(text); toast(what + ' copied'); }
   catch (e) { toast('Could not reach the clipboard'); }
 }
 
+/* ============================================================== W I R E == */
+
 function on(id, ev, fn) { const el = $(id); if (el) el.addEventListener(ev, fn); }
 
-function wireControls() {
-  on('f-name', 'input', (e) => { state.name = e.target.value || 'Untitled'; render(); });
-  on('f-does', 'input', (e) => { state.does = e.target.value; renderBrief(); });
+function setMode(key) {
+  state.mode = key;
+  const m = MODES[key];
+  state.preset = m.preset;
+  if (Object.values(PRESETS).some((p) => p.light.accent.toLowerCase() === state.accent.toLowerCase())) {
+    state.accent = PRESETS[state.preset].light.accent;
+  }
+  state.pick = m.pieces ? (layoutOf(state.layout).slots[0] || 'feature') : 'feature';
+  if (m.pieces) loadLibrary().then(loadParts);
+}
 
-  on('f-preset', 'change', (e) => {
-    state.preset = e.target.value;
-    // Following the preset's own accent keeps the pair in step; a custom accent
-    // that was deliberately chosen is left alone.
-    const wasPreset = Object.values(PRESETS).some((p) => p.light.accent.toLowerCase() === state.accent.toLowerCase());
-    if (wasPreset) state.accent = PRESETS[state.preset].light.accent;
-    renderControls(); render();
+function wireLeft() {
+  on('f-modes', 'click', (e) => {
+    const b = e.target.closest('.bd-mode');
+    if (!b) return;
+    setMode(b.dataset.mode);
+    renderLeft(); renderAccents(); render();
   });
 
-  on('f-device', 'change', (e) => { state.device = e.target.value; render(); });
-  on('f-screen', 'change', (e) => { state.screenContent = e.target.value; renderControls(); render(); });
+  on('f-name', 'input', (e) => { state.name = e.target.value || 'Untitled'; render(); });
+  on('f-preset', 'change', (e) => {
+    state.preset = e.target.value;
+    if (Object.values(PRESETS).some((p) => p.light.accent.toLowerCase() === state.accent.toLowerCase())) {
+      state.accent = PRESETS[state.preset].light.accent;
+    }
+    renderLeft(); renderAccents(); render();
+  });
+
+  on('f-devices', 'click', (e) => {
+    const b = e.target.closest('[data-device]');
+    if (!b) return;
+    state.device = b.dataset.device;
+    renderLeft(); render();
+  });
+  on('f-screen', 'change', (e) => { state.screenContent = e.target.value; renderLeft(); render(); });
 
   on('f-rel', 'change', (e) => {
     state.rel = e.target.value;
-    // Moving the relationship moves the layout to one that carries it: leaving
-    // a mismatched layout selected is how a set stops meaning anything.
     if (!layoutOf(state.layout).rel.includes(state.rel)) {
       const match = LAYOUTS.find((l) => l.rel.includes(state.rel));
       if (match) state.layout = match.key;
     }
-    renderControls(); render();
+    renderLeft(); render();
   });
 
   on('f-layouts', 'click', (e) => {
-    const btn = e.target.closest('.bd-lay');
-    if (!btn) return;
-    state.layout = btn.dataset.key;
+    const b = e.target.closest('[data-key]');
+    if (!b) return;
+    state.layout = b.dataset.key;
     if (!layoutOf(state.layout).slots.includes(state.pick)) {
       state.pick = layoutOf(state.layout).slots[0] || 'feature';
     }
-    renderControls(); render();
+    renderLeft(); render();
   });
 
   on('f-rows', 'change', (e) => { state.rows = Number(e.target.value); render(); });
 
   on('f-slots', 'click', (e) => {
-    const btn = e.target.closest('[data-slot]');
-    if (!btn) return;
-    state.pick = btn.dataset.slot;
-    renderControls();
+    const b = e.target.closest('[data-slot]');
+    if (!b) return;
+    state.pick = b.dataset.slot;
+    renderLeft();
   });
 
-  document.querySelectorAll('[data-src]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      state.src = btn.dataset.src;
+  document.querySelectorAll('[data-src]').forEach((b) => {
+    b.addEventListener('click', () => {
+      state.src = b.dataset.src;
       state.search = '';
-      if (state.src === 'library') loadLibrary().then(renderIconPicker);
-      if (state.src === 'parts') loadParts().then(renderIconPicker);
-      renderControls();
+      if (state.src === 'library') loadLibrary().then(renderGlyphs);
+      if (state.src === 'parts') loadParts().then(renderGlyphs);
+      renderLeft();
     });
   });
+  on('f-search', 'input', (e) => { state.search = e.target.value; renderGlyphs(); });
 
-  on('f-isearch', 'input', (e) => { state.search = e.target.value; renderIconPicker(); });
-
-  on('f-icons', 'click', async (e) => {
-    const btn = e.target.closest('.bd-ico');
-    if (!btn) return;
-    const id = btn.dataset.name;
+  /* The glyph tray binds the selected emblem when one is selected, and the
+     layout's slot otherwise. One tray, two destinations, and the selection
+     says which. */
+  on('f-glyphs', 'click', async (e) => {
+    const b = e.target.closest('.bd-glyph');
+    if (!b) return;
+    const id = b.dataset.name;
     try { await loadGlyph(id); } catch (err) { toast(err.message); return; }
-    if (modeOf().pieces && state.pick !== 'feature') state.slots[state.pick] = id;
-    else if (modeOf().pieces) { state.slots.feature = id; state.ic = id; }
-    else state.ic = id;
-    renderIconPicker(); render();
+    if (state.emblemSel >= 0 && state.emblems[state.emblemSel]) {
+      state.emblems[state.emblemSel].glyph = id;
+    } else if (modeOf().pieces && state.pick !== 'feature') {
+      state.slots[state.pick] = id;
+    } else {
+      state.ic = id;
+      if (modeOf().pieces) state.slots.feature = id;
+    }
+    renderGlyphs(); render();
   });
 
-  on('f-slot-clear', 'click', () => {
-    delete state.slots[state.pick];
-    if (state.pick === 'feature') state.ic = 'system.history';
-    renderControls(); render();
-  });
-
-  on('f-place', 'click', () => {
-    const id = state.slots[state.pick] || state.ic;
-    state.placed.push({ id, x: 56, y: 56, size: 36 });
-    renderControls(); render();
-  });
-
-  on('f-placed', 'input', (e) => {
-    const el = e.target.closest('[data-placed]');
-    if (!el) return;
-    state.placed[Number(el.dataset.placed)][el.dataset.k] = Number(el.value);
-    render();
-  });
-  on('f-placed', 'click', (e) => {
-    const btn = e.target.closest('[data-drop]');
-    if (!btn) return;
-    state.placed.splice(Number(btn.dataset.drop), 1);
-    renderControls(); render();
-  });
-
-  on('f-accents', 'click', (e) => {
-    const btn = e.target.closest('.bd-sw');
-    if (!btn) return;
-    state.accent = btn.dataset.hex;
-    renderAccents(); render();
-  });
-  on('f-accents', 'input', (e) => {
-    if (e.target.type !== 'color') return;
-    state.accent = e.target.value.toUpperCase();
-    document.querySelectorAll('.bd-sw').forEach((b) => b.setAttribute('aria-pressed', 'false'));
-    render();
-  });
+  on('b-brief', 'click', () => copy(briefText(), 'The brief'));
+  on('b-flat', 'click', () => download(`${current.uid}-${state.ground}.svg`,
+    new Blob([flatten(current.svg, varsFor(state.ground))], { type: 'image/svg+xml' })));
 }
 
 function wireOnce() {
-  $('f-modes').addEventListener('click', (e) => {
-    const btn = e.target.closest('.bd-mode');
-    if (!btn) return;
-    state.mode = btn.dataset.mode;
-    const m = modeOf();
-    state.preset = m.preset;
-    state.accent = PRESETS[state.preset].light.accent;
-    state.pick = m.pieces ? (layoutOf(state.layout).slots[0] || 'feature') : 'feature';
-    if (m.pieces) loadLibrary().then(loadParts);
-    renderModes(); renderControls(); render();
+  $('v-view').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-view]');
+    if (!b) return;
+    state.view = b.dataset.view;
+    $('v-view').querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
+    $('view-canvas').style.display = state.view === 'canvas' ? 'flex' : 'none';
+    $('view-sheet').hidden = state.view !== 'sheet';
   });
 
-  $('b-copy').addEventListener('click', () => copy(current.svg, 'The SVG'));
-  $('b-save').addEventListener('click', () => download(current.uid + '.svg', current.svg));
-  $('b-flat-l').addEventListener('click', () => download(current.uid + '-light.svg',
-    flatten(current.svg, cssVars(state.preset, 'light', state.accent))));
-  $('b-flat-d').addEventListener('click', () => download(current.uid + '-dark.svg',
-    flatten(current.svg, cssVars(state.preset, 'dark', darkAccent(state.accent, state.preset)))));
-  $('b-brief').addEventListener('click', () => copy(briefText(), 'The brief'));
+  $('v-ground').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-gr]');
+    if (!b) return;
+    state.ground = b.dataset.gr;
+    $('v-ground').querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
+    renderLeft();
+    render();
+  });
+
+  $('f-accents').addEventListener('click', (e) => {
+    const b = e.target.closest('.bd-sw');
+    if (!b) return;
+    state.accent = b.dataset.hex;
+    renderAccents(); render();
+  });
+  $('f-accent-custom').addEventListener('input', (e) => {
+    state.accent = e.target.value.toUpperCase();
+    renderAccents(); render();
+  });
+
+  $('f-objs').addEventListener('click', (e) => {
+    const drop = e.target.closest('[data-drop]');
+    if (drop) {
+      state.emblems.splice(Number(drop.dataset.drop), 1);
+      state.emblemSel = -1;
+      renderEmblems(); render();
+      return;
+    }
+    const row = e.target.closest('[data-obj]');
+    if (!row) return;
+    const i = Number(row.dataset.obj);
+    state.emblemSel = state.emblemSel === i ? -1 : i;
+    renderEmblems();
+  });
+
+  $('f-obj-edit').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-tone], [data-shape]');
+    if (!b || state.emblemSel < 0) return;
+    const e0 = state.emblems[state.emblemSel];
+    if (b.dataset.tone) e0.tone = b.dataset.tone;
+    if (b.dataset.shape) e0.shape = b.dataset.shape;
+    renderEmblems(); render();
+  });
+  $('f-obj-edit').addEventListener('input', (e) => {
+    const el = e.target.closest('[data-k]');
+    if (!el || state.emblemSel < 0 || el.dataset.k === 'pick') return;
+    state.emblems[state.emblemSel][el.dataset.k] = Number(el.value);
+    render();
+  });
+
+  $('f-obj-add').addEventListener('click', () => {
+    addEmblem(state.ic || 'system.checkmark',
+      state.emblems.some((e) => e.tone === 'accent') ? 'surface' : 'accent');
+    renderEmblems(); render();
+  });
+  $('f-obj-clear').addEventListener('click', () => {
+    state.emblems = []; state.emblemSel = -1;
+    renderEmblems(); render();
+  });
+
+  $('m-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = $('m-input').value.trim();
+    if (!v) return;
+    $('m-input').value = '';
+    runMessage(v);
+  });
+
+  $('b-svg').addEventListener('click', () => download(current.uid + '.svg',
+    new Blob([current.svg], { type: 'image/svg+xml' })));
+  $('b-png').addEventListener('click', exportPng);
+
+  document.addEventListener('themechange', paintGrounds);
 }
 
-renderModes();
-renderControls();
+applyPreset(state.preset, state.accent);
+say('bot', 'Describe a change and I will make it. Try: add a shield, on a laptop, use the timeline, ' +
+  'make it green, three rows. I am a parser rather than a model, so I only do what the controls do.');
+renderLeft();
+renderAccents();
 wireOnce();
 render();

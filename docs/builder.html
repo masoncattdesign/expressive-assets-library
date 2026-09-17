@@ -5,134 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Builder &mdash; Expressive Assets</title>
-<meta name="description" content="Four ways to build an illustration on one visual language: Windows, pieced together from library assets, product UI, and inside a device.">
+<meta name="description" content="Compose an illustration from a fixed visual language: four modes, twelve layouts, a base with emblems on it, and a check that reads the output back.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230078D4'/%3E%3Crect x='6' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='6' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='6' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3Crect x='13' y='13' width='5' height='5' rx='1.4' fill='white'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="doc.css">
+<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="builder.css">
 <script src="chrome.js"></script>
 <script>applyStoredTheme();</script>
 </head>
 <body>
 
-<nav class="ea-bar" aria-label="Builder">
-  <a class="ea-brand" href="builder.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Builder</a>
-  <a class="ea-tab on" href="builder.html" aria-current="page">Builder</a>
-  <a class="ea-tab" href="builder-about.html">About</a>
-  <a class="ea-tab" href="builder-system-map.html">System Map</a>
-  <span class="ea-right">
+<div class="bd-app">
+
+  <header class="bd-top">
+    <a class="bd-brand" href="builder.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="5" width="5.6" height="5.6" rx="1.6"/><rect x="5" y="13.4" width="5.6" height="5.6" rx="1.6"/><rect x="13.4" y="13.4" width="5.6" height="5.6" rx="1.6"/></svg>Illustration Builder</a>
+    <a class="bd-top-tab on" href="builder.html" aria-current="page">Builder</a>
+    <a class="bd-top-tab" href="builder-about.html">About</a>
+    <a class="bd-top-tab" href="builder-system-map.html">System Map</a>
+    <span class="bd-top-end"></span>
+    <span class="bd-status" id="b-status" role="status" aria-live="polite"></span>
     <span data-theme-switch></span>
-  </span>
-</nav>
-
-<div class="wrap bd-tool">
-
-  <header style="display:flex;flex-direction:column;gap:18px">
-    <p class="eyebrow"><span>Windows Design Systems</span> &middot; <span>Expressive Assets</span> &middot; <b>Builder</b></p>
-    <h1>Four ways to build, one language</h1>
-    <p class="stand">Windows illustrations, illustrations pieced together from library assets,
-    product UI illustrations, and any of those put inside a device. The four modes are different
-    ways in, not four tools: they share the geometry, the single stroke, the thirteen color slots
-    and the checks, which is what makes their output belong to one family.</p>
-    <div class="meta">
-      <span>Builder 0.2</span><span>4 modes</span><span>12 layouts</span><span>5 devices</span>
-      <span>3 presets</span>
-      <span class="bd-unlisted">Unlisted &middot; standalone</span>
-    </div>
+    <button type="button" class="bd-btn" id="b-svg">Export SVG</button>
+    <button type="button" class="bd-btn primary" id="b-png">Export PNG</button>
   </header>
 
-  <section>
-    <div class="bd-modes" id="f-modes" role="group" aria-label="Build mode"></div>
-    <p class="bd-note" id="f-mode-blurb"></p>
-  </section>
+  <div class="bd-body">
 
-  <section>
-    <h2>The bench</h2>
-    <p>Both grounds are always visible and neither follows the light and dark switch in the bar
-    above. An illustration that only works on one ground is not finished, and a switch that can
-    hide the other ground makes that easy to miss.
-    <a href="builder-about.html">About</a> has the language and what is still a stub;
-    the <a href="builder-system-map.html">System Map</a> draws the pipeline end to end.</p>
+    <!-- Left rail: mode, then whatever that mode needs ------------------ -->
+    <aside class="bd-rail left" id="f-left" aria-label="Controls"></aside>
 
-    <div class="bd-bench">
+    <!-- Stage ---------------------------------------------------------- -->
+    <main class="bd-stage">
+      <div class="bd-stage-bar">
+        <div class="bd-seg" id="v-view" role="group" aria-label="View">
+          <button type="button" class="on" data-view="canvas">Canvas</button>
+          <button type="button" data-view="sheet">Contact sheet</button>
+        </div>
+        <div class="bd-seg" id="v-ground" role="group" aria-label="Ground">
+          <button type="button" class="on" data-gr="light">Light</button>
+          <button type="button" data-gr="dark">Dark</button>
+        </div>
+        <span class="bd-top-end"></span>
+        <span class="bd-status" id="v-note"></span>
+      </div>
 
-      <aside class="bd-col" id="f-controls" aria-label="Controls"></aside>
+      <div id="view-canvas" style="display:flex;flex-direction:column;flex:1;min-height:0">
+        <div class="bd-field-dots">
+          <div class="bd-artboard bd-ground" id="s-art" data-ground="light"></div>
+        </div>
+        <div class="bd-ladder" id="s-ladder"></div>
+      </div>
 
-      <div style="display:flex;flex-direction:column;gap:14px">
-        <div class="bd-grounds">
-          <div class="bd-ground bd-il-ground" data-ground="light">
-            <div class="bd-ground-head"><span>Light</span><span>160 grid</span></div>
-            <div class="bd-canvas" id="s-light"></div>
-            <div class="bd-ladder" id="s-light-ladder"></div>
+      <div id="view-sheet" class="bd-sheetview" hidden>
+        <p class="bd-hint" id="sheet-lede" style="margin-bottom:14px;max-width:70ch"></p>
+        <div class="bd-sheet-wrap">
+          <div class="bd-ground" data-ground="light">
+            <div class="bd-sheet-head"><span>Light</span><span id="sheet-count"></span></div>
+            <div class="bd-sheet" id="sheet-light"></div>
           </div>
-          <div class="bd-ground bd-il-ground" data-ground="dark">
-            <div class="bd-ground-head"><span>Dark</span><span>160 grid</span></div>
-            <div class="bd-canvas" id="s-dark"></div>
-            <div class="bd-ladder" id="s-dark-ladder"></div>
+          <div class="bd-ground" data-ground="dark" style="border-top:1px solid rgba(128,128,128,.22)">
+            <div class="bd-sheet-head"><span>Dark</span><span>Same settings</span></div>
+            <div class="bd-sheet" id="sheet-dark"></div>
           </div>
         </div>
+      </div>
+    </main>
 
+    <!-- Right rail ----------------------------------------------------- -->
+    <aside class="bd-rail right" aria-label="Accent, emblems and checks">
+
+      <div class="bd-sec">
+        <span class="bd-label">Accent color</span>
+        <div class="bd-swatches" id="f-accents"></div>
+        <div class="bd-hex">
+          <input type="color" id="f-accent-custom" value="#0078D4" aria-label="Custom accent">
+          <code id="f-accent-pair"></code>
+        </div>
+        <p class="bd-hint">One meaning, at most two elements. The dark value is derived in OKLCH so
+        a custom accent keeps the relationship a shipped pair has.</p>
+      </div>
+
+      <div class="bd-sec">
+        <span class="bd-label">Emblems (<span id="f-obj-count">0</span>)</span>
+        <div class="bd-objs" id="f-objs"></div>
+        <div id="f-obj-edit"></div>
         <div class="bd-btns">
-          <button type="button" class="bd-btn" id="b-copy">Copy SVG</button>
-          <button type="button" class="bd-btn" id="b-save">Download SVG</button>
-          <button type="button" class="bd-btn" id="b-flat-l">Flat, light</button>
-          <button type="button" class="bd-btn" id="b-flat-d">Flat, dark</button>
-          <button type="button" class="bd-btn" id="b-brief">Copy the brief</button>
-          <span class="bd-status" id="b-status" role="status" aria-live="polite"></span>
+          <button type="button" class="bd-btn" id="f-obj-add">Add emblem</button>
+          <button type="button" class="bd-btn" id="f-obj-clear">Clear all</button>
         </div>
-
-        <details>
-          <summary class="bd-label" style="cursor:pointer;padding:4px 0">The SVG</summary>
-          <pre class="bd-code" id="s-code"></pre>
-        </details>
+        <p class="bd-hint">An emblem is a surface carrying a glyph. It is the only thing you place;
+        a glyph never floats on its own.</p>
       </div>
 
-      <aside class="bd-col" aria-label="Checks">
-        <div class="bd-field">
-          <span class="bd-label">Checks</span>
-          <span class="bd-verdict pass" id="c-verdict">Pass</span>
-          <ul class="bd-checks" id="c-list"></ul>
-          <p class="bd-hint">The same rules the generator's linter enforces, run on the output
-          rather than on the intent. A rule that cannot fail is decoration, so these run on every
-          keystroke.</p>
-        </div>
-        <div class="bd-field">
-          <span class="bd-label">Brief</span>
-          <dl class="bd-brief" id="c-brief"></dl>
-        </div>
-      </aside>
-
-    </div>
-  </section>
-
-  <section>
-    <h2 id="sheet-title">All twelve, same glyph and accent</h2>
-    <p id="sheet-lede">A set drifts one illustration at a time, so the only useful way to look at
-    one is beside its neighbors. This is the whole family at the current settings, on both grounds.
-    In a real set no layout appears more than twice in twelve, and at most two carry a full width
-    header card.</p>
-    <div class="bd-sheet-wrap">
-      <div class="bd-il-ground" data-ground="light">
-        <div class="bd-ground-head" style="padding:8px 14px"><span>Light</span><span id="sheet-count">12 layouts</span></div>
-        <div class="bd-sheet" id="sheet-light"></div>
+      <div class="bd-sec">
+        <span class="bd-label">Checks</span>
+        <span class="bd-verdict pass" id="c-verdict">Pass</span>
+        <ul class="bd-checks" id="c-list"></ul>
       </div>
-      <div class="bd-il-ground" data-ground="dark" style="border-top:1px solid var(--rule)">
-        <div class="bd-ground-head" style="padding:8px 14px"><span>Dark</span><span>Same settings</span></div>
-        <div class="bd-sheet" id="sheet-dark"></div>
-      </div>
-    </div>
-  </section>
 
-  <div class="foot">
-    Builder 0.2. Standalone for now: these three pages link only to each other, and nothing in the
-    main library links here. Glyphs are Expressive Assets System Icons. The visual language, the
-    twelve layouts and the checks are ported from the product illustration generator exploration at
-    <a href="https://github.com/Devesh-Shirsath/spotkit" target="_blank" rel="noopener">Devesh-Shirsath/spotkit</a>,
-    MIT licensed.
+      <div class="bd-sec bd-msg">
+        <span class="bd-label">Create by message</span>
+        <div class="bd-msg-log" id="m-log"></div>
+        <form class="bd-msg-form" id="m-form">
+          <input type="text" id="m-input" placeholder="Describe a change&hellip;" autocomplete="off" spellcheck="false">
+          <button type="submit" aria-label="Send">&rarr;</button>
+        </form>
+      </div>
+
+      <details class="bd-sec">
+        <summary class="bd-label" style="cursor:pointer">The SVG</summary>
+        <pre class="bd-code" id="s-code" style="margin-top:8px"></pre>
+      </details>
+
+    </aside>
+
   </div>
-
 </div>
 
 <script src="builder.js"></script>

@@ -1,218 +1,309 @@
 /* Expressive Assets — Builder
    ----------------------------------------------------------------------
-   Shared by builder.html, builder-about.html and builder-system-map.html.
-   Layered on doc.css: the three Builder pages are documents first, and only
-   the bench needs a frame wider than a reading column.
+   The tool page is an app, so it sits on styles.css the way the Gallery and
+   the Customizer do, rather than on doc.css. Builder's own About and System
+   Map stay documents and keep doc.css. Two stylesheets, two jobs.
 
    The illustration tokens are not defined here. A preset supplies them and
-   the page writes them onto each [data-ground] wrapper, because the whole
+   the page writes them onto each [data-ground] element, because the whole
    point of the presets is that the values change while the structure does
    not. All this file says about a ground is that it paints its own canvas. */
 
-.wrap.bd-tool { max-width: 1240px; }
-.wrap.bd-tool section > p, .wrap section > .bd-note { max-width: 74ch; }
+/* --- App shell -------------------------------------------------------- */
 
-.bd-unlisted {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--signal);
-  background: var(--signal-soft); border-radius: var(--pill); padding: 4px 11px;
+.bd-app { display: grid; grid-template-rows: auto minmax(0, 1fr); height: 100vh; }
+
+.bd-top {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 14px; height: 52px; flex: none;
+  background: var(--sidebar); border-bottom: 1px solid var(--line);
+}
+.bd-brand {
+  display: flex; align-items: center; gap: 9px; margin-right: 10px;
+  font-weight: 650; font-size: 14.5px; color: var(--text); text-decoration: none;
+}
+.bd-brand svg {
+  width: 24px; height: 24px; border-radius: 7px; background: #0078D4;
+  padding: 4px; fill: #fff; flex: none;
+}
+.bd-top-tab {
+  font-size: 13px; color: var(--text-2); text-decoration: none;
+  padding: 6px 12px; border-radius: var(--pill); white-space: nowrap;
+}
+.bd-top-tab:hover { background: var(--surface-2); color: var(--text); }
+.bd-top-tab.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.bd-top-end { flex: 1; min-width: 12px; }
+
+.bd-body {
+  display: grid; grid-template-columns: 284px minmax(0, 1fr) 304px;
+  min-height: 0; min-width: 0;
+}
+@media (max-width: 1240px) { .bd-body { grid-template-columns: 264px minmax(0, 1fr) 272px; } }
+@media (max-width: 1040px) {
+  .bd-app { height: auto; }
+  .bd-body { grid-template-columns: minmax(0, 1fr); }
+  .bd-rail { border: 0; border-bottom: 1px solid var(--line); }
 }
 
-/* --- Modes ------------------------------------------------------------ */
-
-.bd-modes { display: flex; gap: 7px; flex-wrap: wrap; }
-.bd-mode {
-  font: inherit; font-family: var(--display); font-size: 14px; font-weight: 600;
-  color: var(--ink-2); background: var(--surface);
-  border: 1px solid var(--rule); border-radius: var(--pill);
-  padding: 8px 16px; cursor: pointer;
+.bd-rail {
+  background: var(--sidebar); overflow-y: auto; min-height: 0;
+  display: flex; flex-direction: column; gap: 18px; padding: 16px 14px 28px;
 }
-.bd-mode:hover { border-color: var(--accent-ring); color: var(--ink); }
-.bd-mode.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-ring); }
-.bd-mode:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bd-rail.left { border-right: 1px solid var(--line); }
+.bd-rail.right { border-left: 1px solid var(--line); }
 
-/* --- The bench -------------------------------------------------------- */
+/* --- Sections and fields ---------------------------------------------- */
 
-.bd-bench {
-  display: grid; gap: 18px;
-  grid-template-columns: 300px minmax(0, 1fr) 306px;
-  align-items: start;
-}
-@media (max-width: 1180px) { .bd-bench { grid-template-columns: 286px minmax(0, 1fr); } }
-@media (max-width: 860px)  { .bd-bench { grid-template-columns: minmax(0, 1fr); } }
-
-.bd-col {
-  background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
-  padding: 16px; display: flex; flex-direction: column; gap: 16px;
-}
-.bd-field { display: flex; flex-direction: column; gap: 6px; }
+.bd-sec { display: flex; flex-direction: column; gap: 9px; }
 .bd-label {
-  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink-3);
+  font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--text-3); font-weight: 650;
 }
-.bd-hint { font-size: 11.5px; line-height: 1.45; color: var(--ink-3); margin: 0; }
+.bd-hint { font-size: 11.5px; line-height: 1.45; color: var(--text-3); margin: 0; }
+.bd-field { display: flex; flex-direction: column; gap: 6px; }
 
 input[type="text"], input[type="number"], select, textarea {
-  width: 100%; font: inherit; font-size: 13px; color: var(--ink);
-  background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
-  padding: 7px 9px;
+  width: 100%; font: inherit; font-family: var(--font); font-size: 13px; color: var(--text);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 9px; padding: 7px 9px;
 }
-textarea { resize: vertical; min-height: 54px; line-height: 1.45; }
-input:focus-visible, select:focus-visible, textarea:focus-visible,
-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+textarea { resize: vertical; min-height: 50px; line-height: 1.45; }
 select { appearance: none; background-image: none; }
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
 .bd-btn {
-  font: inherit; font-size: 12.5px; font-weight: 500; color: var(--ink);
-  background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
-  padding: 7px 11px; cursor: pointer; white-space: nowrap;
+  font: inherit; font-family: var(--font); font-size: 12.5px; font-weight: 500;
+  color: var(--text); background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--pill);
+  padding: 6px 12px; cursor: pointer; white-space: nowrap;
 }
-.bd-btn:hover { background: var(--sunk); }
+.bd-btn:hover { border-color: var(--accent-ring); }
 .bd-btn.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-ring); font-weight: 600; }
-.bd-btns { display: flex; flex-wrap: wrap; gap: 7px; }
+.bd-btn.primary { background: #0078D4; border-color: #0078D4; color: #fff; }
+.bd-btn.primary:hover { background: #0067B8; border-color: #0067B8; }
+.bd-btns { display: flex; flex-wrap: wrap; gap: 6px; }
 
-/* Layout picker. Each tile renders the layout it names, so the choice is made
-   by looking rather than by reading twelve descriptions. */
-.bd-layouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
-.bd-lay {
-  position: relative; border: 1px solid var(--rule); border-radius: 9px;
-  background: var(--paper); padding: 5px 5px 4px; cursor: pointer;
-  display: flex; flex-direction: column; gap: 3px; text-align: center;
+/* --- Mode cards ------------------------------------------------------- */
+/* Two by two rather than a row of four: the labels are words of different
+   lengths and a row makes the short ones look like an afterthought. */
+
+.bd-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.bd-mode {
+  text-align: left; cursor: pointer; padding: 8px 9px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  display: flex; flex-direction: column; gap: 3px; font-family: var(--font);
 }
-.bd-lay:hover { border-color: var(--accent-ring); }
-.bd-lay[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-.bd-lay > span { display: block; border-radius: 5px; overflow: hidden; }
-.bd-lay svg { width: 100%; min-width: 0; height: auto; display: block; }
-.bd-lay b { font-family: var(--mono); font-size: 9px; color: var(--ink-3); font-weight: 500; }
-.bd-lay[aria-pressed="true"] b { color: var(--accent); }
-.bd-lay.rec::after {
-  content: ''; position: absolute; top: 6px; right: 6px;
-  width: 5px; height: 5px; border-radius: 50%; background: var(--p-accent);
+.bd-mode:hover { border-color: var(--accent-ring); }
+.bd-mode.on { border-color: var(--accent); background: var(--accent-soft); }
+.bd-mode b { font-size: 12.5px; font-weight: 650; color: var(--text); }
+.bd-mode.on b { color: var(--accent); }
+.bd-mode span { font-size: 10px; line-height: 1.3; color: var(--text-3); }
+
+/* --- Card trays (layouts, devices, glyphs, emblem presets) ------------- */
+
+.bd-tray { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.bd-tray.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bd-card {
+  position: relative; cursor: pointer; padding: 6px 6px 5px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  font-family: var(--font);
+}
+.bd-card:hover { border-color: var(--accent-ring); }
+.bd-card[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.bd-card > .bd-thumb {
+  width: 100%; border-radius: 6px; overflow: hidden; display: block;
+  background: var(--il-canvas, var(--surface-2));
+}
+.bd-card svg { width: 100%; min-width: 0; height: auto; display: block; }
+.bd-card b { font-size: 10px; font-weight: 500; color: var(--text-3); text-align: center; }
+.bd-card[aria-pressed="true"] b { color: var(--accent); }
+.bd-card.rec::after {
+  content: ''; position: absolute; top: 5px; right: 5px;
+  width: 5px; height: 5px; border-radius: 50%; background: #1F7A54;
 }
 
-/* Glyph picker: a scrolling grid, because 2,883 System Icons will not fit in
-   a select and the shape is what you are choosing. */
-.bd-icons {
+/* The glyph tray is denser: you are picking a shape, not reading a label. */
+.bd-glyphs {
   display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px;
-  max-height: 176px; overflow-y: auto; padding: 2px;
-  border: 1px solid var(--rule); border-radius: 8px; background: var(--paper);
+  max-height: 168px; overflow-y: auto; padding: 3px;
+  border: 1px solid var(--line); border-radius: 9px; background: var(--bg);
 }
-.bd-ico {
+.bd-glyph {
   aspect-ratio: 1; border: 1px solid transparent; border-radius: 6px;
   background: none; cursor: pointer; padding: 4px;
   display: flex; align-items: center; justify-content: center;
 }
-.bd-ico:hover { background: var(--sunk); }
-.bd-ico[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
-.bd-ico svg { width: 100%; height: 100%; min-width: 0; display: block; fill: var(--ink-2); }
-.bd-ico[aria-pressed="true"] svg { fill: var(--accent); }
-.bd-empty { grid-column: 1 / -1; padding: 14px 10px; font-size: 11.5px; color: var(--ink-3); text-align: center; line-height: 1.5; }
-
-.bd-swatches { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.bd-sw { width: 24px; height: 24px; border-radius: 7px; cursor: pointer; padding: 0; border: 1px solid var(--rule); }
-.bd-sw[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--accent); }
-input[type="color"] {
-  width: 34px; height: 24px; padding: 0; border: 1px solid var(--rule);
-  border-radius: 7px; background: none; cursor: pointer;
+.bd-glyph:hover { background: var(--surface-2); }
+.bd-glyph[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.bd-glyph svg { width: 100%; height: 100%; min-width: 0; display: block; fill: var(--text-2); }
+.bd-glyph[aria-pressed="true"] svg { fill: var(--accent); }
+.bd-empty {
+  grid-column: 1 / -1; padding: 14px 10px; font-size: 11.5px;
+  color: var(--text-3); text-align: center; line-height: 1.5;
 }
-
-/* Freely placed pieces: the escape hatch, kept deliberately plain so it does
-   not look like the main way to work. */
-.bd-placed {
-  display: grid; grid-template-columns: minmax(0, 1fr) 46px 46px 46px 28px;
-  gap: 5px; align-items: end; padding: 6px 0; border-top: 1px solid var(--rule-soft);
-}
-.bd-placed span { font-size: 10.5px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.bd-placed label { display: flex; flex-direction: column; gap: 2px; font-family: var(--mono); font-size: 9px; color: var(--ink-3); }
-.bd-placed input { padding: 4px 5px; font-size: 11px; }
-.bd-placed .bd-btn { padding: 4px 6px; line-height: 1; }
 
 /* --- Stage ------------------------------------------------------------ */
 
-/* The two grounds are shown together and never follow the page theme.
-   Checking artwork against both is the job here, not a preference, so the
-   page's own light and dark switch must not be able to hide one of them. */
-.bd-grounds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width: 620px) { .bd-grounds { grid-template-columns: 1fr; } }
+.bd-stage { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--bg); }
 
-.bd-ground { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
-.bd-ground-head {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 7px 11px; border-bottom: 1px solid var(--rule);
-  font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink-3); background: var(--surface);
+.bd-stage-bar {
+  display: flex; align-items: center; gap: 8px; flex: none;
+  padding: 8px 14px; border-bottom: 1px solid var(--line); background: var(--sidebar);
 }
-.bd-canvas { padding: 18px; display: flex; align-items: center; justify-content: center; }
-.bd-canvas > svg { width: 100%; max-width: 260px; min-width: 0; height: auto; display: block; }
+.bd-seg { display: flex; gap: 2px; background: var(--surface-2); border-radius: var(--pill); padding: 3px; }
+.bd-seg button {
+  font: inherit; font-family: var(--font); font-size: 11.5px; padding: 4px 11px;
+  border: 0; background: none; border-radius: var(--pill); color: var(--text-2); cursor: pointer;
+}
+.bd-seg button.on { background: var(--surface); color: var(--text); font-weight: 600; }
 
-.bd-ladder { display: flex; align-items: flex-end; justify-content: center; gap: 14px; padding: 0 18px 16px; flex-wrap: wrap; }
-.bd-rung { display: flex; flex-direction: column; align-items: center; gap: 5px; }
-.bd-rung svg { display: block; width: 100%; min-width: 0; height: auto; }
-.bd-rung > span:last-child { font-family: var(--mono); font-size: 9px; color: var(--ink-3); }
+/* The dotted field. A composition is a thing sitting on a surface, and the
+   dots are what stop the artboard reading as the page itself. */
+.bd-field-dots {
+  flex: 1; min-height: 0; overflow: auto; display: flex;
+  align-items: center; justify-content: center; padding: 34px;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at 1px 1px, var(--line) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+.bd-artboard {
+  border-radius: 18px; padding: 26px; flex: none;
+  width: min(560px, 100%); aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 20px 50px -30px rgba(0, 0, 0, .45);
+}
+.bd-artboard > svg { width: 100%; height: 100%; min-width: 0; display: block; }
+
+.bd-sheetview { flex: 1; min-height: 0; overflow: auto; padding: 18px; }
+.bd-sheet-wrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.bd-sheet-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 14px; font-size: 10.5px; letter-spacing: .09em;
+  text-transform: uppercase; color: rgba(128, 128, 128, .9);
+  border-bottom: 1px solid rgba(128, 128, 128, .22);
+}
+/* minmax(0, 1fr) rather than 1fr: an SVG with no width attribute has an
+   intrinsic 300px, which a bare 1fr treats as the column minimum and blows
+   the grid out past its container. */
+.bd-sheet { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; padding: 18px; }
+@media (max-width: 1100px) { .bd-sheet { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .bd-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.bd-cell { display: flex; flex-direction: column; gap: 5px; margin: 0; }
+.bd-cell svg { width: 100%; min-width: 0; height: auto; display: block; }
+.bd-cell figcaption {
+  font-size: 9.5px; text-align: center; margin: 0; color: rgba(128, 128, 128, .95);
+}
 
 /* A ground paints its own canvas from whichever preset is live. The token
    values are written on by the page, never here. */
-.bd-il-ground { background: var(--il-canvas, #EDEAE6); }
-.bd-il-ground .bd-ground-head {
-  background: none; border-bottom-color: rgba(128, 128, 128, .28); color: rgba(128, 128, 128, .9);
+.bd-ground { background: var(--il-canvas, #EDEAE6); }
+
+.bd-ladder {
+  display: flex; align-items: flex-end; justify-content: center; gap: 16px;
+  padding: 12px 18px 16px; flex: none; flex-wrap: wrap;
+  border-top: 1px solid var(--line); background: var(--sidebar);
 }
+.bd-rung { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.bd-rung > span:first-child { border-radius: 4px; overflow: hidden; display: block; }
+.bd-rung svg { display: block; width: 100%; min-width: 0; height: auto; }
+.bd-rung > span:last-child { font-size: 9.5px; color: var(--text-3); }
+
+/* --- Accent ----------------------------------------------------------- */
+
+.bd-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.bd-sw {
+  aspect-ratio: 1; border-radius: 10px; cursor: pointer; padding: 0;
+  border: 1px solid rgba(128, 128, 128, .2);
+  display: flex; align-items: center; justify-content: center;
+}
+.bd-sw svg { width: 16px; height: 16px; fill: #fff; opacity: 0; }
+.bd-sw[aria-pressed="true"] svg { opacity: 1; }
+.bd-hex { display: flex; align-items: center; gap: 9px; }
+input[type="color"] {
+  width: 30px; height: 30px; padding: 0; border: 1px solid var(--line);
+  border-radius: 8px; background: none; cursor: pointer; flex: none;
+}
+.bd-hex code { font-size: 12.5px; color: var(--text-2); }
+
+/* --- Emblems ---------------------------------------------------------- */
+/* An emblem is the one placeable thing: a surface carrying a glyph. A glyph
+   never floats on its own, which is what keeps this list one kind of row and
+   the accent budget countable. */
+
+.bd-objs { display: flex; flex-direction: column; }
+.bd-obj {
+  display: grid; grid-template-columns: 26px minmax(0, 1fr) 22px;
+  align-items: center; gap: 8px; padding: 7px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.bd-obj:first-child { border-top: 1px solid var(--line-soft); }
+.bd-obj-chip {
+  width: 26px; height: 26px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.bd-obj-chip svg { width: 14px; height: 14px; display: block; }
+.bd-obj-name { font-size: 12.5px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd-obj-sub { font-size: 10px; color: var(--text-3); }
+.bd-obj button {
+  border: 0; background: none; cursor: pointer; color: var(--text-3);
+  font-size: 15px; line-height: 1; padding: 2px 4px; border-radius: 5px;
+}
+.bd-obj button:hover { background: var(--surface-2); color: var(--text); }
+.bd-obj.sel { background: var(--accent-soft); border-radius: 8px; }
+
+.bd-nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.bd-nums label { display: flex; flex-direction: column; gap: 3px; font-size: 9.5px; color: var(--text-3); }
+.bd-nums input { padding: 5px 6px; font-size: 11.5px; }
 
 /* --- Checks ----------------------------------------------------------- */
 
-.bd-checks { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
-.bd-check {
-  display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 8px;
-  font-size: 11.5px; line-height: 1.45; color: var(--ink-2); padding: 3px 0;
-}
-.bd-check i { font-style: normal; font-family: var(--mono); font-size: 11px; text-align: center; }
-.bd-check.ok i { color: var(--p-accent); }
-.bd-check.warn i { color: var(--p-glyph); }
-.bd-check.error i { color: var(--signal); }
-.bd-check.error { color: var(--ink); }
 .bd-verdict {
-  font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
-  padding: 6px 10px; border-radius: 8px; display: inline-block; align-self: flex-start;
+  font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 650;
+  padding: 5px 10px; border-radius: var(--pill); align-self: flex-start;
 }
-.bd-verdict.pass { color: var(--p-accent); background: var(--p-accent-bg); }
-.bd-verdict.notes { color: var(--p-glyph); background: var(--p-glyph-bg); }
-.bd-verdict.fail { color: var(--signal); background: var(--signal-soft); }
+.bd-verdict.pass { color: #1F7A54; background: #E5F2EB; }
+.bd-verdict.notes { color: #B0521E; background: #FBEDE3; }
+.bd-verdict.fail { color: #B8271A; background: #FBECEA; }
+:root[data-theme="dark"] .bd-verdict.pass, html:not([data-theme="light"]) .bd-verdict.pass { }
 
-.bd-brief { font-size: 12.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
-.bd-brief dt {
-  font-family: var(--mono); font-size: 9.5px; letter-spacing: .09em;
-  text-transform: uppercase; color: var(--ink-3); margin-top: 9px;
+.bd-checks { display: flex; flex-direction: column; gap: 1px; margin: 0; padding: 0; list-style: none; }
+.bd-check {
+  display: grid; grid-template-columns: 13px minmax(0, 1fr); gap: 7px;
+  font-size: 11.5px; line-height: 1.45; color: var(--text-2); padding: 2px 0;
 }
-.bd-brief dt:first-child { margin-top: 0; }
-.bd-brief dd { margin: 2px 0 0; }
+.bd-check i { font-style: normal; font-size: 11px; text-align: center; }
+.bd-check.ok i { color: #1F7A54; }
+.bd-check.warn i { color: #B0521E; }
+.bd-check.error i { color: #B8271A; }
+.bd-check.error { color: var(--text); }
 
+/* --- Message ---------------------------------------------------------- */
+
+.bd-msg { display: flex; flex-direction: column; gap: 8px; }
+.bd-msg-log { display: flex; flex-direction: column; gap: 7px; max-height: 210px; overflow-y: auto; }
+.bd-bubble {
+  font-size: 12px; line-height: 1.5; padding: 9px 11px; border-radius: 12px;
+  background: var(--surface-2); color: var(--text-2);
+}
+.bd-bubble.you { background: var(--accent-soft); color: var(--text); align-self: flex-end; max-width: 92%; }
+.bd-bubble.miss { background: #FBECEA; color: #8C1E14; }
+.bd-msg-form { display: grid; grid-template-columns: minmax(0, 1fr) 36px; gap: 6px; }
+.bd-msg-form button {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 9px;
+  cursor: pointer; color: var(--text-2); font-size: 15px; line-height: 1;
+}
+.bd-msg-form button:hover { border-color: var(--accent-ring); color: var(--text); }
+
+.bd-status { font-size: 11.5px; color: var(--text-3); }
 .bd-code {
-  font-family: var(--mono); font-size: 10.5px; line-height: 1.5; color: var(--ink-2);
-  background: var(--sunk); border: 1px solid var(--rule-soft); border-radius: 8px;
-  padding: 10px; max-height: 200px; overflow: auto; white-space: pre; margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10.5px;
+  line-height: 1.5; color: var(--text-2); background: var(--bg);
+  border: 1px solid var(--line-soft); border-radius: 8px;
+  padding: 9px; max-height: 190px; overflow: auto; white-space: pre; margin: 0;
 }
 
-/* --- Contact sheet ---------------------------------------------------- */
-
-/* minmax(0, 1fr) rather than 1fr: an SVG with no width attribute has an
-   intrinsic 300px, which a bare 1fr treats as the column's minimum and blows
-   the grid out past its container. */
-.bd-sheet { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; padding: 18px; }
-@media (max-width: 900px) { .bd-sheet { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .bd-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.bd-sheet-wrap { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
-.bd-cell { display: flex; flex-direction: column; gap: 5px; margin: 0; }
-/* doc.css gives `figure svg` a 700px minimum for the wide diagrams in the
-   documents. These are 160-unit thumbnails in a six-column grid, so the
-   minimum has to come back off, the way doc.css does for its own small
-   figures. */
-.bd-cell svg { width: 100%; min-width: 0; height: auto; display: block; }
-.bd-cell figcaption {
-  font-family: var(--mono); font-size: 9px; text-align: center; margin: 0;
-  color: rgba(128, 128, 128, .95);
-}
-
-/* --- Prose bits shared with About and the System Map ------------------ */
+/* --- Bits the two document pages still borrow ------------------------- */
 
 .bd-note {
   font-size: 13px; line-height: 1.55; color: var(--ink-2); margin: 0;
@@ -222,11 +313,11 @@ input[type="color"] {
 .bd-stubs li { display: flex; flex-direction: column; gap: 3px; }
 .bd-stubs strong { font-size: 14px; }
 .bd-stubs span { font-size: 13px; line-height: 1.55; color: var(--ink-2); }
-.bd-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-.bd-status { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
-
-/* doc.css tables size to their content and the first cell never wraps, so a
-   five column reference table overflows a phone. Each wide table gets its own
-   scroller rather than the page getting a horizontal scrollbar. */
+.bd-unlisted {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--signal);
+  background: var(--signal-soft); border-radius: 999px; padding: 4px 11px;
+}
 .bd-scroll { overflow-x: auto; }
 .bd-scroll > table { min-width: 620px; }
