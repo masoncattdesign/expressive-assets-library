@@ -17,3 +17,10 @@ naming-report.tsv
 roles-report.tsv
 .role-cuts-sel.json
 Claude outputs/
+
+# Raw drops and internal material. This repo is public, so neither of these is
+# ever committed. Material leaves intake/ only by passing through a script and
+# a human review, which is the point of the gate. Same two words the
+# illustration sibling repo uses, deliberately.
+intake/
+private/
