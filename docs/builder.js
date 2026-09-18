@@ -926,7 +926,7 @@ const RELATIONSHIPS = [
    material it is the opposite and equally deliberate: a white surface with
    the deep accent around it, which is what the M365 frame does. */
 const bodyPaint = () => MAT.frame
-  ? `fill="${SURF}" stroke="${FRAME}" stroke-width="${SW * 2}" stroke-linejoin="round"`
+  ? `fill="${FSOFT}" stroke="${FRAME}" stroke-width="${SW * 2}" stroke-linejoin="round"`
   : `fill="${LINE}"`;
 const restPaint = () => MAT.frame
   ? `fill="${FSOFT}" stroke="${FRAME}" stroke-width="${SW * 2}" stroke-linejoin="round"`
@@ -989,14 +989,27 @@ const innerOf = (d) => d.slice(d.indexOf('>', d.indexOf('<svg')) + 1, d.lastInde
  *              puts nothing that carries meaning below y 112
  *   portrait   full height, a centered vertical column
  */
+/* Headroom between the nested drawing and the screen it sits in, in grid
+   units. Without it the band is cut flush with the screen rect, so the top
+   card of a composition loses its rounded corners against the bezel and the
+   device reads as a crop of a bigger picture rather than a screen showing a
+   view. Ten is where the top card clears the bezel while the composition
+   still fills the screen: at six the gap is too tight to read as deliberate,
+   and past fourteen the content goes small and floats. */
+const SCREEN_PAD = 10;
 function nest(s, inner, view) {
   const a = s.w / s.h;
+  const p = SCREEN_PAD;
   let vx = 0, vy = 0, vw = view, vh = view;
   if (a >= 1) {
-    vh = view / a;
-    vy = Math.min(8, (view - vh) / 2);
+    vw = view + p * 2;
+    vh = vw / a;
+    vx = -p;
+    vy = Math.min(8, (view - view / a) / 2) - p;
   } else {
-    vw = view * a;
+    vh = view + p * 2;
+    vw = vh * a;
+    vy = -p;
     vx = (view - vw) / 2;
   }
   return `<svg x="${s.x}" y="${s.y}" width="${s.w}" height="${s.h}" ` +
