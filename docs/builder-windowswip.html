@@ -95,9 +95,17 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .phead[aria-expanded=true]::after{transform:rotate(45deg);opacity:.9}
 .pbody[hidden]{display:none}
 .pbody{padding-bottom:12px}
-.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;overflow-y:auto;overscroll-behavior:contain}
+/* One box, one height, whichever tab or panel is open. The height is three
+   rows of the three column grid, measured rather than assumed, and both
+   palettes take it: a panel that changes height when you switch tabs makes
+   the whole rail jump for no reason. */
+.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;align-content:start;
+ height:var(--boxh,300px);overflow-y:auto;overscroll-behavior:contain;
+ border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--bg)}
 .palette.two{grid-template-columns:repeat(2,1fr)}
 .palette.two .chip svg{background:var(--stage);border-radius:8px;padding:4px}
+.palette .chip{border-color:var(--line-2)}
+.palette .chip:hover{border-color:var(--accent)}
 .palette::-webkit-scrollbar{width:8px}
 .palette::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 .chip{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px;cursor:pointer;
@@ -731,10 +739,28 @@ function renderTemplates(){
   }).join('');
   host.querySelectorAll('[data-tpl]').forEach(b =>
     b.addEventListener('click', () => applyTemplate(TEMPLATES.find(t => t.key === b.dataset.tpl))));
+  sizeBoxes();
   const cur = TEMPLATES.find(t => t.key === S.template);
   $('tplhint').textContent = cur
     ? cur.note + ' Click any shape on the canvas to change it.'
     : 'A starting arrangement. Pick one, then click any shape on the canvas to change what it is.';
+}
+
+/* Three rows of the three column grid. One chip is measured while it is on
+   screen and the number is kept, because the templates panel has no three
+   column grid to measure and both boxes have to agree. */
+let BOXH = 0;
+function sizeBoxes(){
+  const pal = $('palette');
+  const chip = pal && pal.querySelector('.chip');
+  if(chip && !pal.classList.contains('two')){
+    const h = chip.getBoundingClientRect().height;
+    // three rows, two gaps, the box's padding and its border: the box is
+    // border-box, so the frame counts toward the height it is given
+    if(h > 20) BOXH = Math.round(h * 3 + 7 * 2 + 16 + 2);
+  }
+  if(!BOXH) return;
+  document.querySelectorAll('.palette').forEach(p => p.style.setProperty('--boxh', BOXH + 'px'));
 }
 
 function renderPanels(){
@@ -792,16 +818,7 @@ function renderPalette(){
       }
       render();
     }));
-  /* Three rows, then scroll. The height is measured off the tenth chip rather
-     than guessed at, so it stays exactly nine whatever the rail is doing at
-     this width. */
-  const pal = $('palette');
-  pal.style.maxHeight = '';
-  const chips = pal.querySelectorAll('.chip');
-  if(chips.length > 9){
-    const top = pal.getBoundingClientRect().top;
-    pal.style.maxHeight = Math.round(chips[9].getBoundingClientRect().top - top - 7) + 'px';
-  }
+  sizeBoxes();
 
   $('palhint').textContent = S.tab === 'base'
     ? 'Picking a base replaces the current one. The base carries the silhouette; set its size in the editor.'
@@ -880,5 +897,6 @@ $('b-svg').addEventListener('click', () => {
 function flash(btn, txt){ const o = btn.textContent; btn.textContent = txt; setTimeout(() => btn.textContent = o, 1200); }
 
 render();
+addEventListener('resize', () => { BOXH = 0; sizeBoxes(); });
 </script>
 </body></html>
