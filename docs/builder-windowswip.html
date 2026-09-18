@@ -138,6 +138,10 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .check{border-radius:9px;padding:10px 12px;font-size:12px;line-height:1.45;margin-top:8px}
 .check.ok{background:var(--ok-bg);color:var(--ok-ink)}
 .check.bad{background:var(--bad-bg);color:var(--bad-ink)}
+.said{border-radius:9px;padding:9px 11px;font-size:12px;line-height:1.5;margin-top:10px;
+ background:var(--stage);color:var(--ink-2)}
+.said b{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.06em;
+ text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
 .check b{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;
  letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;opacity:.8}
 textarea{width:100%;height:150px;border:1px solid var(--line);border-radius:9px;padding:9px;
@@ -153,6 +157,10 @@ textarea{width:100%;height:150px;border:1px solid var(--line);border-radius:9px;
   <div class="brand">
     <span class="mark"><svg viewBox="0 0 24 24" fill="#fff"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span>
     Windows Illustration Builder
+  </div>
+  <div class="seg" id="modes" role="group" aria-label="How you are building">
+    <button data-mode="assemble" aria-pressed="true">Assemble</button>
+    <button data-mode="prompt" aria-pressed="false">Prompt</button>
   </div>
   <div class="sp"></div>
   <button class="btn" id="b-recipe">Copy recipe</button>
@@ -186,7 +194,29 @@ textarea{width:100%;height:150px;border:1px solid var(--line);border-radius:9px;
     <div class="ramp" id="ramp"></div>
   </section>
 
-  <section class="rail r">
+  <section class="rail l" id="promptrail" hidden>
+    <h3>Describe it</h3>
+    <textarea id="p-text" style="height:78px"
+      placeholder="a grey folder with a blue gear, badged with a check"></textarea>
+    <div class="fx" style="margin-top:8px">
+      <button class="btn" id="p-run">Build it</button>
+      <button class="btn" id="p-brief">Copy the brief</button>
+    </div>
+    <div id="p-said"></div>
+    <p class="hint">Typed here, it is read on this page with no network at all. What it cannot
+    read, the brief can: that copies every shape, tone, template and the recipe schema along with
+    your sentence, for Claude or Copilot to answer with a recipe.</p>
+
+    <h3>Paste a recipe</h3>
+    <textarea id="p-json" style="height:120px" placeholder='{ "base": { "part": "folder", ... } }'></textarea>
+    <div class="fx" style="margin-top:8px"><button class="btn" id="p-load">Render it</button></div>
+    <div id="p-loaded"></div>
+    <p class="hint">A recipe names parts that exist. Anything it names that this file does not
+    have is reported rather than dropped, because a silently missing layer is the bug that is
+    hardest to see.</p>
+  </section>
+
+  <section class="rail r" id="shaperail">
     <!-- One panel open at a time. Both open at once is most of a rail spent on
          things you are not using, and a disclosure you have to close first is
          a click for nothing. -->
@@ -394,6 +424,7 @@ const S = {
   sel: -1,
   grid: false,
   glyphQuery: '',
+  mode: 'assemble',     // assemble by hand, or describe it
   panel: 'shapes',      // one of the right rail's panels is always the open one
   template: 'centered',
   base: { part:'circle', size:'lg', tone:'grey.loud', elevation:['rim'] },
@@ -456,6 +487,10 @@ function renderCanvas(){
   });
   $('meta').textContent = slugify(S.name) + '.svg · ' + TOKENS.canvas + ' canvas · ' + (S.layers.length + (S.base?1:0)) + ' layers';
   $('f-slug').textContent = 'Slug: ' + slugify(S.name);
+  /* A recipe or a sentence can rename the asset, and the field has to say
+     what the file is called or the slug below it contradicts it. */
+  const nf = $('f-name');
+  if(nf && nf.value !== S.name && document.activeElement !== nf) nf.value = S.name;
   const sizes = [
     { px: 160, label: '512' }, { px: 92, label: '256' }, { px: 44, label: '64' }
   ];
@@ -907,7 +942,340 @@ $('panels').addEventListener('click', e => {
   render();
 });
 
+/* ========================== T H E  P R O M P T  M O D E =====================
+ * Two ways of using this page. Assemble is the panels; Prompt is a sentence.
+ *
+ * The sentence is read here, on this page, with no network: this file is
+ * static on Pages and there is nowhere to run a key, and a key pasted into a
+ * browser is a key in a browser. What that buys is that it always works and
+ * never costs anything, and what it costs is that it only knows the words
+ * below. So the second half of the mode is the brief: it writes out every
+ * shape, every tone, every template and the recipe schema next to your
+ * sentence, which is what lets a model build from the parts that exist
+ * instead of inventing shapes this file cannot draw. Paste its answer back
+ * and it renders. */
+
+const SHAPE_WORDS = () => {
+  const out = new Map();
+  ['base','secondary','tertiary'].forEach(t =>
+    [...groupsIn(t).keys()].forEach(sh => { if(!out.has(sh)) out.set(sh, t); }));
+  return out;
+};
+const TONE_STEPS = () => {
+  const out = new Set();
+  Object.values(TOKENS.tone).forEach(f => Object.keys(f).forEach(k => out.add(k)));
+  return [...out];
+};
+const SIZE_WORDS = { large:'lg', big:'lg', lg:'lg', medium:'md', mid:'md', md:'md',
+                     small:'sm', little:'sm', sm:'sm' };
+const GLYPH_RE = /\b(?:icon|glyph)(?: of)? (?:a |an |the )?([a-z-]+)|\b(?:with|carrying|badged with) (?:a |an |the )?([a-z-]+) (?:icon|glyph)\b/;
+
+function readSentence(raw){
+  const t = ' ' + raw.toLowerCase().replace(/[.,!?]/g, ' ').replace(/\s+/g, ' ') + ' ';
+  const did = [], missed = [];
+  const shapes = SHAPE_WORDS();
+  const steps = TONE_STEPS();
+
+  // a template first: it replaces the whole composition, and anything else in
+  // the sentence then edits what it left
+  const tpl = TEMPLATES.find(x => new RegExp('\\b' + x.key + '\\b').test(t)
+    || new RegExp('\\b' + x.label.toLowerCase() + '\\b').test(t))
+    || (/\bstack(ed)?\b/.test(t) ? TEMPLATES.find(x => x.key === 'trio') : null)
+    || (/\bgrid\b/.test(t) ? TEMPLATES.find(x => x.key === 'grid') : null)
+    || (/\bbadge[d]?\b/.test(t) ? TEMPLATES.find(x => x.key === 'badged') : null);
+  if(tpl){ const st = tpl.make(); S.base = st.base; S.layers = st.layers; S.template = tpl.key;
+           S.sel = -1; did.push('the ' + tpl.label.toLowerCase() + ' arrangement'); }
+
+  /* A word inside "with a check icon" is naming a glyph, not a shape, so the
+     shape pass has to skip that span or it places a check as well. */
+  const gm = GLYPH_RE.exec(t);
+  const gSpan = gm ? [gm.index, gm.index + gm[0].length] : null;
+
+  /* Shapes in the order they are said. The first becomes the base, because a
+     sentence names the big thing first; the rest go on top. */
+  const found = [];
+  [...shapes.keys()].sort((a, b) => b.length - a.length).forEach(sh => {
+    const word = sh.replace(/-/g, '[ -]');
+    const m = new RegExp('\\b' + word + 's?\\b').exec(t);   // three stacked documents
+    if(!m) return;
+    if(gSpan && m.index >= gSpan[0] && m.index < gSpan[1]) return;
+    if(!found.some(f => f.at === m.index)) found.push({ shape:sh, at:m.index, tier:shapes.get(sh) });
+  });
+  found.sort((a, b) => a.at - b.at);
+
+  function toneNear(at){
+    // the tone word closest before the shape word, which is how it is said:
+    // "a grey folder", "a blue gear"
+    let best = null;
+    Object.keys(TOKENS.tone).forEach(fam => {
+      const re = new RegExp('\\b' + fam + '\\b', 'g');
+      let m;
+      while((m = re.exec(t))){
+        const d = at - m.index;
+        if(d > 0 && d < 24 && (!best || d < best.d)) best = { fam, d };
+      }
+    });
+    if(!best) return null;
+    const step = steps.find(k => new RegExp('\\b' + k + '\\b').test(t) && TOKENS.tone[best.fam][k]);
+    return best.fam + '.' + (step || (TOKENS.tone[best.fam].loud ? 'loud' : 'heavy'));
+  }
+
+  /* A template plus a shape means "that arrangement, in this shape", which is
+     how anybody says it: three stacked documents, a grid of folders. Swapping
+     the parts in place keeps the arrangement the template is for. */
+  if(tpl && found.length){
+    const slots = [S.base, ...S.layers];
+    /* One shape named against an arrangement of repeats means all of them:
+       "stacked documents" is three documents, not a document and two folders.
+       More than one shape named is taken in the order it was said. */
+    const was = S.base && S.base.part;
+    const repeats = slots.filter(L => L.part === was).length;
+    if(found.length === 1 && repeats > 1){
+      const f = found[0];
+      slots.forEach(L => {
+        const tier = L.tier || 'base';
+        if(L.part !== was || !groupsIn(tier).has(f.shape)) return;
+        L.part = f.shape;
+        const sizes = sizesFor(tier, f.shape);
+        if(sizes.length){ if(!sizes.includes(L.size)) L.size = sizes[0]; } else delete L.size;
+      });
+      const tn = toneNear(f.at);
+      if(tn && S.base) S.base.tone = safeTone(tn);
+      did.push('all ' + repeats + ' of them as ' + f.shape.replace(/-/g,' '));
+      found.length = 0;
+    }
+    found.forEach((f, i) => {
+      const L = slots[i];
+      if(!L) return;
+      const tier = L.tier || 'base';
+      if(!groupsIn(tier).has(f.shape)) return;
+      L.part = f.shape;
+      const sizes = sizesFor(tier, f.shape);
+      if(sizes.length){ if(!sizes.includes(L.size)) L.size = sizes[0]; } else delete L.size;
+      const tn = toneNear(f.at);
+      if(tn) L.tone = (L === S.base) ? safeTone(tn) : tn;
+      did.push(f.shape.replace(/-/g,' ') + ' in place of ' + (i ? 'the shape on it' : 'the base'));
+    });
+    found.length = 0;
+  }
+
+  if(found.length){
+    const size = Object.keys(SIZE_WORDS).find(w => new RegExp('\\b' + w + '\\b').test(t));
+    const first = found[0];
+    const baseSizes = sizesFor('base', first.shape);
+    if(baseSizes.length || PARTS.base[first.shape]){
+      S.base = { part:first.shape, tone:safeTone(toneNear(first.at) || TONE_START.base), elevation:['rim'] };
+      if(baseSizes.length) S.base.size = size && baseSizes.includes(SIZE_WORDS[size]) ? SIZE_WORDS[size] : baseSizes[0];
+      S.layers = [];
+      did.push(first.shape.replace(/-/g,' ') + ' as the base');
+    } else {
+      S.layers = [];
+      did.push('kept the base, ' + first.shape.replace(/-/g,' ') + ' is not a base shape');
+    }
+    found.slice(PARTS.base[first.shape] || sizesFor('base', first.shape).length ? 1 : 0).forEach((f, i) => {
+      const tier = f.tier === 'base' ? 'secondary' : f.tier;
+      const sizes = sizesFor(tier, f.shape);
+      const L = { tier, part:f.shape, tone: toneNear(f.at) || nextTone(tier),
+                  layout: i === 0 ? 'solo' : 'modifier', anchor: i === 0 ? undefined : 'br',
+                  scale: i === 0 ? 0.6 : undefined, elevation:['cast'] };
+      if(sizes.length) L.size = sizes[0];
+      S.layers.push(L);
+      did.push(f.shape.replace(/-/g,' ') + ' on it');
+    });
+  }
+
+  const g = GLYPH_RE.exec(t);
+  if(g){
+    const want = (g[1] || g[2]).trim();
+    const host = S.layers.find(L => L.tier === 'tertiary');
+    if(!host){
+      S.layers.push({ tier:'tertiary', part:'circle', size:'sm', tone:nextTone('tertiary'),
+                      anchor:'br', scale:0.62, glyph:DEFAULT_GLYPH, glyphTone:TONE_START.glyph,
+                      elevation:['cast'] });
+    }
+    loadIcons().then(() => {
+      const hit = ICONS.list.find(a => a.id === 'system.' + want)
+        || ICONS.list.find(a => a.name.toLowerCase() === want)
+        || ICONS.list.find(a => a.id.includes(want));
+      const L = S.layers.find(x => x.tier === 'tertiary');
+      if(hit && L){
+        L.glyph = hit.id;
+        return loadGlyph(hit.id).then(render)
+          .catch(() => { render(); said('<b>note</b>' + hit.id + ' is in the library but its file did not load.', true); });
+      }
+      said('<b>note</b>Could not find an icon called ' + want + ' in the library.', true);
+    });
+    did.push('a ' + want + ' icon in a badge');
+  }
+
+  // elevation, said plainly
+  if(/\bflat\b/.test(t)){
+    if(S.base) S.base.elevation = [];
+    S.layers.forEach(L => L.elevation = []);
+    did.push('no elevation');
+  }
+  Object.keys(TOKENS.elevation).forEach(n => {
+    if(new RegExp('\\b' + n + '\\b').test(t) && S.base){
+      S.base.elevation = [...new Set([...(S.base.elevation||[]), n])];
+      did.push(n + ' on the base');
+    }
+  });
+
+  const name = /\b(?:call it|name it|for) ([a-z0-9 -]{2,32})\b/.exec(t);
+  if(name){ S.name = name[1].trim().replace(/\b\w/g, c => c.toUpperCase()); did.push('named it ' + S.name); }
+
+  if(!did.length) missed.push('nothing in that sentence matched a shape, a tone or a template');
+  render();
+  return { did, missed };
+}
+
+/* The outermost shape is the one the surfaces check reads, so a base tone
+   that fails gets moved to the step in its own family that passes. Four tones
+   pass in the whole ramp, and this is where somebody meets that rule. */
+function safeTone(ref){
+  const [fam] = String(ref).split('.');
+  const steps = TOKENS.tone[fam] || {};
+  const ok = Object.keys(steps).find(k => {
+    const h = steps[k];
+    return cr(h, SURF.light) >= 3 && cr(h, SURF.dark) >= 3;
+  });
+  return ok ? fam + '.' + ok : ref;
+}
+
+function said(html, append){
+  const host = $('p-said');
+  host.innerHTML = (append ? host.innerHTML : '') + '<div class="said">' + html + '</div>';
+}
+
+/* Everything a model needs to answer with a recipe this file can actually
+   draw, written from the file's own data so it cannot drift from it. */
+function brief(sentence){
+  const tierList = t => [...groupsIn(t).entries()].map(([shape, g]) => {
+    const sizes = SIZE_ORDER.filter(k => g.sizes[k]);
+    return shape + (sizes.length > 1 ? ' (' + sizes.join('/') + ')' : '');
+  }).join(', ');
+  const tones = Object.entries(TOKENS.tone)
+    .map(([f, steps]) => '  ' + f + ': ' + Object.keys(steps).join(', ')).join('\n');
+  return [
+    'You are composing a Windows illustration from a fixed set of parts. Answer with JSON only,',
+    'in the recipe shape at the end. Use only the part names listed. Do not invent shapes.',
+    '',
+    'THE REQUEST',
+    '  ' + (sentence || '(describe the asset here)'),
+    '',
+    'CANVAS',
+    '  The asset is ' + TOKENS.canvas + ' square. Parts are drawn on an ' + TOKENS.partCanvas +
+      ' canvas with a ' + TOKENS.safeArea + ' safe area and an ' + TOKENS.margin + ' margin.',
+    '  x, y and scale are in part canvas units: x 17, y 16 puts a part in the bottom right.',
+    '',
+    'PARTS',
+    '  base (the bottom shape, one only): ' + tierList('base'),
+    '  secondary (shapes on top): ' + tierList('secondary'),
+    '  tertiary (containers that carry a System Icon): ' + tierList('tertiary'),
+    '',
+    'TONES  (written family.step)',
+    tones,
+    '',
+    'ELEVATION  (a list, any of these)',
+    '  ' + Object.keys(TOKENS.elevation).join(', '),
+    '',
+    'PLACEMENT',
+    '  layout: solo | lead | modifier, or anchor: br | bl | tr | tl,',
+    '  or explicit x, y and scale. scale is a multiplier, 1 is the part at its own size.',
+    '',
+    'THE RULE THAT MATTERS',
+    '  The outermost shape has to clear 3:1 against both #F3F3F3 and #202020. Of the twenty',
+    '  tones, four do: blue.loud, purple.loud, teal.heavy, grey.loud. Use one of those for the',
+    '  shape that sits at the back or outside, and keep the saturated tones for what is on top.',
+    '  In the shipped set the largest shape is a grey, the shape on it is a darker blue, and',
+    '  purple or teal appears once, on something small.',
+    '',
+    'GLYPHS',
+    '  A tertiary layer may carry glyph: "system.<name>", an Expressive Assets System Icon,',
+    '  with glyphTone for its color. ' + (ICONS.loaded ? ICONS.list.length + ' are available.' :
+      'The library lists roughly 2,900 of them.'),
+    '',
+    'RECIPE',
+    JSON.stringify({
+      label: 'Safety', slug: 'safety',
+      base: { part:'folder', size:'lg', tone:'grey.loud', elevation:['rim'] },
+      secondary: [ { part:'gear', tone:'blue.heavy', x:0, y:-15, scale:0.44, elevation:['cast'] } ],
+      tertiary: [ { part:'circle', size:'sm', tone:'teal.heavy', anchor:'br', scale:0.62,
+                    glyph:'system.checkmark', glyphTone:'grey.paper', elevation:['cast'] } ],
+    }, null, 2),
+  ].join('\n');
+}
+
+/* A recipe read back in. Every part is checked against what this file has,
+   and what is missing is named rather than dropped. */
+function loadRecipe(text){
+  let r;
+  try { r = JSON.parse(text); }
+  catch(e){ return { errors:['That is not JSON: ' + e.message] }; }
+  const errors = [], notes = [];
+  const known = (tier, part) => groupsIn(tier).has(part);
+  const toneOk = ref => { const [f, k] = String(ref||'').split('.'); return TOKENS.tone[f] && TOKENS.tone[f][k]; };
+  const fix = (o, tier) => {
+    const L = Object.assign({}, o);
+    if(tier !== 'base') L.tier = tier;
+    if(!known(tier, L.part)){ errors.push(tier + ' "' + L.part + '" is not a part this file has'); return null; }
+    const sizes = sizesFor(tier, L.part);
+    if(sizes.length && !sizes.includes(L.size)) L.size = sizes[0];
+    if(!sizes.length) delete L.size;
+    if(!toneOk(L.tone)){ notes.push('tone "' + L.tone + '" is not in the ramp, used ' + TONE_START.base); L.tone = TONE_START.base; }
+    if(L.elevation) L.elevation = L.elevation.filter(n => TOKENS.elevation[n]);
+    return L;
+  };
+  const base = r.base ? fix(r.base, 'base') : null;
+  if(!base) errors.push('a recipe needs a base');
+  if(errors.length) return { errors };
+  const layers = [];
+  (r.secondary || []).forEach(o => { const L = fix(o, 'secondary'); if(L) layers.push(L); });
+  (r.tertiary || []).forEach(o => { const L = fix(o, 'tertiary'); if(L) layers.push(L); });
+  S.base = base; S.layers = layers; S.sel = -1; S.template = null;
+  if(r.label) S.name = r.label;
+  const glyphs = layers.filter(L => L.glyph);
+  if(glyphs.length) loadIcons().then(() => Promise.all(glyphs.map(L => loadGlyph(L.glyph).catch(() =>
+    notes.raw = notes.push(L.glyph + ' is not in the library')))))
+    .then(render);
+  render();
+  return { notes, count: layers.length + 1 };
+}
+
+function setMode(m){
+  S.mode = m;
+  $('modes').querySelectorAll('[data-mode]').forEach(b =>
+    b.setAttribute('aria-pressed', b.dataset.mode === m));
+  document.querySelectorAll('.rail.l')[0].hidden = m !== 'assemble';
+  $('promptrail').hidden = m !== 'prompt';
+  $('shaperail').hidden = m !== 'assemble';
+}
+
 /* ---------- chrome ---------- */
+$('modes').addEventListener('click', e => {
+  const b = e.target.closest('[data-mode]');
+  if(b) setMode(b.dataset.mode);
+});
+$('p-run').addEventListener('click', () => {
+  const v = $('p-text').value.trim();
+  if(!v) return;
+  const r = readSentence(v);
+  said('<b>' + (r.did.length ? 'built' : 'nothing to build') + '</b>' +
+    (r.did.length ? r.did.join(', ') + '.' : '') +
+    (r.missed.length ? ' ' + r.missed.join('. ') + '. Copy the brief and ask Claude instead.' : ''));
+});
+$('p-brief').addEventListener('click', async () => {
+  const text = brief($('p-text').value.trim());
+  try { await navigator.clipboard.writeText(text); flash($('p-brief'), 'Copied'); }
+  catch(e){ window.prompt('The brief', text); }
+});
+$('p-load').addEventListener('click', () => {
+  const r = loadRecipe($('p-json').value);
+  $('p-loaded').innerHTML = '<div class="said"><b>' + (r.errors ? 'not loaded' : 'loaded') + '</b>' +
+    (r.errors ? r.errors.join('. ') + '.' :
+      r.count + ' layers.' + (r.notes && r.notes.length ? ' ' + r.notes.join('. ') + '.' : '')) + '</div>';
+});
+
 $('f-name').addEventListener('input', e => { S.name = e.target.value; renderCanvas(); });
 $('g-grid').addEventListener('click', () => {
   S.grid = !S.grid;
@@ -951,6 +1319,7 @@ $('b-svg').addEventListener('click', () => {
 });
 function flash(btn, txt){ const o = btn.textContent; btn.textContent = txt; setTimeout(() => btn.textContent = o, 1200); }
 
+setMode(S.mode);
 render();
 addEventListener('resize', () => { BOXH = 0; sizeBoxes(); });
 </script>
