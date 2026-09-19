@@ -1,0 +1,508 @@
+<!-- GENERATED FILE. Source is tools/aihub.template.html in the
+     windows-illustrations repo, built by scripts/build-aihub.mjs.
+     Edits made here are lost the next time it is rebuilt. -->
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Windows Illustration Studio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --rail:#FAFAFB; --stage:#F6F7F9; --line:#E4E7EC; --line-2:#EFF1F4;
+  --ink:#16181D; --ink-2:#5A616B; --ink-3:#8A919C;
+  --accent:#2561CE; --accent-soft:#E8F0FE;
+  --ok-bg:#E3F5E9; --ok-ink:#1F6236; --bad-bg:#FDE8E6; --bad-ink:#8C2A20;
+  --warn-bg:#FDF2E3; --warn-ink:#8A5312;
+  --win-light:#F3F3F3; --win-dark:#202020;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+header{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);flex:none}
+.brand{display:flex;align-items:center;gap:9px;font-weight:600;font-size:14px}
+.mark{width:26px;height:26px;border-radius:7px;background:var(--accent);display:grid;place-items:center}
+.mark svg{width:15px;height:15px}
+.sp{flex:1}
+.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 13px;font-size:13px;cursor:pointer;color:var(--ink)}
+.btn:hover{background:var(--stage)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.pri:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{padding:6px 12px;font-size:12px;color:var(--ink-2)}
+.btn.ghost[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+a.back{font-size:12.5px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+a.back:hover{color:var(--accent);border-color:var(--accent)}
+
+main{flex:1;display:grid;grid-template-columns:288px 1fr 312px;min-height:0}
+.rail{overflow-y:auto;padding:18px;background:var(--rail)}
+.rail.l{border-right:1px solid var(--line)}
+.rail.r{border-left:1px solid var(--line)}
+h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);
+  margin:0 0 9px;font-weight:600}
+h3:not(:first-child){margin-top:24px}
+label.f{display:block;margin-bottom:10px}
+label.f>span{display:block;font-size:11px;color:var(--ink-2);margin-bottom:4px}
+input[type=text],textarea,select{width:100%;border:1px solid var(--line);border-radius:9px;
+  padding:8px 10px;background:#fff;font:inherit;font-size:13px;color:var(--ink);resize:vertical}
+textarea{font-size:13px;line-height:1.45}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible{
+  outline:2px solid var(--accent);outline-offset:1px}
+.hint{font-size:11.5px;color:var(--ink-3);line-height:1.45;margin:6px 0 0}
+.seg{display:inline-flex;background:var(--stage);border-radius:9px;padding:3px;gap:2px}
+.seg button{border:0;background:none;border-radius:7px;padding:6px 13px;font-size:13px;cursor:pointer;color:var(--ink-2)}
+.seg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.seg.wide{display:grid;grid-template-columns:1fr 1fr;width:100%}
+
+.stage{display:flex;flex-direction:column;min-width:0;background:var(--stage)}
+.stagebar{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--bg);
+  border-bottom:1px solid var(--line-2);flex:none}
+.sheet{flex:1;overflow-y:auto;padding:18px}
+.drop{border:2px dashed var(--line);border-radius:14px;background:var(--bg);
+  padding:44px 24px;text-align:center;color:var(--ink-2);transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop b{display:block;font-size:15px;color:var(--ink);margin-bottom:5px}
+.drop p{margin:0 auto;max-width:48ch;font-size:13px;line-height:1.55}
+.drop .btn{margin-top:14px}
+
+.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(164px,1fr));gap:13px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:block;width:100%}
+.card[aria-selected=true]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.card .shot{aspect-ratio:1;display:grid;place-items:center;
+  background:linear-gradient(90deg,var(--win-light) 0 50%,var(--win-dark) 50% 100%)}
+.card .shot img{width:80%;height:80%;object-fit:contain;display:block}
+.card .foot{display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:8px 10px;border-top:1px solid var(--line-2)}
+.card .nm{font-size:12px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:99px;flex:none}
+.dot.pass{background:#2F9E5F}.dot.warn{background:#D08A2C}.dot.fail{background:#C4483B}
+
+.check{border-radius:10px;padding:11px 13px;font-size:12.5px;line-height:1.5;margin-bottom:9px}
+.check b{display:block;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.check.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.check.bad{background:var(--bad-bg);color:var(--bad-ink)}
+.check.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.rows{display:flex;flex-direction:column;gap:7px;margin-top:4px}
+.row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:12.5px}
+.row .k{color:var(--ink-2)}
+.row .v{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;font-size:12px}
+.swatches{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.sw{display:flex;align-items:center;gap:8px;font-size:11.5px}
+.sw i{width:17px;height:17px;border-radius:5px;border:1px solid rgba(0,0,0,.14);flex:none}
+.sw .near{color:var(--ink-3);margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:11px}
+.empty{color:var(--ink-3);font-size:12.5px;line-height:1.5}
+.pillbadge{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.05em;
+  text-transform:uppercase;padding:2px 7px;border-radius:99px;background:var(--stage);color:var(--ink-3)}
+@media (max-width:980px){ main{grid-template-columns:1fr} .rail{max-height:none}
+  .rail.l{border-right:0;border-bottom:1px solid var(--line)}
+  .rail.r{border-left:0;border-top:1px solid var(--line)} html,body{height:auto} }
+</style></head><body>
+
+<header>
+  <div class="brand">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="#fff"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span>
+    Windows Illustration Studio
+  </div>
+  <span class="pillbadge">generated assets</span>
+  <div class="sp"></div>
+  <a class="back" href="builder-windowswip.html">Assemble one by hand</a>
+</header>
+
+<main>
+  <section class="rail l">
+    <h3>Generate</h3>
+    <label class="f"><span>Describe the asset</span>
+      <textarea id="p-text" style="height:72px" placeholder="a printer with a page coming out of it"></textarea></label>
+    <label class="f"><span>Treatment</span>
+      <div class="seg wide" id="p-treat">
+        <button data-t="depth" aria-pressed="true">depth</button>
+        <button data-t="mark" aria-pressed="false">mark</button>
+      </div></label>
+    <p class="hint" id="treathint"></p>
+    <label class="f" style="margin-top:12px"><span>Batch</span>
+      <select id="p-batch"><option>4</option><option selected>8</option><option>12</option></select></label>
+    <button class="btn pri" id="p-run" style="width:100%" disabled>Generate</button>
+    <p class="hint" id="runhint"></p>
+
+    <h3>Model</h3>
+    <label class="f"><span>Endpoint</span><input type="text" id="m-url" placeholder="https://..."></label>
+    <label class="f"><span>Trigger word</span><input type="text" id="m-trigger" value="wdsill"></label>
+    <p class="hint">Held in this browser only, never in the page. The page carries no key and calls
+    nothing until you put an endpoint here.</p>
+
+    <h3>Prompt sent</h3>
+    <p class="hint mono" id="p-full" style="word-break:break-word"></p>
+  </section>
+
+  <section class="stage">
+    <div class="stagebar">
+      <div class="seg" role="group" aria-label="Ground">
+        <button id="g-split" aria-pressed="true">Split</button>
+        <button id="g-light" aria-pressed="false">Light</button>
+        <button id="g-dark" aria-pressed="false">Dark</button>
+      </div>
+      <button class="btn ghost" id="g-only" aria-pressed="false">Only failures</button>
+      <div class="sp"></div>
+      <span class="mono" style="font-size:11px;color:var(--ink-3)" id="meta"></span>
+    </div>
+    <div class="sheet" id="sheet"></div>
+  </section>
+
+  <section class="rail r">
+    <h3>Checks</h3>
+    <div id="checks"><p class="empty">Pick an asset to measure it against the system.</p></div>
+    <h3>The rules</h3>
+    <div class="rows" id="rules"></div>
+    <p class="hint">Measured on the pixels, not on a recipe. A generated asset cannot be validated
+    by construction the way an assembled one can, so it gets measured instead.</p>
+  </section>
+</main>
+
+<input type="file" id="picker" accept="image/*" multiple hidden>
+<script>
+const TOKENS = {"canvas":512,"partCanvas":80,"safeArea":64,"margin":8,"gridStep":8,"size":{"lg":64,"md":48,"sm":32},"tone":{"blue":{"subtle":"#C3D9FD","soft":"#89B1F7","loud":"#5489E9","heavy":"#2561CE"},"purple":{"subtle":"#DCD0FB","soft":"#B9A2EE","loud":"#9974DD","heavy":"#7848C2"},"teal":{"subtle":"#ABE5DD","soft":"#4DC8BA","loud":"#369F94","heavy":"#2D776E"},"grey":{"paper":"#EEF2F9","subtle":"#D4D8DE","soft":"#ADB1B8","loud":"#898C92","heavy":"#66696F","deep":"#45484D","ink":"#2B2E33","edge":"#181B1F"}},"elevation":{"cast":{"type":"drop","color":"#000000","opacity":0.2,"dx":0,"dy":1.5,"blur":4},"recess":{"type":"inner","color":"#000000","opacity":0.2,"dx":0,"dy":-7,"blur":12},"press":{"type":"inner","color":"#000000","opacity":0.15,"dx":0,"dy":-1,"blur":2},"rim":{"type":"inner","color":"#EEF2F9","opacity":0.5,"dx":0,"dy":1,"blur":5},"highlight":{"type":"inner","color":"#FFFFFF","opacity":0.4,"dx":0,"dy":2,"blur":3}},"layout":{"solo":{"scale":1,"x":0,"y":0},"lead":{"scale":0.86,"x":-4,"y":-3},"modifier":{"scale":0.46,"x":17,"y":16},"anchors":{"br":[17,16],"bl":[-17,16],"tr":[17,-16],"tl":[-17,-16]}}};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const SURF = { light:'#F3F3F3', dark:'#202020' };
+const TREATMENT = {
+  depth:'layered flat vector illustration, soft inner shadows and stacked planes, subtle depth, blue purple and grey palette, plain white background',
+  mark:'flat vector symbol, smooth blue to purple gradient, no outline, no shadow, plain white background'
+};
+
+/* ---------- colour maths, the same rules compose.mjs enforces ---------- */
+const lin = c => { c/=255; return c<=0.04045 ? c/12.92 : Math.pow((c+0.055)/1.055,2.4); };
+const lumRGB = (r,g,b) => 0.2126*lin(r)+0.7152*lin(g)+0.0722*lin(b);
+const hexToRGB = h => [parseInt(h.substr(1,2),16),parseInt(h.substr(3,2),16),parseInt(h.substr(5,2),16)];
+const contrast = (a,b) => { const hi=Math.max(a,b), lo=Math.min(a,b); return (hi+0.05)/(lo+0.05); };
+const toHex = (r,g,b) => '#'+[r,g,b].map(n=>Math.round(n).toString(16).padStart(2,'0')).join('');
+
+// flat list of every token, so a colour can be told how far it sits from the system
+const TOKEN_LIST = [];
+for (const fam of Object.keys(TOKENS.tone))
+  for (const step of Object.keys(TOKENS.tone[fam]))
+    TOKEN_LIST.push({ ref: fam+'.'+step, hex: TOKENS.tone[fam][step], rgb: hexToRGB(TOKENS.tone[fam][step]) });
+
+/* Perceptual-ish distance. Plain RGB euclidean badly underrates hue error on
+ * dark colours, which is exactly where a drifting model goes wrong, so this
+ * weights the channels the way the eye does. */
+function dist(a, b) {
+  const rm = (a[0]+b[0])/2;
+  const dr=a[0]-b[0], dg=a[1]-b[1], db=a[2]-b[2];
+  return Math.sqrt((2+rm/256)*dr*dr + 4*dg*dg + (2+(255-rm)/256)*db*db);
+}
+const nearestToken = rgb => TOKEN_LIST.reduce((best,t) => {
+  const d = dist(rgb, t.rgb); return d < best.d ? { ...t, d } : best;
+}, { d: Infinity });
+
+/* ---------- the validator ----------
+ * Everything below reads pixels. An assembled asset is correct by construction
+ * because the composer can only emit what the system defines. A generated one
+ * has no such guarantee, so the same rules have to be measured after the fact.
+ */
+function analyse(img) {
+  const N = 256;                                   // enough to measure, cheap to run
+  const c = document.createElement('canvas'); c.width = c.height = N;
+  const ctx = c.getContext('2d', { willReadFrequently: true });
+  ctx.clearRect(0,0,N,N);
+  const s = Math.min(N/img.width, N/img.height);
+  const w = img.width*s, h = img.height*s;
+  ctx.drawImage(img, (N-w)/2, (N-h)/2, w, h);
+  const px = ctx.getImageData(0,0,N,N).data;
+
+  /* Content mask. Anything transparent is ground; so is near-white or near-flat
+   * colour CONNECTED to the border, which is how a baked-in frame background
+   * gets recognised rather than mistaken for artwork. */
+  const isGroundish = i => {
+    const a = px[i+3];
+    if (a < 24) return true;
+    return Math.min(px[i], px[i+1], px[i+2]) >= 246;
+  };
+  const ground = new Uint8Array(N*N);
+  const stack = [];
+  for (let x=0;x<N;x++){ stack.push(x,0); stack.push(x,N-1); }
+  for (let y=0;y<N;y++){ stack.push(0,y); stack.push(N-1,y); }
+  let bakedBorder = 0, borderCount = 0;
+  while (stack.length) {
+    const y = stack.pop(), x = stack.pop();
+    if (x<0||y<0||x>=N||y>=N) continue;
+    const idx = y*N+x; if (ground[idx]) continue;
+    const i = idx*4;
+    if (!isGroundish(i)) continue;
+    if (px[i+3] >= 24) bakedBorder++;              // opaque ground = a baked background
+    ground[idx] = 1;
+    stack.push(x+1,y,x-1,y,x,y+1,x,y-1);
+  }
+  for (let x=0;x<N;x++){ if(!ground[x]) borderCount++; if(!ground[(N-1)*N+x]) borderCount++; }
+
+  const content = [];
+  for (let i=0;i<N*N;i++) if (!ground[i]) content.push(i);
+  if (!content.length) return null;
+
+  /* Silhouette. The rule is about the OUTER edge against each surface, so only
+   * content pixels touching ground are measured. An asset can be any colour
+   * inside; what it may not do is dissolve at its own boundary. */
+  /* The literal boundary pixel is antialiased, which means it is a blend of the
+   * artwork and whatever it was drawn against. Measuring that samples the old
+   * background, not the asset, and every Figma export fails for a reason that
+   * is not about the asset. So walk inward and sample a band just under the
+   * skin instead. */
+  const depth = new Int16Array(N*N).fill(-1);
+  let ring = [];
+  for (const idx of content) {
+    const x = idx%N, y = (idx/N)|0;
+    if (x>0 && ground[idx-1] || x<N-1 && ground[idx+1] || y>0 && ground[idx-N] || y<N-1 && ground[idx+N]) {
+      depth[idx] = 0; ring.push(idx);
+    }
+  }
+  for (let d = 0; ring.length && d < 8; d++) {
+    const next = [];
+    for (const idx of ring) {
+      const x = idx%N, y = (idx/N)|0;
+      for (const n of [x>0?idx-1:-1, x<N-1?idx+1:-1, y>0?idx-N:-1, y<N-1?idx+N:-1]) {
+        if (n < 0 || ground[n] || depth[n] !== -1) continue;
+        depth[n] = d+1; next.push(n);
+      }
+    }
+    ring = next;
+  }
+  const SKIN = 3;
+  let edge = content.filter(i => depth[i] >= SKIN && depth[i] <= SKIN+2);
+  if (edge.length < 24) edge = content.filter(i => depth[i] >= 1);   // thin asset, take what there is
+  if (!edge.length) edge = content;
+  const surfaces = {};
+  for (const [name, hex] of Object.entries(SURF)) {
+    const [gr,gg,gb] = hexToRGB(hex), gl = lumRGB(gr,gg,gb);
+    let held = 0; const ratios = [];
+    for (const idx of edge) {
+      const i = idx*4, a = px[i+3]/255;
+      const r = px[i]*a + gr*(1-a), g = px[i+1]*a + gg*(1-a), b = px[i+2]*a + gb*(1-a);
+      const cr = contrast(lumRGB(r,g,b), gl);
+      ratios.push(cr); if (cr >= 3) held++;
+    }
+    ratios.sort((a,b)=>a-b);
+    surfaces[name] = {
+      held: edge.length ? held/edge.length : 0,
+      median: ratios.length ? ratios[(ratios.length/2)|0] : 0
+    };
+  }
+
+  /* Detail retention. Edge energy at 64 against edge energy at full size: a
+   * shape that is one silhouette keeps nearly all of it, a shape made of small
+   * repeated parts loses most. This is the keyboard-at-64 problem as a number. */
+  /* Round trip through 64 and compare against the original. Measuring edge
+   * energy at each size and dividing normalises the answer away, because a
+   * smaller image has proportionally fewer pixels AND fewer edges. What matters
+   * is what the round trip destroys, so measure that directly. */
+  const k = document.createElement('canvas'); k.width = k.height = 64;
+  const kc = k.getContext('2d', { willReadFrequently: true });
+  kc.drawImage(c, 0, 0, 64, 64);
+  const u = document.createElement('canvas'); u.width = u.height = N;
+  const uc = u.getContext('2d', { willReadFrequently: true });
+  uc.imageSmoothingEnabled = true;
+  uc.drawImage(k, 0, 0, N, N);
+  const back = uc.getImageData(0,0,N,N).data;
+  let diff = 0, spread = 0, mean = 0;
+  for (const idx of content) { const i = idx*4; mean += lumRGB(px[i],px[i+1],px[i+2]); }
+  mean /= content.length;
+  for (const idx of content) {
+    const i = idx*4;
+    const L = lumRGB(px[i],px[i+1],px[i+2]);
+    diff += Math.abs(L - lumRGB(back[i],back[i+1],back[i+2]));
+    spread += Math.abs(L - mean);
+  }
+  diff /= content.length; spread = spread/content.length || 1;
+  // scaled against the asset's own internal variation: losing half of what
+  // made it legible is the point where it stops reading.
+  const retention = Math.max(0, Math.min(1, 1 - diff/(spread*0.9)));
+
+  /* Palette. Coarse histogram of content colour, then how far each dominant
+   * colour sits from the nearest token. Drift shows up here before it shows up
+   * to the eye. */
+  const bins = new Map();
+  for (const idx of content) {
+    const i = idx*4; if (px[i+3] < 200) continue;
+    const key = ((px[i]>>4)<<8) | ((px[i+1]>>4)<<4) | (px[i+2]>>4);
+    let b = bins.get(key); if (!b) bins.set(key, b = { n:0, r:0, g:0, b:0 });
+    b.n++; b.r+=px[i]; b.g+=px[i+1]; b.b+=px[i+2];
+  }
+  const total = [...bins.values()].reduce((a,b)=>a+b.n,0) || 1;
+  const palette = [...bins.values()].sort((a,b)=>b.n-a.n).slice(0,5).map(b => {
+    const rgb = [b.r/b.n, b.g/b.n, b.b/b.n];
+    const near = nearestToken(rgb);
+    return { hex: toHex(...rgb), share: b.n/total, near: near.ref, dist: Math.round(near.d) };
+  });
+
+  return {
+    surfaces, retention, palette,
+    baked: borderCount === 0 && bakedBorder > N*2,
+    coverage: content.length/(N*N)
+  };
+}
+
+function verdict(a) {
+  if (!a) return 'fail';
+  const s = Math.min(a.surfaces.light.held, a.surfaces.dark.held);
+  if (s < 0.5) return 'fail';
+  if (s < 0.8 || a.retention < 0.45 || a.palette[0].dist > 60 || a.baked) return 'warn';
+  return 'pass';
+}
+
+/* ---------- state ---------- */
+const S = { items: [], sel: -1, ground: 'split', onlyFail: false, treat: 'depth' };
+
+function fullPrompt() {
+  const t = $('p-text').value.trim();
+  return ($('m-trigger').value.trim() || 'wdsill') + ', ' + (t || 'an asset') + ', ' + TREATMENT[S.treat];
+}
+
+function addFiles(files) {
+  for (const f of files) {
+    if (!f.type.startsWith('image/')) continue;
+    const url = URL.createObjectURL(f);
+    const img = new Image();
+    img.onload = () => {
+      const item = { name: f.name.replace(/\.[^.]+$/,''), url, img, a: analyse(img) };
+      item.v = verdict(item.a);
+      S.items.push(item);
+      if (S.sel === -1) S.sel = S.items.length - 1;
+      render();
+    };
+    img.src = url;
+  }
+}
+
+/* ---------- render ---------- */
+function renderSheet() {
+  const shown = S.items.filter(i => !S.onlyFail || i.v !== 'pass');
+  if (!S.items.length) {
+    $('sheet').innerHTML =
+      '<div class="drop" id="drop"><b>Drop illustrations here</b>' +
+      '<p>Anything you have: a batch from a model, a Figma export, a single candidate. ' +
+      'Each one is measured against the system the moment it lands, so this works ' +
+      'before a model exists and keeps working after.</p>' +
+      '<button class="btn" id="b-pick">Choose files</button></div>';
+    wireDrop();
+    return;
+  }
+  const bg = S.ground === 'light' ? 'var(--win-light)'
+           : S.ground === 'dark' ? 'var(--win-dark)'
+           : 'linear-gradient(90deg,var(--win-light) 0 50%,var(--win-dark) 50% 100%)';
+  $('sheet').innerHTML = '<div class="results">' + shown.map(it => {
+    const i = S.items.indexOf(it);
+    return '<button class="card" data-i="' + i + '" aria-selected="' + (i===S.sel) + '">' +
+      '<div class="shot" style="background:' + bg + '"><img src="' + it.url + '" alt="' + esc(it.name) + '"></div>' +
+      '<div class="foot"><span class="nm">' + esc(it.name) + '</span>' +
+      '<span class="dot ' + it.v + '" title="' + it.v + '"></span></div></button>';
+  }).join('') + '</div>';
+  $('sheet').querySelectorAll('[data-i]').forEach(b =>
+    b.addEventListener('click', () => { S.sel = +b.dataset.i; render(); }));
+}
+
+function renderChecks() {
+  const it = S.items[S.sel];
+  if (!it) { $('checks').innerHTML = '<p class="empty">Pick an asset to measure it against the system.</p>'; return; }
+  const a = it.a;
+  if (!a) { $('checks').innerHTML = '<div class="check bad"><b>unreadable</b>Nothing drawable in this image.</div>'; return; }
+  const pct = n => Math.round(n*100) + '%';
+  const worst = Math.min(a.surfaces.light.held, a.surfaces.dark.held);
+  const cls = it.v === 'pass' ? 'ok' : it.v === 'warn' ? 'warn' : 'bad';
+  const msg = worst >= 0.8 ? 'The outer edge stays visible on both Windows surfaces.'
+    : worst >= 0.5 ? 'Part of the outer edge dissolves into one of the surfaces.'
+    : 'The silhouette is lost against at least one surface.';
+
+  $('checks').innerHTML =
+    '<div class="check ' + cls + '"><b>surfaces &middot; ' + it.v + '</b>' + msg + '</div>' +
+    (a.baked ? '<div class="check warn"><b>background</b>This file has an opaque background. It was removed before measuring, but the asset should be exported with transparency or it cannot sit on a dark surface.</div>' : '') +
+    '<div class="rows">' +
+      row('Edge held on light', pct(a.surfaces.light.held)) +
+      row('Edge held on dark', pct(a.surfaces.dark.held)) +
+      row('Median contrast, light', a.surfaces.light.median.toFixed(2)) +
+      row('Median contrast, dark', a.surfaces.dark.median.toFixed(2)) +
+    '</div>' +
+    '<h3>At 64</h3>' +
+    '<div class="check ' + (a.retention >= 0.45 ? 'ok' : 'warn') + '"><b>detail &middot; ' +
+      pct(a.retention) + ' kept</b>' +
+      (a.retention >= 0.45 ? 'Holds its read at the bottom of the ramp.'
+        : 'Most of the detail is gone by 64. Either it is not a 64 asset, or it needs a simplified small variant.') +
+    '</div>' +
+    '<h3>Palette</h3><div class="swatches">' +
+      a.palette.map(p => '<div class="sw"><i style="background:' + p.hex + '"></i>' +
+        '<span class="mono">' + p.hex + '</span>' +
+        '<span class="near">' + p.near + ' &middot; ' + p.dist + '</span></div>').join('') +
+    '</div><p class="hint">Distance to the nearest token. Under 25 is on system, over 60 is drift.</p>';
+}
+const row = (k,v) => '<div class="row"><span class="k">' + k + '</span><span class="v">' + v + '</span></div>';
+
+function renderRules() {
+  $('rules').innerHTML =
+    row('Light surface', TOKENS ? '#F3F3F3' : '') +
+    row('Dark surface', '#202020') +
+    row('Minimum contrast', '3.00') +
+    row('Delivery sizes', Object.values(TOKENS.size).join(' / ')) +
+    row('Tone families', Object.keys(TOKENS.tone).length) +
+    row('Elevation recipes', Object.keys(TOKENS.elevation).length);
+}
+
+function render() {
+  renderSheet(); renderChecks();
+  const fails = S.items.filter(i => i.v !== 'pass').length;
+  $('meta').textContent = S.items.length
+    ? S.items.length + ' asset' + (S.items.length>1?'s':'') + ' · ' + fails + ' need work'
+    : 'nothing loaded';
+  $('p-full').textContent = fullPrompt();
+}
+
+/* ---------- wiring ---------- */
+function wireDrop() {
+  const d = $('drop'); if (!d) return;
+  const pick = $('b-pick'); if (pick) pick.addEventListener('click', () => $('picker').click());
+  ['dragenter','dragover'].forEach(e => d.addEventListener(e, ev => { ev.preventDefault(); d.classList.add('over'); }));
+  ['dragleave','drop'].forEach(e => d.addEventListener(e, ev => { ev.preventDefault(); d.classList.remove('over'); }));
+  d.addEventListener('drop', ev => addFiles(ev.dataTransfer.files));
+}
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => { e.preventDefault(); if (e.dataTransfer?.files?.length) addFiles(e.dataTransfer.files); });
+$('picker').addEventListener('change', e => addFiles(e.target.files));
+
+$('p-treat').querySelectorAll('[data-t]').forEach(b => b.addEventListener('click', () => {
+  S.treat = b.dataset.t;
+  $('p-treat').querySelectorAll('[data-t]').forEach(o => o.setAttribute('aria-pressed', o === b));
+  $('treathint').textContent = S.treat === 'depth'
+    ? 'Layered planes and inner shadows. Thirteen of the sixteen pilot assets.'
+    : 'Flat gradient symbol, no depth. Three of the sixteen, so expect this one to be weaker.';
+  render();
+}));
+['p-text','m-trigger'].forEach(id => $(id).addEventListener('input', () => { $('p-full').textContent = fullPrompt(); }));
+
+['split','light','dark'].forEach(g => $('g-'+g).addEventListener('click', () => {
+  S.ground = g;
+  ['split','light','dark'].forEach(o => $('g-'+o).setAttribute('aria-pressed', o===g));
+  render();
+}));
+$('g-only').addEventListener('click', () => {
+  S.onlyFail = !S.onlyFail;
+  $('g-only').setAttribute('aria-pressed', S.onlyFail);
+  render();
+});
+
+// endpoint is a per-viewer convenience, so browser storage is the right home
+try { const saved = localStorage.getItem('wdsai.endpoint'); if (saved) $('m-url').value = saved; } catch {}
+$('m-url').addEventListener('input', () => {
+  try { localStorage.setItem('wdsai.endpoint', $('m-url').value); } catch {}
+  const ok = /^https?:\/\/.+/.test($('m-url').value.trim());
+  $('p-run').disabled = !ok;
+  $('runhint').textContent = ok
+    ? 'Calls the endpoint above with the prompt shown below, then measures whatever comes back.'
+    : 'No endpoint set, so nothing is called. Drop images into the sheet to measure them instead.';
+});
+$('p-run').addEventListener('click', () => {
+  $('runhint').textContent = 'Not wired to a model yet. Drop the batch in instead and it gets measured the same way.';
+});
+
+$('treathint').textContent = 'Layered planes and inner shadows. Thirteen of the sixteen pilot assets.';
+$('runhint').textContent = 'No endpoint set, so nothing is called. Drop images into the sheet to measure them instead.';
+renderRules(); render();
+</script></body></html>
