@@ -677,15 +677,19 @@ function renderPanel() {
   if (asset.description) panel.append(el('p', { className: 'blurb', textContent: asset.description }));
 
   /* Preview */
-  const preview = el('div', { className: 'preview' });
+  /* The preview fits the drawing to the box rather than showing it at actual
+     size. A 16px icon at 16px is too small to judge and a 512px illustration
+     at 512px is cropped. The size control still picks WHICH drawing you see,
+     since every size is drawn separately; this only changes how big it is. */
+  const preview = el('div', { className: `preview ${asset.type}` });
   const source = sourceFor(asset);
   if (source) {
-    const node = svgNode(tint(source, colors), state.size);
+    const node = svgNode(tint(source, colors), null);
     if (node) preview.append(node);
   }
   panel.append(preview);
   const note = el('p', { className: 'preview-note' });
-  note.append(`Shown at actual size — ${state.size}px`);
+  note.append(`Scaled to fit · ${state.size}px drawing`);
   if (isGenerated(asset, themeFor(asset), state.size)) {
     note.append(' ', el('span', { className: 'badge generated', textContent: 'Generated' }));
   }

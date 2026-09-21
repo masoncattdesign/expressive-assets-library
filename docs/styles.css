@@ -323,7 +323,11 @@ body {
   border-radius: var(--radius); background: var(--surface-2);
   border: 1px solid var(--line-soft);
   height: 168px; display: grid; place-items: center; margin-bottom: 6px; overflow: hidden;
+  padding: 22px; box-sizing: border-box;
 }
+/* Fit, never crop: the viewBox keeps the proportions, CSS sets the box. */
+.preview > svg { display: block; width: 100%; height: 100%; }
+.preview.illustration { height: 260px; padding: 16px; }
 .preview-note { font-size: 11.5px; color: var(--text-3); text-align: center; margin: 0 0 18px; }
 
 .panel h3 {
