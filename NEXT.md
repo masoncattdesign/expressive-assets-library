@@ -24,7 +24,7 @@ and says so.
 | Third Party | 61 | 16–48 | Standard, Outline, Filled |
 | File Icons | 88 | 16–256 | Standard, Outline |
 | System Icons | 2,891 | 20, 24 | Outline, Filled |
-| OOBE Illustrations | 27 | 128–362 | Standard |
+| Windows Illustrations | 27 | 128–362 | Standard |
 | M365 Illustrations | 40 | 512 | Standard |
 | Device Illustrations | 5 | 128–228 | Standard |
 

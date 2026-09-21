@@ -5,7 +5,7 @@ metadata that describes it, and the browser designers and engineers use to find 
 
 | | |
 |---|---|
-| **Assets** | 3,128 — 2,891 Fluent system, 90 product, 88 file, 28 M365 illustrations, 27 OOBE illustrations, 2 placeholder |
+| **Assets** | 3,128 — 2,891 Fluent system, 90 product, 88 file, 28 M365 illustrations, 27 Windows illustrations, 2 placeholder |
 | **Browser** | `https://masoncattdesign.github.io/expressive-assets-library/` |
 | **Contract** | [`manifest.json`](manifest.json) |
 | **Schema** | [`schema/asset.schema.json`](schema/asset.schema.json) |
@@ -26,7 +26,7 @@ assets/
     product/     Product Icons    — first-party apps: mail, photos, store…
     file/        File Icons       — document types: doc, xls, pdf, zip…
   illustrations/
-    oobe/        OOBE Illustrations — out-of-box setup: wifi, PIN, privacy…
+    oobe/        Windows Illustrations — out-of-box setup: wifi, PIN, privacy…
     m365/        M365 Illustrations — spot illustrations: chat, tasks, search…
     product/     Product Illustrations
 

@@ -61,7 +61,7 @@ export const GROUPS = [
     label: 'Illustrations',
     dir: 'assets/illustrations',
     collections: [
-      { id: 'oobe', label: 'OOBE Illustrations' },
+      { id: 'oobe', label: 'Windows Illustrations' },
       { id: 'm365', label: 'M365 Illustrations' },
       { id: 'device', label: 'Device Illustrations' },
     ],
