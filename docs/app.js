@@ -110,7 +110,8 @@ const ACCENTS = [
   { id: 'magenta', label: 'Magenta', primary: '#E3008C', secondary: '#C239B3' },
 ];
 
-const STATUS_LABEL = { draft: 'Draft', published: 'Published', deprecated: 'Deprecated' };
+// The schema value stays `draft` ("in progress, do not ship"); people call it WIP.
+const STATUS_LABEL = { draft: 'WIP', published: 'Published', deprecated: 'Deprecated' };
 
 /* The sidebar marks are assets, not drawings kept in this file. Regenerate
  * with `node scripts/inline-nav-icons.mjs` after changing the picks there. */
@@ -535,6 +536,11 @@ function renderGrid() {
     ? `${assets.length} match${assets.length === 1 ? '' : 'es'}`
     : `${assets.length} asset${assets.length === 1 ? '' : 's'}`;
 
+  const { group: selGroup, collection: selCol } = state.filter;
+  const selType = selCol && (state.manifest.groups.find((g) => g.id === selGroup) || {}).type;
+  const bannerText = selCol ? collectionNote(selType, selCol) : null;
+  if (bannerText) grid.append(el('div', { className: 'collection-note', textContent: bannerText }));
+
   if (!assets.length) {
     const empty = el('div', { className: 'empty' });
     empty.innerHTML =
@@ -608,6 +614,16 @@ function isGenerated(asset, theme, size) {
   return cells.indexOf(theme + ':' + size) !== -1 || cells.indexOf(theme + ':any') !== -1;
 }
 
+/** A collection can carry a note, such as whose artwork it is. */
+function collectionNote(type, id) {
+  for (const g of state.manifest.groups) {
+    if (g.type !== type) continue;
+    const c = g.collections.find((x) => x.id === id);
+    if (c && c.note) return c.note;
+  }
+  return null;
+}
+
 function collectionLabel(asset) {
   for (const g of state.manifest.groups) {
     const c = g.collections.find((x) => x.id === asset.collection);
@@ -645,6 +661,9 @@ function renderPanel() {
     kicker.append(' ', el('span', { className: `badge ${asset.status}`, textContent: STATUS_LABEL[asset.status] }));
   }
   panel.append(kicker);
+
+  const ownerNote = collectionNote(asset.type, asset.collection);
+  if (ownerNote) panel.append(el('p', { className: 'callout', textContent: ownerNote }));
 
   if (asset.status === 'deprecated' && asset.replacedBy) {
     const note = el('p', { className: 'callout' });

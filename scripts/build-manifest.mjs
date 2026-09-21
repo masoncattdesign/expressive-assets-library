@@ -62,7 +62,10 @@ export const GROUPS = [
     dir: 'assets/illustrations',
     collections: [
       { id: 'oobe', label: 'Windows Illustrations' },
-      { id: 'm365', label: 'M365 Illustrations' },
+      { id: 'm365', label: 'M365 Illustrations',
+        // Shown as a banner in the Gallery. These are reference copies of
+        // another team's artwork, so the library says whose they are.
+        note: 'These illustrations belong to the M365 design system and are not owned by Windows Design Systems. They are here for reference and are still a work in progress.' },
       { id: 'device', label: 'Device Illustrations' },
     ],
   },
@@ -130,6 +133,7 @@ export function buildManifest(assets) {
         .map((c) => ({
           id: c.id,
           label: c.label,
+          ...(c.note ? { note: c.note } : {}),
           count: clean.filter((a) => a.type === g.type && a.collection === c.id).length,
         }))
         .filter((c) => c.count > 0),

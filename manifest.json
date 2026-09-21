@@ -64,6 +64,7 @@
         {
           "id": "m365",
           "label": "M365 Illustrations",
+          "note": "These illustrations belong to the M365 design system and are not owned by Windows Design Systems. They are here for reference and are still a work in progress.",
           "count": 40
         },
         {
@@ -233038,7 +233039,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -233286,7 +233287,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -233474,7 +233475,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -233662,7 +233663,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -233881,7 +233882,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -234147,7 +234148,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -234385,7 +234386,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -234669,7 +234670,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -234957,7 +234958,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -235195,7 +235196,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -235365,7 +235366,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -235671,7 +235672,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -235915,7 +235916,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -236249,7 +236250,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -236508,7 +236509,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -236714,7 +236715,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -236920,7 +236921,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -237157,7 +237158,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -237341,7 +237342,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -237530,7 +237531,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -237737,7 +237738,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -237889,7 +237890,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -238139,7 +238140,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -238389,7 +238390,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -238578,7 +238579,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -238870,7 +238871,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -239142,7 +239143,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -239330,7 +239331,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -239549,7 +239550,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -239848,7 +239849,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -240208,7 +240209,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -240503,7 +240504,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -240745,7 +240746,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -240916,7 +240917,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -241140,7 +241141,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -241381,7 +241382,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -241665,7 +241666,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -241853,7 +241854,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -242041,7 +242042,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],
@@ -242283,7 +242284,7 @@
       ],
       "type": "illustration",
       "collection": "m365",
-      "status": "published",
+      "status": "draft",
       "themes": [
         "standard"
       ],

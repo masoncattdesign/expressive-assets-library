@@ -275,6 +275,13 @@ body {
 .grid.list .card .name { flex: 1; font-size: 13.5px; }
 .grid.list .card .meta { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--text-3); }
 
+.collection-note {
+  grid-column: 1 / -1;
+  font-size: 12.5px; line-height: 1.5;
+  padding: 10px 14px; border-radius: 10px;
+  background: var(--accent-soft); color: var(--text-2);
+  border: 1px solid var(--accent-ring);
+}
 .empty { grid-column: 1 / -1; padding: 60px 20px; text-align: center; color: var(--text-3); }
 .empty strong { display: block; color: var(--text-2); font-size: 15px; margin-bottom: 6px; }
 
