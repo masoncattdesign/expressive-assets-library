@@ -5,13 +5,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>/* Page theme. Same key, states and attribute as chrome.js on the
+   published site, so a choice made in the Customizer carries here. This
+   page is one self-contained file, so it carries its own copy. */
+(function(){var m='light';try{if(localStorage.getItem('expressive-assets-theme')==='dark')m='dark'}catch(e){}document.documentElement.setAttribute('data-theme',m)})();</script>
 <style>
 :root{
   --bg:#FFFFFF; --rail:#FAFAFB; --stage:#F6F7F9; --line:#E4E7EC; --line-2:#EFF1F4;
   --ink:#16181D; --ink-2:#5A616B; --ink-3:#8A919C;
   --accent:#2561CE; --accent-soft:#E8F0FE;
   --ok-bg:#E3F5E9; --ok-ink:#1F6236; --bad-bg:#FDE8E6; --bad-ink:#8C2A20;
+  --field:#FFFFFF; --on-accent:#FFFFFF; --on-ink:#FFFFFF; --accent-ink:#2561CE;
+  --rim:rgba(0,0,0,.12); --seg-shadow:0 1px 2px rgba(0,0,0,.08);
 }
+/* Dark mode. Chrome values are the Customizer's own dark palette
+   (styles.css) so every page reads as one family. The accent lifts from
+   #2561CE to #3170DD: the original falls to 2.8:1 against these surfaces,
+   under the 3:1 a control boundary needs, and #3170DD is the smallest lift
+   that clears it while still carrying white button text at 4.7:1. Link
+   text gets its own lighter blue so a hover never reads worse than the
+   link it hovers. The artwork grounds are not here on purpose. */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#1B1C1F; --rail:#17181B; --stage:#131416; --line:#2C2D31; --line-2:#232427;
+  --ink:#ECEDEF; --ink-2:#B4B7BD; --ink-3:#85898F;
+  --accent:#3170DD; --accent-soft:#1C2A44; --accent-ink:#6A9DF3;
+  --field:#202124; --on-accent:#FFFFFF; --on-ink:#131416;
+  --rim:rgba(255,255,255,.16); --seg-shadow:0 1px 2px rgba(0,0,0,.5);
+  --ok-bg:#15301F; --ok-ink:#7FD6A0; --bad-bg:#3A1B18; --bad-ink:#F4A197;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--ink);
@@ -25,18 +48,18 @@ header{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:
 .mark{width:26px;height:26px;border-radius:7px;background:var(--accent);display:grid;place-items:center}
 .mark svg{width:14px;height:14px}
 header .sp{flex:1}
-.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 13px;font-size:13px;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--field);border-radius:8px;padding:7px 13px;font-size:13px;cursor:pointer}
 .btn:hover{border-color:var(--ink-3)}
-.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn.ghost{padding:6px 12px;font-size:12px;color:var(--ink-2)}
-.btn.ghost[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.ghost[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--on-ink)}
 .seg.wide{display:grid;grid-template-columns:repeat(3,1fr);width:100%}
 .seg.wide button{padding:6px 4px;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:1px}
 .seg.wide button em{font-style:normal;font-size:9.5px;opacity:.6;font-family:"JetBrains Mono",monospace}
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .seg{display:inline-flex;background:var(--stage);border-radius:9px;padding:3px;gap:2px}
 .seg button{border:0;background:none;border-radius:7px;padding:6px 13px;font-size:13px;cursor:pointer;color:var(--ink-2)}
-.seg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.seg button[aria-pressed=true]{background:var(--field);color:var(--ink);box-shadow:var(--seg-shadow)}
 
 main{flex:1;display:grid;grid-template-columns:288px 1fr 300px;min-height:0}
 .rail{overflow-y:auto;padding:18px;background:var(--rail)}
@@ -64,25 +87,25 @@ h3:not(:first-child){margin-top:24px}
 label.f{display:block;margin-bottom:10px}
 label.f span{display:block;font-size:11px;color:var(--ink-2);margin-bottom:4px}
 input[type=text],select{width:100%;border:1px solid var(--line);border-radius:8px;
- padding:7px 9px;background:#fff;font-size:13px}
+ padding:7px 9px;background:var(--field);font-size:13px}
 input[type=range]{width:100%;accent-color:var(--accent)}
 .hint{font-size:11.5px;color:var(--ink-3);line-height:1.45;margin:6px 0 0}
 
 .layers{display:flex;flex-direction:column;gap:5px;margin-bottom:6px}
 .layer{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;
- border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;cursor:pointer;text-align:left}
+ border:1px solid var(--line);background:var(--field);border-radius:9px;padding:7px 9px;cursor:pointer;text-align:left}
 .layer[aria-selected=true]{border-color:var(--accent);background:var(--accent-soft)}
-.layer .sw{width:20px;height:20px;border-radius:5px;border:1px solid rgba(0,0,0,.12)}
+.layer .sw{width:20px;height:20px;border-radius:5px;border:1px solid var(--rim)}
 .layer .nm{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .layer .nm em{font-style:normal;color:var(--ink-3);font-size:10.5px;display:block;font-family:"JetBrains Mono",monospace}
 .layer .x{border:0;background:none;color:var(--ink-3);cursor:pointer;font-size:15px;line-height:1;padding:2px 4px}
 .layer .x:hover{color:var(--bad-ink)}
 
 .tabs{display:flex;gap:4px;margin-bottom:10px}
-.tabs button{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;
+.tabs button{flex:1;border:1px solid var(--line);background:var(--field);border-radius:8px;
  padding:6px 3px;font-size:11px;cursor:pointer;color:var(--ink-2);white-space:nowrap}
 .tabs button em{font-style:normal;opacity:.6;font-size:10px}
-.tabs button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabs button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .panels{display:flex;flex-direction:column;gap:2px;margin-bottom:24px}
 .phead{display:flex;align-items:center;justify-content:space-between;width:100%;
  border:0;background:none;padding:9px 0;cursor:pointer;text-align:left;
@@ -108,14 +131,14 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .palette .chip:hover{border-color:var(--accent)}
 .palette::-webkit-scrollbar{width:8px}
 .palette::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
-.chip{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px;cursor:pointer;
+.chip{border:1px solid var(--line);background:var(--field);border-radius:9px;padding:7px;cursor:pointer;
  display:flex;flex-direction:column;align-items:center;gap:4px}
 .chip:hover{border-color:var(--accent)}
 .chip svg{width:100%;height:auto;aspect-ratio:1;color:var(--ink-2)}
 .chip span{font-size:9px;color:var(--ink-3);font-family:"JetBrains Mono",monospace;
  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
 .glyphs{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;max-height:150px;overflow-y:auto;
- border:1px solid var(--line);border-radius:9px;background:#fff;padding:4px;margin-top:6px}
+ border:1px solid var(--line);border-radius:9px;background:var(--field);padding:4px;margin-top:6px}
 .glyphs::-webkit-scrollbar{width:8px}
 .glyphs::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 .gl{aspect-ratio:1;border:1px solid transparent;border-radius:6px;background:none;cursor:pointer;
@@ -127,13 +150,13 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .gl[disabled]{opacity:.3;cursor:default}
 .glyphnote{grid-column:1/-1;padding:12px 8px;font-size:11px;color:var(--ink-3);text-align:center;line-height:1.5}
 .tones{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
-.tone{display:block;width:100%;height:32px;border-radius:7px;border:1px solid rgba(0,0,0,.12);cursor:pointer;padding:0}
+.tone{display:block;width:100%;height:32px;border-radius:7px;border:1px solid var(--rim);cursor:pointer;padding:0}
 .tone[aria-pressed=true]{outline:2px solid var(--accent);outline-offset:1px}
 .tonelab{font-size:9px;color:var(--ink-3);text-align:center;margin-top:2px;font-family:"JetBrains Mono",monospace}
 .fx{display:flex;flex-wrap:wrap;gap:5px}
-.fx button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:4px 11px;
+.fx button{border:1px solid var(--line);background:var(--field);border-radius:99px;padding:4px 11px;
  font-size:11px;cursor:pointer;color:var(--ink-2);font-family:"JetBrains Mono",monospace}
-.fx button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.fx button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--on-ink)}
 
 .check{border-radius:9px;padding:10px 12px;font-size:12px;line-height:1.45;margin-top:8px}
 .check.ok{background:var(--ok-bg);color:var(--ok-ink)}
@@ -145,12 +168,19 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .check b{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;
  letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;opacity:.8}
 textarea{width:100%;height:150px;border:1px solid var(--line);border-radius:9px;padding:9px;
- font-family:"JetBrains Mono",monospace;font-size:10.5px;background:#fff;resize:vertical}
+ font-family:"JetBrains Mono",monospace;font-size:10.5px;background:var(--field);resize:vertical}
 @media (max-width:1100px){
   main{grid-template-columns:1fr;overflow-y:auto}
   .rail.l,.rail.r{border:0;border-bottom:1px solid var(--line)}
   body{overflow:auto}
 }
+
+.theme-switch{display:inline-flex;background:var(--stage);border:1px solid var(--line);border-radius:999px;padding:2px;gap:2px;flex:none}
+.theme-switch button{border:0;background:none;border-radius:999px;cursor:pointer;color:var(--ink-2);padding:3px;display:flex;line-height:0}
+.theme-switch button svg{width:14px;height:14px}
+.theme-switch button:hover{color:var(--ink)}
+.theme-switch button[aria-pressed=true]{background:var(--ink);color:var(--on-ink)}
+.theme-switch button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 </style></head><body>
 
 <header>
@@ -163,6 +193,7 @@ textarea{width:100%;height:150px;border:1px solid var(--line);border-radius:9px;
     <button data-mode="prompt" aria-pressed="false">Prompt</button>
   </div>
   <div class="sp"></div>
+  <span data-theme-switch></span>
   <button class="btn" id="b-recipe">Copy recipe</button>
   <button class="btn pri" id="b-svg">Export SVG</button>
 </header>
@@ -1322,5 +1353,29 @@ function flash(btn, txt){ const o = btn.textContent; btn.textContent = txt; setT
 setMode(S.mode);
 render();
 addEventListener('resize', () => { BOXH = 0; sizeBoxes(); });
+</script>
+
+<script>
+(function(){
+  var KEY='expressive-assets-theme';
+  var ART={light:'<circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.4 5.4l1.8 1.8M16.8 16.8l1.8 1.8M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>',
+           dark:'<path d="M20 13.4A8.2 8.2 0 0 1 10.6 4a8.4 8.4 0 1 0 9.4 9.4Z"/>'};
+  var host=document.querySelector('[data-theme-switch]'); if(!host) return;
+  var cur=document.documentElement.getAttribute('data-theme')||'light';
+  host.className='theme-switch'; host.setAttribute('role','group'); host.setAttribute('aria-label','Theme');
+  ['light','dark'].forEach(function(m){
+    var b=document.createElement('button'), n=m[0].toUpperCase()+m.slice(1);
+    b.type='button'; b.title=n; b.setAttribute('aria-label',n); b.setAttribute('data-mode',m);
+    b.setAttribute('aria-pressed',String(m===cur));
+    b.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'+ART[m]+'</svg>';
+    b.addEventListener('click',function(){
+      document.documentElement.setAttribute('data-theme',m);
+      try{localStorage.setItem(KEY,m)}catch(e){}
+      host.querySelectorAll('button').forEach(function(o){o.setAttribute('aria-pressed',String(o.dataset.mode===m))});
+      document.dispatchEvent(new CustomEvent('themechange',{detail:{mode:m}}));
+    });
+    host.appendChild(b);
+  });
+})();
 </script>
 </body></html>
