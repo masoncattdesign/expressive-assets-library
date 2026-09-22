@@ -400,3 +400,6 @@ details.bd-sec > summary::after {
 details.bd-sec > summary { display: flex; align-items: center; gap: 9px; }
 details.bd-sec[open] > summary::after { transform: rotate(90deg); }
 details.bd-sec[open] > summary { margin-bottom: 2px; }
+
+/* Illustration Studio nav: the four tools, then a gap, then the reading. */
+.st-sep { width: 1px; height: 18px; background: var(--line, rgba(127,127,127,.3)); margin: 0 6px; flex: none; }

@@ -3,7 +3,7 @@
      Edits made here are lost the next time it is rebuilt. -->
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Windows Illustration Studio</title>
+<title>AI Generator &mdash; Illustration Studio</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
 <script>/* Page theme. Same key, states and attribute as chrome.js on the
    published site, so a choice made in the Customizer carries here. This
@@ -129,17 +129,33 @@ input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-vis
 .theme-switch button:hover{color:var(--ink)}
 .theme-switch button[aria-pressed=true]{background:var(--ink);color:var(--on-ink)}
 .theme-switch button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+/* Illustration Studio nav, matching the UI Builder's tabs */
+.st-nav{display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.st-nav::-webkit-scrollbar{display:none}
+.st-tab{padding:6px 11px;border-radius:7px;font-size:13px;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.st-tab:hover{background:var(--stage);color:var(--ink)}
+.st-tab.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.st-tab:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.st-sep{width:1px;height:18px;background:var(--line);margin:0 6px;flex:none}
 </style></head><body>
 
 <header>
   <div class="brand">
     <span class="mark"><svg viewBox="0 0 24 24" fill="#fff"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span>
-    Windows Illustration Studio
+    Illustration Studio
   </div>
-  <span class="pillbadge">generated assets</span>
+  <nav class="st-nav" aria-label="Illustration Studio">
+    <a class="st-tab" href="builder-windowswip.html">Builder</a>
+    <a class="st-tab" href="builder.html">UI Builder</a>
+    <a class="st-tab" href="builder-windowswip.html?mode=recipe">Recipe Builder</a>
+    <a class="st-tab on" href="builder-windowsai.html" aria-current="page">AI Generator</a>
+    <span class="st-sep" aria-hidden="true"></span>
+    <a class="st-tab" href="builder-about.html">About</a>
+    <a class="st-tab" href="builder-system-map.html">System Map</a>
+  </nav>
   <div class="sp"></div>
   <span data-theme-switch></span>
-  <a class="back" href="builder-windowswip.html">Assemble one by hand</a>
 </header>
 
 <main>

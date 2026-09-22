@@ -485,3 +485,6 @@ header.masthead .facts { border-top: 0; padding-top: 0; }
 .eyebrow { color: var(--ink-3); max-width: none; }
 .eyebrow span, .eyebrow b { white-space: nowrap; }
 .eyebrow b { color: var(--accent); font-weight: 500; }
+
+/* Illustration Studio nav: the four tools, then a gap, then the reading. */
+.st-sep { width: 1px; height: 18px; background: var(--line, rgba(127,127,127,.3)); margin: 0 6px; flex: none; }
