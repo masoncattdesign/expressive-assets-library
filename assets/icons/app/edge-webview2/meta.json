@@ -36,5 +36,286 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-04",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
+    "k": 3,
+    "groups": [
+      {
+        "id": "color1",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color1.part1",
+            "stops": [
+              "#50e6ff",
+              "#51e6f7",
+              "#54e7e2",
+              "#5ae8bf",
+              "#61ea90",
+              "#66eb6e"
+            ],
+            "shapes": [
+              6,
+              7
+            ],
+            "alsoFills": [
+              [
+                "#50e6ff",
+                "#51e6f7",
+                "#54e7e2",
+                "#5ae8bf",
+                "#61ea90",
+                "#66eb6e"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.169
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#114a8b",
+              "#0c59a4"
+            ],
+            "shapes": [
+              0,
+              1,
+              2
+            ],
+            "alsoFills": [
+              [
+                "#114a8b",
+                "#0c59a4"
+              ],
+              [
+                "#114a8b",
+                "#0c59a4"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.101
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#0078d4",
+              "#0680d7",
+              "#1595df",
+              "#1b9de2"
+            ],
+            "shapes": [
+              3,
+              4,
+              5
+            ],
+            "alsoFills": [
+              [
+                "#0078d4",
+                "#0680d7",
+                "#1595df",
+                "#1b9de2"
+              ],
+              [
+                "#0078d4",
+                "#0680d7",
+                "#1595df",
+                "#1b9de2"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.101
+      },
+      {
+        "id": "color4",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color4.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#0078d4",
+              "#0680d7",
+              "#1595df",
+              "#1b9de2"
+            ],
+            "shapes": [
+              3,
+              4,
+              5
+            ],
+            "alsoFills": [
+              [
+                "#0078d4",
+                "#0680d7",
+                "#1595df",
+                "#1b9de2"
+              ],
+              [
+                "#0078d4",
+                "#0680d7",
+                "#1595df",
+                "#1b9de2"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deep-blue",
+        "members": [
+          {
+            "id": "deep-blue.part1",
+            "stops": [
+              "#114a8b",
+              "#0c59a4"
+            ],
+            "shapes": [
+              0,
+              1,
+              2
+            ],
+            "alsoFills": [
+              [
+                "#114a8b",
+                "#0c59a4"
+              ],
+              [
+                "#114a8b",
+                "#0c59a4"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "light-teal",
+        "members": [
+          {
+            "id": "light-teal.part1",
+            "stops": [
+              "#50e6ff",
+              "#51e6f7",
+              "#54e7e2",
+              "#5ae8bf",
+              "#61ea90",
+              "#66eb6e"
+            ],
+            "shapes": [
+              6,
+              7
+            ],
+            "alsoFills": [
+              [
+                "#50e6ff",
+                "#51e6f7",
+                "#54e7e2",
+                "#5ae8bf",
+                "#61ea90",
+                "#66eb6e"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "color2.part1",
+        "archetype": "deep-blue.part1",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "color2.part1",
+        "archetype": "deep-blue.part1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "color2.part1",
+        "archetype": "deep-blue.part1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "color3.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "color3.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "color3.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "color1.part1",
+        "archetype": "light-teal.part1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "color1.part1",
+        "archetype": "light-teal.part1",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "color4.basecolor.part1",
+        "archetype": "white.part1",
+        "part": null
+      }
+    ],
+    "hash": "7460fe91e99c9f83"
+  }
 }

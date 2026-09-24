@@ -36,5 +36,212 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-04",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
+    "k": 3,
+    "groups": [
+      {
+        "id": "color1",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color1.part1",
+            "stops": [
+              "#cad2d9",
+              "#ffffff"
+            ],
+            "shapes": [
+              4,
+              5
+            ],
+            "alsoFills": [
+              [
+                "#cad2d9",
+                "#ffffff"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.138
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#0669bc",
+              "#1493df"
+            ],
+            "shapes": [
+              1,
+              2,
+              3
+            ],
+            "alsoFills": [
+              [
+                "#0669bc",
+                "#1493df"
+              ],
+              [
+                "#0669bc",
+                "#1493df"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.082
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#114a8b",
+              "#0669bc"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.075
+      },
+      {
+        "id": "color4",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color4.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#0669bc",
+              "#1493df"
+            ],
+            "shapes": [
+              1,
+              2,
+              3
+            ],
+            "alsoFills": [
+              [
+                "#0669bc",
+                "#1493df"
+              ],
+              [
+                "#0669bc",
+                "#1493df"
+              ]
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#114a8b",
+              "#0669bc"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          },
+          {
+            "id": "white.part2",
+            "stops": [
+              "#cad2d9",
+              "#ffffff"
+            ],
+            "shapes": [
+              4,
+              5
+            ],
+            "alsoFills": [
+              [
+                "#cad2d9",
+                "#ffffff"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "color3.part1",
+        "archetype": "blue.part2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "color2.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "color2.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "color2.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "color1.part1",
+        "archetype": "white.part2",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "color1.part1",
+        "archetype": "white.part2",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "color4.basecolor.part1",
+        "archetype": "white.part1",
+        "part": null
+      }
+    ],
+    "hash": "70ccfcac8b626633"
+  }
 }

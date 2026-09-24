@@ -36,5 +36,251 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-04",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
+    "k": 4,
+    "groups": [
+      {
+        "id": "color1",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color1.part1",
+            "stops": [
+              "#c3ebff",
+              "#7ad1ff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ],
+        "spread": 0.072
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#28afea",
+              "#50e6ff"
+            ],
+            "shapes": [
+              4
+            ]
+          }
+        ],
+        "spread": 0.06
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#0c59a4",
+              "#0078d4"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "color3.part2",
+            "stops": [
+              "#0c59a4",
+              "#0669bc"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.054
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#1493df",
+              "#28afea"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "color4.part2",
+            "stops": [
+              "#0078d4",
+              "#28afea"
+            ],
+            "shapes": [
+              2
+            ]
+          }
+        ],
+        "spread": 0.045
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
+            "stops": [
+              "#28afea",
+              "#50e6ff"
+            ],
+            "shapes": [
+              4
+            ]
+          },
+          {
+            "id": "azure.part2",
+            "stops": [
+              "#1493df",
+              "#28afea"
+            ],
+            "shapes": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#0078d4",
+              "#28afea"
+            ],
+            "shapes": [
+              2
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#0c59a4",
+              "#0078d4"
+            ],
+            "shapes": [
+              1
+            ]
+          },
+          {
+            "id": "blue.part3",
+            "stops": [
+              "#0c59a4",
+              "#0669bc"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "id": "muted-azure",
+        "members": [
+          {
+            "id": "muted-azure.part1",
+            "stops": [
+              "#c3ebff",
+              "#7ad1ff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "color3.part2",
+        "archetype": "blue.part3",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "color3.part1",
+        "archetype": "blue.part2",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "color4.part2",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "color4.part1",
+        "archetype": "azure.part2",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "color2.part1",
+        "archetype": "azure.part1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "color1.part1",
+        "archetype": "muted-azure.part1",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
+        "part": null
+      }
+    ],
+    "hash": "637daa331857c921"
+  }
 }

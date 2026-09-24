@@ -38,5 +38,294 @@
   },
   "version": "1.0.0",
   "updated": "2026-09-04",
-  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized."
+  "notes": "Imported from Figma. Colors are baked in, so the accent picker stays off until the artwork is tokenized.",
+  "roles": {
+    "from": "standard-48.svg",
+    "derivedBy": "chromaticity/silhouette, ordered by distinct",
+    "k": 4,
+    "groups": [
+      {
+        "id": "color1",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color1.part1",
+            "stops": [
+              "#e6e6e6",
+              "#ffffff"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ],
+        "spread": 0.142
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
+              "#28afea",
+              "#50e6ff"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "color2.part2",
+            "stops": [
+              "#1493df",
+              "#50e6ff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ],
+        "spread": 0.083
+      },
+      {
+        "id": "color3",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color3.part1",
+            "stops": [
+              "#0c59a4",
+              "#0078d4"
+            ],
+            "shapes": [
+              0,
+              1
+            ],
+            "alsoFills": [
+              [
+                "#0c59a4",
+                "#0078d4"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.079
+      },
+      {
+        "id": "color4",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color4.part1",
+            "stops": [
+              "#0078d4",
+              "#28afea"
+            ],
+            "shapes": [
+              2,
+              4,
+              6
+            ],
+            "alsoFills": [
+              [
+                "#0078d4",
+                "#28afea"
+              ],
+              [
+                "#0078d4",
+                "#28afea"
+              ]
+            ]
+          }
+        ],
+        "spread": 0.067
+      },
+      {
+        "id": "color5",
+        "basecolor": true,
+        "members": [
+          {
+            "id": "color5.basecolor.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              8,
+              9
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "azure",
+        "members": [
+          {
+            "id": "azure.part1",
+            "stops": [
+              "#28afea",
+              "#50e6ff"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "azure.part2",
+            "stops": [
+              "#1493df",
+              "#50e6ff"
+            ],
+            "shapes": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "blue",
+        "members": [
+          {
+            "id": "blue.part1",
+            "stops": [
+              "#0078d4",
+              "#28afea"
+            ],
+            "shapes": [
+              2,
+              4,
+              6
+            ],
+            "alsoFills": [
+              [
+                "#0078d4",
+                "#28afea"
+              ],
+              [
+                "#0078d4",
+                "#28afea"
+              ]
+            ]
+          },
+          {
+            "id": "blue.part2",
+            "stops": [
+              "#0c59a4",
+              "#0078d4"
+            ],
+            "shapes": [
+              0,
+              1
+            ],
+            "alsoFills": [
+              [
+                "#0c59a4",
+                "#0078d4"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white",
+        "members": [
+          {
+            "id": "white.part1",
+            "stops": [
+              "#ffffff"
+            ],
+            "shapes": [
+              8,
+              9
+            ],
+            "alsoFills": [
+              [
+                "#ffffff"
+              ]
+            ]
+          },
+          {
+            "id": "white.part2",
+            "stops": [
+              "#e6e6e6",
+              "#ffffff"
+            ],
+            "shapes": [
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "shapes": [
+      {
+        "i": 0,
+        "role": "color3.part1",
+        "archetype": "blue.part2",
+        "part": null
+      },
+      {
+        "i": 1,
+        "role": "color3.part1",
+        "archetype": "blue.part2",
+        "part": null
+      },
+      {
+        "i": 2,
+        "role": "color4.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 3,
+        "role": "color2.part1",
+        "archetype": "azure.part1",
+        "part": null
+      },
+      {
+        "i": 4,
+        "role": "color4.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 5,
+        "role": "color2.part2",
+        "archetype": "azure.part2",
+        "part": null
+      },
+      {
+        "i": 6,
+        "role": "color4.part1",
+        "archetype": "blue.part1",
+        "part": null
+      },
+      {
+        "i": 7,
+        "role": "color1.part1",
+        "archetype": "white.part2",
+        "part": null
+      },
+      {
+        "i": 8,
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
+        "part": null
+      },
+      {
+        "i": 9,
+        "role": "color5.basecolor.part1",
+        "archetype": "white.part1",
+        "part": null
+      }
+    ],
+    "hash": "3282945b3a2619e3"
+  }
 }
