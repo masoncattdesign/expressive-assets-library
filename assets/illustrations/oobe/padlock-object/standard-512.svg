@@ -1,0 +1,82 @@
+<svg role="img" aria-label="Padlock object" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" data-accent="purple">
+<title>Padlock object</title><desc>the locked padlock</desc>
+<g data-part="object.locked.padlock" data-color="locked" data-locked="padlock" transform="translate(-204.00 -115.26) scale(1.2487)"><g filter="url(#padlock-object-o1-filter3_dii_4877_14135)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M401.987 280.844V231.422C401.987 213.225 386.947 198.474 368.393 198.474C349.84 198.474 334.799 213.225 334.799 231.422V280.844C334.799 299.041 349.84 313.792 368.393 313.792C386.947 313.792 401.987 299.041 401.987 280.844ZM368.393 182C340.563 182 318.002 204.127 318.002 231.422V280.844C318.002 308.139 340.563 330.266 368.393 330.266C396.223 330.266 418.784 308.139 418.784 280.844V231.422C418.784 204.127 396.223 182 368.393 182Z" fill="url(#padlock-object-o1-paint0_linear_4877_14135)" />
+</g>
+<g filter="url(#padlock-object-o1-filter4_di_4877_14135)">
+<rect x="276" y="256.135" width="184.768" height="156.503" rx="20" fill="url(#padlock-object-o1-paint1_linear_4877_14135)" />
+</g>
+<path d="M368.383 297.319C379.979 297.319 389.379 306.539 389.379 317.912C389.379 324.645 386.083 330.623 380.988 334.38V365.932C380.988 371.255 376.672 375.57 371.349 375.57H365.431C360.107 375.57 355.792 371.255 355.792 365.932V334.392C350.688 330.635 347.387 324.652 347.387 317.912C347.387 306.539 356.787 297.319 368.383 297.319Z" fill="url(#padlock-object-o1-paint2_linear_4877_14135)" />
+<g filter="url(#padlock-object-o1-filter5_ii_4877_14135)">
+<path d="M368.383 297.319C379.979 297.319 389.379 306.539 389.379 317.912C389.379 324.645 386.083 330.623 380.988 334.38V365.932C380.988 371.255 376.672 375.57 371.349 375.57H365.431C360.107 375.57 355.792 371.255 355.792 365.932V334.392C350.688 330.635 347.387 324.652 347.387 317.912C347.387 306.539 356.787 297.319 368.383 297.319Z" fill="#EEF2F9" />
+</g>
+</g>
+<defs><linearGradient id="padlock-object-o1-paint2_linear_4877_14135" x1="368.383" y1="297.319" x2="368.383" y2="375.57" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2B244F" />
+<stop offset="1" stop-color="#433B6B" />
+</linearGradient>
+
+<filter id="padlock-object-o1-filter3_dii_4877_14135" x="303.002" y="167" width="142.782" height="190.266" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dx="6" dy="6" />
+<feGaussianBlur stdDeviation="10.5" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4877_14135" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4877_14135" result="shape" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="-3.73548" />
+<feGaussianBlur stdDeviation="5.60322" />
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_4877_14135" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dx="3.73548" dy="3.73548" />
+<feGaussianBlur stdDeviation="3.73548" />
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+<feBlend mode="normal" in2="effect2_innerShadow_4877_14135" result="effect3_innerShadow_4877_14135" />
+</filter>
+<linearGradient id="padlock-object-o1-paint1_linear_4877_14135" x1="257" y1="185.5" x2="368" y2="413" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5689F9" />
+<stop offset="1" stop-color="#2563EE" />
+</linearGradient>
+<filter id="padlock-object-o1-filter4_di_4877_14135" x="269.6" y="247.175" width="210.368" height="184.663" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dx="6.4" dy="6.4" />
+<feGaussianBlur stdDeviation="6.4" />
+<feComposite in2="hardAlpha" operator="out" />
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4877_14135" />
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4877_14135" result="shape" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="-8.96" />
+<feGaussianBlur stdDeviation="12.8" />
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+<feBlend mode="color-burn" in2="shape" result="effect2_innerShadow_4877_14135" />
+</filter>
+<linearGradient id="padlock-object-o1-paint0_linear_4877_14135" x1="299.062" y1="113.001" x2="501.299" y2="215.573" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BABABA" />
+<stop offset="1" stop-color="#5F5F5F" />
+</linearGradient>
+<filter id="padlock-object-o1-filter5_ii_4877_14135" x="347.387" y="297.319" width="41.9922" height="82.5349" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix" />
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="2.14195" />
+<feGaussianBlur stdDeviation="1.07097" />
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_4877_14135" />
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+<feOffset dy="4.2839" />
+<feGaussianBlur stdDeviation="2.14195" />
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+<feColorMatrix type="matrix" values="0 0 0 0 0.104028 0 0 0 0 0.131032 0 0 0 0 0.891667 0 0 0 0.25 0" />
+<feBlend mode="normal" in2="effect1_innerShadow_4877_14135" result="effect2_innerShadow_4877_14135" />
+</filter>
+</defs>
+</svg>

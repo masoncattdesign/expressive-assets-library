@@ -23,6 +23,8 @@
   --line-soft: #F0F0F2;
   --text: #111214;
   --text-2: #3A3D42;
+  --chip-live: #1F7A54; --chip-live-bg: rgba(31,122,84,.13);
+  --chip-wip:  #9A5B12; --chip-wip-bg:  rgba(154,91,18,.15);
   --text-3: #5F6368;
   --accent: #111214;
   --accent-soft: #F5F5F7;
@@ -48,6 +50,8 @@
     --line-soft: #232427;
     --text: #ECEDEF;
     --text-2: #B4B7BD;
+    --chip-live: #79C9A0; --chip-live-bg: rgba(121,201,160,.15);
+    --chip-wip:  #E0A75F; --chip-wip-bg:  rgba(224,167,95,.16);
     --text-3: #85898F;
     --accent: #ECEDEF;
     --accent-soft: #26272B;
@@ -70,6 +74,8 @@
     --line-soft: #232427;
     --text: #ECEDEF;
     --text-2: #B4B7BD;
+    --chip-live: #79C9A0; --chip-live-bg: rgba(121,201,160,.15);
+    --chip-wip:  #E0A75F; --chip-wip-bg:  rgba(224,167,95,.16);
     --text-3: #85898F;
     --accent: #ECEDEF;
     --accent-soft: #26272B;
@@ -159,6 +165,22 @@ body {
 .nav-top { margin-top: 14px; font-weight: 600; color: var(--text); }
 .nav-sub { margin-left: 22px; width: calc(100% - 22px); font-size: 13.5px; }
 .nav-sub .ico { width: 14px; height: 14px; opacity: .6; }
+
+/* The lifecycle rows sit one step further in again, and wear a word where the
+   other rows wear a glyph. Live is the quiet one because it is the default
+   state of the library; WIP is the one that should catch the eye. */
+.nav-sub2 { margin-left: 40px; width: calc(100% - 40px); font-size: 13px; }
+.nav-sub2:not(.on) .label { color: var(--text-2); }
+.chip {
+  flex: none;
+  width: 22px; height: 15px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 4px;
+  font-size: 8px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  font-family: var(--mono, ui-monospace, monospace);
+}
+.chip-live { background: var(--chip-live-bg); color: var(--chip-live); }
+.chip-WIP  { background: var(--chip-wip-bg); color: var(--chip-wip); }
 
 .sidebar-foot { padding: 14px; border-top: 1px solid var(--line); }
 

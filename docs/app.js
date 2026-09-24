@@ -362,27 +362,44 @@ function visibleAssets() {
 /* Sidebar                                                             */
 /* ------------------------------------------------------------------ */
 
-function navButton({ label, count, icon, active, onClick }) {
+function navButton({ label, count, icon, badge, active, onClick }) {
   const btn = el('button', { className: `nav-item${active ? ' on' : ''}`, type: 'button' });
-  btn.innerHTML =
-    `<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${icon}</svg>` +
-    `<span class="label"></span><span class="n">${count}</span>`;
+  /* A lifecycle row carries a word, not a picture. The square sits where the
+     icon sits so the column of glyphs down the sidebar stays a column. */
+  const mark = badge
+    ? `<span class="chip chip-${badge}" aria-hidden="true">${badge}</span>`
+    : `<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${icon}</svg>`;
+  btn.innerHTML = mark + `<span class="label"></span><span class="n">${count}</span>`;
   btn.querySelector('.label').textContent = label;
   btn.addEventListener('click', onClick);
   return btn;
 }
 
+/** How many assets a collection holds at each lifecycle status. A collection
+ *  with work in both states is the only one that earns the extra two rows. */
+function statusSplit(groupId, collectionId) {
+  const g = groupById(groupId);
+  if (!g) return null;
+  let live = 0, wip = 0;
+  for (const a of state.manifest.assets) {
+    if (a.type !== g.type || a.collection !== collectionId) continue;
+    if (a.status === 'draft') wip++;
+    else if (a.status === 'published') live++;
+  }
+  return live && wip ? { live, wip } : null;
+}
+
 function renderNav() {
   const nav = $('#nav');
   nav.replaceChildren();
-  const { group, collection } = state.filter;
+  const { group, collection, status } = state.filter;
 
   nav.append(
     navButton({
       label: 'All Assets',
       count: state.manifest.total,
       icon: NAV_ICONS.all,
-      active: group === 'all' && !collection,
+      active: group === 'all' && !collection && !status,
       onClick: () => selectCollection('all', null),
     })
   );
@@ -394,7 +411,7 @@ function renderNav() {
       label: g.label,
       count: g.collections.reduce((n, c) => n + c.count, 0),
       icon: NAV_ICONS[g.id] || NAV_ICONS.all,
-      active: group === g.id && !collection,
+      active: group === g.id && !collection && !status,
       onClick: () => selectCollection(g.id, null),
     });
     head.classList.add('nav-top');
@@ -405,18 +422,43 @@ function renderNav() {
         label: c.label,
         count: c.count,
         icon: NAV_ICONS[g.id + ':' + c.id] || NAV_ICONS[g.id] || NAV_ICONS.all,
-        active: group === g.id && collection === c.id,
+        active: group === g.id && collection === c.id && !status,
         onClick: () => selectCollection(g.id, c.id),
       });
       btn.classList.add('nav-sub');
       nav.append(btn);
+
+      /* Windows Illustrations is two things at once: the set that ships and
+         the set being drawn in the Studio. They are one collection because a
+         drawing graduates by changing status, not by moving house, so the
+         split belongs here in the sidebar rather than in the asset ids. */
+      const split = statusSplit(g.id, c.id);
+      if (!split) continue;
+      /* The child says Illustrations, not the parent's full name again: three
+         rows reading Windows Illustrations in a column is noise, and the
+         square is already carrying which one this is. */
+      for (const [key, badge, label, n] of [
+        ['published', 'live', 'Illustrations', split.live],
+        ['draft', 'WIP', 'Illustrations', split.wip],
+      ]) {
+        const sub = navButton({
+          label,
+          count: n,
+          badge,
+          active: group === g.id && collection === c.id && status === key,
+          onClick: () => selectCollection(g.id, c.id, key),
+        });
+        sub.classList.add('nav-sub2');
+        nav.append(sub);
+      }
     }
   }
 }
 
-function selectCollection(group, collection) {
+function selectCollection(group, collection, status = '') {
   state.filter.group = group;
   state.filter.collection = collection;
+  state.filter.status = status;
   renderNav();
   renderGrid();
 }

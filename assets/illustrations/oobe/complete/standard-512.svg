@@ -1,0 +1,49 @@
+<svg role="img" aria-label="Complete" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ii_4894_18976)">
+<path d="M256 416C344.366 416 416 344.366 416 256C416 167.634 344.366 96 256 96C167.634 96 96 167.634 96 256C96 344.366 167.634 416 256 416Z" fill="#D4D8DE"/>
+</g>
+<path d="M256 384C326.692 384 384 326.692 384 256C384 185.308 326.692 128 256 128C185.308 128 128 185.308 128 256C128 326.692 185.308 384 256 384Z" fill="#EDF2FA"/>
+<path d="M255.999 162C280.925 162.013 304.825 171.926 322.444 189.558C340.062 207.191 349.956 231.099 349.949 256.025C349.943 280.951 340.036 304.854 322.408 322.477C304.781 340.1 280.875 350 255.949 350C231.023 350 207.118 340.1 189.49 322.477C171.862 304.854 161.956 280.951 161.949 256.025C161.943 231.099 171.836 207.191 189.455 189.558C207.073 171.926 230.973 162.013 255.899 162" stroke="#00CCBA" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#filter1_di_4894_18976)">
+<path d="M256 304C282.51 304 304 282.51 304 256C304 229.49 282.51 208 256 208C229.49 208 208 229.49 208 256C208 282.51 229.49 304 256 304Z" fill="url(#paint0_linear_4894_18976)"/>
+</g>
+<path d="M246.346 268.472L235.932 256.755C235.106 255.826 233.684 255.743 232.755 256.568C231.826 257.394 231.743 258.816 232.568 259.745L244.568 273.245C245.428 274.212 246.926 274.256 247.841 273.341L279.341 241.841C280.22 240.962 280.22 239.538 279.341 238.659C278.462 237.78 277.038 237.78 276.159 238.659L246.346 268.472Z" fill="white" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_ii_4894_18976" x="96" y="87" width="320" height="332" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="3"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.929412 0 0 0 0 0.94902 0 0 0 0 0.980392 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_4894_18976"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-9"/>
+<feGaussianBlur stdDeviation="13"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="color-burn" in2="effect1_innerShadow_4894_18976" result="effect2_innerShadow_4894_18976"/>
+</filter>
+<filter id="filter1_di_4894_18976" x="202" y="199" width="120" height="123" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="6" dy="6"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4894_18976"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4894_18976" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-9"/>
+<feGaussianBlur stdDeviation="13"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="color-burn" in2="shape" result="effect2_innerShadow_4894_18976"/>
+</filter>
+<linearGradient id="paint0_linear_4894_18976" x1="208" y1="208" x2="208" y2="304" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9974DB"/>
+<stop offset="1" stop-color="#2563EE"/>
+</linearGradient>
+</defs>
+</svg>

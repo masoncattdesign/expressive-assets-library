@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3280,
+  "total": 3383,
   "groups": [
     {
       "id": "product-icons",
@@ -59,7 +59,7 @@
         {
           "id": "oobe",
           "label": "Windows Illustrations",
-          "count": 27
+          "count": 130
         },
         {
           "id": "m365",
@@ -223182,6 +223182,403 @@
       }
     },
     {
+      "id": "oobe.achievement",
+      "name": "Achievement",
+      "keywords": [
+        "achievement"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/achievement/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.all-set",
+      "name": "All set",
+      "keywords": [
+        "all",
+        "set"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#00CCBA",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/all-set/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.almost-there",
+      "name": "Almost there",
+      "keywords": [
+        "almost",
+        "there"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/almost-there/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.atom",
+      "name": "Atom",
+      "keywords": [
+        "atom"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9974DB",
+        "secondary": "#2563EE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/atom/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.backed-up",
+      "name": "Backed up",
+      "keywords": [
+        "backed",
+        "up"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/backed-up/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.battery-on-laptop",
+      "name": "Battery on laptop",
+      "keywords": [
+        "battery",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/battery-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.bluetooth-pairing",
+      "name": "Bluetooth pairing",
+      "keywords": [
+        "bluetooth",
+        "pairing"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/bluetooth-pairing/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.book",
+      "name": "Book",
+      "keywords": [
+        "book"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/book/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.books",
+      "name": "Books",
+      "keywords": [
+        "books"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/books/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.calculator",
+      "name": "Calculator",
+      "keywords": [
+        "calculator"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#C3D9F8"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/calculator/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.calendar",
+      "name": "Calendar",
+      "keywords": [
+        "calendar"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/calendar/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
+    },
+    {
+      "id": "oobe.calendar-object",
+      "name": "Calendar object",
+      "keywords": [
+        "calendar",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/calendar-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.camera",
+      "name": "Camera",
+      "keywords": [
+        "camera"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/camera/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
+    },
+    {
       "id": "oobe.camera-roll-backup",
       "name": "Camera Roll Backup",
       "keywords": [
@@ -224057,6 +224454,67 @@
       }
     },
     {
+      "id": "oobe.caught-up",
+      "name": "Caught up",
+      "keywords": [
+        "caught",
+        "up"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/caught-up/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.certificate",
+      "name": "Certificate",
+      "keywords": [
+        "certificate"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/certificate/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
       "id": "oobe.checking-ndup",
       "name": "Checking NDUP",
       "keywords": [
@@ -224325,6 +224783,157 @@
         ],
         "hash": "35afc251290e9e15"
       }
+    },
+    {
+      "id": "oobe.clipboard",
+      "name": "Clipboard",
+      "keywords": [
+        "clipboard"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/clipboard/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.complete",
+      "name": "Complete",
+      "keywords": [
+        "complete"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/complete/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.create",
+      "name": "Create",
+      "keywords": [
+        "create"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#A173E4",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/create/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 1"
+    },
+    {
+      "id": "oobe.create-account",
+      "name": "Create account",
+      "keywords": [
+        "create",
+        "account"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/create-account/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.cursor",
+      "name": "Cursor",
+      "keywords": [
+        "cursor"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9974DB",
+        "secondary": "#2563EE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/cursor/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
     },
     {
       "id": "oobe.desktop",
@@ -224638,6 +225247,38 @@
       }
     },
     {
+      "id": "oobe.desktops-on-laptop",
+      "name": "Desktops on laptop",
+      "keywords": [
+        "desktops",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/desktops-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
       "id": "oobe.device-name",
       "name": "Device Name",
       "keywords": [
@@ -224900,6 +225541,97 @@
         ],
         "hash": "f54ce12031dddbf7"
       }
+    },
+    {
+      "id": "oobe.download",
+      "name": "Download",
+      "keywords": [
+        "download"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#DCD1FC",
+        "secondary": "#A173E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/download/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 1"
+    },
+    {
+      "id": "oobe.download-object",
+      "name": "Download object",
+      "keywords": [
+        "download",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2563EE",
+        "secondary": "#9974DB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/download-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.downloads",
+      "name": "Downloads",
+      "keywords": [
+        "downloads"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/downloads/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
     },
     {
       "id": "oobe.edge-consents",
@@ -225311,6 +226043,67 @@
         ],
         "hash": "c2354101d702c367"
       }
+    },
+    {
+      "id": "oobe.edit-photo",
+      "name": "Edit photo",
+      "keywords": [
+        "edit",
+        "photo"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#427EF2",
+        "secondary": "#D39AFF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/edit-photo/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.eraser",
+      "name": "Eraser",
+      "keywords": [
+        "eraser"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#5689F9"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/eraser/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
     },
     {
       "id": "oobe.error",
@@ -225885,6 +226678,66 @@
       }
     },
     {
+      "id": "oobe.favorites",
+      "name": "Favorites",
+      "keywords": [
+        "favorites"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#A173E4",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/favorites/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.files",
+      "name": "Files",
+      "keywords": [
+        "files"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/files/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
       "id": "oobe.fingerprint",
       "name": "Fingerprint",
       "keywords": [
@@ -226000,6 +226853,216 @@
         ],
         "hash": "6cffb04213f2b955"
       }
+    },
+    {
+      "id": "oobe.fingerprint-o05",
+      "name": "Fingerprint",
+      "keywords": [
+        "fingerprint"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9A73DE",
+        "secondary": "#9974DB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/fingerprint-o05/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.flask",
+      "name": "Flask",
+      "keywords": [
+        "flask"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#81E6D8",
+        "secondary": "#C3D9F8"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/flask/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.focus",
+      "name": "Focus",
+      "keywords": [
+        "focus"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/focus/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.gear",
+      "name": "Gear",
+      "keywords": [
+        "gear"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#8A8C94"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/gear/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.globe",
+      "name": "Globe",
+      "keywords": [
+        "globe"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#8A8C94"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/globe/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.graduation",
+      "name": "Graduation",
+      "keywords": [
+        "graduation"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#5689F9",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/graduation/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.hello",
+      "name": "Hello",
+      "keywords": [
+        "hello"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/hello/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
     },
     {
       "id": "oobe.keyboard",
@@ -227026,6 +228089,68 @@
       }
     },
     {
+      "id": "oobe.keyboard-o09",
+      "name": "Keyboard",
+      "keywords": [
+        "keyboard"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DF",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/keyboard-o09/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.keyboard-and-keypad",
+      "name": "Keyboard and keypad",
+      "keywords": [
+        "keyboard",
+        "and",
+        "keypad"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DF",
+        "secondary": "#656970"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/keyboard-and-keypad/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
       "id": "oobe.language",
       "name": "Language",
       "keywords": [
@@ -227433,6 +228558,98 @@
         ],
         "hash": "44aa83ba16b00111"
       }
+    },
+    {
+      "id": "oobe.laptop-object",
+      "name": "Laptop object",
+      "keywords": [
+        "laptop",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#D4D8DF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/laptop-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.location",
+      "name": "Location",
+      "keywords": [
+        "location"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/location/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.location-pin",
+      "name": "Location pin",
+      "keywords": [
+        "location",
+        "pin"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9A73DE",
+        "secondary": "#9974DB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/location-pin/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
     },
     {
       "id": "oobe.m365-basic",
@@ -228421,6 +229638,96 @@
       }
     },
     {
+      "id": "oobe.mail",
+      "name": "Mail",
+      "keywords": [
+        "mail"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/mail/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
+      "id": "oobe.medal",
+      "name": "Medal",
+      "keywords": [
+        "medal"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#5689F9",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/medal/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.microphone",
+      "name": "Microphone",
+      "keywords": [
+        "microphone"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#5689F9",
+        "secondary": "#8A8C94"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/microphone/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason"
+    },
+    {
       "id": "oobe.msa-sign-up",
       "name": "MSA Sign Up",
       "keywords": [
@@ -229343,6 +230650,36 @@
       }
     },
     {
+      "id": "oobe.music",
+      "name": "Music",
+      "keywords": [
+        "music"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/music/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
       "id": "oobe.oem-registration",
       "name": "OEM Registration",
       "keywords": [
@@ -229565,6 +230902,283 @@
         ],
         "hash": "b50afad3bcbd2ef8"
       }
+    },
+    {
+      "id": "oobe.open-book",
+      "name": "Open book",
+      "keywords": [
+        "open",
+        "book"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/open-book/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.padlock-object",
+      "name": "Padlock object",
+      "keywords": [
+        "padlock",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EEF2F9",
+        "secondary": "#2B244F"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/padlock-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.passkey",
+      "name": "Passkey",
+      "keywords": [
+        "passkey"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/passkey/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.pay",
+      "name": "Pay",
+      "keywords": [
+        "pay"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#89B1F8",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/pay/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
+    },
+    {
+      "id": "oobe.pen-object",
+      "name": "Pen object",
+      "keywords": [
+        "pen",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#427EF2",
+        "secondary": "#D39AFF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/pen-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.pencil",
+      "name": "Pencil",
+      "keywords": [
+        "pencil"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#B9A2E5",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/pencil/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.personalize-on-laptop",
+      "name": "Personalize on laptop",
+      "keywords": [
+        "personalize",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#93B1F7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/personalize-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.phone-backup",
+      "name": "Phone backup",
+      "keywords": [
+        "phone",
+        "backup"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-backup/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.phone-link-b30",
+      "name": "Phone link",
+      "keywords": [
+        "phone",
+        "link"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#93B1F7"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-link-b30/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
     },
     {
       "id": "oobe.phone-link",
@@ -230122,6 +231736,194 @@
       }
     },
     {
+      "id": "oobe.phone-notifications",
+      "name": "Phone notifications",
+      "keywords": [
+        "phone",
+        "notifications"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-notifications/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.phone-object",
+      "name": "Phone object",
+      "keywords": [
+        "phone",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1B9",
+        "secondary": "#D4D8DF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.phone-ready",
+      "name": "Phone ready",
+      "keywords": [
+        "phone",
+        "ready"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-ready/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.phone-with-apps",
+      "name": "Phone with apps",
+      "keywords": [
+        "phone",
+        "with",
+        "apps"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/phone-with-apps/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.photo-block",
+      "name": "Photo block",
+      "keywords": [
+        "photo",
+        "block"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/photo-block/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.photos-on-laptop",
+      "name": "Photos on laptop",
+      "keywords": [
+        "photos",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/photos-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
       "id": "oobe.pin",
       "name": "PIN",
       "keywords": [
@@ -230537,6 +232339,98 @@
       }
     },
     {
+      "id": "oobe.planet",
+      "name": "Planet",
+      "keywords": [
+        "planet"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#B9A1ED",
+        "secondary": "#A173E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/planet/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.preferences",
+      "name": "Preferences",
+      "keywords": [
+        "preferences"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/preferences/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.present-on-laptop",
+      "name": "Present on laptop",
+      "keywords": [
+        "present",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/present-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
       "id": "oobe.privacy",
       "name": "Privacy",
       "keywords": [
@@ -230937,6 +232831,38 @@
       }
     },
     {
+      "id": "oobe.privacy-on-laptop",
+      "name": "Privacy on laptop",
+      "keywords": [
+        "privacy",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/privacy-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
       "id": "oobe.privacy-1",
       "name": "Privacy-1",
       "keywords": [
@@ -231160,6 +233086,127 @@
       }
     },
     {
+      "id": "oobe.profile",
+      "name": "Profile",
+      "keywords": [
+        "profile"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#A173E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/profile/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 1"
+    },
+    {
+      "id": "oobe.quick-settings",
+      "name": "Quick settings",
+      "keywords": [
+        "quick",
+        "settings"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/quick-settings/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
+    },
+    {
+      "id": "oobe.rate",
+      "name": "Rate",
+      "keywords": [
+        "rate"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#A173E4",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/rate/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.ready",
+      "name": "Ready",
+      "keywords": [
+        "ready"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/ready/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
       "id": "oobe.region",
       "name": "Region",
       "keywords": [
@@ -231240,6 +233287,407 @@
         ],
         "hash": "865f56d59e62f27b"
       }
+    },
+    {
+      "id": "oobe.region-o07",
+      "name": "Region",
+      "keywords": [
+        "region"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9974DB",
+        "secondary": "#2563EE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/region-o07/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.ruler",
+      "name": "Ruler",
+      "keywords": [
+        "ruler"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/ruler/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.save",
+      "name": "Save",
+      "keywords": [
+        "save"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#46484F"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/save/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason"
+    },
+    {
+      "id": "oobe.screen-time",
+      "name": "Screen time",
+      "keywords": [
+        "screen",
+        "time"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/screen-time/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.search",
+      "name": "Search",
+      "keywords": [
+        "search"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/search/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 1"
+    },
+    {
+      "id": "oobe.search-on-laptop",
+      "name": "Search on laptop",
+      "keywords": [
+        "search",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/search-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.security-on-laptop",
+      "name": "Security on laptop",
+      "keywords": [
+        "security",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#EDF2FA",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/security-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
+      "id": "oobe.set-square",
+      "name": "Set square",
+      "keywords": [
+        "set",
+        "square"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#81E6D8",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/set-square/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.settings",
+      "name": "Settings",
+      "keywords": [
+        "settings"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/settings/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
+    },
+    {
+      "id": "oobe.setup-apps-on-laptop",
+      "name": "Setup apps on laptop",
+      "keywords": [
+        "setup",
+        "apps",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1B9",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/setup-apps-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.share",
+      "name": "Share",
+      "keywords": [
+        "share"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#427EF2"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/share/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
+    },
+    {
+      "id": "oobe.shield-object",
+      "name": "Shield object",
+      "keywords": [
+        "shield",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#0773C7",
+        "secondary": "#5B41D3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/shield-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.sign-in",
+      "name": "Sign in",
+      "keywords": [
+        "sign",
+        "in"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#5689F9",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/sign-in/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
     },
     {
       "id": "oobe.smile",
@@ -231359,6 +233807,433 @@
         ],
         "hash": "8dc2b2be2e5ed798"
       }
+    },
+    {
+      "id": "oobe.snap",
+      "name": "Snap",
+      "keywords": [
+        "snap"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/snap/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
+    },
+    {
+      "id": "oobe.snap-on-laptop",
+      "name": "Snap on laptop",
+      "keywords": [
+        "snap",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/snap-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
+      "id": "oobe.speaker",
+      "name": "Speaker",
+      "keywords": [
+        "speaker"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#5689F9",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/speaker/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason"
+    },
+    {
+      "id": "oobe.start",
+      "name": "Start",
+      "keywords": [
+        "start"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/start/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
+    },
+    {
+      "id": "oobe.storage",
+      "name": "Storage",
+      "keywords": [
+        "storage"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/storage/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 2"
+    },
+    {
+      "id": "oobe.storage-cleanup",
+      "name": "Storage cleanup",
+      "keywords": [
+        "storage",
+        "cleanup"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/storage-cleanup/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.store",
+      "name": "Store",
+      "keywords": [
+        "store"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D4D8DE",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/store/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.summit",
+      "name": "Summit",
+      "keywords": [
+        "summit"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#00CCBA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/summit/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.test-tubes",
+      "name": "Test tubes",
+      "keywords": [
+        "test",
+        "tubes"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#C3D9F8",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/test-tubes/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.tips",
+      "name": "Tips",
+      "keywords": [
+        "tips"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#2561CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/tips/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 3 redo"
+    },
+    {
+      "id": "oobe.together",
+      "name": "Together",
+      "keywords": [
+        "together"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9A73DE",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/together/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (scoobe). SCOOBE"
+    },
+    {
+      "id": "oobe.translate",
+      "name": "Translate",
+      "keywords": [
+        "translate"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/translate/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (round-7). Round 7"
+    },
+    {
+      "id": "oobe.update-on-laptop",
+      "name": "Update on laptop",
+      "keywords": [
+        "update",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#ACB1BA",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/update-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
+      "id": "oobe.upload-object",
+      "name": "Upload object",
+      "keywords": [
+        "upload",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#8A8C94",
+        "secondary": "#676971"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/upload-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
     },
     {
       "id": "oobe.user-disambiguation",
@@ -232358,6 +235233,161 @@
       }
     },
     {
+      "id": "oobe.video-block",
+      "name": "Video block",
+      "keywords": [
+        "video",
+        "block"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#EDF2FA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/video-block/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (locked). Locked"
+    },
+    {
+      "id": "oobe.video-call-on-laptop",
+      "name": "Video call on laptop",
+      "keywords": [
+        "video",
+        "call",
+        "on",
+        "laptop"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#2561CD",
+        "secondary": "#ACB1BA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/video-call-on-laptop/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
+      "id": "oobe.voice",
+      "name": "Voice",
+      "keywords": [
+        "voice"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#D3D8E0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/voice/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 5"
+    },
+    {
+      "id": "oobe.volume-mixer",
+      "name": "Volume mixer",
+      "keywords": [
+        "volume",
+        "mixer"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#93B1F7",
+        "secondary": "#418BF0"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/volume-mixer/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
+    },
+    {
+      "id": "oobe.weather",
+      "name": "Weather",
+      "keywords": [
+        "weather"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#D3D8E0",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/weather/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 6"
+    },
+    {
       "id": "oobe.welcome-back",
       "name": "Welcome Back",
       "keywords": [
@@ -232570,6 +235600,98 @@
         ],
         "hash": "5a0220c7d87b26a8"
       }
+    },
+    {
+      "id": "oobe.whiteboard",
+      "name": "Whiteboard",
+      "keywords": [
+        "whiteboard"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#D4D8DE"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/whiteboard/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, wip set (learning). Learning set (on hold)"
+    },
+    {
+      "id": "oobe.wi-fi-object",
+      "name": "Wi-Fi object",
+      "keywords": [
+        "wi",
+        "fi",
+        "object"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#9A73DE",
+        "secondary": "#9974DB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/wi-fi-object/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+    },
+    {
+      "id": "oobe.widgets",
+      "name": "Widgets",
+      "keywords": [
+        "widgets"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#418BF0",
+        "secondary": "#A173E4"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/widgets/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, approved set (adjusted). Round 4"
     },
     {
       "id": "oobe.wifi",
@@ -233030,6 +236152,36 @@
         ],
         "hash": "678d698debcea384"
       }
+    },
+    {
+      "id": "oobe.zdp-o11",
+      "name": "ZDP",
+      "keywords": [
+        "zdp"
+      ],
+      "type": "illustration",
+      "collection": "oobe",
+      "status": "draft",
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        512
+      ],
+      "colors": {
+        "primary": "#A8E5B8",
+        "secondary": "#F4F3F3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "512": "assets/illustrations/oobe/zdp-o11/standard-512.svg"
+        }
+      },
+      "owner": "@windows-design-systems",
+      "version": "0.1.0",
+      "updated": "2026-09-24",
+      "notes": "Illustration Studio, objects set (objects). Mason, conformed"
     },
     {
       "id": "m365.agents",

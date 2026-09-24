@@ -1,0 +1,30 @@
+{
+  "id": "oobe.cursor",
+  "name": "Cursor",
+  "keywords": [
+    "cursor"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#9974DB",
+    "secondary": "#2563EE"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/cursor/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+}

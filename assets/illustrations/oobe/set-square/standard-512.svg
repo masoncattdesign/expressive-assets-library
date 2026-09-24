@@ -1,0 +1,11 @@
+<svg role="img" aria-label="Set square" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" data-accent="teal">
+<title>Set square</title><desc>a set square with its cut-out</desc>
+<g filter="url(#set-square-lifted)" data-material="lifted"><path d="M136 120C136 108 150 102 159 110L392 343C400 351 395 376 382 376H152C143 376 136 369 136 360ZM184 228V328H284Z" fill="#00CCBA" data-part="object.set-square" data-color="teal.loud"/></g>
+<rect x="136" y="196" width="28" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<rect x="136" y="226" width="18" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<rect x="136" y="256" width="28" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<rect x="136" y="286" width="18" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<rect x="136" y="316" width="28" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<rect x="136" y="346" width="18" height="6" rx="3" fill="#81E6D8" data-part="object.set-square.tick" data-color="teal.subtle"/>
+<defs><filter id="set-square-lifted" x="-26" y="-26" width="564" height="564" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="6" dy="6"/><feGaussianBlur stdDeviation="6"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="drop"/><feBlend mode="normal" in="SourceGraphic" in2="drop" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="-9"/><feGaussianBlur stdDeviation="13"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/><feBlend mode="color-burn" in2="shape" result="inner"/></filter></defs>
+</svg>

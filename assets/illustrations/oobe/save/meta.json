@@ -1,0 +1,30 @@
+{
+  "id": "oobe.save",
+  "name": "Save",
+  "keywords": [
+    "save"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#D3D8E0",
+    "secondary": "#46484F"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/save/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, objects set (objects). Mason"
+}

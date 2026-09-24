@@ -1,0 +1,30 @@
+{
+  "id": "oobe.microphone",
+  "name": "Microphone",
+  "keywords": [
+    "microphone"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#5689F9",
+    "secondary": "#8A8C94"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/microphone/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, objects set (objects). Mason"
+}

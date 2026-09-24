@@ -1,0 +1,32 @@
+{
+  "id": "oobe.update-on-laptop",
+  "name": "Update on laptop",
+  "keywords": [
+    "update",
+    "on",
+    "laptop"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#ACB1BA",
+    "secondary": "#418BF0"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/update-on-laptop/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, approved set (adjusted). Round 5"
+}

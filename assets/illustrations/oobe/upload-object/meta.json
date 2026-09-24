@@ -1,0 +1,31 @@
+{
+  "id": "oobe.upload-object",
+  "name": "Upload object",
+  "keywords": [
+    "upload",
+    "object"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#8A8C94",
+    "secondary": "#676971"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/upload-object/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, objects set (objects). Mason, conformed"
+}
