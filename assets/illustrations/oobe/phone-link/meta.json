@@ -42,6 +42,55 @@
           {
             "id": "color1.part1",
             "stops": [
+              "#f3f3f3",
+              "#ebebeb"
+            ],
+            "shapes": [
+              4,
+              17
+            ],
+            "alsoFills": [
+              [
+                "#f0f0f0",
+                "#ebebeb"
+              ]
+            ]
+          },
+          {
+            "id": "color1.part2",
+            "stops": [
+              "#a8b5bf",
+              "#bfcdd9",
+              "#b4c1cc",
+              "#b4c1cc",
+              "#b4c1cc",
+              "#bfcdd9",
+              "#a8b5bf"
+            ],
+            "shapes": [
+              3
+            ]
+          },
+          {
+            "id": "color1.part3",
+            "stops": [
+              "#99a5b0",
+              "#8897a4"
+            ],
+            "shapes": [
+              0
+            ]
+          }
+        ],
+        "spread": 0.137
+      },
+      {
+        "id": "color2",
+        "basecolor": false,
+        "members": [
+          {
+            "id": "color2.part1",
+            "stops": [
               "#b67ae8",
               "#8b89ea",
               "#00adee",
@@ -61,7 +110,7 @@
             ]
           },
           {
-            "id": "color1.part2",
+            "id": "color2.part2",
             "stops": [
               "#376cd3"
             ],
@@ -70,7 +119,7 @@
             ]
           },
           {
-            "id": "color1.part3",
+            "id": "color2.part3",
             "stops": [
               "#0078d4",
               "#5b41d3"
@@ -87,7 +136,7 @@
             ]
           },
           {
-            "id": "color1.part4",
+            "id": "color2.part4",
             "stops": [
               "#335db8"
             ],
@@ -96,7 +145,7 @@
             ]
           },
           {
-            "id": "color1.part5",
+            "id": "color2.part5",
             "stops": [
               "#073977",
               "#004a8f"
@@ -110,55 +159,6 @@
                 "#073977",
                 "#004a8f"
               ]
-            ]
-          }
-        ],
-        "spread": 0.137
-      },
-      {
-        "id": "color2",
-        "basecolor": false,
-        "members": [
-          {
-            "id": "color2.part1",
-            "stops": [
-              "#f3f3f3",
-              "#ebebeb"
-            ],
-            "shapes": [
-              4,
-              17
-            ],
-            "alsoFills": [
-              [
-                "#f0f0f0",
-                "#ebebeb"
-              ]
-            ]
-          },
-          {
-            "id": "color2.part2",
-            "stops": [
-              "#a8b5bf",
-              "#bfcdd9",
-              "#b4c1cc",
-              "#b4c1cc",
-              "#b4c1cc",
-              "#bfcdd9",
-              "#a8b5bf"
-            ],
-            "shapes": [
-              3
-            ]
-          },
-          {
-            "id": "color2.part3",
-            "stops": [
-              "#99a5b0",
-              "#8897a4"
-            ],
-            "shapes": [
-              0
             ]
           }
         ],
@@ -389,7 +389,7 @@
     "shapes": [
       {
         "i": 0,
-        "role": "color2.part3",
+        "role": "color1.part3",
         "archetype": "gray.part2",
         "part": null
       },
@@ -407,13 +407,13 @@
       },
       {
         "i": 3,
-        "role": "color2.part2",
+        "role": "color1.part2",
         "archetype": "gray.part1",
         "part": null
       },
       {
         "i": 4,
-        "role": "color2.part1",
+        "role": "color1.part1",
         "archetype": "white.part2",
         "part": null
       },
@@ -425,7 +425,7 @@
       },
       {
         "i": 6,
-        "role": "color1.part1",
+        "role": "color2.part1",
         "archetype": "blue.part1",
         "part": null
       },
@@ -443,13 +443,13 @@
       },
       {
         "i": 9,
-        "role": "color1.part4",
+        "role": "color2.part4",
         "archetype": "blue.part4",
         "part": null
       },
       {
         "i": 10,
-        "role": "color1.part5",
+        "role": "color2.part5",
         "archetype": "deep-blue.part1",
         "part": null
       },
@@ -491,7 +491,7 @@
       },
       {
         "i": 17,
-        "role": "color2.part1",
+        "role": "color1.part1",
         "archetype": "white.part2",
         "part": null
       },
@@ -503,7 +503,7 @@
       },
       {
         "i": 19,
-        "role": "color1.part1",
+        "role": "color2.part1",
         "archetype": "blue.part1",
         "part": null
       },
@@ -515,13 +515,13 @@
       },
       {
         "i": 21,
-        "role": "color1.part2",
+        "role": "color2.part2",
         "archetype": "blue.part2",
         "part": null
       },
       {
         "i": 22,
-        "role": "color1.part5",
+        "role": "color2.part5",
         "archetype": "deep-blue.part1",
         "part": null
       },
@@ -533,13 +533,13 @@
       },
       {
         "i": 24,
-        "role": "color1.part3",
+        "role": "color2.part3",
         "archetype": "blue.part3",
         "part": null
       },
       {
         "i": 25,
-        "role": "color1.part3",
+        "role": "color2.part3",
         "archetype": "blue.part3",
         "part": null
       },

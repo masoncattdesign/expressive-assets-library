@@ -1,0 +1,30 @@
+{
+  "id": "oobe.document",
+  "name": "Document",
+  "keywords": [
+    "document"
+  ],
+  "type": "illustration",
+  "collection": "oobe",
+  "status": "draft",
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    512
+  ],
+  "colors": {
+    "primary": "#EDF2FA",
+    "secondary": "#2561CD"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "512": "assets/illustrations/oobe/document/standard-512.svg"
+    }
+  },
+  "owner": "@windows-design-systems",
+  "version": "0.1.0",
+  "updated": "2026-09-24",
+  "notes": "Illustration Studio, references set (reference). Hand-built by Mason"
+}

@@ -1,0 +1,51 @@
+<svg role="img" aria-label="File" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1.28)">
+<g filter="url(#filter0_i_4827_25981)">
+<path d="M51 105C51 88.4315 64.4315 75 81 75L141.18 75C148.921 75 156.362 77.9921 161.948 83.3509L178.248 98.9877C183.834 104.347 191.275 107.339 199.016 107.339H261C277.569 107.339 291 120.77 291 137.339V295C291 311.569 277.569 325 261 325H81C64.4315 325 51 311.569 51 295V105Z" fill="#2561CD"/>
+</g>
+<path d="M69.5306 172.326C69.5306 161.722 78.1268 153.126 88.7306 153.126H165.687H195.617H293.299C303.903 153.126 312.499 161.722 312.499 172.326V305.801C312.499 316.405 303.903 325.001 293.299 325.001H88.7306C78.1268 325.001 69.5306 316.405 69.5306 305.801V172.326Z" fill="#BDDBFF"/>
+<g filter="url(#filter1_i_4827_25981)">
+<path d="M87.4994 159.688C87.4994 143.12 100.931 129.688 117.499 129.688H177.187H204.614H281.718C298.287 129.688 311.718 143.12 311.718 159.688V295.001C311.718 311.57 298.287 325.001 281.718 325.001H117.499C100.931 325.001 87.4994 311.57 87.4994 295.001V159.688Z" fill="#B9A1ED"/>
+</g>
+<g filter="url(#filter2_di_4827_25981)">
+<path d="M113.743 207.424C115.982 198.538 123.973 192.309 133.138 192.309H220.986C226.672 192.309 232.089 189.889 235.882 185.654L258.279 160.655C262.073 156.42 267.49 154 273.176 154H339.323C352.354 154 361.905 166.261 358.715 178.896L325.391 310.896C323.148 319.777 315.159 326 305.999 326H69C77.7474 326 85.3757 320.055 87.5121 311.572L113.743 207.424Z" fill="#D4D8DF"/>
+</g>
+<circle cx="125.599" cy="168.001" r="16" fill="#7947C3"/>
+
+</g><defs>
+<filter id="filter0_i_4827_25981" x="51" y="68" width="240" height="257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-7"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="color-burn" in2="shape" result="effect1_innerShadow_4827_25981"/>
+</filter>
+<filter id="filter1_i_4827_25981" x="87.4994" y="122.688" width="224.219" height="202.312" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-7"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="color-burn" in2="shape" result="effect1_innerShadow_4827_25981"/>
+</filter>
+<filter id="filter2_di_4827_25981" x="64" y="147" width="310.333" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="5"/>
+<feGaussianBlur stdDeviation="5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4827_25981"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4827_25981" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-7"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="color-burn" in2="shape" result="effect2_innerShadow_4827_25981"/>
+</filter>
+</defs></svg>

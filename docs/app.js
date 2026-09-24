@@ -431,7 +431,13 @@ function renderNav() {
       /* Windows Illustrations is two things at once: the set that ships and
          the set being drawn in the Studio. They are one collection because a
          drawing graduates by changing status, not by moving house, so the
-         split belongs here in the sidebar rather than in the asset ids. */
+         split belongs here in the sidebar rather than in the asset ids.
+
+         The two rows only exist while that collection is the one being looked
+         at. A sidebar is a map of the library, and a lifecycle split is a
+         detail of one corner of it: showing it always would put a permanent
+         answer under a question nobody asked. */
+      if (!(group === g.id && collection === c.id)) continue;
       const split = statusSplit(g.id, c.id);
       if (!split) continue;
       /* The child says Illustrations, not the parent's full name again: three
