@@ -188,10 +188,10 @@
 .addbtn .ic { width: 26px; height: 26px; }
 .open .addbtn { transform: rotate(45deg); }
 #tray-goo { position: absolute; left: -200px; bottom: -14px; width: 456px; height: 330px; filter: url(#goo); pointer-events: none; }
-#tray-goo .b { position: absolute; left: 214px; bottom: 14px; width: 56px; height: 56px; border-radius: 28px; background: var(--ink-p); transition: transform .6s var(--spring); }
+#tray-goo .b { position: absolute; left: 200px; bottom: 14px; width: 56px; height: 56px; border-radius: 28px; background: var(--ink-p); transition: transform .6s var(--spring); }
 #tray-goo .b.base { border-radius: 18px; }
 .tray-icons { position: absolute; left: -200px; bottom: -14px; width: 456px; height: 330px; pointer-events: none; }
-.tray-icons button { position: absolute; left: 214px; bottom: 14px; width: 56px; height: 56px; border-radius: 28px; display: grid; place-items: center; font-size: 26px; opacity: 0; transition: transform .6s var(--spring), opacity .3s; pointer-events: none; }
+.tray-icons button { position: absolute; left: 200px; bottom: 14px; width: 56px; height: 56px; border-radius: 28px; display: grid; place-items: center; font-size: 26px; opacity: 0; transition: transform .6s var(--spring), opacity .3s; pointer-events: none; }
 .open .tray-icons button { opacity: 1; pointer-events: auto; }
 .tray-icons button span.lbl { position: absolute; top: 62px; white-space: nowrap; font: 600 12px/1 var(--font); color: #fff; background: rgba(30,20,40,.75); padding: 5px 8px; border-radius: 8px; opacity: 0; transition: opacity .2s; }
 .tray-icons button:hover span.lbl { opacity: 1; }
