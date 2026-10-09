@@ -149,7 +149,7 @@ function store(key, val) {
 
 /* ---- Switcher ---------------------------------------------------------- */
 function protoNav(current) {
-  const items = [['workbench', 'Workbench'], ['mosaic', 'Mosaic'], ['pinboard', 'Pinboard']];
+  const items = [['nucleus', 'Nucleus'], ['mosaic', 'Mosaic'], ['pinboard', 'Pinboard']];
   const nav = html(`<nav class="proto-nav" aria-label="Desktops">${items.map(([k, l]) =>
     `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="hint">Everything here is clickable</span></nav>`);
   document.body.appendChild(nav);

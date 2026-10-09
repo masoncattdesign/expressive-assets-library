@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nucleus · Desktop prototype</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23c8f56a'/%3E%3Crect x='5' y='5' width='14' height='6' rx='3' fill='%231c1b33'/%3E%3Crect x='5' y='13' width='6' height='6' rx='3' fill='%231c1b33'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="nucleus.css">
+</head>
+<body>
+<div id="stage" style="background-image:url('media/wp-workbench.jpg')">
+
+  <!-- Open windows, waiting at the top ------------------------------------>
+  <div class="strip" id="strip">
+    <svg class="strip-shape" viewBox="0 0 1260 124" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0 H1260 L1186 100 Q1168 124 1140 124 H120 Q92 124 74 100 Z"/>
+    </svg>
+    <div class="strip-row" id="strip-row"></div>
+  </div>
+
+  <!-- When the nucleus is working, the cells on the left gather into one gooey column -->
+  <div class="goo-group full" id="g-col"><div class="goo-layer" id="col-layer"></div></div>
+
+  <!-- The bench -------------------------------------------------------------->
+  <!-- Greeting + focus: two surfaces joined by goo -->
+  <div class="goo-group" id="g-greet" style="left:201px;top:270px;width:320px;height:524px">
+    <div class="goo-layer">
+      <div class="blob" data-part="a" style="left:30px;top:30px;width:260px;height:330px"></div>
+      <div class="blob" data-part="b" style="left:30px;top:380px;width:260px;height:114px"></div>
+      <div class="neck" data-x="160"></div>
+    </div>
+    <div class="goo-content">
+      <div class="part" data-part="a" style="left:30px;top:30px;width:260px;height:330px">
+        <div class="clock-glow">
+          <div class="clock-time"><span id="clock-hm">10:42</span><span class="ampm" id="clock-ampm">AM</span></div>
+          <div class="greet-card">
+            <div class="greet-eyebrow"><i></i><span id="greet-line">Good morning, Alex</span></div>
+            <p class="greet-text" id="greet-text"><b>Book club is at 7.</b> Your invite is <b>ready to send</b> :)</p>
+          </div>
+        </div>
+      </div>
+      <div class="part grab" data-part="b" style="left:30px;top:380px;width:260px;height:114px" title="Pull me">
+        <div class="focus-row">
+          <div class="focus-num"><b id="focus-num">30</b><span id="focus-unit">mins</span></div>
+          <button class="focus-btn" id="focus-btn">Focus</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Personal folder -->
+  <button class="folder purple" id="f-personal" style="left:231px;top:775px" data-open="explorer-personal">
+    <span class="f-back"></span><span class="f-paper"></span><span class="f-paper p2"></span><span class="f-front"><b>Personal</b><small>123 items</small><i>···</i></span>
+  </button>
+
+  <!-- Lemon bars note -->
+  <div class="card note" id="note" style="left:507px;top:300px;width:260px;height:300px">
+    <h3>Lemon bars</h3>
+    <div class="note-body" id="note-body" contenteditable="true" spellcheck="false">
+      <p class="muted">For book club tonight. Priya's recipe.</p>
+      <ul><li>1 cup butter, softened</li><li>2 cups flour, ¼ cup sugar</li><li>4 eggs, 1½ cups sugar</li><li>3 lemons, zested and juiced</li></ul>
+      <p class="muted">Bake the crust 20 min at 350°, pour, bake 25 more.</p>
+    </div>
+    <div class="note-foot"><span>TODAY</span><span>···</span></div>
+  </div>
+
+  <!-- Family folder -->
+  <button class="folder orange" id="f-family" style="left:507px;top:616px" data-open="explorer-family">
+    <span class="f-back"></span><span class="f-paper"></span><span class="f-paper p2"></span><span class="f-front"><b>Family</b><small>24 items</small><i>···</i></span>
+  </button>
+
+  <!-- Stacks -->
+  <div class="card stacks" id="stacks" style="left:507px;top:802px;width:260px;height:258px">
+    <div class="card-head"><h3>Stacks</h3><span class="muted">···</span></div>
+    <div class="stack-row">
+      <button class="stack" data-stack="Lisbon"><span class="sheet s3"></span><span class="sheet s2"></span><span class="sheet s1"></span><em>Lisbon</em></button>
+      <button class="stack" data-stack="Book club"><span class="sheet s3"></span><span class="sheet s2"></span><span class="sheet s1"></span><em>Book club</em></button>
+      <button class="stack" data-stack="Kitchen"><span class="sheet s3"></span><span class="sheet s2"></span><span class="sheet s1"></span><em>Kitchen</em></button>
+    </div>
+    <span class="chip violet" id="stack-chip">3 changed today</span>
+  </div>
+
+  <!-- Tasks -->
+  <div class="card tasks" id="nucleus" style="left:783px;top:300px;width:620px;height:760px">
+    <nav class="rail" aria-label="Bench tools">
+      <button data-view="chat" title="Chat with Copilot">__chat</button>
+      <button data-view="notes" title="Notes">__edit</button>
+      <button data-view="search" title="Search">__search</button>
+      <button data-view="tasks" class="on" title="Tasks">__task</button>
+      <button data-view="stacks" title="Stacks">__stack</button>
+      <button data-view="pins" title="Pinned">__pin</button>
+      <img class="rail-avatar" src="media/person-adam.jpg" alt="">
+    </nav>
+    <section class="tasks-main" id="tasks-main">
+      <div class="tasks-head">
+        <h2 id="tasks-title">Tasks</h2>
+        <div class="seg" id="task-filter">
+          <button class="on" data-f="all">All</button><button data-f="agent">Agents</button><button data-f="mine">Mine</button>
+        </div>
+      </div>
+      <div class="task-list" id="task-list"></div>
+    </section>
+    <section class="stacks-view" id="stacks-view" hidden></section>
+    <section class="tasks-chat" id="tasks-chat" hidden>
+      <div class="tasks-head"><h2>Copilot</h2><span class="chip">Knows your bench</span></div>
+      <div class="chat-log" id="chat-log"></div>
+      <form class="chat-input" id="chat-form"><input id="chat-input" placeholder="Message Copilot" autocomplete="off"><button>__send</button></form>
+    </section>
+  </div>
+
+  <!-- Today: contact + to-dos joined by goo -->
+  <div class="goo-group" id="g-today" style="left:1389px;top:270px;width:330px;height:426px">
+    <div class="goo-layer">
+      <div class="blob" data-part="a" style="left:30px;top:30px;width:270px;height:92px"></div>
+      <div class="blob" data-part="b" style="left:30px;top:146px;width:270px;height:250px"></div>
+      <div class="neck" data-x="165"></div>
+    </div>
+    <div class="goo-content">
+      <div class="part" data-part="a" style="left:30px;top:30px;width:270px;height:92px">
+        <div class="recs">
+          <div class="recs-label"><small>Recommended</small><b id="recs-title">Tasks for today</b></div>
+          <div class="recs-pick" id="recs-pick">
+            <button class="on" data-rec="tasks" title="Recommended tasks">__task</button>
+            <button data-rec="ideas" title="Ideas">__bulb</button>
+            <button data-rec="files" title="Files">__doc</button>
+          </div>
+        </div>
+      </div>
+      <div class="part grab" data-part="b" style="left:30px;top:146px;width:270px;height:250px" title="Pull me">
+        <div class="todos" id="todos">
+          <button class="todo peach"><i></i><span><b>Pick up Lily</b><small>3:15 PM</small></span></button>
+          <button class="todo blue"><i></i><span><b>Call Mom</b><small>5:30 PM</small></span></button>
+          <button class="todo lilac"><i></i><span><b>Book club</b><small>7:00 PM</small></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music: a card with the record rising out of it -->
+  <div class="goo-group" id="g-music" style="left:1389px;top:658px;width:330px;height:432px">
+    <div class="goo-layer">
+      <div class="blob" style="left:30px;top:56px;width:270px;height:346px"></div>
+      <div class="blob round-blob" id="music-bump" style="left:85px;top:30px;width:160px;height:160px"></div>
+    </div>
+    <div class="goo-content">
+      <div class="music">
+        <button class="record" id="record" title="Play"><span class="record-art"></span><span class="record-btn">__play</span></button>
+        <b class="m-title" id="m-title">Golden hour mix</b>
+        <small class="m-sub" id="m-sub">Weekend radio</small>
+        <div class="m-bar"><i id="m-fill"></i></div>
+        <div class="m-times"><span id="m-now">1:42</span><span id="m-len">3:40</span></div>
+        <div class="m-ctrls">
+          <button id="m-prev">__previous</button>
+          <button class="primary" id="m-play">__pause</button>
+          <button id="m-next">__next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The nucleus at work: Copilot on the left, the live document on the right -->
+  <section class="work" id="work" hidden aria-label="Copilot working on Lisbon trip"></section>
+  <div class="col-hit" id="col-hit"></div>
+  <div class="goo-group full" id="g-morph"><div class="goo-layer" id="morph-layer"></div></div>
+
+  <!-- Windows open here -->
+  <div id="windows"></div>
+
+  <!-- Copilot, growing out of the Ask box -->
+  <div class="goo-group" id="g-ask" style="left:574px;top:560px;width:600px;height:640px">
+    <div class="goo-layer">
+      <div class="blob" id="ask-panel-blob"></div>
+      <div class="blob" id="ask-neck"></div>
+      <div class="blob" id="ask-pill-blob" style="left:30px;top:545px;width:540px;height:70px;border-radius:35px"></div>
+    </div>
+    <div class="goo-content">
+      <div class="ask-panel" id="ask-panel" hidden>
+        <div class="ask-log" id="ask-log"></div>
+        <div class="ask-suggest" id="ask-suggest"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <button class="tile" id="tb-start" style="left:416px" title="Start"><span class="winlogo"><i></i><i></i><i></i><i></i></span></button>
+    <span class="tb-sep" style="left:502px"></span>
+    <button class="tile solid" id="tb-copilot" style="left:518px" title="Copilot">__copilot</button>
+    <form class="ask" id="ask" style="left:604px">
+      <span class="ask-plus">__add</span>
+      <input id="ask-input" placeholder="Ask Copilot" autocomplete="off">
+      <span class="ask-mic">__mic</span>
+      <button type="button" class="ask-voice" title="Voice">__speaker</button>
+    </form>
+    <span class="tb-sep" style="left:1158px"></span>
+    <button class="tile app" style="left:1174px" data-open="explorer-family" title="File Explorer">__explorer<i class="run"></i></button>
+    <button class="tile app" style="left:1260px" data-open="edge" title="Edge">__edge<i class="run"></i></button>
+    <button class="tile app" style="left:1346px" data-open="outlook" title="Outlook">__outlook<i class="run"></i></button>
+    <button class="tile app" style="left:1432px" data-open="photos" title="Photos">__photos<i class="run"></i></button>
+  </div>
+
+  <!-- Start -->
+  <div class="start" id="start" hidden></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="shared.js"></script>
+<script src="nucleus.js"></script>
+</body>
+</html>
