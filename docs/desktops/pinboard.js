@@ -119,7 +119,7 @@ $$('.w').forEach(makeSticky);
 const TRAY = [
   { k: 'note', e: '📝', l: 'Sticky note', at: [-160, -96] },
   { k: 'photo', e: '🖼️', l: 'Photo', at: [-84, -166] },
-  { k: 'flower', e: '🌼', l: 'Sticker', at: [0, -196] },
+  { k: 'flower', e: '🎸', l: 'Sticker', at: [0, -196] },
   { k: 'count', e: '⏳', l: 'Countdown', at: [84, -166] },
   { k: 'ask', e: '✨', l: 'Ask Copilot', at: [160, -96] },
 ];
@@ -154,9 +154,10 @@ function addSticker(kind, text) {
   let inner = '', cls = '';
   if (kind === 'note') { cls = 'note'; inner = text || 'Call the vet about Pepper'; }
   if (kind === 'photo') { cls = 'polaroid'; const p = ['media/photo-bigsur.jpg', 'media/photo-room.jpg', 'media/photo-living.jpg'][stickN++ % 3]; inner = `<div style="background-image:url(${p})"></div><span>${text || 'last summer'}</span>`; }
-  if (kind === 'flower') { cls = 'emoji'; inner = ['🌼', '🍋', '🌈', '🐝', '⭐'][stickN++ % 5]; }
+  if (kind === 'flower') { cls = 'sticker-il'; inner = `<span data-illus="${STICKERS[stickN++ % STICKERS.length]}"></span>`; }
   if (kind === 'count') { cls = 'count'; inner = `<div><span><b>9</b><small>days to Lisbon</small></span></div>`; }
-  const w = html(`<div class="w ${cls} new" data-id="${id}" data-tilt="${tilt}" style="left:${x}px;top:${y}px;z-index:${++zTop}">${inner}</div>`);
+  const w = html(`<div class="w ${cls} new" data-id="${id}" data-tilt="${tilt}" style="left:${x}px;top:${y}px;z-index:${++zTop}${kind === 'flower' ? ';width:130px;height:130px' : ''}">${inner}</div>`);
+  if (kind === 'flower') paintIllus(w);
   if (kind === 'note') {
     w.title = 'Double-click to write';
     w.addEventListener('dblclick', () => { w.setAttribute('contenteditable', 'true'); w.spellcheck = false; w.focus(); });
@@ -168,7 +169,7 @@ function addSticker(kind, text) {
 }
 
 /* ---- Copilot decorates ------------------------------------------------- */
-const CHIPS = ['Make it cozy for fall', 'Calm night mode', 'Add a countdown to Lisbon', 'Back to sunny'];
+const CHIPS = ['Make it cozy for fall', 'Calm night mode', 'Add a countdown to Lisbon', 'Back to my theme'];
 $('#ask-input').addEventListener('focus', () => {
   const c = $('#chips'); c.hidden = false;
   c.innerHTML = CHIPS.map((t, i) => `<button type="button" style="animation-delay:${i * 50}ms">${t}</button>`).join('');
@@ -177,7 +178,7 @@ $('#ask-input').addEventListener('focus', () => {
 $('#ask').addEventListener('submit', e => { e.preventDefault(); const v = $('#ask-input').value.trim(); if (v) decorate(v); });
 
 function clearDecor() { $$('.leaf, .star').forEach(x => x.remove()); }
-function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night'); stage.classList.add('pal-' + p); }
+function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night', 'pal-m365', 'pal-riso'); stage.classList.add('pal-' + p); }
 function decorate(v) {
   const q = v.toLowerCase();
   $('#chips').hidden = true; $('#ask-input').value = ''; $('#ask-input').blur();
@@ -190,7 +191,7 @@ function decorate(v) {
     for (let i = 0; i < 40; i++) { const s = html(`<i class="star" style="left:${Math.random() * 1920}px;top:${Math.random() * 520}px;animation-delay:${Math.random() * 3}s;transform:scale(${.4 + Math.random()})"></i>`); $('#board').prepend(s); }
     toast('Night mode. Quieter colors, same board.');
   } else if (/sun|bright|spring|reset|back|default/.test(q)) {
-    palette('sunny'); clearDecor(); toast('Back to sunny.');
+    palette(THEME.pal); clearDecor(); toast(`Back to ${THEME.label}.`);
   } else if (/countdown|days|lisbon|trip/.test(q)) {
     addSticker('count'); toast('Pinned a countdown. It ticks down on its own.');
   } else if (/photo|picture|memory/.test(q)) {
@@ -199,3 +200,29 @@ function decorate(v) {
     addSticker('note', v); toast('Pinned it as a note.');
   }
 }
+
+/* ---- Themes ------------------------------------------------------------ */
+// Windows is the board as designed. M365 swaps in the M365 palette and its
+// illustration style. Stipple and Texture lay a print finish over every
+// widget and restyle the illustration stickers to match.
+const STICKERS = ['crown', 'headphone', 'camera', 'telescope', 'crayon', 'candle', 'compass', 'notes'];
+const TEXS = { music: 'stripes', batt: 'stripes', vol: 'dots', check: 'dots', cal: 'grid', mem: 'grid', weather: 'dots', digits: 'stripes', clock: 'none' };
+function texify() {
+  $$('.board > .w').forEach(w => {
+    if (w.classList.contains('sticker-il') || w.dataset.id === 'clock' || $(':scope > .tex', w)) return;
+    const kind = TEXS[w.dataset.id] || 'dots';
+    if (w.dataset.id === 'digits') { $$('.pebble', w).forEach(p => { if (!$('.tex', p)) p.appendChild(html('<i class="tex stripes"></i>')); }); return; }
+    w.appendChild(html(`<i class="tex ${kind}"></i>`));
+  });
+}
+setupThemes('pinboard', [
+  { id: 'windows', label: 'Windows', style: 'windows', pal: 'sunny' },
+  { id: 'm365', label: 'M365', style: 'm365', pal: 'm365' },
+  { id: 'stipple', label: 'Stipple', style: 'stipple', pal: 'riso', tex: 'stipple' },
+  { id: 'texture', label: 'Texture', style: 'texture', pal: 'sunny', tex: 'pattern' },
+], t => {
+  clearDecor(); palette(t.pal);
+  stage.classList.toggle('tex-stipple', t.tex === 'stipple');
+  stage.classList.toggle('tex-pattern', t.tex === 'pattern');
+  texify();
+});

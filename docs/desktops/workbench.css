@@ -552,3 +552,42 @@
 .sv-tip img { width: 24px; height: 24px; }
 .sv-tip span { flex: 1; }
 .stack { cursor: pointer; }
+
+/* ==== Illustrations ======================================================= */
+.todo .t-ico.il { width: 40px; height: 40px; margin-left: -4px; }
+.todo .end { margin-left: auto; }
+.todo.done .t-ico.il { opacity: .45; }
+.sv-col { position: relative; }
+.sv-il { position: absolute; left: 50%; bottom: 12px; width: 72px; height: 72px; margin-left: -36px; pointer-events: none; opacity: .95; }
+.src-il { position: absolute; inset: 0; display: grid; place-items: center; }
+.src-il span { width: 84px; height: 84px; }
+
+/* ==== Themes ============================================================== */
+/* M365: soft M365 pastels, M365 blue as the accent, light outlines on the cards */
+#stage.theme-m365 {
+  --accent: #2F95F4;
+  background-image: radial-gradient(60% 70% at 15% 20%, #FFD9C9 0%, transparent 60%), radial-gradient(55% 60% at 85% 25%, #E4D6FF 0%, transparent 60%), radial-gradient(70% 60% at 50% 100%, #C6E1FF 0%, transparent 65%), linear-gradient(#F7F5F3, #F2F4F8) !important;
+}
+.theme-m365 .clock-glow, .theme-m365 .focus-btn { background: linear-gradient(162deg, #C6E1FF 0%, #E4D6FF 50%, #FFD9C9 100%); }
+.theme-m365 .focus-btn { box-shadow: 0 4px 14px rgba(47, 149, 244, .25); }
+.theme-m365 .folder.orange .f-back { background: #F57A52; }
+.theme-m365 .folder.orange .f-front { background: linear-gradient(180deg, #FFA38B, #FB966E); }
+.theme-m365 .folder.purple .f-back { background: #6E49B0; }
+.theme-m365 .folder.purple .f-front { background: linear-gradient(180deg, #A285D8, #8661C5); }
+.theme-m365 .todo.peach { background: #FFE3D8; } .theme-m365 .todo.blue { background: #DCEBFF; } .theme-m365 .todo.lilac { background: #EEE6FF; }
+.theme-m365 .card { box-shadow: 0 10px 30px rgba(36, 36, 36, .06), inset 0 0 0 1px rgba(72, 72, 72, .12); }
+.theme-m365 .goo-layer { filter: url(#goo) drop-shadow(0 0 1px rgba(72, 72, 72, .35)) drop-shadow(0 10px 22px rgba(36, 36, 36, .06)); }
+.theme-m365 .chip.violet, .theme-m365 .seg button { background: #E4D6FF; color: #6E49B0; }
+.theme-m365 .seg button.on { background: #242424; color: #fff; }
+.theme-m365 .chip.blue { background: #DCEBFF; color: #1B6EC2; }
+.theme-m365 .rail button.on { background: #DCEBFF; color: #1B6EC2; }
+.theme-m365 .task.featured { background: rgba(198, 225, 255, .6); }
+.theme-m365 .record-art { background: radial-gradient(circle at 50% 50%, #fff 0 6%, transparent 6.5%), conic-gradient(from 200deg, #C6E1FF, #2F95F4, #8661C5, #FB966E, #FFD9C9, #C6E1FF); }
+.theme-m365 .strip-shape path { fill: rgba(255, 255, 255, .45); stroke: rgba(72, 72, 72, .18); }
+.theme-m365 .tile { background: rgba(255, 255, 255, .55); box-shadow: inset 0 0 0 1px rgba(72, 72, 72, .12); }
+.theme-m365 .wk-prev { background: #E9F1FF; }
+.theme-m365 .wk-nub { background: #C6E1FF; }
+.theme-m365 .wk-pill { background: #2F95F4; box-shadow: 0 8px 24px rgba(47, 149, 244, .35); }
+.theme-m365 .wk-head button.primary { background: #2F95F4; }
+
+.recs-label b { white-space: nowrap; font-size: 14px; }

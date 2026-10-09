@@ -28,17 +28,18 @@ const T = {
   lamp: () => `<div class="glow"></div><div class="lamp"><div class="shade"></div><div class="stem"></div><div class="base"></div></div><div class="sw"><button data-act="lamp-off" title="Off">${ic('lightbulb', 16)}</button><button data-act="lamp-on" class="on" title="On">${ic('lightbulb', 16, 'filled')}</button></div>`,
   apps: () => `<div class="pad">${[['Teams', APPS.teams], ['Copilot', APPS.copilot], ['Word', APPS.word], ['News', 'app/news/standard-48.svg']].map(([n, p]) => `<button data-act="app" data-app="${n}" title="${n}"><img src="${ICONS}${p}" alt=""></button>`).join('')}</div>`,
   tasks: () => `<div class="pad"><div class="hd"><b>Today</b><span class="lime-chip" data-left>2 left</span></div>${[['Send party invites', true], ['Book flights'], ['Pick up groceries']].map(([t, d]) => `<button class="check${d ? ' done' : ''}" data-act="check"><i></i>${t}</button>`).join('')}</div>`,
-  relax: () => `<div class="orb"></div><div class="pad">${ic('weather-moon', 30)}<p data-relax>Relax with a creative task</p><button class="outline-pill" data-act="relax">Begin</button></div>`,
+  relax: () => `<div class="orb"></div><div class="pad"><span class="t-il tl" data-illus="crayon"></span><p data-relax>Relax with a creative task</p><button class="outline-pill" data-act="relax">Begin</button></div>`,
   memory: () => `<div class="pad"><div><small>One year ago</small><h4>Big Sur</h4></div><button class="share" data-act="share">Share</button></div>`,
+  streak: () => `<div class="pad"><div style="font:600 36px/1 var(--font-display)">5 days</div><small>of morning runs</small></div>`,
   commute: () => `<svg viewBox="0 0 152 80"><path id="cm-path" d="M4 66 C 30 66, 40 40, 70 46 S 110 60, 124 30 S 140 10, 150 8" fill="none" stroke="#d4f07a" stroke-width="5" stroke-linecap="round"/><circle cx="150" cy="8" r="6" fill="#d4f07a"/><circle r="7" fill="#fff" data-car><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#cm-path"/></animateMotion></circle></svg><div class="big">18 min</div><small>to Capitol Hill</small>`,
 };
-const TILE_CLASS = { cal: 't-cal', meet: 't-meet', dev: 't-dev', photos: 't-photos', weather: 't-weather', focus: 't-focus', flight: 't-flight', contact: 't-contact', music: 't-music', lamp: 't-lamp on', apps: 't-apps', tasks: 't-tasks', relax: 't-relax', memory: 't-memory', commute: 't-commute' };
+const TILE_CLASS = { streak: 't-streak', cal: 't-cal', meet: 't-meet', dev: 't-dev', photos: 't-photos', weather: 't-weather', focus: 't-focus', flight: 't-flight', contact: 't-contact', music: 't-music', lamp: 't-lamp on', apps: 't-apps', tasks: 't-tasks', relax: 't-relax', memory: 't-memory', commute: 't-commute' };
 const TILE_BG = { contact: 'media/person-sam.jpg', relax: 'media/tex-bloom.jpg', memory: 'media/photo-bigsur.jpg' };
 
 let tiles = [
   { id: 'cal', c: 2, r: 1, w: 1 }, { id: 'meet', c: 3, r: 1, w: 1 }, { id: 'dev', c: 4, r: 1, w: 2 }, { id: 'photos', c: 6, r: 1, w: 1 },
   { id: 'weather', c: 0, r: 2, w: 2 }, { id: 'focus', c: 2, r: 2, w: 1 }, { id: 'flight', c: 3, r: 2, w: 2 }, { id: 'contact', c: 5, r: 2, w: 1 }, { id: 'music', c: 6, r: 2, w: 2 }, { id: 'lamp', c: 8, r: 2, w: 1 },
-  { id: 'apps', c: 1, r: 3, w: 1 }, { id: 'tasks', c: 2, r: 3, w: 2 }, { id: 'relax', c: 4, r: 3, w: 1 }, { id: 'memory', c: 5, r: 3, w: 2 }, { id: 'commute', c: 7, r: 3, w: 1 },
+  { id: 'streak', c: 0, r: 3, w: 1, il: 'achievement' }, { id: 'apps', c: 1, r: 3, w: 1 }, { id: 'tasks', c: 2, r: 3, w: 2 }, { id: 'relax', c: 4, r: 3, w: 1 }, { id: 'memory', c: 5, r: 3, w: 2 }, { id: 'commute', c: 7, r: 3, w: 1 },
 ];
 const slotCells = new Set(['0,1', '1,1', '7,1', '8,1', '0,3', '8,3', '3,0', '4,0', '5,0', '1,4', '6,4', '7,4']);
 tiles.forEach(t => { for (let i = 0; i < t.w; i++) slotCells.add(`${t.c + i},${t.r}`); });
@@ -54,12 +55,15 @@ function placeEl(el, t) { Object.assign(el.style, { left: cx(t.c) + 'px', top: c
 function makeTile(t) {
   const el = html(`<div class="tile ${t.cls || TILE_CLASS[t.id] || ''}" data-id="${t.id}">${t.html || T[t.id]()}</div>`);
   if (TILE_BG[t.id]) el.style.backgroundImage = `url(${TILE_BG[t.id]})`;
+  if (t.il) addIl(el, t.il);
   placeEl(el, t);
   t.el = el;
   grid.appendChild(el);
   bindDrag(t);
   return el;
 }
+// A Windows illustration on a tile, restyled by the current theme.
+function addIl(el, name, cls = '') { el.insertAdjacentHTML('beforeend', `<span class="t-il ${cls}" data-illus="${name}"></span>`); paintIllus(el); }
 function renderSlots() {
   $$('.slot', grid).forEach(s => s.remove());
   const occ = occupied();
@@ -166,16 +170,16 @@ runFlaps();
 
 /* ---- Copilot suggestions (Rev 1) --------------------------------------- */
 const SUGG = [
-  { id: 'pack', c: 0, r: 1, w: 2, cls: 'suggested t-sugg', html: `<span class="ai-badge"><img src="${COP}" alt=""></span><div class="pad"><div class="src"><img src="${COP}" alt="">Suggested for your trip</div><h4>Tokyo packing</h4><small>6 items from your trip email and last year's list</small><div class="mini-btns"><button data-s="add">Add tile</button><button class="ghost" data-s="no">Not now</button></div></div>`,
+  { id: 'pack', c: 0, r: 1, w: 2, il: 'umbrella', cls: 'suggested t-sugg', html: `<span class="ai-badge"><img src="${COP}" alt=""></span><div class="pad"><div class="src"><img src="${COP}" alt="">Suggested for your trip</div><h4>Tokyo packing</h4><small>6 items from your trip email and last year's list</small><div class="mini-btns"><button data-s="add">Add tile</button><button class="ghost" data-s="no">Not now</button></div></div>`,
     real: `<div class="pad"><div class="hd" style="display:flex;justify-content:space-between;margin-bottom:8px"><b style="font-size:17px">Tokyo packing</b><span class="lime-chip">4 left</span></div>${['Passport', 'Rail pass voucher', 'Adapter (type A)', 'Rain jacket'].map(t => `<button class="check" data-act="check"><i></i>${t}</button>`).join('')}</div>`, realCls: 't-tasks' },
-  { id: 'checkin', c: 7, r: 1, w: 1, cls: 'suggested t-sugg', html: `<span class="ai-badge"><img src="${COP}" alt=""></span><div class="pad"><div class="src"><img src="${COP}" alt="">From TAP</div><h4 style="margin-top:14px">Check-in opens in 6 hours</h4><div class="mini-btns"><button data-s="add">Add</button></div></div>`,
-    real: `<div class="pad">${ic('airplane', 28)}<h4 style="margin:40px 0 2px;font:600 17px/1.2 var(--font)">Check in</h4><small>Opens 1:45 AM · seat 32A held</small></div>`, realCls: 't-gradline' },
+  { id: 'checkin', c: 7, r: 1, w: 1, il: 'compass', cls: 'suggested t-sugg', html: `<span class="ai-badge"><img src="${COP}" alt=""></span><div class="pad"><div class="src"><img src="${COP}" alt="">From TAP</div><h4 style="margin-top:14px">Check-in opens in 6 hours</h4><div class="mini-btns"><button data-s="add">Add</button></div></div>`,
+    real: `<div class="pad"><h4 style="margin:0 0 2px;font:600 17px/1.2 var(--font)">Check in</h4><small>Opens 1:45 AM · seat 32A held</small></div>`, realCls: 't-gradline' },
 ];
 grid.addEventListener('click', e => {
   const b = e.target.closest('[data-s]'); if (!b) return;
   const el = b.closest('.tile'); const t = tiles.find(x => x.el === el); const s = SUGG.find(x => x.id === t.id);
   if (b.dataset.s === 'add') {
-    el.className = `tile ${s.realCls} grow`; el.innerHTML = s.real; toast(`${s.id === 'pack' ? 'Tokyo packing' : 'Check-in'} added`);
+    el.className = `tile ${s.realCls} grow`; el.innerHTML = s.real; if (s.il) addIl(el, s.il); toast(`${s.id === 'pack' ? 'Tokyo packing' : 'Check-in'} added`);
   } else { el.classList.add('leave'); setTimeout(() => { el.remove(); tiles = tiles.filter(x => x !== t); renderSlots(); }, 420); }
 });
 function suggest() {
@@ -200,11 +204,11 @@ setTimeout(() => {
 
 /* ---- An empty slot: Copilot offers what fits --------------------------- */
 const OPTIONS = [
-  { t: 'Package', s: 'Arrives today by 8 pm', w: 1, color: '#f59e0b', icon: 'vehicle-truck-profile', html: `<div class="pad">${ic('vehicle-truck-profile', 28)}<h4 style="margin:40px 0 2px;font:600 17px/1.2 var(--font)">Arrives by 8 pm</h4><small>Rain jacket · 2 stops away</small></div>` },
-  { t: 'Plants', s: 'You water them on Sundays', w: 1, color: '#22c55e', icon: 'leaf-two', html: `<div class="pad" style="background:linear-gradient(160deg,#2f7d4f,#1e4d34)">${ic('leaf-two', 28)}<h4 style="margin:40px 0 2px;font:600 17px/1.2 var(--font)">Water the monstera</h4><small>Due Sunday</small></div>` },
-  { t: 'Steps', s: 'From your phone', w: 1, color: '#ec4899', icon: 'person-walking', html: `<div class="pad">${ic('person-walking', 28)}<div style="font:600 34px/1 var(--font-display);margin-top:42px">6,240</div><small>steps today · goal 8,000</small></div>` },
-  { t: "Lily's school", s: 'Picture day, field trip, early release', w: 2, color: '#6366f1', icon: 'backpack', html: `<div class="pad" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><b style="font-size:17px">Lily's school</b><small style="color:rgba(255,255,255,.75)">This week</small><div style="margin-top:18px;display:grid;gap:6px;font:400 14px/1.2 var(--font)"><span>Tue · Picture day</span><span>Thu · Field trip, pack lunch</span><span>Fri · Early release 1:30</span></div></div>` },
-  { t: 'Recipe', s: 'Paella for Saturday, 6 people', w: 2, color: '#f97316', icon: 'food', html: `<div class="pad" style="background:linear-gradient(135deg,#f97316,#dc2626)"><small style="color:rgba(255,255,255,.8)">For Saturday</small><b style="display:block;font-size:22px;margin-top:4px">Paella for 6</b><small style="color:rgba(255,255,255,.8);margin-top:30px">Shopping list is in your Today tile</small></div>` },
+  { t: 'Package', s: 'Arrives today by 8 pm', w: 1, il: 'mailbox', html: `<div class="pad"><h4 style="margin:0 0 2px;font:600 17px/1.2 var(--font)">Arrives by 8 pm</h4><small>Rain jacket · 2 stops away</small></div>` },
+  { t: 'Guitar practice', s: 'You played 4 days this week', w: 1, il: 'guitar', html: `<div class="pad" style="background:linear-gradient(160deg,#3b2a6b,#1f1840)"><h4 style="margin:0 0 2px;font:600 17px/1.2 var(--font)">15 min today</h4><small>4-day streak</small></div>` },
+  { t: 'Steps', s: 'From your phone', w: 1, il: 'stopwatch', html: `<div class="pad"><div style="font:600 32px/1 var(--font-display)">6,240</div><small>steps today · goal 8,000</small></div>` },
+  { t: "Lily's school", s: 'Picture day, field trip, early release', w: 2, il: 'calendar', html: `<div class="pad" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><b style="font-size:17px">Lily's school</b><small style="color:rgba(255,255,255,.75)">This week</small><div style="margin-top:18px;display:grid;gap:6px;font:400 14px/1.2 var(--font)"><span>Tue · Picture day</span><span>Thu · Field trip, pack lunch</span><span>Fri · Early release 1:30</span></div></div>` },
+  { t: 'Stargazing', s: 'Clear skies tonight after 9', w: 2, il: 'telescope', html: `<div class="pad" style="background:linear-gradient(135deg,#1b2a63,#3a6fe8)"><small style="color:rgba(255,255,255,.8)">Tonight</small><b style="display:block;font-size:22px;margin-top:4px">Clear skies after 9</b><small style="color:rgba(255,255,255,.8);margin-top:30px">Saturn rises at 9:40</small></div>` },
 ];
 function slotPopover(c, r, slotEl) {
   closePopover();
@@ -214,14 +218,14 @@ function slotPopover(c, r, slotEl) {
   const opts = OPTIONS.filter(o => o.w === 1 || wide).filter(o => !tiles.some(t => t.id === 'o-' + o.t)).slice(0, 4);
   const p = $('#popover');
   p.innerHTML = `<h5><img src="${COP}" alt="">What should grow here?</h5><small>Picked from what you use and what's coming up${wide ? ' · fits one or two wide' : ''}</small>
-    ${opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="sw" style="background:${o.color}">${ic(o.icon, 20)}</span><span><b>${o.t}${o.w === 2 ? ' · wide' : ''}</b><small>${o.s}</small></span></button>`).join('')}
+    ${opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="sw il" data-illus="${o.il}"></span><span><b>${o.t}${o.w === 2 ? ' · wide' : ''}</b><small>${o.s}</small></span></button>`).join('')}
     <button class="opt" data-ask><span class="sw" style="background:rgba(255,255,255,.1)">${ic('sparkle', 20)}</span><span><b>Something else</b><small>Describe it and Copilot builds it</small></span></button>`;
   const left = Math.min(cx(c), 1920 - 350), top = r >= 3 ? cy(r) - 330 : cy(r) + CELL + 10;
   Object.assign(p.style, { left: left + 'px', top: top + 'px' });
-  p.hidden = false;
+  p.hidden = false; paintIllus(p);
   $$('.opt[data-i]', p).forEach(b => b.addEventListener('click', () => {
     const o = opts[+b.dataset.i]; closePopover();
-    const t = { id: 'o-' + o.t, c, r, w: o.w, html: o.html, cls: '' };
+    const t = { id: 'o-' + o.t, c, r, w: o.w, html: o.html, cls: '', il: o.il };
     for (let i = 0; i < t.w; i++) slotCells.add(`${c + i},${r}`);
     tiles.push(t); makeTile(t).classList.add('grow'); renderSlots();
     toast(`${o.t} grew into place`);
@@ -234,16 +238,16 @@ $('#stage').addEventListener('click', e => { if (!e.target.closest('.popover, .s
 /* ---- Ask and it builds (Rev 3) ----------------------------------------- */
 const BUILDS = {
   tokyo: { match: /tokyo|trip|travel|pack/, label: 'Get ready for Tokyo', status: 'from your trip email, calendar and saved places', tiles: [
-    { w: 2, cls: 't-new', html: `<div class="pad"><small>Tokyo trip</small><b style="display:block;font-size:19px;margin:2px 0 8px">Before you go</b><span class="chip-new">New</span>${[['Order yen', 1], ['Rail pass voucher'], ['Hold the mail']].map(([t, d]) => `<button class="check${d ? ' done' : ''}" data-act="check"><i></i>${t}</button>`).join('')}</div>` },
-    { w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Hotel</b><small>Shibuya · 4 nights</small><div class="sk" style="width:80%"></div><div class="sk" style="width:55%"></div><small style="margin-top:22px">From your email</small></div>` },
-    { w: 2, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Weather in Tokyo</b><div style="display:flex;gap:18px;margin-top:22px;font:600 26px/1 var(--font-display)"><span>21°</span><span style="opacity:.7">19°</span><span style="opacity:.5">23°</span><span style="opacity:.5">20°</span></div><small style="margin-top:14px">Light rain Saturday, pack the jacket</small></div>` },
-    { w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Yen budget</b><div style="font:600 30px/1 var(--font-display);margin-top:30px">¥84k</div><small>left of ¥120k</small></div>` },
+    { il: 'map', w: 2, cls: 't-new', html: `<div class="pad"><small>Tokyo trip</small><b style="display:block;font-size:19px;margin:2px 0 8px">Before you go</b><span class="chip-new">New</span>${[['Order yen', 1], ['Rail pass voucher'], ['Hold the mail']].map(([t, d]) => `<button class="check${d ? ' done' : ''}" data-act="check"><i></i>${t}</button>`).join('')}</div>` },
+    { il: 'umbrella', w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Hotel</b><small>Shibuya · 4 nights</small><div class="sk" style="width:80%"></div><div class="sk" style="width:55%"></div><small style="margin-top:22px">From your email</small></div>` },
+    { il: 'weather', w: 2, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Weather in Tokyo</b><div style="display:flex;gap:18px;margin-top:22px;font:600 26px/1 var(--font-display)"><span>21°</span><span style="opacity:.7">19°</span><span style="opacity:.5">23°</span><span style="opacity:.5">20°</span></div><small style="margin-top:14px">Light rain Saturday, pack the jacket</small></div>` },
+    { il: 'card-box', w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Yen budget</b><div style="font:600 30px/1 var(--font-display);margin-top:30px">¥84k</div><small>left of ¥120k</small></div>` },
   ] },
   party: { match: /party|birthday|lily/, label: "Plan Lily's birthday party", status: 'from your messages, calendar and saved places', tiles: [
-    { w: 2, cls: 't-new', html: `<div class="pad"><small>Lily turns 8</small><b style="display:block;font-size:19px;margin:2px 0 8px">Party checklist</b><span class="chip-new">New</span>${[['Book the park shelter', 1], ['Order the cake'], ['Send invites to her class']].map(([t, d]) => `<button class="check${d ? ' done' : ''}" data-act="check"><i></i>${t}</button>`).join('')}</div>` },
-    { w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Bakery</b><small>Sweet Kitchen · 0.6 mi</small><div style="font:600 26px/1 var(--font-display);margin-top:30px">Sat 10a</div><small>pickup</small></div>` },
-    { w: 2, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Guests</b><div style="display:flex;align-items:baseline;gap:8px;margin-top:20px"><span style="font:600 40px/1 var(--font-display)">12</span><small>of 18 replied</small></div><small style="margin-top:14px">2 allergies noted · nuts, dairy</small></div>` },
-    { w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Budget</b><div style="font:600 30px/1 var(--font-display);margin-top:30px">$240</div><small>planned · $65 spent</small></div>` },
+    { il: 'crown', w: 2, cls: 't-new', html: `<div class="pad"><small>Lily turns 8</small><b style="display:block;font-size:19px;margin:2px 0 8px">Party checklist</b><span class="chip-new">New</span>${[['Book the park shelter', 1], ['Order the cake'], ['Send invites to her class']].map(([t, d]) => `<button class="check${d ? ' done' : ''}" data-act="check"><i></i>${t}</button>`).join('')}</div>` },
+    { il: 'candle', w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Bakery</b><small>Sweet Kitchen · 0.6 mi</small><div style="font:600 26px/1 var(--font-display);margin-top:30px">Sat 10a</div><small>pickup</small></div>` },
+    { il: 'chat', w: 2, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Guests</b><div style="display:flex;align-items:baseline;gap:8px;margin-top:20px"><span style="font:600 40px/1 var(--font-display)">12</span><small>of 18 replied</small></div><small style="margin-top:14px">2 allergies noted · nuts, dairy</small></div>` },
+    { il: 'card-box', w: 1, cls: 't-gradline', html: `<div class="pad"><b style="font-size:15px">Budget</b><div style="font:600 30px/1 var(--font-display);margin-top:30px">$240</div><small>planned · $65 spent</small></div>` },
   ] },
 };
 let built = [];
@@ -287,6 +291,7 @@ async function runBuild(prompt) {
     const el = makeTile(t); el.classList.add('grow'); renderSlots();
     await sleep(900);
     el.innerHTML = spec.html; el.classList.remove('building');
+    if (spec.il) addIl(el, spec.il);
     el.animate([{ filter: 'brightness(1.6)' }, { filter: 'none' }], { duration: 500 });
     c += spec.w;
     await sleep(250);
@@ -313,3 +318,10 @@ $('#dock').innerHTML = `<button class="cop" id="dock-cop" title="Copilot"><img s
 $('#dock-cop').addEventListener('click', () => $('#build').hidden ? openBuild() : closeBuild());
 $$('#dock [data-app]').forEach(b => b.addEventListener('click', () => toast(`Opening ${b.dataset.app}`)));
 addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); closeBuild(); } });
+
+/* ---- Themes ------------------------------------------------------------ */
+setupThemes('mosaic', [
+  { id: 'windows', label: 'Windows', style: 'windows' },
+  { id: 'm365', label: 'M365', style: 'm365' },
+  { id: 'neon', label: 'Neon', style: 'neon' },
+]);

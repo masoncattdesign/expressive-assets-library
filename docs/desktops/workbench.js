@@ -573,8 +573,8 @@ async function absorb(from) {
 
 /* ==== Recommendations in the Today cell ================================= */
 const RECS = {
-  tasks: { title: 'Tasks for today', items: [['peach', 'Pick up Lily', '3:15 PM'], ['blue', 'Call Mom', '5:30 PM'], ['lilac', 'Book club', '7:00 PM']] },
-  ideas: { title: 'Ideas for you', items: [['peach', 'Bring lemon bars', 'From your note', 'idea'], ['blue', 'Sintra on Sunday', 'Fits your Lisbon plan', 'idea'], ['lilac', 'Start a garden journal', 'You saved 6 plant posts', 'idea']] },
+  tasks: { title: 'Tasks for today', items: [['peach', 'Pick up Lily', '3:15 PM', 'task', 'clock'], ['blue', 'Call Mom', '5:30 PM', 'task', 'video-call'], ['lilac', 'Book club', '7:00 PM', 'task', 'news']] },
+  ideas: { title: 'Ideas for you', items: [['peach', 'Bring lemon bars', 'From your note', 'idea', 'candle'], ['blue', 'Sintra on Sunday', 'Fits your Lisbon plan', 'idea', 'map'], ['lilac', 'Start a garden journal', 'You saved 6 plant posts', 'idea']] },
   files: { title: 'Pick up where you left off', items: [['peach', 'Lisbon trip.docx', 'Copilot is writing', 'file', APPS.word, 'work'], ['blue', 'Book club invite', 'Ready to send', 'file', APPS.word, 'invite'], ['lilac', 'Kitchen quote.pdf', 'From Kitchen Co.', 'file', APPS.explorer, 'stacks']] },
 };
 function renderRecs(kind, wobble = true) {
@@ -583,8 +583,9 @@ function renderRecs(kind, wobble = true) {
   $$('#recs-pick button').forEach(b => b.classList.toggle('on', b.dataset.rec === kind));
   const box = $('#todos');
   box.innerHTML = r.items.map(([c, t, sub, type = 'task', icon, go = '']) => `<button class="todo ${c}${type === 'idea' ? ' idea' : ''}" data-type="${type}" data-go="${go}" data-text="${t}">
-    ${type === 'file' ? `<span class="t-ico"><img src="${ICONS}${icon}" alt=""></span>` : type === 'idea' ? `<span class="t-ico">${ic('lightbulb-filament', 22)}</span>` : '<i></i>'}
-    <span><b>${t}</b><small>${sub}</small></span></button>`).join('');
+    ${type === 'file' ? `<span class="t-ico"><img src="${ICONS}${icon}" alt=""></span>` : `<span class="t-ico il" data-illus="${icon || 'tips'}"></span>`}
+    <span><b>${t}</b><small>${sub}</small></span>${type === 'task' ? '<i class="end"></i>' : ''}</button>`).join('');
+  paintIllus(box);
   box.classList.remove('swap'); void box.offsetWidth; box.classList.add('swap');
   if (wobble) todayGoo.wobble(18);
 }
@@ -612,9 +613,10 @@ function renderStacks() {
   const v = $('#stacks-view');
   const files = name => STACKS[name].filter(f => !(receiptsMoved && f[3] === 'receipt')).filter(f => svFilter === 'all' || f[3] === 'new');
   v.innerHTML = `<div class="tasks-head"><h2>Stacks</h2><div class="seg" id="sv-filter"><button class="${svFilter === 'all' ? 'on' : ''}" data-f="all">All</button><button class="${svFilter === 'new' ? 'on' : ''}" data-f="new">Changed today</button></div></div>
-    <div class="sv-cols">${Object.keys(STACKS).map(n => `<div class="sv-col${n === svFocus ? ' focus' : ''}" data-stack="${n}"><h4>${n}<small>${files(n).length} items</small></h4>
+    <div class="sv-cols">${Object.keys(STACKS).map(n => `<div class="sv-col${n === svFocus ? ' focus' : ''}" data-stack="${n}"><span class="sv-il" data-illus="${{ Lisbon: 'map', 'Book club': 'news', Kitchen: 'toolbox' }[n]}"></span><h4>${n}<small>${files(n).length} items</small></h4>
       ${files(n).map(([icon, t, sub, tag, go], i) => `<button class="sv-file${tag === 'new' ? ' new' : ''}" data-go="${go || ''}" data-tag="${tag || ''}" style="animation-delay:${i * 50}ms"><img src="${ICONS}${icon}" alt=""><span><b>${t}</b><small>${sub}</small></span></button>`).join('')}</div>`).join('')}</div>
     <div class="sv-tip" id="sv-tip"><img src="${ICONS}${APPS.copilot}" alt=""><span>${receiptsMoved ? 'Moved 2 receipts into Taxes 2026. Your Kitchen stack is just the remodel now.' : 'Two receipts in Kitchen belong in Taxes 2026. Want me to move them?'}</span>${receiptsMoved ? '' : '<div class="ai-actions" style="margin:0"><button class="primary" id="sv-move">Move them</button></div>'}</div>`;
+  paintIllus(v);
   $$('#sv-filter button', v).forEach(b => b.addEventListener('click', () => { svFilter = b.dataset.f; renderStacks(); }));
   $$('.sv-col', v).forEach(c => c.addEventListener('click', e => { if (e.target.closest('.sv-file')) return; svFocus = c.dataset.stack; $$('.sv-col', v).forEach(x => x.classList.toggle('focus', x === c)); }));
   $$('.sv-file', v).forEach(f => f.addEventListener('click', () => {
@@ -756,7 +758,7 @@ async function exitWork() {
 const SOURCES = [
   [APPS.outlook, 'TAP flight confirmation', 'Inbox · from TAP Air Portugal · Sep 28', 'Seattle to Lisbon on Oct 16, landing 11:40. Seats 32A and 32B, one checked bag each.', 'pass'],
   [APPS.edge, "Maya's saved places", 'Saved in Edge · 14 places', 'Fado in Alfama, the tile museum and two bakeries in Belém. Most are walkable from the hotel.', 'map'],
-  [APPS.word, 'Lisbon notes from last spring', 'OneDrive · edited in May', 'Your own list from the last trip: what you missed and what to skip this time.', 'doc'],
+  [APPS.word, 'Lisbon notes from last spring', 'OneDrive · edited in May', 'Your own list from the last trip: what you missed and what to skip this time.', 'notes'],
   [APPS.excel, 'Trip budget.xlsx', 'Copilot updated it today', 'Flights, three nights and a food estimate come to about $1,850.', 'sheet'],
 ];
 const WDAYS = [
@@ -768,7 +770,8 @@ const WDAYS = [
 const PACK = ['Passports', 'Comfortable walking shoes', 'Rain jacket for Sunday', 'Plug adapter (type F)', 'A book for the flight'];
 function srcThumb(kind) {
   if (kind === 'pass') return `<div style="position:absolute;inset:0;background:linear-gradient(135deg,#1f4fbf,#3b82f6);color:#fff;padding:16px 18px;font:600 12px/1.3 var(--font)">TAP AIR PORTUGAL<div style="font:700 30px/1 var(--font-display);margin-top:14px;letter-spacing:1px">SEA → LIS</div><div style="opacity:.8;margin-top:8px">Oct 16 · 32A, 32B</div></div>`;
-  if (kind === 'map') return mapSvg(196, 110, 6);
+  if (kind === 'map') return `<div class="src-il" style="background:#eaf2ff"><span data-illus="map"></span></div>`;
+  if (kind === 'notes') return `<div class="src-il" style="background:#fff4e8"><span data-illus="pencil"></span></div>`;
   if (kind === 'doc') return `<div style="position:absolute;inset:0;padding:16px 20px">${[70, 90, 80, 60, 85].map(w => `<div class="skel" style="width:${w}%;margin:0 0 10px"></div>`).join('')}</div>`;
   return `<div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:20px;gap:2px;padding:10px;background:#f3f8f4">${Array.from({ length: 16 }, (_, i) => `<i style="background:${i < 4 ? '#c8e6cf' : '#fff'};border-radius:2px"></i>`).join('')}</div>`;
 }
@@ -811,7 +814,7 @@ function renderWork() {
 async function runWork() {
   const src = $('#wk-src'), days = $('#wk-days'), pill = $('#wk-pill span');
   for (const [icon, t, meta, p, th] of SOURCES) {
-    src.appendChild(html(`<div class="src"><img src="${ICONS}${icon}" alt=""><div><b>${t}</b><small>${meta}</small><p>${p}</p></div><div class="thumb-s">${srcThumb(th)}</div></div>`));
+    src.appendChild(html(`<div class="src"><img src="${ICONS}${icon}" alt=""><div><b>${t}</b><small>${meta}</small><p>${p}</p></div><div class="thumb-s">${srcThumb(th)}</div></div>`)); paintIllus(src);
     await sleep(450);
   }
   days.innerHTML = '';
@@ -829,3 +832,9 @@ async function runWork() {
   $('#wk-pill').classList.add('done'); pill.textContent = 'Ready · Share with Maya';
   updateTask('lisbon', { progress: null, sub: 'Copilot · finished, ready to share', chip: ['Ready', 'green'], featured: true });
 }
+
+/* ---- Themes ------------------------------------------------------------ */
+setupThemes('workbench', [
+  { id: 'windows', label: 'Windows', style: 'windows' },
+  { id: 'm365', label: 'M365', style: 'm365' },
+]);

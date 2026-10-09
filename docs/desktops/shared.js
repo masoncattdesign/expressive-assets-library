@@ -151,7 +151,7 @@ function store(key, val) {
 function protoNav(current) {
   const items = [['workbench', 'Workbench'], ['mosaic', 'Mosaic'], ['pinboard', 'Pinboard']];
   const nav = html(`<nav class="proto-nav" aria-label="Desktops">${items.map(([k, l]) =>
-    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="hint">Everything here is clickable</span></nav>`);
+    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="themes" id="theme-pick" role="group" aria-label="Theme"></span><span class="hint">Everything here is clickable</span></nav>`);
   document.body.appendChild(nav);
   let t;
   const show = () => { nav.classList.add('show'); clearTimeout(t); t = setTimeout(() => nav.classList.remove('show'), 1800); };
@@ -163,6 +163,45 @@ function protoNav(current) {
     const i = ['1', '2', '3'].indexOf(e.key);
     if (i >= 0) location.href = items[i][0] + '.html';
   });
+}
+
+/* ---- Illustrations and themes ----------------------------------------- */
+// Windows illustrations come from the Windows illustration library (illus-data.js)
+// and are restyled by its own engine (illus-engine.js), so a theme can show the
+// same drawing as drawn, in the M365 style, stippled, textured or neon.
+let THEME = null;
+function illusSVG(name, style) {
+  const src = window.ILLUS && ILLUS[name];
+  if (!src || typeof styled !== 'function') return '';
+  return styled(src, style || (THEME && THEME.style) || 'windows');
+}
+function paintIllus(root = document) {
+  $$('[data-illus]', root).forEach(el => { el.innerHTML = illusSVG(el.dataset.illus); el.classList.add('illus'); });
+}
+// themes: [{ id, label, style, cls }]. The chosen one is remembered per desktop.
+function setupThemes(desk, themes, onChange) {
+  const box = document.getElementById('theme-pick');
+  const stage = document.getElementById('stage');
+  const apply = id => {
+    const t = themes.find(x => x.id === id) || themes[0];
+    themes.forEach(x => stage.classList.remove('theme-' + x.id));
+    stage.classList.add('theme-' + t.id);
+    THEME = t; store(desk + ':theme', t.id);
+    if (box) $$('button', box).forEach(b => b.classList.toggle('on', b.dataset.t === t.id));
+    paintIllus();
+    onChange && onChange(t);
+  };
+  if (box) {
+    box.innerHTML = '<span class="lbl">Theme</span>' + themes.map(t => `<button type="button" data-t="${t.id}">${t.label}</button>`).join('');
+    $$('button', box).forEach(b => b.addEventListener('click', () => apply(b.dataset.t)));
+  }
+  // T cycles themes from the keyboard.
+  addEventListener('keydown', e => {
+    if (e.target.closest('input, [contenteditable]') || e.key.toLowerCase() !== 't') return;
+    const i = themes.findIndex(x => x === THEME);
+    apply(themes[(i + 1) % themes.length].id);
+  });
+  apply(store(desk + ':theme') || themes[0].id);
 }
 
 document.addEventListener('DOMContentLoaded', fitStage);

@@ -208,3 +208,60 @@
 }
 .toast img { width: 22px; height: 22px; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ==== Themes ============================================================== */
+/* M365: the M365 illustration palette (blue, purple, orange on light neutrals) */
+#stage.pal-m365 {
+  --ink-p: #242424;
+  --music: #2F95F4; --music-btn: #C6E1FF; --music-ink: #fff;
+  --batt: #8661C5; --batt-in: #E4D6FF; --batt-ink: #3b2a66;
+  --vol: #FFE3D8; --vol-fill: #FB966E; --vol-ink: #fff;
+  --check: #E4D6FF; --cal: #FFFFFF; --ev-dark: #2F95F4; --ev-yellow: #FFD9C9;
+  --peb-a: #C6E1FF; --peb-b: #FB966E; --peb-ink: #242424;
+  --weather-a: #C6E1FF; --weather-b: #E4D6FF; --weather-c: #FFD9C9; --weather-ink: #242424;
+  --mem: #F5F5F5; --bar: rgba(245, 245, 245, .88);
+  --hand-h: #C6E1FF; --hand-m: #FB966E; --dot: #2F95F4;
+}
+.pal-m365 .wash { background: linear-gradient(180deg, rgba(198,225,255,.35), rgba(228,214,255,.25) 50%, rgba(255,217,201,.3)); mix-blend-mode: soft-light; }
+.pal-m365 .cookie { filter: hue-rotate(-30deg) saturate(.7) brightness(1.15); }
+.pal-m365 .clock-day { color: #fff; }
+.pal-m365 .w:not(.sticker-il):not(.clock):not(.digits):not(.note):not(.polaroid):not(.emoji):not(.count) { box-shadow: inset 0 0 0 1.5px rgba(72, 72, 72, .14); }
+
+/* Stipple: risograph-bright color on warm paper, dissolving into dots at the edges */
+#stage.pal-riso {
+  --ink-p: #1D2BA8;
+  --music: #2A3BD9; --music-btn: #FFD23D; --music-ink: #FFF6DA;
+  --batt: #12855A; --batt-in: #FFD23D; --batt-ink: #10331f;
+  --vol: #FFD23D; --vol-fill: #E8357A; --vol-ink: #FFF1F6;
+  --check: #FFB8D6; --cal: #FFF4D6; --ev-dark: #E8357A; --ev-yellow: #FFD23D;
+  --peb-a: #FFD23D; --peb-b: #E8357A; --peb-ink: #1D2BA8;
+  --weather-a: #FFD23D; --weather-b: #FF8FB8; --weather-c: #6E8BFF; --weather-ink: #1D2BA8;
+  --mem: #FFF4D6; --bar: rgba(255, 244, 214, .9);
+  --hand-h: #FFD23D; --hand-m: #E8357A; --dot: #12855A;
+}
+.pal-riso .wash { background: rgba(244, 238, 226, .25); }
+.pal-riso .cookie { filter: hue-rotate(10deg) saturate(1.4); }
+
+.tex { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 3; display: none; }
+.tex-stipple .tex, .tex-pattern .tex { display: block; }
+/* Stipple: light dots that thicken toward every edge, like a print fading out */
+.tex-stipple .tex {
+  background: radial-gradient(circle, rgba(255, 250, 235, .8) 1px, transparent 1.6px) 0 0 / 5px 5px,
+              radial-gradient(circle, rgba(255, 250, 235, .6) .8px, transparent 1.3px) 2.5px 2.5px / 5px 5px;
+  -webkit-mask: radial-gradient(closest-side, transparent 62%, #000 100%); mask: radial-gradient(closest-side, transparent 62%, #000 100%);
+  mix-blend-mode: screen;
+}
+.tex-stipple .w:not(.sticker-il):not(.clock) { filter: drop-shadow(0 10px 0 rgba(29, 43, 168, .12)); }
+/* Texture: each widget carries a pattern in its own color family */
+.tex-pattern .tex { mix-blend-mode: soft-light; opacity: .9; }
+.tex-pattern .tex.stripes { background: repeating-linear-gradient(135deg, rgba(255,255,255,.55) 0 5px, transparent 5px 12px); }
+.tex-pattern .tex.dots { background: radial-gradient(circle, rgba(255,255,255,.7) 1.6px, transparent 2.2px) 0 0 / 11px 11px; }
+.tex-pattern .tex.grid { background: linear-gradient(rgba(0,0,0,.18) 1.2px, transparent 1.2px) 0 0 / 14px 14px, linear-gradient(90deg, rgba(0,0,0,.18) 1.2px, transparent 1.2px) 0 0 / 14px 14px; }
+.tex-pattern .tex.none { display: none; }
+.pebble { position: relative; overflow: hidden; }
+.w.check, .w.cal, .w.mem, .w.vol, .w.batt, .w.music { overflow: hidden; }
+
+/* Illustration stickers: a white die-cut edge, like a real sticker */
+.sticker-il { transform: rotate(var(--tilt)); }
+.sticker-il .illus { width: 100%; height: 100%; filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff); }
+.tex-stipple .sticker-il .illus { filter: none; }
