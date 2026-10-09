@@ -314,7 +314,7 @@ function undoBuild(silent) {
 const DOCK = [['File Explorer', 'app/file-explorer/standard-48.svg', '#f5b400', true], ['Edge', 'product/edge/outline-48.svg', '#2ab0d6'], ['Excel', 'product/excel/outline-48.svg', '#47c16f'], ['Word', 'product/word/outline-48.svg', '#4b8cf5'], ['PowerPoint', 'product/powerpoint/outline-48.svg', '#f0654a'], ['Photos', 'app/photos/standard-48.svg', '#5aa8ff', true]];
 $('#dock').innerHTML = `<button class="cop" id="dock-cop" title="Copilot"><img src="${COP}" alt=""></button><span class="sep"></span>` + DOCK.map(([n, p, col, full]) =>
   full ? `<button title="${n}" data-app="${n}"><img src="${ICONS}${p}" alt="" style="width:34px;height:34px"></button>`
-       : `<button title="${n}" data-app="${n}" style="color:${col}"><span class="ic" style="--src:url('${ICONS}${p}')"></span></button>`).join('');
+       : `<button title="${n}" data-app="${n}" style="color:${col}"><span class="ic" style="--src:url('${iconSrc(p)}')"></span></button>`).join('');
 $('#dock-cop').addEventListener('click', () => $('#build').hidden ? openBuild() : closeBuild());
 $$('#dock [data-app]').forEach(b => b.addEventListener('click', () => toast(`Opening ${b.dataset.app}`)));
 addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); closeBuild(); } });

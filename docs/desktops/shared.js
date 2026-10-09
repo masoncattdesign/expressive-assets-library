@@ -34,9 +34,12 @@ function stagePoint(e) {
 /* ---- Icons ------------------------------------------------------------- */
 // System icon, masked so it takes the text color. name is the folder name in
 // assets/icons/system; style is outline or filled.
+// The downloadable copy inlines its icons as data (icons.js) because browsers
+// refuse CSS masks loaded from disk. Served over http this falls through to the file.
+function iconSrc(p) { return (window.ICON_DATA && window.ICON_DATA[p]) || ICONS + p; }
 function ic(name, size = 20, style = 'outline') {
   const px = size > 20 ? 24 : 20;
-  return `<span class="ic" style="--src:url('${ICONS}system/${name}/${style}-${px}.svg');width:${size}px;height:${size}px" aria-hidden="true"></span>`;
+  return `<span class="ic" style="--src:url('${iconSrc(`system/${name}/${style}-${px}.svg`)}');width:${size}px;height:${size}px" aria-hidden="true"></span>`;
 }
 // Full color product or app icon.
 function appIcon(path, size = 36) {
@@ -151,7 +154,7 @@ function store(key, val) {
 function protoNav(current) {
   const items = [['workbench', 'Workbench'], ['mosaic', 'Mosaic'], ['pinboard', 'Pinboard']];
   const nav = html(`<nav class="proto-nav" aria-label="Desktops">${items.map(([k, l]) =>
-    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="themes" id="theme-pick" role="group" aria-label="Theme"></span><span class="hint">Everything here is clickable</span></nav>`);
+    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="themes" id="theme-pick" role="group" aria-label="Theme"></span>${location.protocol === 'file:' ? '' : `<a class="dl" href="Desktop-prototypes.zip" download title="Download all three prototypes, with a README and notes for an agent">${ic('arrow-download', 16)}Download</a>`}<span class="hint">Everything here is clickable</span></nav>`);
   document.body.appendChild(nav);
   let t;
   const show = () => { nav.classList.add('show'); clearTimeout(t); t = setTimeout(() => nav.classList.remove('show'), 1800); };

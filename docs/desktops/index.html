@@ -18,13 +18,17 @@
   .txt { padding: 18px 20px 22px; }
   .txt b { display: block; font: 600 19px/1.2 var(--font); }
   .txt span { display: block; margin-top: 6px; font: 400 14px/1.45 var(--font); color: rgba(28,27,51,.62); }
+  a.dl { display: inline-block; padding: 10px 18px; border-radius: 999px; background: #1c1b33; color: #fff; text-decoration: none; font: 600 14px/1 var(--font); margin: -12px 10px 30px 0; }
+  a.dl:hover { background: #6466f1; }
+  .note { font: 400 13px/1.4 var(--font); color: rgba(28,27,51,.55); }
   footer { margin-top: 36px; font: 400 13px/1.5 var(--font); color: rgba(28,27,51,.5); }
 </style>
 </head>
 <body>
 <main>
   <h1>Desktops</h1>
-  <p class="lede">Three working prototypes of what a desktop could feel like. Each one is built from its Figma frame and everything on it responds. Press 1, 2 or 3 to jump between them.</p>
+  <p class="lede">Three working prototypes of what a desktop could feel like. Each one is built from its Figma frame and everything on it responds. Press 1, 2 or 3 to jump between them, and T to change the theme.</p>
+  <p><a class="dl" href="Desktop-prototypes.zip" download>Download all three</a> <span class="note">Always the latest version, with a README and notes for an agent like Claude to build on.</span></p>
   <div class="grid">
     <a class="card" href="workbench.html"><div class="pic" style="background-image:url(media/wp-workbench.jpg)"></div><div class="txt"><b>Workbench</b><span>The desktop as a living cell. Work happens in the nucleus, and the cells around it stretch, gather and feed it as Copilot works.</span></div></a>
     <a class="card" href="mosaic.html"><div class="pic" style="background-image:url(media/wp-mosaic.jpg)"></div><div class="txt"><b>Mosaic</b><span>A living grid that grows out from a horizon. Copilot suggests tiles, fills empty slots and builds whole rows on request.</span></div></a>

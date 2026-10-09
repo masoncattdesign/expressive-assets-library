@@ -6,7 +6,7 @@ const stage = $('#stage');
 const TOK = {
   previous: ic('previous', 22), next: ic('next', 22), play: ic('play', 34, 'filled'), alert: ic('alert', 26, 'filled'),
   music: ic('music-note-2', 24, 'filled'), add: ic('add', 24), mic: ic('mic', 20),
-  apps: ['product/word/outline-48.svg', 'product/teams/outline-48.svg', 'product/excel/outline-48.svg'].map(p => `<span class="ic" style="--src:url('${ICONS}${p}')"></span>`).join('') + ic('sticker', 28) + ic('send', 28),
+  apps: ['product/word/outline-48.svg', 'product/teams/outline-48.svg', 'product/excel/outline-48.svg'].map(p => `<span class="ic" style="--src:url('${iconSrc(p)}')"></span>`).join('') + ic('sticker', 28) + ic('send', 28),
 };
 stage.innerHTML = stage.innerHTML.replace(/__([a-z-]+)/g, (m, n) => TOK[n] || m);
 installGoo('goo', 9, 22, -9);

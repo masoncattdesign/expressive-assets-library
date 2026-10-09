@@ -65,6 +65,16 @@ async function main() {
                        '-x', '*.DS_Store'], { cwd: stage, stdio: 'pipe' });
   await rm(stage, { recursive: true, force: true });
 
+  /* The desktop prototypes ship as a download for the same reasons: packed from
+     docs/desktops at deploy, so the Download button on the prototypes always
+     hands over what is live, and git never stores a copy. */
+  const DESKTOPS = 'Desktop-prototypes';
+  const dstage = join(tmpdir(), `ea-desktops-${process.pid}`);
+  execFileSync('node', [join(ROOT, 'scripts/build-desktops-kit.mjs'), join(dstage, DESKTOPS)], { stdio: 'pipe' });
+  execFileSync('zip', ['-qr', join(OUT, 'desktops', 'Desktop-prototypes.zip'), DESKTOPS,
+                       '-x', '*.DS_Store'], { cwd: dstage, stdio: 'pipe' });
+  await rm(dstage, { recursive: true, force: true });
+
   // Stops GitHub Pages from running the content through Jekyll.
   await writeFile(join(OUT, '.nojekyll'), '', 'utf8');
 
