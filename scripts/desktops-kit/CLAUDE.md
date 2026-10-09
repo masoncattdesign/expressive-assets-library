@@ -90,6 +90,10 @@ hosted copy does.
     neon and stipple.
   - To place one, add `<span data-illus="umbrella"></span>`. The current
     theme paints it. If you insert elements later, call `paintIllus(el)`.
+- **Shapes and bots** live in `bots.js`.
+  - `SHAPES` is a Material 3-inspired shape library (cookies, clovers, bursts, pills, arches, gems, hearts). Every shape is sampled as radii around a center, so `morphPath(path, name)` can morph any shape into any other.
+  - `new Bot({ shape, color, eyes, size })` makes a plush bot: fuzzy edges from a turbulence filter, eyes that follow the pointer, and states `default`, `working` (hops) and `sleeping` (dozes after a while alone). `bot.work(ms)`, `bot.poke()`, `bot.setShape()`, `bot.setColor()`.
+  - `botsLook({ sketch, ink, paper })` switches every bot to line work for Sketch.
 - **Icons** are real Microsoft icons from the Expressive Assets library, in
   `icons/`.
   - Product and app icons are `<img>` tags.

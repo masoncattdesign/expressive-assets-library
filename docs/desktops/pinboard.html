@@ -84,6 +84,29 @@
     <div class="w sticker-il" data-id="il-guitar" data-tilt="12" style="left:676px;top:420px;width:112px;height:112px"><span data-illus="guitar"></span></div>
     <div class="w sticker-il" data-id="il-pin" data-tilt="-10" style="left:1592px;top:604px;width:92px;height:92px"><span data-illus="pushpin"></span></div>
 
+    <!-- Shape kit: Material 3-style shapes that morph into each other -->
+    <div class="w shapekit" data-id="shapekit" style="left:120px;top:700px">
+      <div class="sk-preview"><svg viewBox="-60 -60 120 120"><path id="kit-shape"/></svg><b id="kit-name">Cookie</b></div>
+      <div class="sk-right">
+        <div class="sk-grid" id="kit-grid" data-nodrag></div>
+        <button class="sk-stick" id="kit-stick">Stick it on the board</button>
+      </div>
+    </div>
+
+    <!-- Controls, Material 3-ish and then some -->
+    <div class="w m3" data-id="m3ctl" style="left:842px;top:40px">
+      <div class="m3-row"><span>Focus</span><button class="m3-switch" id="m3-switch" role="switch" aria-checked="false"><i></i></button></div>
+      <div class="m3-row"><span>Glow</span><div class="m3-slider" id="m3-slider" data-nodrag><div class="fill"></div><div class="handle"></div></div></div>
+      <div class="m3-seg" id="m3-seg"><button data-v="calm">Calm</button><button class="on" data-v="cozy">Cozy</button><button data-v="busy">Busy</button></div>
+      <div class="m3-sync"><svg viewBox="-24 -24 48 48" class="wavy"><circle r="17" class="trk"/><path id="wavy"/></svg><span><b id="sync-pct">64%</b><small id="sync-txt">Syncing photos</small></span>
+        <button class="m3-fab" id="m3-fab" title="New bot"><svg viewBox="-60 -60 120 120"><path id="fab-shape"/></svg><span>__add</span></button></div>
+    </div>
+
+    <!-- Bots live on the board -->
+    <div class="w bot-w" data-id="bot-a" style="left:596px;top:716px"></div>
+    <div class="w bot-w" data-id="bot-b" style="left:1086px;top:812px"></div>
+    <div class="w bot-w" data-id="bot-c" style="left:1262px;top:140px"></div>
+
     <!-- Memories -->
     <div class="w mem" data-id="mem" style="left:1712px;top:560px">
       <button class="face" id="face-a" style="background-image:url(media/person-adam.jpg)" title="Next memory"></button>
@@ -94,7 +117,7 @@
 
   <!-- Add to your board -->
   <div class="addbar" id="addbar">
-    <span class="cop"><img src="../assets/icons/product/copilot/standard-48.svg" alt=""></span>
+    <span class="cop" id="cop-bot" title="Your board's helper"></span>
     <form class="ask" id="ask"><span class="plus">__add</span><input id="ask-input" placeholder="Ask Copilot to decorate" autocomplete="off"><span class="mic">__mic</span></form>
     <div class="goo-wrap" id="goo-wrap">
       <div class="goo-layer" id="tray-goo"></div>
@@ -109,6 +132,7 @@
 <script src="illus-engine.js"></script>
 <script src="illus-data.js"></script>
 <script src="shared.js"></script>
+<script src="bots.js"></script>
 <script src="pinboard.js"></script>
 </body>
 </html>

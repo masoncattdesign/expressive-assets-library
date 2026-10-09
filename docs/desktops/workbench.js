@@ -454,7 +454,7 @@ function openAsk() {
   g.classList.add('open');
   const p = $('#ask-panel'); p.hidden = false;
   if (!$('#ask-log').children.length) {
-    $('#ask-log').appendChild(html(`<div class="ask-panel-head"><img src="${ICONS}${APPS.copilot}" alt="">Copilot <span class="muted" style="font-weight:400">· sees your bench, not your screen</span></div>`));
+    $('#ask-log').appendChild(html(`<div class="ask-panel-head"><span class="head-bot"></span>Copilot <span class="muted" style="font-weight:400">· sees your bench, not your screen</span></div>`));
     bubble($('#ask-log'), 'ai', `${greeting(new Date().getHours())}, Alex. Lisbon is ${Math.round((TASKS[0].progress || 1) * 100)}% written and the invite is waiting on you. What can I take off your plate?`);
   }
   $('#ask-suggest').innerHTML = '';
@@ -475,6 +475,8 @@ stage.addEventListener('pointerdown', e => {
 
 async function respond(v, log) {
   bubble(log, 'me', v);
+  // The little helper hops while Copilot works on it.
+  BENCH_BOTS.forEach(b => b.work(1300));
   const q = v.toLowerCase();
   await sleep(500);
   const say = t => bubble(log, 'ai', t);
@@ -796,7 +798,7 @@ function renderWork() {
         <div class="wk-page"><div class="wk-hero"><div class="sun"></div>${blds.map(([x, h, c]) => `<div class="bld" style="left:${x}px;height:${h}px;background:${c}"></div>`).join('')}</div>
           <div class="wk-doc" id="wk-doc"><h1>Lisbon, Oct 16 to 19</h1><p class="meta">4 days · 2 travelers · about $1,850</p>
             <div id="wk-days"><div class="skel" style="width:60%"></div><div class="skel" style="width:80%"></div><div class="skel" style="width:40%"></div></div></div></div></div>
-      <div class="wk-pill" id="wk-pill"><img src="${ICONS}${APPS.copilot}" alt=""><span>Reading your flight and hotel</span></div>
+      <div class="wk-pill" id="wk-pill"><span class="pill-bot"></span><span class="pill-t">Reading your flight and hotel</span></div>
     </div>`;
   $('#wk-back').addEventListener('click', exitWork);
   $('#wk-word').addEventListener('click', () => { exitWork().then(() => openWindow('lisbon', null, true)); });
@@ -809,10 +811,10 @@ function renderWork() {
       const d = $$('#wk-days .day')[2]; if (d) { $('span', d).textContent = v.charAt(0).toUpperCase() + v.slice(1); d.style.animation = 'none'; void d.offsetWidth; d.style.animation = ''; } }, 800);
     src.scrollTop = 1e6;
   });
-  $('#wk-pill').addEventListener('click', () => { if ($('#wk-pill').classList.contains('done')) { toast('Lisbon trip shared with Maya', APPS.word); $('#wk-pill span').textContent = 'Shared with Maya'; } });
+  $('#wk-pill').addEventListener('click', () => { if ($('#wk-pill').classList.contains('done')) { toast('Lisbon trip shared with Maya', APPS.word); $('#wk-pill .pill-t').textContent = 'Shared with Maya'; } });
 }
 async function runWork() {
-  const src = $('#wk-src'), days = $('#wk-days'), pill = $('#wk-pill span');
+  const src = $('#wk-src'), days = $('#wk-days'), pill = $('#wk-pill .pill-t');
   for (const [icon, t, meta, p, th] of SOURCES) {
     src.appendChild(html(`<div class="src"><img src="${ICONS}${icon}" alt=""><div><b>${t}</b><small>${meta}</small><p>${p}</p></div><div class="thumb-s">${srcThumb(th)}</div></div>`)); paintIllus(src);
     await sleep(450);
@@ -830,6 +832,7 @@ async function runWork() {
   days.appendChild(html('<h2>Packing list</h2>'));
   for (const item of PACK) { await sleep(320); const el = html(`<div class="pack"><i></i><span>${item}</span></div>`); el.addEventListener('click', () => el.classList.toggle('done')); days.appendChild(el); }
   $('#wk-pill').classList.add('done'); pill.textContent = 'Ready · Share with Maya';
+  BENCH_BOTS.forEach(b => { if (b.el.closest('.pill-bot')) { b.noSleep = false; b.setState('default'); b.poke(); } });
   updateTask('lisbon', { progress: null, sub: 'Copilot · finished, ready to share', chip: ['Ready', 'green'], featured: true });
 }
 
@@ -838,4 +841,25 @@ setupThemes('workbench', [
   { id: 'windows', label: 'Windows', style: 'windows' },
   { id: 'm365', label: 'M365', style: 'm365', outline: true, ink: '#484848' },
   { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#24243a', paper: '#fffdf8' },
-]);
+], t => { if (window.benchBotTheme) benchBotTheme(t); });
+
+/* ---- Bots: Copilot's little helpers ------------------------------------- */
+// A plush bot stands in for Copilot in the Ask panel and in the working view,
+// hopping while it works and dozing between tasks.
+var BENCH_BOTS = [];
+const BENCH_BOT_C = { windows: '#a9b8ff', m365: '#2F95F4', sketch: '#fffdf8' };
+function benchBot(host, opts) {
+  if (!host || host.querySelector('.bot')) return;
+  const b = new Bot({ shape: 'cookie9', eyes: 'dot', cheeks: false, color: BENCH_BOT_C[THEME.id] || '#a9b8ff', ...opts });
+  host.appendChild(b.el); BENCH_BOTS.push(b); return b;
+}
+var benchBotTheme = function (t) {
+  botsLook({ sketch: t.id === 'sketch', ink: t.ink || '#24243a', paper: t.paper || '#fffdf8' });
+  BENCH_BOTS.forEach(b => b.setColor(BENCH_BOT_C[t.id] || '#a9b8ff'));
+};
+// Mount them as their hosts appear.
+new MutationObserver(() => {
+  $$('.head-bot').forEach(h => benchBot(h, { size: 34 }));
+  $$('.pill-bot').forEach(h => { const b = benchBot(h, { size: 30, color: '#ffffff' }); if (b) { b.noSleep = true; b.setState('working'); } });
+}).observe(stage, { childList: true, subtree: true });
+benchBotTheme(THEME);

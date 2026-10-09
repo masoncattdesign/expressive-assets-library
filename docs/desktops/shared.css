@@ -99,3 +99,30 @@ input { font: inherit; color: inherit; border: 0; background: none; outline: non
 .theme-sketch .ic { background: currentColor; }
 .theme-sketch img:not(.sk-ic) { filter: grayscale(1) contrast(1.15); }
 .sk-ic { filter: none !important; }
+
+/* ==== Bots ================================================================ */
+.bot { display: inline-block; position: relative; }
+.bot svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.bot .shadow { fill: rgba(30, 20, 50, .16); transform-origin: 0 58px; }
+.bot .hop, .bot .squash { transform-box: fill-box; }
+.bot .squash { transform-origin: 50% 100%; animation: bot-breathe 4s ease-in-out infinite; }
+@keyframes bot-breathe { 50% { transform: scale(1.025, .975); } }
+.bot .face { transition: transform .25s ease-out; }
+.bot .eyes { transform-box: fill-box; transform-origin: center; }
+.bot .eye ellipse { fill: var(--bot-ink); }
+.bot .eye .glint { fill: #fff; }
+.bot .eye .line, .bot .mouth { fill: none; stroke: var(--bot-ink); stroke-width: 3; stroke-linecap: round; }
+.bot .cheek { fill: var(--bot-cheek); opacity: .7; }
+.bot .zzz { opacity: 0; fill: var(--bot-ink); font: 700 14px/1 var(--font); }
+.bot[data-state="sleeping"] .zzz { animation: zzz 2.4s ease-in-out infinite; }
+.bot[data-state="sleeping"] .zzz text:nth-child(2) { font-size: 10px; }
+@keyframes zzz { 0% { opacity: 0; transform: translateY(6px); } 40% { opacity: .9; } 100% { opacity: 0; transform: translateY(-10px); } }
+.bot[data-state="sleeping"] .squash { animation: bot-sleep 3.2s ease-in-out infinite; }
+@keyframes bot-sleep { 50% { transform: scale(1.04, .95); } }
+.bot[data-state="working"] .hop { animation: bot-hop .52s cubic-bezier(.3, .0, .5, 1) infinite; }
+.bot[data-state="working"] .squash { animation: bot-squash .52s ease-in-out infinite; }
+.bot[data-state="working"] .shadow { animation: bot-shadow .52s ease-in-out infinite; }
+@keyframes bot-hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+@keyframes bot-squash { 0%, 100% { transform: scale(1.08, .92); } 30%, 70% { transform: scale(.96, 1.05); } }
+@keyframes bot-shadow { 50% { transform: scale(.7); opacity: .5; } }
+.bot-bubble { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -4px); white-space: nowrap; padding: 7px 12px; border-radius: 14px 14px 14px 4px; background: #fff; color: #2a1d33; font: 600 13px/1 var(--font); box-shadow: 0 6px 16px rgba(30,20,50,.18); animation: pop-in .35s var(--spring); pointer-events: none; }

@@ -117,12 +117,16 @@ $$('.w').forEach(makeSticky);
 
 /* ---- The gooey + : stickers pour out of it ----------------------------- */
 const TRAY = [
-  { k: 'note', e: '📝', l: 'Sticky note', at: [-160, -96] },
-  { k: 'photo', e: '🖼️', l: 'Photo', at: [-84, -166] },
-  { k: 'flower', e: '🎸', l: 'Sticker', at: [0, -196] },
-  { k: 'count', e: '⏳', l: 'Countdown', at: [84, -166] },
-  { k: 'ask', e: '✨', l: 'Ask Copilot', at: [160, -96] },
+  { k: 'note', e: '📝', l: 'Sticky note' },
+  { k: 'photo', e: '🖼️', l: 'Photo' },
+  { k: 'flower', e: '🎸', l: 'Sticker' },
+  { k: 'bot', e: '🫧', l: 'Bot' },
+  { k: 'shape', e: '🍪', l: 'Shape' },
+  { k: 'count', e: '⏳', l: 'Countdown' },
+  { k: 'ask', e: '✨', l: 'Ask Copilot' },
 ];
+// Fan the tray out on an arc above the + button.
+TRAY.forEach((t, i) => { const a = Math.PI * (1.08 + .84 * i / (TRAY.length - 1)); t.at = [Math.round(Math.cos(a) * 190), Math.round(Math.sin(a) * 190)]; });
 const gooEl = $('#tray-goo'), iconsEl = $('#tray-icons');
 gooEl.innerHTML = '<div class="b base"></div>' + TRAY.map(() => '<div class="b"></div>').join('');
 iconsEl.innerHTML = TRAY.map(t => `<button type="button" data-k="${t.k}" title="${t.l}">${t.e}<span class="lbl">${t.l}</span></button>`).join('');
@@ -150,11 +154,16 @@ let stickN = 0;
 function addSticker(kind, text) {
   const id = `s${Date.now()}`;
   const tilt = (Math.random() * 10 - 5).toFixed(1);
-  const x = 820 + Math.random() * 300, y = 120 + Math.random() * 260;
+  // Bots and shapes land in open spots on the board rather than on a card.
+  const OPEN = [[560, 880], [770, 690], [1420, 850], [300, 360], [1170, 250], [690, 300], [1600, 260]];
+  const spot = (kind === 'bot' || kind === 'shape') ? OPEN[stickN % OPEN.length] : null;
+  const x = spot ? spot[0] + Math.random() * 30 : 820 + Math.random() * 300, y = spot ? spot[1] + Math.random() * 20 : 120 + Math.random() * 260;
   let inner = '', cls = '';
   if (kind === 'note') { cls = 'note'; inner = text || 'Call the vet about Pepper'; }
   if (kind === 'photo') { cls = 'polaroid'; const p = ['media/photo-bigsur.jpg', 'media/photo-room.jpg', 'media/photo-living.jpg'][stickN++ % 3]; inner = `<div style="background-image:url(${p})"></div><span>${text || 'last summer'}</span>`; }
   if (kind === 'flower') { cls = 'sticker-il'; inner = `<span data-illus="${STICKERS[stickN++ % STICKERS.length]}"></span>`; }
+  if (kind === 'bot') { cls = 'bot-w'; }
+  if (kind === 'shape') { cls = 'shape-st'; const n = text || SHAPE_NAMES[stickN++ % SHAPE_NAMES.length]; inner = `<svg viewBox="-60 -60 120 120"><path d="${shapePath(SHAPES[n], 54)}"/></svg>`; }
   if (kind === 'count') { cls = 'count'; inner = `<div><span><b>9</b><small>days to Lisbon</small></span></div>`; }
   const w = html(`<div class="w ${cls} new" data-id="${id}" data-tilt="${tilt}" style="left:${x}px;top:${y}px;z-index:${++zTop}${kind === 'flower' ? ';width:130px;height:130px' : ''}">${inner}</div>`);
   if (kind === 'flower') paintIllus(w);
@@ -165,6 +174,8 @@ function addSticker(kind, text) {
   }
   $('#board').appendChild(w); makeSticky(w);
   if (kind === 'count') w.style.setProperty('--pct', '72%');
+  if (kind === 'bot') mountBot(w, BOT_KINDS[stickN++ % BOT_KINDS.length]);
+  if (kind === 'shape') w.style.setProperty('--shape-c', themeColors()[stickN % themeColors().length]);
   return w;
 }
 
@@ -181,6 +192,8 @@ function clearDecor() { $$('.leaf, .star').forEach(x => x.remove()); }
 function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night', 'pal-m365', 'pal-riso', 'pal-sketch'); stage.classList.add('pal-' + p); }
 function decorate(v) {
   const q = v.toLowerCase();
+  // The helper bot gets to work, and the bots on the board join in.
+  if (window.copBot) { copBot.work(2000); BOARD_BOTS.forEach((b, i) => setTimeout(() => b.work(1400), 200 + i * 160)); }
   $('#chips').hidden = true; $('#ask-input').value = ''; $('#ask-input').blur();
   if (/fall|autumn|cozy|warm|halloween/.test(q)) {
     palette('fall'); clearDecor();
@@ -209,7 +222,7 @@ const STICKERS = ['crown', 'headphone', 'camera', 'telescope', 'crayon', 'candle
 const TEXS = { music: 'stripes', batt: 'stripes', vol: 'dots', check: 'dots', cal: 'grid', mem: 'grid', weather: 'dots', digits: 'stripes', clock: 'none' };
 function texify() {
   $$('.board > .w').forEach(w => {
-    if (w.classList.contains('sticker-il') || w.dataset.id === 'clock' || $(':scope > .tex', w)) return;
+    if (w.classList.contains('sticker-il') || w.classList.contains('bot-w') || w.classList.contains('shape-st') || w.dataset.id === 'clock' || $(':scope > .tex', w)) return;
     const kind = TEXS[w.dataset.id] || 'dots';
     if (w.dataset.id === 'digits') { $$('.pebble', w).forEach(p => { if (!$('.tex', p)) p.appendChild(html('<i class="tex stripes"></i>')); }); return; }
     w.appendChild(html(`<i class="tex ${kind}"></i>`));
@@ -226,4 +239,122 @@ setupThemes('pinboard', [
   stage.classList.toggle('tex-stipple', t.tex === 'stipple');
   stage.classList.toggle('tex-pattern', t.tex === 'pattern');
   texify();
+  if (window.applyBotTheme) applyBotTheme(t);
 });
+
+/* ---- Bots on the board -------------------------------------------------- */
+// Plush little helpers. They watch the pointer, hop when Copilot is working,
+// and doze off if you leave them alone. Tap one to say hi, drag it anywhere.
+var BOARD_BOTS = [];
+const BOT_KINDS = [
+  { shape: 'cookie6', eyes: 'round' }, { shape: 'clover4', eyes: 'dot' }, { shape: 'pill', eyes: 'round' },
+  { shape: 'sunny', eyes: 'dot' }, { shape: 'arch', eyes: 'round' }, { shape: 'gem', eyes: 'dot' }, { shape: 'puffy', eyes: 'round' },
+];
+const BOT_SAYS = ['Hi!', 'Need a hand?', 'I tidied your stickers', '9 days to Lisbon!', 'Run at 6, right?', 'Nice board :)'];
+const PALETTES = {
+  windows: ['#f4a3c1', '#9fd49a', '#a9b8ff', '#ffc97a', '#c9a7f0', '#7fd6d0'],
+  m365: ['#2F95F4', '#8661C5', '#FB966E', '#9fc8f5', '#c3a8ec'],
+  stipple: ['#FFD23D', '#E8357A', '#2A3BD9', '#12855A', '#FF8FB8'],
+  texture: ['#f4a3c1', '#9fd49a', '#a9b8ff', '#ffc97a', '#c9a7f0'],
+  sketch: ['#fffdf8'],
+};
+function themeColors() { return PALETTES[(THEME && THEME.id) || 'windows'] || PALETTES.windows; }
+let saysN = 0;
+function mountBot(w, kind, size = 112) {
+  const i = BOARD_BOTS.length;
+  const b = new Bot({ ...kind, color: themeColors()[i % themeColors().length], size });
+  w.appendChild(b.el); w.style.width = size + 'px'; w.style.height = size + 'px';
+  b.doze = 18000 + Math.random() * 14000;
+  w.addEventListener('click', () => {
+    b.poke();
+    $('.bot-bubble', w)?.remove();
+    const bub = html(`<span class="bot-bubble">${BOT_SAYS[saysN++ % BOT_SAYS.length]}</span>`);
+    w.appendChild(bub); setTimeout(() => bub.remove(), 1800);
+  });
+  w.addEventListener('dblclick', () => b.setState(b.state === 'sleeping' ? 'default' : 'sleeping'));
+  BOARD_BOTS.push(b);
+  return b;
+}
+$$('.bot-w').forEach((w, i) => mountBot(w, BOT_KINDS[i], [118, 96, 104][i]));
+// The helper in the Copilot bar is a bot too.
+var copBot = new Bot({ shape: 'cookie9', color: '#a9b8ff', size: 52, cheeks: false, eyes: 'dot' });
+copBot.doze = 40000; $('#cop-bot').appendChild(copBot.el);
+
+/* ---- Shape kit ---------------------------------------------------------- */
+const KIT = ['cookie6', 'clover4', 'sunny', 'burst', 'pill', 'arch', 'gem', 'heart', 'flower', 'pentagon', 'cookie12', 'triangle'];
+const KIT_NAME = { cookie6: 'Cookie', clover4: 'Clover', sunny: 'Sunny', burst: 'Burst', pill: 'Pill', arch: 'Arch', gem: 'Gem', heart: 'Heart', flower: 'Flower', pentagon: 'Pentagon', cookie12: 'Soft burst', triangle: 'Triangle' };
+let kitShape = 'cookie6';
+const kitPath = $('#kit-shape');
+kitPath.setAttribute('d', shapePath(SHAPES[kitShape], 50)); kitPath._r = SHAPES[kitShape];
+$('#kit-grid').innerHTML = KIT.map((n, i) => `<button data-s="${n}" title="${KIT_NAME[n]}" style="--i:${i}"><svg viewBox="-60 -60 120 120"><path d="${shapePath(SHAPES[n], 50)}"/></svg></button>`).join('');
+$('#kit-grid').addEventListener('click', e => {
+  const b = e.target.closest('[data-s]'); if (!b) return;
+  kitShape = b.dataset.s; morphPath(kitPath, kitShape, { size: 50 });
+  $('#kit-name').textContent = KIT_NAME[kitShape];
+  $$('#kit-grid button').forEach(x => x.classList.toggle('on', x === b));
+});
+$('#kit-grid button').classList.add('on');
+$('#kit-stick').addEventListener('click', () => { addSticker('shape', kitShape); });
+
+/* ---- Controls ----------------------------------------------------------- */
+$('#m3-switch').addEventListener('click', e => {
+  const on = e.currentTarget.getAttribute('aria-checked') !== 'true';
+  e.currentTarget.setAttribute('aria-checked', on);
+  BOARD_BOTS.forEach(b => on ? b.setState('sleeping') : b.setState('default'));
+  toast(on ? 'Focus on. The bots are napping.' : 'Focus off. Everyone is awake.');
+});
+const slider = $('#m3-slider');
+function setGlow(v) {
+  slider.style.setProperty('--v', v);
+  $('#board').style.filter = `saturate(${.5 + v}) brightness(${.92 + v * .14})`;
+}
+slider.addEventListener('pointerdown', e => {
+  e.stopPropagation();
+  const r = slider.getBoundingClientRect();
+  const mv = ev => setGlow(Math.max(0, Math.min(1, (ev.clientX - r.left) / r.width)));
+  mv(e); addEventListener('pointermove', mv); addEventListener('pointerup', () => removeEventListener('pointermove', mv), { once: true });
+});
+setGlow(.5);
+const TILTS = { calm: 0, cozy: 1, busy: 2.6 };
+$$('#m3-seg button').forEach(b => b.addEventListener('click', () => {
+  $$('#m3-seg button').forEach(x => x.classList.toggle('on', x === b));
+  const k = TILTS[b.dataset.v];
+  $$('.board > .w').forEach(w => {
+    const base = parseFloat(w.dataset.tilt || (Math.random() * 6 - 3).toFixed(1));
+    w.dataset.tilt = w.dataset.tilt || base;
+    w.style.setProperty('--tilt', (base * k) + 'deg');
+    if (!w.classList.contains('sticker-il') && !w.classList.contains('note') && !w.classList.contains('polaroid')) w.style.rotate = (base * k * .6) + 'deg';
+  });
+}));
+// Wavy progress: an expressive loading indicator that wobbles as it fills.
+let syncP = .64, wphase = 0;
+function drawWavy() {
+  wphase += .08; let d = '';
+  const end = syncP * TAU;
+  for (let a = 0; a <= end; a += .05) { const r = 17 + Math.sin(a * 9 + wphase) * 1.6; d += (a ? 'L' : 'M') + (Math.cos(a - Math.PI / 2) * r).toFixed(2) + ' ' + (Math.sin(a - Math.PI / 2) * r).toFixed(2); }
+  $('#wavy').setAttribute('d', d);
+  requestAnimationFrame(drawWavy);
+}
+drawWavy();
+setInterval(() => {
+  syncP = syncP >= 1 ? .05 : Math.min(1, syncP + .03);
+  $('#sync-pct').textContent = Math.round(syncP * 100) + '%';
+  $('#sync-txt').textContent = syncP >= 1 ? 'Photos synced' : 'Syncing photos';
+}, 900);
+// The FAB morphs to a new shape on every press, and a bot hops out.
+let fabI = 0;
+const fab = $('#fab-shape'); fab.setAttribute('d', shapePath(SHAPES.cookie9, 50)); fab._r = SHAPES.cookie9;
+$('#m3-fab').addEventListener('click', e => {
+  e.stopPropagation();
+  fabI = (fabI + 1) % KIT.length; morphPath(fab, KIT[fabI], { size: 50 });
+  addSticker('bot');
+});
+
+var applyBotTheme = function (t) {
+  botsLook({ sketch: t.id === 'sketch', ink: t.ink || '#2b2440', paper: t.paper || '#fffdf8' });
+  const pal = themeColors();
+  BOARD_BOTS.forEach((b, i) => b.setColor(pal[i % pal.length]));
+  copBot.setColor(pal[(pal.length > 2 ? 2 : 0)]);
+  $$('.shape-st').forEach((w, i) => w.style.setProperty('--shape-c', pal[i % pal.length]));
+};
+applyBotTheme(THEME);

@@ -676,3 +676,6 @@
 .theme-m365 .task:nth-child(3n+1) .t-ic { background: #DCEBFF; } .theme-m365 .task:nth-child(3n+2) .t-ic { background: #E4D6FF; } .theme-m365 .task:nth-child(3n) .t-ic { background: #FFE3D8; }
 .theme-m365 #tb-copilot { background: #fff; }
 .theme-m365 .tile.app[title="File Explorer"] { background: #FFF1D6; }
+.head-bot { width: 34px; height: 34px; display: inline-block; margin: -6px 2px -6px -4px; }
+.pill-bot { width: 30px; height: 30px; display: inline-block; margin: -10px 0 -6px -4px; }
+.wk-pill.done .pill-bot .bot { filter: none; }
