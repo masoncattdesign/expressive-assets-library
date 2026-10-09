@@ -48,7 +48,7 @@
   background: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b, #22d3ee);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
-  background-size: 300% 300%; animation: hue 4s linear infinite;
+  opacity: .35;
 }
 @keyframes hue { to { background-position: 300% 0; } }
 .tile .ai-badge { position: absolute; right: -6px; top: -6px; width: 34px; height: 34px; border-radius: 50%; background: #1c1b26; display: grid; place-items: center; box-shadow: 0 0 0 2px rgba(255,255,255,.12); }
@@ -175,7 +175,7 @@
   font: 400 15px/1 var(--font); white-space: nowrap; z-index: 60;
   animation: banner-in .6s var(--spring);
 }
-.banner::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b, #22d3ee); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.banner::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b, #22d3ee); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; opacity: .3; }
 @keyframes banner-in { from { opacity: 0; transform: translate(-50%, -30px) scale(.9); } }
 .banner img { width: 26px; height: 26px; }
 .ghost { height: 36px; padding: 0 16px; border-radius: 18px; background: rgba(255,255,255,.1); color: #fff; font: 600 13px/1 var(--font); }
@@ -211,7 +211,7 @@
   box-shadow: 0 0 40px rgba(139, 92, 246, .35);
 }
 @keyframes banner-in2 { from { opacity: 0; transform: translateY(30px) scale(.94); } }
-.build::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b, #22d3ee, #8b5cf6); background-size: 200% 100%; -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; animation: hue 3s linear infinite; }
+.build::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; background: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b, #22d3ee, #8b5cf6); background-size: 200% 100%; -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; opacity: .3; }
 .build-ic { width: 52px; height: 52px; border-radius: 16px; background: rgba(255,255,255,.08); display: grid; place-items: center; }
 .build-ic img { width: 32px; height: 32px; }
 .working .build-ic img { animation: spin 2.4s linear infinite; }
@@ -256,17 +256,6 @@
 
 /* ==== Themes ============================================================== */
 .tint { mix-blend-mode: color; }
-/* M365: the swirl takes the M365 blue, purple and orange; accents follow */
-#stage.theme-m365 { --lime: #FB966E; }
-.theme-m365 .tint { opacity: .6; background: linear-gradient(120deg, #2F95F4 10%, #8661C5 50%, #FB966E 90%); }
-.theme-m365 .t-cal { background: #E4D6FF; color: #24124a; }
-.theme-m365 .t-cal .eyebrow { color: #8661C5; }
-.theme-m365 .t-meet { background: linear-gradient(160deg, #C6E1FF, #E4D6FF 60%, #FFD9C9); color: #242424; }
-.theme-m365 .t-focus { background: linear-gradient(160deg, #2F95F4, #8661C5); }
-.theme-m365 .t-music { background: linear-gradient(120deg, #1d2b48, #2a2350); }
-.theme-m365 .t-lamp .shade, .theme-m365 .t-lamp .stem, .theme-m365 .t-lamp .base, .theme-m365 .t-lamp .sw button.on { background: #FB966E; }
-.theme-m365 .t-new { background: linear-gradient(160deg, #C6E1FF, #E4D6FF); }
-.theme-m365 .tile { box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 0 0 1px rgba(198, 225, 255, .14); }
 /* Neon: everything glows */
 #stage.theme-neon { --lime: #3DF5FF; }
 .theme-neon .tint { opacity: .55; background: linear-gradient(120deg, #00E5FF, #7A3DFF 50%, #FF3DB8); }
@@ -333,8 +322,15 @@
 .theme-sketch .build { box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
 .theme-sketch .dock button[style] { color: var(--sk-ink) !important; }
 .theme-sketch .toast { background: var(--sk-ink); color: #1d1d24; }
-.theme-m365 .dock img.sk-ic { width: 32px !important; height: 32px !important; }
-.theme-m365 .dock button { background: rgba(245,245,245,.9); margin: 0 1px; }
-.theme-m365 .t-apps .pad button { background: #F5F5F5; }
-.theme-m365 .ai-badge, .theme-m365 .banner img, .theme-m365 .build-ic { background: #F5F5F5; }
-.theme-m365 .shaped img, .theme-m365 .t-sugg .src img, .theme-m365 .popover h5 img, .theme-m365 .toast img { background: #F5F5F5; border-radius: 8px; padding: 3px; }
+
+/* ==== Beam on everything Copilot touches ================================= */
+.build-chips button, .popover .opt, .dock .cop { position: relative; }
+.build.focus { box-shadow: 0 0 60px rgba(139, 92, 246, .5); }
+.build.focus::before { opacity: .55; }
+.tile.just-built { animation: just-built .9s ease; }
+@keyframes just-built { 30% { filter: brightness(1.35); } }
+.theme-neon { --beam-1: #3DF5FF; --beam-2: #7A3DFF; --beam-3: #FF3DB8; --beam-4: #3DF5FF; }
+.theme-sketch { --beam-1: var(--sk-ink); --beam-2: var(--sk-ink); --beam-3: var(--sk-ink); --beam-4: var(--sk-ink); --beam-tip: var(--sk-ink); }
+.theme-sketch .beam .bloom { display: none; }
+.theme-sketch .beam .ring { background: conic-gradient(from var(--beam-a, 0deg), transparent 0deg 250deg, var(--sk-ink) 300deg 358deg, transparent 360deg); }
+.theme-sketch .tile.suggested::before, .theme-sketch .banner::before, .theme-sketch .build::before { opacity: 1; }

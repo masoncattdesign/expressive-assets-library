@@ -60,6 +60,12 @@ function makeTile(t) {
   t.el = el;
   grid.appendChild(el);
   bindDrag(t);
+  // Copilot's work wears a beam: riding while it waits for you or builds,
+  // and on hover once it is yours.
+  const cls = t.cls || '';
+  if (cls.includes('suggested')) beam(el, { on: true, speed: 90 });
+  else if (cls.includes('building')) beam(el, { on: true, speed: 480 });
+  else if (/^(o-|b-)/.test(t.id)) beam(el, { hover: true });
   return el;
 }
 // A Windows illustration on a tile, restyled by the current theme.
@@ -73,6 +79,7 @@ function renderSlots() {
     const s = html(`<button class="slot" data-c="${c}" data-r="${r}" title="Add a tile">${ic('add', 22)}</button>`);
     Object.assign(s.style, { left: cx(c) + 'px', top: cy(r) + 'px' });
     s.addEventListener('click', e => { e.stopPropagation(); slotPopover(c, r, s); });
+    beam(s, { hover: true, width: 1.5 });
     grid.prepend(s);
   }
 }
@@ -179,7 +186,8 @@ grid.addEventListener('click', e => {
   const b = e.target.closest('[data-s]'); if (!b) return;
   const el = b.closest('.tile'); const t = tiles.find(x => x.el === el); const s = SUGG.find(x => x.id === t.id);
   if (b.dataset.s === 'add') {
-    el.className = `tile ${s.realCls} grow`; el.innerHTML = s.real; if (s.il) addIl(el, s.il); toast(`${s.id === 'pack' ? 'Tokyo packing' : 'Check-in'} added`);
+    el.className = `tile ${s.realCls} grow`; el.innerHTML = s.real; if (s.il) addIl(el, s.il);
+    beam(el, { hover: true }); beamLap(el); toast(`${s.id === 'pack' ? 'Tokyo packing' : 'Check-in'} added`);
   } else { el.classList.add('leave'); setTimeout(() => { el.remove(); tiles = tiles.filter(x => x !== t); renderSlots(); }, 420); }
 });
 function suggest() {
@@ -193,6 +201,7 @@ function suggest() {
 function banner(text, undoLabel = 'Undo', onUndo) {
   const b = $('#banner'); $('#banner-text').textContent = text; $('#banner-undo').textContent = undoLabel;
   b.hidden = false; b.style.animation = 'none'; void b.offsetWidth; b.style.animation = '';
+  beamBoost(b, 720, 900);
   $('#banner-undo').onclick = () => { b.hidden = true; onUndo && onUndo(); };
 }
 setTimeout(() => {
@@ -223,16 +232,19 @@ function slotPopover(c, r, slotEl) {
   const left = Math.min(cx(c), 1920 - 350), top = r >= 3 ? cy(r) - 330 : cy(r) + CELL + 10;
   Object.assign(p.style, { left: left + 'px', top: top + 'px' });
   p.hidden = false; paintIllus(p);
+  beam(p, { on: true, speed: 150 }); beamBoost(p, 700, 500);
+  $$('.opt', p).forEach(o => beam(o, { hover: true, width: 1.5 }));
+  beamOn(slotEl, 220, true);
   $$('.opt[data-i]', p).forEach(b => b.addEventListener('click', () => {
     const o = opts[+b.dataset.i]; closePopover();
     const t = { id: 'o-' + o.t, c, r, w: o.w, html: o.html, cls: '', il: o.il };
     for (let i = 0; i < t.w; i++) slotCells.add(`${c + i},${r}`);
-    tiles.push(t); makeTile(t).classList.add('grow'); renderSlots();
+    const el = makeTile(t); tiles.push(t); el.classList.add('grow'); beamLap(el); renderSlots();
     toast(`${o.t} grew into place`);
   }));
   $('[data-ask]', p).addEventListener('click', () => { closePopover(); openBuild(); });
 }
-function closePopover() { $('#popover').hidden = true; $$('.slot.picked').forEach(s => s.classList.remove('picked')); }
+function closePopover() { $('#popover').hidden = true; $$('.slot.picked').forEach(s => { s.classList.remove('picked'); beamOff(s); }); }
 $('#stage').addEventListener('click', e => { if (!e.target.closest('.popover, .slot')) closePopover(); });
 
 /* ---- Ask and it builds (Rev 3) ----------------------------------------- */
@@ -258,10 +270,11 @@ function openBuild() {
   $('#build-stop').textContent = 'Close';
   const chips = $('#build-chips'); chips.hidden = false;
   chips.innerHTML = ['Help me get ready for Tokyo', "Plan Lily's birthday party"].map((t, i) => `<button type="button" style="animation-delay:${i * 60}ms">${t}</button>`).join('');
-  $$('button', chips).forEach(b => b.addEventListener('click', () => { $('#build-input').value = b.textContent; runBuild(b.textContent); }));
+  $$('button', chips).forEach(b => { beam(b, { hover: true, width: 1.5 }); b.addEventListener('click', () => { $('#build-input').value = b.textContent; runBuild(b.textContent); }); });
+  beamOn($('#dock-cop'), 160, true); beamBoost(f, 800, 700);
   $('#build-input').focus();
 }
-function closeBuild() { $('#build').hidden = true; $('#build-chips').hidden = true; $('#stage').classList.remove('recede'); }
+function closeBuild() { $('#build').hidden = true; $('#build-chips').hidden = true; $('#stage').classList.remove('recede'); beamOff($('#dock-cop')); }
 $('#build').addEventListener('submit', e => { e.preventDefault(); const v = $('#build-input').value.trim(); if (v) runBuild(v); });
 $('#build-stop').addEventListener('click', () => {
   const lbl = $('#build-stop').textContent;
@@ -270,12 +283,24 @@ $('#build-stop').addEventListener('click', () => {
 });
 $('#shaped').addEventListener('click', openBuild);
 
+/* The build bar's beam answers you: it rides steady, picks up when you focus,
+   surges with each keystroke and races while Copilot builds. */
+(() => {
+  const f = $('#build'), inp = $('#build-input');
+  beam(f, { on: true, speed: 140, width: 2 });
+  inp.addEventListener('focus', () => { f.classList.add('focus'); if (!f.classList.contains('working')) beamSpeed(f, 220); });
+  inp.addEventListener('blur', () => { f.classList.remove('focus'); if (!f.classList.contains('working')) beamSpeed(f, 140); });
+  inp.addEventListener('input', () => beamBoost(f, 760, 260));
+  beam($('#banner'), { on: true, speed: 110 });
+  beam($('#shaped'), { hover: true });
+})();
+
 async function runBuild(prompt) {
   $('#build-chips').hidden = true;
   const key = Object.keys(BUILDS).find(k => BUILDS[k].match.test(prompt.toLowerCase())) || 'party';
   const plan = BUILDS[key];
   undoBuild(true);
-  const f = $('#build'); f.classList.add('working');
+  const f = $('#build'); f.classList.add('working'); beamSpeed(f, 560);
   $('#build-stop').textContent = 'Stop';
   $('#stage').classList.add('recede');
   // A new row above the horizon: start where the empty slots are.
@@ -293,10 +318,11 @@ async function runBuild(prompt) {
     el.innerHTML = spec.html; el.classList.remove('building');
     if (spec.il) addIl(el, spec.il);
     el.animate([{ filter: 'brightness(1.6)' }, { filter: 'none' }], { duration: 500 });
+    beam(el, { hover: true }); beamLap(el, 520); beamBoost(f, 900, 250);
     c += spec.w;
     await sleep(250);
   }
-  f.classList.remove('working');
+  f.classList.remove('working'); beamSpeed(f, f.classList.contains('focus') ? 220 : 140);
   $('#stage').classList.remove('recede');
   $('#build-status').textContent = `Built ${n} tiles above your horizon. They update on their own.`;
   $('#build-input').value = '';
@@ -315,6 +341,7 @@ const DOCK = [['File Explorer', 'app/file-explorer/standard-48.svg', '#f5b400', 
 $('#dock').innerHTML = `<button class="cop" id="dock-cop" title="Copilot"><img src="${COP}" alt=""></button><span class="sep"></span>` + DOCK.map(([n, p, col, full]) =>
   full ? `<button title="${n}" data-app="${n}"><img src="${ICONS}${p}" alt="" style="width:34px;height:34px"></button>`
        : `<button title="${n}" data-app="${n}" style="color:${col}"><span class="ic" style="--src:url('${iconSrc(p)}')"></span></button>`).join('');
+beam($('#dock-cop'), { hover: true });
 $('#dock-cop').addEventListener('click', () => $('#build').hidden ? openBuild() : closeBuild());
 $$('#dock [data-app]').forEach(b => b.addEventListener('click', () => toast(`Opening ${b.dataset.app}`)));
 addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); closeBuild(); } });
@@ -322,7 +349,6 @@ addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); clo
 /* ---- Themes ------------------------------------------------------------ */
 setupThemes('mosaic', [
   { id: 'windows', label: 'Windows', style: 'windows' },
-  { id: 'm365', label: 'M365', style: 'm365', outline: true, ink: '#484848' },
   { id: 'neon', label: 'Neon', style: 'neon' },
   { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#f1ede2', paper: '#1d1d24' },
 ]);

@@ -16,8 +16,8 @@ Drag any tile into an open slot.
 Pinboard: drag any widget or sticker around, press the + in the bottom bar,
 and ask Copilot to "make it cozy for fall" or "calm night mode".
 
-Themes: every desktop has Windows (as designed) and M365. Mosaic adds Neon,
-Pinboard adds Stipple and Texture. The illustrations are real pieces from the
+Themes: every desktop has Windows (as designed) and Sketch. Workbench and
+Pinboard add M365, Mosaic adds Neon, Pinboard adds Stipple and Texture. The illustrations are real pieces from the
 Windows illustration library, restyled per theme.
 
 These are explorations, not product. All content is made up.

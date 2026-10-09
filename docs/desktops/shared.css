@@ -126,3 +126,17 @@ input { font: inherit; color: inherit; border: 0; background: none; outline: non
 @keyframes bot-squash { 0%, 100% { transform: scale(1.08, .92); } 30%, 70% { transform: scale(.96, 1.05); } }
 @keyframes bot-shadow { 50% { transform: scale(.7); opacity: .5; } }
 .bot-bubble { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -4px); white-space: nowrap; padding: 7px 12px; border-radius: 14px 14px 14px 4px; background: #fff; color: #2a1d33; font: 600 13px/1 var(--font); box-shadow: 0 6px 16px rgba(30,20,50,.18); animation: pop-in .35s var(--spring); pointer-events: none; }
+
+/* ==== Beam: a glow that rides the border (see beam.js) ==================== */
+.beam { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 3; opacity: 0; transition: opacity .4s ease; --beam-w: 2px; }
+.beam.on { opacity: 1; }
+.beam .ring {
+  position: absolute; inset: 0; border-radius: inherit; padding: var(--beam-w);
+  background: conic-gradient(from var(--beam-a, 0deg), transparent 0deg 190deg,
+    var(--beam-1, #22d3ee) 245deg, var(--beam-2, #8b5cf6) 285deg, var(--beam-3, #ec4899) 318deg,
+    var(--beam-4, #f59e0b) 345deg, var(--beam-tip, #fff) 357deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.beam .bloom { position: absolute; inset: 0; border-radius: inherit; filter: blur(8px); opacity: .9; }
+.beam .bloom .ring { padding: calc(var(--beam-w) + 4px); }
