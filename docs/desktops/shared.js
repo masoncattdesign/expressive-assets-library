@@ -176,7 +176,83 @@ let THEME = null;
 function illusSVG(name, style) {
   const src = window.ILLUS && ILLUS[name];
   if (!src || typeof styled !== 'function') return '';
-  return styled(src, style || (THEME && THEME.style) || 'windows');
+  const st = style || (THEME && THEME.style) || 'windows';
+  if (st === 'sketch') return sketchSVG(src, THEME.ink, THEME.paper);
+  return styled(src, st);
+}
+
+/* ---- Sketch ------------------------------------------------------------ */
+// The Sketch theme redraws everything as line work. Illustrations lose their
+// fills and gradients and keep only their outlines, in one ink color, with
+// shapes filled in paper so overlapping parts read like a pen drawing.
+function sketchSVG(src, ink = '#24243a', paper = '#fffdf8') {
+  const doc = new DOMParser().parseFromString(src, 'image/svg+xml');
+  const svg = doc.documentElement;
+  svg.querySelectorAll('[filter]').forEach(e => e.removeAttribute('filter'));
+  svg.querySelectorAll('defs').forEach(d => d.remove());
+  svg.querySelectorAll('path,rect,circle,ellipse,polygon,line,polyline').forEach(e => {
+    const f = (e.getAttribute('fill') || '').toLowerCase();
+    const white = f === 'white' || f === '#fff' || f === '#ffffff';
+    e.setAttribute('fill', white ? ink : paper);
+    e.setAttribute('fill-opacity', white ? '.0' : '1');
+    e.setAttribute('stroke', ink); e.setAttribute('stroke-width', '1.6');
+    e.setAttribute('stroke-linejoin', 'round'); e.setAttribute('stroke-linecap', 'round');
+    e.setAttribute('vector-effect', 'non-scaling-stroke');
+    e.removeAttribute('opacity'); e.removeAttribute('fill-rule');
+  });
+  svg.removeAttribute('width'); svg.removeAttribute('height');
+  return new XMLSerializer().serializeToString(svg);
+}
+// App and product icons swap to their outline drawings. Product icons have
+// outline masters in the library; app icons do not, so they borrow the
+// closest system icon. Everything is recolored to the theme's ink.
+const SKETCH_ICON = {
+  'product/word/standard-48.svg': 'product/word/outline-48.svg', 'product/excel/standard-48.svg': 'product/excel/outline-48.svg',
+  'product/powerpoint/standard-48.svg': 'product/powerpoint/outline-48.svg', 'product/outlook/standard-48.svg': 'product/outlook/outline-48.svg',
+  'product/teams/standard-48.svg': 'product/teams/outline-48.svg', 'product/copilot/standard-48.svg': 'product/copilot/outline-48.svg',
+  'product/edge/standard-48.svg': 'product/edge/outline-48.svg',
+  'app/file-explorer/standard-48.svg': 'system/folder/outline-24.svg', 'app/photos/standard-48.svg': 'system/image/outline-24.svg',
+  'app/weather/standard-48.svg': 'system/weather-sunny/outline-24.svg', 'app/calendar/standard-48.svg': 'system/calendar-ltr/outline-24.svg',
+  'app/notepad/standard-48.svg': 'system/notepad/outline-24.svg', 'app/paint/standard-48.svg': 'system/paint-brush/outline-24.svg',
+  'app/alarms-and-clock/standard-48.svg': 'system/clock/outline-24.svg', 'app/maps/standard-48.svg': 'system/map/outline-24.svg',
+  'app/media-player/standard-48.svg': 'system/play/outline-24.svg', 'app/news/standard-28.svg': 'system/news/outline-24.svg',
+  'app/news/standard-48.svg': 'system/news/outline-24.svg', 'app/store-light-theme/standard-48.svg': 'system/store-microsoft/outline-24.svg',
+};
+const sketchCache = {};
+async function sketchIconURL(path, ink) {
+  const key = path + ink;
+  if (sketchCache[key]) return sketchCache[key];
+  let txt;
+  const d = window.ICON_DATA && ICON_DATA[path];
+  if (d) txt = atob(d.split(',')[1]); else txt = await (await fetch(ICONS + path)).text();
+  txt = txt.replace(/currentColor/g, ink);
+  return (sketchCache[key] = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(txt));
+}
+function sketchImgs(root, on) {
+  const imgs = root.tagName === 'IMG' ? [root] : $$('img', root);
+  imgs.forEach(async img => {
+    const orig = img.dataset.orig || img.getAttribute('src') || '';
+    const m = orig.match(/(?:product|app)\/[a-z0-9-]+\/[a-z0-9-]+\.svg/);
+    if (!m) return;
+    if (!on) { if (img.dataset.orig) { img.src = img.dataset.orig; delete img.dataset.orig; img.classList.remove('sk-ic'); } return; }
+    const to = SKETCH_ICON[m[0]]; if (!to) return;
+    img.dataset.orig = orig;
+    img.src = await sketchIconURL(to, THEME.ink);
+    img.classList.add('sk-ic');
+  });
+}
+let sketchObs = null;
+function sketchMode(on) {
+  const stage = document.getElementById('stage');
+  sketchImgs(document.body, on);
+  if (sketchObs) { sketchObs.disconnect(); sketchObs = null; }
+  if (on) {
+    // Windows, tasks and tiles are added as you use the desktop; keep them sketched too.
+    sketchObs = new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => {
+      if (n.nodeType === 1 && (n.tagName === 'IMG' || n.querySelector('img'))) sketchImgs(n, true);
+    })));
+    sketchObs.observe(stage, { childList: true, subtree: true });
+  }
 }
 function paintIllus(root = document) {
   $$('[data-illus]', root).forEach(el => { el.innerHTML = illusSVG(el.dataset.illus); el.classList.add('illus'); });
@@ -190,6 +266,7 @@ function setupThemes(desk, themes, onChange) {
     themes.forEach(x => stage.classList.remove('theme-' + x.id));
     stage.classList.add('theme-' + t.id);
     THEME = t; store(desk + ':theme', t.id);
+    sketchMode(t.style === 'sketch');
     if (box) $$('button', box).forEach(b => b.classList.toggle('on', b.dataset.t === t.id));
     paintIllus();
     onChange && onChange(t);

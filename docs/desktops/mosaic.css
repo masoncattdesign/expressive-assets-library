@@ -285,3 +285,51 @@
 .theme-neon .slot { border-color: rgba(61, 245, 255, .3); color: rgba(61, 245, 255, .6); }
 .theme-neon .t-il { filter: none; }
 .t-sugg small { display: block; max-width: 230px; }
+
+/* ==== Sketch: chalk on a dark board ======================================= */
+#stage.theme-sketch { --lime: #f1ede2; --sk-ink: #f1ede2; --sk-paper: #1d1d24;
+  background: linear-gradient(rgba(241,237,226,.05) 1px, transparent 1px) 0 0 / 44px 44px, linear-gradient(90deg, rgba(241,237,226,.05) 1px, transparent 1px) 0 0 / 44px 44px, #18181d !important; }
+.theme-sketch .horizon { background: radial-gradient(closest-side, rgba(241,237,226,.06), transparent); }
+.theme-sketch .tile:not(.t-contact):not(.t-relax):not(.t-memory) {
+  background: #1d1d24 !important; color: var(--sk-ink);
+  box-shadow: inset 0 0 0 1.75px var(--sk-ink), 4px 5px 0 rgba(241,237,226,.08);
+}
+.theme-sketch .tile small, .theme-sketch .t-meet small, .theme-sketch .t-new small { color: rgba(241,237,226,.65) !important; }
+.theme-sketch .tile .eyebrow, .theme-sketch .t-weather .hi { color: var(--sk-ink) !important; }
+.theme-sketch .t-weather .pad { color: rgba(241,237,226,.5); }
+.theme-sketch .t-cal { background: repeating-linear-gradient(-8deg, rgba(246,184,210,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; }
+.theme-sketch .t-focus { background: repeating-linear-gradient(-8deg, rgba(239,110,87,.25) 0 8px, transparent 8px 12px), #1d1d24 !important; }
+.theme-sketch .t-meet { background: repeating-linear-gradient(-8deg, rgba(199,159,242,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; }
+.theme-sketch .t-new { background: repeating-linear-gradient(-8deg, rgba(165,200,255,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; color: var(--sk-ink); }
+.theme-sketch .t-new .check, .theme-sketch .t-new .chip-new { color: var(--sk-ink); }
+.theme-sketch .t-new .chip-new { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .t-contact, .theme-sketch .t-relax, .theme-sketch .t-memory { filter: grayscale(1) contrast(1.1); box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
+.theme-sketch .t-photos .ph { filter: grayscale(1) contrast(1.1); border-color: var(--sk-ink); }
+.theme-sketch .t-music .art { background: radial-gradient(circle, var(--sk-ink) 0 6%, #1d1d24 6.5% 14%, transparent 14.5%), repeating-radial-gradient(circle, #1d1d24 0 4px, var(--sk-ink) 4px 5px); border-radius: 50%; box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
+.theme-sketch .t-music .ctl { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .t-music .ctl button, .theme-sketch .t-focus .play, .theme-sketch .lime-chip { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .t-dev .bar { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .t-dev .bar i { background: var(--sk-ink); }
+.theme-sketch .t-lamp .shade, .theme-sketch .t-lamp .stem, .theme-sketch .t-lamp .base { background: transparent; box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
+.theme-sketch .t-lamp .sw { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .t-lamp .sw button.on { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .t-lamp .glow { background: radial-gradient(closest-side, rgba(241,237,226,.18), transparent); }
+.theme-sketch .flap { color: var(--sk-ink); }
+.theme-sketch .t-commute path, .theme-sketch .t-commute circle:not([data-car]) { stroke: var(--sk-ink); fill: var(--sk-ink); }
+.theme-sketch .t-commute path { fill: none; }
+.theme-sketch .t-apps .pad button { background: transparent; box-shadow: inset 0 0 0 1.25px rgba(241,237,226,.5); }
+.theme-sketch .check i { border-color: var(--sk-ink); }
+.theme-sketch .check.done i { background: var(--sk-ink); border-color: var(--sk-ink); }
+.theme-sketch .check.done i::after { border-color: #1d1d24; }
+.theme-sketch .t-il { filter: none; }
+.theme-sketch .slot { border-color: rgba(241,237,226,.3); }
+.theme-sketch .tile.suggested::before, .theme-sketch .t-gradline::before, .theme-sketch .banner::before, .theme-sketch .build::before { background: var(--sk-ink); animation: none; }
+.theme-sketch .tile.suggested { box-shadow: none; background: transparent !important; }
+.theme-sketch .tile.suggested::before { padding: 1.5px; background: repeating-linear-gradient(90deg, var(--sk-ink) 0 8px, transparent 8px 14px); }
+.theme-sketch .ai-badge { box-shadow: 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .mini-btns button { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .mini-btns button.ghost { background: transparent; color: var(--sk-ink); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .banner, .theme-sketch .build, .theme-sketch .dock, .theme-sketch .shaped, .theme-sketch .popover, .theme-sketch .build-chips button { background: #1d1d24; backdrop-filter: none; box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch .build { box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch .dock button[style] { color: var(--sk-ink) !important; }
+.theme-sketch .toast { background: var(--sk-ink); color: #1d1d24; }

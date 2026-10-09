@@ -92,3 +92,10 @@ input { font: inherit; color: inherit; border: 0; background: none; outline: non
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ==== Sketch, shared ====================================================== */
+/* Ink on paper. Every desktop sets --sk-ink and --sk-paper on #stage. */
+.theme-sketch { --sk-ink: #24243a; --sk-paper: #fffdf8; --sk-line: 1.75px; }
+.theme-sketch .ic { background: currentColor; }
+.theme-sketch img:not(.sk-ic) { filter: grayscale(1) contrast(1.15); }
+.sk-ic { filter: none !important; }

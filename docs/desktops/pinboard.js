@@ -178,7 +178,7 @@ $('#ask-input').addEventListener('focus', () => {
 $('#ask').addEventListener('submit', e => { e.preventDefault(); const v = $('#ask-input').value.trim(); if (v) decorate(v); });
 
 function clearDecor() { $$('.leaf, .star').forEach(x => x.remove()); }
-function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night', 'pal-m365', 'pal-riso'); stage.classList.add('pal-' + p); }
+function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night', 'pal-m365', 'pal-riso', 'pal-sketch'); stage.classList.add('pal-' + p); }
 function decorate(v) {
   const q = v.toLowerCase();
   $('#chips').hidden = true; $('#ask-input').value = ''; $('#ask-input').blur();
@@ -220,6 +220,7 @@ setupThemes('pinboard', [
   { id: 'm365', label: 'M365', style: 'm365', pal: 'm365' },
   { id: 'stipple', label: 'Stipple', style: 'stipple', pal: 'riso', tex: 'stipple' },
   { id: 'texture', label: 'Texture', style: 'texture', pal: 'sunny', tex: 'pattern' },
+  { id: 'sketch', label: 'Sketch', style: 'sketch', pal: 'sketch', ink: '#2b2440', paper: '#fffdf8' },
 ], t => {
   clearDecor(); palette(t.pal);
   stage.classList.toggle('tex-stipple', t.tex === 'stipple');

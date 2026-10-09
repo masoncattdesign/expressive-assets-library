@@ -324,4 +324,5 @@ setupThemes('mosaic', [
   { id: 'windows', label: 'Windows', style: 'windows' },
   { id: 'm365', label: 'M365', style: 'm365' },
   { id: 'neon', label: 'Neon', style: 'neon' },
+  { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#f1ede2', paper: '#1d1d24' },
 ]);
