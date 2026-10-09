@@ -203,7 +203,8 @@ function sketchSVG(src, ink = '#24243a', paper = '#fffdf8') {
   svg.removeAttribute('width'); svg.removeAttribute('height');
   return new XMLSerializer().serializeToString(svg);
 }
-// App and product icons swap to their outline drawings. Product icons have
+// App and product icons swap to their outline drawings (Sketch, and any theme
+// that sets outline: true, like M365, where they match the M365 illustrations). Product icons have
 // outline masters in the library; app icons do not, so they borrow the
 // closest system icon. Everything is recolored to the theme's ink.
 const SKETCH_ICON = {
@@ -266,7 +267,7 @@ function setupThemes(desk, themes, onChange) {
     themes.forEach(x => stage.classList.remove('theme-' + x.id));
     stage.classList.add('theme-' + t.id);
     THEME = t; store(desk + ':theme', t.id);
-    sketchMode(t.style === 'sketch');
+    sketchMode(t.style === 'sketch' || !!t.outline);
     if (box) $$('button', box).forEach(b => b.classList.toggle('on', b.dataset.t === t.id));
     paintIllus();
     onChange && onChange(t);

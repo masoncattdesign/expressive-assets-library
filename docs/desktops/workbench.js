@@ -836,6 +836,6 @@ async function runWork() {
 /* ---- Themes ------------------------------------------------------------ */
 setupThemes('workbench', [
   { id: 'windows', label: 'Windows', style: 'windows' },
-  { id: 'm365', label: 'M365', style: 'm365' },
+  { id: 'm365', label: 'M365', style: 'm365', outline: true, ink: '#484848' },
   { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#24243a', paper: '#fffdf8' },
 ]);

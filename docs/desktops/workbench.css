@@ -665,3 +665,14 @@
 .theme-sketch .rail-avatar, .theme-sketch .contact img { box-shadow: 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .wk-pill img, .theme-sketch .bubble.me img, .theme-sketch .toast img { filter: invert(1) brightness(2) !important; }
 .theme-sketch .rail button.on .ic { background: var(--sk-paper); }
+
+/* M365: outline icons in the M365 illustration gray, on soft M365 tints */
+.theme-m365 .tile.app[title="File Explorer"], .theme-m365 .tile.app[title="Outlook"] { background: #DCEBFF; }
+.theme-m365 .tile.app[title="Edge"] { background: #E4D6FF; }
+.theme-m365 .tile.app[title="Photos"] { background: #FFE3D8; }
+.theme-m365 .tile.app, .theme-m365 .task .t-ic, .theme-m365 .thumb .badge { box-shadow: inset 0 0 0 1.5px rgba(72,72,72,.5); }
+.theme-m365 .tile.app img.sk-ic { width: 34px; height: 34px; }
+.theme-m365 .task .t-ic { background: #fff; }
+.theme-m365 .task:nth-child(3n+1) .t-ic { background: #DCEBFF; } .theme-m365 .task:nth-child(3n+2) .t-ic { background: #E4D6FF; } .theme-m365 .task:nth-child(3n) .t-ic { background: #FFE3D8; }
+.theme-m365 #tb-copilot { background: #fff; }
+.theme-m365 .tile.app[title="File Explorer"] { background: #FFF1D6; }
