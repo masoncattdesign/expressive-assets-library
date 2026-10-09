@@ -42,7 +42,7 @@ function gooGroup(id) {
   const Bc = $('.part[data-part="b"]', g);
   const necks = $$('.neck', g).map(n => ({ el: n, x: +n.dataset.x, broken: false }));
   const aBottom = A.offsetTop + A.offsetHeight, bTop = B.offsetTop;
-  const L0 = bTop - aBottom + 28, W0 = 74;
+  const L0 = bTop - aBottom + 28, W0 = 96;
   let dx = 0, dy = 0, vx = 0, vy = 0, raf = 0;
 
   function layout() {
@@ -52,7 +52,7 @@ function gooGroup(id) {
       const ax = n.x, ay = aBottom - 14, bx = n.x + dx, by = bTop + 14 + dy;
       const vx_ = bx - ax, vy_ = by - ay, L = Math.max(8, Math.hypot(vx_, vy_));
       let w = W0 * Math.min(1.15, Math.pow(L0 / L, 1.25));
-      if (w < 24) n.broken = true;
+      if (w < 30) n.broken = true;
       if (n.broken && L < L0 * 1.5) n.broken = false;
       if (n.broken) w = 0;
       const ang = Math.atan2(-vx_, vy_) * 180 / Math.PI;
