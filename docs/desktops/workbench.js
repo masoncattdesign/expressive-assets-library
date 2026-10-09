@@ -1,4 +1,4 @@
-/* Nucleus prototype. The desktop behaves like a living cell: the nucleus in
+/* Workbench prototype. The desktop behaves like a living cell: the nucleus in
    the middle is where work happens, and the cells around it stretch, snap,
    gather and give material to it through the goo filter. The clock follows real
    time, Copilot grows out of the Ask box, the Lisbon task turns the whole
@@ -18,7 +18,7 @@ const TOKENS = {
 };
 stage.innerHTML = stage.innerHTML.replace(/__([a-z-]+)/g, (m, n) => TOKENS[n] || m);
 installGoo('goo', 10, 24, -11);
-protoNav('nucleus');
+protoNav('workbench');
 
 /* ---- Toast ------------------------------------------------------------- */
 let toastT;

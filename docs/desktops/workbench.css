@@ -1,4 +1,4 @@
-/* Nucleus: the desktop as a living cell. Work happens in the nucleus at the
+/* Workbench: the desktop as a living cell. Work happens in the nucleus at the
    center, and the widgets around it grow, connect, divide and merge. */
 
 #stage { color: var(--ink); }
@@ -429,7 +429,7 @@
 .call-view .tile-v.you b { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #6466f1, #a78bfa); display: grid; place-items: center; color: #fff; font: 600 48px/1 var(--font-display); }
 
 
-/* ==== Nucleus additions =================================================== */
+/* ==== Living-cell additions =================================================== */
 
 /* Strip: close a window from its thumbnail */
 .thumb .x { position: absolute; left: -8px; top: -8px; width: 22px; height: 22px; border-radius: 50%; background: rgba(28,27,51,.82); color: #fff; display: grid; place-items: center; opacity: 0; transform: scale(.6); transition: opacity .2s, transform .3s var(--spring); z-index: 2; }
