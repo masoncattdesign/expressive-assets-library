@@ -1,0 +1,83 @@
+/* Shared shell for the three desktop prototypes.
+   Every desktop is authored at 1920x1200, the size of the Figma frames, and
+   scaled to fit the window. Authoring at one fixed size keeps the prototypes
+   faithful to the frames; the cost is that nothing reflows, which is fine for
+   a concept people look at rather than a product they use. */
+
+:root {
+  --ink: #1c1b33;
+  --ink-2: rgba(28, 27, 51, .6);
+  --ink-3: rgba(28, 27, 51, .42);
+  --accent: #6466f1;
+  --font: "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --spring: cubic-bezier(.34, 1.56, .64, 1);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: #0e0e12;
+  font-family: var(--font);
+  color: var(--ink);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+button { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; }
+input { font: inherit; color: inherit; border: 0; background: none; outline: none; }
+
+/* The stage is the 1920x1200 desktop, centered and scaled by shared.js. */
+#stage {
+  position: absolute; left: 50%; top: 50%;
+  width: 1920px; height: 1200px;
+  transform-origin: 0 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000 center / cover no-repeat;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+}
+.fit-full #stage { border-radius: 0; box-shadow: none; }
+
+/* Icons. System icons are masks so they take currentColor; product and app
+   icons are full color and go in as images. */
+.ic {
+  display: inline-block; width: 20px; height: 20px; flex: none;
+  background: currentColor;
+  -webkit-mask: var(--src) center / contain no-repeat;
+          mask: var(--src) center / contain no-repeat;
+}
+.app-ic { display: block; width: 36px; height: 36px; object-fit: contain; pointer-events: none; }
+
+/* Prototype switcher: a quiet pill that appears when the pointer moves. */
+.proto-nav {
+  position: fixed; left: 16px; top: 16px; z-index: 1000;
+  display: flex; gap: 4px; padding: 4px;
+  border-radius: 999px;
+  background: rgba(20, 20, 26, .72);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+  font: 600 13px/1 var(--font);
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity .3s, transform .3s var(--ease);
+}
+.proto-nav.show, .proto-nav:hover, .proto-nav:focus-within { opacity: 1; transform: none; }
+.proto-nav a {
+  color: rgba(255, 255, 255, .7); text-decoration: none;
+  padding: 8px 14px; border-radius: 999px;
+}
+.proto-nav a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
+.proto-nav a[aria-current] { color: #111; background: #fff; }
+.proto-nav .hint { color: rgba(255, 255, 255, .45); font-weight: 400; padding: 8px 12px 8px 6px; }
+
+/* Shared motion */
+@keyframes pop-in { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes caret { 50% { opacity: 0; } }
+.typing-caret::after { content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -2px; background: currentColor; animation: caret 1s steps(1) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

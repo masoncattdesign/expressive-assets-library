@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pinboard · Desktop prototype</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='12' fill='%23ffd9cc'/%3E%3Ccircle cx='9' cy='10' r='4' fill='%23ffc53d'/%3E%3Crect x='11' y='12' width='8' height='6' rx='3' fill='%233b2453'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="pinboard.css">
+</head>
+<body>
+<div id="stage" class="pal-sunny" style="background-image:url('media/wp-pinboard.jpg')">
+  <div class="wash" aria-hidden="true"></div>
+  <div class="board" id="board">
+
+    <!-- Clock: a scalloped cookie with real hands -->
+    <div class="w clock" data-id="clock" style="left:98px;top:86px">
+      <svg class="cookie" viewBox="0 0 300 300" aria-hidden="true"><defs><clipPath id="scallop"><path id="scallop-path"/></clipPath></defs>
+        <image href="media/tex-violet.jpg" x="0" y="0" width="300" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#scallop)"/></svg>
+      <div class="clock-day" id="clock-day">Tue 7</div>
+      <div class="hand hr" id="hand-h"></div>
+      <div class="hand mn" id="hand-m"></div>
+      <div class="pin-dot"></div>
+    </div>
+
+    <!-- Weather pill -->
+    <div class="w weather" data-id="weather" style="left:440px;top:66px">
+      <div class="sun"></div>
+      <div class="cloud"><i></i><i></i><i></i></div>
+      <div class="temp"><span id="temp">72</span>°</div>
+      <div class="cond" id="cond">Sunny</div>
+    </div>
+
+    <!-- Time as two pebbles -->
+    <div class="w digits" data-id="digits" style="left:1446px;top:60px">
+      <div class="pebble a" id="dig-h">4</div>
+      <div class="pebble b" id="dig-m">47</div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="w cal" data-id="cal" style="left:1260px;top:380px">
+      <div class="cal-date"><span id="cal-mon">OCT</span><b id="cal-day">7</b></div>
+      <div class="cal-events">
+        <button class="ev dark">Lily's recital · 4 pm</button>
+        <button class="ev outline">Run at 6 pm</button>
+        <button class="ev yellow">Dinner with Sam</button>
+      </div>
+    </div>
+
+    <!-- Music -->
+    <div class="w music" data-id="music" style="left:170px;top:510px">
+      <svg class="wave" viewBox="0 0 310 30" preserveAspectRatio="none" aria-hidden="true"><path id="wave-path" fill="none" stroke-width="5" stroke-linecap="round"/><line id="wave-rest" y1="15" y2="15" x2="310" stroke-width="3" stroke-linecap="round"/></svg>
+      <div class="m-times"><span id="m-now">0:45</span><span>3:40</span></div>
+      <div class="m-row"><button id="m-prev" title="Previous">__previous</button><button id="m-next" title="Next">__next</button><b id="m-title">Golden hour mix</b></div>
+      <button class="m-play" id="m-play" title="Play">__play</button>
+    </div>
+
+    <!-- Battery -->
+    <div class="w batt" data-id="batt" style="left:790px;top:520px">
+      <div class="batt-in"><span id="batt-n">82</span></div><i class="nub"></i>
+    </div>
+
+    <!-- Volume / notifications -->
+    <div class="w vol" data-id="vol" style="left:1110px;top:470px">
+      <button class="bell" id="bell" title="Notifications">__alert</button>
+      <div class="vol-track" id="vol-track" data-nodrag><div class="vol-fill" id="vol-fill"><span>__music</span></div></div>
+    </div>
+
+    <!-- Checklist -->
+    <div class="w check" data-id="check" style="left:1290px;top:650px">
+      <div class="ck-head"><h3>Weekend packing</h3><button class="ck-add" id="ck-add" title="Add">__add</button></div>
+      <div class="ck-list" id="ck-list">
+        <button class="ck done"><i></i><span>Sunglasses</span></button>
+        <button class="ck"><i></i><span>Film camera</span></button>
+        <button class="ck"><i></i><span>Sunscreen</span></button>
+      </div>
+    </div>
+
+    <!-- Memories -->
+    <div class="w mem" data-id="mem" style="left:1712px;top:560px">
+      <button class="face" id="face-a" style="background-image:url(media/person-adam.jpg)" title="Next memory"></button>
+      <button class="face" id="face-b" style="background-image:url(media/person-sam.jpg)" title="Next memory"></button>
+      <b>Memories</b>
+    </div>
+  </div>
+
+  <!-- Add to your board -->
+  <div class="addbar" id="addbar">
+    <span class="cop"><img src="../assets/icons/product/copilot/standard-48.svg" alt=""></span>
+    <form class="ask" id="ask"><span class="plus">__add</span><input id="ask-input" placeholder="Ask Copilot to decorate" autocomplete="off"><span class="mic">__mic</span></form>
+    <div class="goo-wrap" id="goo-wrap">
+      <div class="goo-layer" id="tray-goo"></div>
+      <div class="tray-icons" id="tray-icons"></div>
+      <button class="addbtn" id="addbtn" title="Add something">__add</button>
+    </div>
+    <div class="apps">__apps</div>
+  </div>
+  <div class="chips" id="chips" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="shared.js"></script>
+<script src="pinboard.js"></script>
+</body>
+</html>

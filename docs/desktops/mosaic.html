@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mosaic · Desktop prototype</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23111'/%3E%3Crect x='4' y='4' width='7' height='7' rx='2' fill='%23f6b8d2'/%3E%3Crect x='13' y='4' width='7' height='7' rx='2' fill='%23d4f07a'/%3E%3Crect x='4' y='13' width='16' height='7' rx='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="mosaic.css">
+</head>
+<body>
+<div id="stage" style="background-image:url('media/wp-mosaic.jpg')">
+  <div class="horizon" aria-hidden="true"></div>
+  <div class="grid" id="grid"></div>
+
+  <!-- Copilot speaks here, at the top, and only when it has something -->
+  <div class="banner" id="banner" hidden>
+    <img src="../assets/icons/product/copilot/standard-48.svg" alt="">
+    <span id="banner-text"></span>
+    <button class="ghost" id="banner-undo">Undo</button>
+  </div>
+
+  <button class="shaped" id="shaped"><img src="../assets/icons/product/copilot/standard-48.svg" alt=""><span>Shaped by Copilot, from your week</span></button>
+
+  <!-- Ask and it builds -->
+  <form class="build" id="build" hidden>
+    <span class="build-ic"><img src="../assets/icons/product/copilot/standard-48.svg" alt=""></span>
+    <div class="build-main">
+      <input id="build-input" placeholder="Ask Copilot to build you something" autocomplete="off">
+      <small id="build-status">Try one of these, or ask your own</small>
+    </div>
+    <button type="button" class="ghost" id="build-stop">Close</button>
+  </form>
+  <div class="build-chips" id="build-chips" hidden></div>
+
+  <nav class="dock" id="dock" aria-label="Taskbar"></nav>
+
+  <div class="popover" id="popover" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="shared.js"></script>
+<script src="mosaic.js"></script>
+</body>
+</html>

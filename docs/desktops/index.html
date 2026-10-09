@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Desktops · Prototypes</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+  body { overflow: auto; background: #f4f3f1; color: #1c1b33; user-select: auto; }
+  main { max-width: 1180px; margin: 0 auto; padding: 64px 24px; }
+  h1 { font: 600 32px/1.2 var(--font-display); margin: 0 0 8px; }
+  p.lede { margin: 0 0 36px; color: rgba(28,27,51,.65); font: 400 16px/1.5 var(--font); max-width: 620px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  a.card { display: block; text-decoration: none; color: inherit; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(28,27,51,.08); transition: transform .35s var(--spring), box-shadow .3s; }
+  a.card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(28,27,51,.14); }
+  .pic { aspect-ratio: 16 / 10; background: center / cover; }
+  .txt { padding: 18px 20px 22px; }
+  .txt b { display: block; font: 600 19px/1.2 var(--font); }
+  .txt span { display: block; margin-top: 6px; font: 400 14px/1.45 var(--font); color: rgba(28,27,51,.62); }
+  footer { margin-top: 36px; font: 400 13px/1.5 var(--font); color: rgba(28,27,51,.5); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Desktops</h1>
+  <p class="lede">Three working prototypes of what a desktop could feel like. Each one is built from its Figma frame and everything on it responds. Press 1, 2 or 3 to jump between them.</p>
+  <div class="grid">
+    <a class="card" href="workbench.html"><div class="pic" style="background-image:url(media/wp-workbench.jpg)"></div><div class="txt"><b>Workbench</b><span>The desktop is where the work happens. Copilot is the front door, and the surfaces stretch and snap like liquid.</span></div></a>
+    <a class="card" href="mosaic.html"><div class="pic" style="background-image:url(media/wp-mosaic.jpg)"></div><div class="txt"><b>Mosaic</b><span>A living grid that grows out from a horizon. Copilot suggests tiles, fills empty slots and builds whole rows on request.</span></div></a>
+    <a class="card" href="pinboard.html"><div class="pic" style="background-image:url(media/wp-pinboard.jpg)"></div><div class="txt"><b>Pinboard</b><span>The desktop as decorated art. Every widget is a sticker you can move, and Copilot restyles the board in one sentence.</span></div></a>
+  </div>
+  <footer>Exploration, not product. Content is made up.</footer>
+</main>
+</body>
+</html>
