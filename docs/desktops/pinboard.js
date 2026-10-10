@@ -229,8 +229,8 @@ function texify() {
   });
 }
 setupThemes('pinboard', [
-  { id: 'windows', label: 'Windows', style: 'windows', pal: 'sunny' },
-  { id: 'm365', label: 'M365', style: 'm365', pal: 'm365', outline: true, ink: '#484848' },
+  { id: 'windows', label: 'Default', style: 'windows', pal: 'sunny' },
+  { id: 'm365', label: 'Comic strip', style: 'm365', pal: 'm365', outline: true, ink: '#484848' },
   { id: 'stipple', label: 'Stipple', style: 'stipple', pal: 'riso', tex: 'stipple' },
   { id: 'texture', label: 'Texture', style: 'texture', pal: 'sunny', tex: 'pattern' },
   { id: 'sketch', label: 'Sketch', style: 'sketch', pal: 'sketch', ink: '#2b2440', paper: '#fffdf8' },
