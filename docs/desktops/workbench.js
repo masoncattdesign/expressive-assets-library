@@ -14,7 +14,7 @@ const TOKENS = {
   previous: ic('previous', 20), next: ic('next', 20), add: ic('add', 20), mic: ic('mic', 18), speaker: ic('speaker-2', 20),
   copilot: appIcon(APPS.copilot, 40), explorer: appIcon(APPS.explorer, 38), edge: appIcon(APPS.edge, 38),
   outlook: appIcon(APPS.outlook, 38), photos: appIcon(APPS.photos, 38),
-  bulb: ic('lightbulb', 18), doc: ic('document', 18), stack: ic('stack'),
+  bulb: ic('lightbulb', 18), doc: ic('document', 18), stack: ic('stack'), dismiss: ic('dismiss', 18),
 };
 stage.innerHTML = stage.innerHTML.replace(/__([a-z-]+)/g, (m, n) => TOKENS[n] || m);
 installGoo('goo', 10, 24, -11);
@@ -875,3 +875,68 @@ new MutationObserver(() => {
   $$('.pill-bot').forEach(h => { const b = benchBot(h, { size: 30, color: '#ffffff' }); if (b) { b.noSleep = true; b.setState('working'); } });
 }).observe(stage, { childList: true, subtree: true });
 benchBotTheme(THEME);
+
+/* ---- Widgets ------------------------------------------------------------ */
+// The taskbar's Widgets button grows into a board of widgets, the same way
+// the nucleus grows into the working view. The first spot is a smart stack
+// that rotates on its own. Nothing here shows until you open it.
+const WB_BOARD = { x: 24, y: 136, w: 712, h: 948 };
+const WB_ITEMS = [
+  ['stack', 'w', 'all home go'], ['briefing', 't', 'all'], ['clock', 'w', 'all go'], ['weather', 't', 'all home go'],
+  ['phone', 't', 'all go'], ['people', 'w', 'all home'], ['music', 'w', 'all home'], ['battery', 'w', 'all go'],
+  ['photos', 't', 'all home'], ['calc', 't', 'all home'], ['traffic', 'w', 'all go'], ['markets', 'w', 'all'],
+  ['sports', 'w', 'all home'], ['news', 't', 'all home'], ['alarm', 'w', 'all go'], ['game', 'w', 'all home'],
+];
+let wbBuilt = false, wbBusy = false;
+function buildBoard() {
+  const body = $('#wbb-body');
+  WB_ITEMS.forEach(([id, sz, tags]) => {
+    const cell = html(`<div class="wbb-cell sz-${sz}" data-tags="${tags}"></div>`);
+    cell.appendChild(id === 'stack' ? widgetStack(['agenda', 'weather', 'traffic'], { every: 5000 }) : widget(id));
+    body.appendChild(cell);
+  });
+  const d = new Date();
+  $('#wbb-date').textContent = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+  wbBuilt = true;
+}
+const tbRect = () => ({ x: 236, y: 1104, w: 164, h: 72 });
+async function openBoard() {
+  if (wbBusy || !$('#wb-board').hidden) return;
+  wbBusy = true; closeAsk(); $('#start').hidden = true;
+  if (!wbBuilt) buildBoard();
+  $('#tb-widgets').classList.add('on');
+  const b = blob($('#wg-layer'), tbRect(), 36);
+  await moveBlob(b, WB_BOARD, 620, 30);
+  $('#wb-board').hidden = false;
+  [...$$('.wbb-cell')].forEach((c, i) => { c.style.animationDelay = (i * 28) + 'ms'; });
+  await sleep(160);
+  b.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220 }).finished.then(() => b.remove());
+  wbBusy = false;
+}
+async function closeBoard() {
+  if (wbBusy || $('#wb-board').hidden) return;
+  wbBusy = true;
+  const b = blob($('#wg-layer'), WB_BOARD, 30);
+  $('#wb-board').hidden = true;
+  $('#tb-widgets').classList.remove('on');
+  await moveBlob(b, tbRect(), 520, 36, 'cubic-bezier(.6,0,.3,1)');
+  b.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160 }).finished.then(() => b.remove());
+  wbBusy = false;
+}
+$('#tb-widgets').addEventListener('click', () => ($('#wb-board').hidden ? openBoard() : closeBoard()));
+$('#wbb-x').addEventListener('click', closeBoard);
+$('#wbb-pick').addEventListener('click', e => {
+  const b = e.target.closest('[data-f]'); if (!b) return;
+  $$('#wbb-pick button').forEach(x => x.classList.toggle('on', x === b));
+  $$('.wbb-cell').forEach((c, i) => {
+    const show = c.dataset.tags.split(' ').includes(b.dataset.f);
+    c.hidden = !show;
+    if (show) { c.style.animation = 'none'; void c.offsetWidth; c.style.animation = ''; c.style.animationDelay = (i * 20) + 'ms'; }
+  });
+});
+stage.addEventListener('pointerdown', e => { if (!e.target.closest('#wb-board, #tb-widgets')) closeBoard(); });
+addEventListener('keydown', e => {
+  if (e.target.closest('input, textarea, [contenteditable]') || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === 'Escape') closeBoard();
+  if (e.key.toLowerCase() === 'w') ($('#wb-board').hidden ? openBoard() : closeBoard());
+});

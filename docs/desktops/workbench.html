@@ -7,6 +7,7 @@
 <title>Workbench · Desktop prototype</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23c8f56a'/%3E%3Crect x='5' y='5' width='14' height='6' rx='3' fill='%231c1b33'/%3E%3Crect x='5' y='13' width='6' height='6' rx='3' fill='%231c1b33'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="widgets.css">
 <link rel="stylesheet" href="workbench.css">
 </head>
 <body>
@@ -183,8 +184,20 @@
     </div>
   </div>
 
+  <!-- Widgets: the board grows out of the taskbar button -->
+  <div class="goo-group full" id="g-wg"><div class="goo-layer" id="wg-layer"></div></div>
+  <section class="wb-board" id="wb-board" hidden aria-label="Widgets">
+    <div class="wbb-head">
+      <div><h2>Widgets</h2><span class="muted" id="wbb-date">Friday, October 9</span></div>
+      <div class="wbb-pick" id="wbb-pick"><button class="on" data-f="all">For you</button><button data-f="home">Home</button><button data-f="go">On the go</button></div>
+      <button class="wbb-x" id="wbb-x" title="Close">__dismiss</button>
+    </div>
+    <div class="wbb-body" id="wbb-body"></div>
+  </section>
+
   <!-- Taskbar -->
   <div class="taskbar">
+    <button class="tile tb-wg" id="tb-widgets" style="left:236px;width:164px" title="Widgets"><span class="tbw-sun"></span><span class="tbw-t"><b>64°</b><small>Clear</small></span></button>
     <button class="tile" id="tb-start" style="left:416px" title="Start"><span class="winlogo"><i></i><i></i><i></i><i></i></span></button>
     <span class="tb-sep" style="left:502px"></span>
     <button class="tile solid" id="tb-copilot" style="left:518px" title="Copilot">__copilot</button>
@@ -211,6 +224,7 @@
 <script src="illus-data.js"></script>
 <script src="shared.js"></script>
 <script src="bots.js"></script>
+<script src="widgets.js"></script>
 <script src="workbench.js"></script>
 </body>
 </html>

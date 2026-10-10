@@ -26,6 +26,14 @@ to the theme names or with the C key. The first is the theme as designed, the
 second is another take in the same mode, and the third flips it to light or
 dark (Workbench and Pinboard go dark, Mosaic goes light).
 
+Widgets: Workbench and Mosaic have Microsoft's widget set, rebuilt in their
+own style (clock, weather, agenda, traffic, battery, phone, daily briefing,
+photos, people, calculator, markets, sports, news, music, games). None of
+them show on first load. On Workbench, click the weather button on the left
+of the taskbar (or press W) and a widget board grows out of it. On Mosaic,
+click an empty slot or the weather button in the dock (or press W). A widget
+stack takes turns showing a few widgets in one place; scroll over it to flip.
+
 These are explorations, not product. All content is made up.
 Best viewed on a large screen; each desktop scales to fit the window.
 

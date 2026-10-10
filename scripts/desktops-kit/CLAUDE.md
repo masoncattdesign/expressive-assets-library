@@ -107,6 +107,22 @@ hosted copy does.
     neon and stipple.
   - To place one, add `<span data-illus="umbrella"></span>`. The current
     theme paints it. If you insert elements later, call `paintIllus(el)`.
+- **Widgets** live in `widgets.js` and `widgets.css`, shared by Workbench and Mosaic.
+  - `widget(id)` returns a widget element; `widgetStack(ids)` returns a smart
+    stack that rotates (wheel flips it, hover holds it). `WIDGETS[id]` has
+    `name`, `fits` (s square, w wide, t tall), `app` (icon path), `html()` and
+    `act` (click handlers, wired through `data-wg-act`).
+  - One markup fits every size: `.wg` is a size container and the CSS uses
+    container queries to show more when there is room.
+  - Colors come only from `--wg-*` variables (bg, solid, fg, fg2, soft,
+    accent, accent-ink, pos, r). Set them on the `.wg` itself, because `.wg`
+    declares defaults. Workbench sets them per theme under `.wbb-cell .wg`,
+    Mosaic under `.tile.t-wg .wg` and `.wg-gallery .wg`.
+  - Workbench: `openBoard()`/`closeBoard()` morph a goo blob between the
+    taskbar button and the board (`#g-wg`), like the working view. Mosaic:
+    `addWidgetTile({ wg } | { stack }, width, at)` grows a widget into a slot;
+    the popover and the gallery (`openGallery()`) both use it.
+  - Content is everyday life, never real work content.
 - **Shapes and bots** live in `bots.js`.
   - `SHAPES` is a Material 3-inspired shape library (cookies, clovers, bursts, pills, arches, gems, hearts). Every shape is sampled as radii around a center, so `morphPath(path, name)` can morph any shape into any other.
   - `new Bot({ shape, color, eyes, size })` makes a plush bot: fuzzy edges from a turbulence filter, eyes that follow the pointer, and states `default`, `working` (hops) and `sleeping` (dozes after a while alone). `bot.work(ms)`, `bot.poke()`, `bot.setShape()`, `bot.setColor()`.

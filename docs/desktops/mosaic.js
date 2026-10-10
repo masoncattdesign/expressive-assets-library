@@ -53,7 +53,9 @@ function occupied(except) {
 /* ---- Render ------------------------------------------------------------ */
 function placeEl(el, t) { Object.assign(el.style, { left: cx(t.c) + 'px', top: cy(t.r) + 'px', width: cw(t.w) + 'px', height: CELL + 'px' }); }
 function makeTile(t) {
-  const el = html(`<div class="tile ${t.cls || TILE_CLASS[t.id] || ''}" data-id="${t.id}">${t.html || T[t.id]()}</div>`);
+  const el = html(`<div class="tile ${t.cls || TILE_CLASS[t.id] || ''}" data-id="${t.id}">${t.wg || t.stack ? '' : t.html || T[t.id]()}</div>`);
+  if (t.wg) { el.classList.add('t-wg'); el.appendChild(widget(t.wg)); }
+  if (t.stack) { el.classList.add('t-wg'); el.appendChild(widgetStack(t.stack)); }
   if (TILE_BG[t.id]) el.style.backgroundImage = `url(${TILE_BG[t.id]})`;
   if (t.il) addIl(el, t.il);
   placeEl(el, t);
@@ -224,10 +226,13 @@ function slotPopover(c, r, slotEl) {
   slotEl.classList.add('picked');
   const occ = occupied();
   const wide = c + 1 < NC && slotCells.has(`${c + 1},${r}`) && !occ.has(`${c + 1},${r}`);
-  const opts = OPTIONS.filter(o => o.w === 1 || wide).filter(o => !tiles.some(t => t.id === 'o-' + o.t)).slice(0, 4);
+  const opts = OPTIONS.filter(o => o.w === 1 || wide).filter(o => !tiles.some(t => t.id === 'o-' + o.t)).slice(0, 3);
   const p = $('#popover');
   p.innerHTML = `<h5><img src="${COP}" alt="">What should grow here?</h5><small>Picked from what you use and what's coming up${wide ? ' · fits one or two wide' : ''}</small>
     ${opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="sw il" data-illus="${o.il}"></span><span><b>${o.t}${o.w === 2 ? ' · wide' : ''}</b><small>${o.s}</small></span></button>`).join('')}
+    <div class="opt-sep">From your widgets</div>
+    ${slotWidgets(wide).map(w => `<button class="opt" data-wgid="${w.id}" data-wgw="${w.w}">${w.stack ? `<span class="sw">${ic('stack', 20)}</span>` : `<span class="sw app"><img src="${ICONS}${WIDGETS[w.id].app}" alt=""></span>`}<span><b>${w.label}${w.w === 2 ? ' · wide' : ''}</b><small>${w.sub}</small></span></button>`).join('')}
+    <button class="opt" data-gallery><span class="sw">${ic('board', 20)}</span><span><b>All widgets</b><small>Clock, battery, people, calculator and more</small></span></button>
     <button class="opt" data-ask><span class="sw" style="background:rgba(255,255,255,.1)">${ic('sparkle', 20)}</span><span><b>Something else</b><small>Describe it and Copilot builds it</small></span></button>`;
   const left = Math.min(cx(c), 1920 - 350), top = r >= 3 ? cy(r) - 330 : cy(r) + CELL + 10;
   Object.assign(p.style, { left: left + 'px', top: top + 'px' });
@@ -243,6 +248,12 @@ function slotPopover(c, r, slotEl) {
     toast(`${o.t} grew into place`);
   }));
   $('[data-ask]', p).addEventListener('click', () => { closePopover(); openBuild(); });
+  $('[data-gallery]', p).addEventListener('click', () => { closePopover(); openGallery({ c, r }); });
+  $$('[data-wgid]', p).forEach(b => b.addEventListener('click', () => {
+    closePopover();
+    const id = b.dataset.wgid, w = +b.dataset.wgw;
+    addWidgetTile(id === 'stack' ? { stack: wide ? ['agenda', 'weather', 'music'] : ['clock', 'weather', 'battery'] } : { wg: id }, w, { c, r });
+  }));
 }
 function closePopover() { $('#popover').hidden = true; $$('.slot.picked').forEach(s => { s.classList.remove('picked'); beamOff(s); }); }
 $('#stage').addEventListener('click', e => { if (!e.target.closest('.popover, .slot')) closePopover(); });
@@ -338,13 +349,77 @@ function undoBuild(silent) {
 
 /* ---- Dock -------------------------------------------------------------- */
 const DOCK = [['File Explorer', 'app/file-explorer/standard-48.svg', '#f5b400', true], ['Edge', 'product/edge/outline-48.svg', '#2ab0d6'], ['Excel', 'product/excel/outline-48.svg', '#47c16f'], ['Word', 'product/word/outline-48.svg', '#4b8cf5'], ['PowerPoint', 'product/powerpoint/outline-48.svg', '#f0654a'], ['Photos', 'app/photos/standard-48.svg', '#5aa8ff', true]];
-$('#dock').innerHTML = `<button class="cop" id="dock-cop" title="Copilot"><img src="${COP}" alt=""></button><span class="sep"></span>` + DOCK.map(([n, p, col, full]) =>
+$('#dock').innerHTML = `<button class="cop" id="dock-cop" title="Copilot"><img src="${COP}" alt=""></button><button class="dock-wg" id="dock-wg" title="Widgets"><span class="dwg-sun"></span><b>64°</b></button><span class="sep"></span>` + DOCK.map(([n, p, col, full]) =>
   full ? `<button title="${n}" data-app="${n}"><img src="${ICONS}${p}" alt="" style="width:34px;height:34px"></button>`
        : `<button title="${n}" data-app="${n}" style="color:${col}"><span class="ic" style="--src:url('${iconSrc(p)}')"></span></button>`).join('');
 beam($('#dock-cop'), { hover: true });
 $('#dock-cop').addEventListener('click', () => $('#build').hidden ? openBuild() : closeBuild());
 $$('#dock [data-app]').forEach(b => b.addEventListener('click', () => toast(`Opening ${b.dataset.app}`)));
-addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); closeBuild(); } });
+addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closePopover(); closeBuild(); closeGallery(); }
+  if (e.key.toLowerCase() === 'w' && !e.target.closest('input, textarea, [contenteditable]') && !e.metaKey && !e.ctrlKey) ($('#wg-gallery').hidden ? openGallery() : closeGallery());
+});
+
+/* ---- Widgets ------------------------------------------------------------ */
+// Microsoft's widgets, restyled as Mosaic tiles. They are offered in an empty
+// slot's popover and in the gallery from the dock, and never on first load.
+// A widget stack takes turns showing a few of them in one tile.
+function slotWidgets(wide) {
+  const picks = wide
+    ? [{ id: 'stack', w: 2, label: 'Widget stack', sub: 'Agenda, weather and music take turns', stack: true }, { id: 'agenda', w: 2, label: 'Agenda', sub: 'What is next today' }, { id: 'battery', w: 2, label: 'Battery', sub: 'This PC and your earbuds, pen and keyboard' }]
+    : [{ id: 'stack', w: 1, label: 'Widget stack', sub: 'Clock, weather and battery take turns', stack: true }, { id: 'clock', w: 1, label: 'Clock', sub: 'And the time in Tokyo' }, { id: 'alarm', w: 1, label: 'Alarm', sub: '6:00 AM on Saturday' }];
+  return picks;
+}
+function freeSlot(w) {
+  const occ = occupied();
+  const keys = [...slotCells].map(k => k.split(',').map(Number)).sort((a, b) => a[1] - b[1] || a[0] - b[0]);
+  for (const [c, r] of keys) {
+    let ok = c + w <= NC;
+    for (let i = 0; ok && i < w; i++) if (!slotCells.has(`${c + i},${r}`) || occ.has(`${c + i},${r}`)) ok = false;
+    if (ok) return { c, r };
+  }
+  return null;
+}
+function addWidgetTile(what, w, at) {
+  if (at) { const occ = occupied(); for (let i = 0; i < w; i++) if (occ.has(`${at.c + i},${at.r}`) || at.c + i >= NC) at = null; }
+  at = at || freeSlot(w) || (w === 2 ? null : null);
+  if (!at && w === 2) { const one = freeSlot(1); if (one && what.wg && WIDGETS[what.wg].fits.includes('s')) { w = 1; at = one; } }
+  if (!at) { toast('No open slot that size. Move a tile to make room.'); return; }
+  const t = { id: 'w-' + (what.wg || 'stack') + '-' + Date.now(), c: at.c, r: at.r, w, ...what, cls: '' };
+  for (let i = 0; i < w; i++) slotCells.add(`${at.c + i},${at.r}`);
+  tiles.push(t); const el = makeTile(t); el.classList.add('grow'); renderSlots();
+  beamLap(el);
+  toast(`${what.stack ? 'Widget stack' : WIDGETS[what.wg].name} grew into place`);
+}
+const GALLERY = ['clock', 'weather', 'battery', 'agenda', 'traffic', 'music', 'photos', 'alarm', 'markets', 'sports', 'phone', 'briefing', 'people', 'news', 'game'];
+let galleryAt = null;
+function openGallery(at) {
+  closePopover(); closeBuild();
+  galleryAt = at || null;
+  const row = $('#wgg-row');
+  if (!row.children.length) {
+    row.appendChild(html(`<button class="wgg-card wide" data-stack="1"><span class="wgg-prev"></span><b>Widget stack</b></button>`));
+    $('.wgg-prev', row.lastChild).appendChild(widgetStack(['agenda', 'weather', 'music'], { every: 3500 }));
+    GALLERY.forEach(id => {
+      const wide = !WIDGETS[id].fits.includes('s');
+      const card = html(`<button class="wgg-card${wide ? ' wide' : ''}" data-id="${id}"><span class="wgg-prev"></span><b>${WIDGETS[id].name}</b></button>`);
+      $('.wgg-prev', card).appendChild(widget(id)); row.appendChild(card);
+    });
+    row.addEventListener('click', e => {
+      if (e.target.closest('[data-wg-act]')) return;
+      const card = e.target.closest('.wgg-card'); if (!card) return;
+      const wide = card.classList.contains('wide');
+      addWidgetTile(card.dataset.stack ? { stack: ['agenda', 'weather', 'music'] } : { wg: card.dataset.id }, wide ? 2 : 1, galleryAt);
+      galleryAt = null;
+    });
+  }
+  $('#wg-gallery').hidden = false; beamOn($('#dock-wg'), 160, true);
+}
+function closeGallery() { $('#wg-gallery').hidden = true; if ($('#dock-wg')) beamOff($('#dock-wg')); }
+$('#dock-wg').addEventListener('click', () => ($('#wg-gallery').hidden ? openGallery() : closeGallery()));
+$('#wgg-x').addEventListener('click', closeGallery);
+beam($('#dock-wg'), { hover: true });
+$('#wgg-row').addEventListener('wheel', e => { if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.currentTarget.scrollLeft += e.deltaY; } }, { passive: true });
 
 /* ---- Themes ------------------------------------------------------------ */
 setupThemes('mosaic', [
@@ -364,3 +439,4 @@ setupThemes('mosaic', [
     { id: 'c', label: 'Paper', mode: 'light', ink: '#24243a', paper: '#fffdf8', sw: ['#f4f1e8', '#24243a'] },
   ] },
 ]);
+$('#stage').addEventListener('pointerdown', e => { if (!e.target.closest('#wg-gallery, #dock-wg, .popover, .slot')) closeGallery(); });

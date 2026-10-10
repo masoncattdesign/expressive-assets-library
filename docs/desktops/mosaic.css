@@ -444,3 +444,70 @@
 /* Default · Daylight: a pastel wash rather than gray */
 #stage.theme-windows.mode-light { --wp-tint: rgba(255, 250, 252, .55); }
 .theme-windows.mode-light .tint { opacity: .5; background: linear-gradient(120deg, #ffc7e0, #d6c8ff 50%, #bfeaff); }
+
+/* ==== Widgets ============================================================= */
+/* Microsoft's widgets as Mosaic tiles: same dark glass, big display numbers,
+   the theme's accent. The widgets themselves live in widgets.js/css. */
+.tile.t-wg .wg { --wg-bg: transparent; --wg-solid: #24242a; --wg-fg: #fff; --wg-fg2: rgba(255, 255, 255, .62); --wg-soft: rgba(255, 255, 255, .08);
+  --wg-accent: var(--lime); --wg-accent-ink: #1b2410; --wg-pos: var(--lime); --wg-r: var(--r); }
+.tile.t-wg .wg-in { padding: 18px 20px; }
+.tile.t-wg .wg-big { font-weight: 700; }
+.tile.t-wg .wg-dots { color: #fff; }
+.tile.t-wg .wg-photos { padding: 0; }
+.wg-gallery .wg { --wg-bg: var(--tile); --wg-solid: #24242a; --wg-fg: #fff; --wg-fg2: rgba(255, 255, 255, .62); --wg-soft: rgba(255, 255, 255, .08); --wg-accent: var(--lime); --wg-accent-ink: #1b2410; --wg-pos: var(--lime); }
+
+.dock-wg { width: auto !important; padding: 0 14px 0 8px; display: flex !important; align-items: center; gap: 8px; color: #fff; font: 600 15px/1 var(--font); position: relative; }
+.dwg-sun { position: relative; width: 30px; height: 30px; }
+.dwg-sun::before { content: ""; position: absolute; right: 2px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ffe680, #ffb02e); box-shadow: 0 0 10px rgba(255, 190, 60, .6); }
+.dwg-sun::after { content: ""; position: absolute; left: 0; bottom: 5px; width: 22px; height: 10px; border-radius: 5px; background: #fff; box-shadow: 5px -4px 0 -1px #fff; }
+
+.popover .opt-sep { margin: 10px 10px 4px; font: 600 11px/1 var(--font); letter-spacing: .8px; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
+.popover .opt .sw.app { background: rgba(255, 255, 255, .08); }
+.popover .opt .sw.app img { width: 26px; height: 26px; }
+.popover .opt .sw { color: var(--lime); }
+
+.wg-gallery {
+  position: absolute; left: 50%; bottom: 112px; width: 1500px; margin-left: -750px; z-index: 46; padding: 18px 0 18px; border-radius: 30px;
+  background: rgba(20, 20, 28, .82); backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .08);
+  animation: banner-in2 .5s var(--spring);
+}
+.wgg-head { display: flex; align-items: baseline; gap: 14px; padding: 0 22px 14px 28px; }
+.wgg-head b { font: 600 20px/1 var(--font); }
+.wgg-head small { flex: 1; font: 400 13px/1 var(--font); color: rgba(255, 255, 255, .6); }
+.wgg-row { display: flex; gap: 16px; overflow-x: auto; padding: 4px 28px 8px; scrollbar-width: none; }
+.wgg-card { flex: none; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; color: #fff; font: 600 13px/1 var(--font); animation: fade-up .45s var(--spring) both; }
+.wgg-card:nth-child(n) { animation-delay: calc(var(--i, 0) * 30ms); }
+.wgg-prev { position: relative; display: block; width: 172px; height: 172px; border-radius: var(--r); overflow: hidden; box-shadow: 0 10px 24px rgba(0, 0, 0, .3); transition: transform .35s var(--spring), box-shadow .3s; }
+.wgg-card.wide .wgg-prev { width: 360px; }
+.wgg-card:hover .wgg-prev { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 0 2px var(--lime), 0 16px 30px rgba(0, 0, 0, .35); }
+.wgg-prev .wg { pointer-events: none; }
+.wgg-prev .wg-stack .wg.on { pointer-events: none; }
+
+/* Light */
+.mode-light:not(.theme-sketch) :is(.tile.t-wg, .wg-gallery) .wg { --wg-solid: #fff; --wg-fg: #1c1b26; --wg-fg2: rgba(28, 27, 38, .6); --wg-soft: rgba(28, 27, 38, .06); --wg-accent: #6aa312; --wg-accent-ink: #fff; --wg-pos: #3d8b00; }
+.mode-light:not(.theme-sketch) .tile.t-wg .wg-dots, .mode-light:not(.theme-sketch) .dock-wg, .mode-light:not(.theme-sketch) .wgg-card { color: #1c1b26; }
+.mode-light:not(.theme-sketch) .wg-gallery { background: rgba(255, 255, 255, .86); box-shadow: 0 24px 60px rgba(40, 30, 70, .18), inset 0 0 0 1px rgba(255, 255, 255, .8); }
+.mode-light:not(.theme-sketch) .wgg-head small, .mode-light:not(.theme-sketch) .popover .opt-sep { color: rgba(28, 27, 38, .55); }
+.mode-light:not(.theme-sketch) .wgg-prev { box-shadow: 0 10px 24px rgba(40, 30, 70, .14); }
+.mode-light:not(.theme-sketch) .popover .opt .sw.app { background: rgba(28, 27, 38, .06); }
+.mode-light:not(.theme-sketch) .popover .opt .sw { color: #6aa312; }
+/* Neon */
+.theme-neon :is(.tile.t-wg, .wg-gallery) .wg { --wg-accent: var(--lime); --wg-accent-ink: #08080f; }
+.theme-neon.mode-light :is(.tile.t-wg, .wg-gallery) .wg { --wg-accent: #7A3DFF; --wg-accent-ink: #fff; }
+/* Sketch */
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg { --wg-solid: var(--sk-paper); --wg-fg: var(--sk-ink); --wg-fg2: color-mix(in srgb, var(--sk-ink) 62%, transparent); --wg-soft: color-mix(in srgb, var(--sk-ink) 8%, transparent);
+  --wg-accent: var(--sk-ink); --wg-accent-ink: var(--sk-paper); --wg-pos: var(--sk-ink); }
+.theme-sketch .wg-gallery .wg { --wg-bg: var(--sk-paper); box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
+.theme-sketch .tile.t-wg .wg-dots, .theme-sketch .dock-wg, .theme-sketch .wgg-card { color: var(--sk-ink); }
+.theme-sketch .wg-gallery { background: var(--sk-paper); backdrop-filter: none; box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch .wgg-head small, .theme-sketch .popover .opt-sep { color: color-mix(in srgb, var(--sk-ink) 60%, transparent); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) :is(.wg-photo, .wg-av:not(.ini)) { filter: grayscale(1) contrast(1.1); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) :is(.wg-av.ini, .wg-crest) { background: var(--sk-paper); color: var(--sk-ink); box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg-art { background: radial-gradient(circle, var(--sk-ink) 0 5%, var(--sk-paper) 5.5% 14%, transparent 14.5%), repeating-radial-gradient(circle, var(--sk-paper) 0 4px, var(--sk-ink) 4px 5px); box-shadow: inset 0 0 0 1.5px var(--sk-ink); border-radius: 50%; }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg-sky .sun { background: transparent; box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg-sky .cl { background: var(--sk-paper); box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg-sky .cl::before { background: var(--sk-paper); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg-clock-face { box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch :is(.tile.t-wg, .wg-gallery) .wg .wg-app { filter: grayscale(1); }
+.theme-sketch .dwg-sun::before, .theme-sketch .dwg-sun::after { background: var(--sk-paper); box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
