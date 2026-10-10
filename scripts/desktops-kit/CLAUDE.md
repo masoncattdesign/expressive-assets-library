@@ -82,6 +82,23 @@ hosted copy does.
     under `.theme-<id>`.
   - Pinboard also swaps palettes, using `pal-*` classes on `#stage`, and adds
     print finishes with `.tex-stipple` and `.tex-pattern`.
+- **Colors.** Each theme takes a `colors` list: `[{ id, label, sw, mode, cls, ...overrides }]`.
+  - `colors[0]` is the theme as designed. The others restyle it: one more in
+    the same mode, and one in the opposite mode (`mode: 'dark'` or `'light'`).
+  - Any theme field can be overridden per color (`ink`, `paper`, `pal`, `bot`).
+    `THEME` holds the merged result, with `THEME.color` set to the color id.
+  - `#stage` gets `data-color="<id>"`, `mode-dark` or `mode-light`, and any
+    `cls` the color lists. Style a color with selectors like
+    `.theme-windows[data-color="b"]`.
+  - Sketch's `--sk-ink` and `--sk-paper` are set inline from the color, so the
+    CSS, the outline icons and the redrawn illustrations all agree.
+  - `--wp-tint` and `--wp-blend` on `#stage` tint the wallpaper only (through
+    `#stage::before`, under every widget). `mix-blend-mode: color` recolors it.
+  - Workbench's dark block is `.mode-dark:not(.theme-sketch)`; Mosaic's light
+    block is `.mode-light:not(.theme-sketch)`. Pinboard's colors are extra
+    `pal-*` palettes stacked on the theme's own (`'riso riso-dark'`).
+  - The swatches sit in `#color-pick`; C cycles them. Choices are remembered
+    per desktop and per theme.
 - **Illustrations** are real pieces from the Windows illustration library.
   - The pieces are in `illus-data.js`, keyed by short name.
   - `illus-engine.js` is the library's own engine. `styled(svg, style)`

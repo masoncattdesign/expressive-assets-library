@@ -838,9 +838,21 @@ async function runWork() {
 
 /* ---- Themes ------------------------------------------------------------ */
 setupThemes('workbench', [
-  { id: 'windows', label: 'Default', style: 'windows' },
-  { id: 'm365', label: 'Comic strip', style: 'm365', outline: true, ink: '#484848' },
-  { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#24243a', paper: '#fffdf8' },
+  { id: 'windows', label: 'Default', style: 'windows', colors: [
+    { id: 'a', label: 'Meadow', sw: ['#c8f56a', '#6466f1'] },
+    { id: 'b', label: 'Sunset', sw: ['#ffb38a', '#e0457b'], bot: '#ffb3c7' },
+    { id: 'c', label: 'Night', mode: 'dark', sw: ['#1f1f2e', '#c8f56a'], bot: '#8b8cff' },
+  ] },
+  { id: 'm365', label: 'Comic strip', style: 'm365', outline: true, ink: '#484848', colors: [
+    { id: 'a', label: 'Pastel', sw: ['#C6E1FF', '#FB966E'] },
+    { id: 'b', label: 'Pop', cls: 'comic', ink: '#111111', sw: ['#ffffff', '#FF3D8B'], bot: '#FFE14D' },
+    { id: 'c', label: 'Ink', cls: 'comic', mode: 'dark', ink: '#f4f4f4', sw: ['#0e0e0e', '#FFE14D'], bot: '#FF3D8B' },
+  ] },
+  { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#24243a', paper: '#fffdf8', colors: [
+    { id: 'a', label: 'Graph paper', sw: ['#fbf9f3', '#24243a'] },
+    { id: 'b', label: 'Ballpoint', ink: '#2346c8', paper: '#ffffff', sw: ['#ffffff', '#2346c8'] },
+    { id: 'c', label: 'Chalk', mode: 'dark', ink: '#f1ede2', paper: '#262a31', sw: ['#23272e', '#f1ede2'] },
+  ] },
 ], t => { if (window.benchBotTheme) benchBotTheme(t); });
 
 /* ---- Bots: Copilot's little helpers ------------------------------------- */
@@ -850,12 +862,12 @@ var BENCH_BOTS = [];
 const BENCH_BOT_C = { windows: '#a9b8ff', m365: '#2F95F4', sketch: '#fffdf8' };
 function benchBot(host, opts) {
   if (!host || host.querySelector('.bot')) return;
-  const b = new Bot({ shape: 'cookie9', eyes: 'dot', cheeks: false, color: BENCH_BOT_C[THEME.id] || '#a9b8ff', ...opts });
+  const b = new Bot({ shape: 'cookie9', eyes: 'dot', cheeks: false, color: THEME.bot || BENCH_BOT_C[THEME.id] || '#a9b8ff', ...opts });
   host.appendChild(b.el); BENCH_BOTS.push(b); return b;
 }
 var benchBotTheme = function (t) {
   botsLook({ sketch: t.id === 'sketch', ink: t.ink || '#24243a', paper: t.paper || '#fffdf8' });
-  BENCH_BOTS.forEach(b => b.setColor(BENCH_BOT_C[t.id] || '#a9b8ff'));
+  BENCH_BOTS.forEach(b => b.setColor(t.bot || BENCH_BOT_C[t.id] || '#a9b8ff'));
 };
 // Mount them as their hosts appear.
 new MutationObserver(() => {

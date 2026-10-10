@@ -154,7 +154,7 @@ function store(key, val) {
 function protoNav(current) {
   const items = [['workbench', 'Workbench'], ['mosaic', 'Mosaic'], ['pinboard', 'Pinboard']];
   const nav = html(`<nav class="proto-nav" aria-label="Desktops">${items.map(([k, l]) =>
-    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="themes" id="theme-pick" role="group" aria-label="Theme"></span>${location.protocol === 'file:' ? '' : `<a class="dl" href="Desktop-prototypes.zip" download title="Download all three prototypes, with a README and notes for an agent">${ic('arrow-download', 16)}Download</a>`}<span class="hint">Everything here is clickable</span></nav>`);
+    `<a href="${k}.html"${k === current ? ' aria-current="page"' : ''}>${l}</a>`).join('')}<span class="themes" id="theme-pick" role="group" aria-label="Theme"></span><span class="colors" id="color-pick" role="group" aria-label="Colors"></span>${location.protocol === 'file:' ? '' : `<a class="dl" href="Desktop-prototypes.zip" download title="Download all three prototypes, with a README and notes for an agent">${ic('arrow-download', 16)}Download</a>`}<span class="hint">Everything here is clickable</span></nav>`);
   document.body.appendChild(nav);
   let t;
   const show = () => { nav.classList.add('show'); clearTimeout(t); t = setTimeout(() => nav.classList.remove('show'), 1800); };
@@ -258,29 +258,57 @@ function sketchMode(on) {
 function paintIllus(root = document) {
   $$('[data-illus]', root).forEach(el => { el.innerHTML = illusSVG(el.dataset.illus); el.classList.add('illus'); });
 }
-// themes: [{ id, label, style, cls }]. The chosen one is remembered per desktop.
+// themes: [{ id, label, style, mode, colors }]. Each theme has a few color
+// options: colors[0] is the theme as designed, the rest restyle it. A color can
+// set mode ('light' or 'dark') and override any theme field (ink, paper, pal).
+// The chosen theme, and the color for each theme, are remembered per desktop.
+// #stage gets theme-<id>, data-color=<color id> and mode-dark when it is dark.
 function setupThemes(desk, themes, onChange) {
   const box = document.getElementById('theme-pick');
+  const cbox = document.getElementById('color-pick');
   const stage = document.getElementById('stage');
-  const apply = id => {
+  const colorsOf = t => t.colors && t.colors.length ? t.colors : [{ id: 'a', label: t.label }];
+  const apply = (id, cid) => {
     const t = themes.find(x => x.id === id) || themes[0];
+    const cols = colorsOf(t);
+    // Switch instantly: some elements animate their background, and Chrome can
+    // leave them on the old color when only a color variable changes.
+    stage.classList.add('retheming'); void stage.offsetWidth;
+    requestAnimationFrame(() => requestAnimationFrame(() => stage.classList.remove('retheming')));
+    const c = cols.find(x => x.id === (cid || store(desk + ':color:' + t.id))) || cols[0];
     themes.forEach(x => stage.classList.remove('theme-' + x.id));
     stage.classList.add('theme-' + t.id);
-    THEME = t; store(desk + ':theme', t.id);
-    sketchMode(t.style === 'sketch' || !!t.outline);
+    stage.dataset.color = c.id;
+    themes.forEach(x => colorsOf(x).forEach(y => y.cls && y.cls.split(' ').forEach(k => stage.classList.remove(k))));
+    if (c.cls) c.cls.split(' ').forEach(k => stage.classList.add(k));
+    THEME = { ...t, ...c, id: t.id, label: t.label, color: c.id, colorLabel: c.label };
+    // Sketch ink and paper follow the color, in CSS and in the redrawn icons and illustrations.
+    if (THEME.style === 'sketch' && THEME.ink) { stage.style.setProperty('--sk-ink', THEME.ink); stage.style.setProperty('--sk-paper', THEME.paper || '#fffdf8'); }
+    else { stage.style.removeProperty('--sk-ink'); stage.style.removeProperty('--sk-paper'); }
+    const dark = (THEME.mode || 'light') === 'dark';
+    stage.classList.toggle('mode-dark', dark); stage.classList.toggle('mode-light', !dark);
+    store(desk + ':theme', t.id); store(desk + ':color:' + t.id, c.id);
+    sketchMode(THEME.style === 'sketch' || !!THEME.outline);
     if (box) $$('button', box).forEach(b => b.classList.toggle('on', b.dataset.t === t.id));
+    if (cbox) {
+      cbox.innerHTML = cols.map(x => `<button type="button" data-c="${x.id}" title="${x.label}${x.mode === 'dark' ? ' · dark' : x.mode === 'light' ? ' · light' : ''}" aria-label="${x.label}" class="${x.id === c.id ? 'on' : ''}" style="--a:${(x.sw || [])[0] || '#fff'};--b:${(x.sw || [])[1] || (x.sw || [])[0] || '#ddd'}"></button>`).join('')
+        + `<span class="clbl">${c.label}</span>`;
+      $$('button', cbox).forEach(b => b.addEventListener('click', () => apply(t.id, b.dataset.c)));
+    }
     paintIllus();
-    onChange && onChange(t);
+    onChange && onChange(THEME);
   };
   if (box) {
     box.innerHTML = '<span class="lbl">Theme</span>' + themes.map(t => `<button type="button" data-t="${t.id}">${t.label}</button>`).join('');
     $$('button', box).forEach(b => b.addEventListener('click', () => apply(b.dataset.t)));
   }
-  // T cycles themes from the keyboard.
+  // T cycles themes and C cycles the colors of the current theme.
   addEventListener('keydown', e => {
-    if (e.target.closest('input, [contenteditable]') || e.key.toLowerCase() !== 't') return;
-    const i = themes.findIndex(x => x === THEME);
-    apply(themes[(i + 1) % themes.length].id);
+    if (e.target.closest('input, textarea, [contenteditable]') || e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key.toLowerCase();
+    const i = themes.findIndex(x => x.id === THEME.id);
+    if (k === 't') apply(themes[(i + 1) % themes.length].id);
+    if (k === 'c') { const cols = colorsOf(themes[i]); const j = cols.findIndex(x => x.id === THEME.color); apply(THEME.id, cols[(j + 1) % cols.length].id); }
   });
   apply(store(desk + ':theme') || themes[0].id);
 }

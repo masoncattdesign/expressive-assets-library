@@ -189,7 +189,16 @@ $('#ask-input').addEventListener('focus', () => {
 $('#ask').addEventListener('submit', e => { e.preventDefault(); const v = $('#ask-input').value.trim(); if (v) decorate(v); });
 
 function clearDecor() { $$('.leaf, .star').forEach(x => x.remove()); }
-function palette(p) { stage.classList.remove('pal-sunny', 'pal-fall', 'pal-night', 'pal-m365', 'pal-riso', 'pal-sketch'); stage.classList.add('pal-' + p); }
+// A palette can stack classes ('riso riso-dark'): the base look plus a recolor.
+function palette(p) {
+  [...stage.classList].filter(k => k.startsWith('pal-')).forEach(k => stage.classList.remove(k));
+  p.split(' ').forEach(k => stage.classList.add('pal-' + k));
+  if (/\bnight\b/.test(p)) addStars();
+}
+function addStars() {
+  if ($('.star')) return;
+  for (let i = 0; i < 40; i++) { const s = html(`<i class="star" style="left:${Math.random() * 1920}px;top:${Math.random() * 520}px;animation-delay:${Math.random() * 3}s;transform:scale(${.4 + Math.random()})"></i>`); $('#board').prepend(s); }
+}
 function decorate(v) {
   const q = v.toLowerCase();
   // The helper bot gets to work, and the bots on the board join in.
@@ -200,8 +209,7 @@ function decorate(v) {
     ['🍂', '🍁', '🍂', '🍁', '🍂'].forEach((l, i) => { const el = html(`<div class="leaf" style="left:${[380, 1020, 1210, 760, 1600][i]}px;top:${[420, 140, 330, 820, 460][i]}px;animation-delay:${i * 120}ms;transform:rotate(${i * 37}deg)">${l}</div>`); $('#board').appendChild(el); });
     toast('Warmed everything up for fall. Your stickers stayed put.');
   } else if (/night|calm|dark|sleep|evening/.test(q)) {
-    palette('night'); clearDecor();
-    for (let i = 0; i < 40; i++) { const s = html(`<i class="star" style="left:${Math.random() * 1920}px;top:${Math.random() * 520}px;animation-delay:${Math.random() * 3}s;transform:scale(${.4 + Math.random()})"></i>`); $('#board').prepend(s); }
+    clearDecor(); palette('night');
     toast('Night mode. Quieter colors, same board.');
   } else if (/sun|bright|spring|reset|back|default/.test(q)) {
     palette(THEME.pal); clearDecor(); toast(`Back to ${THEME.label}.`);
@@ -229,11 +237,31 @@ function texify() {
   });
 }
 setupThemes('pinboard', [
-  { id: 'windows', label: 'Default', style: 'windows', pal: 'sunny' },
-  { id: 'm365', label: 'Comic strip', style: 'm365', pal: 'm365', outline: true, ink: '#484848' },
-  { id: 'stipple', label: 'Stipple', style: 'stipple', pal: 'riso', tex: 'stipple' },
-  { id: 'texture', label: 'Texture', style: 'texture', pal: 'sunny', tex: 'pattern' },
-  { id: 'sketch', label: 'Sketch', style: 'sketch', pal: 'sketch', ink: '#2b2440', paper: '#fffdf8' },
+  { id: 'windows', label: 'Default', style: 'windows', pal: 'sunny', colors: [
+    { id: 'a', label: 'Sunny', sw: ['#fde27a', '#f4a3c1'] },
+    { id: 'b', label: 'Harvest', pal: 'fall', sw: ['#f4b26b', '#6b2e14'], bots: ['#f4b26b', '#c9d17a', '#e89a4f', '#d9805c'] },
+    { id: 'c', label: 'Night', pal: 'night', mode: 'dark', sw: ['#1a1d3a', '#7c83ff'], bots: ['#7c83ff', '#5fa8d3', '#f1d27a', '#c9a7f0'] },
+  ] },
+  { id: 'm365', label: 'Comic strip', style: 'm365', pal: 'm365', outline: true, ink: '#484848', colors: [
+    { id: 'a', label: 'Pastel', sw: ['#C6E1FF', '#FB966E'] },
+    { id: 'b', label: 'Pop', pal: 'm365 pop', ink: '#111111', sw: ['#ffffff', '#FF3D8B'], bots: ['#FFE14D', '#FF3D8B', '#2F6BFF', '#2BD97C', '#7FD1FF'] },
+    { id: 'c', label: 'Ink', pal: 'm365 pop popdark', mode: 'dark', ink: '#f4f4f4', sw: ['#0e0e0e', '#FFE14D'], bots: ['#FFE14D', '#FF3D8B', '#2F6BFF', '#2BD97C', '#7FD1FF'] },
+  ] },
+  { id: 'stipple', label: 'Stipple', style: 'stipple', pal: 'riso', tex: 'stipple', colors: [
+    { id: 'a', label: 'Riso', sw: ['#FFD23D', '#2A3BD9'] },
+    { id: 'b', label: 'Mint', pal: 'riso riso-mint', sw: ['#0E8C84', '#FF8A3D'], bots: ['#FF8A3D', '#0E8C84', '#FFC93D', '#7A3FD1', '#7EC8E3'] },
+    { id: 'c', label: 'Blackout', pal: 'riso riso-dark', mode: 'dark', sw: ['#1c1a17', '#E8357A'] },
+  ] },
+  { id: 'texture', label: 'Texture', style: 'texture', pal: 'sunny', tex: 'pattern', colors: [
+    { id: 'a', label: 'Sunny', sw: ['#fde27a', '#c9a7f0'] },
+    { id: 'b', label: 'Garden', pal: 'garden', sw: ['#9cc98a', '#e76f51'], bots: ['#9cc98a', '#f4a582', '#f6c56b', '#8cc7b5'] },
+    { id: 'c', label: 'Velvet', pal: 'velvet', mode: 'dark', sw: ['#2b1640', '#ff8fc8'], bots: ['#ff8fc8', '#5fd3c4', '#ffd27a', '#b48cff'] },
+  ] },
+  { id: 'sketch', label: 'Sketch', style: 'sketch', pal: 'sketch', ink: '#2b2440', paper: '#fffdf8', colors: [
+    { id: 'a', label: 'Graph paper', sw: ['#fbf9f3', '#2b2440'] },
+    { id: 'b', label: 'Ballpoint', pal: 'sketch ballpoint', ink: '#2346c8', paper: '#ffffff', sw: ['#ffffff', '#2346c8'] },
+    { id: 'c', label: 'Chalk', pal: 'sketch chalk', mode: 'dark', ink: '#f1ede2', paper: '#262a31', sw: ['#23272e', '#f1ede2'] },
+  ] },
 ], t => {
   clearDecor(); palette(t.pal);
   stage.classList.toggle('tex-stipple', t.tex === 'stipple');
@@ -258,7 +286,7 @@ const PALETTES = {
   texture: ['#f4a3c1', '#9fd49a', '#a9b8ff', '#ffc97a', '#c9a7f0'],
   sketch: ['#fffdf8'],
 };
-function themeColors() { return PALETTES[(THEME && THEME.id) || 'windows'] || PALETTES.windows; }
+function themeColors() { return (THEME && THEME.bots) || PALETTES[(THEME && THEME.id) || 'windows'] || PALETTES.windows; }
 let saysN = 0;
 function mountBot(w, kind, size = 112) {
   const i = BOARD_BOTS.length;

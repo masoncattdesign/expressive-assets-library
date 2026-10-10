@@ -594,38 +594,42 @@
 
 /* ==== Sketch: the whole bench drawn in ink on graph paper ================= */
 #stage.theme-sketch {
-  --ink: #24243a; --accent: #24243a;
-  background: radial-gradient(circle, rgba(36,36,58,.16) 1px, transparent 1.4px) 0 0 / 22px 22px, #fbf9f3 !important;
+  --ink: var(--sk-ink); --accent: var(--sk-ink);
+  --ink-2: color-mix(in srgb, var(--sk-ink) 62%, transparent); --ink-3: color-mix(in srgb, var(--sk-ink) 44%, transparent);
+  --sk-shadow: rgba(36,36,58,.12); --sk-faint: rgba(36,36,58,.06); --sk-mid: rgba(36,36,58,.35);
+  --sk-hi: #fff3a6; --sk-hi2: #fff7c4; --sk-peach: #ffe9dc; --sk-lilac: #efe8ff; --sk-blue: #e4eeff; --sk-blue2: #edf3ff;
+  --sk-red: #c0392b; --sk-green: #1d7a40; --sk-dot: rgba(36,36,58,.16); --sk-bg: #fbf9f3;
+  background: radial-gradient(circle, var(--sk-dot) 1px, transparent 1.4px) 0 0 / 22px 22px, var(--sk-bg) !important;
 }
 .theme-sketch .card, .theme-sketch .win, .theme-sketch .work, .theme-sketch .start, .theme-sketch .tile:not(.solid), .theme-sketch .tile.solid, .theme-sketch .ask {
   background: var(--sk-paper); backdrop-filter: none; -webkit-backdrop-filter: none;
-  box-shadow: 0 0 0 var(--sk-line) var(--sk-ink), 4px 5px 0 0 rgba(36,36,58,.12);
+  box-shadow: 0 0 0 var(--sk-line) var(--sk-ink), 4px 5px 0 0 var(--sk-shadow);
 }
-.theme-sketch .goo-layer { opacity: 1; filter: url(#goo) drop-shadow(1.6px 0 0 #24243a) drop-shadow(-1.6px 0 0 #24243a) drop-shadow(0 1.6px 0 #24243a) drop-shadow(0 -1.6px 0 #24243a) drop-shadow(4px 5px 0 rgba(36,36,58,.12)); }
+.theme-sketch .goo-layer { opacity: 1; filter: url(#goo) drop-shadow(1.6px 0 0 var(--sk-ink)) drop-shadow(-1.6px 0 0 var(--sk-ink)) drop-shadow(0 1.6px 0 var(--sk-ink)) drop-shadow(0 -1.6px 0 var(--sk-ink)) drop-shadow(4px 5px 0 var(--sk-shadow)); }
 .theme-sketch .blob, .theme-sketch .neck { background: var(--sk-paper); }
-.theme-sketch #g-ask .goo-layer { filter: url(#goo) drop-shadow(1.6px 0 0 #24243a) drop-shadow(-1.6px 0 0 #24243a) drop-shadow(0 1.6px 0 #24243a) drop-shadow(0 -1.6px 0 #24243a); }
+.theme-sketch #g-ask .goo-layer { filter: url(#goo) drop-shadow(1.6px 0 0 var(--sk-ink)) drop-shadow(-1.6px 0 0 var(--sk-ink)) drop-shadow(0 1.6px 0 var(--sk-ink)) drop-shadow(0 -1.6px 0 var(--sk-ink)); }
 /* Greeting and focus: a yellow highlighter wash instead of the glow */
-.theme-sketch .clock-glow { background: repeating-linear-gradient(-8deg, #fff3a6 0 9px, #fff7c4 9px 12px); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
-.theme-sketch .greet-card { box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
-.theme-sketch .focus-btn { background: var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink), 3px 4px 0 0 #24243a; }
+.theme-sketch .clock-glow { background: repeating-linear-gradient(-8deg, var(--sk-hi) 0 9px, var(--sk-hi2) 9px 12px); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
+.theme-sketch .greet-card { background: var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
+.theme-sketch .focus-btn { background: var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink), 3px 4px 0 0 var(--sk-ink); }
 .theme-sketch .focus-btn.running { background: var(--sk-ink); color: var(--sk-paper); }
 /* Folders, papers and stacks as line drawings */
 .theme-sketch .folder .f-back, .theme-sketch .folder.orange .f-back, .theme-sketch .folder.purple .f-back { background: var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
 .theme-sketch .folder .f-back::before { box-shadow: inset var(--sk-line) var(--sk-line) 0 0 var(--sk-ink), inset calc(var(--sk-line) * -1) 0 0 0 var(--sk-ink); }
-.theme-sketch .folder.orange .f-front { background: repeating-linear-gradient(135deg, #ffe2c7 0 3px, var(--sk-paper) 3px 9px); }
-.theme-sketch .folder.purple .f-front { background: repeating-linear-gradient(135deg, #e6dbff 0 3px, var(--sk-paper) 3px 9px); }
+.theme-sketch .folder.orange .f-front { background: repeating-linear-gradient(135deg, var(--sk-peach) 0 3px, var(--sk-paper) 3px 9px); }
+.theme-sketch .folder.purple .f-front { background: repeating-linear-gradient(135deg, var(--sk-lilac) 0 3px, var(--sk-paper) 3px 9px); }
 .theme-sketch .folder .f-front { color: var(--sk-ink); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
 .theme-sketch .folder .f-paper, .theme-sketch .stack .sheet { box-shadow: inset 0 0 0 1.25px var(--sk-ink); background-color: var(--sk-paper); }
 /* Chips, todos and the rail */
 .theme-sketch .chip, .theme-sketch .seg button { background: transparent; color: var(--sk-ink); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .seg button.on, .theme-sketch .chip.dark { background: var(--sk-ink); color: var(--sk-paper); }
-.theme-sketch .chip.red { color: #c0392b; box-shadow: inset 0 0 0 1.25px #c0392b; }
-.theme-sketch .chip.green { color: #1d7a40; box-shadow: inset 0 0 0 1.25px #1d7a40; }
+.theme-sketch .chip.red { color: var(--sk-red); box-shadow: inset 0 0 0 1.25px var(--sk-red); }
+.theme-sketch .chip.green { color: var(--sk-green); box-shadow: inset 0 0 0 1.25px var(--sk-green); }
 .theme-sketch .todo { box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .todo.peach { background: #ffe9dc; } .theme-sketch .todo.blue { background: #e4eeff; } .theme-sketch .todo.lilac { background: #efe8ff; }
+.theme-sketch .todo.peach { background: var(--sk-peach); } .theme-sketch .todo.blue { background: var(--sk-blue); } .theme-sketch .todo.lilac { background: var(--sk-lilac); }
 .theme-sketch .rail button.on, .theme-sketch .recs-pick button.on { background: var(--sk-ink); color: var(--sk-paper); }
 .theme-sketch .recs-pick button, .theme-sketch .round, .theme-sketch .m-ctrls button { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .task.featured { background: repeating-linear-gradient(-8deg, #e4eeff 0 8px, #edf3ff 8px 11px); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch .task.featured { background: repeating-linear-gradient(-8deg, var(--sk-blue) 0 8px, var(--sk-blue2) 8px 11px); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .task .t-ic { box-shadow: inset 0 0 0 1.25px var(--sk-ink); background: var(--sk-paper); }
 .theme-sketch .task .t-bar, .theme-sketch .m-bar { background: transparent; box-shadow: inset 0 0 0 1px var(--sk-ink); }
 .theme-sketch .task .t-bar i, .theme-sketch .m-bar i { background: var(--sk-ink); }
@@ -650,15 +654,15 @@
 .theme-sketch .bubble.me, .theme-sketch .ai-actions button.primary, .theme-sketch .chat-input button { background: var(--sk-ink); color: var(--sk-paper); }
 .theme-sketch .ask-suggest button, .theme-sketch .ai-actions button, .theme-sketch .chat-input { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .w-ai { background: none; }
-.theme-sketch .w-page-wrap, .theme-sketch .wk-prev { background: repeating-linear-gradient(-45deg, rgba(36,36,58,.06) 0 1px, transparent 1px 9px), var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
+.theme-sketch .w-page-wrap, .theme-sketch .wk-prev { background: repeating-linear-gradient(-45deg, var(--sk-faint) 0 1px, transparent 1px 9px), var(--sk-paper); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
 .theme-sketch .wk-nub { background: var(--sk-paper); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .w-page, .theme-sketch .wk-page, .theme-sketch .invite { box-shadow: 0 0 0 1.25px var(--sk-ink), 4px 5px 0 rgba(36,36,58,.12); }
+.theme-sketch .w-page, .theme-sketch .wk-page, .theme-sketch .invite { box-shadow: 0 0 0 1.25px var(--sk-ink), 4px 5px 0 var(--sk-shadow); }
 .theme-sketch .wk-hero, .theme-sketch .invite .hero, .theme-sketch .slide-big, .theme-sketch .web-hero, .theme-sketch .web-cards div, .theme-sketch .src .thumb-s > div[style*="gradient"], .theme-sketch .tv.slide { filter: grayscale(1) contrast(1.1); }
 .theme-sketch .wk-pill, .theme-sketch .wk-head button.primary { background: var(--sk-ink); box-shadow: none; animation: none; }
 .theme-sketch .wk-pill.done { background: var(--sk-ink); }
 .theme-sketch .src .thumb-s, .theme-sketch .sv-file, .theme-sketch .sv-tip { box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .sv-col { background: transparent; box-shadow: inset 0 0 0 1.25px rgba(36,36,58,.35); }
-.theme-sketch .sv-col.focus { background: repeating-linear-gradient(-8deg, #fff3a6 0 8px, #fff7c4 8px 11px); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
+.theme-sketch .sv-col { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-mid); }
+.theme-sketch .sv-col.focus { background: repeating-linear-gradient(-8deg, var(--sk-hi) 0 8px, var(--sk-hi2) 8px 11px); box-shadow: inset 0 0 0 var(--sk-line) var(--sk-ink); }
 .theme-sketch .day::before { background: var(--sk-ink); }
 .theme-sketch .pack.done i { background: var(--sk-ink); border-color: var(--sk-ink); }
 .theme-sketch .toast { background: var(--sk-ink); }
@@ -679,3 +683,159 @@
 .head-bot { width: 34px; height: 34px; display: inline-block; margin: -6px 2px -6px -4px; }
 .pill-bot { width: 30px; height: 30px; display: inline-block; margin: -10px 0 -6px -4px; }
 .wk-pill.done .pill-bot .bot { filter: none; }
+
+/* ==== Color options ======================================================= */
+/* Each theme has three: as designed (a), another take in the same mode (b), and
+   one in the opposite mode (c). setupThemes sets data-color, mode-dark and any
+   extra class a color asks for. */
+
+/* Default · Sunset: the wallpaper warms to peach and rose, the highlights follow */
+#stage.theme-windows[data-color="b"] { --accent: #e0457b; --wp-tint: linear-gradient(160deg, #ffb38a, #ff7aa8 55%, #b07cf7); --wp-blend: color; }
+.theme-windows[data-color="b"] .clock-glow, .theme-windows[data-color="b"] .focus-btn { background: linear-gradient(162deg, #ffd3a8 0%, #ffb0c8 50%, #e6c8ff 100%); }
+.theme-windows[data-color="b"] .focus-btn { box-shadow: 0 4px 14px rgba(224, 69, 123, .3); }
+.theme-windows[data-color="b"] .greet-eyebrow i { background: #ff7aa8; }
+.theme-windows[data-color="b"] .rail button.on, .theme-windows[data-color="b"] .seg button { background: #ffe1ec; color: #c2255c; }
+.theme-windows[data-color="b"] .seg button.on { background: var(--ink); color: #fff; }
+.theme-windows[data-color="b"] .task.featured { background: rgba(255, 214, 228, .7); }
+.theme-windows[data-color="b"] .task .t-bar i, .theme-windows[data-color="b"] .thumb .active-bar::before { background: #e0457b; }
+.theme-windows[data-color="b"] .wk-pill { background: #e0457b; box-shadow: 0 8px 24px rgba(224, 69, 123, .35); }
+.theme-windows[data-color="b"] .wk-prev { background: #ffe4ec; } .theme-windows[data-color="b"] .wk-nub { background: #ffc2d6; }
+.theme-windows[data-color="b"] .wk-head button.primary { background: #e0457b; }
+
+/* Dark: every surface goes to deep glass; text and lines flip to light */
+#stage.mode-dark:not(.theme-sketch) {
+  --ink: #efeef8; --ink-2: rgba(239, 238, 248, .66); --ink-3: rgba(239, 238, 248, .44); --accent: #8b8cff;
+  --dk-card: rgba(28, 28, 42, .86); --dk-solid: #1f1f2e; --dk-2: #2a2a3d; --dk-3: #34344b; --dk-line: rgba(255, 255, 255, .09);
+  --wp-tint: rgba(8, 8, 22, .7);
+}
+.mode-dark:not(.theme-sketch) :is(.card, .win, .work, .start, .ask) { background: var(--dk-card); box-shadow: 0 14px 34px rgba(0, 0, 0, .35), inset 0 0 0 1px var(--dk-line); }
+.mode-dark:not(.theme-sketch) :is(.blob, .neck) { background: var(--dk-solid); }
+.mode-dark:not(.theme-sketch) .goo-layer { opacity: 1; filter: url(#goo) drop-shadow(0 0 1px rgba(255, 255, 255, .12)) drop-shadow(0 14px 26px rgba(0, 0, 0, .4)); }
+.mode-dark:not(.theme-sketch) :is(.greet-card, .bubble.ai, .chat-input, .sv-col, .wk-ask, .sv-tip, .rsvp div, .wk-chat .me) { background: var(--dk-2); }
+.mode-dark:not(.theme-sketch) :is(.chip, .chip.gray, .round, .m-ctrls button, .m-bar, .task .t-ic, .task .t-bar, .ask-voice, .ask-suggest button, .ai-actions button, .recs-pick button, .wk-head button, .web-addr, .skel, .sv-file, .thumb .badge, .ex-side div.on) { background: var(--dk-3); color: var(--ink); box-shadow: none; }
+.mode-dark:not(.theme-sketch) :is(.clock-time, .focus-btn) { color: #1c1b33; }
+.mode-dark:not(.theme-sketch) .focus-btn.running { background: #efeef8; color: #1c1b33; }
+.mode-dark:not(.theme-sketch) .chip.violet { background: rgba(139, 140, 255, .2); color: #c4c5ff; }
+.mode-dark:not(.theme-sketch) .chip.blue { background: rgba(96, 165, 250, .2); color: #a8cdfc; }
+.mode-dark:not(.theme-sketch) .chip.red { background: rgba(248, 113, 113, .2); color: #fcb0b0; }
+.mode-dark:not(.theme-sketch) .chip.green { background: rgba(74, 222, 128, .18); color: #9cefb9; }
+.mode-dark:not(.theme-sketch) :is(.chip.dark, .seg button.on, .recs-pick button.on, .bubble.me) { background: var(--ink); color: #1c1b33; }
+.mode-dark:not(.theme-sketch) .seg button { background: rgba(139, 140, 255, .18); color: #c4c5ff; }
+.mode-dark:not(.theme-sketch) .rail { border-right-color: var(--dk-line); }
+.mode-dark:not(.theme-sketch) .rail button.on { background: rgba(139, 140, 255, .22); color: #c4c5ff; }
+.mode-dark:not(.theme-sketch) .rail button:hover, .mode-dark:not(.theme-sketch) .win-bar button:hover { background: rgba(255, 255, 255, .06); }
+.mode-dark:not(.theme-sketch) :is(.task, .day, .ml-item) { border-bottom-color: var(--dk-line); }
+.mode-dark:not(.theme-sketch) .task.featured { background: rgba(139, 140, 255, .16); }
+.mode-dark:not(.theme-sketch) .task:hover { background: rgba(255, 255, 255, .04); }
+.mode-dark:not(.theme-sketch) .todo.peach { background: rgba(255, 150, 110, .2); } .mode-dark:not(.theme-sketch) .todo.blue { background: rgba(110, 165, 255, .2); } .mode-dark:not(.theme-sketch) .todo.lilac { background: rgba(175, 145, 255, .2); }
+.mode-dark:not(.theme-sketch) .todo i, .mode-dark:not(.theme-sketch) .pack i { border-color: rgba(255, 255, 255, .5); }
+.mode-dark:not(.theme-sketch) .todo.done i::after { border-color: #1c1b33; }
+.mode-dark:not(.theme-sketch) .record-btn { background: rgba(20, 20, 32, .85); color: #fff; }
+.mode-dark:not(.theme-sketch) .tile { background: rgba(28, 28, 42, .55); box-shadow: inset 0 0 0 1px var(--dk-line), 0 6px 18px rgba(0, 0, 0, .25); }
+.mode-dark:not(.theme-sketch) .tile.solid { background: var(--dk-solid); }
+.mode-dark:not(.theme-sketch) .tile .run { background: rgba(255, 255, 255, .6); }
+.mode-dark:not(.theme-sketch) .tb-sep { background: rgba(255, 255, 255, .2); }
+.mode-dark:not(.theme-sketch) .strip-shape path { fill: rgba(20, 20, 34, .5); stroke: rgba(255, 255, 255, .16); }
+.mode-dark:not(.theme-sketch) .ask input { border-bottom-color: rgba(255, 255, 255, .25); }
+.mode-dark:not(.theme-sketch) :is(.w-tools, .w-ai, .ex-side, .ml-list) { border-right-color: var(--dk-line); }
+.mode-dark:not(.theme-sketch) .w-ai { background: rgba(139, 140, 255, .06); }
+.mode-dark:not(.theme-sketch) :is(.w-page-wrap, .slide-view) { background: #16161f; }
+.mode-dark:not(.theme-sketch) .ml-item.on { background: rgba(139, 140, 255, .16); }
+.mode-dark:not(.theme-sketch) .wk-prev { background: #26233d; }
+.mode-dark:not(.theme-sketch) .wk-nub { background: #3d3766; }
+.mode-dark:not(.theme-sketch) .wk-head button.back { background: rgba(255, 255, 255, .08); }
+.mode-dark:not(.theme-sketch) .wk-chat hr { border-top-color: var(--dk-line); }
+.mode-dark:not(.theme-sketch) .sv-col.focus { background: rgba(139, 140, 255, .2); }
+.mode-dark:not(.theme-sketch) .start-grid button:hover { background: rgba(255, 255, 255, .06); }
+/* Paper stays paper: documents, invites and the map card keep dark text */
+.mode-dark:not(.theme-sketch) :is(.w-page, .wk-page, .invite, .map-card, .folder .f-paper, .stack .sheet, .thumb .tv) { --ink: #1c1b33; --ink-2: rgba(28, 27, 51, .6); --ink-3: rgba(28, 27, 51, .42); color: var(--ink); }
+
+/* Comic strip · Pop and Ink: stark panels with heavy outlines, a hard offset
+   shadow like a printed comic, halftone dots, and big flat pops of color.
+   Pop is black on white; Ink flips it to white on black. */
+#stage.comic {
+  --cm-ink: #111; --cm-paper: #fff; --cm-dot: rgba(17, 17, 17, .13);
+  --pop-y: #FFE14D; --pop-p: #FF3D8B; --pop-b: #2F6BFF; --pop-o: #FF7A1A; --pop-g: #2BD97C;
+  --ink: var(--cm-ink); --ink-2: color-mix(in srgb, var(--cm-ink) 64%, transparent); --ink-3: color-mix(in srgb, var(--cm-ink) 46%, transparent); --accent: var(--pop-b);
+  background: radial-gradient(circle, var(--cm-dot) 1.3px, transparent 1.8px) 0 0 / 12px 12px, var(--cm-paper) !important;
+  --wp-tint: none;
+}
+#stage.comic.mode-dark { --cm-ink: #f4f4f4; --cm-paper: #0e0e0e; --cm-dot: rgba(255, 255, 255, .12); }
+#stage.comic :is(.card, .win, .work, .start, .ask) { background: var(--cm-paper); backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: 0 0 0 2.5px var(--cm-ink), 6px 7px 0 0 var(--cm-ink); }
+#stage.comic :is(.blob, .neck) { background: var(--cm-paper); }
+#stage.comic .goo-layer { opacity: 1; filter: url(#goo) drop-shadow(2.5px 0 0 var(--cm-ink)) drop-shadow(-2.5px 0 0 var(--cm-ink)) drop-shadow(0 2.5px 0 var(--cm-ink)) drop-shadow(0 -2.5px 0 var(--cm-ink)) drop-shadow(6px 7px 0 var(--cm-ink)); }
+#stage.comic #g-ask .goo-layer { filter: url(#goo) drop-shadow(2.5px 0 0 var(--cm-ink)) drop-shadow(-2.5px 0 0 var(--cm-ink)) drop-shadow(0 2.5px 0 var(--cm-ink)) drop-shadow(0 -2.5px 0 var(--cm-ink)); }
+#stage.comic .clock-glow { background: var(--pop-y); box-shadow: inset 0 0 0 2.5px #111; }
+#stage.comic :is(.clock-time, .focus-btn) { color: #111; }
+#stage.comic .greet-card { background: var(--cm-paper); box-shadow: inset 0 0 0 2.5px var(--cm-ink); }
+#stage.comic .greet-eyebrow i { background: var(--pop-p); }
+#stage.comic .focus-btn { background: var(--pop-p); color: #fff; box-shadow: inset 0 0 0 2.5px #111, 4px 5px 0 #111; }
+#stage.comic .focus-btn.running { background: var(--cm-ink); color: var(--cm-paper); }
+#stage.comic .folder.orange .f-back { background: #d45a00; } #stage.comic .folder.orange .f-front { background: var(--pop-o); }
+#stage.comic .folder.purple .f-back { background: #1d47c9; } #stage.comic .folder.purple .f-front { background: var(--pop-b); }
+#stage.comic .folder :is(.f-front, .f-back) { box-shadow: inset 0 0 0 2.5px #111; }
+#stage.comic .folder .f-front { color: #fff; }
+#stage.comic :is(.chip, .chip.gray, .chip.violet, .chip.blue, .seg button, .recs-pick button, .round, .m-ctrls button, .ask-voice, .ask-suggest button, .ai-actions button, .wk-head button, .task .t-ic, .sv-file, .thumb .badge) { background: var(--cm-paper); color: var(--cm-ink); box-shadow: inset 0 0 0 2px var(--cm-ink); }
+#stage.comic .chip.red { background: var(--pop-p); color: #fff; box-shadow: inset 0 0 0 2px #111; }
+#stage.comic .chip.green { background: var(--pop-g); color: #111; box-shadow: inset 0 0 0 2px #111; }
+#stage.comic :is(.chip.dark, .seg button.on, .recs-pick button.on, .bubble.me, .m-ctrls .primary, .chat-input button, .ai-actions button.primary, .wk-head button.primary) { background: var(--cm-ink); color: var(--cm-paper); box-shadow: none; }
+#stage.comic .rail button.on { background: var(--pop-y); color: #111; box-shadow: inset 0 0 0 2px #111; }
+#stage.comic .task:nth-child(3n+1) .t-ic { background: var(--pop-y); } #stage.comic .task:nth-child(3n+2) .t-ic { background: var(--pop-p); } #stage.comic .task:nth-child(3n) .t-ic { background: #7FD1FF; }
+#stage.comic .task .t-ic { box-shadow: inset 0 0 0 2px #111; }
+#stage.comic .task.featured { background: radial-gradient(circle, rgba(47, 107, 255, .35) 1.4px, transparent 1.9px) 0 0 / 8px 8px, color-mix(in srgb, var(--pop-b) 14%, var(--cm-paper)); box-shadow: inset 0 0 0 2px var(--cm-ink); }
+#stage.comic :is(.task .t-bar, .m-bar) { background: var(--cm-paper); box-shadow: inset 0 0 0 1.5px var(--cm-ink); }
+#stage.comic :is(.task .t-bar i, .m-bar i, .thumb .active-bar::before) { background: var(--pop-p); }
+#stage.comic :is(.task, .rail, .day) { border-color: color-mix(in srgb, var(--cm-ink) 22%, transparent); }
+#stage.comic .todo { box-shadow: inset 0 0 0 2px #111; color: #111; --ink: #111; --ink-2: rgba(17,17,17,.65); }
+#stage.comic .todo.peach { background: var(--pop-y); } #stage.comic .todo.blue { background: #7FD1FF; } #stage.comic .todo.lilac { background: #FF9EC7; }
+#stage.comic .todo i { border-color: #111; } #stage.comic .todo.done i { background: #111; border-color: #111; } #stage.comic .todo.done i::after { border-color: #fff; }
+#stage.comic .record-art { background: radial-gradient(circle, var(--cm-paper) 0 6%, transparent 6.5%), conic-gradient(var(--pop-y) 0 25%, var(--pop-p) 0 50%, var(--pop-b) 0 75%, var(--pop-g) 0); box-shadow: inset 0 0 0 2.5px #111; }
+#stage.comic .record-btn { background: var(--cm-paper); color: var(--cm-ink); box-shadow: inset 0 0 0 2px var(--cm-ink); }
+#stage.comic .tile, #stage.comic .tile.solid, #stage.comic .tile.app { background: var(--cm-paper); backdrop-filter: none; box-shadow: inset 0 0 0 2px var(--cm-ink), 3px 4px 0 var(--cm-ink); }
+#stage.comic .tile .run, #stage.comic .tb-sep { background: var(--cm-ink); }
+#stage.comic .tile.app[title="File Explorer"] { background: var(--pop-y); } #stage.comic .tile.app[title="Edge"] { background: #7FD1FF; } #stage.comic .tile.app[title="Photos"] { background: #FF9EC7; } #stage.comic .tile.app[title="Outlook"] { background: var(--pop-g); }
+#stage.comic #tb-copilot { background: var(--cm-paper); }
+#stage.comic .strip::before { backdrop-filter: none; -webkit-backdrop-filter: none; }
+#stage.comic .strip-shape path { fill: var(--cm-paper); stroke: var(--cm-ink); stroke-width: 2.5; }
+#stage.comic .thumb { box-shadow: 0 0 0 2px var(--cm-ink), 3px 4px 0 var(--cm-ink); }
+#stage.comic .bubble.ai, #stage.comic .chat-input { background: var(--cm-paper); box-shadow: inset 0 0 0 2px var(--cm-ink); }
+#stage.comic .ask input { border-bottom-color: var(--cm-ink); }
+#stage.comic :is(.w-page-wrap, .wk-prev) { background: radial-gradient(circle, var(--cm-dot) 1.3px, transparent 1.8px) 0 0 / 10px 10px, color-mix(in srgb, var(--pop-y) 30%, var(--cm-paper)); box-shadow: inset 0 0 0 2.5px var(--cm-ink); }
+#stage.comic .wk-nub { background: var(--pop-y); box-shadow: inset 0 0 0 2px #111; }
+#stage.comic :is(.w-page, .wk-page, .invite) { box-shadow: 0 0 0 2.5px #111, 6px 7px 0 #111; }
+#stage.comic .wk-pill { background: var(--pop-p); box-shadow: inset 0 0 0 2px #111, 4px 5px 0 #111; animation: none; }
+#stage.comic .wk-pill.done { background: var(--pop-g); color: #111; }
+#stage.comic .sv-col { background: transparent; box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--cm-ink) 35%, transparent); }
+#stage.comic .sv-col.focus { background: var(--pop-y); box-shadow: inset 0 0 0 2.5px #111; --ink: #111; color: #111; }
+#stage.comic .sv-tip, #stage.comic .wk-ask, #stage.comic .wk-chat .me { background: var(--cm-paper); box-shadow: inset 0 0 0 2px var(--cm-ink); }
+#stage.comic .toast { background: var(--pop-y); color: #111; box-shadow: inset 0 0 0 2.5px #111, 4px 5px 0 #111; }
+#stage.comic .winlogo i { background: var(--pop-b); box-shadow: inset 0 0 0 1.5px #111; }
+#stage.comic .contact img, #stage.comic .rail-avatar { box-shadow: 0 0 0 2px var(--cm-ink); }
+
+/* Sketch · Ballpoint: blue pen on lined white paper, a pink highlighter */
+#stage.theme-sketch[data-color="b"] {
+  --sk-shadow: rgba(35, 70, 200, .12); --sk-faint: rgba(35, 70, 200, .06); --sk-mid: rgba(35, 70, 200, .35);
+  --sk-hi: #ffc2dc; --sk-hi2: #ffd9e8; --sk-peach: #ffe8d6; --sk-lilac: #ece6ff; --sk-blue: #dfe8ff; --sk-blue2: #ebf1ff;
+  --sk-red: #d6336c; --sk-green: #1d7a40; --sk-bg: #ffffff;
+  background: linear-gradient(90deg, transparent 96px, rgba(230, 70, 90, .35) 96px 98px, transparent 98px), repeating-linear-gradient(transparent 0 31px, rgba(35, 70, 200, .14) 31px 32px), #ffffff !important;
+}
+/* Sketch · Chalk: chalk on a slate board */
+#stage.theme-sketch[data-color="c"] {
+  --sk-shadow: rgba(0, 0, 0, .35); --sk-faint: rgba(241, 237, 226, .06); --sk-mid: rgba(241, 237, 226, .35);
+  --sk-hi: rgba(255, 226, 120, .32); --sk-hi2: rgba(255, 226, 120, .18); --sk-peach: rgba(255, 170, 130, .22); --sk-lilac: rgba(190, 165, 255, .22);
+  --sk-blue: rgba(140, 180, 255, .22); --sk-blue2: rgba(140, 180, 255, .12); --sk-red: #ff9a8a; --sk-green: #8fe0a8;
+  --sk-dot: rgba(241, 237, 226, .1); --sk-bg: #23272e;
+}
+.theme-sketch[data-color="c"] :is(.folder .f-paper, .stack .sheet, .thumb .tv) { background-color: var(--sk-paper); }
+.theme-sketch[data-color="c"] img:not(.sk-ic) { filter: grayscale(1) contrast(1.1) brightness(.9); }
+.theme-sketch[data-color="c"] :is(.wk-pill img, .bubble.me img, .toast img) { filter: none !important; }
+.theme-sketch[data-color="c"] :is(.w-page, .wk-page, .invite, .map-card) { background: var(--sk-paper); color: var(--sk-ink); }
+.theme-sketch[data-color="c"] :is(.wk-doc h1, .w-page h2, .invite h1, .invite p) { color: var(--sk-ink); }
+#stage.comic.mode-dark .tile.app, #stage.comic.mode-dark .task .t-ic { background: var(--cm-paper) !important; }
+#stage.comic.mode-dark .tile.app[title="File Explorer"] { box-shadow: inset 0 0 0 2.5px var(--pop-y), 3px 4px 0 var(--pop-y); }
+#stage.comic.mode-dark .tile.app[title="Edge"] { box-shadow: inset 0 0 0 2.5px #7FD1FF, 3px 4px 0 #7FD1FF; }
+#stage.comic.mode-dark .tile.app[title="Outlook"] { box-shadow: inset 0 0 0 2.5px var(--pop-g), 3px 4px 0 var(--pop-g); }
+#stage.comic.mode-dark .tile.app[title="Photos"] { box-shadow: inset 0 0 0 2.5px #FF9EC7, 3px 4px 0 #FF9EC7; }
+#stage.comic.mode-dark .task:nth-child(3n+1) .t-ic { box-shadow: inset 0 0 0 2px var(--pop-y); } #stage.comic.mode-dark .task:nth-child(3n+2) .t-ic { box-shadow: inset 0 0 0 2px var(--pop-p); } #stage.comic.mode-dark .task:nth-child(3n) .t-ic { box-shadow: inset 0 0 0 2px #7FD1FF; }
+.theme-sketch :is(.wk-chat .me, .wk-ask, .wk-head button:not(.primary), .ai-actions button:not(.primary)) { background: var(--sk-paper); color: var(--sk-ink); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
+.theme-sketch :is(.wk-pill, .wk-head button.primary) { color: var(--sk-paper); }

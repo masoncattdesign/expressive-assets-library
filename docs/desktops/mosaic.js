@@ -348,7 +348,19 @@ addEventListener('keydown', e => { if (e.key === 'Escape') { closePopover(); clo
 
 /* ---- Themes ------------------------------------------------------------ */
 setupThemes('mosaic', [
-  { id: 'windows', label: 'Default', style: 'windows' },
-  { id: 'neon', label: 'Neon', style: 'neon' },
-  { id: 'sketch', label: 'Sketch', style: 'sketch', ink: '#f1ede2', paper: '#1d1d24' },
+  { id: 'windows', label: 'Default', style: 'windows', mode: 'dark', colors: [
+    { id: 'a', label: 'Aurora', sw: ['#1d1d24', '#d4f07a'] },
+    { id: 'b', label: 'Ember', sw: ['#2a1d22', '#ffb36b'] },
+    { id: 'c', label: 'Daylight', mode: 'light', sw: ['#f6f3f8', '#f6b8d2'] },
+  ] },
+  { id: 'neon', label: 'Neon', style: 'neon', mode: 'dark', colors: [
+    { id: 'a', label: 'Electric', sw: ['#08080f', '#3DF5FF'] },
+    { id: 'b', label: 'Sunset', sw: ['#08080f', '#FF3D8B'] },
+    { id: 'c', label: 'Highlighter', mode: 'light', sw: ['#ffffff', '#7A3DFF'] },
+  ] },
+  { id: 'sketch', label: 'Sketch', style: 'sketch', mode: 'dark', ink: '#f1ede2', paper: '#1d1d24', colors: [
+    { id: 'a', label: 'Chalk', sw: ['#18181d', '#f1ede2'] },
+    { id: 'b', label: 'Blueprint', ink: '#eaf2ff', paper: '#173b6e', sw: ['#12325f', '#eaf2ff'] },
+    { id: 'c', label: 'Paper', mode: 'light', ink: '#24243a', paper: '#fffdf8', sw: ['#f4f1e8', '#24243a'] },
+  ] },
 ]);

@@ -276,52 +276,52 @@
 .t-sugg small { display: block; max-width: 230px; }
 
 /* ==== Sketch: chalk on a dark board ======================================= */
-#stage.theme-sketch { --lime: #f1ede2; --sk-ink: #f1ede2; --sk-paper: #1d1d24;
-  background: linear-gradient(rgba(241,237,226,.05) 1px, transparent 1px) 0 0 / 44px 44px, linear-gradient(90deg, rgba(241,237,226,.05) 1px, transparent 1px) 0 0 / 44px 44px, #18181d !important; }
-.theme-sketch .horizon { background: radial-gradient(closest-side, rgba(241,237,226,.06), transparent); }
+#stage.theme-sketch { --lime: var(--sk-ink); --sk-ink: #f1ede2; --sk-paper: #1d1d24; --sk-bg: #18181d;
+  background: linear-gradient(color-mix(in srgb, var(--sk-ink) 5%, transparent) 1px, transparent 1px) 0 0 / 44px 44px, linear-gradient(90deg, color-mix(in srgb, var(--sk-ink) 5%, transparent) 1px, transparent 1px) 0 0 / 44px 44px, var(--sk-bg) !important; }
+.theme-sketch .horizon { background: radial-gradient(closest-side, color-mix(in srgb, var(--sk-ink) 6%, transparent), transparent); }
 .theme-sketch .tile:not(.t-contact):not(.t-relax):not(.t-memory) {
-  background: #1d1d24 !important; color: var(--sk-ink);
-  box-shadow: inset 0 0 0 1.75px var(--sk-ink), 4px 5px 0 rgba(241,237,226,.08);
+  background: var(--sk-paper) !important; color: var(--sk-ink);
+  box-shadow: inset 0 0 0 1.75px var(--sk-ink), 4px 5px 0 color-mix(in srgb, var(--sk-ink) 8%, transparent);
 }
-.theme-sketch .tile small, .theme-sketch .t-meet small, .theme-sketch .t-new small { color: rgba(241,237,226,.65) !important; }
+.theme-sketch .tile small, .theme-sketch .t-meet small, .theme-sketch .t-new small { color: color-mix(in srgb, var(--sk-ink) 65%, transparent) !important; }
 .theme-sketch .tile .eyebrow, .theme-sketch .t-weather .hi { color: var(--sk-ink) !important; }
-.theme-sketch .t-weather .pad { color: rgba(241,237,226,.5); }
-.theme-sketch .t-cal { background: repeating-linear-gradient(-8deg, rgba(246,184,210,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; }
-.theme-sketch .t-focus { background: repeating-linear-gradient(-8deg, rgba(239,110,87,.25) 0 8px, transparent 8px 12px), #1d1d24 !important; }
-.theme-sketch .t-meet { background: repeating-linear-gradient(-8deg, rgba(199,159,242,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; }
-.theme-sketch .t-new { background: repeating-linear-gradient(-8deg, rgba(165,200,255,.22) 0 8px, transparent 8px 12px), #1d1d24 !important; color: var(--sk-ink); }
+.theme-sketch .t-weather .pad { color: color-mix(in srgb, var(--sk-ink) 50%, transparent); }
+.theme-sketch .t-cal { background: repeating-linear-gradient(-8deg, rgba(246,184,210,.22) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch .t-focus { background: repeating-linear-gradient(-8deg, rgba(239,110,87,.25) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch .t-meet { background: repeating-linear-gradient(-8deg, rgba(199,159,242,.22) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch .t-new { background: repeating-linear-gradient(-8deg, rgba(165,200,255,.22) 0 8px, transparent 8px 12px), var(--sk-paper) !important; color: var(--sk-ink); }
 .theme-sketch .t-new .check, .theme-sketch .t-new .chip-new { color: var(--sk-ink); }
 .theme-sketch .t-new .chip-new { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .t-contact, .theme-sketch .t-relax, .theme-sketch .t-memory { filter: grayscale(1) contrast(1.1); box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
 .theme-sketch .t-photos .ph { filter: grayscale(1) contrast(1.1); border-color: var(--sk-ink); }
-.theme-sketch .t-music .art { background: radial-gradient(circle, var(--sk-ink) 0 6%, #1d1d24 6.5% 14%, transparent 14.5%), repeating-radial-gradient(circle, #1d1d24 0 4px, var(--sk-ink) 4px 5px); border-radius: 50%; box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
+.theme-sketch .t-music .art { background: radial-gradient(circle, var(--sk-ink) 0 6%, var(--sk-paper) 6.5% 14%, transparent 14.5%), repeating-radial-gradient(circle, var(--sk-paper) 0 4px, var(--sk-ink) 4px 5px); border-radius: 50%; box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
 .theme-sketch .t-music .ctl { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .t-music .ctl button, .theme-sketch .t-focus .play, .theme-sketch .lime-chip { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .t-music .ctl button, .theme-sketch .t-focus .play, .theme-sketch .lime-chip { background: var(--sk-ink); color: var(--sk-paper); }
 .theme-sketch .t-dev .bar { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
 .theme-sketch .t-dev .bar i { background: var(--sk-ink); }
 .theme-sketch .t-lamp .shade, .theme-sketch .t-lamp .stem, .theme-sketch .t-lamp .base { background: transparent; box-shadow: inset 0 0 0 1.75px var(--sk-ink); }
 .theme-sketch .t-lamp .sw { background: transparent; box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .t-lamp .sw button.on { background: var(--sk-ink); color: #1d1d24; }
-.theme-sketch .t-lamp .glow { background: radial-gradient(closest-side, rgba(241,237,226,.18), transparent); }
+.theme-sketch .t-lamp .sw button.on { background: var(--sk-ink); color: var(--sk-paper); }
+.theme-sketch .t-lamp .glow { background: radial-gradient(closest-side, color-mix(in srgb, var(--sk-ink) 18%, transparent), transparent); }
 .theme-sketch .flap { color: var(--sk-ink); }
 .theme-sketch .t-commute path, .theme-sketch .t-commute circle:not([data-car]) { stroke: var(--sk-ink); fill: var(--sk-ink); }
 .theme-sketch .t-commute path { fill: none; }
-.theme-sketch .t-apps .pad button { background: transparent; box-shadow: inset 0 0 0 1.25px rgba(241,237,226,.5); }
+.theme-sketch .t-apps .pad button { background: transparent; box-shadow: inset 0 0 0 1.25px color-mix(in srgb, var(--sk-ink) 50%, transparent); }
 .theme-sketch .check i { border-color: var(--sk-ink); }
 .theme-sketch .check.done i { background: var(--sk-ink); border-color: var(--sk-ink); }
-.theme-sketch .check.done i::after { border-color: #1d1d24; }
+.theme-sketch .check.done i::after { border-color: var(--sk-paper); }
 .theme-sketch .t-il { filter: none; }
-.theme-sketch .slot { border-color: rgba(241,237,226,.3); }
+.theme-sketch .slot { border-color: color-mix(in srgb, var(--sk-ink) 30%, transparent); }
 .theme-sketch .tile.suggested::before, .theme-sketch .t-gradline::before, .theme-sketch .banner::before, .theme-sketch .build::before { background: var(--sk-ink); animation: none; }
 .theme-sketch .tile.suggested { box-shadow: none; background: transparent !important; }
 .theme-sketch .tile.suggested::before { padding: 1.5px; background: repeating-linear-gradient(90deg, var(--sk-ink) 0 8px, transparent 8px 14px); }
 .theme-sketch .ai-badge { box-shadow: 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .mini-btns button { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .mini-btns button { background: var(--sk-ink); color: var(--sk-paper); }
 .theme-sketch .mini-btns button.ghost { background: transparent; color: var(--sk-ink); box-shadow: inset 0 0 0 1.25px var(--sk-ink); }
-.theme-sketch .banner, .theme-sketch .build, .theme-sketch .dock, .theme-sketch .shaped, .theme-sketch .popover, .theme-sketch .build-chips button { background: #1d1d24; backdrop-filter: none; box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
+.theme-sketch .banner, .theme-sketch .build, .theme-sketch .dock, .theme-sketch .shaped, .theme-sketch .popover, .theme-sketch .build-chips button { background: var(--sk-paper); backdrop-filter: none; box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
 .theme-sketch .build { box-shadow: inset 0 0 0 1.5px var(--sk-ink); }
 .theme-sketch .dock button[style] { color: var(--sk-ink) !important; }
-.theme-sketch .toast { background: var(--sk-ink); color: #1d1d24; }
+.theme-sketch .toast { background: var(--sk-ink); color: var(--sk-paper); }
 
 /* ==== Beam on everything Copilot touches ================================= */
 .build-chips button, .popover .opt, .dock .cop { position: relative; }
@@ -334,3 +334,113 @@
 .theme-sketch .beam .bloom { display: none; }
 .theme-sketch .beam .ring { background: conic-gradient(from var(--beam-a, 0deg), transparent 0deg 250deg, var(--sk-ink) 300deg 358deg, transparent 360deg); }
 .theme-sketch .tile.suggested::before, .theme-sketch .banner::before, .theme-sketch .build::before { opacity: 1; }
+
+/* ==== Color options ======================================================= */
+/* Mosaic is dark as designed, so each theme gets one more dark take (b) and a
+   light one (c). The .tint layer recolors only the wallpaper. */
+
+/* Default · Ember: the wallpaper warms to amber and rose, accents follow */
+#stage.theme-windows[data-color="b"] { --lime: #ffb36b; }
+.theme-windows[data-color="b"] .tint { opacity: .6; background: linear-gradient(120deg, #ff7a3d, #ff3d6e 55%, #ffb36b); }
+.theme-windows[data-color="b"] .horizon { background: radial-gradient(closest-side, rgba(255, 150, 90, .22), transparent); }
+.theme-windows[data-color="b"] .t-weather .hi { color: #ffb36b; }
+.theme-windows[data-color="b"] .t-music { background: linear-gradient(120deg, #3a2420, #2a1d22); }
+.theme-windows[data-color="b"] .t-streak { background: linear-gradient(160deg, #4a2a2a, #2a1b1e); }
+
+/* Neon · Sunset: hot pink, tangerine and gold */
+#stage.theme-neon[data-color="b"] { --lime: #FFB13D; }
+.theme-neon[data-color="b"] .tint { background: linear-gradient(120deg, #FF3D8B, #FF7A3D 50%, #FFB13D); }
+.theme-neon[data-color="b"] .tile:not(.suggested) { box-shadow: 0 0 0 1px rgba(255, 140, 61, .32), 0 0 28px rgba(255, 61, 139, .16), 0 10px 30px rgba(0,0,0,.4); }
+.theme-neon[data-color="b"] .t-cal { background: linear-gradient(135deg, #FF3D8B, #FF7A3D); }
+.theme-neon[data-color="b"] .t-meet { background: linear-gradient(160deg, #FFB13D, #FF3D8B); }
+.theme-neon[data-color="b"] .t-focus { background: linear-gradient(160deg, #7A3DFF, #FF3D8B); }
+.theme-neon[data-color="b"] .t-new { background: linear-gradient(160deg, #FFB13D, #FF3D8B); }
+.theme-neon[data-color="b"] .t-weather .hi { color: #FFB13D; }
+.theme-neon[data-color="b"] .slot { border-color: rgba(255, 140, 61, .3); color: rgba(255, 177, 61, .6); }
+.theme-neon[data-color="b"] .t-lamp .shade, .theme-neon[data-color="b"] .t-lamp .stem, .theme-neon[data-color="b"] .t-lamp .base, .theme-neon[data-color="b"] .t-lamp .sw button.on { background: #FFB13D; }
+#stage.theme-neon[data-color="b"] { --beam-1: #FFB13D; --beam-2: #FF3D8B; --beam-3: #FF7A3D; --beam-4: #FFE14D; }
+.theme-windows[data-color="b"] .t-commute path, .theme-neon[data-color="b"] .t-commute path { stroke: var(--lime); }
+.theme-windows[data-color="b"] .t-commute circle:not([data-car]), .theme-neon[data-color="b"] .t-commute circle:not([data-car]) { fill: var(--lime); }
+
+/* Light: glassy white tiles on a washed-out wallpaper, dark text */
+#stage.mode-light:not(.theme-sketch) {
+  color: #1c1b26; --tile: rgba(255, 255, 255, .86); --lime: #a6d93a; --lt-ink: #1c1b26;
+  --wp-tint: rgba(250, 248, 252, .62);
+}
+.mode-light:not(.theme-sketch) .horizon { background: radial-gradient(closest-side, rgba(255, 140, 180, .25), transparent); }
+.mode-light:not(.theme-sketch) .slot { border-color: rgba(28, 27, 38, .22); color: rgba(28, 27, 38, .45); }
+.mode-light:not(.theme-sketch) .slot:hover { border-color: rgba(28, 27, 38, .5); background: rgba(255, 255, 255, .4); color: #1c1b26; }
+.mode-light:not(.theme-sketch) .slot.picked { border-color: #1c1b26; background: rgba(255, 255, 255, .5); }
+.mode-light:not(.theme-sketch) .tile { box-shadow: 0 10px 30px rgba(40, 30, 70, .12), inset 0 0 0 1px rgba(255, 255, 255, .7); }
+.mode-light:not(.theme-sketch) .tile small, .mode-light:not(.theme-sketch) .t-sugg .src { color: rgba(28, 27, 38, .6); }
+.mode-light:not(.theme-sketch) :is(.t-contact, .t-relax, .t-memory) small, .mode-light:not(.theme-sketch) :is(.t-contact, .t-relax, .t-memory, .t-focus) { color: #fff; }
+.mode-light:not(.theme-sketch) .t-relax p { color: rgba(255, 255, 255, .8); }
+.mode-light:not(.theme-sketch) .t-weather .pad { color: rgba(28, 27, 38, .45); }
+.mode-light:not(.theme-sketch) .t-weather em { color: #1c1b26; }
+.mode-light:not(.theme-sketch) .t-weather .hi { color: #8b3fd9; }
+.mode-light:not(.theme-sketch) :is(.t-music, .t-streak, .t-gradline) { background: rgba(255, 255, 255, .86); }
+.mode-light:not(.theme-sketch) .t-music .ctl { background: rgba(28, 27, 38, .06); }
+.mode-light:not(.theme-sketch) .t-music .prog { background: rgba(28, 27, 38, .14); }
+.mode-light:not(.theme-sketch) .t-music .prog i { background: #1c1b26; }
+.mode-light:not(.theme-sketch) .t-music .times { color: rgba(28, 27, 38, .55); }
+.mode-light:not(.theme-sketch) :is(.t-dev .bar, .round-btn, .t-lamp .sw, .t-apps .pad button, .sk) { background: rgba(28, 27, 38, .06); color: #1c1b26; }
+.mode-light:not(.theme-sketch) .t-lamp .sw button { color: rgba(28, 27, 38, .5); }
+.mode-light:not(.theme-sketch) .t-flight .board { background-image: radial-gradient(rgba(28, 27, 38, .08) 1px, transparent 1.4px); }
+.mode-light:not(.theme-sketch) .flap { color: #3d6b00; }
+.mode-light:not(.theme-sketch) .check { color: #1c1b26; }
+.mode-light:not(.theme-sketch) .check i { border-color: rgba(28, 27, 38, .45); }
+.mode-light:not(.theme-sketch) .check.done { color: rgba(28, 27, 38, .45); }
+.mode-light:not(.theme-sketch) .outline-pill { color: #fff; border-color: rgba(255, 255, 255, .8); }
+.mode-light:not(.theme-sketch) .t-commute path { stroke: #7cb518; }
+.mode-light:not(.theme-sketch) .t-commute circle:not([data-car]) { fill: #7cb518; }
+.mode-light:not(.theme-sketch) .t-commute circle[data-car] { fill: #1c1b26; }
+.mode-light:not(.theme-sketch) .tile.suggested { background: rgba(255, 255, 255, .7); }
+.mode-light:not(.theme-sketch) .tile.suggested::before { opacity: .6; }
+.mode-light:not(.theme-sketch) .ai-badge { background: #fff; box-shadow: 0 0 0 2px rgba(28, 27, 38, .1); }
+.mode-light:not(.theme-sketch) .mini-btns button { background: #1c1b26; color: #fff; }
+.mode-light:not(.theme-sketch) .mini-btns button.ghost, .mode-light:not(.theme-sketch) .ghost { background: rgba(28, 27, 38, .07); color: #1c1b26; }
+.mode-light:not(.theme-sketch) .tile.building .shimmer { background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .7) 50%, transparent 70%); background-size: 200% 100%; }
+.mode-light:not(.theme-sketch) :is(.banner, .shaped, .build, .popover, .build-chips button) { background: rgba(255, 255, 255, .88); color: #1c1b26; box-shadow: 0 14px 40px rgba(40, 30, 70, .16), inset 0 0 0 1px rgba(28, 27, 38, .06); }
+.mode-light:not(.theme-sketch) .shaped:hover { background: #fff; }
+.mode-light:not(.theme-sketch) .build { box-shadow: 0 0 40px rgba(139, 92, 246, .25); }
+.mode-light:not(.theme-sketch) .build-main input { color: #1c1b26; }
+.mode-light:not(.theme-sketch) .build-main input::placeholder { color: rgba(28, 27, 38, .45); }
+.mode-light:not(.theme-sketch) .build-main small, .mode-light:not(.theme-sketch) .popover > small, .mode-light:not(.theme-sketch) .popover .opt small { color: rgba(28, 27, 38, .58); }
+.mode-light:not(.theme-sketch) .build-ic, .mode-light:not(.theme-sketch) .popover .opt .sw.il { background: rgba(28, 27, 38, .06); }
+.mode-light:not(.theme-sketch) .popover .opt:hover { background: rgba(28, 27, 38, .05); }
+.mode-light:not(.theme-sketch) .dock { background: rgba(255, 255, 255, .78); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .8), 0 10px 30px rgba(40, 30, 70, .16); }
+.mode-light:not(.theme-sketch) .dock button:hover { background: rgba(28, 27, 38, .06); }
+.mode-light:not(.theme-sketch) .dock .sep { background: rgba(28, 27, 38, .16); }
+.mode-light:not(.theme-sketch) .toast { background: #1c1b26; color: #fff; }
+
+/* Neon · Highlighter: neon ink on white, glows turned into colored rims */
+#stage.theme-neon.mode-light { --lime: #00C2D6; --wp-tint: rgba(255, 255, 255, .72); }
+.theme-neon.mode-light .tint { opacity: .35; }
+.theme-neon.mode-light .tile:not(.suggested) { background-color: rgba(255, 255, 255, .92); box-shadow: 0 0 0 1.5px rgba(0, 194, 214, .45), 0 0 24px rgba(122, 61, 255, .14), 0 10px 26px rgba(40, 30, 70, .1); }
+.theme-neon.mode-light :is(.t-cal, .t-meet, .t-focus, .t-new) { color: #fff; }
+.theme-neon.mode-light .t-weather .hi { color: #7A3DFF; }
+.theme-neon.mode-light .flap { color: #7A3DFF; }
+.theme-neon.mode-light .slot { border-color: rgba(122, 61, 255, .3); color: rgba(122, 61, 255, .55); }
+.theme-neon.mode-light .t-commute path { stroke: #FF3DB8; } .theme-neon.mode-light .t-commute circle:not([data-car]) { fill: #FF3DB8; }
+
+/* Sketch · Blueprint: white lines on blueprint blue */
+#stage.theme-sketch[data-color="b"] { --sk-bg: #12325f; }
+#stage.theme-sketch[data-color="b"] .horizon { background: radial-gradient(closest-side, rgba(255, 255, 255, .08), transparent); }
+/* Sketch · Paper: ink on paper, the light version */
+#stage.theme-sketch[data-color="c"] { --sk-bg: #f4f1e8; }
+.theme-sketch[data-color="c"] :is(.t-cal, .t-focus, .t-meet, .t-new) { background-blend-mode: multiply; }
+.theme-sketch[data-color="c"] .t-cal { background: repeating-linear-gradient(-8deg, rgba(246,184,210,.55) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch[data-color="c"] .t-focus { background: repeating-linear-gradient(-8deg, rgba(239,110,87,.4) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch[data-color="c"] .t-meet { background: repeating-linear-gradient(-8deg, rgba(199,159,242,.5) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch[data-color="c"] .t-new { background: repeating-linear-gradient(-8deg, rgba(165,200,255,.55) 0 8px, transparent 8px 12px), var(--sk-paper) !important; }
+.theme-sketch[data-color="c"] .tile { box-shadow: inset 0 0 0 1.75px var(--sk-ink), 4px 5px 0 rgba(36, 36, 58, .12) !important; }
+/* Sketch text follows the ink, so the light Paper version reads too */
+#stage.theme-sketch { color: var(--sk-ink); }
+.theme-sketch :is(.t-weather em, .check, .shaped, .banner, .build-main input, .popover, .ghost, .round-btn, .t-lamp .sw button, .t-music .times, .mini-btns button.ghost, .build-chips button, .t-dev, .t-flight, .t-streak, .t-tasks, .t-commute, .t-music) { color: var(--sk-ink); }
+.theme-sketch .check.done { color: color-mix(in srgb, var(--sk-ink) 50%, transparent); }
+.theme-sketch :is(.build-main small, .popover > small, .popover .opt small) { color: color-mix(in srgb, var(--sk-ink) 60%, transparent); }
+.theme-sketch .build-main input::placeholder { color: color-mix(in srgb, var(--sk-ink) 50%, transparent); }
+.theme-sketch[data-color="c"] .toast img, .theme-sketch[data-color="c"] .shaped img { filter: none; }
+/* Default · Daylight: a pastel wash rather than gray */
+#stage.theme-windows.mode-light { --wp-tint: rgba(255, 250, 252, .55); }
+.theme-windows.mode-light .tint { opacity: .5; background: linear-gradient(120deg, #ffc7e0, #d6c8ff 50%, #bfeaff); }

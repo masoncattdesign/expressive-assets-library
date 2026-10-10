@@ -17,8 +17,14 @@ Pinboard: drag any widget or sticker around, press the + in the bottom bar,
 and ask Copilot to "make it cozy for fall" or "calm night mode".
 
 Themes: every desktop has Default (as designed) and Sketch. Workbench and
-Pinboard add Comic strip, Mosaic adds Neon, Pinboard adds Stipple and Texture. The illustrations are real pieces from the
-Windows illustration library, restyled per theme.
+Pinboard add Comic strip, Mosaic adds Neon, Pinboard adds Stipple and Texture.
+The illustrations are real pieces from the Windows illustration library,
+restyled per theme.
+
+Colors: every theme has three color options, picked from the swatches next
+to the theme names or with the C key. The first is the theme as designed, the
+second is another take in the same mode, and the third flips it to light or
+dark (Workbench and Pinboard go dark, Mosaic goes light).
 
 These are explorations, not product. All content is made up.
 Best viewed on a large screen; each desktop scales to fit the window.

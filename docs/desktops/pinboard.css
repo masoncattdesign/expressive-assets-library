@@ -373,3 +373,163 @@
 
 .bot-w, .shape-st { box-shadow: none !important; background: none !important; }
 .pal-m365 .bot-w, .pal-sketch .bot-w { box-shadow: none !important; }
+
+/* ==== Color options ======================================================= */
+/* Each theme has three colors: as designed, another take in the same mode, and
+   one in the opposite mode. Most are palettes stacked on the theme's own
+   (pal-riso + pal-riso-mint), so the theme's finish stays and the colors move. */
+
+/* Anything dark: the light-on-light details flip */
+.mode-dark .m3-switch { background: rgba(255, 255, 255, .08); }
+.mode-dark .m3-slider::after { background: rgba(255, 255, 255, .1); }
+.mode-dark .wavy .trk { stroke: rgba(255, 255, 255, .14); }
+.mode-dark .sk-grid button:hover { background: rgba(255, 255, 255, .08); }
+.mode-dark .addbar .cop { background: rgba(255, 255, 255, .1); }
+.mode-dark .w { filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .35)); }
+.mode-dark .addbar, .mode-dark .chips button { box-shadow: 0 14px 30px rgba(0, 0, 0, .3); }
+
+/* Default · Night already exists for Copilot's "calm night mode" */
+.pal-night .clock-day { color: #e6e3ff; }
+
+/* Comic strip · Pop: black ink on white with halftone dots, flat bright pops,
+   heavy outlines and a hard offset shadow on every panel */
+#stage.pal-pop {
+  --ink-p: #111; --cm-paper: #fff; --cm-dot: rgba(17, 17, 17, .13);
+  --music: #2F6BFF; --music-btn: #FFE14D; --music-ink: #fff;
+  --batt: #111; --batt-in: #2BD97C; --batt-ink: #111;
+  --vol: #fff; --vol-fill: #FF3D8B; --vol-ink: #fff;
+  --check: #FFE14D; --cal: #fff; --ev-dark: #111; --ev-yellow: #FFE14D;
+  --peb-a: #FF3D8B; --peb-b: #2F6BFF; --peb-ink: #fff;
+  --weather-a: #7FD1FF; --weather-b: #7FD1FF; --weather-c: #7FD1FF; --weather-ink: #111;
+  --mem: #fff; --bar: #fff;
+  --hand-h: #FFE14D; --hand-m: #FF3D8B; --dot: #111;
+}
+#stage.pal-popdark {
+  --ink-p: #f4f4f4; --cm-paper: #0e0e0e; --cm-dot: rgba(255, 255, 255, .12);
+  --batt: #1d1d1d; --vol: #1d1d1d; --cal: #0e0e0e; --mem: #0e0e0e; --bar: #0e0e0e; --ev-dark: #f4f4f4; --dot: #f4f4f4;
+}
+.pal-pop .wash { background: radial-gradient(circle, var(--cm-dot) 1.3px, transparent 1.8px) 0 0 / 12px 12px, var(--cm-paper); mix-blend-mode: normal; }
+.pal-pop .w { filter: none; }
+.pal-pop .w:not(.sticker-il):not(.clock):not(.digits):not(.note):not(.polaroid):not(.emoji):not(.count):not(.bot-w):not(.shape-st), .pal-pop .pebble, .pal-pop .addbar, .pal-pop .chips button {
+  box-shadow: inset 0 0 0 2.5px var(--ink-p), 6px 7px 0 var(--ink-p) !important;
+}
+.pal-pop .addbar { backdrop-filter: none; }
+.pal-pop .weather::after { display: none; }
+.pal-pop .sun { box-shadow: inset 0 0 0 2.5px #111; }
+.pal-pop .cloud i { box-shadow: inset 0 0 0 2.5px #111; }
+.pal-pop .cookie { filter: drop-shadow(2.5px 0 0 var(--ink-p)) drop-shadow(-2.5px 0 0 var(--ink-p)) drop-shadow(0 2.5px 0 var(--ink-p)) drop-shadow(0 -2.5px 0 var(--ink-p)) drop-shadow(6px 7px 0 var(--ink-p)); animation: none; }
+.pal-pop .clock-day { color: #111; }
+.pal-pop .cookie image { filter: brightness(0) invert(1) sepia(1) saturate(6) hue-rotate(8deg) brightness(1.05); }
+.pal-pop .hand { box-shadow: inset 0 0 0 2px #111; }
+.pal-pop .batt-in, .pal-pop .nub, .pal-pop .vol-fill, .pal-pop .bell, .pal-pop .m-play, .pal-pop .ev, .pal-pop .ck-add { box-shadow: inset 0 0 0 2px #111; }
+.pal-pop .ev.dark { color: var(--cm-paper); box-shadow: none; }
+.pal-pop .face { box-shadow: 0 0 0 2.5px var(--ink-p); }
+.pal-pop .wave line { stroke: rgba(255, 255, 255, .5); }
+.pal-pop .toast { background: #FFE14D; color: #111; box-shadow: inset 0 0 0 2.5px #111, 4px 5px 0 #111; }
+.pal-pop .check, .pal-popdark .check { --ink-p: #111; }
+.pal-pop .sk-preview, .pal-pop .sk-grid button.on { box-shadow: inset 0 0 0 2px var(--ink-p); }
+.pal-pop .sk-preview path, .pal-pop .m3-fab path, .pal-pop .shape-st path { stroke: #111; stroke-width: 3; }
+.pal-pop .shape-st path { filter: none; }
+.pal-popdark .sk-preview { --ink-p: #111; }
+.pal-popdark .ev.dark { color: #111; }
+.pal-popdark .ev.yellow { color: #111; }
+
+/* Stipple · Mint: teal, tangerine and violet riso inks */
+#stage.pal-riso-mint {
+  --ink-p: #0B5F5A;
+  --music: #0E8C84; --music-btn: #FF8A3D; --music-ink: #FFF4E2;
+  --batt: #7A3FD1; --batt-in: #FFC93D; --batt-ink: #2a1550;
+  --vol: #FFC93D; --vol-fill: #FF5A36; --vol-ink: #FFF4E2;
+  --check: #A8E6D8; --cal: #FFF4E2; --ev-dark: #0E8C84; --ev-yellow: #FF8A3D;
+  --peb-a: #FF8A3D; --peb-b: #0E8C84; --peb-ink: #FFF4E2;
+  --weather-a: #FFC93D; --weather-b: #FF8A3D; --weather-c: #7EC8E3; --weather-ink: #0B5F5A;
+  --mem: #FFF4E2; --bar: rgba(255, 244, 226, .92);
+  --hand-h: #FFC93D; --hand-m: #FF5A36; --dot: #7A3FD1;
+  --wp-tint: linear-gradient(160deg, #7fe0d0, #ffb36b); --wp-blend: color;
+}
+.pal-riso-mint .cookie { filter: hue-rotate(160deg) saturate(1.3); }
+.tex-stipple.pal-riso-mint .w:not(.sticker-il):not(.clock) { filter: drop-shadow(0 10px 0 rgba(14, 140, 132, .14)); }
+/* Stipple · Blackout: the same riso inks printed on black stock */
+#stage.pal-riso-dark {
+  --ink-p: #FFE9C7;
+  --music: #2A3BD9; --music-btn: #FFD23D; --music-ink: #FFF6DA;
+  --batt: #12855A; --batt-in: #FFD23D; --batt-ink: #10331f;
+  --vol: #2a2620; --vol-fill: #E8357A; --vol-ink: #FFF1F6;
+  --check: #2c2433; --cal: #1c1a17; --ev-dark: #E8357A; --ev-yellow: #FFD23D;
+  --peb-a: #FFD23D; --peb-b: #E8357A; --peb-ink: #1D2BA8;
+  --weather-a: #E8357A; --weather-b: #2A3BD9; --weather-c: #12855A; --weather-ink: #FFF6DA;
+  --mem: #1c1a17; --bar: rgba(28, 26, 23, .92);
+  --hand-h: #FFD23D; --hand-m: #E8357A; --dot: #FFD23D;
+}
+.pal-riso-dark .wash { background: rgba(14, 12, 10, .82); }
+.tex-stipple.pal-riso-dark .w:not(.sticker-il):not(.clock) { filter: drop-shadow(0 10px 0 rgba(0, 0, 0, .45)); }
+.pal-riso-dark .ev.yellow { color: #1c1a17; }
+
+/* Texture · Garden: leafy greens with coral and marigold */
+#stage.pal-garden {
+  --ink-p: #1f3d2b;
+  --music: #2f6b45; --music-btn: #f6c56b; --music-ink: #f3fbe9;
+  --batt: #8a3b2e; --batt-in: #f4a582; --batt-ink: #3b1610;
+  --vol: #dff0c8; --vol-fill: #e76f51; --vol-ink: #fff3ea;
+  --check: #cfe8b8; --cal: #f6f9ee; --ev-dark: #2f6b45; --ev-yellow: #f6c56b;
+  --peb-a: #f4a582; --peb-b: #9cc98a; --peb-ink: #1f3d2b;
+  --weather-a: #b8e0a5; --weather-b: #f6c56b; --weather-c: #8cc7b5; --weather-ink: #1f3d2b;
+  --mem: #f6f9ee; --bar: rgba(240, 248, 230, .9);
+  --hand-h: #f6c56b; --hand-m: #f4a582; --dot: #e76f51;
+  --wp-tint: linear-gradient(160deg, #9be08a, #ffd27a 60%, #f4a582); --wp-blend: color;
+}
+.pal-garden .cookie { filter: hue-rotate(200deg) saturate(.9); }
+/* Texture · Velvet: plum and teal after dark */
+#stage.pal-velvet {
+  --ink-p: #f3e6ff;
+  --music: #2b1640; --music-btn: #ff8fc8; --music-ink: #f3e6ff;
+  --batt: #13303a; --batt-in: #5fd3c4; --batt-ink: #0b1d22;
+  --vol: #34204a; --vol-fill: #ff8fc8; --vol-ink: #2b1640;
+  --check: #3a2350; --cal: #22142f; --ev-dark: #ff8fc8; --ev-yellow: #ffd27a;
+  --peb-a: #3a2350; --peb-b: #5c3380; --peb-ink: #ffd27a;
+  --weather-a: #5c3380; --weather-b: #2b1640; --weather-c: #13303a; --weather-ink: #f3e6ff;
+  --mem: #22142f; --bar: rgba(34, 20, 47, .9);
+  --hand-h: #ff8fc8; --hand-m: #ffd27a; --dot: #5fd3c4;
+}
+.pal-velvet .wash { background: rgba(25, 10, 35, .68); }
+.pal-velvet .cookie { filter: hue-rotate(40deg) brightness(.8); }
+.pal-velvet .sun { background: #ffd27a; }
+.pal-velvet .ev.dark { color: #2b1640; }
+.pal-velvet .tex.grid { background: linear-gradient(rgba(255,255,255,.12) 1.2px, transparent 1.2px) 0 0 / 14px 14px, linear-gradient(90deg, rgba(255,255,255,.12) 1.2px, transparent 1.2px) 0 0 / 14px 14px; }
+
+/* Sketch · Ballpoint: blue pen on lined paper, pink highlighter */
+#stage.pal-ballpoint {
+  --ink-p: #2346c8;
+  --music: #fff; --music-btn: #2346c8; --music-ink: #2346c8;
+  --batt: #fff; --batt-in: #ffc2dc; --batt-ink: #2346c8;
+  --vol: #fff; --vol-fill: #ffd9cc; --vol-ink: #2346c8;
+  --check: #fff; --cal: #fff; --ev-dark: #2346c8; --ev-yellow: #ffc2dc;
+  --peb-a: #fff; --peb-b: #ffc2dc; --peb-ink: #2346c8;
+  --weather-a: #fff; --weather-b: #fff; --weather-c: #fff; --weather-ink: #2346c8;
+  --mem: #fff; --bar: #fff; --hand-h: #fff; --hand-m: #ffc2dc; --dot: #2346c8;
+  background: linear-gradient(90deg, transparent 96px, rgba(230, 70, 90, .35) 96px 98px, transparent 98px), repeating-linear-gradient(transparent 0 31px, rgba(35, 70, 200, .14) 31px 32px), #ffffff !important;
+}
+.pal-ballpoint .cookie { filter: drop-shadow(1.75px 0 0 #2346c8) drop-shadow(-1.75px 0 0 #2346c8) drop-shadow(0 1.75px 0 #2346c8) drop-shadow(0 -1.75px 0 #2346c8) drop-shadow(4px 5px 0 rgba(35,70,200,.12)); }
+.pal-ballpoint .wave line { stroke: rgba(35, 70, 200, .3); }
+/* Sketch · Chalk: chalk on a slate board */
+#stage.pal-chalk {
+  --ink-p: #f1ede2;
+  --music: #262a31; --music-btn: #f1ede2; --music-ink: #f1ede2;
+  --batt: #262a31; --batt-in: rgba(255, 226, 120, .3); --batt-ink: #f1ede2;
+  --vol: #262a31; --vol-fill: rgba(255, 170, 150, .3); --vol-ink: #f1ede2;
+  --check: #262a31; --cal: #262a31; --ev-dark: #f1ede2; --ev-yellow: rgba(255, 226, 120, .3);
+  --peb-a: #262a31; --peb-b: rgba(255, 226, 120, .3); --peb-ink: #f1ede2;
+  --weather-a: #262a31; --weather-b: #262a31; --weather-c: #262a31; --weather-ink: #f1ede2;
+  --mem: #262a31; --bar: #262a31; --hand-h: #262a31; --hand-m: rgba(255, 226, 120, .3); --dot: #f1ede2;
+  background: radial-gradient(circle, rgba(241, 237, 226, .1) 1px, transparent 1.4px) 0 0 / 22px 22px, #23272e !important;
+}
+.pal-chalk .w:not(.sticker-il):not(.clock):not(.digits), .pal-chalk .pebble, .pal-chalk .addbar, .pal-chalk .chips button { box-shadow: inset 0 0 0 1.75px var(--sk-ink), 4px 5px 0 rgba(0, 0, 0, .35); }
+.pal-chalk .cookie { filter: drop-shadow(1.75px 0 0 #f1ede2) drop-shadow(-1.75px 0 0 #f1ede2) drop-shadow(0 1.75px 0 #f1ede2) drop-shadow(0 -1.75px 0 #f1ede2) drop-shadow(4px 5px 0 rgba(0,0,0,.35)); }
+.pal-chalk .cookie image { filter: brightness(0) invert(.16); }
+.pal-chalk .wave line { stroke: rgba(241, 237, 226, .3); }
+.pal-chalk :is(.vol-fill, .m3-slider .fill) { background: repeating-linear-gradient(-8deg, rgba(255,170,150,.35) 0 8px, transparent 8px 11px); }
+.pal-chalk .ev.dark, .pal-chalk .ev.yellow { color: #f1ede2; }
+.pal-chalk .ev.dark { color: #262a31; }
+.pal-chalk .m-play, .pal-chalk .bell, .pal-chalk .ck-add, .pal-chalk .addbtn, .pal-chalk .sk-stick { color: #262a31; }
+.pal-chalk .toast img { filter: none !important; }
+.pal-chalk .polaroid { background: #ece7da; }
