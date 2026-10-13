@@ -35,7 +35,7 @@ function tick() {
   const c = clockParts();
   $('#clock-hm').textContent = `${c.h}:${c.m}`;
   $('#clock-ampm').textContent = c.ampm;
-  $('#greet-line').textContent = `${greeting(c.h24)}, Alex`;
+  $('#greet-line').textContent = `${greeting(c.h24)}, Diego`;
 }
 tick(); setInterval(tick, 5000);
 
@@ -315,7 +315,7 @@ $$('[data-open]').forEach(b => b.addEventListener('click', () => openWindow(b.da
 /* Window bodies ---------------------------------------------------------- */
 const LISBON = [
   ['h1', 'Lisbon, four slow days'],
-  ['meta', 'Oct 16 to 19 · Alex and Maya · Hotel in Príncipe Real'],
+  ['meta', 'Oct 16 to 19 · Diego and Maya · Hotel in Príncipe Real'],
   ['h2', 'Thursday · Arrive and wander'],
   ['p', 'Land 11:40. Drop bags, lunch at a tasca near the hotel, then the miradouro at sunset. Early night.'],
   ['h2', 'Friday · Alfama and the river'],
@@ -379,7 +379,7 @@ function inviteBody() {
   <div class="w-page-wrap"><div class="invite"><div class="hero"></div><div class="in">
     <h1>Book club: <em>Pride and Prejudice</em></h1>
     <p id="invite-copy">Thursday at 7, at Adam's place. Finish the book if you can, come anyway if you can't.</p>
-    <p>Alex is bringing lemon bars.</p></div></div></div>`;
+    <p>Diego is bringing lemon bars.</p></div></div></div>`;
 }
 document.addEventListener('click', e => {
   if (e.target.id === 'send-invite') {
@@ -415,12 +415,12 @@ function outlookBody() {
     <div class="ml-item"><b>Lily's school</b>Picture day is moved to Tuesday</div>
     <div class="ml-item"><b>Kitchen Co.</b>Your quote for the remodel</div></div>
   <div class="ml-read"><h2>Dinner with the Parks</h2><p class="muted">Saturday at 7 pm · Our place · Copilot sent this for you on Tuesday</p>
-    <p>Hi both, want to come over Saturday? Alex is making the paella again.</p>
+    <p>Hi both, want to come over Saturday? Diego is making the paella again.</p>
     <div class="rsvp" id="rsvp">
       <div><span class="av">JP</span><span>Jin Park</span><span class="chip gray">Waiting</span></div>
       <div><span class="av">SP</span><span>Soo Park</span><span class="chip green">Yes</span></div>
       <div><span class="av">M</span><span>Maya</span><span class="chip green">Yes</span></div>
-      <div><span class="av">A</span><span>Alex</span><span class="chip green">Yes</span></div></div></div>`;
+      <div><span class="av">D</span><span>Diego</span><span class="chip green">Yes</span></div></div></div>`;
 }
 function runRsvp(win) {
   setTimeout(() => {
@@ -455,7 +455,7 @@ function openAsk() {
   const p = $('#ask-panel'); p.hidden = false;
   if (!$('#ask-log').children.length) {
     $('#ask-log').appendChild(html(`<div class="ask-panel-head"><span class="head-bot"></span>Copilot <span class="muted" style="font-weight:400">· sees your bench, not your screen</span></div>`));
-    bubble($('#ask-log'), 'ai', `${greeting(new Date().getHours())}, Alex. Lisbon is ${Math.round((TASKS[0].progress || 1) * 100)}% written and the invite is waiting on you. What can I take off your plate?`);
+    bubble($('#ask-log'), 'ai', `${greeting(new Date().getHours())}, Diego. Lisbon is ${Math.round((TASKS[0].progress || 1) * 100)}% written and the invite is waiting on you. What can I take off your plate?`);
   }
   $('#ask-suggest').innerHTML = '';
   SUGGEST.forEach(s => { const b = html(`<button type="button">${s}</button>`); b.addEventListener('click', () => submitAsk(s)); $('#ask-suggest').appendChild(b); });

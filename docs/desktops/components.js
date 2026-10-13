@@ -86,7 +86,7 @@ function start() {
       <div class="st-hdr" style="top:448px"><b>All</b><span class="btn">View: Category ${ic('chevron-down', 12)}</span></div>
       <div class="st-cats">${cats.map(([l, ps]) => `<div class="st-cat"><div>${ps.map(p => p.startsWith('<') ? p : img(p)).join('')}</div>${l}</div>`).join('')}</div>
     </div>
-    <div class="st-foot"><span class="avatar" style="width:32px;height:32px;font-size:12px">AR</span>Alex Rivera<span class="power">${ic('power', 16)}</span></div>
+    <div class="st-foot"><span class="avatar" style="width:32px;height:32px;font-size:12px">DB</span>Diego Baca<span class="power">${ic('power', 16)}</span></div>
   </div>`;
 }
 
@@ -122,7 +122,7 @@ function explorer() {
         <span class="btn ghost">${ic('arrow-sort', 16)}Sort</span><span class="btn ghost">${ic('grid', 16)}View</span><span class="grow"></span><span class="ib">${ic('more-horizontal', 16)}</span></div>
     </div>
     <div class="fe-body">
-      <div class="fe-nav">${nav('home', 'Home')}${nav('image', 'Gallery')}${nav('cloud', 'Alex - Personal', 'cloud')}<hr>${nav('desktop', 'Desktop')}${nav('arrow-download', 'Downloads')}${nav('document', 'Documents', 'on')}${nav('image', 'Pictures')}${nav('music-note-2', 'Music')}</div>
+      <div class="fe-nav">${nav('home', 'Home')}${nav('image', 'Gallery')}${nav('cloud', 'Diego - Personal', 'cloud')}<hr>${nav('desktop', 'Desktop')}${nav('arrow-download', 'Downloads')}${nav('document', 'Documents', 'on')}${nav('image', 'Pictures')}${nav('music-note-2', 'Music')}</div>
       <div class="fe-list"><div class="fe-row head"><span>Name</span><span>Date modified</span><span>Type</span><span>Size</span></div>${files.map(f => row(f[0], f[1], f[2])).join('')}</div>
     </div>
     <div class="fe-status"><span>9 items</span><span>1 item selected  48 KB</span></div>
@@ -145,7 +145,7 @@ function settings() {
     <div class="win-bar"><span class="back">${ic('arrow-left', 12)}</span>Settings${caps()}</div>
     <div class="set-body">
       <div class="set-nav">
-        <div class="set-acct"><span class="avatar">AR</span><span><b>Alex Rivera</b><small>alexrivera@outlook.com</small></span></div>
+        <div class="set-acct"><span class="avatar">DB</span><span><b>Diego Baca</b><small>diegobaca@outlook.com</small></span></div>
         <div class="field"><span>Search</span>${ic('search', 14)}</div>
         <nav>${nav.map(([i, l, c, on]) => `<span class="${on ? 'on' : ''}" style="--c:${c}">${ic(i, 20, 'filled')}${l}</span>`).join('')}</nav>
       </div>

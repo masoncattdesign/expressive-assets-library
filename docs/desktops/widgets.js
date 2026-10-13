@@ -100,7 +100,7 @@ defWidget('battery', {
 /* ---- Phone ------------------------------------------------------------- */
 defWidget('phone', {
   name: 'Phone', fits: ['w', 't'], app: 'app/phone-link/standard-48.svg',
-  html: () => `${wgHead('Alex\'s phone', ic('phone', 16, 'filled'), `<span class="wg-stat">${ic('wifi-1', 14)}${ic('battery-charge', 14)} 92%</span>`)}
+  html: () => `${wgHead('Diego\'s phone', ic('phone', 16, 'filled'), `<span class="wg-stat">${ic('wifi-1', 14)}${ic('battery-charge', 14)} 92%</span>`)}
     <div class="wg-msgs">
       <button class="wg-msg" data-wg-act="msg"><span class="wg-av" style="background-image:url(media/person-sam.jpg)"></span><span><b>Sam</b><small>Free after 6, call you then?</small></span></button>
       <button class="wg-msg" data-wg-act="msg"><span class="wg-av ini" style="--c:#f08c00">M</span><span><b>Maya</b><small>Sending the Big Sur pics!</small></span></button>
