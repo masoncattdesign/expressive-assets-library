@@ -252,14 +252,18 @@ const SIZE_NAME = { s: 'Square', w: 'Wide', t: 'Tall' };
    repo's private/ folder, which is never committed or published. When the page
    is opened from a checkout that has them, they show; anywhere else (the public
    site, the download) the gradient tokens stand in and nothing breaks. */
-const WALLS = '../../private/desktops/wallpapers/';
-function loadWallpapers() {
+// The local preview server (npm run dev) carries them in desktops/private/;
+// a page opened straight from the repo finds them in the repo's private/.
+const WALL_DIRS = ['private/wallpapers/', '../../private/desktops/wallpapers/'];
+const tryImage = src => new Promise(res => { const im = new Image(); im.onload = () => res(true); im.onerror = () => res(false); im.src = src; });
+async function loadWallpapers() {
   const css = [];
-  return Promise.all(THEMES.filter(t => t.photo !== false).map(t => new Promise(res => {
-    const im = new Image();
-    im.onload = () => { css.push(`.th-${t.id}{--wall-photo:url("${WALLS}${t.id}.jpg");--bloom:none}`); res(); };
-    im.onerror = res; im.src = WALLS + t.id + '.jpg';
-  }))).then(() => { if (css.length) document.head.appendChild(html(`<style id="walls">${css.join('')}</style>`)); });
+  for (const t of THEMES.filter(t => t.photo !== false)) {
+    for (const dir of WALL_DIRS) {
+      if (await tryImage(dir + t.id + '.jpg')) { css.push(`.th-${t.id}{--wall-photo:url("${dir}${t.id}.jpg");--bloom:none}`); break; }
+    }
+  }
+  if (css.length) document.head.appendChild(html(`<style id="walls">${css.join('')}</style>`));
 }
 
 let current = store('components-theme') || 'w11';

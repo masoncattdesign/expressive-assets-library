@@ -16,7 +16,7 @@
  *
  * Run: npm run build
  */
-import { cp, mkdir, rm, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, rm, readFile, writeFile, stat } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
@@ -36,6 +36,12 @@ async function main() {
   // It lives at the repo root, so without this it is only reachable from the
   // GitHub raw source and the published-site source silently omits the section.
   await cp(join(ROOT, 'CHANGELOG.md'), join(OUT, 'CHANGELOG.md'));
+  // Wallpapers that are not public artwork live in private/ (gitignored), so a
+  // checkout that has them can preview the desktops with them via npm run dev.
+  // CI and every deploy build from a clean clone, where private/ does not
+  // exist, so they are never published.
+  const walls = join(ROOT, 'private', 'desktops', 'wallpapers');
+  if (await stat(walls).catch(() => null)) await cp(walls, join(OUT, 'desktops', 'private', 'wallpapers'), { recursive: true });
 
   const manifest = JSON.parse(await readFile(join(ROOT, 'manifest.json'), 'utf8'));
 
