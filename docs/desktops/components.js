@@ -26,25 +26,38 @@ const tog = (on = true) => `<span class="tog${on ? '' : ' off'}">${on ? 'On' : '
 const chev = name => `<span class="chev">${ic(name, 12)}</span>`;
 
 /* ---- Taskbar ------------------------------------------------------------- */
+// One taskbar, two layouts. "cl" parts are the Windows 11 taskbar; "fl" parts are
+// Telograph's fine-line bar (snap button, ask pill, running dots, tray pill with a
+// white clock). components.css shows one set or the other per theme, the same way
+// the taskbar/classic and taskbar/fine-line variables switch it in Figma.
 function taskbar() {
+  const app = (p, run, cls = '') => `<span class="${cls}${run ? ' run' : ''}">${img(p, 24)}</span>`;
   return `<div class="sf tb">
-    <div class="tb-wx">${ic('weather-sunny', 24, 'filled')}<div><b>78°F</b><span class="sec">Sunny</span></div></div>
+    <span class="tb-snap fl">${ic('panel-left', 20)}</span>
+    <div class="tb-wx cl">${ic('weather-sunny', 24, 'filled')}<div><b>78°F</b><span class="sec">Sunny</span></div></div>
     <div class="tb-mid">
       <span title="Start"><i class="winlogo"><i></i><i></i><i></i><i></i></i></span>
-      <span class="tb-search">${ic('search', 16)}Search</span>
-      <span title="Task view">${ic('square-multiple', 20)}</span>
-      <span>${img('product/copilot/standard-24.svg', 24)}</span>
-      <span>${img('app/file-explorer/standard-24.svg', 24)}</span>
-      <span>${img('product/edge/standard-24.svg', 24)}</span>
-      <span>${img('app/store-light-theme/standard-24.svg', 24)}</span>
-      <span>${img('product/outlook/standard-24.svg', 24)}</span>
+      <span class="tb-search cl">${ic('search', 16)}Search</span>
+      <span class="tb-ask fl"><i class="ring"></i>Search or ask${ic('sparkle', 16)}</span>
+      <span class="cl" title="Task view">${ic('square-multiple', 20)}</span>
+      <span class="cl">${img('product/copilot/standard-24.svg', 24)}</span>
+      <span class="fl" title="New">${ic('add', 18)}</span>
+      <span class="fl"><i class="tb-photo"></i></span>
+      ${app('app/file-explorer/standard-24.svg')}
+      ${app('product/edge/standard-24.svg', true)}
+      ${app('app/store-light-theme/standard-24.svg', false, 'cl')}
+      ${app('product/outlook/standard-24.svg', true)}
+      ${app('product/teams/standard-24.svg', false, 'fl')}
+      ${app('product/word/standard-24.svg', true, 'fl')}
+      ${app('product/excel/standard-24.svg', false, 'fl')}
+      ${app('product/powerpoint/standard-24.svg', false, 'fl')}
     </div>
     <div class="tb-tray">
-      <span>${ic('chevron-up', 12)}</span>
-      <span>${img('product/onedrive/standard-16.svg', 16)}</span>
-      <span class="qs">${ic('wifi-1', 16)}${ic('speaker-2', 16)}${ic('battery-10', 16)}</span>
-      <span class="clock">10:42 AM<br>10/12/2026</span>
-      <span>${ic('alert', 16)}</span>
+      <span class="cl">${ic('chevron-up', 12)}</span>
+      <span class="cl">${img('product/onedrive/standard-16.svg', 16)}</span>
+      <span class="qs">${ic('wifi-1', 16)}${ic('speaker-2', 16)}${ic('battery-8', 16)}<b class="tb-time fl">10:42 AM</b></span>
+      <span class="clock cl">10:42 AM<br>10/12/2026</span>
+      <span class="cl">${ic('alert', 16)}</span>
     </div>
   </div>`;
 }
@@ -91,11 +104,20 @@ function start() {
 }
 
 /* ---- Universal Composer -------------------------------------------------- */
+// The floating panel as it ships today: recent things on top, the ask box at the bottom.
 function composer() {
+  const item = (icon, t, s, on) => `<div class="uc-item${on ? ' on' : ''}">${icon}<span class="tx">${t}<small>${s}</small></span>${on ? `<span class="ib">${ic('more-horizontal', 16)}</span><span class="ib">${ic('open', 16)}</span>` : ''}</div>`;
+  const items = [
+    [img('product/word/standard-24.svg', 24), 'Lisbon itinerary', '25 minutes ago • Word', true],
+    ['<i class="uc-thumb"></i>', 'Screenshot 2026-10-12 093114.png', '4 hours ago • PNG File'],
+    [img('app/photos/standard-24.svg', 24), 'Photos', '4 hours ago • App'],
+    [img('product/powerpoint/standard-24.svg', 24), 'Lily\'s recital program', '1 day ago • PowerPoint'],
+    [img('app/snipping-tool/standard-24.svg', 24), 'Snipping Tool', '3 days ago • App'],
+    [ic('speaker-2', 20), 'Sound settings', '5 days ago • Settings'],
+    [ic('alert-snooze', 20), 'Turn on do not disturb', `New • <b class="uc-act">${ic('flash', 12, 'filled')}Action</b>`]];
   return `<div class="sf uc">
-    <div class="uc-row">${ic('add', 20)}${img('product/copilot/standard-24.svg', 24)}<span class="ph">Ask Copilot anything</span>${ic('mic', 20)}<span class="uc-send">${ic('arrow-up', 16)}</span></div>
-    <div class="hdiv"></div>
-    <div class="uc-chips"><span>${ic('sparkle', 14)}Plan Lily's birthday party</span><span>${ic('sparkle', 14)}Catch me up on my inbox</span><span>${ic('sparkle', 14)}Find my Big Sur photos</span></div>
+    <div class="uc-list">${items.map(i => item(...i)).join('')}</div>
+    <div class="uc-input"><span class="ph"><i class="caret"></i>Search</span><span class="btn acc">Open</span></div>
   </div>`;
 }
 
@@ -234,8 +256,8 @@ Before we leave: water the plants, ask Sam to grab the mail</div>
 const SURFACES = [
   { id: 'desktop', name: 'Desktop', w: 1440, h: 900, build: desktop, stays: 'Taskbar along the bottom, desktop icons top left, wallpaper edge to edge.', changes: 'The wallpaper, and whether the taskbar floats with an inset or stays docked.' },
   { id: 'start', name: 'Start', w: 832, h: 864, build: start, stays: 'Copilot search on top, then Pinned, Recent and All by category, with account and power in the footer. Same order, same app icons.', changes: 'Shell material and tint, corner radii, card surfaces, button and avatar accent, typeface.' },
-  { id: 'taskbar', name: 'Taskbar', w: 1440, h: 48, build: taskbar, stays: 'Widgets left, Start, search, Task view and pinned apps centered, tray and clock right.', changes: 'Docked or floating, end radius, material.' },
-  { id: 'uc', name: 'Universal Composer', w: 720, h: 130, build: composer, stays: 'One input, attach, voice, send, three suggestions underneath.', changes: 'Field shape, send button color, chip shape, typeface.' },
+  { id: 'taskbar', name: 'Taskbar', w: 1440, h: 48, build: taskbar, stays: 'Widgets left, Start, search, Task view and pinned apps centered, tray and clock right.', changes: 'Docked or floating, end radius, material. Telograph goes further: a black bezel with an ask pill, running dots and a white clock in a tray pill.' },
+  { id: 'uc', name: 'Universal Composer', w: 500, h: 550, build: composer, stays: 'A floating panel over the taskbar: recent files, apps, settings and actions on top, the ask box at the bottom, in the same order.', changes: 'Panel material, corner shape, the selected row and the Open button. Pushing further from here is where the styles can diverge most.' },
   { id: 'explorer', name: 'File Explorer', w: 1040, h: 640, build: explorer, stays: 'Tabs, address bar, command bar, navigation pane, details view, status bar.', changes: 'Pane and content contrast, selection fill, button and window radii.' },
   { id: 'settings', name: 'Settings', note: 'System > Power & battery', w: 1128, h: 736, build: settings, stays: 'The account, search and navigation, then a page title, a status figure and setting cards in the same order. Navigation icons keep their full color.', changes: 'Window material, card surfaces, and the accent on toggles and progress. The page title and battery figure take the display face.' },
   { id: 'paint', name: 'Paint', w: 1200, h: 800, build: paint, stays: 'Menu row, toolbar groups, palette, canvas, Cocreator panel and status bar. The drawing and the generated image are untouched.', changes: 'Only the chrome around the work: window material, toolbar and panel surfaces, ink, dividers and accent.' },
