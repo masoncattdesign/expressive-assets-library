@@ -7,13 +7,14 @@
    variables, so the structure never changes and the theme does the rest.
    That is the "Distinctly Windows, Uniquely Mine" point, in code.
 
-   Pick a theme with the chips or 1 to 4; Compare (or 0) shows all four. */
+   Pick a theme with the chips or 1 to 5; Compare (or 0) shows all five. */
 
 const THEMES = [
   { id: 'w11', name: 'Windows 11', tag: 'Today', a: '#cfe3ff', b: '#2f6fea' },
   { id: 'wnext', name: 'WNext Default', tag: 'Inevitable', a: '#fad9c8', b: '#a9b6f2' },
   { id: 'nova', name: 'Nova', tag: 'Intermediate', a: '#efe7dc', b: '#d9734e' },
   { id: 'bebop', name: 'Bebop', tag: 'Copilot language', a: '#ffffff', b: '#242424' },
+  { id: 'telo', name: 'Telograph', tag: 'Inspired', a: '#f4f4f5', b: '#e8478f', photo: false },
 ];
 
 // The library's Solitaire icon is still placeholder art, so the real one rides along inline.
@@ -254,7 +255,7 @@ const SIZE_NAME = { s: 'Square', w: 'Wide', t: 'Tall' };
 const WALLS = '../../private/desktops/wallpapers/';
 function loadWallpapers() {
   const css = [];
-  return Promise.all(THEMES.map(t => new Promise(res => {
+  return Promise.all(THEMES.filter(t => t.photo !== false).map(t => new Promise(res => {
     const im = new Image();
     im.onload = () => { css.push(`.th-${t.id}{--wall-photo:url("${WALLS}${t.id}.jpg");--bloom:none}`); res(); };
     im.onerror = res; im.src = WALLS + t.id + '.jpg';
@@ -313,11 +314,11 @@ function setTheme(id) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('.cp-themes').innerHTML = THEMES.map((t, i) => `<button data-t="${t.id}" title="${t.tag} (${i + 1})"><i style="--a:${t.a};--b:${t.b}"></i>${t.name}</button>`).join('') + `<button class="all" data-t="all" title="All four side by side (0)">Compare</button>`;
+  $('.cp-themes').innerHTML = THEMES.map((t, i) => `<button data-t="${t.id}" title="${t.tag} (${i + 1})"><i style="--a:${t.a};--b:${t.b}"></i>${t.name}</button>`).join('') + `<button class="all" data-t="all" title="All five side by side (0)">Compare</button>`;
   $$('.cp-themes button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
   addEventListener('keydown', e => {
     if (e.target.closest('input, textarea')) return;
-    const n = '01234'.indexOf(e.key); if (n < 0) return;
+    const n = '012345'.indexOf(e.key); if (n < 0) return;
     setTheme(n === 0 ? 'all' : THEMES[n - 1].id);
   });
   addEventListener('resize', fitAll);

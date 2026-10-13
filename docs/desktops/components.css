@@ -5,6 +5,9 @@
    place to change here. Everything on the page reads these tokens; nothing
    below the token blocks names a theme. */
 
+/* Telograph's display face, bundled (SIL Open Font License; see fonts/LICENSE.txt). */
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap; src: url(fonts/SourceSerif4.woff2) format("woff2"); }
+
 /* ---- Theme tokens (Figma: Surfaces collection) ------------------------- */
 .th-w11 {
   --wall-top: #cfe3ff; --wall-bottom: #2f6fea; --wall-bloom: #0b4fd6; --on-wall: #ffffff;
@@ -51,6 +54,24 @@
   --w-disp: 500; --w-strong: 600;
 }
 
+/* Telograph, after the Audet shell v3 "fine line" direction: paper and ink,
+   hairlines, a black taskbar bezel, pill controls, Source Serif display and
+   one accent pair (pink, pressed #e8478f). Its wallpaper is paper with a dot grid. */
+.th-telo {
+  --wall-top: #fafafa; --wall-bottom: #f4f4f5; --wall-bloom: #ffffff; --on-wall: #18181b;
+  --s-window: #ffffff; --s-content: #ffffff; --s-pane: #fafafa; --s-card: #ffffff; --s-control: #ffffff;
+  --s-flyout: #ffffff; --s-taskbar: #18181b; --s-select: #fff0f7; --tb-ink: #ffffff;
+  --line: rgba(24, 24, 27, .08); --line-strong: #18181b; --ink: #18181b; --ink2: #71717a;
+  --acc: #e8478f; --acc-on: #ffffff; --acc-soft: #fff0f7;
+  --r-win: 16px; --r-card: 16px; --r-ctl: 20px; --r-fly: 20px; --r-tb: 0px; --tb-inset: 0px;
+  --f-text: "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --f-disp: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --w-disp: 400; --w-strong: 600;
+}
+.th-telo:is(.view, .wg-sizes), .th-telo :is(.view, .wg-sizes, .pv, .sf.desk) { background: radial-gradient(circle, #d4d4d8 1.1px, transparent 1.6px) 0 0 / 22px 22px, #f4f4f5; }
+.th-telo .desk-bloom, .th-telo .pv::before { display: none; }
+.th-telo .sf .btn:not(.ghost):not(.acc) { box-shadow: inset 0 0 0 1.25px var(--ink); }
+
 /* ---- Page ---------------------------------------------------------------- */
 body.cp { overflow: auto; background: #f4f3f1; color: #1c1b33; user-select: auto; }
 .cp-top { position: sticky; top: 0; z-index: 20; background: rgba(244, 243, 241, .88); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(28, 27, 51, .08); }
@@ -83,7 +104,7 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .spec dt.stays { color: #2e7d4f; } .spec dt.changes { color: #b4532a; }
 .spec dd { margin: 0; font: 400 14px/1.5 var(--font); color: rgba(28, 27, 51, .72); }
 .views { display: grid; gap: 16px; }
-.compare .views { grid-template-columns: repeat(4, 1fr); }
+.compare .views { grid-template-columns: repeat(5, 1fr); }
 .view { position: relative; border-radius: 20px; overflow: hidden; padding: 24px; display: grid; place-items: center;
   background: var(--wall-photo, none) center / cover no-repeat, radial-gradient(60% 70% at 70% 60%, color-mix(in srgb, var(--wall-bloom) 55%, transparent), transparent 70%), linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
 .compare .view { padding: 12px; border-radius: 14px; }
@@ -121,9 +142,11 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .win-bar .caps .ic { width: 12px; height: 12px; }
 
 /* ---- Taskbar ------------------------------------------------------------- */
-.sf.tb { height: 48px; display: flex; align-items: center; padding: 0 8px 0 12px; background: var(--s-taskbar); backdrop-filter: blur(30px) saturate(1.4); border-radius: var(--r-tb); box-shadow: 0 0 0 1px var(--line); font-size: 12px; }
+.sf.tb { color: var(--tb-ink, var(--ink)); height: 48px; display: flex; align-items: center; padding: 0 8px 0 12px; background: var(--s-taskbar); backdrop-filter: blur(30px) saturate(1.4); border-radius: var(--r-tb); box-shadow: 0 0 0 1px var(--line); font-size: 12px; }
 .tb-wx { display: flex; align-items: center; gap: 8px; width: 132px; line-height: 1.3; }
 .tb-wx b { display: block; font-weight: 400; }
+.sf.tb .sec { color: inherit; opacity: .72; }
+.tb-mid .tb-search { color: var(--ink2); }
 .tb-wx .ic { color: #f7b500; width: 24px; height: 24px; }
 .tb-mid { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; }
 .tb-mid > span { width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--r-ctl); }
@@ -346,7 +369,7 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .wg-sizes .wg .wg-big { font-weight: var(--w-disp); }
 .th-wnext .wg-sizes .wg { --wg-bg: rgba(255, 255, 255, .72); }
 .th-bebop .wg-sizes .wg { --wg-bg: #fff; box-shadow: 0 0 0 1px var(--line); }
-.compare .wg-grid { display: grid; grid-template-columns: 220px repeat(4, 1fr); gap: 16px; align-items: center; }
+.compare .wg-grid { display: grid; grid-template-columns: 200px repeat(5, 1fr); gap: 16px; align-items: center; }
 .compare .wg-grid > h4 { margin: 0; font: 600 15px/1.3 var(--font); }
 .compare .wg-grid > h4 small { display: block; font: 400 12px/1.3 var(--font); color: rgba(28, 27, 51, .5); }
 .compare .wg-sizes { justify-content: center; padding: 34px 12px 12px; position: relative; }

@@ -36,9 +36,9 @@ stack takes turns showing a few widgets in one place; scroll over it to flip.
 
 Components: components.html (linked from the index) shows the Windows
 surfaces (Desktop, Start, Taskbar, the Universal Composer, File Explorer,
-Settings, Paint and Notepad) and every widget, in code, in the four themes
-from the Surfaces chart in Figma: Windows 11, WNext Default, Nova and Bebop.
-Press 1 to 4 to pick a theme, or 0 to compare all four side by side.
+Settings, Paint and Notepad) and every widget, in code, in the five themes
+from the Surfaces chart in Figma: Windows 11, WNext Default, Nova, Bebop and
+Telograph. Press 1 to 5 to pick a theme, or 0 to compare all five side by side.
 
 These are explorations, not product. All content is made up.
 Best viewed on a large screen; each desktop scales to fit the window.

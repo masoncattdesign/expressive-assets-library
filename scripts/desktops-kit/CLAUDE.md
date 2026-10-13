@@ -136,7 +136,7 @@ hosted copy does.
 - **Components** (`components.html`, `.css`, `.js`) is a catalog page, not a desktop.
   - Each surface is one function returning markup at the native size of its Figma
     component (`start()` is 832x864, `settings()` is 1128x920, and so on); the page scales it to fit.
-  - Themes are wrapper classes (`.th-w11`, `.th-wnext`, `.th-nova`, `.th-bebop`) whose
+  - Themes are wrapper classes (`.th-w11`, `.th-wnext`, `.th-nova`, `.th-bebop`, `.th-telo`) whose
     tokens mirror the Figma "Surfaces" variable collection one for one. Surfaces and
     widgets read only those tokens, so structure stays and the theme swaps material,
     color, radii and type.
