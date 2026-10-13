@@ -14,7 +14,7 @@ const THEMES = [
   { id: 'wnext', name: 'WNext Default', tag: 'Inevitable', a: '#fad9c8', b: '#a9b6f2' },
   { id: 'nova', name: 'Nova', tag: 'Intermediate', a: '#efe7dc', b: '#d9734e' },
   { id: 'bebop', name: 'Bebop', tag: 'Copilot language', a: '#ffffff', b: '#242424' },
-  { id: 'telo', name: 'Telograph', tag: 'Inspired', a: '#f4f4f5', b: '#e8478f', photo: false },
+  { id: 'telo', name: 'Telograph', tag: 'Inspired', a: '#f4f4f5', b: '#e8478f' },
 ];
 
 // The library's Solitaire icon is still placeholder art, so the real one rides along inline.
@@ -71,7 +71,8 @@ function desktop() {
 }
 
 /* ---- Start --------------------------------------------------------------- */
-function start() {
+function start(t) {
+  if (t && t.id === 'telo') return startTelo();
   const pins = [['product/edge/standard-32.svg', 'Edge'], ['product/word/standard-32.svg', 'Word'], ['product/excel/standard-32.svg', 'Excel'], ['product/powerpoint/standard-32.svg', 'PowerPoint'],
     ['product/outlook/standard-32.svg', 'Outlook'], ['app/store-light-theme/standard-32.svg', 'Microsoft Store'], ['app/settings/standard-32.svg', 'Settings'], ['app/photos/standard-32.svg', 'Photos'],
     ['app/xbox/standard-32.svg', 'Xbox'], ['app/solitaire/standard-32.svg', 'Solitaire & Casual Games'], ['app/paint/standard-32.svg', 'Paint'], ['product/linkedin/standard-32.svg', 'LinkedIn'],
@@ -105,7 +106,8 @@ function start() {
 
 /* ---- Universal Composer -------------------------------------------------- */
 // The floating panel as it ships today: recent things on top, the ask box at the bottom.
-function composer() {
+function composer(t) {
+  if (t && t.id === 'telo') return composerTelo();
   const item = (icon, t, s, on) => `<div class="uc-item${on ? ' on' : ''}">${icon}<span class="tx">${t}<small>${s}</small></span>${on ? `<span class="ib">${ic('more-horizontal', 16)}</span><span class="ib">${ic('open', 16)}</span>` : ''}</div>`;
   const items = [
     [img('product/word/standard-24.svg', 24), 'Lisbon itinerary', '25 minutes ago • Word', true],
@@ -122,7 +124,8 @@ function composer() {
 }
 
 /* ---- File Explorer ------------------------------------------------------- */
-function explorer() {
+function explorer(t) {
+  if (t && t.id === 'telo') return explorerTelo();
   const row = (icon, c, on) => `<div class="fe-row${on ? ' on' : ''}"><span>${icon}${c[0]}</span><span>${c[1]}</span><span>${c[2]}</span><span>${c[3]}</span></div>`;
   const fd = ic('folder', 20, 'filled');
   const files = [[fd, ['Big Sur trip', '10/6/2026 9:12 PM', 'File folder', '']], [fd, ['Recipes', '9/28/2026 7:40 PM', 'File folder', '']], [fd, ['School forms', '9/2/2026 8:03 AM', 'File folder', '']],
@@ -162,7 +165,7 @@ function settings() {
   const val = (v, c = 'chevron-down') => `<span class="val">${v}</span>${chev(c)}`;
   return `<div class="sf win set">
     <div class="win-bar"><span class="back">${ic('arrow-left', 12)}</span>Settings<span class="set-find">${ic('search', 14)}Find a setting</span>${caps()}</div>
-    <div class="set-body">
+    <div class="win-pane"><div class="set-body">
       <div class="set-nav">
         <div class="set-acct"><span class="avatar">DB</span><span><b>Diego Baca</b><small>diegobaca@outlook.com</small></span></div>
         <nav>${nav.map(([i, l, c, on]) => `<span class="${on ? 'on' : ''}" style="--c:${c}">${ic(i, 20, 'filled')}${l}</span>`).join('')}</nav>
@@ -178,7 +181,7 @@ function settings() {
         ${card('data-line', 'Battery usage', '', chev('chevron-down'))}
         ${card('list', 'Lid, power &amp; sleep button controls', 'Choose what happens when you interact with your device\'s physical controls', chev('chevron-down'))}
       </div>
-    </div>
+    </div></div>
   </div>`;
 }
 
@@ -202,7 +205,7 @@ function paint() {
   const handles = [[-4, -4], [252, -4], [508, -4], [-4, 252], [508, 252], [-4, 508], [252, 508], [508, 508]].map(([x, y]) => `<b style="left:${x}px;top:${y}px"></b>`).join('');
   return `<div class="sf win paint">
     <div class="win-bar">${img('app/paint/standard-16.svg', 16)}Paint - Untitled${caps()}</div>
-    <div class="pt-menu"><span class="btn ghost">File</span><span class="btn ghost">Edit</span><span class="btn ghost">View</span><i class="div"></i>
+    <div class="win-pane"><div class="pt-menu"><span class="btn ghost">File</span><span class="btn ghost">Edit</span><span class="btn ghost">View</span><i class="div"></i>
       <span class="ib">${ic('save', 16)}</span><i class="div"></i><span class="ib">${ic('share', 16)}</span><i class="div"></i><span class="ib dim">${ic('arrow-undo', 16)}</span><span class="ib dim">${ic('arrow-redo', 16)}</span>
       <span class="me"><img src="media/person-sam.jpg" alt=""><span class="ib">${ic('settings', 18)}</span></span></div>
     <div class="pt-tools">
@@ -226,7 +229,7 @@ function paint() {
       </div>
     </div>
     <div class="pt-status"><span>${ic('cursor', 14)}314, 124px</span><span>${ic('select-all-off', 14)}300 × 125px</span><span>${ic('resize', 14)}800 × 512px</span><span>${ic('save', 14)}Size: 20.4KB</span>
-      <span class="zoom">${ic('zoom-fit', 14)}<span class="btn" style="height:24px">100% ${ic('chevron-down', 12)}</span>${ic('zoom-out', 14)}<i class="zbar"></i>${ic('zoom-in', 14)}</span></div>
+      <span class="zoom">${ic('zoom-fit', 14)}<span class="btn" style="height:24px">100% ${ic('chevron-down', 12)}</span>${ic('zoom-out', 14)}<i class="zbar"></i>${ic('zoom-in', 14)}</span></div></div>
   </div>`;
 }
 
@@ -235,7 +238,7 @@ function notepad() {
   return `<div class="sf win np">
     <div class="win-bar np-tabs"><div class="np-tab on">${img('app/notepad/standard-16.svg', 16)}Packing list${ic('dismiss', 12).replace('class="ic"', 'class="ic x"')}</div>
       <div class="np-tab sec">${img('app/notepad/standard-16.svg', 16)}Recipes to try</div><span class="ib">${ic('add', 14)}</span>${caps()}</div>
-    <div class="np-menu"><span class="btn ghost">File</span><span class="btn ghost">Edit</span><span class="btn ghost">View</span><span class="grow"></span><span class="ib">${ic('sparkle', 16)}</span><span class="ib">${ic('settings', 16)}</span></div>
+    <div class="win-pane"><div class="np-menu"><span class="btn ghost">File</span><span class="btn ghost">Edit</span><span class="btn ghost">View</span><span class="grow"></span><span class="ib">${ic('sparkle', 16)}</span><span class="ib">${ic('settings', 16)}</span></div>
     <div class="np-edit">Lisbon packing list
 
 Passports (both in the blue folder)
@@ -248,20 +251,97 @@ Tram card
 Camera and spare battery
 
 Before we leave: water the plants, ask Sam to grab the mail</div>
-    <div class="np-status"><span>Ln 8, Col 38</span><span>324 characters</span><span class="r"><span>100%</span><span>Windows (CRLF)</span><span>UTF-8</span></span></div>
+    <div class="np-status"><span>Ln 8, Col 38</span><span>324 characters</span><span class="r"><span>100%</span><span>Windows (CRLF)</span><span>UTF-8</span></span></div></div>
+  </div>`;
+}
+
+
+/* ---- Telograph layouts ----------------------------------------------------
+   Telograph changes structure, not just color, so a few surfaces have their
+   own layout here (the Figma components switch the same way with the
+   layout/classic and layout/fine-line variables). Windows sit in a ribbed
+   glass frame with the content on an inset white pane; type pairs Source
+   Serif headlines with an italic accent word; buttons are pills; stats are
+   big light numerals. Content stays Diego's. */
+const RING3 = (s = 76, w = 7, f = [1 / 3, 1 / 4, .04]) => {
+  const cols = ['#e8478f', '#3fb39a', '#d4a11e'];
+  return `<svg class="rings" viewBox="0 0 ${s} ${s}" width="${s}" height="${s}">${cols.map((c, i) => {
+    const r = s / 2 - w / 2 - i * (w + (s > 40 ? 3 : 1.5)), C = 2 * Math.PI * r;
+    return `<circle cx="${s / 2}" cy="${s / 2}" r="${r}" fill="none" stroke="var(--line)" stroke-width="${w}"/><circle cx="${s / 2}" cy="${s / 2}" r="${r}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-dasharray="${(f[i] * C).toFixed(1)} ${C.toFixed(1)}" transform="rotate(-90 ${s / 2} ${s / 2})"/>`;
+  }).join('')}</svg>`;
+};
+const MARK = `<span class="tl-mark">${RING3(20, 2, [1, 1, 1])}</span>`;
+const pillBtn = (label, primary, icon) => `<span class="tl-pill${primary ? ' on' : ''}">${icon ? ic(icon, 14) : ''}${label}</span>`;
+
+function composerTelo() {
+  const card = (cls, eye, title, text, a, b) => `<div class="uct-card ${cls}"><small>${eye}</small><b>${title}</b><p>${text}</p><div>${pillBtn(a, true)}${pillBtn(b)}</div></div>`;
+  return `<div class="sf uc uc-t">
+    <div class="tl-head">${MARK}Tuesday, October 13</div>
+    <div class="uct-body">
+      <div class="uct-hero">${RING3()}<div><h3 class="disp">Two things need you.<br><em>I handled three.</em></h3>
+        <div class="uct-legend"><span style="--c:#e8478f">Tasks <b>1/3</b></span><span style="--c:#3fb39a">Messages <b>1/4</b></span><span style="--c:#d4a11e">Plans <b>0/3</b></span></div></div></div>
+      ${card('gold', 'Decide', 'Lily\'s party headcount', 'Two families haven\'t replied. The bakery can add more until Friday.', 'Confirm 12', 'Wait until Fri')}
+      ${card('teal', 'Send', 'Reply to Sam', 'I\'ll send it from your account with the Lisbon itinerary attached.', 'Send', 'Not now')}
+      <div class="grow"></div>
+      <div class="tl-stats"><span><i>2</i><b>briefs ready<small>Lisbon trip, recital</small></b></span><span><i>4</i><b>files updated<small>Since this morning</small></b></span><span><i>3</i><b>handled<small>Bills, reminders</small></b></span></div>
+      <div class="tl-ask"><i class="ring"></i><i class="caret"></i>Search or ask</div>
+    </div>
+  </div>`;
+}
+
+function explorerTelo() {
+  const nav = [['home', 'Home'], ['desktop', 'Desktop'], ['document', 'Documents', true], ['image', 'Pictures'], ['arrow-download', 'Downloads']];
+  const files = [['product/word/standard-48.svg', 'Lisbon itinerary.docx', '#ebf2ff', true], ['product/excel/standard-48.svg', 'Family budget.xlsx', '#e8f6ec'],
+    ['product/powerpoint/standard-48.svg', 'Lily\'s recital program.pptx', '#fdeee9'], ['app/notepad/standard-48.svg', 'Packing list.txt', '#ebf4ff'],
+    ['app/photos/standard-48.svg', 'Big Sur', '#ebf2ff'], ['file/pdf/standard-32.svg', 'School forms.pdf', '#fdecec'],
+    ['product/word/standard-48.svg', 'Book club notes.docx', '#ebf2ff'], ['app/paint/standard-48.svg', 'Garden plan.png', '#fff4e6']];
+  return `<div class="sf win fe fe-t">
+    <div class="win-bar">${img('app/file-explorer/standard-32.svg', 28)}<b>Documents</b><span class="ib">${ic('add', 16)}</span>${caps()}</div>
+    <div class="win-pane">
+      <div class="fet-tools"><span class="ib">${ic('arrow-left', 18)}</span><span class="ib">${ic('arrow-right', 18)}</span>
+        <span class="fet-field grow">${ic('desktop', 18)}This PC${ic('chevron-right', 12)}<b>Documents</b></span><span class="fet-field search">${ic('search', 18)}Search Documents</span></div>
+      <div class="fet-body">
+        <nav class="fet-nav">${nav.map(([i, l, on]) => `<span class="${on ? 'on' : ''}">${ic(i, 18)}${l}</span>`).join('')}<hr><span>${ic('folder', 18)}Lisbon</span></nav>
+        <div class="fet-grid">${files.map(([p, l, c, on]) => `<span class="${on ? 'on' : ''}"><i style="--t:${c}">${img(p, 48)}</i>${l}</span>`).join('')}</div>
+      </div>
+      <div class="fet-status"><b>8 items</b>Lisbon itinerary selected · 48 KB</div>
+    </div>
+  </div>`;
+}
+
+function startTelo() {
+  const apps = [['product/edge/standard-48.svg', 'Edge', '#eef7fb'], ['product/word/standard-48.svg', 'Word', '#ebf2ff'], ['product/excel/standard-48.svg', 'Excel', '#e8f6ec'],
+    ['product/powerpoint/standard-48.svg', 'PowerPoint', '#fdeee9'], ['product/outlook/standard-48.svg', 'Outlook', '#ebf2ff'], ['product/teams/standard-48.svg', 'Teams', '#efeefe'],
+    ['app/file-explorer/standard-48.svg', 'File Explorer', '#fff6e0'], ['app/alarms-and-clock/standard-48.svg', 'Clock', '#ebf2ff'], ['app/settings/standard-48.svg', 'Settings', '#f1f1f4'],
+    ['app/photos/standard-48.svg', 'Photos', '#ebf2ff']];
+  const rec = [['product/word/standard-32.svg', 'Lisbon itinerary.docx', 'Edited 12m ago'], ['product/powerpoint/standard-32.svg', 'Lily\'s recital program.pptx', 'Sam commented · 1h ago']];
+  return `<div class="sf start st-t">
+    <div class="stt-body">
+      <h2><span class="disp">Good afternoon, Diego</span><small>Tuesday, October 13</small></h2>
+      <div class="stt-cards">
+        <div class="stt-hero"><div class="eye">${MARK}<span>Lily's birthday</span><span class="n">1 of 3</span></div><h3>Order the cake</h3>
+          <p>Up next · 4:30 PM · about 20 minutes</p><div class="acts">${pillBtn('Done', true, 'checkmark')}${pillBtn('Order it for me', false, 'sparkle')}<span class="later">Later</span></div></div>
+        <div class="stt-day"><small>Saturday</small><b>7</b><span>Lily turns<br>seven</span></div>
+      </div>
+      <div class="stt-apps">${apps.map(([p, l, c]) => `<span><i style="--t:${c}">${img(p, 48)}</i>${l}</span>`).join('')}</div>
+      <div class="tl-rule"><small>Jump back in</small><i></i><span class="tl-pill">More ${ic('chevron-right', 12)}</span></div>
+      <div class="stt-rec">${rec.map(([p, n, s]) => `<span><i>${img(p, 32)}</i><b>${n}<small>${s}</small></b></span>`).join('')}</div>
+      <div class="tl-rule"><small>Your pages</small><i></i></div>
+    </div>
+    <div class="stt-foot"><span class="avatar">DB</span>Diego Baca<span class="all">All apps ${ic('chevron-right', 14)}</span><span class="power">${ic('power', 18)}</span></div>
   </div>`;
 }
 
 /* ---- The catalog --------------------------------------------------------- */
 const SURFACES = [
   { id: 'desktop', name: 'Desktop', w: 1440, h: 900, build: desktop, stays: 'Taskbar along the bottom, desktop icons top left, wallpaper edge to edge.', changes: 'The wallpaper, and whether the taskbar floats with an inset or stays docked.' },
-  { id: 'start', name: 'Start', w: 832, h: 864, build: start, stays: 'Copilot search on top, then Pinned, Recent and All by category, with account and power in the footer. Same order, same app icons.', changes: 'Shell material and tint, corner radii, card surfaces, button and avatar accent, typeface.' },
+  { id: 'start', name: 'Start', w: 832, h: 864, build: start, stays: 'Copilot search on top, then Pinned, Recent and All by category, with account and power in the footer. Same order, same app icons.', changes: 'Shell material and tint, corner radii, card surfaces, button and avatar accent, typeface. Telograph goes furthest: a greeting, the next thing to do, the day ahead, then apps and recent files, with the account on a ribbed glass footer.' },
   { id: 'taskbar', name: 'Taskbar', w: 1440, h: 48, build: taskbar, stays: 'Widgets left, Start, search, Task view and pinned apps centered, tray and clock right.', changes: 'Docked or floating, end radius, material. Telograph goes further: a black bezel with an ask pill, running dots and a white clock in a tray pill.' },
-  { id: 'uc', name: 'Universal Composer', w: 500, h: 550, build: composer, stays: 'A floating panel over the taskbar: recent files, apps, settings and actions on top, the ask box at the bottom, in the same order.', changes: 'Panel material, corner shape, the selected row and the Open button. Pushing further from here is where the styles can diverge most.' },
-  { id: 'explorer', name: 'File Explorer', w: 1040, h: 640, build: explorer, stays: 'Tabs, address bar, command bar, navigation pane, details view, status bar.', changes: 'Pane and content contrast, selection fill, button and window radii.' },
-  { id: 'settings', name: 'Settings', note: 'System > Power & battery', w: 1128, h: 736, build: settings, stays: 'The account, search and navigation, then a page title, a status figure and setting cards in the same order. Navigation icons keep their full color.', changes: 'Window material, card surfaces, and the accent on toggles and progress. The page title and battery figure take the display face.' },
-  { id: 'paint', name: 'Paint', w: 1200, h: 800, build: paint, stays: 'Menu row, toolbar groups, palette, canvas, Cocreator panel and status bar. The drawing and the generated image are untouched.', changes: 'Only the chrome around the work: window material, toolbar and panel surfaces, ink, dividers and accent.' },
-  { id: 'notepad', name: 'Notepad', w: 760, h: 520, build: notepad, stays: 'Tabs, menu, editor, status bar.', changes: 'Text face and editor surface, Copilot accent.' },
+  { id: 'uc', name: 'Universal Composer', w: 500, h: 550, build: composer, stays: 'A floating panel over the taskbar: recent files, apps, settings and actions on top, the ask box at the bottom, in the same order.', changes: 'Panel material, corner shape, the selected row and the Open button. Pushing further from here is where the styles can diverge most. Telograph turns it into a morning brief: what needs you, what it handled, and the ask box.' },
+  { id: 'explorer', name: 'File Explorer', w: 1040, h: 640, build: explorer, stays: 'Tabs, address bar, command bar, navigation pane, details view, status bar.', changes: 'Pane and content contrast, selection fill, button and window radii. Telograph swaps the details list for large file tiles in a white pane on a ribbed glass frame.' },
+  { id: 'settings', name: 'Settings', note: 'System > Power & battery', w: 1128, h: 736, build: settings, stays: 'The account, search and navigation, then a page title, a status figure and setting cards in the same order. Navigation icons keep their full color.', changes: 'Window material, card surfaces, and the accent on toggles and progress. The page title and battery figure take the display face. In Telograph the content sits in a white pane inside a ribbed glass frame.' },
+  { id: 'paint', name: 'Paint', w: 1200, h: 800, build: paint, stays: 'Menu row, toolbar groups, palette, canvas, Cocreator panel and status bar. The drawing and the generated image are untouched.', changes: 'Only the chrome around the work: window material, toolbar and panel surfaces, ink, dividers and accent. In Telograph the content sits in a white pane inside a ribbed glass frame.' },
+  { id: 'notepad', name: 'Notepad', w: 760, h: 520, build: notepad, stays: 'Tabs, menu, editor, status bar.', changes: 'Text face and editor surface, Copilot accent. In Telograph the content sits in a white pane inside a ribbed glass frame.' },
 ];
 const SIZE_NAME = { s: 'Square', w: 'Wide', t: 'Tall' };
 
@@ -287,7 +367,7 @@ async function loadWallpapers() {
 let current = store('components-theme') || 'w11';
 
 function view(s, t) {
-  return `<div class="view th-${t.id}"><span class="view-tag">${t.name}</span><div class="fit" data-w="${s.w}" data-h="${s.h}">${s.build()}</div></div>`;
+  return `<div class="view th-${t.id}"><span class="view-tag">${t.name}</span><div class="fit" data-w="${s.w}" data-h="${s.h}">${s.build(t)}</div></div>`;
 }
 function renderSurfaces() {
   const compare = current === 'all', list = compare ? THEMES : THEMES.filter(t => t.id === current);
