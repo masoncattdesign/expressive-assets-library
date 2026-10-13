@@ -56,10 +56,12 @@
     },
     "type": {
       "type": "string",
-      "description": "Top-level asset kind.",
+      "description": "Top-level asset kind. icon and illustration are vector artwork the tools parse and recolor. background and persona are rasterized photography or rendering \u2014 a fixed picture, not a drawing with addressable parts.",
       "enum": [
         "icon",
-        "illustration"
+        "illustration",
+        "background",
+        "persona"
       ]
     },
     "collection": {
@@ -74,7 +76,9 @@
         "device",
         "app",
         "third-party",
-        "wip"
+        "wip",
+        "background",
+        "persona"
       ]
     },
     "product": {
@@ -111,13 +115,13 @@
     },
     "sizes": {
       "type": "array",
-      "description": "Pixel sizes the artwork is designed to read correctly at \u2014 not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12.",
+      "description": "Pixel sizes the artwork is designed to read correctly at \u2014 not the sizes it can technically scale to. If it turns to mud at 12px, do not list 12. Square artwork is measured by its side; a background or persona that is not square is measured by its LONG edge, with `aspect` carrying the shape.",
       "minItems": 1,
       "uniqueItems": true,
       "items": {
         "type": "integer",
         "minimum": 8,
-        "maximum": 512
+        "maximum": 4096
       }
     },
     "colors": {
@@ -143,6 +147,72 @@
       "type": "boolean",
       "description": "Whether the artwork may be retinted to a Windows accent. Set false for trademarked brand marks that must ship in their own colors \u2014 the browser disables the accent picker for those, so nobody ships a magenta Excel icon."
     },
+    "aspect": {
+      "type": "string",
+      "description": "Width-to-height ratio of non-square artwork, as \"W:H\". Backgrounds are 16:9 or 21:9 and personas are usually portrait, so a card that assumes a square box crops them. Absent means square, which is what every icon and illustration is.",
+      "pattern": "^[0-9]{1,2}:[0-9]{1,2}$"
+    },
+    "persona": {
+      "type": "object",
+      "description": "Who the person in this artwork is, and who signed off on showing them. Identity and approval only: this records that a persona is cleared for use and what they represent, and deliberately does not become a character bible. Required when type is \"persona\".",
+      "additionalProperties": false,
+      "required": [
+        "role"
+      ],
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "What this persona represents to the audience \u2014 \"IT administrator\", \"small-business owner\", \"student\". The reason someone reaches for this persona rather than another one.",
+          "minLength": 1
+        },
+        "segment": {
+          "type": "string",
+          "description": "The audience segment the role sits in, if the marketing taxonomy names one (\"Enterprise\", \"Consumer\", \"Education\").",
+          "minLength": 1
+        },
+        "pronouns": {
+          "type": "string",
+          "description": "How copy alongside this persona should refer to them, so a screen mock does not misgender the artwork.",
+          "minLength": 1
+        },
+        "approval": {
+          "type": "object",
+          "description": "The sign-off. This is the whole point of keeping personas in the library rather than in a folder: a screen built from these is built from artwork someone cleared. Required once status is \"published\" \u2014 an unapproved persona may sit here as a draft, but it may not claim approval it does not have.",
+          "additionalProperties": false,
+          "required": [
+            "approvedBy",
+            "approvedOn"
+          ],
+          "properties": {
+            "approvedBy": {
+              "type": "string",
+              "description": "The team or person who cleared this persona for use.",
+              "minLength": 1
+            },
+            "approvedOn": {
+              "type": "string",
+              "description": "ISO date of the sign-off.",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "scope": {
+              "type": "string",
+              "description": "How far the approval reaches. internal = Microsoft-facing material only. public = cleared for anything shipped outside. Absent means ask.",
+              "enum": [
+                "internal",
+                "public"
+              ]
+            },
+            "expires": {
+              "type": "string",
+              "description": "ISO date the clearance lapses, where the release carries one. An expired persona is a deprecation waiting to happen, and the library should be able to see it coming.",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            }
+          }
+        }
+      }
+    },
     "variants": {
       "type": "object",
       "description": "Artwork paths, keyed by theme and then by the pixel size the drawing was made for. Windows product icons are REDRAWN per size \u2014 the 16px Excel icon is a different drawing from the 48px one, not a scaled copy \u2014 so each is stored separately. Artwork that is genuinely size-agnostic (a single scalable drawing) uses the one key \"any\". Top-level keys must match the themes array.",
@@ -151,11 +221,11 @@
         "type": "object",
         "minProperties": 1,
         "propertyNames": {
-          "pattern": "^(any|[0-9]{1,3})$"
+          "pattern": "^(any|[0-9]{1,4})$"
         },
         "additionalProperties": {
           "type": "string",
-          "pattern": "^assets/.+\\.svg$"
+          "pattern": "^assets/.+\\.(svg|png|jpg|webp)$"
         }
       }
     },
@@ -229,7 +299,7 @@
       "description": "Cells in the style-by-size matrix that were produced here rather than received, as \"style:size\" strings. A generated cell is one of: the same drawing shown at another size, a style derived from the received artwork by luminance, or a silhouette. It exists so the matrix is square and the gap stays visible; it is not a substitute for a drawing, and a published asset can still carry generated cells. Absent means every variant listed is artwork as it arrived.",
       "items": {
         "type": "string",
-        "pattern": "^(standard|outline|filled):(any|[0-9]{1,3})$"
+        "pattern": "^(standard|outline|filled):(any|[0-9]{1,4})$"
       },
       "uniqueItems": true
     },

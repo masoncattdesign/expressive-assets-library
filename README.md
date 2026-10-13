@@ -29,6 +29,9 @@ assets/
     oobe/        Windows Illustrations — out-of-box setup: wifi, PIN, privacy…
     m365/        M365 Illustrations — spot illustrations: chat, tasks, search…
     product/     Product Illustrations
+  media/
+    background/  Backgrounds      — raster grounds for mocking a screen
+    persona/     Personas         — raster portraits, cleared by marketing
 
 docs/            Gallery — the browsing tool (plain HTML/CSS/JS, no build step)
 schema/          JSON Schema every asset's meta.json must satisfy
@@ -52,6 +55,38 @@ The size in the filename is not decoration. Windows artwork is redrawn per size
 — the 16px Excel icon is a different drawing from the 48px one, not a scaled
 copy — so `variants` is keyed theme → size. Artwork that genuinely is one
 scalable drawing uses the single key `any`.
+
+### Raster: Backgrounds and Personas
+
+`assets/media/` holds the two categories that are pictures rather than drawings.
+Nothing in the toolchain parses them: there is one style, no accent, and no
+color roles, because there is nothing in a photograph for any of those to reach.
+Three rules make them safe to keep here.
+
+**The repo holds the web copy; the master lives outside it.** A committed file
+over 800 KB fails validation. GitHub Pages does not resolve Git LFS pointers —
+it serves the pointer text — so LFS is not the escape hatch it looks like, and a
+print-resolution library in `.git` is in every clone forever.
+
+**The size key names the long edge, and `aspect` carries the shape.** A
+background is 16:9 and a persona is portrait, so a card that assumed square
+would crop both. `validate` reads the real pixels out of the file header and
+fails if the metadata disagrees with them.
+
+**A published persona carries its approval.** `persona.approval` records who
+cleared the artwork and when, and `validate` refuses a published persona without
+it. That is the whole reason personas live in the library rather than in a
+shared folder: a screen built from one of these is built from a face somebody
+signed off on, and the Gallery says so in the panel.
+
+```
+npm run media:import -- --type=background --from=~/Desktop/walls --dry-run
+npm run media:import -- --type=persona --from=./approved \
+  --approved-by="Brand marketing" --approved-on=2026-10-13 --scope=internal
+```
+
+The eight starter backgrounds are drawn rather than photographed — they are ours,
+reproducible, and cheap. `npm run media:backgrounds` redraws them.
 
 ## Metadata
 

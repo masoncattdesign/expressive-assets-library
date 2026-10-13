@@ -68,6 +68,9 @@ let copied = 0;
 
 for (const a of manifest.assets) {
   if (!a.variants?.standard) continue;
+  // The kit is the Customizer in a folder, and the Customizer parses SVG. A
+  // raster asset would be copied in and then fail to open.
+  if (!Object.values(a.variants.standard).every((rel) => /\.svg$/i.test(rel))) continue;
   const variants = { standard: a.variants.standard };
   for (const rel of Object.values(variants.standard)) {
     await mkdir(join(OUT, dirname(rel)), { recursive: true });

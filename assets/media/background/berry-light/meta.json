@@ -1,0 +1,45 @@
+{
+  "id": "background.berry-light",
+  "name": "Berry on light",
+  "type": "background",
+  "collection": "background",
+  "status": "published",
+  "description": "A soft berry gradient on a light ground, for mocking a Windows screen on palette.",
+  "keywords": [
+    "background",
+    "wallpaper",
+    "gradient",
+    "screen",
+    "mock",
+    "light",
+    "magenta",
+    "berry",
+    "pink"
+  ],
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    480,
+    1920
+  ],
+  "aspect": "16:9",
+  "colors": {
+    "primary": "#C239B3",
+    "secondary": "#D474CA"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "480": "assets/media/background/berry-light/berry-light-480.png",
+      "1920": "assets/media/background/berry-light/berry-light-1920.png"
+    }
+  },
+  "generated": [
+    "standard:480",
+    "standard:1920"
+  ],
+  "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+  "version": "1.0.0",
+  "updated": "2026-10-13"
+}

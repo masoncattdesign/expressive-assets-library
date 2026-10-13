@@ -7,9 +7,16 @@
  * never walks the asset tree itself. It is committed so changes show up in code
  * review as a readable diff.
  *
- * Vocabulary: a GROUP is icons vs illustrations. A COLLECTION is the sub-bucket
- * within a group (system, product, file, …) and is what an asset's `collection`
- * field names.
+ * Vocabulary: a GROUP is the top level of the sidebar — Product Icons, System
+ * Icons, Illustrations, Backgrounds. A COLLECTION is the sub-bucket within a
+ * group (system, product, file, …) and is what an asset's `collection` field
+ * names.
+ *
+ * Two shapes of artwork live here. assets/icons and assets/illustrations hold
+ * vector work the tools parse, recolor and reduce to styles. assets/media holds
+ * raster work — photography and renders — which they cannot: a background or a
+ * persona is a fixed picture, and the only thing the library does with one is
+ * show it and say where it came from.
  *
  * Run: npm run manifest
  */
@@ -67,6 +74,30 @@ export const GROUPS = [
         // another team's artwork, so the library says whose they are.
         note: 'These illustrations belong to the M365 design system and are not owned by Windows Design Systems. They are here for reference and are still a work in progress.' },
       { id: 'device', label: 'Device Illustrations' },
+    ],
+  },
+  {
+    // Raster, so its own group rather than a collection under Illustrations:
+    // nothing about a background is addressable the way an illustration's
+    // color roles are, and putting it under Illustrations would put a style
+    // toggle and an accent picker on a photograph.
+    id: 'backgrounds',
+    type: 'background',
+    label: 'Backgrounds',
+    dir: 'assets/media',
+    collections: [
+      { id: 'background', label: 'Backgrounds',
+        note: 'Backgrounds are raster artwork. The repo holds a web-sized copy for browsing and layout; the print-resolution master lives outside it. Grab the master before you ship.' },
+    ],
+  },
+  {
+    id: 'personas',
+    type: 'persona',
+    label: 'Personas',
+    dir: 'assets/media',
+    collections: [
+      { id: 'persona', label: 'Personas',
+        note: 'Every published persona here carries a written marketing approval, which is the reason they live in the library rather than in a folder. Build screens from these and the faces in them are cleared. A persona marked WIP is not.' },
     ],
   },
 ];

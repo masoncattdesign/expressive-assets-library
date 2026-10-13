@@ -1,0 +1,44 @@
+{
+  "id": "background.teal-dark",
+  "name": "Teal on dark",
+  "type": "background",
+  "collection": "background",
+  "status": "published",
+  "description": "A soft teal gradient on a dark ground, for mocking a Windows screen on palette.",
+  "keywords": [
+    "background",
+    "wallpaper",
+    "gradient",
+    "screen",
+    "mock",
+    "dark",
+    "teal",
+    "cyan"
+  ],
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    480,
+    1920
+  ],
+  "aspect": "16:9",
+  "colors": {
+    "primary": "#038387",
+    "secondary": "#6DB7B9"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "480": "assets/media/background/teal-dark/teal-dark-480.png",
+      "1920": "assets/media/background/teal-dark/teal-dark-1920.png"
+    }
+  },
+  "generated": [
+    "standard:480",
+    "standard:1920"
+  ],
+  "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+  "version": "1.0.0",
+  "updated": "2026-10-13"
+}

@@ -3,7 +3,7 @@
   "name": "Expressive Assets",
   "description": "Icon and illustration library for Windows Design Systems.",
   "generator": "scripts/build-manifest.mjs",
-  "total": 3363,
+  "total": 3372,
   "groups": [
     {
       "id": "product-icons",
@@ -71,6 +71,32 @@
           "id": "device",
           "label": "Device Illustrations",
           "count": 5
+        }
+      ]
+    },
+    {
+      "id": "backgrounds",
+      "type": "background",
+      "label": "Backgrounds",
+      "collections": [
+        {
+          "id": "background",
+          "label": "Backgrounds",
+          "note": "Backgrounds are raster artwork. The repo holds a web-sized copy for browsing and layout; the print-resolution master lives outside it. Grab the master before you ship.",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "personas",
+      "type": "persona",
+      "label": "Personas",
+      "collections": [
+        {
+          "id": "persona",
+          "label": "Personas",
+          "note": "Every published persona here carries a written marketing approval, which is the reason they live in the library rather than in a folder. Build screens from these and the faces in them are cleared. A persona marked WIP is not.",
+          "count": 1
         }
       ]
     }
@@ -258104,6 +258130,406 @@
         ],
         "hash": "3ebf7f6504562c0b"
       }
+    },
+    {
+      "id": "background.azure-dark",
+      "name": "Azure on dark",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft azure gradient on a dark ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "dark",
+        "blue",
+        "azure"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#6BB1E6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/azure-dark/azure-dark-480.png",
+          "1920": "assets/media/background/azure-dark/azure-dark-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.azure-light",
+      "name": "Azure on light",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft azure gradient on a light ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "light",
+        "blue",
+        "azure"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#0078D4",
+        "secondary": "#4DA1E1"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/azure-light/azure-light-480.png",
+          "1920": "assets/media/background/azure-light/azure-light-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.berry-dark",
+      "name": "Berry on dark",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft berry gradient on a dark ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "dark",
+        "magenta",
+        "berry",
+        "pink"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#C239B3",
+        "secondary": "#DC8CD3"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/berry-dark/berry-dark-480.png",
+          "1920": "assets/media/background/berry-dark/berry-dark-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.berry-light",
+      "name": "Berry on light",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft berry gradient on a light ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "light",
+        "magenta",
+        "berry",
+        "pink"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#C239B3",
+        "secondary": "#D474CA"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/berry-light/berry-light-480.png",
+          "1920": "assets/media/background/berry-light/berry-light-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.iris-dark",
+      "name": "Iris on dark",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft iris gradient on a dark ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "dark",
+        "purple",
+        "iris",
+        "violet"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#8764B8",
+        "secondary": "#B9A5D6"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/iris-dark/iris-dark-480.png",
+          "1920": "assets/media/background/iris-dark/iris-dark-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.iris-light",
+      "name": "Iris on light",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft iris gradient on a light ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "light",
+        "purple",
+        "iris",
+        "violet"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#8764B8",
+        "secondary": "#AB93CD"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/iris-light/iris-light-480.png",
+          "1920": "assets/media/background/iris-light/iris-light-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.teal-dark",
+      "name": "Teal on dark",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft teal gradient on a dark ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "dark",
+        "teal",
+        "cyan"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#038387",
+        "secondary": "#6DB7B9"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/teal-dark/teal-dark-480.png",
+          "1920": "assets/media/background/teal-dark/teal-dark-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "background.teal-light",
+      "name": "Teal on light",
+      "type": "background",
+      "collection": "background",
+      "status": "published",
+      "description": "A soft teal gradient on a light ground, for mocking a Windows screen on palette.",
+      "keywords": [
+        "background",
+        "wallpaper",
+        "gradient",
+        "screen",
+        "mock",
+        "light",
+        "teal",
+        "cyan"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        480,
+        1920
+      ],
+      "aspect": "16:9",
+      "colors": {
+        "primary": "#038387",
+        "secondary": "#4FA8AB"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "480": "assets/media/background/teal-light/teal-light-480.png",
+          "1920": "assets/media/background/teal-light/teal-light-1920.png"
+        }
+      },
+      "generated": [
+        "standard:480",
+        "standard:1920"
+      ],
+      "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "persona.template",
+      "name": "Persona template",
+      "type": "persona",
+      "collection": "persona",
+      "status": "draft",
+      "description": "Not a person. A portrait-shaped placeholder that holds the Personas collection open and shows the shape of a persona record. Replace it with approved artwork.",
+      "keywords": [
+        "persona",
+        "template",
+        "placeholder",
+        "portrait",
+        "example"
+      ],
+      "themes": [
+        "standard"
+      ],
+      "sizes": [
+        384,
+        1024
+      ],
+      "aspect": "3:4",
+      "colors": {
+        "primary": "#B4BBC8",
+        "secondary": "#E8EAEF"
+      },
+      "recolorable": false,
+      "variants": {
+        "standard": {
+          "384": "assets/media/persona/template/template-384.png",
+          "1024": "assets/media/persona/template/template-1024.png"
+        }
+      },
+      "generated": [
+        "standard:384",
+        "standard:1024"
+      ],
+      "persona": {
+        "role": "Template, not a persona"
+      },
+      "notes": "Drawn by scripts/generate-persona-template.mjs. Delete this asset once the first approved persona lands — it exists only so the collection is not empty.",
+      "version": "1.0.0",
+      "updated": "2026-10-13"
     }
   ]
 }

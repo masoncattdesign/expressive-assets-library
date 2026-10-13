@@ -65,11 +65,34 @@ const FAMILIES = {
     fallback: 'standard',
     brandColors: true,
   },
+  /* The two raster families. A background and a persona are pictures, not
+     drawings: there is no second style because there is no line work to reduce,
+     and there is no accent because there is nothing in a photograph for one to
+     reach. Saying so is the whole job of these two entries — every control the
+     panel offers is a promise about what the artwork can do. */
+  background: {
+    label: 'Background',
+    styles: ['standard'],
+    fallback: 'standard',
+    brandColors: true,
+    raster: true,
+    colorNote: 'The pair the artwork was drawn from, for matching a mock to it. A background is a fixed picture, so nothing here repaints it.',
+  },
+  persona: {
+    label: 'Persona',
+    styles: ['standard'],
+    fallback: 'standard',
+    brandColors: false,
+    raster: true,
+    colorNote: 'Photography, shown as shot.',
+  },
 };
 
 /** File and app icons sit in the product family for now: to a person choosing
  *  one they are the same kind of object, whatever the collection says. */
 function familyOf(asset) {
+  if (asset.type === 'background') return 'background';
+  if (asset.type === 'persona') return 'persona';
   if (asset.type === 'illustration') return 'illustration';
   if (asset.collection === 'system') return 'system';
   return 'product';
@@ -124,6 +147,11 @@ const STATUS_LABEL = { draft: 'WIP', published: 'Published', deprecated: 'Deprec
 /* The sidebar marks are assets, not drawings kept in this file. Regenerate
  * with `node scripts/inline-nav-icons.mjs` after changing the picks there. */
 const NAV_ICONS = {
+  // Hand-drawn rather than pulled from the library: Backgrounds and Personas
+  // have no mark in it yet, and a sidebar row falling back to the grid glyph
+  // reads as a bug.
+  'backgrounds': '<path d="M5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v13.5A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25A2.25 2.25 0 0 1 5.25 3Zm13.5 1.5H5.25a.75.75 0 0 0-.75.75v8.69l2.72-2.72a2.25 2.25 0 0 1 3.18 0l1.6 1.6 3.09-3.1a2.25 2.25 0 0 1 3.19 0l1.22 1.22V5.25a.75.75 0 0 0-.75-.75ZM8.5 6a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5Z"/>',
+  'personas': '<path d="M12 2.75a4.25 4.25 0 1 1 0 8.5 4.25 4.25 0 0 1 0-8.5ZM7.75 13h8.5a2.25 2.25 0 0 1 2.25 2.25v.57c0 1.33-.71 2.55-1.87 3.19A10.4 10.4 0 0 1 12 20.25c-1.99 0-3.55-.42-4.63-1.24A3.64 3.64 0 0 1 5.5 15.82v-.57A2.25 2.25 0 0 1 7.75 13Z"/>',
   'all': '<path d="M8.75 13C9.99264 13 11 14.0074 11 15.25V18.75C11 19.9926 9.99264 21 8.75 21H5.25C4.00736 21 3 19.9926 3 18.75V15.25C3 14.0074 4.00736 13 5.25 13H8.75ZM18.75 13C19.9926 13 21 14.0074 21 15.25V18.75C21 19.9926 19.9926 21 18.75 21H15.25C14.0074 21 13 19.9926 13 18.75V15.25C13 14.0074 14.0074 13 15.25 13H18.75ZM8.75 3C9.99264 3 11 4.00736 11 5.25V8.75C11 9.99264 9.99264 11 8.75 11H5.25C4.00736 11 3 9.99264 3 8.75V5.25C3 4.00736 4.00736 3 5.25 3H8.75ZM18.75 3C19.9926 3 21 4.00736 21 5.25V8.75C21 9.99264 19.9926 11 18.75 11H15.25C14.0074 11 13 9.99264 13 8.75V5.25C13 4.00736 14.0074 3 15.25 3H18.75Z"/>', // system.grid filled — Everything, evenly
   'product-icons': '<path d="M18.4923 2.33034L21.671 5.50911C22.5497 6.38779 22.5497 7.81241 21.671 8.69109L19.0866 11.275C20.1696 11.4375 21 12.3718 21 13.5V18.75C21 19.9926 19.9926 21 18.75 21H5.25C4.00736 21 3 19.9926 3 18.75V5.25001C3 4.00736 4.00736 3.00001 5.25 3.00001H10.5C11.6289 3.00001 12.5637 3.83146 12.7253 4.91541L15.3103 2.33034C16.189 1.45166 17.6136 1.45166 18.4923 2.33034ZM4.5 18.75C4.5 19.1642 4.83579 19.5 5.25 19.5L11.249 19.4993L11.25 12.75L4.5 12.7493V18.75ZM12.749 19.4993L18.75 19.5C19.1642 19.5 19.5 19.1642 19.5 18.75V13.5C19.5 13.0858 19.1642 12.75 18.75 12.75L12.749 12.7493V19.4993ZM10.5 4.50001H5.25C4.83579 4.50001 4.5 4.83579 4.5 5.25001V11.2493H11.25V5.25001C11.25 4.83579 10.9142 4.50001 10.5 4.50001ZM12.75 9.30933V11.25L14.69 11.2493L12.75 9.30933Z"/>', // system.apps filled — A group of app tiles
   'product-icons:product': '<path d="M3 6.25C3 4.45507 4.45507 3 6.25 3H17.75C19.5449 3 21 4.45507 21 6.25V17.75C21 19.5449 19.5449 21 17.75 21H6.25C4.45507 21 3 19.5449 3 17.75V6.25ZM6.25 4.5C5.2835 4.5 4.5 5.2835 4.5 6.25V6.5H19.5V6.25C19.5 5.2835 18.7165 4.5 17.75 4.5H6.25ZM4.5 17.75C4.5 18.7165 5.2835 19.5 6.25 19.5H17.75C18.7165 19.5 19.5 18.7165 19.5 17.75V8H4.5V17.75ZM6.85 9.5H10.15C10.6194 9.5 11 9.88056 11 10.35V17.15C11 17.6194 10.6194 18 10.15 18H6.85C6.38056 18 6 17.6194 6 17.15V10.35C6 9.88056 6.38056 9.5 6.85 9.5ZM7.5 16.5H9.5V11H7.5V16.5ZM12 10.25C12 9.83579 12.3358 9.5 12.75 9.5H17.25C17.6642 9.5 18 9.83579 18 10.25C18 10.6642 17.6642 11 17.25 11H12.75C12.3358 11 12 10.6642 12 10.25ZM12.75 12.5C12.3358 12.5 12 12.8358 12 13.25C12 13.6642 12.3358 14 12.75 14H16.25C16.6642 14 17 13.6642 17 13.25C17 12.8358 16.6642 12.5 16.25 12.5H12.75Z"/>', // system.app-generic outline — One app
@@ -187,6 +215,35 @@ function drawingPath(asset, theme = themeFor(asset), size = state.size) {
 
   const below = numeric.filter((n) => n <= (size || Infinity)).pop();
   return drawings[below ?? numeric[numeric.length - 1]];
+}
+
+/**
+ * Raster artwork is never fetched, parsed or tinted — it goes in an <img> and
+ * the browser does the rest. The test is the FILE, not the asset's type: one
+ * stray PNG filed under the wrong type should paint as a picture rather than
+ * arrive in the SVG path and take the card down with it.
+ */
+const RASTER = /\.(png|jpe?g|webp)(\?|$)/i;
+
+function isRasterAsset(asset) {
+  const drawings = asset.variants?.standard || Object.values(asset.variants || {})[0] || {};
+  return Object.values(drawings).some((path) => RASTER.test(path));
+}
+
+/**
+ * The file a card should show.
+ *
+ * For vector artwork that is whatever drawingPath picks, because every size is
+ * a separate drawing and the card wants the one nearest what it displays. For
+ * raster it is always the smallest file on record: the sizes a background ships
+ * are a thumbnail and the real thing, not two drawings of the same object, and
+ * browsing a collection should not pull eight full-resolution images.
+ */
+function thumbPath(asset) {
+  if (!isRasterAsset(asset)) return drawingPath(asset);
+  const drawings = asset.variants?.standard || {};
+  const sizes = Object.keys(drawings).map(Number).filter(Number.isFinite).sort((a, b) => a - b);
+  return drawings[sizes[0]] ?? drawings.any ?? null;
 }
 
 /** path -> svg source. Fetched once, kept for the session. */
@@ -489,6 +546,17 @@ const painter = new IntersectionObserver(
 async function paintCard(card) {
   const asset = state.manifest.assets.find((a) => a.id === card.dataset.id);
   if (!asset) return;
+
+  if (isRasterAsset(asset)) {
+    const path = thumbPath(asset);
+    const box = card.querySelector('.thumb');
+    if (!path || !box || !card.isConnected) return;
+    // No fetch, no parse, no tint: hand the URL to the browser, which is
+    // better at decoding a PNG off the main thread than this file could be.
+    box.replaceChildren(el('img', { src: path, alt: '', loading: 'lazy', decoding: 'async' }));
+    return;
+  }
+
   await loadDrawing(drawingPath(asset));
 
   const source = sourceFor(asset);
@@ -622,8 +690,11 @@ async function openPanel(id) {
   }
 
   // Load every theme's drawing at this size so the Style toggle and the
-  // accent-availability note are correct the moment the panel opens.
-  await Promise.all(stylesFor(asset).map((t) => loadDrawing(drawingPath(asset, t))));
+  // accent-availability note are correct the moment the panel opens. Raster
+  // has nothing to preload: the <img> in the preview fetches itself.
+  if (!isRasterAsset(asset)) {
+    await Promise.all(stylesFor(asset).map((t) => loadDrawing(drawingPath(asset, t))));
+  }
   if (state.selectedId === id) renderPanel();
 }
 
@@ -729,19 +800,74 @@ function renderPanel() {
      size. A 16px icon at 16px is too small to judge and a 512px illustration
      at 512px is cropped. The size control still picks WHICH drawing you see,
      since every size is drawn separately; this only changes how big it is. */
+  const raster = isRasterAsset(asset);
   const preview = el('div', { className: `preview ${asset.type}` });
-  const source = sourceFor(asset);
-  if (source) {
-    const node = svgNode(tint(source, colors), null);
-    if (node) preview.append(node);
+  if (raster) {
+    preview.append(el('img', { src: sourcePath(asset), alt: asset.description || asset.name, decoding: 'async' }));
+  } else {
+    const source = sourceFor(asset);
+    if (source) {
+      const node = svgNode(tint(source, colors), null);
+      if (node) preview.append(node);
+    }
   }
   panel.append(preview);
   const note = el('p', { className: 'preview-note' });
-  note.append(`Scaled to fit · ${state.size}px drawing`);
+  // A raster size names the long edge, not a square, so it is not a "drawing"
+  // and saying so would be the wrong word on the wrong artwork.
+  note.append(raster ? `Scaled to fit · ${state.size}px on the long edge` : `Scaled to fit · ${state.size}px drawing`);
   if (isGenerated(asset, themeFor(asset), state.size)) {
     note.append(' ', el('span', { className: 'badge generated', textContent: 'Generated' }));
   }
   panel.append(note);
+
+  /* Persona. Who this is and who cleared them, sitting above everything else
+     in the panel because it is the reason a persona is in the library at all:
+     a screen built from one of these is built from a face somebody signed off
+     on, and the sign-off is no use if you have to go and find it. */
+  if (asset.persona) {
+    panel.append(el('h3', { textContent: 'Persona' }));
+    const personaRows = el('div', { className: 'rows' });
+    const lines = [['Role', asset.persona.role]];
+    if (asset.persona.segment) lines.push(['Segment', asset.persona.segment]);
+    if (asset.persona.pronouns) lines.push(['Pronouns', asset.persona.pronouns]);
+    for (const [k, v] of lines) {
+      const row = el('div', { className: 'row' });
+      row.append(el('span', { className: 'k', textContent: k }), el('span', { className: 'v', textContent: v }));
+      personaRows.append(row);
+    }
+    panel.append(personaRows);
+
+    const approval = asset.persona.approval;
+    if (!approval) {
+      panel.append(
+        el('p', {
+          className: 'callout warn',
+          textContent: 'No approval on record, so this persona is not cleared. Treat it as work in progress and do not ship a screen built on it.',
+        })
+      );
+    } else {
+      const today = new Date().toISOString().slice(0, 10);
+      const lapsed = Boolean(approval.expires) && approval.expires < today;
+      const scope =
+        approval.scope === 'public' ? 'Cleared for public use'
+        : approval.scope === 'internal' ? 'Cleared for internal use only'
+        : 'Cleared for use';
+      const line = el('p', { className: `callout ${lapsed ? 'warn' : 'ok'}` });
+      line.append(`${scope}. Approved by ${approval.approvedBy} on ${approval.approvedOn}.`);
+      if (approval.expires) {
+        line.append(
+          el('span', {
+            className: 'fine',
+            textContent: lapsed
+              ? `That clearance lapsed on ${approval.expires}. Check with marketing before this goes anywhere.`
+              : `Clearance runs to ${approval.expires}.`,
+          })
+        );
+      }
+      panel.append(line);
+    }
+  }
 
   /* Style. Only what this family offers and this asset has: a System icon
      shows Outline and Filled, and never a Standard it was never drawn in. */
@@ -789,7 +915,7 @@ function renderPanel() {
     // fetched yet. Render immediately so the slider feels live, then re-render
     // once the drawing lands.
     renderPanel();
-    if (await loadDrawing(drawingPath(asset))) renderPanel();
+    if (!isRasterAsset(asset) && (await loadDrawing(drawingPath(asset)))) renderPanel();
   });
   panel.append(slider);
 
@@ -817,9 +943,11 @@ function renderPanel() {
     panel.append(
       el('p', {
         className: 'callout',
-        textContent: others.length
-          ? `${THEMES.find((t) => t.key === theme)?.label} ships in brand colors and can't be retinted. Switch to ${others.join(' or ')} to apply an accent.`
-          : 'Not recolorable — this asset ships in its own brand colors.',
+        textContent: family.raster
+          ? 'Raster artwork. There is nothing in a fixed picture for an accent to reach, so the picker is off rather than present and inert.'
+          : others.length
+            ? `${THEMES.find((t) => t.key === theme)?.label} ships in brand colors and can't be retinted. Switch to ${others.join(' or ')} to apply an accent.`
+            : 'Not recolorable — this asset ships in its own brand colors.',
       })
     );
   } else {
@@ -863,6 +991,7 @@ function renderPanel() {
     ['Drawings', drawingSummary(asset)],
     ['Version', `${asset.version} · ${asset.updated}`],
   ];
+  if (asset.aspect) entries.splice(5, 0, ['Aspect', asset.aspect]);
   if (asset.generated?.length) {
     const total = Object.values(asset.variants || {}).reduce((n, d) => n + Object.keys(d).length, 0);
     entries.splice(6, 0, ['Generated', `${asset.generated.length} of ${total} drawings`]);
@@ -910,8 +1039,52 @@ function renderPanel() {
   }
 
   /* Actions */
-  const exportSource = () => tint(sourceFor(asset) || '', { ...colors, size: state.size });
   const actions = el('div', { className: 'actions' });
+
+  /* Raster gets its own two. "Copy SVG code" has nothing to copy and the
+     Customizer reads source color out of markup there is none of, so offering
+     either would be offering a button that fails. */
+  if (raster) {
+    const path = sourcePath(asset);
+    const ext = (path.split('.').pop() || 'png').toLowerCase();
+
+    const save = el('a', {
+      className: 'btn btn-primary',
+      href: path,
+      download: `${asset.id.replace('.', '-')}-${state.size}.${ext}`,
+    });
+    save.innerHTML =
+      '<svg class="ico" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4-4m-4 4-4-4M4.5 19.5h15"/></svg>';
+    save.append(`Download ${ext.toUpperCase()}`);
+
+    const link = el('button', { className: 'btn', type: 'button' });
+    link.innerHTML =
+      '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M10.5 13.5a3.5 3.5 0 0 0 5 0l3-3a3.54 3.54 0 0 0-5-5l-1.2 1.2M13.5 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.54 3.54 0 0 0 5 5l1.2-1.2"/></svg>';
+    link.append('Copy image link');
+    link.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(new URL(path, location.href).href);
+        toast('Image link copied to clipboard');
+      } catch {
+        toast('Clipboard blocked — use Download instead');
+      }
+    });
+
+    actions.append(save, link);
+    actions.append(
+      el('a', {
+        className: 'btn',
+        href: `${REPO}/tree/main/${sourcePath(asset)}`,
+        target: '_blank',
+        rel: 'noopener',
+        textContent: 'View source on GitHub',
+      })
+    );
+    panel.append(actions);
+    return;
+  }
+
+  const exportSource = () => tint(sourceFor(asset) || '', { ...colors, size: state.size });
 
   const copy = el('button', { className: 'btn', type: 'button' });
   copy.innerHTML =

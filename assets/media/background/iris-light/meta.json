@@ -1,0 +1,45 @@
+{
+  "id": "background.iris-light",
+  "name": "Iris on light",
+  "type": "background",
+  "collection": "background",
+  "status": "published",
+  "description": "A soft iris gradient on a light ground, for mocking a Windows screen on palette.",
+  "keywords": [
+    "background",
+    "wallpaper",
+    "gradient",
+    "screen",
+    "mock",
+    "light",
+    "purple",
+    "iris",
+    "violet"
+  ],
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    480,
+    1920
+  ],
+  "aspect": "16:9",
+  "colors": {
+    "primary": "#8764B8",
+    "secondary": "#AB93CD"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "480": "assets/media/background/iris-light/iris-light-480.png",
+      "1920": "assets/media/background/iris-light/iris-light-1920.png"
+    }
+  },
+  "generated": [
+    "standard:480",
+    "standard:1920"
+  ],
+  "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+  "version": "1.0.0",
+  "updated": "2026-10-13"
+}

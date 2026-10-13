@@ -499,3 +499,54 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .app-menu-pop a:hover { background: var(--line-soft); color: var(--text); }
 .app-menu-pop a.on { background: var(--accent); color: var(--on-accent); font-weight: 600; }
 .app-menu-pop a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+
+/* --- Raster assets ---------------------------------------------------
+   Backgrounds and personas are pictures rather than drawings, which changes
+   two things on screen. They are not square, so a box that assumes square
+   crops them. And they are not glyphs, so the card shows the artwork edge to
+   edge rather than floating a small mark in the middle of a tile. */
+/* The thumb and the preview are both `place-items: center` grids. A centered
+   grid item has no definite containing block to resolve a percentage height
+   against, so `height: 100%` on an <img> silently falls back to its intrinsic
+   height and a portrait overflows its box and lands on the label underneath.
+   Stretching the item is what gives the percentage something to resolve to;
+   object-fit then decides whether it crops or fits. */
+.card .thumb img,
+.preview > img { align-self: stretch; justify-self: stretch; min-width: 0; min-height: 0; }
+.card .thumb img { display: block; max-width: 100%; max-height: 100%; }
+
+.card[data-type="background"] { contain-intrinsic-size: auto 148px; }
+.card[data-type="background"] .thumb { height: 76px; }
+.card[data-type="background"] .thumb img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
+}
+
+/* Portrait, so the box is taller than it is wide and the image fills it from
+   the top: a face cropped at the chin is a worse preview than one cropped at
+   the shoulder. */
+.card[data-type="persona"] { contain-intrinsic-size: auto 176px; }
+.card[data-type="persona"] .thumb { height: 104px; }
+.card[data-type="persona"] .thumb img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; border-radius: 8px;
+}
+
+.grid.list .card[data-type="background"],
+.grid.list .card[data-type="persona"] { contain-intrinsic-size: auto 52px; }
+.grid.list .card[data-type="background"] .thumb,
+.grid.list .card[data-type="persona"] .thumb { height: 32px; width: 48px; }
+.grid.list .card[data-type="background"] .thumb img,
+.grid.list .card[data-type="persona"] .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Fit, never crop, in the panel: the preview is where someone decides whether
+   this is the right picture, and a crop there is a lie about the artwork. */
+.preview > img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
+.preview.background { height: 196px; padding: 14px; }
+.preview.persona { height: 280px; padding: 14px; }
+
+/* A callout that carries a verdict rather than a note. Used for persona
+   clearance, where "approved" and "not approved" are the two things somebody
+   opening the panel actually came to find out, and they should not have to
+   read the sentence to tell which one it is. */
+.callout.ok { background: var(--chip-live-bg); border-color: transparent; box-shadow: inset 2px 0 0 var(--chip-live); }
+.callout.warn { background: var(--chip-wip-bg); border-color: transparent; box-shadow: inset 2px 0 0 var(--chip-wip); }

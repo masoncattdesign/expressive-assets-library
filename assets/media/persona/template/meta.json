@@ -1,0 +1,44 @@
+{
+  "id": "persona.template",
+  "name": "Persona template",
+  "type": "persona",
+  "collection": "persona",
+  "status": "draft",
+  "description": "Not a person. A portrait-shaped placeholder that holds the Personas collection open and shows the shape of a persona record. Replace it with approved artwork.",
+  "keywords": [
+    "persona",
+    "template",
+    "placeholder",
+    "portrait",
+    "example"
+  ],
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    384,
+    1024
+  ],
+  "aspect": "3:4",
+  "colors": {
+    "primary": "#B4BBC8",
+    "secondary": "#E8EAEF"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "384": "assets/media/persona/template/template-384.png",
+      "1024": "assets/media/persona/template/template-1024.png"
+    }
+  },
+  "generated": [
+    "standard:384",
+    "standard:1024"
+  ],
+  "persona": {
+    "role": "Template, not a persona"
+  },
+  "notes": "Drawn by scripts/generate-persona-template.mjs. Delete this asset once the first approved persona lands — it exists only so the collection is not empty.",
+  "version": "1.0.0",
+  "updated": "2026-10-13"
+}

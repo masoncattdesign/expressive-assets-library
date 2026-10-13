@@ -1,0 +1,44 @@
+{
+  "id": "background.azure-dark",
+  "name": "Azure on dark",
+  "type": "background",
+  "collection": "background",
+  "status": "published",
+  "description": "A soft azure gradient on a dark ground, for mocking a Windows screen on palette.",
+  "keywords": [
+    "background",
+    "wallpaper",
+    "gradient",
+    "screen",
+    "mock",
+    "dark",
+    "blue",
+    "azure"
+  ],
+  "themes": [
+    "standard"
+  ],
+  "sizes": [
+    480,
+    1920
+  ],
+  "aspect": "16:9",
+  "colors": {
+    "primary": "#0078D4",
+    "secondary": "#6BB1E6"
+  },
+  "recolorable": false,
+  "variants": {
+    "standard": {
+      "480": "assets/media/background/azure-dark/azure-dark-480.png",
+      "1920": "assets/media/background/azure-dark/azure-dark-1920.png"
+    }
+  },
+  "generated": [
+    "standard:480",
+    "standard:1920"
+  ],
+  "notes": "Drawn by scripts/generate-backgrounds.mjs. Re-run that script rather than editing the PNGs; both sizes come out of one pass so they cannot drift apart.",
+  "version": "1.0.0",
+  "updated": "2026-10-13"
+}

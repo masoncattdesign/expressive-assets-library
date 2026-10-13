@@ -4521,12 +4521,23 @@ function resolveColorVars(svgStr){
   return svgStr.replace(/var\(\s*--[a-z0-9-]+\s*,\s*(#[0-9a-f]{3,8})\s*\)/gi, '$1');
 }
 
+/* The Customizer parses SVG markup: it reads shapes, groups them and repaints
+   them. Backgrounds and personas are raster, so there is nothing in one for it
+   to read. They are filtered out as the library loads rather than handled
+   downstream, because every rule below assumes a parse succeeded.
+
+   Top level, because there are two loadLibrary definitions in this file and the
+   second one wins. A helper declared inside the first is not in scope in the
+   second, which is a ReferenceError at the only place it actually runs. */
+const isVectorAsset = (a) => Boolean(a.variants && a.variants.standard)
+  && Object.values(a.variants.standard).every((path) => /\.svg$/i.test(path));
+
 async function loadLibrary(){
   try{
     const res = await fetch('manifest.json', { cache: 'no-store' });
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const manifest = await res.json();
-    LIB.assets = (manifest.assets || []).filter(a => a.variants && a.variants.standard);
+    LIB.assets = (manifest.assets || []).filter(a => isVectorAsset(a));
     LIB.assets.forEach(a => LIB.byId.set(a.id, a));
     LIB.available = LIB.assets.length > 0;
   }catch(err){
@@ -4878,7 +4889,7 @@ async function loadLibrary() {
     const res = await fetch('manifest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const manifest = await res.json();
-    LIB.assets = (manifest.assets || []).filter((a) => a.variants && a.variants.standard);
+    LIB.assets = (manifest.assets || []).filter((a) => isVectorAsset(a));
     LIB.assets.forEach((a) => LIB.byId.set(a.id, a));
     LIB.available = LIB.assets.length > 0;
   } catch (err) {
