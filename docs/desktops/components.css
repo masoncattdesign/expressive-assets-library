@@ -68,8 +68,8 @@
   --f-disp: "Source Serif 4", Georgia, "Times New Roman", serif;
   --w-disp: 400; --w-strong: 600;
 }
-.th-telo:is(.view, .wg-sizes), .th-telo :is(.view, .wg-sizes, .pv, .sf.desk) { background: radial-gradient(circle, #d4d4d8 1.1px, transparent 1.6px) 0 0 / 22px 22px, #f4f4f5; }
-.th-telo .desk-bloom, .th-telo .pv::before { display: none; }
+.th-telo:is(.view, .wg-sizes), .th-telo :is(.view, .wg-sizes, .sf.desk) { background: radial-gradient(circle, #d4d4d8 1.1px, transparent 1.6px) 0 0 / 22px 22px, #f4f4f5; }
+.th-telo .desk-bloom { display: none; }
 .th-telo .sf .btn:not(.ghost):not(.acc) { box-shadow: inset 0 0 0 1.25px var(--ink); }
 
 /* ---- Page ---------------------------------------------------------------- */
@@ -244,43 +244,41 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .fe-status { display: flex; gap: 16px; padding: 6px 16px; font-size: 12px; color: var(--ink2); background: var(--s-content); }
 
 /* ---- Settings ------------------------------------------------------------ */
-.sf.set { width: 1128px; height: 920px; }
-.set .win-bar { height: 32px; padding-left: 0; gap: 0; }
+.sf.set { width: 1128px; height: 736px; }
+.set .win-bar { position: relative; height: 48px; padding-left: 0; gap: 0; }
+.set-find { position: absolute; left: 50%; top: 9px; transform: translateX(-50%); width: 514px; height: 30px; display: flex; align-items: center; gap: 10px; padding: 0 12px; border-radius: 15px; background: var(--s-control); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink2); font-size: 14px; }
+.set-find .ic { width: 14px; height: 14px; }
 .set .win-bar .back { width: 40px; display: grid; place-items: center; }
 .set-body { flex: 1; display: flex; min-height: 0; overflow: hidden; }
 .set-nav { width: 292px; flex: none; padding: 12px 16px; }
-.set-acct { display: flex; align-items: center; gap: 12px; padding: 4px 0 20px 4px; }
+.set-acct { display: flex; align-items: center; gap: 16px; padding: 6px 0 22px 8px; }
 .set-acct .avatar { width: 60px; height: 60px; font-size: 20px; }
 .set-acct small { display: block; color: var(--ink2); font-size: 12px; }
-.set-nav .field { justify-content: space-between; margin-bottom: 16px; }
 .set-nav nav span { position: relative; display: flex; align-items: center; gap: 14px; height: 36px; padding: 0 14px; margin-bottom: 4px; border-radius: var(--r-ctl); }
 .set-nav nav span.on { background: var(--s-select); }
 .set-nav nav span.on::before { content: ""; position: absolute; left: 0; top: 10px; width: 3px; height: 16px; border-radius: 2px; background: var(--acc); }
 .set-nav nav .ic { width: 20px; height: 20px; color: var(--c); }
 .th-bebop .set-nav nav .ic { color: var(--ink); }
-.set-page { flex: 1; padding: 4px 40px 32px 20px; overflow: hidden; }
-.set-title { display: flex; align-items: center; gap: 14px; padding-bottom: 22px; font-size: 28px; line-height: 36px; }
+.set-page { flex: 1; padding: 0 40px 32px 22px; overflow: hidden; }
+.set-title { display: flex; align-items: center; gap: 14px; padding: 4px 0 12px; font-size: 28px; line-height: 36px; }
+.set-hero { display: flex; align-items: center; gap: 18px; padding-bottom: 16px; }
+.set-hero .disp { font-size: 48px; line-height: 64px; font-weight: var(--w-strong); }
+.set-prog { width: 190px; height: 4px; border-radius: 2px; background: color-mix(in srgb, var(--line-strong) 40%, transparent); margin-left: 12px; overflow: hidden; }
+.set-prog i { display: block; height: 100%; border-radius: 2px; background: var(--acc); }
+.set-row .val { font-size: 12px; color: var(--ink2); white-space: nowrap; }
 .set-title .sec { color: var(--ink2); }
 .set-title .ic { width: 16px; height: 16px; color: var(--ink2); }
-.set-gh { padding: 14px 2px 8px; font-weight: var(--w-strong); }
-.set-presets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
-.set-preset { display: grid; justify-items: center; gap: 12px; padding: 18px 12px 16px; border-radius: var(--r-card); background: var(--s-card); box-shadow: inset 0 0 0 1px var(--line); text-align: center; }
-.set-preset.on { box-shadow: inset 0 0 0 2px var(--acc); }
-.set-preset small { display: block; font-size: 12px; color: var(--ink2); }
-.pv { position: relative; width: 154px; height: 116px; border-radius: 4px; overflow: hidden; background: var(--wall-photo, none) center / cover no-repeat, linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
-.pv::before { display: var(--bloom, block); content: ""; position: absolute; left: 60px; top: 30px; width: 110px; height: 90px; border-radius: 50%; background: var(--wall-bloom); filter: blur(14px); }
-.pv::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--s-taskbar); }
-.pv i { position: absolute; left: 31px; top: 12px; width: 92px; height: 96px; border-radius: 6px; background: var(--g), var(--s-flyout); }
 .set-card { border-radius: var(--r-card); background: var(--s-card); box-shadow: inset 0 0 0 1px var(--line); margin-bottom: 4px; overflow: hidden; }
-.set-row { display: flex; align-items: center; gap: 16px; height: 66px; padding: 0 8px 0 16px; }
+.set-row { display: flex; align-items: center; gap: 16px; height: 66px; padding: 0 8px 0 18px; }
+.set-row .tx { min-width: 0; }
 .set-row > .ic { width: 20px; height: 20px; }
 .set-row .tx { flex: 1; }
 .set-row .tx small { display: block; font-size: 12px; color: var(--ink2); }
-.set-row.sub { height: 48px; padding-left: 56px; gap: 12px; border-top: 1px solid var(--line); }
-.set-row.child { border-top: 1px solid var(--line); padding-right: 48px; }
 .tog { display: flex; align-items: center; gap: 12px; }
 .tog i { width: 40px; height: 20px; border-radius: 10px; background: var(--acc); position: relative; }
 .tog i::after { content: ""; position: absolute; right: 4px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--acc-on); }
+.tog.off i { background: transparent; box-shadow: inset 0 0 0 1px var(--ink2); }
+.tog.off i::after { right: auto; left: 4px; background: var(--ink2); }
 .chev { width: 40px; display: grid; place-items: center; }
 .chev .ic { width: 12px; height: 12px; }
 .cb { width: 20px; height: 20px; border-radius: 4px; background: var(--acc); display: grid; place-items: center; color: var(--acc-on); }

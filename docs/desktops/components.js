@@ -22,7 +22,7 @@ const SOLITAIRE = 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http:/
 // Full-color icons, by literal path so the download kit can find them.
 const img = (p, s = 32) => `<img src="${p === 'app/solitaire/standard-32.svg' ? SOLITAIRE : ICONS + p}" width="${s}" height="${s}" alt="">`;
 const caps = () => `<div class="caps"><span>${ic('subtract', 12)}</span><span>${ic('maximize', 12)}</span><span>${ic('dismiss', 12)}</span></div>`;
-const tog = (on = true) => `<span class="tog">${on ? 'On' : 'Off'}<i></i></span>`;
+const tog = (on = true) => `<span class="tog${on ? '' : ' off'}">${on ? 'On' : 'Off'}<i></i></span>`;
 const chev = name => `<span class="chev">${ic(name, 12)}</span>`;
 
 /* ---- Taskbar ------------------------------------------------------------- */
@@ -129,36 +129,32 @@ function explorer() {
   </div>`;
 }
 
-/* ---- Settings: Personalization > Start ----------------------------------- */
+/* ---- Settings: System > Power & battery ---------------------------------- */
+// The battery glyph is a status color, like the nav icons, so it stays green in every theme.
+const BATTERY = `<svg class="set-batt" viewBox="0 0 48 32" width="48" height="32"><rect x="1.5" y="7.5" width="40" height="22" rx="4" fill="#107c10" stroke="#1a1a1a" stroke-width="2.5"/><rect x="43" y="14" width="3.5" height="8" rx="1.5" fill="#1a1a1a"/><path d="M24 1 15 18h7l-3 13 11-18h-7l3-12z" fill="#1a1a1a" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
 function settings() {
-  const nav = [['home', 'Home', '#e8743b'], ['desktop', 'System', '#0f7bd0'], ['bluetooth', 'Bluetooth & devices', '#1a73e8'], ['wifi-1', 'Network & internet', '#0b8bd4'],
-    ['paint-brush', 'Personalization', '#c2652f', true], ['apps', 'Apps', '#5d5ad6'], ['person', 'Accounts', '#1d9b6c'], ['globe', 'Time & language', '#2a8fd6'],
+  const nav = [['home', 'Home', '#e8743b'], ['desktop', 'System', '#0f7bd0', true], ['bluetooth', 'Bluetooth & devices', '#1a73e8'], ['wifi-1', 'Network & internet', '#0b8bd4'],
+    ['paint-brush', 'Personalization', '#c2652f'], ['apps', 'Apps', '#5d5ad6'], ['person', 'Accounts', '#1d9b6c'], ['globe', 'Time & language', '#2a8fd6'],
     ['games', 'Gaming', '#6b6b6b'], ['accessibility', 'Accessibility', '#0e74d6'], ['shield-checkmark', 'Privacy & security', '#6f7782'], ['arrow-sync', 'Windows Update', '#1683d8']];
-  const sq = (n, x, y, w = 7, h = 7) => Array.from({ length: n }, (_, i) => `linear-gradient(rgba(97,97,97,.45),rgba(97,97,97,.45)) ${x(i)}px ${y(i)}px / ${w}px ${h}px no-repeat`);
-  const pvDefault = [...sq(14, i => 8 + (i % 7) * 11, i => 8 + Math.floor(i / 7) * 11), ...sq(6, i => 8 + (i % 3) * 27, i => 36 + Math.floor(i / 3) * 11, 20, 4), ...sq(3, i => 16 + i * 22, () => 64, 16, 16)].join(',');
-  const pvPins = [...sq(12, i => 10 + (i % 6) * 12, i => 10 + Math.floor(i / 6) * 12, 8, 8), ...sq(9, i => 8 + (i % 3) * 27, i => 42 + Math.floor(i / 3) * 12, 20, 4)].join(',');
-  const pvAll = [...sq(6, i => 12 + (i % 3) * 26, i => 10 + Math.floor(i / 3) * 38, 16, 16), ...sq(6, i => 14 + (i % 3) * 26, i => 30 + Math.floor(i / 3) * 38, 14, 2)].join(',');
-  const preset = (g, t, s, on) => `<div class="set-preset${on ? ' on' : ''}"><div class="pv"><i style="--g:${g}"></i></div><div><b>${t}</b><small>${s}</small></div></div>`;
-  const row = (icon, t, s, ctl, cls = '') => `<div class="set-row ${cls}">${icon ? ic(icon, 20) : '<span style="width:20px"></span>'}<span class="tx">${t}<small>${s}</small></span>${ctl}</div>`;
-  const check = (on, t) => `<div class="set-row sub"><span class="cb${on ? '' : ' off'}">${on ? ic('checkmark', 12) : ''}</span>${t}</div>`;
+  const card = (icon, t, s, ctl) => `<div class="set-card set-row">${ic(icon, 20)}<span class="tx">${t}${s ? `<small>${s}</small>` : ''}</span>${ctl}</div>`;
+  const val = (v, c = 'chevron-down') => `<span class="val">${v}</span>${chev(c)}`;
   return `<div class="sf win set">
-    <div class="win-bar"><span class="back">${ic('arrow-left', 12)}</span>Settings${caps()}</div>
+    <div class="win-bar"><span class="back">${ic('arrow-left', 12)}</span>Settings<span class="set-find">${ic('search', 14)}Find a setting</span>${caps()}</div>
     <div class="set-body">
       <div class="set-nav">
         <div class="set-acct"><span class="avatar">DB</span><span><b>Diego Baca</b><small>diegobaca@outlook.com</small></span></div>
-        <div class="field"><span>Search</span>${ic('search', 14)}</div>
         <nav>${nav.map(([i, l, c, on]) => `<span class="${on ? 'on' : ''}" style="--c:${c}">${ic(i, 20, 'filled')}${l}</span>`).join('')}</nav>
       </div>
       <div class="set-page">
-        <div class="set-title disp"><span class="sec">Personalization</span>${ic('chevron-right', 16)}<span>Start</span></div>
-        <div class="set-gh">Layout presets</div>
-        <div class="set-presets">${preset(pvDefault, 'Default', 'All sections enabled', true)}${preset(pvPins, 'Pins and recent', 'Your favorite apps and recent files')}${preset(pvAll, 'All apps only', 'Only the full list of installed apps')}</div>
-        <div class="set-card">${row('pin', 'Pinned', 'Pinned apps that can be customized inside the Start menu', tog() + chev('chevron-right'))}</div>
-        <div class="set-card">${row('history', 'Recent', 'Recent apps and files', tog() + chev('chevron-up'))}${check(true, 'Recently added apps')}${check(true, 'Recent and suggested files')}${check(false, 'Suggested tips and app recommendations')}</div>
-        <div class="set-card">${row('list', 'All', 'Installed apps on your device', tog() + chev('chevron-up'))}${row('', 'Show most used apps', 'For list and grid views, show a list of most used apps at the top', tog(), 'child')}</div>
-        <div class="set-gh">Other</div>
-        <div class="set-card">${row('phone', 'Show mobile device in Start', 'Call, text, and other notifications are shown in the Start menu', tog() + chev('chevron-down'))}</div>
-        <div class="set-card">${row('alert', 'Show account-related notifications', 'When off, required notifications are still shown', tog() + '<span style="width:40px"></span>')}</div>
+        <div class="set-title disp"><span class="sec">System</span>${ic('chevron-right', 16)}<span>Power &amp; battery</span></div>
+        <div class="set-hero"><span class="disp">100%</span>${BATTERY}</div>
+        ${card('leaf-one', 'Energy recommendations', 'Lower your carbon footprint by applying these recommendations', `<span class="val">7 of 9</span><span class="set-prog"><i style="width:78%"></i></span>${chev('chevron-right')}`)}
+        ${card('top-speed', 'Power mode', 'Optimize your device based on power use and performance', val('Best Performance'))}
+        ${card('desktop-pulse', 'Screen, sleep, &amp; hibernate timeouts', 'Choose what happens when your device is idle for a specified time', chev('chevron-down'))}
+        ${card('battery-charge', 'Battery percentage', 'Display battery percentage on taskbar', tog(false) + '<span style="width:8px"></span>')}
+        ${card('battery-saver', 'Energy saver', 'Reduce power consumption and increase battery life by limiting some background activities', val('Turns on at 20%'))}
+        ${card('data-line', 'Battery usage', '', chev('chevron-down'))}
+        ${card('list', 'Lid, power &amp; sleep button controls', 'Choose what happens when you interact with your device\'s physical controls', chev('chevron-down'))}
       </div>
     </div>
   </div>`;
@@ -241,7 +237,7 @@ const SURFACES = [
   { id: 'taskbar', name: 'Taskbar', w: 1440, h: 48, build: taskbar, stays: 'Widgets left, Start, search, Task view and pinned apps centered, tray and clock right.', changes: 'Docked or floating, end radius, material.' },
   { id: 'uc', name: 'Universal Composer', w: 720, h: 130, build: composer, stays: 'One input, attach, voice, send, three suggestions underneath.', changes: 'Field shape, send button color, chip shape, typeface.' },
   { id: 'explorer', name: 'File Explorer', w: 1040, h: 640, build: explorer, stays: 'Tabs, address bar, command bar, navigation pane, details view, status bar.', changes: 'Pane and content contrast, selection fill, button and window radii.' },
-  { id: 'settings', name: 'Settings', note: 'Personalization > Start', w: 1128, h: 920, build: settings, stays: 'Account, search and navigation, then presets and toggles in the same order. Nav icons keep their full color.', changes: 'Preset previews pick up the theme\'s wallpaper and Start material. Toggles, checks and selection take the accent, and the page title takes the display face.' },
+  { id: 'settings', name: 'Settings', note: 'System > Power & battery', w: 1128, h: 736, build: settings, stays: 'The account, search and navigation, then a page title, a status figure and setting cards in the same order. Navigation icons keep their full color.', changes: 'Window material, card surfaces, and the accent on toggles and progress. The page title and battery figure take the display face.' },
   { id: 'paint', name: 'Paint', w: 1200, h: 800, build: paint, stays: 'Menu row, toolbar groups, palette, canvas, Cocreator panel and status bar. The drawing and the generated image are untouched.', changes: 'Only the chrome around the work: window material, toolbar and panel surfaces, ink, dividers and accent.' },
   { id: 'notepad', name: 'Notepad', w: 760, h: 520, build: notepad, stays: 'Tabs, menu, editor, status bar.', changes: 'Text face and editor surface, Copilot accent.' },
 ];
