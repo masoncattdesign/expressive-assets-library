@@ -133,6 +133,14 @@ hosted copy does.
   - `beamOn`, `beamOff`, `beamSpeed`, `beamBoost` (a short surge) and `beamLap` (one trip around, then fade).
   - One loop eases every beam's speed, so it can race while Copilot builds or surge as you type without jumping.
   - Colors come from `--beam-1` to `--beam-4` on the theme, so Neon and Sketch restyle it in CSS.
+- **Components** (`components.html`, `.css`, `.js`) is a catalog page, not a desktop.
+  - Each surface is one function returning markup at the native size of its Figma
+    component (`start()` is 832x864, `settings()` is 1128x920, and so on); the page scales it to fit.
+  - Themes are wrapper classes (`.th-w11`, `.th-wnext`, `.th-nova`, `.th-bebop`) whose
+    tokens mirror the Figma "Surfaces" variable collection one for one. Surfaces and
+    widgets read only those tokens, so structure stays and the theme swaps material,
+    color, radii and type.
+  - Widgets reuse `widget(id)`; components.css maps the theme tokens onto `--wg-*`.
 - **Icons** are real Microsoft icons from the Expressive Assets library, in
   `icons/`.
   - Product and app icons are `<img>` tags.

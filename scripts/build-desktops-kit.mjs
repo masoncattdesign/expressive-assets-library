@@ -63,7 +63,7 @@ async function main() {
   //    are asked for by name, sometimes through a variable, so take every
   //    quoted kebab-case word that names a real system icon, in both styles
   //    and both sizes. A few extra icons cost nothing; a missing one is a hole.
-  const paths = new Set(text.match(/(?:product|app|system)\/[a-z0-9-]+\/[a-z0-9-]+\.svg/g) || []);
+  const paths = new Set(text.match(/(?:product|app|system|file)\/[a-z0-9-]+\/[a-z0-9-]+\.svg/g) || []);
   for (const [, name] of text.matchAll(/'([a-z0-9]+(?:-[a-z0-9]+)*)'/g)) {
     if (!(await exists(join(ICONS, 'system', name)))) continue;
     for (const style of ['outline', 'filled']) for (const px of ['20', '24']) paths.add(`system/${name}/${style}-${px}.svg`);

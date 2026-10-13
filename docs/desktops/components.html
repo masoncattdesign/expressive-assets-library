@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Components · Desktops</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%231c1b33'/%3E%3Crect x='5' y='5' width='6' height='6' rx='2' fill='%23c8f56a'/%3E%3Crect x='13' y='5' width='6' height='6' rx='2' fill='%23fff'/%3E%3Crect x='5' y='13' width='14' height='6' rx='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="stylesheet" href="components.css">
+</head>
+<body class="cp">
+<header class="cp-top">
+  <div class="cp-bar">
+    <a class="back" href="index.html">Desktops</a>
+    <h1>Components</h1>
+    <nav class="cp-sec"><a href="#surfaces">Surfaces</a><a href="#widgets">Widgets</a></nav>
+    <div class="cp-themes" role="group" aria-label="Theme"></div>
+  </div>
+</header>
+<main class="cp-main">
+  <p class="cp-intro"><b>Distinctly Windows, Uniquely Mine.</b> The surfaces and widgets the desktops are built from, in code, in the four themes from the Surfaces chart in Figma. The structure of each one never changes; the theme only swaps materials, color, corner shape and type. Press 1 to 4 for a theme, or 0 to compare all four.</p>
+
+  <h2 id="surfaces">Surfaces</h2>
+  <p>Desktop, Start, Taskbar, the Universal Composer and four everyday apps, each at the size of its Figma component.</p>
+  <div id="surface-list"></div>
+
+  <h2 id="widgets">Widgets</h2>
+  <p>Every widget in every size it supports. They are the same widgets Workbench and Mosaic use; here they take the theme's surfaces, ink, accent and corners.</p>
+  <div id="widget-list"></div>
+</main>
+<script src="illus-engine.js"></script>
+<script src="illus-data.js"></script>
+<script src="shared.js"></script>
+<script src="widgets.js"></script>
+<script src="components.js"></script>
+</body>
+</html>
