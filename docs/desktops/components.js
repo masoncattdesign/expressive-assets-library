@@ -235,7 +235,7 @@ Before we leave: water the plants, ask Sam to grab the mail</div>
 
 /* ---- The catalog --------------------------------------------------------- */
 const SURFACES = [
-  { id: 'desktop', name: 'Desktop', w: 1440, h: 900, build: desktop, stays: 'Taskbar along the bottom, desktop icons top left, wallpaper edge to edge.', changes: 'Wallpaper palette and bloom, taskbar floats with an inset or stays docked.' },
+  { id: 'desktop', name: 'Desktop', w: 1440, h: 900, build: desktop, stays: 'Taskbar along the bottom, desktop icons top left, wallpaper edge to edge.', changes: 'The wallpaper, and whether the taskbar floats with an inset or stays docked.' },
   { id: 'start', name: 'Start', w: 832, h: 864, build: start, stays: 'Copilot search on top, then Pinned, Recent and All by category, with account and power in the footer. Same order, same app icons.', changes: 'Shell material and tint, corner radii, card surfaces, button and avatar accent, typeface.' },
   { id: 'taskbar', name: 'Taskbar', w: 1440, h: 48, build: taskbar, stays: 'Widgets left, Start, search, Task view and pinned apps centered, tray and clock right.', changes: 'Docked or floating, end radius, material.' },
   { id: 'uc', name: 'Universal Composer', w: 720, h: 130, build: composer, stays: 'One input, attach, voice, send, three suggestions underneath.', changes: 'Field shape, send button color, chip shape, typeface.' },
@@ -245,6 +245,21 @@ const SURFACES = [
   { id: 'notepad', name: 'Notepad', w: 760, h: 520, build: notepad, stays: 'Tabs, menu, editor, status bar.', changes: 'Text face and editor surface, Copilot accent.' },
 ];
 const SIZE_NAME = { s: 'Square', w: 'Wide', t: 'Tall' };
+
+/* Wallpapers. Each theme has a photographic wallpaper (from the Surfaces chart
+   in Figma). They are Microsoft artwork that is not public, so they live in the
+   repo's private/ folder, which is never committed or published. When the page
+   is opened from a checkout that has them, they show; anywhere else (the public
+   site, the download) the gradient tokens stand in and nothing breaks. */
+const WALLS = '../../private/desktops/wallpapers/';
+function loadWallpapers() {
+  const css = [];
+  return Promise.all(THEMES.map(t => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { css.push(`.th-${t.id}{--wall-photo:url("${WALLS}${t.id}.jpg");--bloom:none}`); res(); };
+    im.onerror = res; im.src = WALLS + t.id + '.jpg';
+  }))).then(() => { if (css.length) document.head.appendChild(html(`<style id="walls">${css.join('')}</style>`)); });
+}
 
 let current = store('components-theme') || 'w11';
 
@@ -307,4 +322,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   addEventListener('resize', fitAll);
   setTheme(THEMES.some(t => t.id === current) || current === 'all' ? current : 'w11');
+  loadWallpapers();
 });

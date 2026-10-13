@@ -18,7 +18,7 @@
   --w-disp: 600; --w-strong: 600;
 }
 .th-wnext {
-  --wall-top: #fad9c8; --wall-bottom: #a9b6f2; --wall-bloom: #f3a3c0; --on-wall: #1c1b33;
+  --wall-top: #fad9c8; --wall-bottom: #a9b6f2; --wall-bloom: #f3a3c0; --on-wall: #ffffff;
   --s-window: rgba(255, 255, 255, .85); --s-content: rgba(255, 255, 255, .7); --s-pane: rgba(255, 255, 255, .35); --s-card: rgba(255, 255, 255, .8); --s-control: rgba(255, 255, 255, .7);
   --s-flyout: rgba(255, 255, 255, .78); --s-taskbar: rgba(255, 255, 255, .55); --s-select: #ecebff;
   --line: rgba(28, 27, 51, .06); --line-strong: rgba(28, 27, 51, .2); --ink: #1c1b33; --ink2: #6b6a80;
@@ -40,7 +40,7 @@
   --w-disp: 400; --w-strong: 600;
 }
 .th-bebop {
-  --wall-top: #f7f7f7; --wall-bottom: #ececec; --wall-bloom: #ffffff; --on-wall: #242424;
+  --wall-top: #f7f7f7; --wall-bottom: #ececec; --wall-bloom: #ffffff; --on-wall: #ffffff;
   --s-window: #ffffff; --s-content: #ffffff; --s-pane: #fafafa; --s-card: #f5f5f5; --s-control: #f0f0f0;
   --s-flyout: #ffffff; --s-taskbar: #ffffff; --s-select: #ebebeb;
   --line: #e0e0e0; --line-strong: #242424; --ink: #242424; --ink2: #707070;
@@ -85,7 +85,7 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .views { display: grid; gap: 16px; }
 .compare .views { grid-template-columns: repeat(4, 1fr); }
 .view { position: relative; border-radius: 20px; overflow: hidden; padding: 24px; display: grid; place-items: center;
-  background: radial-gradient(60% 70% at 70% 60%, color-mix(in srgb, var(--wall-bloom) 55%, transparent), transparent 70%), linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
+  background: var(--wall-photo, none) center / cover no-repeat, radial-gradient(60% 70% at 70% 60%, color-mix(in srgb, var(--wall-bloom) 55%, transparent), transparent 70%), linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
 .compare .view { padding: 12px; border-radius: 14px; }
 .view-tag { position: absolute; left: 12px; top: 10px; z-index: 2; font: 600 11px/1 var(--font); padding: 5px 8px; border-radius: 999px; background: rgba(255, 255, 255, .8); color: #1c1b33; display: none; }
 .compare .view-tag { display: block; }
@@ -140,11 +140,11 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 
 /* ---- Desktop ------------------------------------------------------------- */
 .sf.desk { width: 1440px; height: 900px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: var(--tb-inset);
-  background: linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); border-radius: 12px; }
-.desk-bloom { position: absolute; left: 470px; top: 120px; width: 860px; height: 640px; border-radius: 50%; background: var(--wall-bloom); filter: blur(90px); opacity: .9; }
+  background: var(--wall-photo, none) center / cover no-repeat, linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); border-radius: 12px; }
+.desk-bloom { display: var(--bloom, block); position: absolute; left: 470px; top: 120px; width: 860px; height: 640px; border-radius: 50%; background: var(--wall-bloom); filter: blur(90px); opacity: .9; }
 .desk-icons { position: absolute; left: 16px; top: 16px; display: grid; gap: 14px; }
 .desk-icons span { width: 84px; display: grid; justify-items: center; gap: 6px; font-size: 12px; color: var(--on-wall); text-shadow: 0 1px 3px rgba(0, 0, 0, .35); text-align: center; }
-.th-wnext .desk-icons span, .th-nova .desk-icons span, .th-bebop .desk-icons span { text-shadow: 0 1px 2px rgba(255, 255, 255, .6); }
+.th-nova .desk-icons span { text-shadow: 0 1px 2px rgba(255, 255, 255, .6); }
 .desk-icons img { width: 44px; height: 44px; }
 .sf.desk .sf.tb { position: relative; }
 
@@ -244,8 +244,8 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .set-preset { display: grid; justify-items: center; gap: 12px; padding: 18px 12px 16px; border-radius: var(--r-card); background: var(--s-card); box-shadow: inset 0 0 0 1px var(--line); text-align: center; }
 .set-preset.on { box-shadow: inset 0 0 0 2px var(--acc); }
 .set-preset small { display: block; font-size: 12px; color: var(--ink2); }
-.pv { position: relative; width: 154px; height: 116px; border-radius: 4px; overflow: hidden; background: linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
-.pv::before { content: ""; position: absolute; left: 60px; top: 30px; width: 110px; height: 90px; border-radius: 50%; background: var(--wall-bloom); filter: blur(14px); }
+.pv { position: relative; width: 154px; height: 116px; border-radius: 4px; overflow: hidden; background: var(--wall-photo, none) center / cover no-repeat, linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
+.pv::before { display: var(--bloom, block); content: ""; position: absolute; left: 60px; top: 30px; width: 110px; height: 90px; border-radius: 50%; background: var(--wall-bloom); filter: blur(14px); }
 .pv::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--s-taskbar); }
 .pv i { position: absolute; left: 31px; top: 12px; width: 92px; height: 96px; border-radius: 6px; background: var(--g), var(--s-flyout); }
 .set-card { border-radius: var(--r-card); background: var(--s-card); box-shadow: inset 0 0 0 1px var(--line); margin-bottom: 4px; overflow: hidden; }
@@ -332,7 +332,7 @@ main.cp-main { max-width: 1480px; margin: 0 auto; padding: 40px 32px 96px; }
 .wg-spec { display: grid; gap: 10px; }
 .wg-spec > small { font: 600 12px/1 var(--font); color: rgba(28, 27, 51, .55); }
 .wg-spec > small span { font-weight: 400; color: rgba(28, 27, 51, .4); margin-left: 6px; }
-.wg-sizes { display: flex; gap: 16px; align-items: flex-start; padding: 16px; border-radius: 20px; background: radial-gradient(60% 70% at 70% 60%, color-mix(in srgb, var(--wall-bloom) 55%, transparent), transparent 70%), linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
+.wg-sizes { display: flex; gap: 16px; align-items: flex-start; padding: 16px; border-radius: 20px; background: var(--wall-photo, none) center / cover no-repeat, radial-gradient(60% 70% at 70% 60%, color-mix(in srgb, var(--wall-bloom) 55%, transparent), transparent 70%), linear-gradient(180deg, var(--wall-top), var(--wall-bottom)); }
 .wg-box { position: relative; flex: none; }
 .wg-box.s { width: 200px; height: 200px; } .wg-box.w { width: 416px; height: 200px; } .wg-box.t { width: 200px; height: 416px; }
 /* The board themes, on the widgets' own variables. */
