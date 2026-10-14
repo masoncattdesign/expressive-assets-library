@@ -1,19 +1,20 @@
-/* Components: the surfaces and widgets in code, in the four board themes.
+/* Components: the surfaces and widgets in code, in the six board themes.
 
    Each surface is one function that returns its markup at the native size of
    its Figma component (Surface/Start is 832x864, and so on). The page scales
    it to fit. Theme is only a class on a wrapper (.th-w11, .th-wnext, .th-nova,
-   .th-bebop) whose tokens components.css takes from the Figma "Surfaces"
+   .th-bebop, .th-bbw, .th-telo) whose tokens components.css takes from the Figma "Surfaces"
    variables, so the structure never changes and the theme does the rest.
    That is the "Distinctly Windows, Uniquely Mine" point, in code.
 
-   Pick a theme with the chips or 1 to 5; Compare (or 0) shows all five. */
+   Pick a theme with the chips or 1 to 6; Compare (or 0) shows all six. */
 
 const THEMES = [
   { id: 'w11', name: 'Windows 11', tag: 'Today', a: '#cfe3ff', b: '#2f6fea' },
   { id: 'wnext', name: 'WNext Default', tag: 'Inevitable', a: '#fad9c8', b: '#a9b6f2' },
   { id: 'nova', name: 'Nova', tag: 'Intermediate', a: '#efe7dc', b: '#d9734e' },
   { id: 'bebop', name: 'Bebop', tag: 'Copilot language', a: '#ffffff', b: '#242424' },
+  { id: 'bbw', name: 'Windows + Bebop', tag: 'Fusion', a: '#ffffff', b: '#005fb8' },
   { id: 'telo', name: 'Telograph', tag: 'Inspired', a: '#f4f4f5', b: '#e8478f' },
 ];
 
@@ -30,14 +31,14 @@ const chev = name => `<span class="chev">${ic(name, 12)}</span>`;
 // Telograph's fine-line bar (snap button, ask pill, running dots, tray pill with a
 // white clock). components.css shows one set or the other per theme, the same way
 // the taskbar/classic and taskbar/fine-line variables switch it in Figma.
-function taskbar() {
+function taskbar(t) {
   const app = (p, run, cls = '') => `<span class="${cls}${run ? ' run' : ''}">${img(p, 24)}</span>`;
   return `<div class="sf tb">
     <span class="tb-snap fl">${ic('panel-left', 20)}</span>
     <div class="tb-wx cl">${ic('weather-sunny', 24, 'filled')}<div><b>78°F</b><span class="sec">Sunny</span></div></div>
     <div class="tb-mid">
       <span title="Start"><i class="winlogo"><i></i><i></i><i></i><i></i></i></span>
-      <span class="tb-search cl">${ic('search', 16)}Search</span>
+      <span class="tb-search cl">${ic('search', 16)}${t && t.id === 'nova' ? 'Ask Copilot' : 'Search'}</span>
       <span class="tb-ask fl"><i class="ring"></i>Search or ask${ic('sparkle', 16)}</span>
       <span class="cl" title="Task view">${ic('square-multiple', 20)}</span>
       <span class="cl">${img('product/copilot/standard-24.svg', 24)}</span>
@@ -63,11 +64,11 @@ function taskbar() {
 }
 
 /* ---- Desktop ------------------------------------------------------------- */
-function desktop() {
+function desktop(t) {
   const icons = [['app/file-explorer/standard-48.svg', 'File Explorer'], ['product/word/standard-48.svg', 'Lisbon itinerary'], ['product/excel/standard-48.svg', 'Family budget'], ['app/photos/standard-48.svg', 'Big Sur']];
   return `<div class="sf desk"><div class="desk-bloom"></div>
     <div class="desk-icons">${icons.map(([p, l]) => `<span>${img(p, 44)}${l}</span>`).join('')}</div>
-    ${taskbar()}</div>`;
+    ${taskbar(t)}</div>`;
 }
 
 /* ---- Start --------------------------------------------------------------- */
@@ -89,15 +90,17 @@ function start(t) {
     ['Developer Tools', ['app/notepad/standard-32.svg', 'app/settings/standard-32.svg', 'product/edge/standard-32.svg', 'product/word/standard-32.svg']],
     ['Lifestyle', ['app/store-light-theme/standard-32.svg', 'app/photos/standard-32.svg', 'product/edge/standard-32.svg', 'product/outlook/standard-32.svg']],
     ['Accessibility', ['app/settings/standard-32.svg', 'app/alarms-and-clock/standard-32.svg', 'app/paint/standard-32.svg', 'app/store-light-theme/standard-32.svg']]];
+  // Nova names the sections the way people talk about them.
+  const [pinned, all] = t && t.id === 'nova' ? ['Pins', 'Topics &amp; categories'] : ['Pinned', 'All'];
   return `<div class="sf start">
     <div class="st-search">${ic('search', 18)}<i class="caret"></i>Search for apps, settings, and documents</div>
     <div class="st-phone">${ic('phone', 16)}</div>
     <div class="st-layer">
-      <div class="st-hdr" style="top:14px"><b>Pinned</b><span class="btn ghost">Show all ${ic('chevron-down', 12)}</span></div>
+      <div class="st-hdr" style="top:14px"><b>${pinned}</b><span class="btn ghost">Show all ${ic('chevron-down', 12)}</span></div>
       <div class="st-pins">${pins.map(([p, l]) => `<span>${img(p)}${l}</span>`).join('')}</div>
       <div class="st-hdr" style="top:256px"><b>Recent</b><span class="btn">Show all ${ic('chevron-right', 12)}</span></div>
       <div class="st-rec">${rec.map(([p, n, s]) => `<span class="ri">${img(p)}<span class="rt">${n}<small>${s}</small></span></span>`).join('')}</div>
-      <div class="st-hdr" style="top:448px"><b>All</b><span class="btn">View: Category ${ic('chevron-down', 12)}</span></div>
+      <div class="st-hdr" style="top:448px"><b>${all}</b><span class="btn">View: Category ${ic('chevron-down', 12)}</span></div>
       <div class="st-cats">${cats.map(([l, ps]) => `<div class="st-cat"><div>${ps.map(p => p.startsWith('<') ? p : img(p)).join('')}</div>${l}</div>`).join('')}</div>
     </div>
     <div class="st-foot"><span class="avatar" style="width:32px;height:32px;font-size:12px">DB</span>Diego Baca<span class="power">${ic('power', 16)}</span></div>
@@ -416,11 +419,11 @@ function setTheme(id) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  $('.cp-themes').innerHTML = THEMES.map((t, i) => `<button data-t="${t.id}" title="${t.tag} (${i + 1})"><i style="--a:${t.a};--b:${t.b}"></i>${t.name}</button>`).join('') + `<button class="all" data-t="all" title="All five side by side (0)">Compare</button>`;
+  $('.cp-themes').innerHTML = THEMES.map((t, i) => `<button data-t="${t.id}" title="${t.tag} (${i + 1})"><i style="--a:${t.a};--b:${t.b}"></i>${t.name}</button>`).join('') + `<button class="all" data-t="all" title="All six side by side (0)">Compare</button>`;
   $$('.cp-themes button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
   addEventListener('keydown', e => {
     if (e.target.closest('input, textarea')) return;
-    const n = '012345'.indexOf(e.key); if (n < 0) return;
+    const n = '0123456'.indexOf(e.key); if (n < 0) return;
     setTheme(n === 0 ? 'all' : THEMES[n - 1].id);
   });
   addEventListener('resize', fitAll);
